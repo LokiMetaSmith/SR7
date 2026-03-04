@@ -80,3 +80,33 @@ with open("rules.md", "r") as f:
 
 analyze_qualities(text)
 analyze_weapons(text)
+
+
+def analyze_metatypes(text):
+    print("\n=== Metatype Analysis ===")
+
+    # Simple regex to extract metatype names and karma costs from the table
+    # Format: **Human**		1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	2 / 7	0
+
+    metatypes = []
+    lines = text.split("\n")
+    in_table = False
+    for line in lines:
+        if "**Race:" in line:
+            in_table = True
+            continue
+        if in_table and line.strip() == "":
+            in_table = False
+            continue
+
+        if in_table and line.startswith("**") and not "Race:" in line:
+            parts = line.split("\t")
+            if len(parts) >= 10:
+                name = parts[0].replace("**", "").strip()
+                cost = parts[-1].strip()
+                metatypes.append((name, cost))
+
+    for m in metatypes:
+        print(f"  {m[0]}: {m[1]} Karma")
+
+analyze_metatypes(text)
