@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema qualities.xsd">
+  <categories>
+    <category>Positive</category>
+    <category>Negative</category>
+  </categories>
+  <qualities>
+    <quality>
+      <id>00000001-0000-0000-0000-00000000007e</id>
+      <name>Acrobatic Defender (SR7E)</name>
+      <karma>4</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <source>SR7E</source>
+    </quality>
+    <quality>
+      <id>00000002-0000-0000-0000-00000000007e</id>
+      <name>Voice of Experience (SR7E)</name>
+      <karma>5</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <source>SR7E</source>
+    </quality>
+  </qualities>
+</chummer>

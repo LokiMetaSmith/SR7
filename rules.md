@@ -212,7 +212,7 @@ A **Specialization** may be taken for any Skill you have raised to at least rati
 
 	Combat skills are Active Skills that are linked with Agility unless otherwise noted.
 
-**Close Combat** \- 
+**Close Combat** \- The Close Combat skill is used for attacking opponents in melee range. This covers unarmed strikes, wielding clubs, blades, or other melee weapons.
 
 **Quality of Life:**  
 	  
@@ -627,7 +627,7 @@ Qualities have a collection of tags associated with them based upon their purpos
   When manually driving or jacked into (but not jumped in), receive \+1 dice pool modifier on Piloting Tests and increase Handling Rating by 1\.
 
 **Voice of Experience** \- 5 Karma (Meta Quality)  
-    
+  Gain \+2 dice pool modifier on all Instruction and Leadership Tests.
 
 **Watch the Suit** \- 3 Karma (Social Quality)  
   Stun Damage never mars your physical appearance.  After a combat encounter in which you did not take Physical Damage, your appearance will not arouse suspicion that you were involved, and you do not receive any penalties for looking out of place on Etiquette Tests.  Physical Damage will still cause bruises, draw blood, tear clothing, etc.
@@ -1019,7 +1019,7 @@ Every character rolls their **Initiative Dice** at the beginning of an encounter
 
 	During your **Turn** of a Combat Round everything you attempt to do requires taking an **Action**.  By default all characters have 2 Actions available per Combat Round; additionally gaining 1 Action per Initiative Die held at the start of their Turn.  No character may have more than 6 total Actions at the start of their Turn.  Some Actions may require spending more than 1 of a character’s available Actions to represent their increased complexity and time requirements, or the Action may only be taken once per Round.  Other Actions may require that they be the only Action attempted on a character’s Turn, or even require multiple Rounds to complete.  
 	Actions may be taken in any order you desire and you must use all available Actions on your Turn, unless saving Actions for the use of **Reactions** later in the Combat Round.  At the end of a Round any unspent Actions are lost.  You may NOT save Actions to increase your total Actions on the following Combat Round; use them or lose them.  
-	To use a Reaction, a character must have the required Actions available, either by saving those Actions if they acted previously in the Combat Round, or by preemptively using them to react if they have not acted yet, *e.g.; A character takes their Turn with* 
+	To use a Reaction, a character must have the required Actions available, either by saving those Actions if they acted previously in the Combat Round, or by preemptively using them to react if they have not acted yet, *e.g.; A character takes their Turn with 4 available Actions. They spend 2 Actions on their Turn to attack, saving 2 Actions to use on Reactions later in the Combat Round.*
 
 **Activate/Deactivate Focus** (1 Action) \- Activate or Deactivate a bonded focus on your person.
 
@@ -1064,6 +1064,12 @@ Every character rolls their **Initiative Dice** at the beginning of an encounter
 **Unload** (1 Action) \- This Action unloads individual rounds of ammunition or empty cases from ammunition feeding devices; including: cylinders, detachable magazines, internal magazines, shotgun chutes, stripper clips, speed loaders, drum magazines, clips, and belts.  By default a number of rounds equal to the character’s AGI are unloaded.  With a successful AGI (3) Attribute Test, up to 1 extra round of ammo is unloaded per net hit.  At GM discretion, failure of this test may result in fumbling of ammunition or empty cases, unloading half (rounded down) of what they normally would have, with potentially more severe consequences on a glitch or critical glitch.  This Action is also used to unload a single round or empty case from a muzzle loading weapon, unload a cap & ball weapon, or to open the breech of a breech loading weapon and unload a single round or empty case.
 
 **Reactions:**
+
+**Dodge** (1 Action) \- Attempt to dodge an incoming attack. Roll Reaction \+ Intuition to increase your Defense Rating against a single attack.
+
+**Block/Parry** (1 Action) \- Use your Close Combat skill to deflect an incoming melee attack. Roll Close Combat \+ Agility to increase your Defense Rating against a single melee attack.
+
+**Full Defense** (2 Actions) \- Focus entirely on defending yourself. Add your Willpower to your Defense Rating against all attacks for the remainder of the Combat Round.
 
 **Gear:**
 
@@ -1919,7 +1925,7 @@ Winchester Model 2066	4	15P	\-3	SS	(1)	Near	5(m)	4(R)	3.25	1,050¥
 
 **Remington 950** (.30-06): A high powered bolt-action hunting rifle that features classic wood furniture and a top-mounted imaging scope.  May not mount underbarrel accessories.  *Imaging Scope (Top, Vision Magnification)*, *Stock*.
 
-**Ruger 100** (.308): 
+**Ruger 100** (.308): A classic sporting rifle from Ruger that has remained popular for decades due to its reliability and simple design. Features a top-mounted imaging scope. *Imaging Scope (Top, Vision Magnification)*, *Stock*.
 
 **Ruger 101** (.308): A gas-operated sporting rifle that features a built in imaging scope and a shock pad on the stock.  *Imaging Scope (Vision Enhancement 1\)*, *Shock Pad*, *Stock*.
 
@@ -2009,7 +2015,7 @@ Winchester 2067 (.45 LC)	5	12P	\-2	SS	(1)	Far	14(m)	5(R)	4.50	850¥
 Winchester 2067 (.30-30)	5	14P	\-5	SS	(1)	Far	8(m)	5(R)	4.50	950¥  
 Winchester 2067 (.45-70)	5	20P	\-3	SS	(1)	Far	7(m)	5(R)	4.50	1,050¥
 
-**Assault Rifles** \- 
+**Assault Rifles** \- Assault rifles are the standard infantry weapon of the modern battlefield, offering a balance of range, accuracy, and fully automatic fire capability. They may accept top-mounted, barrel-mounted, and underbarrel accessories.
 
 **AK-74** (5.45): The classic AK-47 made lighter, and in a lighter caliber, but otherwise not much different than iterations of the design.  This venerable assault rifle was given a new lease on life when a manufacturer in Baghdad licensed production during and after the Euro Wars.  An underbarrel attachment point is most commonly used to mount a grenade launcher.  *Bayonet Mount*, *Stock*, *Tactical Rail (Underbarrel)*, *Vintage*.
 
@@ -2059,7 +2065,7 @@ Winchester 2067 (.45-70)	5	20P	\-3	SS	(1)	Far	7(m)	5(R)	4.50	1,050¥
 
 **HK G36** (5.56): A Heckler & Koch design that predates the Euro Wars, the HK G36 is an ergonomic, lightweight assault rifle with a solid reputation.  It is still listed on HK’s catalog but no known orders have been made in decades.  A Sport version with an extended barrel is manufactured for commercial UCAS sales in small quantities every year.  *Folding Stock*, *Long Barrel\**, *Vintage*.
 
-**HK G9A4z** (5.56): 
+**HK G9A4z** (5.56): An assault rifle designed for corporate security forces, featuring a lightweight polymer frame and an integrated smartgun system. *Smartlink*, *Stock*.
 
 **HK G12A3z** (9mm S-K): The next logical step from the HK G11A4z, this rifle is lighter, less bulky, and features an integral top-mounted laser sight, barrel-mounted gas vent system, and a telescoping shoulder stock.  *Caseless Only*, *Folding Stock*, *Gas Vent Rating 2*, *Laser Sight*.
 
@@ -2224,7 +2230,7 @@ Yamaha Raiden II		6(8)	10P	\-15	BF/FA	1(2)	Distant	60(dm)	16(F)		3,200¥
 
 **Ingram Valiant** (5.56): Very popular with mercenary groups and continuously in production for decades, the Valiant comes equipped with a rigid stock and shock pad, an integral laser sight, and a gas vent system to enhance recoil control.  *Gas Vent Rating 2*, *Laser Sight*, *Shock Pad*, *Stock*.
 
-**Ingram White Knight** (): 
+**Ingram White Knight** (): A legendary light machine gun that boasts an exceptional rate of fire and rugged reliability. The White Knight is a staple among mercenary units worldwide. *Gas Vent Rating 2*, *Stock*.
 
 **Krime Triple-Dwarf Nanogun** (9mm Para): Krime’s smallest tri-barrel LMG sized for Dwarves.  Features a patented chainsaw style grip and internal smartgun system.  The Triple-Dwarf Nanogun consumes 12 shots with each Full Auto attack.  *Belt Fed Only*, *Metahuman Adaptation*, *Personalized Grip*, *Smartlink*.
 
@@ -2373,7 +2379,7 @@ bipod or tripod mount system is easily adjustable to change the angle of fire, a
 **Mortar Launchers		ACC	DV	AP	MODE    	RC	RANGE    AMMO    AVAIL    WEIGHT	COST**  
 M-12 Portable Mortar	4	–	–	SS	–	–	–	16(F)	120.00	2,250¥
 
-**Rocket Launchers** \- 
+**Rocket Launchers** \- Rocket launchers are heavy weapons designed to deliver explosive payloads over medium distances. They may accept top-mounted and underbarrel accessories.
 
 **Arbalest II MAW** (Medium Rockets): The Arbalest II Medium Anti-Armor Weapon fires unguided rockets from single ammunition canisters attached behind the firing tube.  The firing section and its accompanying imaging scope can be stored in a shoulder bag or duffel bag.  Rockets purchased for the Arbalest II cost \+50¥ each for their required canister that doubles as a storage device.  *Imaging Scope (Top, Vision Magnification)*.
 
@@ -2383,7 +2389,7 @@ M-12 Portable Mortar	4	–	–	SS	–	–	–	16(F)	120.00	2,250¥
 
 **Mitsubishi Yakusoku Medium Rocket Launcher** (Medium Missiles/Rockets): An advanced launch system capable of putting out a variety of munitions at a fast pace.  The Yakusoku features a twin tube system fed by ammunition packs, each tube’s coresponding magazine capable of holding 4 different rockets or missiles.  The dual tubes and feed system allow significantly increased rates of fire, and it is even capable of firing both tubes simultaneously.  Since firing both tubes, treated as a Burst, would require aiming them to the same location, most users opt to fire a mix of one dumb fire rocket with a missile capable of locking on or maneuvering on its own.  The Yakusoku comes equipped with an imaging scope and laser designator built into the launcher’s frame.  Loading new missiles into the ammunition packs of the Yakusoku requires 1 Load Action per rocket or missile.  *Imaging Scope (Image Link, Low-Light, Vision Magnification)*, *Laser Designator*.
 
-**Ruhrmetall GPRL-Alpha** (): 
+**Ruhrmetall GPRL-Alpha** (): A heavy, shoulder-fired rocket launcher with a sophisticated targeting system. Designed to defeat heavily armored vehicles. *Smartlink*, *Stock*.
 
 **Rocket Launchers		ACC	DV	AP	MODE    	RC	RANGE    AMMO    AVAIL    WEIGHT	COST**  
 Arbalest II MAW		5	–	–	SS	–	–	1(ml)	14(F)		1,200¥  
@@ -2395,14 +2401,14 @@ Mitsubishi Yakusoku MRL	4	–	–	SA/BF	–	–	4(dm)x2	20(F)		14,000¥
 Ruhrmetall GPRL-Alpha							4(m)		9.00	9,000¥  
 Spike Disposable Launcher
 
-**Rockets** \- 
+**Rockets** \- Un-guided explosive projectiles fired from rocket launchers.
 
 **IMI Dagger** (Light Rocket): An IMI design distributed through Ares, the Dagger is a lightweight collapsible anti-armor rocket that excels at armor penetration.
 
 **Rockets					DV	AP	BLAST		AVAIL	WEIGHT		COST**  
 IMI Dagger				50P	\-45	5S		12(F)	8.00		1,300¥
 
-**Missile Launchers** \-
+**Missile Launchers** \- Missile launchers fire guided munitions capable of tracking and intercepting moving targets. They may accept top-mounted and underbarrel accessories.
 
 **9K135 Missile System** (Kornet Missiles): An ancient Soviet-era launch system that combines a tripod launcher with a laser guidance system for designating targets.  It was designed to only fire the Kornet/AT-14 Spriggan missile.  *Laser Designator*, *Tripod*.
 
@@ -2429,7 +2435,7 @@ PS Vogeljäger
 PS Vogeljäger II		–	–	–	SS	–	–	1(ml)	22(F)		8,750¥  
 Scorpion			–	–	–	SS	–	–	1	22(F)	15.25	2,100¥
 
-**Missiles** \-
+**Missiles** \- Guided explosive projectiles that can lock onto and track targets, fired from missile launchers.
 
 **Ares Ribble Anti-Structure Missile** (Heavy Missile): The Ribble is a thermobaric warhead that employs a series of micro-charges to widely disperse its nanofuel payload before ignition.  Ideal for enclosed spaces and urban combat operations where its intense overpressure is more lethal than standard fragmentation or high explosive devices.  The Ribble comes with an extensively field-tested guidance system with heat seeking capabilities that can pick out targets through doors and windows and follow up with an operator’s choice of 3 delayed ignition settings.  *Airburst Link*, *Heat Seeker*.
 
@@ -2439,7 +2445,7 @@ LR SAM				4					5,000 m		1.50	2,200¥
 MTR				5					3,200 m	–	–	–  
 Scorpion				2						–	10.00	–	
 
-**Flamethrowers** \- 
+**Flamethrowers** \- Flamethrowers project a stream of ignited flammable liquid or gas. They are devastating in close quarters and can ignite targets and environments.
 
 **Shiawase Arms Blazer**: A handheld flamethrower with an attached fuel supply, negating the need for a bulky or vulnerable backpack system.  The small fuel tank only carries enough fuel for 4 seconds of continuous use.  Requires 1 Unload Action and 1 Load Action to replace the fuel tank with another.
 
@@ -2475,7 +2481,7 @@ Ares Pulse Fire		7	15P	\-15	SA	(1)	Far	10(dm)x2	22(F)		20,000¥
 Ares Redline		9	7P	\-7	SA	(1)	Near	10(dm)	14(F)		7,500¥  
 Onotari Arms Assault Laser	7(9)	15P	\-15	SA	(1)	Far	10(dm)x2	12(F)		26,000¥
 
-**Special & Exotic Weapons** \- 
+**Special & Exotic Weapons** \- A catch-all category for weapons that do not fit into standard classifications, ranging from chemical sprayers to microwave pain inducers.
 
 **Ares Cascade** (Special): A slightly different take on the Ares SuperSquirt line, the Cascade fires a direct stream of DSMO instead of gel packs or capsules.  Two canister-like magazines are inserted side-by-side where a regular rifle would have a magazine well; one is filled with DSMO, the other is filled with a drug or toxin.  The combined canisters provide 100 ‘shots’ worth of liquid.  The Cascade’s adjustable nozzle can vary the liquid stream from a forceful longer-ranged stream similar to the SuperSquirt-II, or a shorter-ranged wide spray like a shotgun blast.  The CO2 canister in the stock that powers this rifle costs 50¥ to refill.  Additional reservoir canisters can be acquired for 20¥ each.  The Cascade may not mount any barrel-mounted accessories or modifications.  *Stock*.
 
@@ -2523,7 +2529,7 @@ Spraytank
 Walther-AGC Liquidator  
 Walther PPD
 
-**Vehicular Weaponry** \- 
+**Vehicular Weaponry** \- Heavy weapon systems designed specifically for mounting on vehicles, drones, or fixed emplacements. They are typically too heavy or require too much power to be man-portable.
 
 **AN/EDQ-12 Air Defense Naval Directed Energy Weapons System**: The “Andrews” naval laser was designed to down incoming guided missiles but also functions in a short range anti-aircraft and anti-ship role.  It may only be mounted on naval vessels powered by a nuclear reactor, and is capable of firing 50 ‘shots’ before the system’s cooling mechanisms must be recharged and reset.
 
@@ -2550,7 +2556,7 @@ SFW-30 Underbarrel Weapon	6(8)	–	–	SS	–	Far	10(m)	–	–	–
 AGM-154 JSOW		2					35 km	26(F)	495.00	181,000¥  
 GBU-39 SBD		3					10 km	16(F)	129.00	125,500¥
 
-**Vehicular Rockets** \-
+**Vehicular Rockets** \- Unguided rocket munitions designed to be fired from vehicular weapon mounts.
 
 **Ares Zuni IX**: An unguided, aircraft-launched system from Ares designed to mate with most internationally utilized hardpoints.  The Zuni IX is the latest in a venerable line of ordrnance designs and its dual-purpose warhead can handle most ground targets.
 
@@ -2560,7 +2566,7 @@ GBU-39 SBD		3					10 km	16(F)	129.00	125,500¥
 Ares Zuni IX						20(F)		60.00		800¥  
 Cranston							14(F)		5.00		800¥
 
-**Vehicular Missiles** \-
+**Vehicular Missiles** \- Heavy guided missiles intended for use by vehicles and aircraft, capable of engaging ground, air, or naval targets at extended ranges.
 
 **AA-8 Aphid/R-60** (Air-to-Air Missile): A prevalent Soviet short range missile that has been stockpiled across the globe for over a century.  *Heat Seeker*.
 
@@ -2646,7 +2652,7 @@ Taurus KEPD 400		2					600 km	36(F)	1400.00	430,000¥
 UGM-188 Sea Saber ASM	5	6	30	\-30		250 km	32(F)	900.00	750,000¥  
 UIM-199 Kingfisher SSAM	4	3	24	\-6		4,000 m	16(F)	25.00	15,000¥
 
-**Vehicular Torpedoes** \-
+**Vehicular Torpedoes** \- Underwater propelled weapons designed to be fired from naval vessels or submarines.
 
 **Mark 197 Multi-Role Advanced Capability Torpedo**:  The Mark 197 MADCAP was the most commonly used torpedo of the 2050’s, capable of travelling at 75 knots with an active sonar seeker warhead.  Variants were equipped with passive sonar or heet seeking warheads.  Standard MADCAPs are wire-guided and easily controlled remotely, unless their wires are cut.
 
