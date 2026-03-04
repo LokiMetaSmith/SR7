@@ -57,7 +57,7 @@ The following sections, headers, and descriptions in the Shadowrun 7th Edition r
 - [ ] **Thermographic Vision** \- (Dwarf, Gnome, Troll Quality)
 
 ## Tooling & Integration TODOs
-- [ ] **analyze_rules.py Enhancements:** Add logic to detect weapon outliers (e.g. abnormally high/low DV vs Cost) and parse the rest of the weapon categories.
+- [x] **analyze_rules.py Enhancements:** Add logic to detect weapon outliers (e.g. abnormally high/low DV vs Cost) and parse the rest of the weapon categories.
 - [ ] **Chummer5a Custom XMLs:** Populate `custom_sr7e_qualities.xml` with the remaining 140+ custom qualities.
 - [ ] **Chummer5a Custom XMLs:** Create `custom_sr7e_weapons.xml` with all parsed weapon stats from the rulebook.
 - [ ] **Chummer5a Custom XMLs:** Create `custom_sr7e_metatypes.xml` with the custom Metatypes and their associated Karma costs.
