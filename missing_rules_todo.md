@@ -43,18 +43,18 @@ The following sections, headers, and descriptions in the Shadowrun 7th Edition r
 - [ ] **TEC 603 Bull** (Missing description and stats completely)
 
 ## Qualities Missing Karma Costs
-- [ ] **Arcane Arrester** \- (Gnome Quality)
-- [ ] **Built Tough** \- (Giant, Ogre, Ork, Physical, Troll, Satyr Quality)
-- [ ] **Community Connection** \- (Ork, Troll Quality)
-- [ ] **Dermal Deposits** \- (Troll Quality)
-- [ ] **Fangs** \- (Hobgoblin Quality)
-- [ ] **Galloping Stride** \- (Centaur Quality)
-- [ ] **Hooves** \- (Centaur, Satyr Quality)
-- [ ] **Low-Light Vision** \- (Centaur, Elf, Hobgoblin, Nocturna, Ogre, Ork, Satyr Quality)
-- [ ] **Ogre Stomach** \- (Ogre Quality)
-- [ ] **Reach (Positive)** \- (Giant, Elf, Ork, Troll Quality)
-- [ ] **Satyr Legs** \- (Satyr Quality)
-- [ ] **Thermographic Vision** \- (Dwarf, Gnome, Troll Quality)
+- [x] **Arcane Arrester** \- (Gnome Quality)
+- [x] **Built Tough** \- (Giant, Ogre, Ork, Physical, Troll, Satyr Quality)
+- [x] **Community Connection** \- (Ork, Troll Quality)
+- [x] **Dermal Deposits** \- (Troll Quality)
+- [x] **Fangs** \- (Hobgoblin Quality)
+- [x] **Galloping Stride** \- (Centaur Quality)
+- [x] **Hooves** \- (Centaur, Satyr Quality)
+- [x] **Low-Light Vision** \- (Centaur, Elf, Hobgoblin, Nocturna, Ogre, Ork, Satyr Quality)
+- [x] **Ogre Stomach** \- (Ogre Quality)
+- [x] **Reach (Positive)** \- (Giant, Elf, Ork, Troll Quality)
+- [x] **Satyr Legs** \- (Satyr Quality)
+- [x] **Thermographic Vision** \- (Dwarf, Gnome, Troll Quality)
 
 ## Tooling & Integration TODOs
 - [x] **analyze_rules.py Enhancements:** Add logic to detect weapon outliers (e.g. abnormally high/low DV vs Cost) and parse the rest of the weapon categories.

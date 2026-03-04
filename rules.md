@@ -251,7 +251,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Apt Pupil** \- 12 Karma (Knowledge, Magic Quality)  
   Only available to Magicians, Aspected Magicians, and Mystic Adepts.  Learning new Spells costs 3x Spell Value Karma instead of the normal 5x.  If combined with *Dedicated Spellslinger* these qualities reduce the cost of learning new Spells to 2x Spell Value Karma.
 
-**Arcane Arrester** \- (Gnome Quality)  
+**Arcane Arrester** \- 0 Karma (Gnome Quality)
   For each level of *Arcane Arrester*, a character gains a \+1 dice pool modifier for Spell Resistance Tests.  This quality may not be chosen by characters, but is innate to Gnomes.  Voluntary spells cast against a character with *Arcane Arrester*, such as healing spells, require rolling the character’s bonus Spell Resistance Dice and subtracting their hits from net hits scored on the spell.
 
 **Arcane Bodyguard** \- 20 Karma (Defensive, Magic Quality)  
@@ -293,7 +293,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Born Rich** \- 10 Karma (Gear Quality)  
   Receive 2500 nuyen for every 1 Karma spent at character creation instead of normal 2000 nuyen per Karma.
 
-**Built Tough** \- (Giant, Ogre, Ork, Physical, Troll, Satyr Quality)  
+**Built Tough** \- 0 Karma (Giant, Ogre, Ork, Physical, Troll, Satyr Quality)
   Gain 1 extra Physical Condition Track Box per level of the quality.
 
 **Catlike** \- 8 Karma (Stealth Quality)  
@@ -311,7 +311,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Common Sense** \- 7 Karma (Meta Quality)  
   Anytime your character would do something foolish they are alerted or warned, at GM discretion.
 
-**Community Connection** \- (Ork, Troll Quality)  
+**Community Connection** \- 0 Karma (Ork, Troll Quality)
   Only available to Okrs and Trolls.  Maintain a Squatter Lifestyle for free, or maintain a Low Lifestyle for half the normal cost.
 
 **Cyber Singularity Seeker** \- 9 Karma (Mental, ‘Ware Quality)  
@@ -332,7 +332,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Dedicated Spellslinger** \- 10 Karma (Knowledge, Magic Quality)  
   Only available to Magicians.  You forfeit the ability to summon or bind spirits and treat Conjuring as an untrained Skill.  In return, you gain 1 free Spell every time your Spellcasting rating improves; if taken at character creation you gain a number of free Spells equal to your Spellcasting.  You also learn new Spells at 4x Spell Value Karma instead of the normal 5x.  If combined with *Apt Pupil* these qualities reduce the cost of learning new Spells to 2x Spell Value Karma.
 
-**Dermal Deposits** \- (Troll Quality)  
+**Dermal Deposits** \- 0 Karma (Troll Quality)
   Dermal deposits within a Troll’s skin grant them 1 natural armor.  *Dermal Deposits* are innate to Trolls at character creation.
 
 **Double Jointed** \- 4 Karma (Physical, Stealth Quality)  
@@ -359,7 +359,7 @@ Qualities have a collection of tags associated with them based upon their purpos
     **(Global Fame)** \- 15 Karma  
       Public Awareness is increased by 6 and gain \+3 dice pool modifier on Social Tests against all characters who  recognize you with a LOG \+ INT (1) test.  If you have the *Day Job* quality your income is multiplied by 10x.
 
-**Fangs** \- (Hobgoblin Quality)  
+**Fangs** \- 0 Karma (Hobgoblin Quality)
   Allows Unarmed attack of (STR+1)P Reach \-1.
 
 **Fashion Influencer** \- 5 Karma (Social Quality)  
@@ -374,7 +374,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Friends in High Places** \- 10 Karma (Meta, Social Quality)  
   Gain an additional pool of free Karma during character creation equal to 4x CHA which can only be spent on Contacts with a Connection Rating 8 or higher.
 
-**Galloping Stride** \- (Centaur Quality)  
+**Galloping Stride** \- 0 Karma (Centaur Quality)
   Innate to the Centaur metatype and represents the fact that they are a quadruped.
 
 **Gearhead** \- 5 or 10 Karma (Rigger Quality)  
@@ -407,7 +407,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Honest Face** \- 5 Karma (Mental, Social Quality)  
   When a Judge Intentions Test is made against you receive a \+2 dice pool modifier on the opposing CHA \+ WIL Test.
 
-**Hooves** \- (Centaur, Satyr Quality)  
+**Hooves** \- 0 Karma (Centaur, Satyr Quality)
   Innate to the Centaur and Satyr metatypes for their cloven feet and grants unarmed attack of (STR+2)P with Reach \+1 for Centaurs, and (STR+1)P for Satyrs.
 
 **Human 2.0** \- 25 Karma (Meta Quality)  
@@ -443,7 +443,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Long Reach** \- 8 Karma (Combat, Physical Quality)  
   Gain \+1 Reach.
 
-**Low-Light Vision** \- (Centaur, Elf, Hobgoblin, Nocturna, Ogre, Ork, Satyr Quality)  
+**Low-Light Vision** \- 0 Karma (Centaur, Elf, Hobgoblin, Nocturna, Ogre, Ork, Satyr Quality)
   Characters with *Low-Light Vision* can see in darker lighting conditions naturally; they treat Partial Light and Dim Light as Full Light.  Only available to certain metatypes at character creation.
 
 **Lucky** \- 13 Karma (Meta Quality)  
@@ -491,7 +491,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Night Vision** \- 2 Karma (Nocturna, Physical Quality)  
   *Night Vision* grants the benefits of *Low-Light Vision*, but you suffer the effects of Blinding Glare on a clear day and Moderate Glare on an overcast day unless wearing sunglasses or some form of Flare Compensation.  This enhanced vision is not compatible with visual ‘ware enhancements or replacements.
 
-**Ogre Stomach** \- (Ogre Quality)  
+**Ogre Stomach** \- 0 Karma (Ogre Quality)
   Ability to digest almost anything up to raw meat and cellulose-based plant material, including grass.  Gain \+2 dice pool modifier to all Toxin Resistance Tests to resist ingested toxins.  Innate to the Ogre metatype.
 
 **One Trick Pony** \- 5 Karma (Combat Quality)  
@@ -539,7 +539,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Rad-Tolerant** \- 6 Karma (Defensive, Physical Quality)  
   Double exposure time required before suffering effects for radioactive environments, and treat all such environments as one step less.
 
-**Reach (Positive)** \- (Giant, Elf, Ork, Troll Quality)  
+**Reach (Positive)** \- 0 Karma (Giant, Elf, Ork, Troll Quality)
   Characters that have a positive value for *Reach* have longer arms or taller stature than the human baseline and gain an advantage in melee combat over opponents with less reach.  Innate to certain metatypes at character creation but may also be gained from various gear, spells, or abilities.
 
 **Reputation** \- 2 or 4 Karma (Meta, Social Quality)  
@@ -548,7 +548,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Restricted Gear** \- 10 Karma per item (Gear, Meta Quality)  
   This quality may be taken up to three times.  At character creation it provides access to one item with an Availability up to 24\.  During gameplay it allows one item up to Availability 18 with a single commlink call and a 30% markup.  *Restricted Gear* may be taken during character creation and saved for use later.
 
-**Satyr Legs** \- (Satyr Quality)  
+**Satyr Legs** \- 0 Karma (Satyr Quality)
   Innate to the Satyr metatype.  *Satyr Legs* are  backward canted, hairy, and cloven.
 
 **Scholastic Achievement** \- 5 Karma (Knowledge Quality)  
@@ -602,7 +602,7 @@ Qualities have a collection of tags associated with them based upon their purpos
 **Technical School Education** \- 4 Karma (Knowledge, Skill Quality)  
   Professional Knowledge Skills taken at character creation cost 1x new rating Karma instead of the normal 2x.
 
-**Thermographic Vision** \- (Dwarf, Gnome, Troll Quality)  
+**Thermographic Vision** \- 0 Karma (Dwarf, Gnome, Troll Quality)
   Characters with *Thermographic Vision* can see into the infrared range, essentially giving them heat vision.  Innate to certain metatypes at character creation.  Downgrade all Visibility and Light modifiers by 1 step.
 
 **Too Pretty to Hit** \- 3 Karma (Defensive Quality)  
