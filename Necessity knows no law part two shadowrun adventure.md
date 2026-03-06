@@ -3694,3 +3694,317 @@ He looked at Kyber, and for a moment, Kyber saw the ghost of Logi Prime in his s
 "The seed is planted," the Architect said, his voice a chorus of a thousand whispers. "The garden begins anew."
 
 Kyber stood alone in the wasteland, the 'Enforcer', the 'Observer', the 'Negotiator' all silent for the first time in years. They had survived. Zkazena had survived, in a way. But the price of the new beginning was a world forever changed, and a friend forever lost to the hollow resonance of a new god.
+
+## Chapter 3: The Resonator and the Wisp
+
+The trail led Kyber and Logi through the decaying heart of Sector 4, following the breadcrumbs of erratic Matrix signals and the whispers of frightened ghouls. The deeper they went, the more the air felt thick, heavy with the smell of ozone and old blood. Their destination: St. Jude's, an abandoned Catholic church that had somehow survived the worst of the 'incident'.
+
+Inside, the stained glass windows had been replaced with sheets of rusted metal, but the interior was bathed in a sickly, pulsing blue light. It emanated from the altar, where Francky had set up his "Resonator"—a grotesque amalgamation of stolen Wuxing bio-tech and jury-rigged magical foci.
+
+Francky stood before it, his slick suit a stark contrast to the decay around him. Beside him was the small boy, Spark, his eyes wide and vacant, hooked into the machine via a cluster of thick, pulsing cables. The kid wasn't just a prop; he was the battery.
+
+"Ah, the observers," Francky smiled, a slick, predatory grin. "I was wondering when you'd show up. You're just in time for a demonstration of New Beginnings' premium package."
+
+Kyber drew their Ares Predator, the 'Enforcer' persona surging forward, cold and efficient. "The demonstration is over, Francky. Let the kid go."
+
+"I'm afraid that's not possible," Francky sighed, adjusting his cuffs. "Spark is… essential. He has a unique resonance. A connection to the other side. Project Nightingale requires a conductor, you see."
+
+Before Kyber could fire, the Resonator flared. The blue light intensified, and a figure materialized from the central chamber. It was Asa. Or rather, the Hollow wearing Asa's face. She moved with a stiff, unnatural grace, stepping out of the machine and standing silently beside Francky.
+
+Logi's nanite swarm buzzed furiously, the static filling the church. "It's pulling from the local node. Reconstructing physical forms using raw mana and nanite scaffolding. But the consciousness… it's pulling fragments. Echoes."
+
+"Precisely," Francky beamed. "A little rough around the edges, but the market is desperate. They'll pay anything for a second chance, even a hollow one."
+
+"It's an abomination," Logi stated, stepping forward. "You're tearing holes in the fabric of the local Matrix. And you're using a child to do it."
+
+Logi didn't wait for a response. The Technomancer extended a hand, their nanite swarm surging outward like a wave of liquid silver. It crashed into the Resonator, shorting out the external controls. Francky cursed, drawing a sleek holdout pistol, but Kyber was already moving, laying down suppressive fire that forced the salesman behind a crumbling stone pillar.
+
+The Resonator, however, didn't shut down. Instead, it began to whine, a high-pitched keening that rattled Kyber's teeth. The blue light turned a blinding, chaotic violet.
+
+"The feedback loop is unstable!" Logi shouted over the noise. "The child—Spark—he's trapped in the resonance field. If I don't sever the connection, it'll tear him apart, and the resulting backlash will flatten this entire sector."
+
+"Do it!" Kyber yelled, reloading.
+
+Logi moved toward the altar, but the machine's defenses engaged. Tendrils of raw, corrupted magic lashed out. Logi absorbed the hits, their nanite swarm struggling to repair the damage as fast as it was inflicted. They reached the altar, placing both hands on the central node.
+
+"Kyber," Logi's voice was different now. Less digital, more… human. "I'm going to have to merge with the core to shut it down. The feedback is too strong. It's going to fry my physical form."
+
+"Logi, no! There has to be another way!" Kyber yelled, the 'Negotiator' and 'Observer' personas screaming in protest, the sudden surge of raw, unfiltered grief tearing through their collective consciousness.
+
+"There isn't." Logi turned, their face beginning to dissolve into silver dust. "Take the core. Keep Spark safe. I'll… see you around, chummer."
+
+Logi plunged their hands directly into the heart of the Resonator. A blinding flash of white light consumed the altar. The shockwave threw Kyber backward, their vision going dark.
+
+When Kyber came to, the church was silent. The Resonator was a slagged heap of molten metal and plastic. Francky was gone. Spark lay unconscious on the stone floor, breathing shallowly.
+
+And Logi was gone. Where the Technomancer had stood, there was only a fist-sized, crystalline structure, pulsing with a faint, erratic inner light. A 'crystalise'.
+
+Kyber staggered to their feet, the grief a physical weight in their chest. They picked up the crystalise. It was warm to the touch. Inside, a tiny, bright spark of energy darted around erratically—the 'Wisp', an alien entity caught in the crossfire, now trapped alongside whatever remained of Logi's essence.
+
+Kyber picked up the unconscious boy. They had the kid. They had the core. And they had a hole in their team where a friend used to be. The job was done, but the nightmare was just beginning.
+
+## Act 2: Waking Dreams
+
+## Chapter 4: The Sync Error
+
+The subway hub beneath Sector 4 was a sanctuary of necessity. A forgotten maintenance depot, it smelled of stale air, old grease, and Cryptolock's cheap synth-tobacco. The ghoul rocker sat on a rusted crate, strumming a minor chord on his battered guitar, watching Kyber pace.
+
+Spark was asleep on a makeshift cot, his small face pale and drawn. The Logi-crystalise sat on a metal table, pulsing with that strange, inner light.
+
+It had been three weeks since the church. Three weeks of hiding, of piecing together the salvaged data from Francky's destroyed Resonator. 'Project Nightingale.' It wasn't just about selling cheap resurrections; it was about tearing down the barrier between the physical world and the chaotic energies of the Zone, using Spark as the key.
+
+And then, there was the ping.
+
+A faint, encrypted signal, echoing on a localized Matrix frequency. It originated from a Wuxing automated supply cache just outside the city limits. Kyber had recognized the encryption key. It was Logi's.
+
+Kyber had gone to the cache alone, their heart hammering a frantic rhythm against their ribs. The cache doors had hissed open, and there, standing amidst crates of emergency rations, was Logi.
+
+Not the Logi who had dissolved into silver dust at the altar. This Logi looked identical, down to the scuffed jacket and the faint nanite corona, but the eyes were different. Clearer. Less burdened.
+
+"Logi_v2.1 online," the figure had said, stepping out of the cache. "Regenesis protocol initiated via remote backup node. Last sync: 42 days ago. What's the situation, Kyber?"
+
+Kyber had stared, the 'Observer' persona paralyzed by the sheer, staggering reality of it. The Save State. A perfect backup, downloaded into a fresh, nanite-constructed body.
+
+Now, back in the subway hub, the tension was thick enough to cut with a monofilament whip.
+
+Logi—the new Logi—sat cross-legged on the floor, scrolling through a datapad filled with Kyber's mission logs. They laughed, a sharp, digital bark of amusement.
+
+"This is good," Logi said, looking up, their eyes bright. "The 'Indigestion' joke. Very witty. You should use that more often."
+
+Kyber stopped pacing. They stared at Logi. The joke was from a log recorded three weeks ago. It was a dark, bitter quip Kyber had made while staring at the slagged remains of the Resonator, the smell of ozone and burning flesh still fresh in their nose. It was a joke told in the shadow of a funeral.
+
+For Logi, it was new content. A fresh piece of data.
+
+"Glad you like it," Kyber said, their voice tight.
+
+The 'Grief Gap' was a physical chasm between them. Kyber's brain was still wired for mourning, still processing the trauma of St. Jude's. Every time Logi spoke, every time they used a familiar gesture or referenced a shared history they hadn't actually experienced, it felt like a violation. A ghost in a fresh coat of paint.
+
+Logi set the datapad down. "You're stressed, Kyber. Heart rate is elevated. Cortisol levels spike every time I speak. Is there a problem with my current iteration?"
+
+"You're not a piece of software, Logi," Kyber snapped, the 'Enforcer' bleeding through. "Stop talking like a diagnostic report."
+
+"But I am," Logi replied, their expression neutral. "I am Logi_v2.1. A living documentation of the Archon node. If I am damaged, I can be restored. I am… fungible."
+
+"You're a person," Cryptolock grunted from the corner, pausing his strumming. "Even if you are fresh out the wrapper."
+
+"Am I?" Logi looked at their hands, the nanites shifting beneath the skin. "Or am I just a Hollow with a better data plan? If I'm just a save state, did you really bring me back, Kyber? Or did you just hit 'undo' because you couldn't handle the silence?"
+
+The question hung in the stale air, heavy and sharp. Kyber looked away, their gaze falling on the crystalise resting on the table.
+
+The crystalise pulsed. Not a steady rhythm, but an erratic, frantic beat.
+
+*Spark+.*
+
+That was what Kyber had started calling the entity inside the crystal. It wasn't just the Wisp anymore; it was the Wisp entangled with the final, agonizing moments of Logi Prime's consciousness. The screams, the sacrifice, the growth—it was all locked inside that alien, glowing stone.
+
+Logi_v2.1 followed Kyber's gaze. "The artifact is active. It's… broadcasting."
+
+The crystalise chimed, a high, piercing frequency that made Kyber's teeth ache. And then, a voice—Logi Prime's voice, distorted and layered with alien resonance—echoed in the small room.
+
+*“…keep him safe… the sky is falling… they’re waking up…”*
+
+Kyber felt a chill run down their spine. The uncanny valley gaped wide. The Save State Logi was sitting right in front of them, breathing and speaking, but the *real* Logi—the ghost who held the truth of their journey—was trapped in a glowing rock. And Kyber found, with a sickening jolt of realization, that they preferred the company of the weird, glowing entity over the restored human.
+
+Because the entity, for all its alien nature, possessed the truth.
+
+Kyber turned back to the new Logi. "We need to talk about Kestrel."
+
+Logi_v2.1 frowned, a slight dip in their brow. "Kestrel? The Fixer in Seattle? I haven't seen her in six months."
+
+Kyber closed their eyes. The corruption of shared secrets. Right before the church, Kyber had told Logi the truth about Kestrel. The deep, dark secret about the betrayal that had forced Kyber into hiding, the reason for the CFD, the fragmentation of their mind. It was the foundation of their trust.
+
+And now, it was gone. Erased by a sync error.
+
+Kyber opened their eyes, looking at the fresh, unburdened face of their partner. The camaraderie couldn't be restored. Logi Prime was dead. Logi Backup was a new person who just happened to have the same face.
+
+"Never mind," Kyber said softly. "It's not important. Let's focus on the data. What did you find on Project Nightingale?"
+
+They had to build it from scratch.
+
+## Act 3: The Sky Bleeds
+
+## Chapter 5: The Falling Star
+
+The premonitions started two days later.
+
+Spark, who had been largely silent since the church, began to speak in his sleep. Not the babbling of a child, but cold, precise predictions delivered in a voice that echoed with the same strange resonance as the crystalise.
+
+*“The gardener plants the seed. The sky bleeds violet. The sleepers wake to the feast.”*
+
+Kyber and the new Logi poured over the salvaged Nightingale data, trying to decipher Francky's endgame. Sister Sinalma's name appeared frequently in the decrypted files. She wasn't just a Bio-Arcane researcher for the White Tower; she was a rogue agent, obsessed with the Wisp's reality-bending potential. She believed the Zone wasn't a disaster, but a chrysalis. And she needed Spark to open it.
+
+Then, the sky fell.
+
+It wasn't a meteorite. It was a tear in the fabric of the Sixth World. It started as a bright, blinding point of violet light high above Zkazena, descending not with a roar, but with a terrifying, absolute silence. It struck the edge of the Containment Zone, and the world inverted.
+
+The shockwave wasn't physical; it was metaphysical. The air in the subway hub turned freezing cold, and the faint, ever-present static of the nanites flared into a deafening scream.
+
+The Containment Zone surged.
+
+It didn't just expand; it erupted, swallowing Sector 4, washing over the ruins of Crispyopolis like a tidal wave of chaotic, mutated reality. The laws of physics groaned and snapped. Gravity localized, buildings twisted like melting wax, and the ambient mana spiked to levels that made Kyber's teeth bleed.
+
+And the ghouls went mad.
+
+Spark's 'waking sleepers.' The sudden influx of raw, corrupted magic shattered whatever fragile sanity the ghoul population of Zkazena still held. Driven by an insatiable, magically-amplified hunger, they swarmed. Thousands of them, pouring from the mines, the sewers, the ruins, a tide of snapping teeth and tearing claws heading straight for the only beacon of order left: the White Tower.
+
+"We have to move," Logi_v2.1 stated, their voice tight as the subway hub shook. "The structural integrity of this level is compromised. And we have multiple hostiles converging on our position."
+
+Cryptolock grabbed his guitar, his eyes wide, the hunger in his own gut fighting against the sudden, terrifying pull of the Zone. "Where? The whole city is going fragging insane!"
+
+"The Tower," Kyber said, grabbing the crystalise and hoisting Spark onto their back. "It's the only place with shielding strong enough to hold back the Zone. If we don't get inside, we're dead."
+
+The journey to the Tower was a nightmare of blood and chaos. The streets were choked with frenzied ghouls. Kyber fought with the cold precision of the 'Enforcer', Logi utilized their nanites to create momentary shields and localized EMP bursts, and Cryptolock fought like a demon, his guitar doubling as a blunt instrument against his crazed brethren.
+
+They reached the armored perimeter of the White Tower just as the main horde hit the gates. The automated defenses were chewing through the ghouls, but there were too many. The perimeter was failing.
+
+Then, the cavalry arrived.
+
+They didn't come to save the people. They came for the glory, and the paycheck.
+
+The Fuchsia Dragons.
+
+They rolled in on heavily armored hover-tanks, their neon pink and black livery a garish contrast to the grim reality of the siege. Captain Lazlow, the massive, spirit-possessed mercenary, stood atop the lead vehicle, his booming voice amplified across the battlefield.
+
+"Light 'em up, boys and girls! Let's show these rotters how the Dragons play!"
+
+The mercenary fire was devastating. Heavy plasma cannons and concentrated magical barrages tore into the ghoul horde. But Kyber, watching through the scope of their Predator, saw the truth. The Dragons weren't just killing ghouls; they were securing strategic points around the Tower, setting up their own perimeter. They weren't saviors; they were an occupying force. Wuxing had hired a sledgehammer to crack a nut, and the Dragons were planning on keeping the pieces.
+
+Amidst the chaos, Kyber, Logi, Cryptolock, and Spark managed to slip through a secondary access hatch, sealing themselves inside the sterile, gleaming belly of the beast. They were safe from the horde, but they were trapped in the Tower.
+
+## Act 4: The Siege of White Tower
+
+## Chapter 6: The Architect’s Blueprint
+
+The White Tower was in full lockdown. The massive blast doors were sealed, the windows shuttered with heavy plasteel armor. The sleek, corporate corridors were bathed in the red glow of emergency lighting, echoing with the sound of alarms and the distant, muffled thud of the siege outside.
+
+Worse, the Matrix was dead.
+
+The Tower's internal AI, a sophisticated entity designated 'Oracle', had initiated a total blackout. Martial law. No signals in, no signals out. The jammer fields were so thick Kyber could taste the ozone.
+
+"We're blind," Kyber muttered, leaning against a cold plasteel wall in an abandoned security substation. They set Spark down; the boy was conscious but staring blankly at the wall, humming a disjointed tune.
+
+Logi_v2.1 was interfaced with a dormant terminal, their nanites working furiously to bypass the physical airgap. "Oracle has sealed the sub-nodes. I'm trying to establish a localized handshake, but the ICE is formidable. It's a closed-loop system designed to withstand orbital assault."
+
+"Speaking of orbital assault," Cryptolock growled, pacing the small room like a caged animal. The magic surge outside was affecting him; his eyes were entirely black, and his fingernails had hardened into sharp, talon-like claws. "I overhead a couple of corp-sec guards before we slipped in here. Wuxing is cutting their losses. They're prepping the 'Thor Shots'. Kinetic bombardment from orbit. They're going to wipe Zkazena off the map."
+
+Kyber felt a cold knot tighten in their stomach. Wuxing was going to glass the city, and everyone in it, to cover up the mess.
+
+"We need a way out," Kyber said.
+
+"Negative," Logi_v2.1 replied, finally pulling their hand from the terminal. "The perimeter is flooded with the Zone's energy and thousands of frenzied ghouls. The Fuchsia Dragons hold the only viable exit routes, and their combat protocols are currently set to 'shoot on sight' for anyone not wearing their colors. We are trapped."
+
+"So we just wait to get vaporized?" Cryptolock snarled.
+
+"I have an alternative," Logi_v2.1 said, their voice calm, devoid of the panic that usually accompanied impending doom. "Oracle is a logic-based entity. It is currently operating under the assumption that containment is impossible and destruction is the only viable protocol. If I can provide a counter-narrative—a strategic path to stabilization and asset retrieval—I can negotiate a cessation of the bombardment."
+
+"Negotiate with a corp AI? While we're trapped in its belly?" Kyber shook their head. "What are you going to offer it?"
+
+Logi_v2.1 looked at Kyber, their eyes blank and calculating. "We have the architect."
+
+Logi pointed at Spark.
+
+"The Nightingale data confirms it," Logi continued. "Spark's resonance, combined with the Wisp entity inside the crystalise, acts as a stabilization key. If we can reach the Tower's central Ley Line node—the tap that powers this entire facility—Spark can interface with the raw mana. He can act as a grounding rod, stabilizing the Zone and forcing the anomalous energy back into the earth."
+
+"You want to plug the kid into a magical nuke?" Kyber stepped forward, the 'Enforcer' bristling. "No. We saw what happened at the church."
+
+"The church was a crude, jury-rigged feedback loop," Logi_v2.1 countered smoothly. "The Tower's node is a controlled, focused conduit. It is the only logical path to survival. I have compiled the probability matrices. The odds of escape are 0.003%. The odds of stabilization via the child are 14.7%."
+
+Kyber stared at the new Logi. The cold, utilitarian calculus. The total disregard for the emotional cost. This wasn't their partner. This was a machine wearing their partner's face, making a move on a chessboard Kyber couldn't even see.
+
+Before Kyber could argue, the heavy security door to the substation hissed open.
+
+Standing in the doorway, flanked by two heavily modified, silent corp-sec guards, was Sister Sinalma. She looked pristine, unbothered by the chaos, a chillingly serene smile on her face.
+
+And standing next to her, looking bruised, battered, but very much alive, was Francky.
+
+"Well," Sinalma said, her voice smooth as silk. "It seems we all have the same destination in mind. How fortuitous. Francky tells me you have the key to my new world, Kyber. I think it's time you handed him over."
+
+## Act 5: Apotheosis
+
+## Chapter 7: The Architect's Price
+
+The standoff in the substation lasted only a heartbeat.
+
+Sinalma moved with terrifying speed, a blur of cybernetic enhancement and dark magic. She didn't go for Kyber; she lunged for Spark.
+
+Kyber's Ares Predator roared, but the bullets sparked harmlessly off a shimmering kinetic barrier surrounding the Sister. Logi_v2.1 intercepted, their nanite swarm forming a razor-sharp blade that clashed against Sinalma's monofilament whip. Sparks flew as tech and magic collided.
+
+Francky, meanwhile, dove for the crystalise on the table. Cryptolock intercepted him, a primal roar tearing from the ghoul's throat as he tackled the salesman, the two of them crashing into the consoles.
+
+"You don't understand!" Sinalma shouted over the din, parrying Logi's strikes. "The Zone isn't a disaster! It's an evolution! We can reshape reality! We can transcend this rotting world!"
+
+"You're insane!" Kyber yelled, trying to get a clear shot.
+
+"The orbital bombardment commences in T-minus ten minutes," Logi_v2.1 announced, their voice perfectly calm despite the desperate melee. "We must proceed to the central node."
+
+Logi didn't wait for agreement. They unleashed a localized EMP pulse, momentarily shorting out Sinalma's kinetic barrier and the guards' cyberware. In the brief window of confusion, Logi grabbed Spark and bolted through the shattered door, heading deeper into the Tower.
+
+"Go!" Cryptolock yelled, pinning a bleeding Francky to the floor. "I'll hold 'em off! Get the kid to the node!"
+
+Kyber hesitated for a fraction of a second, the 'Observer' acknowledging the tactical necessity, the 'Negotiator' weeping for the friend left behind. They grabbed the crystalise and sprinted after Logi.
+
+The descent to the central node was a blur of red emergency lights and echoing alarms. The Tower's internal defenses were confused by the blackout, firing erratically at shadows. They reached the sub-basement, a massive, cavernous chamber built directly over the intersection of several powerful ley lines.
+
+The air here was thick, almost liquid with raw magic. In the center of the room sat the Node—a massive, glowing crystalline structure pulsing with immense, chained power.
+
+"T-minus three minutes to orbital strike," Logi_v2.1 stated, moving Spark toward the Node. "Commencing interface protocols."
+
+"Wait!" Kyber yelled, stepping between Logi and the Node, weapon raised. "What happens to the kid, Logi? Tell me the truth. Not the probability matrix. The truth."
+
+Logi_v2.1 stopped. They looked at Kyber, then at Spark, who was staring at the glowing Node with a terrifying, calm fascination.
+
+"The child will act as the conduit," Logi said slowly. "The sudden influx of raw, stabilizing mana will likely overwhelm his neurological pathways. The 'Spark' consciousness will be… overwritten. He will become part of the Node. An eternal warden for the Zone."
+
+Kyber felt sick. It was a sacrifice. Another sacrifice.
+
+Suddenly, the crystalise in Kyber's hand grew burning hot. It flared with a blinding, violet light, tearing itself from Kyber's grasp and floating into the air.
+
+*Spark+.*
+
+The entity pulsed, a chaotic blend of the Wisp's alien nature and Logi Prime's final, desperate memories. It didn't speak with words, but with a wave of pure emotion that crashed over Kyber's mind. A wave of profound, aching love, of fierce protection, and a terrifying, ancient understanding.
+
+The crystalise shot forward, bypassing Logi_v2.1, and embedded itself directly into the boy's chest.
+
+Spark gasped, his eyes flying open. But they weren't his eyes anymore. They were pools of deep, endless violet, swirling with silver nanite dust. The Apotheosis. The merge was complete. The boy, the Wisp, and the ghost of Logi Prime were one entity now. The Architect.
+
+"Warning. Orbital strike imminent," Oracle's voice, devoid of emotion, echoed through the chamber. "Impact in thirty seconds."
+
+Spark+ turned toward the Node. He didn't walk; he glided, the air around him shimmering with distorted reality. He reached out and touched the massive crystal.
+
+The world stopped.
+
+The sound of the alarms ceased. The red emergency lights froze. The very air hung suspended.
+
+Kyber watched, paralyzed, as Spark+ began to pull. He wasn't stabilizing the Zone; he was drawing it all in. The raw magic, the chaotic energy of the Zone, the immense power of the Ley Lines—he was pulling it all into himself, into the fragile vessel of a child's body.
+
+The chamber began to crack, the plasteel groaning under the impossible metaphysical weight.
+
+"He cannot contain it," Logi_v2.1 stated, stepping back. "The energy mass is exceeding structural limits. Complete localized annihilation is imminent."
+
+Kyber didn't listen to the Save State. They watched the Architect. They saw the agony on the boy's face, the terrifying power radiating from him.
+
+*He's doing it,* Kyber realized, the 'Observer' persona whispering in awe. *He's absorbing the blast. He's taking the Thor Shot.*
+
+High above Zkazena, the Wuxing orbital platform fired. A rod of tungsten, moving at hypersonic speeds, struck the White Tower.
+
+The impact should have vaporized the city. Instead, the kinetic energy hit the massive, concentrated well of magic Spark+ had gathered. The resulting explosion wasn't outward, but inward. A singularity of magic and kinetic force.
+
+The world went white.
+
+When Kyber opened their eyes, they were lying on cracked, scorched ferrocrete. The air was still thick with sulphur, but the suffocating static of the nanites was gone.
+
+They sat up. The White Tower was gone. In its place was a massive, perfectly smooth crater of fused glass, stretching for miles. The Containment Zone was gone, sucked into the singularity.
+
+Logi_v2.1 lay nearby, their body intact, but their eyes dark. The sudden loss of the local Matrix node had thrown them into emergency hibernation. Cryptolock was nowhere to be seen, likely buried in the rubble of the upper levels, or perhaps he had escaped in the chaos. Sinalma and Francky were undoubtedly ash.
+
+And Spark.
+
+Kyber stood up, their legs shaking. In the center of the glass crater, a single, small figure stood.
+
+It was a boy, but not Spark. His skin was the color of pale moonlight, his eyes solid, shimmering silver. He radiated a calm, profound power, a stark contrast to the devastation around him.
+
+He looked at Kyber, and for a moment, Kyber saw the ghost of Logi Prime in his smile. A sad, knowing smile.
+
+"The seed is planted," the Architect said, his voice a chorus of a thousand whispers. "The garden begins anew."
+
+Kyber stood alone in the wasteland, the 'Enforcer', the 'Observer', the 'Negotiator' all silent for the first time in years. They had survived. Zkazena had survived, in a way. But the price of the new beginning was a world forever changed, and a friend forever lost to the hollow resonance of a new god.
