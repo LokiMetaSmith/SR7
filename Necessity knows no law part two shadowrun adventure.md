@@ -885,3 +885,151 @@ Kyber provided overwatch, picking off targets of opportunity, watching as the Dr
 "Pack it up," Kyber ordered, keying the comms. "Nada'ira, fall back. We hit Node Bravo before they can reinforce."
 
 The hunting trip had begun, and for the first time since the sky fell, Wuxing was bleeding. But as Kyber watched the silent, bloody efficiency of their new allies, they couldn't shake the feeling that they were just feeding a different kind of monster.
+
+## Chapter 91: The Butcher's Bill
+
+The return to the subterranean cavern was cloaked in a heavy, exhaust-laden silence. The simultaneous strikes against Wuxing's staging nodes had been a tactical triumph. The corporate blockade was severely crippled, their sensor nets blinded, and their automated artillery silenced. Logi v2.1’s data spikes had ensured the disruption would take days, perhaps weeks, to fully repair.
+
+But the victory tasted metallic and cold to Kyber.
+
+They walked slightly apart from the returning Fuchsia Dragons. The mercenaries moved with that same unnerving, synchronized precision they had displayed during the assault. Their armor was scorched and slick with Wuxing blood, but their expressions were entirely blank. They hadn't celebrated the victories; they had simply executed their programming and returned to the hive.
+
+"It was a massacre," Cryptolock murmured, falling into step beside Kyber. The ghoul's usual bravado was muted, replaced by a deep-seated unease. "I've seen some drek in Crispyopolis, but that... they didn't even flinch when that Wuxing heavy begged for his life. Just melted him to slag."
+
+"They are an extension of the Lazlow-Entity's will," Logi v2.1 analyzed, their nanite aura glowing dimly in the cavern's gloom. "Compassion and mercy are not recognized variables in the insect spirit's combat algorithms. Only efficiency and consumption."
+
+"We used them," Kyber said, the 'Operator' persona trying to justify the carnage. "We needed the perimeter broken. Wuxing wouldn't have shown us mercy either."
+
+"Doesn't mean we have to like how the sausage gets made," Cryptolock shot back, his claws twitching nervously. "And what happens when Wuxing stops being the most immediate threat? When that thing," he gestured vaguely toward the main cavern, "gets hungry for something closer to home?"
+
+"We maintain the boundary," Kyber replied, though the words felt hollow. The alliance was a razor's edge, and Kyber knew it.
+
+They entered the main cavern. The Lazlow-Entity was waiting near the primary barricade, its massive, chitinous form illuminated by the bioluminescent moss. It didn't speak as the strike team returned, but the click-clack of its mandibles conveyed a chilling sense of satisfaction.
+
+*The metal men are broken,* the entity's voice echoed in their minds. *The hive breathes.*
+
+Kyber didn't respond to the creature, steering their team toward their secluded side-cavern. They needed to rest, to recharge, and to figure out how to navigate the terrifying new normal they had helped create.
+
+As they entered their makeshift sanctuary, Kyber immediately noticed a change. The polished obsidian floor and the bioluminescent beds were still there, but Spark+ was no longer floating in quiet contemplation.
+
+The Architect was standing.
+
+He stood near the center of the room, his silver eyes wide, staring intently toward the entrance of the main cavern where the Fuchsia Dragons were gathering. The violet aura around him wasn't pulsing defensively; it was vibrating with a strange, harmonic frequency.
+
+"Spark?" Kyber approached cautiously, the 'Negotiator' stepping forward. "Are you okay? The resonance feels... different."
+
+The Architect didn't look at Kyber. He kept his gaze fixed on the main cavern.
+
+"They remember," Spark+ whispered, his voice holding a tone of profound, alien sadness. "The dead... they are walking."
+
+Kyber frowned, confused, until a rhythmic, heavy thudding sound echoed from the main cavern. It was a slow, deliberate march, entirely unlike the quick, efficient movements of the insect-guided mercenaries.
+
+"Logi, what is that?" Kyber asked, turning back toward the entrance.
+
+"I am detecting significant magical anomalies gathering in the primary staging area," Logi v2.1 reported, their aura flaring as they processed the data. "The energy signatures match those of the... transformed entities. But the physical forms are altered."
+
+"Stay here," Kyber told Cryptolock and Logi, drawing their Predator. "I'm going to see what the hive is up to."
+
+## Chapter 92: The Procession of Remembrance
+
+Kyber stepped out of the side-cavern, the 'Observer' persona cataloging the scene unfolding in the main stronghold. The usual chaotic activity of the mercenaries had ceased. The Fuchsia Dragons were lined up in perfectly straight, silent ranks, forming a wide aisle leading from the Undercity access tunnel to a raised dais near the center of the cavern.
+
+The Lazlow-Entity stood at the base of the dais, its massive form surprisingly still.
+
+The heavy thudding sound was coming from the tunnel.
+
+Through the gloom, massive figures emerged. They were bipedal, standing a full head taller than the largest troll, and incredibly broad. But it was their armor that commanded attention. It was 'Super Heavy' gear—thick, reinforced plasteel plating designed to withstand anti-vehicle weaponry.
+
+The armor was painted in the company's garish colors, deep black accented with glaring neon pink highlights that seemed to glow in the dim light. The helmets were massive, featureless domes, completely obscuring whatever lay beneath.
+
+"The fallen," Kyber breathed, realizing what they were looking at.
+
+These weren't men in suits. These were the oath-breakers, the heavy hitters who had died and been devoured by their pact spirits, just as Lazlow had been. But unlike the captain, whose horrific transformation was raw and uncovered, these entities were encased in the Super Heavy armor. It hid their chitinous limbs, their monstrous faces, presenting a terrifying but vaguely humanoid silhouette to the world.
+
+There were five of them in total. They moved with a slow, grinding inevitability, the sheer weight of their armor and the unnatural strength of the spirits within shaking the cavern floor with every step.
+
+This was the Procession of Remembrance. The dark, bloody secret of the Fuchsia Dragons' resilience, formalized into a somber, terrifying military ritual.
+
+They marched down the aisle, the living mercenaries watching in absolute, reverent silence. They reached the dais and turned, facing the assembled company.
+
+The Lazlow-Entity stepped forward.
+
+*We remember the blood,* the entity's voice echoed in the minds of everyone present. *We remember the pact. The flesh fails, but the Dragons remain.*
+
+The massive, armored figures stood motionless, silent testaments to the horrific cost of the company's power. They were the ultimate shock troops—monsters wearing the armor of dead men, wielding heavy weapons with insectoid precision and dark magic.
+
+Then, a living human stepped out from the ranks and ascended the dais. It was Nada'ira.
+
+She looked small standing next to the towering, armored horrors, but her posture was rigid, her face an unreadable mask. She stopped in front of the Lazlow-Entity, her back to the assembled troops.
+
+*The hive requires a voice among the meat,* the entity broadcasted, the clicking of its mandibles taking on a ceremonial rhythm. *Nada'ira. You have bled for the swarm. You will lead the flesh.*
+
+Nada'ira drew her combat knife, a swift, practiced motion. She didn't hesitate. She dragged the blade across her palm, a deep cut that welled with bright red blood. She held her hand out, presenting the blood to the monstrous captain.
+
+The Lazlow-Entity leaned down, its horrifying mandibles clicking softly. It didn't bite her; instead, a long, pale, shimmering tongue extended from its maw, tasting the blood on her palm.
+
+*The pact is witnessed. The command is given.*
+
+The entity straightened up, turning its massive head toward the mercenaries.
+
+*Captain Nada'ira.*
+
+The Fuchsia Dragons didn't cheer. They slammed the butts of their rifles against the cavern floor in unison, a single, deafening crash that echoed like thunder.
+
+Nada'ira turned to face the company, her bloody hand held high. She was the new human face of the Fuchsia Dragons, a commander tethered to a hive of monsters.
+
+Kyber watched from the shadows, the 'Negotiator' realizing that the game had fundamentally changed. The alliance was no longer just a desperate arrangement with a rogue spirit; it was a formalized pact with a newly structured, heavily armed nightmare army.
+
+And Kyber, holding the leash of a child-god, was right in the middle of it.
+
+## Chapter 93: The Weight of the Crown
+
+The heavy resonance of the Procession still lingered in the air as Kyber retreated back to the side-cavern. The display of the Super Heavies—the armored monsters standing silently behind their new human captain—was a stark reminder of the knife-edge they were walking.
+
+Logi v2.1 and Cryptolock were waiting. The ghoul looked visibly shaken, having watched the ceremony from the shadows near the entrance.
+
+"Tell me you saw that, suit," Cryptolock muttered, pacing the small space. "Tell me you saw those walking tanks. They’re packing enough firepower to level a city block, and they’re being driven by fragging bugs."
+
+"I saw them," Kyber said, leaning against the cool obsidian wall. The 'Operator' persona was busy updating threat assessments. "They're the ultimate shock troops. And right now, they're our shock troops."
+
+"They're a time bomb," Cryptolock argued. "Nada'ira might wear the captain's bars, but that thing—Lazlow—is pulling the strings. How long until it decides we look like a tasty snack instead of allies?"
+
+"The entity is pragmatic," Logi v2.1 interjected, their synthetic voice calm. "Current variables suggest continued cooperation is its optimal survival strategy. We provide tactical acumen and a buffer against Wuxing's magical suppression."
+
+"And we provide the Architect," Kyber added softly, looking toward the center of the room.
+
+Spark+ was still standing, his silver eyes fixed on the entrance, though the ceremony had concluded.
+
+"Spark," Kyber said gently, approaching the boy. "What did you see out there?"
+
+The Architect slowly turned his head. The violet aura had settled back into a low, defensive pulse.
+
+"They hide their true faces in iron shells," Spark+ whispered, his voice carrying the eerie resonance of the Wisp mixed with the melancholic echo of Logi Prime. "They are dead, but they do not sleep. They burn with a cold fire."
+
+"Do they scare you?" Kyber asked, needing to understand how the child-god perceived the insect horrors.
+
+Spark+ tilted his head, seemingly considering the question. "They are a different kind of root. A rot that strengthens the soil. They are necessary... for now."
+
+The cold pragmatism from the boy was chilling. It mirrored the Lazlow-Entity’s own logic. The garden was adapting, incorporating the monsters to fight off the machines.
+
+"Okay," Kyber said, pushing the unease down. They had immediate problems to solve. "Wuxing's perimeter is down, but it won't stay down forever. We hurt them, but we didn't break them."
+
+"They will undoubtedly shift tactics," Logi v2.1 agreed. "Direct assault has failed. Containment has been disrupted. Probability suggests they will escalate to specialized, targeted strikes. Assassination or extraction."
+
+"They'll come for the kid again," Cryptolock said grimly.
+
+"Or they'll try to fracture our alliance," Kyber mused. "Wuxing knows the Fuchsia Dragons are mercenaries. They might try to buy them off, or find a way to sever the entity's control."
+
+"Nada'ira is the key," Kyber decided. "She's the human interface. If Wuxing tries to negotiate, they'll go through her. We need to make sure she understands that sticking with us is her best chance at survival."
+
+"You want to play politics with a woman who just swore a blood oath to a giant bug?" Cryptolock raised an eyebrow. "Good luck with that, suit."
+
+"It's not politics. It's survival," Kyber said. They checked the charge on their Predator. "We rest for six hours. Then, we need to secure the upper levels of the Tower ruins. If Wuxing sends a targeted strike team, they'll likely use the vertical shafts to bypass the perimeter."
+
+"Agreed," Logi v2.1 said. "I will formulate a sensor net deployment plan for the upper levels."
+
+As the team settled into their bioluminescent beds, preparing for a brief, tense rest, Kyber remained awake, sitting near the entrance of their cavern. They watched the main stronghold, where the massive, armored silhouettes of the Super Heavies stood sentinel in the gloom.
+
+They had won the siege, broken the blockade, and secured an army. But as Kyber looked at the sleeping form of the Architect and the terrifying reality of their new allies, they understood the true weight of their situation.
+
+They weren't just surviving anymore. They were generals in a war for the soul of Zkazena, commanding a fragile coalition of monsters, ghosts, and a child-god. And the real fight had only just begun.
