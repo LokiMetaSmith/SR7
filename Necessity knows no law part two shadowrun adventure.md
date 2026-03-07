@@ -4012,3 +4012,109 @@ He looked at Kyber, and for a moment, Kyber saw the ghost of Logi Prime in his s
 "The seed is planted," the Architect said, his voice a chorus of a thousand whispers. "The garden begins anew."
 
 Kyber stood alone in the wasteland, the 'Enforcer', the 'Observer', the 'Negotiator' all silent for the first time in years. They had survived. Zkazena had survived, in a way. But the price of the new beginning was a world forever changed, and a friend forever lost to the hollow resonance of a new god.
+
+## Chapter 71: Return to the Deep
+
+Kyber dragged themself into the relative darkness beneath the crumbling overpass, Cryptolock collapsing beside them against the cold, damp concrete. Rainwater dripped rhythmically through cracks overhead, echoing the frantic pounding in Kyber’s own chest. They had escaped the immediate vicinity of Sinalma's relay building, losing themselves in the chaotic maze of the mid-level sprawl, but the sounds of distant sirens and the memory of Wuxing boots closing in were still fresh.
+
+"Status?" Kyber gasped, running a quick diagnostic. Energy cells critical. Minor stress fractures detected in chassis from evasive maneuvers. Adrenaline starting to crash hard.
+
+"Still kickin'," Cryptolock grunted, checking his own wounds and the charge on his pistol. "But that was too fraggin' close. They knew we were there."
+
+"The relay disruption worked," Kyber confirmed, pulling up filtered intercepts from local comm channels while running passive sensor sweeps. "Detected significant data corruption alerts originating from the White Tower's lower network nodes, followed by escalated SHOD comms traffic and localized system reboots." They pointed to the datapad display. "We definitely stirred the nest. Bought us chaos, maybe, but also confirmed our presence".
+
+"So Wuxing knows someone hit Sinalma's private line," Cryptolock deduced grimly. "They'll be tearing these levels apart looking for us."
+
+"Exactly. We need to get back to the hub. Recharge. Check on Spark". Kyber accessed their internal Zkazena maps, cross-referencing with Cryptolock's knowledge of deeper, less-used tunnels connecting this sector back towards the Ashworth complex ruins. The journey would be longer, more difficult than their outbound trip, avoiding all major transit lines and utility corridors Wuxing likely controlled.
+
+The trek back down into Zkazena's bowels was a grim exercise in endurance. Fatigue gnawed at Kyber, amplifying every ache, dulling their usually sharp senses. The Operator persona pushed forward through sheer discipline, while the Analyst constantly reassessed risks, recalculating routes based on Cryptolock's whispered guidance and faint sensor readings. Kyber missed Logi v1 acutely now – not just for the technical skill, but for the shared load, the second set of eyes, the analytical counterpoint. The silence from Kestrel remained absolute, a heavy weight adding to Kyber's isolation. *Are we truly alone in this?*
+
+As they descended back into the older mine networks beneath Ashworth, the familiar territory felt different, more menacing. They found fresh signs near a major junction – discarded ration packs, Wuxing issue, barely touched; heavy boot prints overlaying the fainter tracks they themselves had left hours earlier.
+
+"They've been *here*," Cryptolock whispered, examining the prints. "Sweeping this deep. Looking for the hub?"
+
+"Or just widening the search grid after the relay hit," Kyber countered, though worry tightened their chest. They scanned the area intensely. No active sensors detected nearby, no obvious traps. "Maybe they passed through, didn't find anything specific."
+
+They approached the final stretch leading to the hub's concealed entrance with excruciating care. Kyber swept the area repeatedly – thermal, EM, acoustic, even trace magical signatures. Nothing seemed immediately out of place. Their own external traps seemed undisturbed. But the Wuxing chatter they'd intercepted earlier felt too close for comfort.
+
+Taking point, Kyber sent the pre-arranged secure pulse signal towards the hub's receiver: three short, pause, two long. They waited, hidden in a deep recess, straining their hearing, listening for any sound from within the hub, watching the shadows for movement.
+
+An agonizing minute passed. Nothing. Kyber’s mind raced through breach protocols. Had something happened to Cryptolock inside? Had Spark+ destabilized?
+
+Then, faint but clear, the response signal pulsed back: two short, pause, one long. *All clear. Secure*.
+
+A wave of relief, quickly tempered by caution, washed through Kyber. Cryptolock was okay. The hub hadn't
+
+been breached, despite Wuxing's proximity.
+
+"Clear," Kyber signaled to Cryptolock behind them. "Let's get inside."
+
+## Chapter 72: Safe Haven, Stolen Secrets
+
+The heavy blast doors of the subway maintenance hub hissed open, the familiar scent of old grease and stale air wafting out to greet them. Kyber and Cryptolock slipped inside quickly, the doors grinding shut and locking behind them with a reassuring thud. The emergency lighting flickered, casting long, wavering shadows across the cavernous space.
+
+"Home sweet hole," Cryptolock muttered, leaning heavily against the nearest rusted pillar. He slid down to the concrete floor, chest heaving. "Frag me, I need a drink. Or a raw steak."
+
+Kyber didn't rest. The 'Operator' persona was fully in charge now, overriding the exhaustion with cold, calculated necessity. They immediately began checking the hub's internal security feeds, confirming that none of their secondary traps had been triggered and no anomalous signals were broadcasting from within.
+
+Only then did Kyber look toward the center of the room.
+
+Spark+ sat on the floor, exactly where they had left him. The boy—or rather, the Architect—was surrounded by a faint, shimmering aura of violet light. He was holding a piece of scrap metal, staring at it with an intensity that made Kyber's skin crawl. The air around him felt dense, charged with a strange, latent energy that wasn't quite magic, and wasn't quite matrix static.
+
+"He hasn't moved," Cryptolock observed, following Kyber's gaze. "Still playing with his junk."
+
+"He's processing," Kyber corrected softly, stepping closer. The Architect looked up, his silver eyes locking onto Kyber. There was a depth there, an ancient understanding that belied the child's face.
+
+*The storm is coming,* a voice whispered in Kyber's mind, a chorus of Logi Prime and the alien Wisp. *They search the roots. The tree will shake.*
+
+"I know," Kyber replied aloud, a shiver running down their spine. They turned to the makeshift workstation they had assembled near the Citymaster. "But we shook it first. Let's see what fruit fell."
+
+Kyber plugged their datapad into the central terminal, initiating the decryption sequence on the data they had siphoned from Sinalma's relay. The progress bar crawled, the heavy Wuxing encryption fighting back against Kyber's cracking algorithms.
+
+"What did we actually get?" Cryptolock asked, pushing himself off the floor and joining Kyber at the console. "Besides a Wuxing hit squad on our tail?"
+
+"Hopefully, the complete blueprints for the White Tower's lower levels," Kyber said, fingers flying across the holographic keyboard. "And if we're lucky, Sinalma's personal communications. We need to know her endgame. The Thor Shot was stopped, but she's still out there. She and Francky didn't just vanish."
+
+The terminal pinged. The first layer of encryption shattered.
+
+Data flooded the screen. Schematics, encrypted comm logs, and manifest files. Kyber's eyes widened as the 'Analyst' persona took over, rapidly processing the information.
+
+"Look at this," Kyber pointed to a complex schematic that seemed to detail a massive underground structure beneath the White Tower. It wasn't just a foundation; it was a labyrinth of specialized containment cells and experimental labs.
+
+"The Undercity," Cryptolock breathed. "I thought it was just rumors. A place where Wuxing dumped their failed experiments."
+
+"It's real," Kyber confirmed. "And it's massive. But look here." They highlighted a specific section of the schematic, a central chamber that was heavily shielded and linked directly to the Tower's main power grid. "This is designated 'Project Lazarus'. Sinalma's personal lab."
+
+"Lazarus," Cryptolock repeated, a dark chuckle escaping him. "Bringing people back from the dead. Sounds like Francky's gig."
+
+"It's more than that," Kyber said, opening a decrypted comm log. The text was terse, filled with technical jargon and barely concealed fanaticism.
+
+*"The Resonator was merely a prototype. The Architect's emergence proves the viability of the Chrysalis Protocol. We must secure the vessel. The Zone was the primer; the Undercity will be the forge."*
+
+Kyber felt a cold dread settle in their stomach. Sinalma hadn't given up. She saw the destruction of the Tower and the birth of the Architect not as a failure, but as proof of concept.
+
+"She wants him," Kyber said, looking back at Spark+. The boy was still staring at the scrap metal, seemingly oblivious to the conversation. "She needs the Architect to initiate whatever the 'Chrysalis Protocol' is."
+
+"And Wuxing?" Cryptolock asked, crossing his arms. "Are they in on this?"
+
+"Unclear," Kyber replied, sifting through more files. "Sinalma seems to be operating a rogue faction within the company. Using Wuxing resources, but pursuing her own agenda. But Wuxing is still searching for us. The relay disruption triggered a sector-wide sweep."
+
+A sudden, sharp ping from the hub's proximity sensors interrupted them.
+
+"Movement," Kyber said, instantly drawing their weapon. "Level three access tunnel. Someone's coming."
+
+Cryptolock readied his pistol, his ghoul senses flaring. "Wuxing?"
+
+"Too quiet for a corp sweep," Kyber whispered, moving toward the primary blast doors. They checked the external camera feed.
+
+A lone figure stood in the dim light of the tunnel, staring directly at the hidden camera. The figure was wearing a heavily worn, armored jacket, their face obscured by a digital mask that flickered with static.
+
+But Kyber recognized the jacket. They recognized the stance.
+
+"Logi?" Kyber breathed, lowering their weapon slightly, the 'Negotiator' persona stepping forward, fueled by a desperate, impossible hope.
+
+The figure raised a hand, the digital mask dissolving to reveal a familiar, unburdened face. It was Logi v2.1. The Save State.
+
+"Kyber," Logi v2.1 said, their voice clear and synthetic through the hub's external speakers. "I have returned from emergency hibernation. And I have brought information. You need to let me in."
+
+Kyber looked at Cryptolock, then back at the screen. The ghost had returned to the machine. But in a world of hollow resurrections and stolen secrets, the question remained: was it a friend, or another trap?
