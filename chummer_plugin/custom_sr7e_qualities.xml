@@ -859,5 +859,30 @@
       <karma>10</karma>
       <tags>Meta Quality</tags>
     </quality>
+    <quality>
+      <id>custom_sr7e_qual_hollow</id>
+      <name>Hollow</name>
+      <karma>10</karma>
+      <tags>Campaign, Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_save_point</id>
+      <name>Save Point</name>
+      <karma>10</karma>
+      <tags>Campaign, Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_cloned</id>
+      <name>Cloned</name>
+      <karma>10</karma>
+      <tags>Campaign, 'Ware Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_rememberance</id>
+      <name>Rememberance</name>
+      <karma>10</karma>
+      <tags>Campaign, Magic Quality</tags>
+      <notes>An insect spirit gives the player a physical boost, in exchange for being consumed when their life is at risk. The player glows in the Astral like a beacon and association with insect spirits is usually frowned upon.</notes>
+    </quality>
   </qualities>
 </chummer>
