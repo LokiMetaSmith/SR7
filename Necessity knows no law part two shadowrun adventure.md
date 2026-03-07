@@ -489,3 +489,217 @@ Kyber didn't argue. The alliance was forged. They had a stronghold, an army of m
 But as Kyber looked at Spark+, they noticed something chilling. The boy wasn't looking at Lazlow or the mercenaries. He was staring at the ceiling, toward the surface, a look of cold, calculating fury on his pale face.
 
 The Wisp wasn't just a catalyst for growth anymore. It was learning to hate. And the war for Zkazena was about to get much, much worse.
+
+## Chapter 84: The Siege of the Roots
+
+The assault began not with a roar, but with a sickening, high-frequency whine that drilled into their skulls, bypassing the physical senses entirely. It was the sound of reality being violently suppressed. Wuxing's Harvester units had arrived above the cavern, and they were deploying null-fields to strip the ambient mana away before the physical breach.
+
+"Shields up! Ward the perimeter!" Captain Lazlow bellowed, his voice carrying over the nauseating drone. The Fuchsia Dragon combat mages scrambled to establish localized magical defenses, their spells struggling to manifest in the suppressed environment.
+
+"They're starving the local node," Logi v2.1 observed, their nanite aura flickering erratically under the strain of the null-field. "Wuxing is using specialized resonant frequencies to counteract the Architect's structured mana."
+
+Kyber took position behind a heavily reinforced barricade, their Ares Predator tracking the ceiling. Dust and chunks of fused plasteel were already raining down as Wuxing's specialized breach drones began chewing through the rock and debris separating them from the surface.
+
+"Where's the kid?" Cryptolock yelled over the din, firing short, controlled bursts from his heavy pistol toward a widening crack in the ceiling where a Wuxing drone was attempting to cut through.
+
+"He's secure," Kyber shouted back, though their 'Operator' persona felt the lie. Spark+ was positioned near the back of the cavern, surrounded by a tight guard of Lazlow's most trusted mercenaries. The Architect was silent, his silver eyes fixed on the ceiling, the violet aura around him pulsating defensively against the null-field.
+
+The ceiling finally gave way with a deafening crack. A massive, heavily warded breach drone—resembling a metallic, multi-legged spider—dropped into the cavern. It didn't fire conventional weapons; instead, it unleashed a concentrated wave of null-energy that instantly shattered the Fuchsia Dragons' localized magical shields.
+
+"Null-Mages incoming!" Nada'ira roared, unleashing a torrent of plasma fire from her assault cannon.
+
+Following the breach drone, heavily armored Wuxing operatives descended on grapnel lines. They wore specialized suits designed to insulate them from magical effects and carried weapons that fired crystalline slugs intended to disrupt mana flows.
+
+The cavern erupted into a chaotic melee. Plasma fire exchanged with crystalline slugs, the air thick with the smell of ozone and burnt ozone. Cryptolock fought like a demon, utilizing his ghoul strength to close the distance and tear into the Wuxing operatives when their suppressive fire faltered.
+
+"Logi, we need to disrupt those drones!" Kyber ordered, laying down covering fire to allow a squad of Dragons to reposition.
+
+"The null-fields are heavily localized and shielded," Logi v2.1 replied, seeking cover behind a shattered pillar. "Direct electronic warfare is highly improbable. I require a physical connection to their localized network to inject a disruptive loop."
+
+"I'll get you close," Kyber decided, the 'Enforcer' persona taking point. "Cover me!"
+
+Kyber broke cover, sprinting across the cavern floor, using the chaotic crossfire and the uneven terrain to mask their approach. They targeted the nearest breach drone, sliding under a volley of crystalline fire and coming up in its blind spot.
+
+"Now, Logi!" Kyber yelled, holding position near the drone's armored leg.
+
+Logi v2.1 moved with inhuman speed, their nanite-enhanced form a blur. They reached the drone, slamming a hand onto its armored chassis. Silver nanites surged outward, violently attempting to interface with the machine's hardened systems.
+
+The drone shuddered, its null-field flickering as Logi's code battled its internal defenses.
+
+Suddenly, a Wuxing Null-Mage recognized the threat. The operative turned, leveling a specialized staff that crackled with disruptive energy directly at the Save State.
+
+"Logi, incoming!" Kyber warned, raising their weapon.
+
+Before Kyber could fire, a wave of violet energy blasted across the cavern, striking the Null-Mage with the force of a physical blow and throwing the operative backward.
+
+Kyber looked back. Spark+ had broken free from his guards. The Architect was hovering mid-air, his face contorted in an expression of pure, unadulterated rage. The violet aura had expanded, actively fighting back against the null-fields, turning the air in the cavern thick and heavy with aggressive, chaotic magic.
+
+"The Architect is overriding the suppression," Logi v2.1 reported, their interface with the drone stabilizing as the null-field weakened. "He is directly attacking the Harvester frequencies."
+
+But as Kyber watched the boy, they realized the terrifying truth. Spark+ wasn't just defending them; he was lashing out, the alien nature of the Wisp fully unleashed in the heat of battle. The garden was fighting back, and it didn't care who got caught in the crossfire.
+
+## Chapter 85: The Mana Siphon
+
+The tide of battle shifted violently as the Architect's power surged. The Wuxing null-fields buckled under the onslaught of violet energy, their precise, suppressive frequencies overwhelmed by the raw, chaotic manifestation of the Wisp's anger.
+
+Logi v2.1 capitalized on the disruption. "Interface established. Injecting disruptive loop."
+
+The breach drone convulsed, its mechanical legs spasming before it collapsed, its internal systems fried by the Save State's aggressive code.
+
+"One down!" Kyber yelled, falling back to a more defensible position near Cryptolock. The ghoul rocker was wiping dark blood from his face, his eyes wide as he watched the Architect.
+
+"The kid is going nuclear," Cryptolock grunted, reloading his heavy pistol. "If he keeps pushing like this, he'll bring the rest of the Tower down on our heads."
+
+Spark+ floated higher, his small hands raised, directing waves of violet force that shattered Wuxing riot shields and threw heavily armored operatives across the cavern like ragdolls. The air crackled with displaced static, the ambient mana thickening to a suffocating density.
+
+"Logi, what's happening to him?" Kyber asked, the 'Analyst' persona trying to make sense of the chaotic energy readings flashing on their HUD.
+
+"He is drawing upon the deeper ley line network to fuel the assault," Logi v2.1 reported, their nanite aura glowing brightly as they analyzed the data streams. "However, the energy flow is unstable. The Harvesters are not just trying to suppress him; they are attempting to siphon the discharge."
+
+Logi v2.1 projected a localized schematic to Kyber’s HUD. It showed the Wuxing operatives not just firing weapons, but deploying specialized crystalline tethers that anchored into the cavern floor and walls.
+
+"Look at the tethers," Logi v2.1 pointed out. "They are modified versions of the Chrysalis Protocol conduits. Sinalma's research. Wuxing is using the Architect's own counter-attack to charge their Harvester batteries."
+
+Kyber cursed. "They want him to fight back. The more he uses his power, the more they harvest."
+
+"We need to sever the tethers," Cryptolock realized. "Stop the drain."
+
+"And we need to calm the kid down," Kyber added, watching Spark+ tear through another squad of Wuxing operatives. "Before he burns himself out or destroys the entire node."
+
+"I will target the tether anchors," Logi v2.1 stated, moving with cold efficiency. "Cryptolock, provide suppressive fire."
+
+As Logi and Cryptolock moved to disable the Wuxing harvesting equipment, Kyber pushed toward the center of the cavern, navigating the chaotic crossfire. They needed to reach Spark+, to try and break through the Wisp's rage and reach the human consciousness underneath.
+
+Suddenly, a massive explosion rocked the far side of the cavern. A new breach had opened, much larger than the first, and a heavy Wuxing combat mech dropped into the fray. It was a massive, bipedal unit, bristling with weaponry and thick, spell-resistant armor.
+
+The mech didn't target the mercenaries; it turned its massive, heavy rotary cannons directly toward Captain Lazlow, who was holding the line near the primary barricade.
+
+"Captain, move!" Kyber yelled over the comms.
+
+Lazlow roared, his insect spirit manifesting as a spectral centipede that coiled around his armor, attempting to deflect the incoming fire. But the mech's weapons were designed to punch through heavy magical defenses. The armor-piercing rounds shredded Lazlow's spectral shield and tore into his physical armor.
+
+The massive mercenary captain went down hard, blood pooling beneath him. The Fuchsia Dragons' line wavered as their leader fell.
+
+The battle had just escalated from a desperate defense to a potential slaughter. Kyber looked from the fallen captain to the raging Architect, the 'Operator' persona realizing that calculated tactics were no longer enough. They needed a miracle, or a monster, to survive.
+
+## Chapter 86: The Desperate Gambit
+
+The cavern echoed with the terrifying roar of the Wuxing combat mech’s rotary cannons and the desperate screams of the Fuchsia Dragons as their line began to crumble. Captain Lazlow lay motionless behind the shattered remains of the primary barricade, his spectral centipede aura flickering weakly.
+
+"They're breaking through!" Nada'ira yelled over the comms, her assault cannon overheating as she poured fire into the advancing Wuxing operatives. "We can't hold them without the Captain!"
+
+Kyber crouched behind a fused plasteel slab, the 'Operator' persona rapidly cycling through grim tactical scenarios. Logi v2.1 and Cryptolock were successfully severing the Harvester tethers on the flanks, but the central assault, spearheaded by the heavy mech, was overwhelming.
+
+"Logi, status on the mech?" Kyber demanded, firing short, precise bursts to keep a squad of corporate soldiers pinned down.
+
+"Heavily warded. My localized EMP capabilities are insufficient to penetrate its shielding from this distance," Logi v2.1 replied coldly. "Probability of a successful defense has dropped below 15%."
+
+Kyber looked up at Spark+. The Architect was still hovering, a storm of violet energy swirling around him. He was terrifyingly powerful, but his attacks were wild, undirected, fueled by the Wisp's raw anger rather than tactical intent. Wuxing was still trying to siphon his output, their remaining tethers glowing brightly.
+
+"We need to focus him," Kyber realized, the 'Negotiator' stepping forward, fueled by desperate necessity. "If he keeps lashing out blindly, Wuxing wins."
+
+Kyber broke from cover, sprinting through the chaotic crossfire toward the center of the cavern where the Architect floated. Plasma rounds scored the ground around them, and the concussive force of nearby explosions threatened to knock them off their feet.
+
+"Spark!" Kyber yelled, their voice cutting through the din. They skidded to a halt beneath the hovering boy. "Spark, look at me!"
+
+The Architect didn't respond immediately. His silver eyes were fixed on the Wuxing mech, his small hands gathering a massive, unstable sphere of violet mana.
+
+"The metal beast must be broken," Spark+ whispered, his voice resonating with cold, metallic certainty.
+
+"You're feeding them!" Kyber shouted, gesturing toward the glowing tethers scattered around the cavern. "They want you to use your power! You have to focus it, not just release it!"
+
+The boy's gaze finally dropped to Kyber. For a split second, the alien fury in his eyes flickered, replaced by the confused, frightened look of a human child. The ghost of Logi Prime was trying to surface, fighting the Wisp's chaotic instincts.
+
+"Kyber..." Spark+ said, his voice small and fragile.
+
+"I'm here, buddy," Kyber said, keeping their voice steady, anchoring the child. "But we need you to aim. Not at the soldiers. At the mech's core. Can you see it?"
+
+Spark+ tilted his head, the violet aura pulsing. "I see... the heart of the metal."
+
+"Then strike the heart," Kyber ordered. "But only the heart. Don't give them anything else to harvest."
+
+The Architect closed his eyes. The wild, swirling storm of violet energy surrounding him suddenly collapsed inward, condensing into a single, blindingly bright point of light hovering between his palms. The sudden absence of the chaotic mana surge caught the Wuxing operatives off guard, their Harvester tethers dimming as the feed was cut.
+
+"He is concentrating the resonance," Logi v2.1 observed over the comms. "The energy density is... theoretically impossible for a biological vessel."
+
+Spark+ opened his eyes, and they were pure, solid silver. He didn't throw the energy; he simply pointed his hands at the Wuxing combat mech.
+
+A beam of concentrated violet light, thin as a monofilament wire, shot across the cavern. It bypassed the mech's heavy physical armor and magical warding as if they didn't exist, striking dead center on the machine's chest.
+
+There was no explosion, no concussive shockwave. The mech simply stopped. Its weapons powered down, its optical sensors went dark, and it froze in mid-step, a massive, inert statue of plasteel and useless circuitry.
+
+"Target neutralized," Logi v2.1 confirmed. "Complete core failure."
+
+The sudden, inexplicable defeat of their heavy support threw the Wuxing strike team into disarray. The Fuchsia Dragons, rallying behind Nada'ira, seized the opportunity, pushing forward with a renewed, ferocious counter-attack.
+
+"They're pulling back!" Cryptolock yelled, his ghoul claws dripping as he chased the retreating corporate soldiers toward the breach points.
+
+Kyber let out a shaky breath, looking up at Spark+. The Architect slowly descended, his feet touching the cavern floor. The blinding violet aura faded, leaving him looking exhausted and pale.
+
+He stumbled, and Kyber caught him before he hit the ground.
+
+"You did it, kid," Kyber whispered, holding the small, surprisingly heavy body.
+
+"The heart is quiet," Spark+ murmured, his eyes closing as he slipped into unconsciousness.
+
+The battle for the cavern was won, but as Kyber held the sleeping god in their arms, they knew the war for Zkazena had changed entirely. The Architect wasn't just a battery or a bomb; he was a weapon that could be aimed. And in the shadows of the Sixth World, a weapon that powerful would never be allowed to rest.
+
+## Chapter 87: The Altered Deep
+
+The cavern was thick with the stench of ozone, scorched plasteel, and the coppery tang of spilled blood. The Wuxing strike team had fully retreated, abandoning their disabled mech and leaving their dead behind. The Fuchsia Dragons, battered but victorious, were moving methodically through the debris, securing the breach points and tending to their wounded.
+
+Kyber knelt beside Captain Lazlow, the massive mercenary’s breath rattling wetly in his chest. His armor was a shredded mess, and the spectral centipede aura was entirely gone, either suppressed or destroyed by the Wuxing assault.
+
+"Status, Logi," Kyber demanded, pressing a med-patch against Lazlow's most severe wound.
+
+Logi v2.1 knelt opposite Kyber, their nanite aura scanning the captain's injuries. "Massive internal trauma. The armor-piercing rounds compromised his primary cardiovascular systems. Furthermore, the localized magical suppression has severed his connection to the possessing spirit. His physical form cannot sustain life without that bond."
+
+Lazlow coughed, spewing dark blood. His eyes, normally a terrifying, inhuman black, were clear and painfully human for the first time Kyber had seen them.
+
+"The... the bug is gone," Lazlow rasped, a weak, cynical smile touching his lips. "Guess... guess I'm finally just me."
+
+"Hold on, Captain," Nada'ira said, dropping her assault cannon and kneeling beside him, her cybernetic eyes devoid of their usual coldness. "We've got a doc coming."
+
+"Don't... don't waste the med-gel, Nada," Lazlow wheezed. "It's done. The Dragons... they're yours now."
+
+He looked at Kyber, his gaze shifting to the unconscious form of Spark+ resting nearby, guarded fiercely by Cryptolock.
+
+"You keep that kid safe, suit," Lazlow managed, his voice barely a whisper. "He's... he's the only thing that matters in this fragged-up city now."
+
+With a final, rattling exhale, Captain Lazlow died.
+
+The silence that followed was heavy, a profound shift in the power dynamic of the cavern. Nada'ira slowly stood up, her face a rigid mask. She picked up her assault cannon, turning to the surviving mercenaries.
+
+"The Captain is dead," she announced, her voice echoing in the cavern. "Secure the perimeter. We hold this ground. For Lazlow. For the Dragons."
+
+The mercenaries responded with a ragged, defiant cheer, their loyalty transferring seamlessly to their new commander in the brutal reality of the sprawl.
+
+Kyber stood up, the 'Operator' persona suppressing the grim reality of the casualty count. They walked over to Spark+, who remained deeply unconscious, his pale face serene.
+
+"His vital signs are stable," Logi v2.1 reported, standing beside Kyber. "But the energy expenditure was massive. He requires time to recharge his internal mana reserves."
+
+"He did exactly what we asked him to," Kyber said softly. "He aimed. He didn't just explode."
+
+"Yes," Logi v2.1 agreed, their tone analytical. "The integration of Logi Prime's engrams provides a stabilizing tactical framework for the Wisp's raw power. The Architect is learning control."
+
+"That's what scares me," Cryptolock muttered, leaning against a nearby rock formation. "A bomb is dangerous. A smart bomb is terrifying."
+
+As if in response to their words, the cavern floor beneath them trembled slightly. It wasn't a violent shake like the Wuxing breach, but a slow, rhythmic pulsation.
+
+Kyber looked around. The iridescent moss, which had remained relatively dormant during the battle, was beginning to spread rapidly across the cavern walls, covering the scorch marks and the bloodstains. The sharp, jagged rocks were slowly smoothing out, twisting into elegant, alien geometries.
+
+"The resonance is active again," Logi v2.1 noted, observing the rapid growth. "Even while unconscious, the Architect's presence continues to passively shape the environment."
+
+Kyber watched as the glowing moss crept over the disabled Wuxing mech, consuming the harsh metal and replacing it with vibrant, alien life. The cavern wasn't just a stronghold anymore; it was becoming an extension of the Architect's New Garden.
+
+"Wuxing knows what he can do now," Kyber said, the grim reality settling in. "They won't send strike teams next time. They'll send an army."
+
+"Then we need an army of our own," Nada'ira said, walking over to join them. "The Dragons are with you, Kyber. We hold the Tower ruins, but we need to secure the rest of the city."
+
+"We can't fight a corp war, Nada," Cryptolock argued. "We're a handful of mercs, a ghoul, and a kid playing god."
+
+"We won't fight a conventional war," Kyber decided, the 'Negotiator' and the 'Operator' merging into a new, cold determination. "Zkazena is his garden now. We use the terrain. We use the new rules of reality he's creating."
+
+Kyber looked down at the sleeping Architect, the boy who held the power to reshape the world or destroy it.
+
+"We dig in," Kyber said, looking at the assembled team. "We grow the roots deep. And when Wuxing comes back, we make sure they choke on the thorns."
