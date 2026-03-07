@@ -1312,13 +1312,16 @@ Fichetti Security 500	5	3P	\-3	SA	–	Near	10(dm)	4(R)	1.00	300¥
 Fichetti Security 500A	5	3P	\-3	SA	–	Near	22(dm)	6(R)	1.25	350¥  
 Fichetti Security 600	6(7)	3P	\-3	SA	(1)	Near	30(dm)	6(R)	1.50	450¥  
 Fichetti Thunder		5	3P	\-3	BF	–	Near	6(ml)x4	6(R)	2.00	800¥  
-Glock-Mini Giftzwerg  
+**Glock-Mini Giftzwerg** (Special): Known as the 'poison dwarf', this unique light pistol only fires special explosive rounds. Although it operates as a single shot weapon, the impact makes up for it.  *Custom Ammo*.
+Glock-Mini Giftzwerg	5	6P	-2	SS	–	Near	6(m)	10(R)	1.50	800¥
 Hammerli 610S		7(8)	5P	\-1	SA	1	Far	6(dm)	10(R)	2.50	1,300¥  
 Hammerli 620S		5(7)	5P	\-1	SA	1	Far	6(dm)	8(R)	2.50	650¥  
-HK Caveat								9(dm)		1.25	500¥  
+**HK Caveat** (9mm Para): A large framed H&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon. Commonly carried by corp suits with more bark than bite.
+HK Caveat	5	5P	-1	SA	–	Near	9(dm)	4(R)	1.25	500¥
 HK P50 Tactical		6(8)	5P	\-1	SA	–	Near	15(dm)	4(R)	2.00	600¥  
 Krime Stopper		5	10P	\-3	SS	–	Close	2(b)	10(R)	2.75	375¥  
-Mauser Ladyline								8(dm)		0.75	350¥  
+**Mauser Ladyline** (5mm Shiawase): An elegant pistol with a feminine design but suprising stopping power.
+Mauser Ladyline	5	4P	-2	SA	–	Near	8(dm)	4(R)	0.75	350¥
 Nitama Sporter		6(7)	5P	–	SA	1	Far	5(m)	4(R)	0.75	475¥  
 Onotari Arms Security Special	5(7)	7P	\-1	SA	–	Near	11(dm)	7(R)	2.25	625¥  
 Ruger Redhawk		5	6P	\-2	SS/SA	–	Near	8(cy)	6(R)	1.75	500¥  
@@ -1465,7 +1468,8 @@ Yamaha Sakura Fubuki Six	6	3P	–	SA/BF	1	Close	8(ml)x4	10(R)	1.50	750¥
 
 **Heavy Pistols**		**ACC    	DV        	AP    	MODE    RC	RANGE    AMMO    AVAIL    WEIGHT	COST**  
 Altmayr Black Moon		6	8P	\-3	SA	1	Far	6(cy)	6(R)	2.75	1,150¥  
-Altmayr White Star  
+**Altmayr White Star** (10mm Auto): The standard issue sidearm for Sternschutz Security personnel. Reliable, sturdy, and packs a sufficient punch for law enforcement operations.
+Altmayr White Star	5(6)	7P	-1	SA	1	Near	14(dm)	5(R)	2.25	500¥
 Ares Predator I		5	8P	\-2	SA	1	Near	10(dm)	8(R)	2.00	350¥  
 Ares Predator II		5	5P	\-1	SA	–	Near	15(dm)	8(R)	1.50	550¥  
 Ares Predator III		5(7)	8P	\-2	SA	1	Near	15(dm)	9(R)	2.50	750¥  
@@ -1493,7 +1497,8 @@ CZ-64			6(7)	5P	\-2	SA	1	Near	14(dm)	6(R)	1.75	350¥
 Eichiro Hatamoto II		4	16P	\-3	SS	–	Near	1(ml)	10(R)	2.50	800¥  
 Enfield Merlin		5(7)	12P	\-2	SS	1	Near	6(cy)	8(R)	3.00	625¥  
 FN 5-7C			5	4P	\-7	SA/BF	1	Far	20(dm)	9(F)	2.50	700¥  
-Glock Dragon Slayer  
+**Glock Dragon Slayer** (10mm Auto): Marketed directly against the Ares Predator, this Austrian heavy pistol features aggressive styling, an integrated smartlink, and built-in recoil compensation to tame high-velocity rounds.  *Smartlink*.
+Glock Dragon Slayer	6(8)	8P	-2	SA	1	Near	15(dm)	8(R)	2.50	750¥
 Glock-Swarovski Eagle Eye	6(8)	7P	\-2	SA	–	Distant	12(dm)	11(R)	2.50	1,500¥  
 Hammerli Gemini		5	8P	\-1	SA	–	Far	8(dm)x2	10(R)	3.50	1,400¥  
 HK Mk31			5(6)	7P	\-2	SA	–	Far	15(dm)	8(F)	2.50	900¥  
@@ -1507,9 +1512,11 @@ Krime Heater		3	10P	\-3	SA	–	Near	8(dm)	4(R)	3.50	275¥
 Krime Varmint		3(4)	10P	\-3	SA	(1)	Far	8(dm)	7(R)	3.75	300¥  
 KA Lemat 2072		5	6P	\-2	SS	–	Near	9(cy)	8(R)	3.75	1,080¥  
     Shotgun		5	8P	\-2	SS	–	Close	1(ml)	–	–	–  
-Luger Model 58  
+**Luger Model 58** (9mm Para): A modern resurrection of the classic Luger design, featuring the distinctive toggle-lock action with updated materials. Popular among collectors and traditionalists who want a piece of history that still holds its own in a firefight.
+Luger Model 58	6	6P	-1	SA	–	Near	10(dm)	6(R)	1.75	950¥
 Makarov V.22		4	1P	\+3	SA	–	Close	6(dm)	10(F)	1.50	3,000¥  
-Mauser Gladiator  
+**Mauser Gladiator** (10mm Auto): A robust heavy pistol from Mauser designed for intense combat situations. It boasts an exceptionally durable frame and a high-capacity magazine, sacrificing some concealability for sheer firepower.  *Extended Magazine*.
+Mauser Gladiator	5	8P	-1	SA	1	Near	18(dm)	8(R)	3.00	800¥
 Morrissey Alta		6(7)	7P	\-1	SA	–	Near	12(dm)	7(R)	1.00	1,200¥  
 Morrissey Elite		5(6)	7P	\-1	SA	–	Close	5(dm)	5(R)	1.00	500¥  
 Nemesis Arms Praetorian	4(5)	8P	\-2	SA	1	Near	12(dm)	4(R)	2.25	400¥  
@@ -1527,8 +1534,10 @@ Ruger Thunderbolt		5	8P	\-1	BF	2	Far	12(dm)	12(R)	2.75	750¥
 Savalette Guardian		5(7)	8P	\-2	SA/BF	1	Far	12(dm)	6(R)	3.25	870¥  
 Shiawase Arms Copernicus	5(7)	5P	\-1	SA	–	Near	14(dm)	5(R)	2.25	700¥  
 SA Heavy Tactical		5(7)	13P	\-3	SA	–	Far	12(dm)	17(R)	1.25	2,800¥  
-Walther Nova II  
-Walther P059 Futura  
+**Walther Nova II** (9mm Para): An elegant and streamlined heavy pistol from Walther. The Nova II is favored by corporate security and executive protection details for its sleek design, which prevents snagging on clothing when drawn quickly.  *Concealable Holster*.
+Walther Nova II	6	6P	-1	SA	–	Near	12(dm)	5(R)	1.50	600¥
+**Walther P059 Futura** (10mm Auto): A cutting-edge heavy pistol that incorporates lightweight composites and advanced ergonomics. It comes standard with a smartgun system and an underbarrel weight to reduce muzzle climb.  *Personalized Grip, Smartlink*.
+Walther P059 Futura	6(8)	8P	-2	SA	1	Near	14(dm)	10(R)	2.25	1,200¥
 Walther P109		5(6)	7P	\-1	SA	1	Near	12(dm)	4(R)	2.50	500¥  
 Walther Secura		5	7P	\-2	SA	–	Far	12(dm)	5(R)	2.00	300¥  
 Walther Secura Kompakt	5	7P	\-2	SA	–	Far	9(dm)	7(R)	1.50	400¥  
@@ -1586,7 +1595,8 @@ Zastava CZ49		4	4P	\-2	SA	–	Near	10(dm)	4(R)	1.50	250¥
 **Machine Pistols**		**ACC    	DV        	AP    	MODE    RC	RANGE    AMMO    AVAIL    WEIGHT	COST**  
 Ares Crusader		5	5P	\-1	SA/BF	2	Near	40(dm)	7(R)	3.25	950¥  
 Ares Crusader II		5(7)	5P	\-1	SA/BF	2	Near	40(dm)	9(R)	3.50	1,200¥  
-Ares Klapp MP  
+**Ares Klapp MP** (9mm Para): The 'Klapp' (folding) is a discreet machine pistol designed for deep concealment. Its folding stock and compact profile make it a favorite for wetwork and undercover operations where space is at a premium.  *Folding Stock*.
+Ares Klapp MP	4(5)	5P	-1	SA/BF/FA	1	Near	30(dm)	10(F)	2.50	900¥
 B\&T MP9 (6.5)		5	4P	\-6	SA/BF/FA	1(2)	Near	25(dm)	12(F)	2.75	1,300¥  
 B\&T MP9	(9mm)		5	5P	\-1	SA/BF/FA	1(2)	Near	25(dm)	6(F)	2.75	500¥  
 Cavalier Arms Evanator	5(6)	2P	\-2	BF/FA	1(2)	Near	24(dm)	8(R)	2.25	775¥  
@@ -1605,7 +1615,8 @@ PPSK-4 CMP		5(6)	5P	\-5	SA/BF	(1)	Near	30(dm)	17(F)	2.75	2,800¥
 Remington Suppressor	6	8P	\-2	SA/BF	–	Far	15(dm)	6(R)	2.50	600¥  
 Ruger T-983		6	5P	\-1	SA/BF/FA	(1)	Near	17(dm)	8(R)	2.75	1,400¥  
 Steyr TMP		4	5P	\-1	FA	–	Near	30(dm)	8(R)	2.00	350¥  
-Steyr TMP-6  
+**Steyr TMP-6** (9mm Para): A modernization of the venerable Steyr Tactical Machine Pistol. It features improved polymer construction, a built-in foregrip for better control during fully automatic fire, and an integrated laser sight.  *Laser Sight*.
+Steyr TMP-6	5(6)	5P	-1	SA/BF/FA	1	Near	30(dm)	8(R)	2.50	850¥
 Ultimax 70		5(6)	5P	\-2	BF/FA	2	Near	12(dm)	7(R)	2.75	800¥  
 Ultimax 71		5(6)	5P	\-2	SA/BF/FA	–	Near	18(dm)	5(R)	2.25	550¥  
 Walther P118		5(8)	7P	\-2	SA/BF/FA	3	Far	24(dm)	9(R)	2.25	2,300¥  
@@ -1852,7 +1863,8 @@ Krime Stopper II Homeguard	4	13P	\-3	SS	(1)	Near	2(b)	7(R)	4.75	700¥
 Krime Whammy (Ranged)	1	25P	\-3	SS	(1)	PB	4(ml)	12(F)	13.00	2,000¥  
 Mossberg AM-CMDT	5(7)	18P	\-4	SA/BF/FA	(2)	Far	10(dm)	12(F)	5.50	1,200¥  
 Onotari Arms Pressure KS-X	4(5)	10P	\-3	SA/BF	(1)	Close	6(dm)	12(R)	2.75	1,200¥  
-PJSS LNB/13  
+**PJSS LNB/13** (12 Gauge): A pump-action shotgun from Praezisions Jagd- und Sportwaffen Suhl. Known for its rock-solid reliability in the harshest conditions, the LNB/13 is a staple for security forces and hunters alike.
+PJSS LNB/13	5	12P	-2	SA	–	Near	8(m)	6(R)	3.50	750¥
 PJSS Model 55		6	16P	\-3	SS	(2)	Far	2(b)	9(R)	2.50	1,000¥  
 PJSS Model 75		6	–	–	SS	(2)	–	2(b)	8(R)	2.75	1,200¥  
 PJSS Model 75-III		6	–	–	SS	(2)	–	2(b)+1(b)	12(R)	3.25	1,700¥  
@@ -1870,7 +1882,8 @@ Remington 990		4	16P	\-3	SA	(1)	Near	8(m)	6(R)	4.00	550¥
 Shiawase Arms Rain	4	10P	\-2	SA	1(2)	Near	5(ml)	4(R)	2.75	450¥  
 Shiawase Arms Riot Guard	4	16P	\-3	SA/BF	(3)	Near	15(dm)	10(R)	3.00	2,300¥  
 Shiawase Arms Tsunami	4	10P	\-3	SS	(1)	Near	7(m)	4(R)	2.75	500¥  
-TEC 603 Bull  
+**TEC 603 Bull** (5.56mm): A bullpup assault rifle known for its compact size without sacrificing barrel length. The TEC 603 Bull offers excellent maneuverability in urban combat scenarios and comes with an integrated smartlink.  *Smartlink*.
+TEC 603 Bull	5(7)	9P	-2	SA/BF/FA	1	Far	35(dm)	10(R)	3.75	1,800¥
 Winchester Model 201	8	12P	\-3	SS	(1)	Far	2(b)	8(R)	2.25	1,300¥  
 Winchester Model 2054	4(5)	20P	\-4	SA	(3)	Near	7(m)	6(R)	3.75	1,150¥  
 Winchester Model 2066	4	15P	\-3	SS	(1)	Near	5(m)	4(R)	3.25	1,050¥
