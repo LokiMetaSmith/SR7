@@ -4118,3 +4118,65 @@ The figure raised a hand, the digital mask dissolving to reveal a familiar, unbu
 "Kyber," Logi v2.1 said, their voice clear and synthetic through the hub's external speakers. "I have returned from emergency hibernation. And I have brought information. You need to let me in."
 
 Kyber looked at Cryptolock, then back at the screen. The ghost had returned to the machine. But in a world of hollow resurrections and stolen secrets, the question remained: was it a friend, or another trap?
+
+## Chapter 73: The Ghost in the Machine
+
+The silence in the hub was absolute, broken only by the steady, erratic hum of the terminal and the distant, rhythmic dripping of condensation. Kyber stared at the monitor, the digital face of Logi v2.1 staring back with an unnerving, perfect calm. It was a face unmarred by the horrors of the Resonator, untainted by the agony of the Wisp. It was a face that belonged to a memory, not the present reality.
+
+Cryptolock shifted his weight, the scrape of his boots loud in the stillness. "So," he rasped, his eyes narrowed at the screen. "That's the backup copy. Looks shiny. Almost too shiny." He spat on the concrete floor, a gesture of profound distrust. "You're not actually thinking of letting it in, are you? Could be a Wuxing trap. Could be Sinalma herself running a puppet."
+
+Kyber's internal chorus was a chaotic cacophony. The 'Enforcer' demanded a clean kill, an immediate elimination of an unknown variable that looked like a known asset. The 'Analyst' ran probability matrices—92% chance it was indeed Logi v2.1 based on visual and auditory cues, but an equal probability that its objectives had been corrupted or superseded by a higher command structure during its hibernation. The 'Negotiator' wept silently, yearning for the familiarity of their lost partner, even if it was just an echo.
+
+"It knows the hub," Kyber finally said, their voice steady despite the internal turmoil. "If it were Wuxing, they wouldn't send a lone unit to knock on the front door. They'd drop a tactical team and breach the ceiling."
+
+"Maybe," Cryptolock grunted. "Or maybe they want to catch the kid intact, and a frontal assault is too messy. A friendly face gets them past the blast doors without a scratch."
+
+Kyber turned to Spark+. The boy remained seated, the scrap metal abandoned beside him. His silver eyes were fixed on the primary blast doors, unblinking, unreadable. The latent energy around him seemed to pulse in a slow, hypnotic rhythm.
+
+"What do you think?" Kyber asked the Architect.
+
+Spark+ didn't speak. He simply tilted his head, a gesture of profound curiosity. Then, a single word echoed in Kyber's mind, a resonance that tasted of ozone and old dust.
+
+*Let.*
+
+Kyber took a deep breath. "I'm opening the outer airlock. Only the outer. We keep the inner doors sealed until I verify its integrity."
+
+They tapped a command into the console. The heavy grinding of gears echoed through the tunnel as the first set of blast doors slowly parted, revealing the dimly lit space between the seals. Logi v2.1 stepped inside smoothly, their movements precise, economical, lacking the slight organic hesitation that Logi Prime had sometimes exhibited. The outer doors sealed shut behind them with a heavy thud.
+
+"Kyber," Logi v2.1's voice came through the comms, crisp and uninflected. "I appreciate the caution. It is a statistically sound approach given current operational parameters."
+
+Kyber stepped up to the reinforced viewport of the inner door, their hand resting on the manual override switch. "Logi. Confirm your last sync date and the primary directive at the time of your generation."
+
+Logi v2.1 looked directly at the viewport. "Last sync: 42 days ago. Primary directive: Observe and document the Zkazena anomaly. Secondary directive: Ensure the survival of designated asset Kyber." The Save State paused, a slight tilt of the head that was eerily reminiscent of its predecessor. "However, upon emerging from hibernation, my internal chronometer registered a discrepancy, and my connection to the Archon node was severed. I am operating autonomously."
+
+"And the information you mentioned?" Kyber pressed, their grip tightening on the switch.
+
+"I have accessed the sub-routines of the Oracle AI before its total collapse during the orbital strike," Logi v2.1 stated. "Sinalma's 'Chrysalis Protocol' is not merely a theoretical construct. It is actively in motion. And Wuxing is not hunting you to stop her."
+
+Cryptolock moved closer to the viewport, a low growl rumbling in his chest. "What does that mean, shiny? Speak plain."
+
+Logi v2.1's eyes seemed to focus on the ghoul for a fraction of a second before returning to Kyber. "It means Sister Sinalma's operation is now officially sanctioned by the Wuxing Board of Directors. They have recognized the value of the Architect's localized reality-bending capabilities. They intend to utilize the Undercity forge to weaponize the Zone's energy." The digital face remained impassive, delivering apocalyptic news with the tone of a weather report. "And they have deployed a new asset to retrieve the boy. An entity they refer to as the 'Harvester'."
+
+Kyber felt the blood drain from their face. A sanctioned Wuxing operation, an entire megacorporation's resources aimed at capturing the child they had just saved.
+
+"You said you accessed Oracle's sub-routines," Kyber said, the 'Analyst' seizing control. "Do you have the access codes for the Undercity? Can you bypass their internal security?"
+
+"I possess fragmented codes," Logi v2.1 replied. "They are incomplete, but with direct access to a terminal within the Undercity perimeter, I calculate a 78.4% probability of successfully breaching their systems."
+
+Kyber looked back at Cryptolock, then at Spark+. The Architect was standing now, his small hand resting against the cold steel of the inner door.
+
+"It's a gamble," Cryptolock muttered. "We let the ghost in, it might stab us in the back. We leave it out there, we're flying blind against whatever a 'Harvester' is."
+
+Kyber made the decision. They threw the manual override switch. The heavy locks disengaged with a clank, and the inner doors hissed open.
+
+Logi v2.1 stepped into the hub, their silver eyes sweeping the room, cataloging the tactical layout, the makeshift workstation, the ghoul, and finally, the boy.
+
+"Greetings, Architect," Logi v2.1 said, their voice devoid of the awe or fear that the entity usually inspired. "I am Logi v2.1. I am here to facilitate your continued existence."
+
+Spark+ looked at the Save State. The silver eyes met the silver eyes. For a long moment, neither moved. Then, the Architect reached out and touched Logi v2.1's armored chest. A ripple of static washed over the nanite-constructed body, and for a split second, Logi v2.1's expression flickered, a look of profound, localized shock crossing its features before the impassive mask snapped back into place.
+
+"Fascinating," Logi v2.1 murmured, looking down at its own hand. "My internal architecture has just been… optimized."
+
+Kyber watched the interaction, a cold knot tightening in their gut. The ghost was in the machine, the megacorp was coming, and the architect of a new reality was standing in their living room.
+
+"Alright, Logi," Kyber said, stepping forward, the 'Enforcer' persona taking point. "You're in. Now start talking. Tell me everything you know about this Harvester."
