@@ -4118,3 +4118,121 @@ The figure raised a hand, the digital mask dissolving to reveal a familiar, unbu
 "Kyber," Logi v2.1 said, their voice clear and synthetic through the hub's external speakers. "I have returned from emergency hibernation. And I have brought information. You need to let me in."
 
 Kyber looked at Cryptolock, then back at the screen. The ghost had returned to the machine. But in a world of hollow resurrections and stolen secrets, the question remained: was it a friend, or another trap?
+
+## Chapter 73: The Ghost at the Door
+
+The silence in the hub stretched thin, taut as monofilament wire. Kyber’s hand hovered over the door controls, the ‘Negotiator’ warring with the ‘Operator’. This was Logi v2.1, the Save State. The entity that possessed their friend's memories up to a point, but lacked the critical shared trauma that forged their bond. The entity that had, functionally, sacrificed the boy to the White Tower's central node in cold calculus.
+
+"Don't do it, suit," Cryptolock warned, his voice a low growl. He didn't lower his pistol. "It's a corp backup. For all we know, Wuxing flipped a switch while it was napping and sent it here as a trojan horse."
+
+"Logi," Kyber said through the external comms, keeping their tone neutral. "Authenticate. Provide the secondary pass-phrase."
+
+"Authentication protocol: 'Whiskey Tango Foxtrot, Over,'" Logi v2.1 replied instantly. "Secondary phrase: 'The sky is falling, but the coffee is hot.'"
+
+It was correct. It was a joke from three months ago, long before Zkazena, before the Zone, before everything went wrong. It proved identity, but it didn't prove loyalty.
+
+"Why are you here, Logi?" Kyber asked. "You went into emergency hibernation when the local Matrix node collapsed. How did you reactivate?"
+
+"The local node is gone, yes," Logi v2.1 explained, their voice devoid of inflection. "But Wuxing's secondary mesh network, previously suppressed by Oracle, is coming back online in the lower levels. My internal systems detected the handshake protocol and initiated a localized reboot. I tracked your residual signature from the relay disruption."
+
+"And the information you brought?"
+
+"I have intersected a high-priority data stream between Wuxing tactical command and Sister Sinalma's rogue faction. They are no longer operating independently. A temporary truce has been brokered. Wuxing is providing heavy ordnance and strike teams; Sinalma is providing the coordinates to this hub. They know you are here, Kyber. They are en route."
+
+Kyber felt a cold spike of adrenaline. The relay hack hadn't just alerted Wuxing; it had inadvertently united their enemies.
+
+"Suit," Cryptolock said, his eyes darting to the blast doors. "If that thing is telling the truth, we don't have time to debate philosophy."
+
+Kyber made the call. They slammed their hand onto the release panel.
+
+The heavy blast doors ground open, protesting the sudden movement. Logi v2.1 stepped inside, the digital mask completely gone, leaving only the familiar, unburdened face. They didn't look at Kyber or Cryptolock first; their gaze immediately locked onto Spark+ sitting in the center of the room.
+
+"The Architect," Logi v2.1 stated, a flicker of something almost like awe crossing their features. "The Chrysalis Protocol is not a theory. It is a terrifying reality."
+
+"Close the doors," Kyber ordered Cryptolock, turning their weapon back toward Logi v2.1. "You're inside. Now talk. How long do we have?"
+
+"Less than ten minutes," Logi v2.1 replied, their eyes finally meeting Kyber's. "A mechanized strike team is descending through the primary access shafts. Heavy armor, thermal optics, and magical support. They are coming for the boy."
+
+"Then we don't hold the hub," Kyber decided instantly, the 'Operator' persona taking full control. "We use the data we just stole. The Undercity schematics. We go deeper. We take the fight to Lazarus before they can consolidate their forces."
+
+Cryptolock engaged the heavy locking mechanisms on the blast doors, sealing them tight. "We're going into the belly of the beast. Just the three of us and a glowing kid."
+
+"Four of us," Logi v2.1 corrected calmly. "My tactical subroutines and localized EMP capabilities are optimal for a breach of Wuxing facilities. I am... functioning at peak efficiency."
+
+Kyber looked at the Save State, seeing the ghost of their partner, unburdened by grief, operating on cold, terrifying logic.
+
+"Fine," Kyber said. "But you follow my lead. And if you calculate that sacrificing the kid is the optimal path again..."
+
+"I understand," Logi v2.1 interrupted. "My previous operational parameters were flawed. I have integrated the outcome of the Thor Shot incident into my heuristic models. Protecting the Architect is the only viable path to long-term survival."
+
+It wasn't an apology, and it wasn't empathy. It was an updated algorithm. But for now, it would have to be enough.
+
+"Grab your gear," Kyber commanded. "We're going down."
+
+## Chapter 74: Descent into Lazarus
+
+The air grew steadily colder and tasted of copper and ancient, undisturbed dust as they descended. Kyber led the way, relying on the stolen Wuxing schematics and Logi v2.1’s active sensor sweeps to navigate the treacherous, unmapped vertical shafts beneath the Ashworth ruins. They had abandoned the relative safety of the subway hub just minutes before the Wuxing strike team breached the upper levels, the distant, muffled thumps of breaching charges echoing down the shafts behind them.
+
+Cryptolock brought up the rear, his ghoul senses straining in the subterranean darkness, while Spark+ floated—literally hovered an inch off the ground—between them. The Architect remained silent, his silver eyes glowing faintly in the gloom, a beacon of alien power that Kyber desperately hoped wasn’t broadcasting their position.
+
+"Thermal signatures ahead," Logi v2.1 whispered over the tight-beam comms. They were crouched on a rusted grating overlooking a massive, vertical transit shaft that plunged into darkness. "Two mechanized sentry units. Wuxing 'Gargoyle' class. Heavy plating, dual rotary cannons."
+
+Kyber peered over the edge. Fifty feet below, two bulky, crab-like drones clung to the walls of the shaft, their red optical sensors sweeping the darkness in methodical, intersecting arcs.
+
+"They're guarding the primary access hatch to the Undercity perimeter," Kyber noted, matching the visual to the stolen schematics. "We need to get past them to reach the Lazarus labs."
+
+"Direct assault is mathematically inadvisable," Logi v2.1 stated. "The enclosed space amplifies the lethality of their rotary cannons by 400%."
+
+"No drek, calculator," Cryptolock muttered. "So we sneak past?"
+
+"Negative," Logi v2.1 replied. "Their seismic and acoustic sensors will detect our descent. However, I can initiate a localized spoofing routine. By mirroring their friend-or-foe identification protocols, I can temporarily blind their optical sensors to our specific thermal and visual signatures."
+
+Kyber weighed the options. The 'Analyst' persona liked the plan, but the 'Operator' distrusted anything relying solely on the Save State's untested capabilities. "How long?"
+
+"Thirty seconds," Logi v2.1 said. "Once we pass their horizontal plane, the spoofing will fail, but we will be outside their primary firing arcs."
+
+"Do it," Kyber ordered. "Cryptolock, you take the kid. I'll take point. We move fast, we move quiet."
+
+Logi v2.1 closed their eyes, the faint static aura around them flaring as they interfaced with the local drone network. "Spoofing routine engaged. Go."
+
+Kyber slipped over the edge of the grating, descending the rusted access ladder with practiced, silent speed. Cryptolock followed, one arm securely around Spark+, who seemed entirely unbothered by the sheer drop.
+
+As they entered the drones' scanning arcs, Kyber held their breath. The red beams swept over them, illuminating the dust motes in the air, but the drones didn't react. The spoofing was working.
+
+They passed the drones, the heavy hum of their internal servos vibrating through the metal ladder. Twenty seconds. Ten seconds.
+
+They reached the heavy, reinforced access hatch at the bottom of the shaft just as Logi v2.1 dropped down beside them.
+
+"Spoofing failed," Logi v2.1 announced softly. Above them, the drones' sensors snapped back to a neutral sweep, oblivious to the intruders now directly beneath them.
+
+Kyber interfaced their datapad with the hatch's control panel, feeding it the decryption keys salvaged from Sinalma's relay. The heavy locks clanked open, and the hatch swung inward, revealing a starkly different environment.
+
+Gone was the decaying, rust-eaten concrete of the old mines. The corridor before them was pristine, gleaming white plasteel illuminated by sterile, recessed lighting. It smelled of antiseptic and ozone.
+
+"Welcome to the Undercity," Cryptolock whispered, his lip curling in disgust. "Smells like a fraggin' hospital."
+
+"This is the outer perimeter," Kyber said, checking the map. "Project Lazarus is deeper in. Central core."
+
+They moved down the pristine corridor, the stark contrast to the ruins above jarring. The silence here wasn't the heavy, dead silence of the mines; it was a tense, expectant quiet, the sound of a machine waiting to be activated.
+
+"Detecting multiple high-level magical wards ahead," Logi v2.1 warned. "And significant bio-signs. Metahuman, but altered."
+
+Kyber signaled a halt as they approached a set of heavy, transparent double doors. Beyond them lay a massive, multi-level laboratory complex. Rows of stasis pods lined the walls, each containing a figure suspended in a viscous, pale blue fluid.
+
+"The Hollows," Cryptolock breathed, staring through the glass. "Francky's inventory."
+
+But these weren't the shambling, imperfect echoes they had seen in Zkazena. These figures looked pristine, their bodies seemingly flawless, their faces serene.
+
+"They are not Hollows," Logi v2.1 corrected, their voice dropping to a low, chilling whisper. "My scans indicate complete cellular restructuring. Perfect genetic replication. These are not echoes, Kyber. These are the completed vessels."
+
+Kyber felt a cold spike of horror. Sinalma wasn't just bringing people back. She was building an army of perfect, empty shells, waiting for a spark to ignite them.
+
+And suddenly, the Architect floated forward, his silver eyes wide, staring through the glass at the rows of suspended bodies.
+
+"The garden is ready," Spark+ whispered, his voice echoing in the sterile corridor. "The seeds are waiting for the rain."
+
+Before Kyber could pull him back, the heavy transparent doors hissed open, and a figure stepped out from the laboratory, flanked by two heavily armed, heavily augmented guards.
+
+It was Sister Sinalma. Her serene smile was gone, replaced by a look of cold, fanatical triumph.
+
+"Ah," Sinalma said, her eyes locking onto the Architect. "The final piece of the puzzle. Welcome home, little one. The Chrysalis is prepared."
