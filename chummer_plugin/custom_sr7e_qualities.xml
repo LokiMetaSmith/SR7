@@ -1,25 +1,863 @@
 <?xml version="1.0" encoding="utf-8"?>
-<chummer xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema qualities.xsd">
-  <categories>
-    <category>Positive</category>
-    <category>Negative</category>
-  </categories>
+<chummer>
   <qualities>
     <quality>
-      <id>00000001-0000-0000-0000-00000000007e</id>
-      <name>Acrobatic Defender (SR7E)</name>
+      <id>custom_sr7e_qual_acrobatic_defender</id>
+      <name>Acrobatic Defender</name>
       <karma>4</karma>
-      <category>Positive</category>
-      <contributetolimit>False</contributetolimit>
-      <source>SR7E</source>
+      <tags>Defensive Quality</tags>
     </quality>
     <quality>
-      <id>00000002-0000-0000-0000-00000000007e</id>
-      <name>Voice of Experience (SR7E)</name>
+      <id>custom_sr7e_qual_adept_healer</id>
+      <name>Adept Healer</name>
+      <karma>10</karma>
+      <tags>Adept, Healing, Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_adrenaline_surge</id>
+      <name>Adrenaline Surge</name>
+      <karma>12</karma>
+      <tags>Combat, Initiative Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_agile_defender</id>
+      <name>Agile Defender</name>
+      <karma>3</karma>
+      <tags>Defensive Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_alibi</id>
+      <name>Alibi</name>
+      <karma>6</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_ambidextrous</id>
+      <name>Ambidextrous</name>
+      <karma>6</karma>
+      <tags>Combat Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_analytical_mind</id>
+      <name>Analytical Mind</name>
       <karma>5</karma>
-      <category>Positive</category>
-      <contributetolimit>False</contributetolimit>
-      <source>SR7E</source>
+      <tags>Matrix, Mental Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_animal_empathy</id>
+      <name>Animal Empathy</name>
+      <karma>6</karma>
+      <tags>Magic, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_aptitude_(skill)</id>
+      <name>Aptitude (Skill)</name>
+      <karma>15</karma>
+      <tags>Skill Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_apt_pupil</id>
+      <name>Apt Pupil</name>
+      <karma>12</karma>
+      <tags>Knowledge, Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_arcane_arrester</id>
+      <name>Arcane Arrester</name>
+      <karma>0</karma>
+      <tags>Gnome Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_arcane_bodyguard</id>
+      <name>Arcane Bodyguard</name>
+      <karma>20</karma>
+      <tags>Defensive, Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_arcane_improviser</id>
+      <name>Arcane Improviser</name>
+      <karma>5</karma>
+      <tags>Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_astral_chameleon</id>
+      <name>Astral Chameleon</name>
+      <karma>9</karma>
+      <tags>Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_barehanded_adept</id>
+      <name>Barehanded Adept</name>
+      <karma>12</karma>
+      <tags>Adept, Combat, Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_barrens_rat</id>
+      <name>Barrens Rat</name>
+      <karma>4</karma>
+      <tags>Stealth Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_battle_hardened</id>
+      <name>Battle Hardened</name>
+      <karma>0</karma>
+      <tags>3 Karma per lvl, Max lvl 3 (Combat, Mental</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_better_to_be_feared_than_loved</id>
+      <name>Better to be Feared than Loved</name>
+      <karma>5</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_bilingual</id>
+      <name>Bilingual</name>
+      <karma>2</karma>
+      <tags>Knowledge Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_biocompatibility</id>
+      <name>Biocompatibility</name>
+      <karma>8</karma>
+      <tags>‘Ware Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_black_market_pipeline**_**(contact,_merchandise)</id>
+      <name>Black Market Pipeline** **(Contact, Merchandise)</name>
+      <karma>10</karma>
+      <tags>Gear, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_blandness</id>
+      <name>Blandness</name>
+      <karma>7</karma>
+      <tags>Social, Stealth Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_blood_magic_resistance</id>
+      <name>Blood Magic Resistance</name>
+      <karma>10</karma>
+      <tags>Defensive, Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_born_rich</id>
+      <name>Born Rich</name>
+      <karma>10</karma>
+      <tags>Gear Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_built_tough</id>
+      <name>Built Tough</name>
+      <karma>0</karma>
+      <tags>Giant, Ogre, Ork, Physical, Troll, Satyr Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_catlike</id>
+      <name>Catlike</name>
+      <karma>8</karma>
+      <tags>Stealth Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_closer</id>
+      <name>Closer</name>
+      <karma>6</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_codeslinger</id>
+      <name>Codeslinger</name>
+      <karma>10</karma>
+      <tags>Matrix Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_college_education</id>
+      <name>College Education</name>
+      <karma>4</karma>
+      <tags>Knowledge, Skill Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_common_sense</id>
+      <name>Common Sense</name>
+      <karma>7</karma>
+      <tags>Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_community_connection</id>
+      <name>Community Connection</name>
+      <karma>0</karma>
+      <tags>Ork, Troll Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_cyber_singularity_seeker</id>
+      <name>Cyber Singularity Seeker</name>
+      <karma>9</karma>
+      <tags>Mental, ‘Ware Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_daredevil</id>
+      <name>Daredevil</name>
+      <karma>8</karma>
+      <tags>Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_data_anomaly</id>
+      <name>Data Anomaly</name>
+      <karma>3</karma>
+      <tags>Matrix Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_death_dealer</id>
+      <name>Death Dealer</name>
+      <karma>0</karma>
+      <tags>5 Karma per lvl, Max lvl 3 (Magic</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_dedicated_conjurer</id>
+      <name>Dedicated Conjurer</name>
+      <karma>10</karma>
+      <tags>Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_dedicated_spellslinger</id>
+      <name>Dedicated Spellslinger</name>
+      <karma>10</karma>
+      <tags>Knowledge, Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_dermal_deposits</id>
+      <name>Dermal Deposits</name>
+      <karma>0</karma>
+      <tags>Troll Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_double_jointed</id>
+      <name>Double Jointed</name>
+      <karma>4</karma>
+      <tags>Physical, Stealth Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_drug_tolerant</id>
+      <name>Drug Tolerant</name>
+      <karma>6</karma>
+      <tags>Mental, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_empathic_listener</id>
+      <name>Empathic Listener</name>
+      <karma>3</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_erased</id>
+      <name>Erased</name>
+      <karma>16</karma>
+      <tags>Matrix, Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_exceptional_attribute</id>
+      <name>Exceptional Attribute</name>
+      <karma>14</karma>
+      <tags>Mental, Meta, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_fame</id>
+      <name>Fame</name>
+      <karma>5</karma>
+      <tags>Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_fangs</id>
+      <name>Fangs</name>
+      <karma>0</karma>
+      <tags>Hobgoblin Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_fashion_influencer</id>
+      <name>Fashion Influencer</name>
+      <karma>5</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_first_impression</id>
+      <name>First Impression</name>
+      <karma>6</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_focused_concentration</id>
+      <name>Focused Concentration</name>
+      <karma>0</karma>
+      <tags>9 Karma per lvl, Max lvl 2 (Magic</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_friends_in_high_places</id>
+      <name>Friends in High Places</name>
+      <karma>10</karma>
+      <tags>Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_galloping_stride</id>
+      <name>Galloping Stride</name>
+      <karma>0</karma>
+      <tags>Centaur Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_gearhead</id>
+      <name>Gearhead</name>
+      <karma>5</karma>
+      <tags>Rigger Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_grease_monkey</id>
+      <name>Grease Monkey</name>
+      <karma>8</karma>
+      <tags>Rigger Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_guts</id>
+      <name>Guts</name>
+      <karma>10</karma>
+      <tags>Mental Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_hair_trigger</id>
+      <name>Hair Trigger</name>
+      <karma>3</karma>
+      <tags>Matrix, Rigger Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_hawk_eye</id>
+      <name>Hawk Eye</name>
+      <karma>5</karma>
+      <tags>Combat, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_healer</id>
+      <name>Healer</name>
+      <karma>10</karma>
+      <tags>Healing, Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_high_pain_tolerance</id>
+      <name>High Pain Tolerance</name>
+      <karma>0</karma>
+      <tags>4 Karma per lvl, Max lvl 4 (Physical</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_hi_rez</id>
+      <name>Hi-Rez</name>
+      <karma>6</karma>
+      <tags>Technomancer Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_home_ground</id>
+      <name>Home Ground</name>
+      <karma>10</karma>
+      <tags>Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_honest_face</id>
+      <name>Honest Face</name>
+      <karma>5</karma>
+      <tags>Mental, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_hooves</id>
+      <name>Hooves</name>
+      <karma>0</karma>
+      <tags>Centaur, Satyr Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_human_2.0</id>
+      <name>Human 2.0</name>
+      <karma>25</karma>
+      <tags>Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_human_looking</id>
+      <name>Human-Looking</name>
+      <karma>5</karma>
+      <tags>Meta, Physical, Ogre Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_impenetrable_logic</id>
+      <name>Impenetrable Logic</name>
+      <karma>4</karma>
+      <tags>Matrix, Mental Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_inspired</id>
+      <name>Inspired</name>
+      <karma>3</karma>
+      <tags>Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_jack_of_all_trades</id>
+      <name>Jack of all Trades</name>
+      <karma>12</karma>
+      <tags>Meta, Skill Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_juryrigger</id>
+      <name>Juryrigger</name>
+      <karma>10</karma>
+      <tags>Matrix, Meta, Rigger Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_keen_eared</id>
+      <name>Keen-Eared</name>
+      <karma>3</karma>
+      <tags>Hobgoblin, Meta, Nocturna Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_lightning_reflexes</id>
+      <name>Lightning Reflexes</name>
+      <karma>15</karma>
+      <tags>Initiative Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_linguist</id>
+      <name>Linguist</name>
+      <karma>6</karma>
+      <tags>Knowledge, Meta, Skill Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_logical_debater</id>
+      <name>Logical Debater</name>
+      <karma>4</karma>
+      <tags>Mental, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_long_reach</id>
+      <name>Long Reach</name>
+      <karma>8</karma>
+      <tags>Combat, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_low_light_vision</id>
+      <name>Low-Light Vision</name>
+      <karma>0</karma>
+      <tags>Centaur, Elf, Hobgoblin, Nocturna, Ogre, Ork, Satyr Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_lucky</id>
+      <name>Lucky</name>
+      <karma>13</karma>
+      <tags>Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_made_man</id>
+      <name>Made Man</name>
+      <karma>5</karma>
+      <tags>Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_magic_resistance</id>
+      <name>Magic Resistance</name>
+      <karma>0</karma>
+      <tags>6 Karma per lvl, Max lvl 4 (Defensive, Magic, Meta</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_magic_sense</id>
+      <name>Magic Sense</name>
+      <karma>5</karma>
+      <tags>Magic, Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_massive_networker</id>
+      <name>Massive Networker</name>
+      <karma>20</karma>
+      <tags>Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_mentor_spirit</id>
+      <name>Mentor Spirit</name>
+      <karma>5</karma>
+      <tags>Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_missile_deflector</id>
+      <name>Missile Deflector</name>
+      <karma>10</karma>
+      <tags>Adept Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_murky_link</id>
+      <name>Murky Link</name>
+      <karma>6</karma>
+      <tags>Defensive, Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_natural_athlete</id>
+      <name>Natural Athlete</name>
+      <karma>8</karma>
+      <tags>Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_natural_hardening</id>
+      <name>Natural Hardening</name>
+      <karma>10</karma>
+      <tags>Defensive, Matrix Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_natural_immunity</id>
+      <name>Natural Immunity</name>
+      <karma>4</karma>
+      <tags>Defensive, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_natural_leader</id>
+      <name>Natural Leader</name>
+      <karma>5</karma>
+      <tags>Combat, Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_networked_in</id>
+      <name>Networked In</name>
+      <karma>4</karma>
+      <tags>Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_networker</id>
+      <name>Networker</name>
+      <karma>5</karma>
+      <tags>Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_night_vision</id>
+      <name>Night Vision</name>
+      <karma>2</karma>
+      <tags>Nocturna, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_ogre_stomach</id>
+      <name>Ogre Stomach</name>
+      <karma>0</karma>
+      <tags>Ogre Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_one_trick_pony</id>
+      <name>One Trick Pony</name>
+      <karma>5</karma>
+      <tags>Combat Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_online_fame</id>
+      <name>Online Fame</name>
+      <karma>10</karma>
+      <tags>Matrix, Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_outdoorsman</id>
+      <name>Outdoorsman</name>
+      <karma>3</karma>
+      <tags>Meta, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_overclocker</id>
+      <name>Overclocker</name>
+      <karma>5</karma>
+      <tags>Matrix Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_pain_is_gain</id>
+      <name>Pain is Gain</name>
+      <karma>6</karma>
+      <tags>Defensive, Matrix Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_pathogen/toxin_resistance</id>
+      <name>Pathogen/Toxin Resistance</name>
+      <karma>0</karma>
+      <tags>4 Karma per lvl, Max lvl 2 (Defensive, Physical</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_perceptive</id>
+      <name>Perceptive</name>
+      <karma>5</karma>
+      <tags>Meta, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_perceptive_defender</id>
+      <name>Perceptive Defender</name>
+      <karma>4</karma>
+      <tags>Defensive Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_perfect_time</id>
+      <name>Perfect Time</name>
+      <karma>5</karma>
+      <tags>Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_photographic_memory</id>
+      <name>Photographic Memory</name>
+      <karma>5</karma>
+      <tags>Mental Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_prime_datahaven_membership</id>
+      <name>Prime Datahaven Membership</name>
+      <karma>7</karma>
+      <tags>Matrix, Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_privileged_family_name</id>
+      <name>Privileged Family Name</name>
+      <karma>5</karma>
+      <tags>Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_prototype_transhuman</id>
+      <name>Prototype Transhuman</name>
+      <karma>15</karma>
+      <tags>Meta, ‘Ware Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_quick_healer</id>
+      <name>Quick Healer</name>
+      <karma>4</karma>
+      <tags>Healing Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_rad_tolerant</id>
+      <name>Rad-Tolerant</name>
+      <karma>6</karma>
+      <tags>Defensive, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_reach_(positive)</id>
+      <name>Reach (Positive)</name>
+      <karma>0</karma>
+      <tags>Giant, Elf, Ork, Troll Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_reputation</id>
+      <name>Reputation</name>
+      <karma>2</karma>
+      <tags>Meta, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_restricted_gear</id>
+      <name>Restricted Gear</name>
+      <karma>0</karma>
+      <tags>10 Karma per item (Gear, Meta</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_satyr_legs</id>
+      <name>Satyr Legs</name>
+      <karma>0</karma>
+      <tags>Satyr Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_scholastic_achievement</id>
+      <name>Scholastic Achievement</name>
+      <karma>5</karma>
+      <tags>Knowledge Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_school_of_hard_knocks</id>
+      <name>School of Hard Knocks</name>
+      <karma>4</karma>
+      <tags>Knowledge, Skill, Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_sense_of_direction</id>
+      <name>Sense of Direction</name>
+      <karma>3</karma>
+      <tags>Meta, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_sensei</id>
+      <name>Sensei</name>
+      <karma>13</karma>
+      <tags>Skill Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_silence_is_golden</id>
+      <name>Silence is Golden</name>
+      <karma>9</karma>
+      <tags>Matrix Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_social_chameleon</id>
+      <name>Social Chameleon</name>
+      <karma>7</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_spacer</id>
+      <name>Spacer</name>
+      <karma>5</karma>
+      <tags>Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_speed_demon</id>
+      <name>Speed Demon</name>
+      <karma>5</karma>
+      <tags>Rigger Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_speed_reader</id>
+      <name>Speed Reader</name>
+      <karma>2</karma>
+      <tags>Mental Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_spike_resistance</id>
+      <name>Spike Resistance</name>
+      <karma>0</karma>
+      <tags>7 Karma per lvl, Max lvl 3 (Defensive, Matrix</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_spirit/sprite_affinity</id>
+      <name>Spirit/Sprite Affinity</name>
+      <karma>12</karma>
+      <tags>Magic, Technomancer Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_spirit_champion</id>
+      <name>Spirit Champion</name>
+      <karma>14</karma>
+      <tags>Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_spiritual_lodge</id>
+      <name>Spiritual Lodge</name>
+      <karma>5</karma>
+      <tags>Magic, Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_steely_eyed_wheelman</id>
+      <name>Steely Eyed Wheelman</name>
+      <karma>2</karma>
+      <tags>Rigger Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_stolen_gear</id>
+      <name>Stolen Gear</name>
+      <karma>1</karma>
+      <tags>Gear, Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_stunt_driver</id>
+      <name>Stunt Driver</name>
+      <karma>12</karma>
+      <tags>Rigger Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_technical_school_education</id>
+      <name>Technical School Education</name>
+      <karma>4</karma>
+      <tags>Knowledge, Skill Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_thermographic_vision</id>
+      <name>Thermographic Vision</name>
+      <karma>0</karma>
+      <tags>Dwarf, Gnome, Troll Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_too_pretty_to_hit</id>
+      <name>Too Pretty to Hit</name>
+      <karma>3</karma>
+      <tags>Defensive Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_tough_as_nails</id>
+      <name>Tough as Nails</name>
+      <karma>0</karma>
+      <tags>4 Karma per lvl, Max lvl 4 (Defensive, Physical</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_toughness</id>
+      <name>Toughness</name>
+      <karma>7</karma>
+      <tags>Defensive, Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_trust_fund</id>
+      <name>Trust Fund</name>
+      <karma>0</karma>
+      <tags>Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_trustworthy</id>
+      <name>Trustworthy</name>
+      <karma>12</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_type_o_system</id>
+      <name>Type O System</name>
+      <karma>30</karma>
+      <tags>‘Ware Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_vehicle_empathy</id>
+      <name>Vehicle Empathy</name>
+      <karma>5</karma>
+      <tags>Rigger Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_voice_of_experience</id>
+      <name>Voice of Experience</name>
+      <karma>5</karma>
+      <tags>Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_watch_the_suit</id>
+      <name>Watch the Suit</name>
+      <karma>3</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_water_sprite</id>
+      <name>Water Sprite</name>
+      <karma>6</karma>
+      <tags>Physical Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_will_to_live</id>
+      <name>Will to Live</name>
+      <karma>0</karma>
+      <tags>3 Karma per lvl, Max lvl 4 (Healing, Physical</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_witness_my_hate</id>
+      <name>Witness My Hate</name>
+      <karma>8</karma>
+      <tags>Combat, Magic Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_always_late</id>
+      <name>Always Late</name>
+      <karma>2</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_bad_memories</id>
+      <name>Bad Memories</name>
+      <karma>4</karma>
+      <tags>Mental, Meta Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_compulsive_behavior</id>
+      <name>Compulsive Behavior</name>
+      <karma>0</karma>
+      <tags>2 Karma per lvl, Max lvl 6 (Meta, Mental, Social</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_firearm_diplomacy</id>
+      <name>Firearm Diplomacy</name>
+      <karma>3</karma>
+      <tags>Social Quality</tags>
+    </quality>
+    <quality>
+      <id>custom_sr7e_qual_pacifist</id>
+      <name>Pacifist</name>
+      <karma>10</karma>
+      <tags>Meta Quality</tags>
     </quality>
   </qualities>
 </chummer>
