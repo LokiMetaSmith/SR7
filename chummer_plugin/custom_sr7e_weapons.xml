@@ -1,80 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <chummer>
   <weapons>
     <weapon>
       <id>custom_sr7e_weap_cavalier_safeguard</id>
       <name>Cavalier SafeGuard</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>4</damage>
       <cost>275</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_defiance_ex_shocker</id>
       <name>Defiance EX Shocker</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>4</damage>
       <cost>340</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_defiance_super_shock</id>
       <name>Defiance Super Shock</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>8</damage>
       <cost>1000</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_tingler</id>
       <name>Krime Tingler</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>3</damage>
       <cost>240</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_narcoject_one</id>
       <name>Narcoject One</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>5</damage>
       <cost>1200</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_parashield_dart_pistol</id>
       <name>Parashield Dart Pistol</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>5</damage>
       <cost>600</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_parashield_dart_rifle</id>
       <name>Parashield Dart Rifle</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>6</damage>
       <cost>1200</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_s_1130_assassin</id>
       <name>S-1130 Assassin</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>5</damage>
       <cost>1450</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_tiffani_defiance_protector</id>
       <name>Tiffani-Defiance Protector</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>5</damage>
       <cost>500</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_yamaha_pulsar_i/ii</id>
       <name>Yamaha Pulsar I/II</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>5</damage>
       <cost>325/350</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_jupiter_taser_club</id>
       <name>Jupiter Taser Club</name>
-      <category>Dice & Tests</category>
+      <category>Dice &amp; Tests</category>
       <damage>3</damage>
       <cost>1200</cost>
     </weapon>
@@ -954,15 +954,15 @@
       <cost>1200</cost>
     </weapon>
     <weapon>
-      <id>custom_sr7e_weap_b\&t_mp9_(6.5)</id>
-      <name>B\&T MP9 (6.5)</name>
+      <id>custom_sr7e_weap_b_t_mp9_(6.5)</id>
+      <name>B&amp;T MP9 (6.5)</name>
       <category>Machine Pistols</category>
       <damage>5</damage>
       <cost>1300</cost>
     </weapon>
     <weapon>
-      <id>custom_sr7e_weap_b\&t_mp9</id>
-      <name>B\&T MP9</name>
+      <id>custom_sr7e_weap_b_t_mp9</id>
+      <name>B&amp;T MP9</name>
       <category>Machine Pistols</category>
       <damage>5</damage>
       <cost>500</cost>
@@ -1472,8 +1472,8 @@
       <cost>150</cost>
     </weapon>
     <weapon>
-      <id>custom_sr7e_weap_boyd_&_richards_desperado</id>
-      <name>Boyd & Richards Desperado</name>
+      <id>custom_sr7e_weap_boyd_and_richards_desperado</id>
+      <name>Boyd &amp; Richards Desperado</name>
       <category>Shotguns</category>
       <damage>5</damage>
       <cost>1700</cost>
@@ -1835,5 +1835,5 @@
       <damage>3</damage>
       <cost>450000</cost>
     </weapon>
-  </weapons>
+  <weapon><id>custom_sr7e_weap_monofilament_whip</id><name>Monofilament Whip</name><category>Melee Weapons</category><damage>12</damage><cost>3000</cost></weapon><weapon><id>custom_sr7e_weap_ares_alpha</id><name>Ares Alpha</name><category>Assault Rifles</category><damage>15</damage><cost>3400</cost></weapon><weapon><id>custom_sr7e_weap_assault_cannon</id><name>Assault Cannon</name><category>Assault Cannons</category><damage>16</damage><cost>2000</cost></weapon></weapons>
 </chummer>
