@@ -1,18 +1,3 @@
-## Prologue: The Garden’s First Breath
-The sulfur is gone.
-
-For forty years, Zkazena tasted of yellow rot and industrial bile—a city choking on its own mechanical intestines. But as the Chrysalis Protocol shattered, the sky didn’t just part; it bled. It bled violet, silver, and a deep, resonant gold that tasted of ozone and ancient rain.
-
-Now, the silence is the loudest thing in the Sprawl.
-
-The White Tower—that fifteen-hundred-foot spike of corporate arrogance—didn’t fall. It ascended. Its plasteel foundations were pulled upward by the roots of the Great Crystalline Tree, turning into a skeletal trellis for iridescent moss that glows with the rhythmic pulse of a sleeping god. Below it, the Undercity has become a hum of dormant potential, a thousand "True Vessels" waiting for a command that hasn't come.
-
-In the shadows of the water treatment facility, the air hums. It’s the sound of a thousand tuning forks vibrating in the dark. Kyber sits in the half-light, watching the Architect—a small, pale boy who breathes for the entire city. Every time the boy’s chest rises, a street lamp three blocks away flickers in sympathetic resonance. Every time he sighs, the crystalline moss creeps another inch over a Wuxing barricade.
-
-Outside, the Fuchsia Dragons have stopped being men. They are a "Hive" now, a synchronized wall of chitin and neon-pink veins, standing guard at the edge of the new world. They don't sleep. They don't eat. They simply wait for the metal locusts of the Harvesters to return.
-
-The old Zkazena is dead. The "New Garden" is born. And like any garden in the Sixth World, it is beautiful, it is hungry, and it is covered in thorns.
-
 ## Chapter 1: Sulphur and Static
 
 The air tasted like rust and bad eggs, a Zkazena welcome wagon that clung to the back of Kyber’s throat. Even through the environmental seals of the rented Citymaster, the miasma seeped in – sulphur from the old hot springs, decay from the blighted ruins, and something else… a sharp, ozonic tang that spoke of stressed tech and strained reality. Nanites. They were thicker here than anywhere Kyber had briefed, a greasy film on the armoured windows, a faint, persistent static shivering just beneath the threshold of hearing. Grandaddy’s Matrix, indeed. More like Grandaddy’s nightmare after eating bad synth-cheese.
@@ -2892,7 +2877,11 @@ It was Sister Sinalma. Her serene smile was gone, replaced by a look of cold, fa
 
 The heavy transparent doors slid shut behind Sinalma, cutting off the sterile hum of the laboratory. She stood before Kyber's team, an imposing figure in stark white robes adorned with subtle, glowing arcane sigils. The two guards flanking her were massive, their bodies heavily modified with obvious cybernetic armor and integrated weaponry, their faces hidden behind featureless tactical visors.
 
-"You're too late, Sister," Kyber said, leveling their Ares Predator at her chest. "The relay is down. Your little truce with Wuxing is about to blow up in your face."
+"You're too late, Sister," Kyber said, leveling their Ares Predator at her chest. "Just like at Azrael's Clinic, your plans are fragged."
+
+Logi v2.1 paused. "Data not found. My last sync was 42 days ago. Please provide a data summary of Azrael's Clinic."
+
+Kyber winced, the 'Grief Gap' stinging again, before focusing back on Sinalma. "The relay is down. Your little truce with Wuxing is about to blow up in your face."
 
 Sinalma’s laugh was a dry, brittle sound, devoid of mirth. "The relay was a convenience, Kyber. A tool to keep the corporate dogs distracted while the real work was finished. The Undercity is sealed, and Wuxing’s strike teams are currently busy chasing ghosts in the upper levels, thanks to your little disruption."
 
@@ -2966,13 +2955,15 @@ Kyber seized the opening. They sprinted forward, closing the distance to the str
 
 Sinalma stood amidst the wreckage, her white robes stained with the blue fluid from the ruptured stasis pods. The first guard lay motionless in the debris, its kinetic shielding shattered by the Architect's telekinetic blast.
 
-The Sister's eyes were wide, filled with a mixture of rage and terror. She looked at Spark+, who still hovered silently, the violet aura pulsing with latent power.
+Before Kyber could secure her, Sinalma triggered her Phase Two. Her eyes rolled back, and a massive Astral Illusion of a twisting serpent erupted from her aura, while a localized bio-feedback trap snapped shut around Kyber and Cryptolock's minds, threatening to short out their nervous systems.
+
+But Spark+ interfered. He didn't use telekinesis this time; he simply looked at Sinalma. A direct, localized reality-warp severed her neural link to the trap and shattered the illusion instantly. The Sister's eyes snapped wide, filled with a mixture of rage and terror. She looked at Spark+, who still hovered silently, the violet aura pulsing with latent power.
 
 "You don't understand," Sinalma whispered, her voice trembling. "The Chrysalis... it was the only way. The only way to save us."
 
 "You weren't trying to save us, Sister," Kyber said, leveling their weapon at her. "You were trying to replace us. And we're not ready to be replaced."
 
-Logi v2.1 stepped forward, their nanite aura stabilizing. "The broadcast node remains active, Kyber. The remaining stasis pods are still viable. We must disable the central core."
+Logi v2.1 stepped forward, their nanite aura stabilizing. The Crystalise pulsed sharply in response to the Backup's voice. Logi v2.1 glanced at it, their synthetic composure momentarily faltering as if encountering a ghost in the mirror, feeling something fundamentally 'incorrect'. "The broadcast node remains active, Kyber. The remaining stasis pods are still viable. We must disable the central core."
 
 "Agreed," Kyber said, keeping their weapon trained on Sinalma. "Cryptolock, secure the Sister. Logi, find the core override. We end this now."
 
@@ -3272,7 +3263,7 @@ The grinding of concrete and the thick, wet sound of rapid organic growth filled
 
 Kyber moved to the edge of the nearest tank, shining their helmet light into the depths. The massive concrete basin was dry, but the bottom was cracked, revealing a dark, jagged opening leading further underground.
 
-"The old drainage system," Cryptolock recognized, peering over Kyber's shoulder. "Connects to the deeper aquifers. It's a maze down there, but it bypasses the surface entirely."
+"The old drainage system," Cryptolock recognized, peering over Kyber's shoulder. "Connects to the deeper aquifers. It's a maze down there, but the 'New Garden' has warped space-time, creating 'Mana-Slips'—literal shortcuts through the crystalline moss. It bypasses the surface entirely and gets us there faster."
 
 "It's our only option," Kyber decided. "Logi, map a route toward the Fuchsia Dragon strongholds near the Tower ruins. We need to link up with Lazlow and coordinate a defense against the Harvesters."
 
@@ -4094,10 +4085,25 @@ Kyber looked toward the massive crystalline tree. They could feel a presence the
 
 Spark+ was gone. His physical body had been consumed in the merge. But he wasn't dead. He had become the city. He was the garden.
 
-"He's everywhere," Kyber said softly.
+"He's everywhere," Kyber said softly. *His power is diffused now, embedded into the city's roots. He isn't a laser-battery anymore; he's a sleeping gardener. He can't smite enemies easily because he's too busy keeping the city's atmosphere from collapsing.*
 
 The oppressive weight of the Sixth World seemed to lift from Kyber's shoulders. Wuxing would return, eventually. The corps always did. But they wouldn't be fighting a terrified child or an unstable anomaly anymore. They would be fighting a living, breathing world, defended by an army of mercenaries, a cured ghoul, a synthesized ghost, and a very tired, but very determined runner.
 
 Kyber looked at Logi v2.1, then at Cryptolock, and finally out at the radiant new city of Zkazena.
 
 "Come on," Kyber said, turning away from the edge. "Let's go see what the Architect built for us."
+
+## Prologue: The Garden’s First Breath
+The sulfur is gone.
+
+For forty years, Zkazena tasted of yellow rot and industrial bile—a city choking on its own mechanical intestines. But as the Chrysalis Protocol shattered, the sky didn’t just part; it bled. It bled violet, silver, and a deep, resonant gold that tasted of ozone and ancient rain.
+
+Now, the silence is the loudest thing in the Sprawl.
+
+The White Tower—that fifteen-hundred-foot spike of corporate arrogance—didn’t fall. It ascended. Its plasteel foundations were pulled upward by the roots of the Great Crystalline Tree, turning into a skeletal trellis for iridescent moss that glows with the rhythmic pulse of a sleeping god. Below it, the Undercity has become a hum of dormant potential, a thousand "True Vessels" waiting for a command that hasn't come.
+
+In the shadows of the water treatment facility, the air hums. It’s the sound of a thousand tuning forks vibrating in the dark. Kyber sits in the half-light, watching the Architect—a small, pale boy who breathes for the entire city. Every time the boy’s chest rises, a street lamp three blocks away flickers in sympathetic resonance. Every time he sighs, the crystalline moss creeps another inch over a Wuxing barricade.
+
+Outside, the Fuchsia Dragons have stopped being men. They are a "Hive" now, a synchronized wall of chitin and neon-pink veins, standing guard at the edge of the new world. They don't sleep. They don't eat. They simply wait for the metal locusts of the Harvesters to return.
+
+The old Zkazena is dead. The "New Garden" is born. And like any garden in the Sixth World, it is beautiful, it is hungry, and it is covered in thorns.
