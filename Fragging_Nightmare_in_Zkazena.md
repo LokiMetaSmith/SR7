@@ -1,3 +1,18 @@
+## Prologue: The Garden’s First Breath
+The sulfur is gone.
+
+For forty years, Zkazena tasted of yellow rot and industrial bile—a city choking on its own mechanical intestines. But as the Chrysalis Protocol shattered, the sky didn’t just part; it bled. It bled violet, silver, and a deep, resonant gold that tasted of ozone and ancient rain.
+
+Now, the silence is the loudest thing in the Sprawl.
+
+The White Tower—that fifteen-hundred-foot spike of corporate arrogance—didn’t fall. It ascended. Its plasteel foundations were pulled upward by the roots of the Great Crystalline Tree, turning into a skeletal trellis for iridescent moss that glows with the rhythmic pulse of a sleeping god. Below it, the Undercity has become a hum of dormant potential, a thousand "True Vessels" waiting for a command that hasn't come.
+
+In the shadows of the water treatment facility, the air hums. It’s the sound of a thousand tuning forks vibrating in the dark. Kyber sits in the half-light, watching the Architect—a small, pale boy who breathes for the entire city. Every time the boy’s chest rises, a street lamp three blocks away flickers in sympathetic resonance. Every time he sighs, the crystalline moss creeps another inch over a Wuxing barricade.
+
+Outside, the Fuchsia Dragons have stopped being men. They are a "Hive" now, a synchronized wall of chitin and neon-pink veins, standing guard at the edge of the new world. They don't sleep. They don't eat. They simply wait for the metal locusts of the Harvesters to return.
+
+The old Zkazena is dead. The "New Garden" is born. And like any garden in the Sixth World, it is beautiful, it is hungry, and it is covered in thorns.
+
 ## Chapter 1: Sulphur and Static
 
 The air tasted like rust and bad eggs, a Zkazena welcome wagon that clung to the back of Kyber’s throat. Even through the environmental seals of the rented Citymaster, the miasma seeped in – sulphur from the old hot springs, decay from the blighted ruins, and something else… a sharp, ozonic tang that spoke of stressed tech and strained reality. Nanites. They were thicker here than anywhere Kyber had briefed, a greasy film on the armoured windows, a faint, persistent static shivering just beneath the threshold of hearing. Grandaddy’s Matrix, indeed. More like Grandaddy’s nightmare after eating bad synth-cheese.
@@ -50,7 +65,7 @@ But the usual felt… off. Tenser. The low murmur of the street carried an edge 
 
 The resurrections. They called them the ‘Hollows’ in hushed tones.
 
-He’d seen Grima yesterday. Seen her sitting on the steps of her ruin, holding hands with Asa. Or the thing wearing Asa’s face. Cryptolock had known Asa – the real one. Sharp, cynical, surprisingly good at patching synth-leather. Vanished when the Zone flared into existence, like so many others. This… Asa… looked right. Same ragged clothes, same haunted eyes. But the way she sat, the stillness, the utter lack of the restless energy the real Asa had possessed… it was like looking at a perfectly rendered BTL sim persona running on a dead deck. Blank. Hollow.
+He’d seen Grima yesterday. Seen her sitting on the steps of her ruin, holding hands with Asa. Or the thing wearing Asa’s face. Cryptolock had known Asa – the real one. Sharp, cynical, surprisingly good at patching synth-leather. Vanished when the Zone flared into existence, like so many others. This… Asa… looked right. Same ragged clothes, same haunted eyes. But the way she sat, the stillness, the utter lack of the restless energy the real Asa had possessed… it was like looking at a perfectly rendered BTL sim persona running on a dead deck. Blank. Hollow. Yet, their fingers twitched rhythmically, digging slightly into the dirt, as if reaching for something deep within the earth.
 
 Grima hadn't looked relieved. She'd looked terrified, trapped by hope's cruelest imitation.
 
@@ -2781,7 +2796,7 @@ Kyber felt a cold spike of adrenaline. The relay hack hadn't just alerted Wuxing
 
 Kyber made the call. They slammed their hand onto the release panel.
 
-The heavy blast doors ground open, protesting the sudden movement. Logi v2.1 stepped inside, the digital mask completely gone, leaving only the familiar, unburdened face. They didn't look at Kyber or Cryptolock first; their gaze immediately locked onto Spark+ sitting in the center of the room.
+The heavy blast doors ground open, protesting the sudden movement. Logi v2.1 stepped inside, the digital mask completely gone, leaving only the familiar, unburdened face. They looked at Kyber. "Your tactical gear is optimal, Kyber, but I do not recognize the origin of your limp. Was there an engagement?" Kyber flinched—the limp was from St. Jude's, the very fight that killed Logi Prime. The 'Grief Gap' stung anew. Logi v2.1 then turned; their gaze immediately locked onto Spark+ sitting in the center of the room.
 
 "The Architect," Logi v2.1 stated, a flicker of something almost like awe crossing their features. "The Chrysalis Protocol is not a theory. It is a terrifying reality."
 
