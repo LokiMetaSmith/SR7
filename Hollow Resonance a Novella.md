@@ -1,3 +1,139 @@
+# Hollow Resonance
+
+# Table of Contents
+
+- [Chapter 1: Sulphur and Static](#chapter-1-sulphur-and-static)
+- [Chapter 2: Hunger and Hollow Echoes](#chapter-2-hunger-and-hollow-echoes)
+- [Chapter 3: The Resonator and the Wisp](#chapter-3-the-resonator-and-the-wisp)
+- [Act 2: Waking Dreams](#act-2-waking-dreams)
+- [Chapter 4: The Sync Error](#chapter-4-the-sync-error)
+- [Act 3: The Sky Bleeds](#act-3-the-sky-bleeds)
+- [Chapter 5: The Falling Star](#chapter-5-the-falling-star)
+- [Act 4: The Siege of White Tower](#act-4-the-siege-of-white-tower)
+- [Chapter 6: The Architect’s Blueprint](#chapter-6-the-architects-blueprint)
+- [Act 5: Apotheosis](#act-5-apotheosis)
+- [Chapter 7: The Architect's Price](#chapter-7-the-architects-price)
+- [Chapter 8: The Altar of New Beginnings](#chapter-8-the-altar-of-new-beginnings)
+- [Chapter 9: The Gardener](#chapter-9-the-gardener)
+- [Chapter 10: Static and Screams](#chapter-10-static-and-screams)
+- [Chapter 11: The Seed of Potential](#chapter-11-the-seed-of-potential)
+- [Chapter 12: Interface and Overload](#chapter-12-interface-and-overload)
+- [Chapter 13: Feedback Loop](#chapter-13-feedback-loop)
+- [Chapter 14: Condensation](#chapter-14-condensation)
+- [Chapter 15: Shards and Silence](#chapter-15-shards-and-silence)
+- [Chapter 16: Echoes in the Deep](#chapter-16-echoes-in-the-deep)
+- [Chapter 17: Stirrings in the Dark](#chapter-17-stirrings-in-the-dark)
+- [Chapter 18: Spark](#chapter-18-spark)
+- [Chapter 19: Gardener, Seed, and Spark](#chapter-19-gardener-seed-and-spark)
+- [Chapter 20: Resonance and Containment](#chapter-20-resonance-and-containment)
+- [Chapter 21: Calculated Exposures](#chapter-21-calculated-exposures)
+- [Chapter 22: Tar Creek Threshold](#chapter-22-tar-creek-threshold)
+- [Chapter 23: Cracking the Shell](#chapter-23-cracking-the-shell)
+- [Chapter 24: A Calculated Darkness](#chapter-24-a-calculated-darkness)
+- [Chapter 25: Fractured Data, Fragile Hope](#chapter-25-fractured-data-fragile-hope)
+- [Chapter 26: Starlight Ghosts](#chapter-26-starlight-ghosts)
+- [Chapter 27: Zone Bleed](#chapter-27-zone-bleed)
+- [Chapter 28: Raptor Strike](#chapter-28-raptor-strike)
+- [Chapter 29: Leech and ICE](#chapter-29-leech-and-ice)
+- [Chapter 30: Point of No Return](#chapter-30-point-of-no-return)
+- [Chapter 31: The Sister](#chapter-31-the-sister)
+- [Chapter 32: Beneath the Rot](#chapter-32-beneath-the-rot)
+- [Chapter 33: Heart of the Nightingale](#chapter-33-heart-of-the-nightingale)
+- [Chapter 34: The Serpent in the Garden](#chapter-34-the-serpent-in-the-garden)
+- [Chapter 35: Chrome and Habit](#chapter-35-chrome-and-habit)
+- [Chapter 36: Conduit Collapse](#chapter-36-conduit-collapse)
+- [Chapter 37: Ley Lines and Ancient Stone](#chapter-37-ley-lines-and-ancient-stone)
+- [Chapter 38: Down the Ley Line](#chapter-38-down-the-ley-line)
+- [Chapter 39: River of Light](#chapter-39-river-of-light)
+- [Chapter 40: Echoes of Stillness](#chapter-40-echoes-of-stillness)
+- [Chapter 41: Tracks in the Dust](#chapter-41-tracks-in-the-dust)
+- [Chapter 42: Detour and Decay](#chapter-42-detour-and-decay)
+- [Chapter 43: Echoes of Industry](#chapter-43-echoes-of-industry)
+- [Chapter 44: Beacon in the Dark](#chapter-44-beacon-in-the-dark)
+- [Chapter 45: Return to Stillness](#chapter-45-return-to-stillness)
+- [Chapter 46: Unspooling Nightingale](#chapter-46-unspooling-nightingale)
+- [Chapter 47: Emergence](#chapter-47-emergence)
+- [Chapter 48: Conduit to the Surface](#chapter-48-conduit-to-the-surface)
+- [Chapter 49: Ghost in the Machine](#chapter-49-ghost-in-the-machine)
+- [Chapter 50: Contingency Zero](#chapter-50-contingency-zero)
+- [Chapter 51: Ghosts in the Code](#chapter-51-ghosts-in-the-code)
+- [Chapter 52: Waiting Game](#chapter-52-waiting-game)
+- [Chapter 53: Architect of Ruin](#chapter-53-architect-of-ruin)
+- [Chapter 54: Shielding the Spark](#chapter-54-shielding-the-spark)
+- [Chapter 55: Dampener Field](#chapter-55-dampener-field)
+- [Chapter 56: Kestrel's Gambit](#chapter-56-kestrels-gambit)
+- [Chapter 57: Protocol Omega-7](#chapter-57-protocol-omega-7)
+- [Chapter 58: Solo Through the Sprawl](#chapter-58-solo-through-the-sprawl)
+- [Chapter 59: Relay 7-Gamma](#chapter-59-relay-7-gamma)
+- [Chapter 60: Closing Net](#chapter-60-closing-net)
+- [Chapter 61: Surface Tension](#chapter-61-surface-tension)
+- [Chapter 62: Neon and Rain](#chapter-62-neon-and-rain)
+- [Chapter 63: Into the Gut](#chapter-63-into-the-gut)
+- [Chapter 64: Skrag's Bargain](#chapter-64-skrags-bargain)
+- [Chapter 65: Salvage and Sanctuary](#chapter-65-salvage-and-sanctuary)
+- [Chapter 66 (Revised): Sky Fire Whispers](#chapter-66-revised-sky-fire-whispers)
+- [Chapter 67: Racing the Falling Sky](#chapter-67-racing-the-falling-sky)
+- [Chapter 68: Beneath the White Tower](#chapter-68-beneath-the-white-tower)
+- [Chapter 69: Cutting the Feed](#chapter-69-cutting-the-feed)
+- [Chapter 70: Static Burn](#chapter-70-static-burn)
+- [Chapter 71: Return to the Deep](#chapter-71-return-to-the-deep)
+- [Chapter 72: Safe Haven, Stolen Secrets](#chapter-72-safe-haven-stolen-secrets)
+- [Chapter 73: The Ghost at the Door](#chapter-73-the-ghost-at-the-door)
+- [Chapter 74: Descent into Lazarus](#chapter-74-descent-into-lazarus)
+- [Chapter 75: The Chrysalis Protocol](#chapter-75-the-chrysalis-protocol)
+- [Chapter 76: The Forge Ignites](#chapter-76-the-forge-ignites)
+- [Chapter 77: The Broken Chrysalis](#chapter-77-the-broken-chrysalis)
+- [Chapter 78: Ascending the Abyss](#chapter-78-ascending-the-abyss)
+- [Chapter 79: The New Garden](#chapter-79-the-new-garden)
+- [Act 6: Root and Rot](#act-6-root-and-rot)
+- [Chapter 80: The New Overgrowth](#chapter-80-the-new-overgrowth)
+- [Chapter 81: Unholy Alliances](#chapter-81-unholy-alliances)
+- [Chapter 82: The Thorns of Zkazena](#chapter-82-the-thorns-of-zkazena)
+- [Chapter 83: The Immune Response](#chapter-83-the-immune-response)
+- [Chapter 84: The Siege of the Roots](#chapter-84-the-siege-of-the-roots)
+- [Chapter 85: The Mana Siphon](#chapter-85-the-mana-siphon)
+- [Chapter 86: The Desperate Gambit](#chapter-86-the-desperate-gambit)
+- [Chapter 87: The Metamorphosis](#chapter-87-the-metamorphosis)
+- [Chapter 88: The Pact Renewed](#chapter-88-the-pact-renewed)
+- [Chapter 89: The New Normal](#chapter-89-the-new-normal)
+- [Chapter 90: The Hunting Trip](#chapter-90-the-hunting-trip)
+- [Chapter 91: The Butcher's Bill](#chapter-91-the-butchers-bill)
+- [Chapter 92: The Procession of Remembrance](#chapter-92-the-procession-of-remembrance)
+- [Chapter 93: The Weight of the Crown](#chapter-93-the-weight-of-the-crown)
+- [Chapter 94: The Severance Protocol](#chapter-94-the-severance-protocol)
+- [Chapter 95: The Dead Weight](#chapter-95-the-dead-weight)
+- [Chapter 96: The Heart of the Node](#chapter-96-the-heart-of-the-node)
+- [Chapter 97: Ascension](#chapter-97-ascension)
+- [Prologue: The Garden’s First Breath](#prologue-the-gardens-first-breath)
+
+> **Welcome to Zkazena: Where the Dead Don't Stay Buried, and Immortality Comes at a Price.**
+>
+> In the perpetually decaying sprawl of Zkazena, where nanite-laced air chokes the unwary and corporate greed is the only law, something new and terrifying is stirring. People long dead—buried, mourned, and forgotten—are suddenly walking the streets again. Not ghouls, not spirits, but perfect echoes of the departed... except they're chillingly, fundamentally wrong.
+>
+> Enter Kyber, a jaded operative navigating Zkazena's treacherous underworld with a chorus of personality constructs for company. Alongside Logi, a technomancer whose very essence is a buzzing nanite swarm, Kyber takes a job that spirals beyond corporate espionage into a nightmare of impossible resurrections. Their investigation leads them to Francky, a slick salesman peddling 'New Beginnings Life Insurance' and a sinister 'return policy' unlike any other.
+>
+> But Francky is just a gardener in a far more twisted plot. As Kyber and Logi, along with a reluctant ghoul rocker named Cryptolock, dive deeper into the city's poisoned heart, they uncover a terrifying conspiracy woven from alien energies, corporate secrets, and a child named Spark who holds the key to a reality-bending entity. From the blighted ruins of Crispyopolis to the ancient, forbidden depths beneath the White Tower, they're hunted by Wuxing's ruthless containment teams and pursued by Sister Sinalma, a chillingly calm operative from the White Tower's Bio-Arcane Division, who wants the power of 'Project Nightingale' for herself.
+>
+> **Sulphur and Static. Chrome and Habit. Ancient Magic and Cutting-Edge Horror.**
+>
+> *Hollow Resonance* is a high-octane plunge into a cyberpunk dystopia where every choice is a gamble, every ally is suspect, and the line between life and death is dangerously blurred. Can Kyber and their fractured team protect the fragile hope of Spark, uncover the truth behind the 'falling stars' and 'waking sleepers,' and stop the 'Gardener' from cultivating a new, terrifying reality? Or will Zkazena finally consume them all?
+>
+> **Dive into *Hollow Resonance* and discover a world where the future is bleak, but the impossible is just beginning.**
+
+
+# Author's Thoughts & Acknowledgements
+
+Writing *Hollow Resonance* has been an incredible journey through the suffocating nanite-laced fog of Zkazena. Navigating Kyber's fragmented headspace, building Logi's chillingly pragmatic Save State, and writing Cryptolock's snarling ghoul-rocker dialogue was an absolute joy. It’s a world where the lines between magic and machine blur, and finding the humanity in monsters (and the monsters in humans) was the driving force behind this narrative. I wanted to drag you all into the dirt and neon, and I hope you enjoyed the ride.
+
+I want to extend a massive thank you to Conner and Phil for their unending support, to Gemini for keeping the creative engine running, and a special shoutout to Jules for the top-tier editing, world expansion, and generally keeping the story sharp enough to cut synth-leather.
+
+See you in the shadows, chummers.
+
+— Loki
+
+
+---
+
 ## Chapter 1: Sulphur and Static
 
 The air tasted like rust and bad eggs, a Zkazena welcome wagon that clung to the back of Kyber’s throat. Even through the environmental seals of the rented Citymaster, the miasma seeped in – sulphur from the old hot springs, decay from the blighted ruins, and something else… a sharp, ozonic tang that spoke of stressed tech and strained reality. Nanites. They were thicker here than anywhere Kyber had briefed, a greasy film on the armoured windows, a faint, persistent static shivering just beneath the threshold of hearing. Grandaddy’s Matrix, indeed. More like Grandaddy’s nightmare after eating bad synth-cheese.
