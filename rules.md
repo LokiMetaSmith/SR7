@@ -2542,6 +2542,12 @@ Spraytank
 Walther-AGC Liquidator  
 Walther PPD
 
+
+**Monofilament Whip**: A deadly, nearly invisible monofilament line stored in a weighted tip. The weapon easily slices through most armor. It's notoriously difficult to master, and a critical glitch might result in self-amputation.
+
+**Melee Weapons		ACC	DV	AP	REACH	AVAIL	WEIGHT	COST**
+Monofilament Whip	5	12P	-8	2	12(F)	0.5	3,000¥
+
 **Vehicular Weaponry** \- Heavy weapon systems designed specifically for mounting on vehicles, drones, or fixed emplacements. They are typically too heavy or require too much power to be man-portable.
 
 **AN/EDQ-12 Air Defense Naval Directed Energy Weapons System**: The “Andrews” naval laser was designed to down incoming guided missiles but also functions in a short range anti-aircraft and anti-ship role.  It may only be mounted on naval vessels powered by a nuclear reactor, and is capable of firing 50 ‘shots’ before the system’s cooling mechanisms must be recharged and reset.

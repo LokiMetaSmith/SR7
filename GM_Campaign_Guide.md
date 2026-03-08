@@ -256,6 +256,160 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Skills:** Unarmed Combat 5, Tracking 6, Perception 6.
 *   **Powers:** Animal Control, Enhanced Senses, Fear, Guard.
 
+**Kyber (Jaded Operative / Street Samurai)**
+*   **BOD** 5, **AGI** 6(8), **REA** 5(7), **STR** 4(6), **WIL** 5, **LOG** 4, **INT** 5, **CHA** 3, **EDG** 4, **ESS** 2.1
+*   **Condition Monitor:** 11/11
+*   **Armor:** 12 (Armor Jacket)
+*   **Skills:** Automatics 6, Unarmed Combat 5, Sneaking 5, Perception 5, Intimidation 4.
+*   **Qualities:** CFD (Observer, Enforcer, Negotiator), Toughness.
+*   **Weapons:** Ares Alpha (Assault Rifle, 15P, -10 AP, SA/BF/FA), Unarmed Strike (6P, Close).
+*   **Augmentations:** Wired Reflexes 2, Muscle Replacement 2, Smartlink, Cybereyes (Rating 2).
+
+**Logi Prime (Deceased Technomancer Ghost)**
+*   **BOD** 3, **AGI** 4, **REA** 4, **STR** 3, **WIL** 6, **LOG** 6, **INT** 5, **CHA** 5, **EDG** 5, **ESS** 6.0, **RES** 6
+*   **Condition Monitor:** 10/11
+*   **Armor:** 0 (Ghost)
+*   **Skills:** Compiling 6, Registering 6, Software 6, Computer 5, Hacking 5.
+*   **Qualities:** Technomancer, Analytical Mind, Hi-Rez.
+*   **Powers:** E-Ghost abilities.
+
+**Logi_v2.1 (The Save State Technomancer)**
+*   **BOD** 3, **AGI** 4, **REA** 4, **STR** 3, **WIL** 6, **LOG** 6, **INT** 5, **CHA** 3, **EDG** 4, **ESS** 5.0, **RES** 5
+*   **Condition Monitor:** 10/11
+*   **Armor:** 9 (Lined Coat)
+*   **Skills:** Compiling 6, Registering 5, Software 6, Computer 5, Hacking 5.
+*   **Qualities:** Technomancer, Analytical Mind, Save Point.
+*   **Complex Forms:** Cleaner, Diffusion of Firewall, Infusion of Sleaze.
+*   **Notes:** Utilitarian logic; lacks recent memories ("Grief Gap").
+
+**Spark (Battery / Resonance Prodigy)**
+*   **BOD** 2, **AGI** 3, **REA** 3, **STR** 2, **WIL** 6, **LOG** 4, **INT** 5, **CHA** 4, **EDG** 4, **ESS** 6.0, **RES** 4
+*   **Condition Monitor:** 9/11
+*   **Armor:** 0 (Clothing)
+*   **Skills:** Unarmed Combat 1, Stealth 3, Resonance 4.
+*   **Qualities:** Technomancer, Uneducated.
+
+**Spark+ (The Architect - Entity)**
+*   **BOD** 4, **AGI** 5, **REA** 5, **STR** 3, **WIL** 8, **LOG** 7, **INT** 6, **CHA** 6, **EDG** 6, **ESS** 6.0, **MAG/RES** 8
+*   **Condition Monitor:** 10/12
+*   **Armor:** 10 (Mystical Shield)
+*   **Skills:** Spellcasting 8, Counterspelling 8, Compiling 8.
+*   **Qualities:** Magician, Technomancer, Reality Warper (Custom).
+*   **Powers:** Warps reality, absorbs magical/kinetic energy, stabilized Ley Line.
+
+**Cryptolock (Ghoul Rocker / Fixer)**
+*   **BOD** 6, **AGI** 4, **REA** 4, **STR** 5, **WIL** 4, **LOG** 3, **INT** 4, **CHA** 5, **EDG** 3, **ESS** 0.1, **MAG** 1
+*   **Condition Monitor:** 11/10
+*   **Armor:** 8 (Synthleather Jacket)
+*   **Skills:** Performance (Guitar) 6, Con 5, Negotiation 5, Unarmed Combat 4.
+*   **Qualities:** Infection (HMHVV III), Dual Natured, Fame (Local), First Impression.
+*   **Weapons:** Unarmed Strike (Claws) (5P, -1 AP, Close).
+
+**Himerus (Scholar / Ancient Vampire)**
+*   **BOD** 6, **AGI** 6, **REA** 6(8), **STR** 6, **WIL** 7, **LOG** 7, **INT** 6, **CHA** 8, **EDG** 5, **ESS** 6.0, **MAG** 8
+*   **Condition Monitor:** 11/12
+*   **Armor:** 10 (Armored Suit)
+*   **Skills:** Spellcasting 6, Assensing 6, Negotiation 6, Unarmed Combat 5, Con 6.
+*   **Qualities:** Infection (HMHVV I), Magician, Dual Natured.
+*   **Spells/Powers:** Essence Drain, Mist Form, Regeneration, Trid Phantasm, Mind Probe.
+
+**Cleo (Emissary of the Horrors)**
+*   **BOD** 4, **AGI** 5, **REA** 5, **STR** 3, **WIL** 7, **LOG** 5, **INT** 6, **CHA** 7, **EDG** 5, **ESS** 6.0, **MAG** 7
+*   **Condition Monitor:** 10/12
+*   **Armor:** 9 (Lined Coat)
+*   **Skills:** Spellcasting 7, Summoning 6, Negotiation 6, Con 6, Leadership 5.
+*   **Qualities:** Magician, Mentor Spirit (Horror).
+*   **Spells:** Control Actions, Agony, Petrify, Trid Phantasm.
+
+**Sargent Igneous (Fuchsia Dragon Marine)**
+*   **BOD** 7, **AGI** 5, **REA** 5(7), **STR** 6(8), **WIL** 5, **LOG** 3, **INT** 4, **CHA** 3, **EDG** 3, **ESS** 2.0
+*   **Condition Monitor:** 12/11
+*   **Armor:** 16 (Heavy Mil-Spec Armor)
+*   **Skills:** Automatics 6, Heavy Weapons 5, Unarmed Combat 5.
+*   **Qualities:** Rememberance, High Pain Tolerance 2.
+*   **Weapons:** Ares Alpha (15P, -10 AP, SA/BF/FA), Combat Knife (10P, -2 AP).
+*   **Augmentations:** Wired Reflexes 2, Muscle Replacement 2.
+
+**Johnny the Johnson (Personafix Construct)**
+*   **BOD** 3, **AGI** 3, **REA** 3, **STR** 3, **WIL** 4, **LOG** 5, **INT** 5, **CHA** 6, **EDG** 3, **ESS** 1.0
+*   **Condition Monitor:** 10/10
+*   **Armor:** 6 (Actioneer Business Clothes)
+*   **Skills:** Negotiation 7, Con 6, Etiquette 6, Perception 4.
+*   **Qualities:** Personafix.
+*   **Notes:** Always carries a silver cigarette case.
+
+**Miss Pixel (Trouble Magnet)**
+*   **BOD** 3, **AGI** 4, **REA** 4, **STR** 2, **WIL** 3, **LOG** 4, **INT** 4, **CHA** 5, **EDG** 6, **ESS** 6.0
+*   **Condition Monitor:** 10/10
+*   **Armor:** 4 (Clothing)
+*   **Skills:** Con 3, Stealth 2, Computer 4.
+*   **Qualities:** Bad Luck, Trouble Magnet (Custom).
+
+**Shrimpy (Fuchsia Dragon Assassin)**
+*   **BOD** 4, **AGI** 7, **REA** 6(8), **STR** 4, **WIL** 4, **LOG** 3, **INT** 5, **CHA** 3, **EDG** 4, **ESS** 1.5
+*   **Condition Monitor:** 10/10
+*   **Armor:** 12 (Chameleon Suit)
+*   **Skills:** Longarms (Sniper Rifles) 6, Pistols 5, Sneaking 6, Gymnastics 5.
+*   **Qualities:** Rememberance, Catlike, Hawk Eye.
+*   **Weapons:** Ranger Arms SM-5 (Sniper Rifle, 30P, -15 AP), Silenced Pistol (6P, -2 AP).
+*   **Augmentations:** Wired Reflexes 2, Cybereyes (Rating 3 with Vision Mag).
+
+**Pat O’Mara (Knife Adept / Counter Intel)**
+*   **BOD** 4, **AGI** 6, **REA** 6(8), **STR** 5, **WIL** 5, **LOG** 4, **INT** 5, **CHA** 4, **EDG** 4, **ESS** 6.0, **MAG** 6
+*   **Condition Monitor:** 10/11
+*   **Armor:** 10 (Armor Clothing)
+*   **Skills:** Blades (Knives) 7, Sneaking 6, Throwing Weapons 5, Perception 5, Intimidation 4.
+*   **Qualities:** Adept, Danger Sense.
+*   **Powers:** Improved Reflexes 2, Critical Strike (Blades), Improved Ability (Blades) 2.
+*   **Weapons:** Monofilament Knife (7P, -8 AP), Throwing Knives (6P, -1 AP).
+
+**Bear (Awakened Talis Cat)**
+*   **BOD** 2, **AGI** 5, **REA** 5, **STR** 1, **WIL** 5, **LOG** 3, **INT** 5, **CHA** 4, **EDG** 3, **ESS** 6.0, **MAG** 4
+*   **Condition Monitor:** 9/11
+*   **Armor:** 0
+*   **Skills:** Unarmed Combat 4, Sneaking 6, Perception 5.
+*   **Qualities:** Dual Natured.
+*   **Powers:** Enhanced Senses, Concealment.
+
+**Jensen (Urban Hedge Shaman / Trickster)**
+*   **BOD** 3, **AGI** 4, **REA** 4, **STR** 2, **WIL** 5, **LOG** 4, **INT** 5, **CHA** 6, **EDG** 4, **ESS** 6.0, **MAG** 5
+*   **Condition Monitor:** 10/11
+*   **Armor:** 6 (Street Clothes)
+*   **Skills:** Spellcasting (Illusion) 6, Con 6, Sneaking 4, Summoning 5.
+*   **Qualities:** Magician, Mentor Spirit (Trickster).
+*   **Spells:** Trid Phantasm, Confusion, Improved Invisibility, Chaos.
+
+**Kane (Afflicted / Shredded Survivor)**
+*   **BOD** 5, **AGI** 3, **REA** 3, **STR** 4, **WIL** 4, **LOG** 2, **INT** 3, **CHA** 2, **EDG** 2, **ESS** 3.0
+*   **Condition Monitor:** 11/10
+*   **Armor:** 4 (Rags/Scars)
+*   **Skills:** Unarmed Combat 3, Survival 4.
+*   **Qualities:** High Pain Tolerance 2, Bad Memories.
+
+**Darri (Zkazena Resident)**
+*   **BOD** 3, **AGI** 3, **REA** 3, **STR** 3, **WIL** 3, **LOG** 3, **INT** 3, **CHA** 3, **EDG** 2, **ESS** 6.0
+*   **Condition Monitor:** 10/10
+*   **Armor:** 2 (Clothing)
+*   **Skills:** Computer 3, Perception 2.
+
+**Asa (Obsidiman / Memory Imprint)**
+*   **BOD** 10, **AGI** 3, **REA** 3, **STR** 10, **WIL** 5, **LOG** 3, **INT** 4, **CHA** 3, **EDG** 3, **ESS** 6, **MAG** 4
+*   **Condition Monitor:** 13/11
+*   **Armor:** 12 (Natural Stone Armor)
+*   **Skills:** Unarmed Combat 5, Knowledge (Local Lore) 5.
+*   **Qualities:** High Pain Tolerance 4, Allergy (Water, Mild).
+*   **Attacks:** Stone Fists (10P, -2 AP, Reach 1).
+*   **Notes:** Believes her own fiction; imprint of the real Asa.
+
+**Squid (Elf Rock Metal Idol / Runner)**
+*   **BOD** 3, **AGI** 5, **REA** 4, **STR** 3, **WIL** 4, **LOG** 3, **INT** 4, **CHA** 7, **EDG** 4, **ESS** 6.0
+*   **Condition Monitor:** 10/10
+*   **Armor:** 8 (Synthleather Jacket)
+*   **Skills:** Performance (Singing) 6, Pistols 4, Con 5, Etiquette 4.
+*   **Qualities:** Elf, Fame (National), Low-Light Vision.
+*   **Weapons:** Fichetti Tiffani Needler (6P(fl), +2 AP, SA).
+
+
 ## Part 5: Special Mechanics
 
 ### "Save State" Mechanics
