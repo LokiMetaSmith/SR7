@@ -63,7 +63,6 @@
 - [Chapter 56: Into the Gut](#chapter-56-into-the-gut)
 - [Chapter 57: Skrag's Bargain](#chapter-57-skrags-bargain)
 - [Chapter 58: Salvage and Sanctuary](#chapter-58-salvage-and-sanctuary)
-- [Chapter 66 (Revised): Sky Fire Whispers](#chapter-66-revised-sky-fire-whispers)
 - [Act 4: The Siege of White Tower](#act-4-the-siege-of-white-tower)
 - [Chapter 59: Racing the Falling Sky](#chapter-59-racing-the-falling-sky)
 - [Chapter 60: Beneath the White Tower](#chapter-60-beneath-the-white-tower)
@@ -2237,7 +2236,6 @@ They had fulfilled their bargain, bought themselves a few more hours of shielded
 
 ---
 
-## Chapter 66 (Revised): Sky Fire Whispers
 
 With the dampener prototype humming steadily in their hand, Kyber approached the cot where Spark+ rested. "Alright," Kyber said quietly to Cryptolock, who nodded, eyes fixed on the monitor displaying Spark+'s vitals. "Activating low-power field. Watch for any neural spikes or energy fluctuations."
 
