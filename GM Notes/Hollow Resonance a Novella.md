@@ -2288,31 +2288,30 @@ Looking at the rearview display, Kyber saw no immediate signs of Wuxing pursuit 
 
 ## Chapter 63: Into the Gut
 
-The echo of sirens faded, swallowed by the cacophony of the Gutter Market. Rain drummed on the Citymaster's hull, mixing with the sizzle of nearby synth-food stalls and the distorted thumping of music from unseen dive bars. Kyber killed the running lights, plunging the alley into near darkness, relying on their visor's low-light mode.
+The Citymaster didn’t so much park as it died, its armored prow wedged into a stack of rusted shipping containers that smelled of ancient sea salt and chemical rot. The rain in the Gutter Market wasn't water; it was a thin, oily slurry that hissed as it struck the vehicle's overheated hull, releasing a cloud of steam that tasted like lead and burnt rubber.
 
-"Damage report," Kyber demanded, running internal diagnostics on the vehicle. The readouts were grim. "Hull integrity compromised, port side. Multiple micro-fractures. Rear axle stressed. Tire Four pressure critical. Main energy capacitor took a hit during the ramp jump – output fluctuating, down thirty percent." The Citymaster was tough, but not indestructible. It wasn't going much further, especially not fast. Their energy cells were almost depleted, Cryptolock was low on ammo, and their medical supplies were dwindling.
+Kyber checked the internal diagnostics. The HUD flickered, a dying ghost in the machine.
 
-"Kid?" Cryptolock asked, checking the rear compartment.
+> **Hull Integrity:** 42% (Warning: Micro-fractures detected)
+> **Energy Core:** Critical (Resonance feedback loop initiated)
 
-Spark+ sat calmly amidst the secure padding, eyes open, observing the flickering diagnostic lights with detached curiosity. "The informational density here is... chaotic," the layered voice commented softly. "Multiple conflicting resonance patterns. High levels of bio-signature desperation and aggression." They seemed unfazed by the crash or the surroundings, processing it as data.
+"She’s done, Cryptolock," Kyber said, their voice filtered through the suit’s external speakers. "The axle is screaming, and the core is about to vent. We have nineteen minutes before the thermal overload turns this alley into a kiln."
 
-"Yeah, well, welcome to The Gut," Cryptolock grunted. "Place'll chew you up and spit out scrap if you ain't careful." He looked at Kyber. "We can't stay here. Vehicle's busted, looks like high-value salvage. Gutter Rats or some other crew will be sniffing around any minute. And Wuxing won't stay out of the market forever; they'll send drones or foot patrols soon enough."
+"Better a kiln than a Wuxing dissection table," Cryptolock grunted. He hauled Spark+ out of the rear compartment. The boy looked translucent in the neon-blue strobe of a flickering overhead sign—less like a child and more like an unfinished thought.
 
-Kyber knew he was right. They were exposed. "Options?"
+They stepped out into the Gut. Here, the "Sacrifice Zone" wasn't a map coordinate; it was a way of life. The market was a vertical slum of stalls held together by zip-ties and desperate prayers.
 
-"Ditch the truck, go to ground on foot? Risky with Spark," Cryptolock said, glancing at the entity. "Try and find a chop shop in this mess? Trusting market mechanics is suicide." He paused, thinking. "There is... Skrag. Runs a garage couple levels down. Deals in heavy machinery repair, mostly legit, but keeps his operation *very* discreet. Did some... wetwork retrieval for him years ago. He owes me, or at least, he knows better than to cross me lightly."
+Moving through the throng, they passed a "Lung-Smith" stall where a man was bartering his own cybernetic hand for a pair of recycled, soot-stained filters. There was no haggling over credits—only over minutes of breath. Above them, a Wuxing surveillance drone hovered silently over a crowd, its spotlight illuminating a thief being beaten by a local gang. The drone didn't intervene. It merely recorded the biometric data of the participants, cataloging the "waste" for future labor-cullings. Down here, law wasn't about order; it was about inventory.
 
-"A garage? Can he fix the Citymaster?"
+And then there was the decay. The walls were draped in the "New Overgrowth"—the Architect’s iridescent moss. It didn't just grow; it throbbed. Kyber watched a stray dog sniff a patch of it; the moss flared violet, and the dog’s fur began to shimmer with crystalline frost. The dog didn't run. It just lay down, its breathing slowing as the magic began to metabolize its heat.
 
-"Maybe. If we got the parts and the cred, which we don't. But," Cryptolock added, "his place is shielded, deep in the market's guts, off Wuxing's grid. Safe place to lie low for a few hours, maybe get a line on untraceable power cells or supplies. Safer than this alley."
+As they descended toward the lower transit tunnels, they passed the "Glass Ghosts"—the remains of a Wuxing team that had been caught in the initial Thor-Lite test strike a few hours prior. The kinetic heat had been so intense it had flash-vitrified the air. Three soldiers stood frozen in a block of translucent green glass, their faces twisted in mid-shout, their armor fused to the walls.
 
-It was their best, perhaps only, option. "Okay. We move to Skrag's. Strip essential gear from the Citymaster – medical kit, reserve power cells, weapons, data core – anything we can carry. Wipe the nav computer, trigger a delayed thermal overload on the main power core to discourage immediate salvage and cover our tracks."
+A group of children was chipping away at the glass, trying to salvage the "shiny" bits of the soldiers' equipment. They played amongst the dead with a casual, horrifying familiarity. In Zkazena, even a massacre was just another source of scrap.
 
-They worked quickly, stripping the vehicle of vital equipment, packing it into tactical bags. Kyber initiated the wipe and set a twenty-minute timer on the thermal overload – enough time to get clear, hopefully. Finally, they slipped out into the rain-lashed, neon-drenched chaos of the Gutter Market on foot.
+"Keep your eyes forward," Kyber commanded, the 'Operator' persona locking down the rising nausea. "Skrag’s is two hundred meters down. Don't look at the ghosts."
 
-Kyber took point, datapad displaying a scavenged map Cryptolock had uploaded, trying to blend into the throng of weary workers, desperate scavengers, shady vendors, and watchful gangers. Cryptolock walked protectively beside Spark+, his presence a silent warning to anyone looking too closely. Spark+ kept their head down, pulling up the hood of a borrowed rain slicker, concentrating on suppressing their energy signature amidst the market's overwhelming sensory noise.
-
-They navigated narrow walkways slick with unidentifiable fluids, pushed through crowds gathered around cage fights or black market auctions, ignored the calls of vendors hawking everything from recycled synth-limbs to bootleg BTL chips. Twice, they had to duck into side alleys as heavily armed Gutter Rat patrols swaggered past, their crude cybernetics gleaming. Cryptolock handled them with a glare and a hand gesture that spoke volumes in the local gang vernacular, securing their passage without violence.
+They pressed on, leaving the neon-lit desperation of the upper Gut behind, moving deeper into the roots of a city that had forgotten what a law looked like.
 
 Finally, Cryptolock led them down a flight of greasy metal stairs behind a stall selling questionable roasted meat on sticks. He stopped before a heavy, unmarked steel door set into the damp concrete wall, barely visible behind overflowing refuse containers. He rapped sharply, a specific coded pattern.
 
@@ -2451,23 +2450,21 @@ As they rounded a bend, the tunnel opened into a large, sunken grotto. It was a 
 
 A group of three large scavengers, their skin mottled with strange, glowing lesions, blocked the main path forward. Their leader, a man whose jaw had been replaced by a rusted piece of mining equipment, leveled a crude, sparking arc-welder at Kyber’s chest.
 
-"Toll," the leader grated, his voice a mechanical rasp. "You walk the orange water, you pay the Kings."
+In his other hand, he clutched a vibrating, cracked containment unit. His breathing was a wet, rattling whistle, labored even through a scavenged filter.
 
-"We're just passing through," Kyber said, the 'Negotiator' stepping forward, hands open but hovering near their weapons. "We don't want trouble."
+"My daughter’s lungs are crystallizing," the leader rasped, not asking for credits, but pointing the arc-welder threateningly before shifting it toward Spark. "That kid... he’s 'clean' mana, isn't he? I don't want your creds. I want him to touch this box. Just one pulse to clear the rot out of her chest. Do it, or we all drown in the orange together."
 
-"Don't care what you want, suit," the leader spat, his eyes shifting past Kyber, locking onto the small, pale boy clinging to Cryptolock's back. "That's a prime cut of meat. Clean. Unspoiled. Worth a lot to the ripperdocs down in Sector 6. Give us the kid, and you walk."
+"We're just passing through," Kyber said, the 'Negotiator' stepping forward, hands open but hovering near their weapons. "We don't have time for miracles."
 
-The absolute necessity of survival in the chat piles had stripped away any pretense of morality. To these men, Spark wasn't a child; he was a commodity, a means to afford another week of anti-radiation meds or clean water. Necessity knew no law here; it only knew hunger.
+"It's not a miracle," the leader choked out, his sunken eyes locked onto the small, pale boy clinging to Cryptolock's back. "It's survival."
 
-Before Kyber could draw their Predator, Cryptolock moved.
+The absolute necessity of survival in the chat piles had stripped away any pretense of morality or normal negotiation. Necessity knew no law here; it only knew the desperate, gnawing need to save what little they had left.
 
-He didn't pull his gun. He stepped in front of Kyber, his massive, ghoul frame expanding as he let his own terrifying necessity show. He bared his jagged fangs, his eyes rolling back to show pure, predatory black. He let out a low, vibrating growl that echoed off the toxic walls.
+Before Kyber could draw their Predator or Cryptolock could snarl, Spark+ shifted on the ghoul's back. The boy reached out a translucent, glowing hand. As his finger brushed the cracked containment box, the violet aura surged. The corrupted, heavy-metal tainted mana inside the box didn't just clear; it bloomed, filling the toxic air with the sudden, sharp scent of night-flowers.
 
-"You want the kid?" Cryptolock snarled, his voice dripping with malice. "You're gonna have to eat me first. And trust me, chummer... I've got a much bigger appetite than you."
+The leader fell to his knees in the orange sludge, staring at the perfectly balanced, pulsing light now emanating from the box. He dropped the arc-welder, weeping openly, the wet whistle in his chest hitching.
 
-The scavengers hesitated. They were desperate, but they weren't stupid. Tangling with a fully enraged ghoul rocker in a confined space was a bad equation. The leader weighed the potential profit against the immediate, bloody cost.
-
-"Crazy freak," the leader muttered, lowering the arc-welder and stepping aside. "Keep your meat. But you don't stop walking until you're out of the water."
+"Go," the leader whispered, not looking up. "Just... go. The path is clear."
 
 "Wasn't planning on it," Cryptolock growled, not dropping his aggressive stance until Kyber, Logi, and Spark were safely past the makeshift barricade. He fell in behind them, a looming, protective shadow in the toxic dark.
 
@@ -3084,7 +3081,9 @@ Spark+ closed his eyes. He didn't just interface; he absorbed. He pulled the raw
 
 High above Zkazena, the Wuxing orbital platform fired. A rod of tungsten, moving at hypersonic speeds, struck the White Tower.
 
-But the impact didn't vaporize the city. Instead, the kinetic energy hit the massive, concentrated well of magic and data that Spark+ had gathered. The resulting explosion wasn't outward, but inward. A singularity of magic, machine, and kinetic force.
+The kinetic displacement alone should have liquefied the crust for three hundred square miles, turning the city into a molten crater. But the impact didn't vaporize the city. Spark+ didn't just block it; as the rod struck, he folded the space around the facility, phasing the entire subterranean structure into the resonance of the Wisp.
+
+For a fraction of a second, reality tore open. The resulting explosion wasn't outward, but inward—a singularity of magic, machine, and kinetic force. The only thing tethering Kyber and the others to existence was the "Dead Zone" artifact they carried, anchoring them in a pocket of stillness while the rest of the facility shunted through a dimensional slipstream.
 
 The world went white.
 
@@ -3158,13 +3157,15 @@ Cryptolock hauled Sinalma up, a grim smile on his face. Nearby, Francky let out 
 
 "He's everywhere," Logi v2.1 said softly. "His power is diffused now, embedded into the city's roots and the local Matrix mesh. He isn't a singular entity anymore; he is the operating system of the garden. A sleeping gardener, keeping the city's atmosphere from collapsing."
 
-Kyber let out a long, ragged breath, the adrenaline finally beginning to recede. "Just like that time we overloaded the bio-reactors at Azrael's Clinic to fry his local grid," Kyber said, a genuine, exhausted smile touching their face as they looked at Logi v2.1. "You remember? We thought we'd blown the whole block to slag, but you'd managed to channel it just right. 'Precision application of chaotic force,' you called it."
+Kyber let out a long, ragged breath, the adrenaline finally beginning to recede. "Just like that time we overloaded the bio-reactors at Azrael's Clinic to fry his local grid," Kyber began, a genuine, exhausted smile touching their face as they looked at Logi v2.1. "You remember? We thought we'd blown the whole block to slag, but you'd managed to channel it just right. 'Precision application of chaotic force,' you called..."
 
-Logi v2.1 turned to Kyber, the silver light of their eyes utterly flat and devoid of recognition. "Data not found," the Save State replied, the synthetic voice carrying a chillingly polite confusion. "My last data sync was forty-two days ago. I have no record of an engagement at a facility designated 'Azrael's Clinic'. Was this a secondary objective during my downtime?"
+Kyber's voice trailed off. They stopped themselves, the memory catching in their throat.
 
-The smile died on Kyber's face. The "Grief Gap"—the missing days of shared terror, survival, and sacrifice that separated the dead Logi Prime from this flawless digital ghost—yawned between them, vast and unbridgeable. Logi was here, and yet, they weren't.
+Logi v2.1 turned to Kyber, the silver light of their eyes utterly flat, a polite, synthetic curiosity waiting for the rest of the sentence. "Query incomplete. I have no data regarding 'Azrael's Clinic' in my active memory banks. My last sync was forty-two days ago. Is this a relevant tactical scenario I should download from the central archive?"
 
-"Yeah," Kyber managed to say, the word feeling like ash in their throat. "It was... secondary."
+The smile died completely on Kyber's face. The "Grief Gap"—the missing days of shared terror, survival, and sacrifice that separated the dead Logi Prime from this flawless, untouched digital ghost—yawned between them, vast and unbridgeable. Logi was here, and yet, they weren't. They were a perfect stranger to the very events that had forged this new world.
+
+"No," Kyber managed to say, the word feeling like ash in their throat. "It's... old data. Corrupted file. Don't worry about it."
 
 The oppressive weight of the Sixth World, briefly lifted, settled back onto Kyber's shoulders in a different form. Wuxing would return, eventually. The corps always did. But they wouldn't be fighting a terrified child, an unstable anomaly, or a predictable AI anymore. They would be fighting a living, breathing world, defended by an awakened Necropolis, a cured ghoul, a synthesized ghost, and a very tired, very lonely runner.
 
@@ -4260,7 +4261,7 @@ Zkazena was unrecognizable. The oppressive grey sky had parted, revealing a bril
 
 And in the center of it all, where the ruined White Tower had stood, rose a massive, magnificent tree made of pure, interwoven crystal and silver light. Its branches reached high into the new sky, a beacon of stabilized, perfectly balanced magic.
 
-Far below, in the distance, the ground had opened up. The ancient Necropolis, previously buried and trapped by the old ley line anomaly, had been gently lifted to the surface, its ancient stone tombs now bathed in the gentle light of the new forest.
+Far below, in the distance, the earth hadn't just opened; it had convulsed. The ancient Necropolis, previously buried and trapped by the old ley line anomaly, had violently upheaved. Huge tracts of ferrocrete streets were split wide open, and the massive, gothic stone spires of the ancient vampire city had punched through the asphalt like jagged teeth, their lower crypts now bathed in the gentle light of the new forest. It was a brutal, physical rebirth of something ancient and terrible, now integrated into the blooming landscape.
 
 "He did it," Kyber breathed, the 'Observer' persona overwhelmed by the sheer scale of the miracle. "He healed it. All of it."
 
