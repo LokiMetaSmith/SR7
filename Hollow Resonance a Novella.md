@@ -106,32 +106,6 @@
 - [Chapter 96: Ascension](#chapter-96-ascension)
 - [Epilogue: The Garden’s First Breath](#epilogue-the-gardens-first-breath)
 
-> **Welcome to Zkazena: Where the Dead Don't Stay Buried, and Immortality Comes at a Price.**
->
-> In the perpetually decaying sprawl of Zkazena, where nanite-laced air chokes the unwary and corporate greed is the only law, something new and terrifying is stirring. People long dead—buried, mourned, and forgotten—are suddenly walking the streets again. Not ghouls, not spirits, but perfect echoes of the departed... except they're chillingly, fundamentally wrong.
->
-> Enter Kyber, a jaded operative navigating Zkazena's treacherous underworld with a chorus of personality constructs for company. Alongside Logi, a technomancer whose very essence is a buzzing nanite swarm, Kyber takes a job that spirals beyond corporate espionage into a nightmare of impossible resurrections. Their investigation leads them to Francky, a slick salesman peddling 'New Beginnings Life Insurance' and a sinister 'return policy' unlike any other.
->
-> But Francky is just a gardener in a far more twisted plot. As Kyber and Logi, along with a reluctant ghoul rocker named Cryptolock, dive deeper into the city's poisoned heart, they uncover a terrifying conspiracy woven from alien energies, corporate secrets, and a child named Spark who holds the key to a reality-bending entity. From the blighted ruins of Crispyopolis to the ancient, forbidden depths beneath the White Tower, they're hunted by Wuxing's ruthless containment teams and pursued by Sister Sinalma, a chillingly calm operative from the White Tower's Bio-Arcane Division, who wants the power of 'Project Nightingale' for herself.
->
-> **Sulphur and Static. Chrome and Habit. Ancient Magic and Cutting-Edge Horror.**
->
-> *Hollow Resonance* is a high-octane plunge into a cyberpunk dystopia where every choice is a gamble, every ally is suspect, and the line between life and death is dangerously blurred. Can Kyber and their fractured team protect the fragile hope of Spark, uncover the truth behind the 'falling stars' and 'waking sleepers,' and stop the 'Gardener' from cultivating a new, terrifying reality? Or will Zkazena finally consume them all?
->
-> **Dive into *Hollow Resonance* and discover a world where the future is bleak, but the impossible is just beginning.**
-
-
-# Author's Thoughts & Acknowledgements
-
-Writing *Hollow Resonance* has been an incredible journey through the suffocating nanite-laced fog of Zkazena. Navigating Kyber's fragmented headspace, building Logi's chillingly pragmatic Save State, and writing Cryptolock's snarling ghoul-rocker dialogue was an absolute joy. It’s a world where the lines between magic and machine blur, and finding the humanity in monsters (and the monsters in humans) was the driving force behind this narrative. I wanted to drag you all into the dirt and neon, and I hope you enjoyed the ride.
-
-I want to extend a massive thank you to Conner and Phil for their unending support, to Gemini for keeping the creative engine running, and a special shoutout to Jules for the top-tier editing, world expansion, and generally keeping the story sharp enough to cut synth-leather.
-
-See you in the shadows, chummers.
-
-— Loki
-
----
 
 ## Act 1: Sulphur and Static
 
@@ -444,6 +418,8 @@ Cryptolock watched Kyber’s meticulous work from a distance, leaning against a 
 "Still just a rock?" he asked eventually, nodding towards the crystalise.
 
 "It's processing," Kyber replied shortly, disconnecting the scanners. "Undergoing internal reconfiguration. Logi is preserving themself."
+
+Kyber closed their eyes, the 'Observer' retreating to let the 'Negotiator' manage the exhaustion. Right before the church, Kyber had told Logi the truth about Kestrel. The deep, dark secret about the betrayal that had forced Kyber into hiding: Kestrel had sold out their previous team to Aztechnology to save her own skin, leaving Kyber to be captured and experimented on. The severe cognitive trauma and subsequent escape had fractured their psyche, leading directly to the onset of CFD. The 'Observer', the 'Enforcer', and the 'Negotiator' were born in that Aztechnology black site. It was the foundation of their trust. And now, it felt like that trust, and Logi, were locked away.
 
 Cryptolock grunted, unconvinced. "Right. And the kid?"
 
@@ -2594,6 +2570,12 @@ Kyber felt a cold dread settle in their stomach. Sinalma hadn't given up. She sa
 
 "Unclear," Kyber replied, sifting through more files. "Sinalma seems to be operating a rogue faction within the company. Using Wuxing resources, but pursuing her own agenda. But Wuxing is still searching for us. The relay disruption triggered a sector-wide sweep."
 
+"And Francky?" Cryptolock asked. "He's been MIA since St. Jude's."
+
+"Not anymore," Kyber stated grimly, pulling up another decrypted log. "Sinalma's communications indicate Francky surrendered himself and his remaining 'Nightingale' research to her shortly after the Zone surge. He's currently detained in the Undercity. Apparently, Sinalma needed his expertise on the Wisp's initial containment, but she doesn't intend to let him share in the glory. He's a prisoner, awaiting 'processing'."
+
+"So, both our problems are down there," Cryptolock said, checking his weapon again.
+
 A sudden, sharp ping from the hub's proximity sensors interrupted them.
 
 "Movement," Kyber said, instantly drawing their weapon. "Level three access tunnel. Someone's coming."
@@ -2808,7 +2790,11 @@ Kyber seized the opening. They sprinted forward, closing the distance to the str
 
 "One down," Kyber breathed, pulling the knife free. They turned toward the shattered laboratory doors.
 
-Sinalma stood amidst the wreckage, her white robes stained with the blue fluid from the ruptured stasis pods. The first guard lay motionless in the debris, its kinetic shielding shattered by the Architect's telekinetic blast.
+Sinalma stood amidst the wreckage, her white robes stained with the blue fluid from the ruptured stasis pods. Beside her, slumped against a broken console and looking worse for wear, was Francky. The slick salesman had clearly been subjected to some of Sinalma's 'preparations' before their arrival. He looked up, his trademark smile replaced by a desperate grimace.
+
+"You're a fool, Sinalma," Francky croaked, spitting blood. "The Wisp isn't a tool, it's a seed. And you've just planted it in the wrong soil."
+
+Sinalma ignored him. The first guard lay motionless in the debris, its kinetic shielding shattered by the Architect's telekinetic blast.
 
 Before Kyber could secure her, Sinalma triggered her Phase Two. Her eyes rolled back, and a massive Astral Illusion of a twisting serpent erupted from her aura, while a localized bio-feedback trap snapped shut around Kyber and Cryptolock's minds, threatening to short out their nervous systems.
 
@@ -2950,9 +2936,11 @@ Sinalma fell to her knees, staring up at the bruised sky with a mixture of awe a
 
 Kyber looked down at the fanatical Sister. "You're done, Sinalma. We're handing you over to the locals. I'm sure the Ancients in the Necropolis would love to discuss your theories on forced evolution."
 
-Cryptolock hauled Sinalma up, a grim smile on his face.
+Cryptolock hauled Sinalma up, a grim smile on his face. Nearby, Francky let out a weak, coughing laugh. The salesman had survived the blast, somehow, dragging his broken body up the crystal stairs. "A hostile takeover," he wheezed, staring at the tree. "And I didn't even get a percentage."
 
-"Where is he?" Kyber asked, looking toward the massive crystalline tree. They could feel a presence there. Vast, ancient, and deeply familiar.
+"You get to live," Kyber said, turning the Predator on him. "For now. The Ancients might have questions for you, too."
+
+"Where is he?" Kyber asked, turning back to Logi and looking toward the massive crystalline tree. They could feel a presence there. Vast, ancient, and deeply familiar.
 
 "He's everywhere," Logi v2.1 said softly. "His power is diffused now, embedded into the city's roots and the local Matrix mesh. He isn't a singular entity anymore; he is the operating system of the garden. A sleeping gardener, keeping the city's atmosphere from collapsing."
 
@@ -3656,7 +3644,7 @@ Logi v2.1 brought up a holographic schematic. "The Harvester technology is more 
 
 "A blockade," Kyber realized. "They're sealing us in."
 
-"And starving us out," Cryptolock added. "We have water, thanks to the kid, but we don't have infinite supplies. The mercs eat a lot. And..." he trailed off, glancing down at his own hands. The ghoul hunger was a constant, gnawing presence.
+"And starving us out," Cryptolock added. "We have water, thanks to the kid, but we don't have infinite supplies. The mercs eat a lot. And..." he trailed off, glancing down at his own hands. The ghoul hunger had been silent since the battle, his form remaining in its terrifyingly perfect state, but he still remembered the gnawing presence.
 
 "Wuxing is playing the long game," Kyber said, pacing the smooth obsidian floor. "They're going to let us rot down here while they figure out how to bypass the Architect's defenses or replicate his power."
 
@@ -3746,7 +3734,7 @@ But the victory tasted metallic and cold to Kyber.
 
 They walked slightly apart from the returning Fuchsia Dragons. The mercenaries moved with that same unnerving, synchronized precision they had displayed during the assault. Their armor was scorched and slick with Wuxing blood, but their expressions were entirely blank. They hadn't celebrated the victories; they had simply executed their programming and returned to the hive.
 
-"It was a massacre," Cryptolock murmured, falling into step beside Kyber. The ghoul's usual bravado was muted, replaced by a deep-seated unease. "I've seen some drek in Crispyopolis, but that... they didn't even flinch when that Wuxing heavy begged for his life. Just melted him to slag."
+"It was a massacre," Cryptolock murmured, falling into step beside Kyber. The ghoul's usual bravado was muted, replaced by a deep-seated unease. His own predatory instincts, heightened by his recent transformation into a perfect ghoul, were warring with his lingering humanity. "I've seen some drek in Crispyopolis, but that... they didn't even flinch when that Wuxing heavy begged for his life. Just melted him to slag."
 
 "They are an extension of the Lazlow-Entity's will," Logi v2.1 analyzed, their nanite aura glowing dimly in the cavern's gloom. "Compassion and mercy are not recognized variables in the insect spirit's combat algorithms. Only efficiency and consumption."
 
@@ -4038,7 +4026,7 @@ Kyber blinked, their vision slowly returning. The ruins of the concourse were go
 
 Logi v2.1 sat up, their nanite aura glowing with a steady, brilliant silver. "System reboot successful. Ambient mana levels are... stable. Perfectly stable."
 
-Cryptolock groaned, pushing himself up. He looked at his hands. The constant, gnawing hunger of the ghoul virus was gone. He looked up at Kyber, his eyes wide with disbelief. "I'm... I don't feel it anymore. The hunger."
+Cryptolock groaned, pushing himself up. He looked at his hands. The constant, gnawing hunger of the ghoul virus was gone, replaced completely by the serene, powerful equilibrium of his perfect ghoul form. He looked up at Kyber, his eyes wide with disbelief. "I'm... I don't feel it anymore. The hunger."
 
 Kyber walked to the edge of the crystal platform, looking out over the city.
 
