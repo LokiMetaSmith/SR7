@@ -132,7 +132,7 @@ Special Attributes may be raised during creation and advancement in the same way
 
 **Edge** (EDG) \- A character’s luck; what makes them special and what makes them stand out from the rest of society.
 
-**Essence** (ESS) \- Essence is the holistic integrity and well being of a metahuman body.  All characters begin with 6 Essence, and die if their Essence ever drops to 0\.
+**Essence** (ESS) \- Essence is the holistic integrity and well being of a metahuman body.  All characters begin with 6 Essence, and die if their Essence ever drops to 0\. Essence is not necessarily what you are born with, but who you are and what you become. Essence can be regained through experience points, rituals, and character growth (e.g. going to therapy to reconcile being a "blood thirsty cyborg killing machine").
 
 **Initiative** (INI) \- Initiative is a derived Attribute from combining Reaction and Intuition.  It determines how quickly a character acts during Combat Rounds.
 
@@ -173,16 +173,16 @@ Special Attributes may be raised during creation and advancement in the same way
 	Every character hails from a different strain of metahumanity, referred to as their **Metatype**.  Every Metatype aside from base Humans has an associated Karma cost at character creation.  The various strains of metahumanity have different minimum and maximum Attributes than the Human norm, and usually have positive or negative qualities, such as enhanced vision or allergic weaknesses.  The Karma cost for each Metatype has been balanced to consider both their starting minimum Attributes and their potential for growth at maximum Attribute levels, as well as any innate qualities.
 
 **Race:		BOD	AGI	REA	STR	WIL	LOG	INT	CHA	EDG	Karma Cost**  
-**Human**		1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	2 / 7	0  
+**Human**		1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	2 / 7	2 / 7	0
 **Centaur**		3 / 8	1 / 6	1 / 5	3 / 8	1 / 6	1 / 6	2 / 7	1 / 6	1 / 6	90  
 *Low-Light Vision, Thermographic Vision, Magic Sense, Galloping Stride, Hooves, Big & Tall (3)*  
-**Dwarf**		3 / 8	1 / 6	1 / 6	3 / 8	2 / 7	1 / 6	1 / 6	1 / 6	1 / 6	90  
+**Dwarf**		3 / 8	1 / 6	1 / 5	3 / 8	2 / 7	1 / 6	1 / 6	1 / 6	1 / 6	100
 *Thermographic Vision, Toxin Resistance (2), Reach (-1)*  
 **Giant**		4 / 9	1 / 5	1 / 5	7 / 12	1 / 6	1 / 5	1 / 5	1 / 5	1 / 6	190  
 *Built Tough (2), Reach (+3), Big & Tall (2)*  
 **Gnome**		1 / 4	2 / 7	1 / 6	1 / 4	2 / 7	2 / 7	1 / 6	1 / 6	1 / 6	60  
 *Thermographic Vision, Arcane Arrester (4), Neoteny, Reach (-2)*  
-**Elf**		1 / 5	2 / 7	2 / 7	1 / 6	1 / 6	1 / 6	1 / 6	3 / 8	1 / 6	70  
+**Elf**		1 / 5	2 / 7	2 / 7	1 / 6	1 / 6	1 / 6	1 / 6	3 / 8	1 / 6	80
 *Low-Light Vision, Reach (+1)*  
 **Hobgoblin**	3 / 8	1 / 6	2 / 7	2 / 7	1 / 6	1 / 5	2 / 7	1 / 5	1 / 6	80  
 *Low-Light Vision, Fangs, Keen-Eared, Poor Self Control (Vindictive)*  
@@ -190,9 +190,9 @@ Special Attributes may be raised during creation and advancement in the same way
 *Night Vision, Keen-Eared, Allergy (Sunlight, Moderate), Nocturnal*  
 **Ogre**		4 / 9	1 / 6	1 / 5	3 / 8	2 / 7	1 / 6	1 / 6	1 / 4	1 / 6	110  
 *Low-Light Vision, Built Tough (1), Ogre Stomach, Human-Looking*  
-**Ork**		4 / 9	1 / 6	1 / 6	3 / 8	1 / 6	1 / 6	1 / 6	1 / 5	1 / 6	100  
+**Ork**		4 / 9	1 / 6	1 / 6	3 / 8	1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	100
 *Low-Light Vision, Built Tough (2), Reach (+1)*  
-**Troll**		5 / 10	1 / 6	1 / 5	5 / 10	1 / 6	1 / 6	1 / 6	1 / 5	1 / 6	190  
+**Troll**		5 / 10	1 / 6	1 / 5	5 / 10	1 / 6	1 / 6	1 / 6	1 / 6	1 / 6	200
 *Thermographic Vision, Built Tough (3), Dermal Deposits, Reach (+2), Big & Tall (1)*  
 **Satyr**		2 / 7	1 / 6	2 / 7	2 / 7	1 / 6	1 / 6	1 / 6	2 / 7	1 / 6	80  
 *Low-Light Vision, Built Tough (1), Satyr Legs, Hooves*
@@ -200,13 +200,53 @@ Special Attributes may be raised during creation and advancement in the same way
 **Skills:**
 
 Most Actions taken by a Shadowrunner involve the use of a **Skill**; their Skill rating combined with the rating of the **Linked Attribute** from the chosen Skill forms their Dice Pool for all Actions; *e.g.: Spellcasting is linked with a character’s Magic attribute, so their Dice Pool would be Spellcasting rating \+ MAG rating*.  **Active Skills** are used for most typical Actions, while **Language Skills** govern speaking or writing a language fluently, and **Knowledge Skills** come into play for determining what information your character may know about a variety of subjects.  At character creation all Skills start at rating 0 (**Untrained**) and may be raised with Karma.  A single Skill can be raised to a maximum rating of 6 during character creation; all others cannot rise above rating 5\.  Beyond character creation, you may raise a Skill up to rating 10 and possibly even higher with relevant Qualities.  	  
-In both creation and advancement, the cost to raise Active Skills is 3 Karma multiplied by their new rating; *e.g.: Raising Spellcasting from rating 4 to rating 5 would cost 15 Karma*.  Knowledge Skills and Language Skills are cheaper at a cost of 2 Karma multiplied by the new rating.  You may increase the rating of any Skill by 1 point during downtime, at GM discretion.  At character creation you receive one free Language Skill at Native (N) rating, and free Karma to spend on Knowledge and Language Skills equal to 10x your combined Logic (LOG) and Intuition (INT) ratings.  
+In both creation and advancement, the cost to raise Active Skills is 5 Karma multiplied by their new rating; *e.g.: Raising Spellcasting from rating 4 to rating 5 would cost 25 Karma*.  Knowledge Skills and Language Skills are cheaper at a cost of 2 Karma multiplied by the new rating.  You may increase the rating of any Skill by 1 point during downtime, at GM discretion.  At character creation you receive one free Language Skill at Native (N) rating, and free Karma to spend on Knowledge and Language Skills equal to 15x your combined Logic (LOG) and Intuition (INT) ratings.
 	
 
 **Specializations & Expertise:**
 
-A **Specialization** may be taken for any Skill you have raised to at least rating 4\.  Specializations must be for a specific or narrowed use of a Skill, or with a particular subgroup or subclass; *e.g.: A Magician could Specialize in Spellcasting (Illusion) or Conjuring (Binding), while a Street Samurai could Specialize in Firearms (Pistols) or Close Combat (Blades)*.  When taking a Specialization you gain a \+2 dice pool modifier for use of that Skill when using it in accordance with the Specialization; *e.g.: A Street Samurai with Firearms (Pistols) would gain a \+2 modifier when shooting their Ruger Super Warhawk (a pistol), but would receive no bonus with their Colt M22 (an assault rifle)*.  Specializations may be gained once during any downtime, or at character creation, at a cost of 7 Karma for Active Skills and 3 Karma for Knowledge and Language Skills; characters are limited to a single Specialization for each Skill at any time.  
-	**Expertise** is a further step from Specialization, but grants a \+3 dice pool modifier in place of a Specialization’s \+2 modifier.  An Expertise replaces a previously acquired Specialization, subsequently allowing room for a new Specialization in that Skill, and requires the chosen Skill to be at least rating 7\.  Expertise costs 6 Karma for Active Skills and 5 Karma for Knowledge and Language Skills.  At GM discretion Expertise may require specialized training or instructors.  Characters are limited to a single Expertise for a given skill and no more than 3 total Expertise at any time.
+A **Specialization** may be taken for any Skill you have raised to at least rating 4\.  Specializations must be for a specific or narrowed use of a Skill, or with a particular subgroup or subclass; *e.g.: A Magician could Specialize in Spellcasting (Illusion) or Conjuring (Binding), while a Street Samurai could Specialize in Firearms (Pistols) or Close Combat (Blades)*.  When taking a Specialization you gain a \+2 dice pool modifier for use of that Skill when using it in accordance with the Specialization; *e.g.: A Street Samurai with Firearms (Pistols) would gain a \+2 modifier when shooting their Ruger Super Warhawk (a pistol), but would receive no bonus with their Colt M22 (an assault rifle)*.  Specializations may be gained once during any downtime, or at character creation, at a cost of 10 Karma for Active Skills and 4 Karma for Knowledge and Language Skills; characters are limited to a single Specialization for each Skill at any time.
+	**Expertise** is a further step from Specialization, but grants a \+3 dice pool modifier in place of a Specialization’s \+2 modifier.  An Expertise replaces a previously acquired Specialization, subsequently allowing room for a new Specialization in that Skill, and requires the chosen Skill to be at least rating 6\.  Expertise costs 15 Karma for Active Skills and 7 Karma for Knowledge and Language Skills.  At GM discretion Expertise may require specialized training or instructors.  Characters are limited to a single Expertise for a given skill and no more than 3 total Expertise at any time.
+
+**Magic & Resonance Advancement:**
+
+New Spells and Complex Forms cost 5 Karma each to learn.  Each downtime a character may learn 1 new Spell or Complex Form.  At character creation a Magician receives 2x MAG free Spells, an Aspected Magician receives 3x MAG free Spells, and a Mystic Adept receives 1x MAG free Spells.  Technomancers receive a number of free Complex Forms up to 2x RES.
+
+Adepts receive free Power Points equal to their MAG special attribute.
+
+Initiation and Submersion for characters costs 10 + (Initiation Grade x 5) Karma and 10 + (Submersion Level x 5) Karma respectively.
+
+**Magic & The Astral:**
+
+**Spellcasting:**
+Casting a spell is a **Major Action**. Declare the spell and at what Force it is cast (up to your MAG rating). Roll `MAG + Spellcasting` opposed by:
+- `BOD + WIL` for Direct Physical Spells
+- `WIL + INT` for Direct Mana Spells
+- `REA + INT` for Indirect Spells
+
+Damage for all spells is **Force + net hits**. Direct spells are resisted with `ESS + WIL`. Indirect spells are resisted with `BOD + ARM` and the spell has an Armor Penetration (AP) equal to its Force.
+After casting a spell, the caster resists drain with `WIL + tradition’s attribute` (usually LOG or CHA).
+
+**Reckless Spellcasting:**
+Casting a spell becomes a **Minor Action**, but the Drain Value is increased by **+3**.
+
+**Background Count & Wild Dice:**
+The standard Background Count (BC) of Seattle ranges from 1-6; if a BC is needed, the GM rolls 1D6 for the current level.
+Positive BC allows **overcasting** a spell by adding Force up to the BC level (e.g., a character with MAG 6 in an area with BC 3 may overcast a spell at up to Force 9).
+
+Whether overcasting or not, a spell cast in a positive Background Count substitutes a number of regular dice in the `MAG + Skill` test with **Wild Dice** equal to the BC level. *For example, a character with MAG 6 and Spellcasting 6 casting a spell in an area with BC 4 rolls 12 dice total, 4 of which must be Wild Dice, regardless of the Force the spell is cast at.*
+- **Overcasting Penalty:** Overcasting adds 1 to the Drain Value for every level of Force a spell was cast at above the character's MAG rating. *(e.g., a MAG 6 character overcasting a spell at Force 8 that normally has 6 Drain will face 8 Drain instead).*
+
+**The Astral & Entanglement:**
+Mundanes cannot astrally project, but they can be trained to "feel the chills" and perceive the flow of the astral, allowing them to internalize the sensations and provide crucial support during magical encounters.
+
+The Astral plane is tied to the physical plane through shared entanglement. Therefore, disrupting the astral does not always require magic; it is often achieved by completely separating all living entities in the area (either by physically removing them or killing them all). Without physical tethers, the astral environment decoheres and shifts away to a different state.
+Large astral entities require a local physical manifestation to remain anchored. Without one, they risk decoherence and drifting in the astral, away from the physical location. Devices that create null or dead zones can also be deployed to disrupt astral entities in this way, giving mundane team members a critical role in neutralizing magical threats.
+
+**The Nanite-Infused Matrix:**
+The events of "Cold Storage" fundamentally altered the relationship between magic and technology. The Matrix is now infused with nanites everywhere, breaking the old barriers: machines and AI can now touch magic. The Matrix exists ubiquitously—there are no necessary physical terminals to plug into. Instead, ports and connections physically manifest from the nanite structures wherever the story demands them (similar to *BLAME!*).
+
+Because of this ubiquitous nanite backing, Augmented Reality (AR) is deeply integrated into the world. AR wearers can see the nanite-backed Matrix manifesting around them. From a story perspective, characters utilizing AR can potentially manifest new abilities or use technology to directly augment their physical and mental capacities, blending the line between the physical world and the digital one.
 
 **Combat Skills:**
 
@@ -1017,7 +1057,7 @@ Every character rolls their **Initiative Dice** at the beginning of an encounter
 
 **Actions:**
 
-	During your **Turn** of a Combat Round everything you attempt to do requires taking an **Action**.  By default all characters have 2 Actions available per Combat Round; additionally gaining 1 Action per Initiative Die held at the start of their Turn.  No character may have more than 6 total Actions at the start of their Turn.  Some Actions may require spending more than 1 of a character’s available Actions to represent their increased complexity and time requirements, or the Action may only be taken once per Round.  Other Actions may require that they be the only Action attempted on a character’s Turn, or even require multiple Rounds to complete.  
+	During your **Turn** of a Combat Round everything you attempt to do requires taking an **Action**.  Actions are typically categorized as **Major Actions**, **Minor Actions**, or **Mental Actions**. By default all characters have 2 Major Actions available per Combat Round; additionally gaining 1 Minor Action per Initiative Die held at the start of their Turn. Characters with a speed boost (whether augmented, magical, or otherwise) may gain additional Minor Actions or Mental Actions that can be performed using just their minds. No character may have more than 6 total Actions at the start of their Turn.  Some Actions may require spending more than 1 of a character’s available Actions to represent their increased complexity and time requirements, or the Action may only be taken once per Round.  Other Actions may require that they be the only Action attempted on a character’s Turn, or even require multiple Rounds to complete.
 	Actions may be taken in any order you desire and you must use all available Actions on your Turn, unless saving Actions for the use of **Reactions** later in the Combat Round.  At the end of a Round any unspent Actions are lost.  You may NOT save Actions to increase your total Actions on the following Combat Round; use them or lose them.  
 	To use a Reaction, a character must have the required Actions available, either by saving those Actions if they acted previously in the Combat Round, or by preemptively using them to react if they have not acted yet, *e.g.; A character takes their Turn with 4 available Actions. They spend 2 Actions on their Turn to attack, saving 2 Actions to use on Reactions later in the Combat Round.*
 
