@@ -2299,39 +2299,31 @@ Kyber checked the internal diagnostics. The HUD flickered, a dying ghost in the 
 
 "Better a kiln than a Wuxing dissection table," Cryptolock grunted. He hauled Spark+ out of the rear compartment. The boy looked translucent in the neon-blue strobe of a flickering overhead sign—less like a child and more like an unfinished thought.
 
-### **The Law of the Scrap**
+They stepped out into the Gut. Here, the "Sacrifice Zone" wasn't a map coordinate; it was a way of life. The market was a vertical slum of stalls held together by zip-ties and desperate prayers.
 
-They stepped out into **The Gut**. Here, the "Sacrifice Zone" wasn't a map coordinate; it was a way of life. The market was a vertical slum of stalls held together by zip-ties and desperate prayers.
+Moving through the throng, they passed a "Lung-Smith" stall where a man was bartering his own cybernetic hand for a pair of recycled, soot-stained filters. There was no haggling over credits—only over minutes of breath. Above them, a Wuxing surveillance drone hovered silently over a crowd, its spotlight illuminating a thief being beaten by a local gang. The drone didn't intervene. It merely recorded the biometric data of the participants, cataloging the "waste" for future labor-cullings. Down here, law wasn't about order; it was about inventory.
 
-* **The Trade:** They passed a "Lung-Smith" stall where a man was bartering his own cybernetic hand for a pair of recycled, soot-stained filters. There was no haggling over credits—only over minutes of breath.
-* **The Law:** A Wuxing surveillance drone hovered ten feet above a crowd, its spotlight illuminating a thief being beaten by a local gang. The drone didn't intervene; it merely recorded the biometric data of the participants, cataloging the "waste" for future labor-cullings. Law wasn't about order; it was about inventory.
-* **The Decay:** The walls were draped in the "New Overgrowth"—the Architect’s iridescent moss. It didn't just grow; it *throbbed*. Kyber watched a stray dog sniff a patch of it; the moss flared violet, and the dog’s fur began to shimmer with crystalline frost. The dog didn't run. It just lay down, its breathing slowing as the magic began to metabolize its heat.
+And then there was the decay. The walls were draped in the "New Overgrowth"—the Architect’s iridescent moss. It didn't just grow; it throbbed. Kyber watched a stray dog sniff a patch of it; the moss flared violet, and the dog’s fur began to shimmer with crystalline frost. The dog didn't run. It just lay down, its breathing slowing as the magic began to metabolize its heat.
 
-### **The Desperate Choice**
-
-Near the entrance to the lower transit tunnels, an old woman blocked their path. She wasn't a beggar; she was a "Memory-Stitcher," her stall a tangle of used BTL chips and jars of grey, preserved matter.
-
-She grabbed Kyber’s armored sleeve with a hand that was missing three fingers. "One pulse, suit," she wheezed, her eyes milky with cataract-scars. She held up a cracked containment jar. Inside, a tiny, glowing wisp of mana—a fragment of a "Hollow"—flickered. "My grandson’s heart stopped when the sky turned purple. I just need a spark. One pulse from the kid to jump-start the jar. I’ll give you the bypass codes for the sub-level 4 sensors. It’s the only way to Skrag’s without hitting the Wuxing trip-wires."
-
-Kyber looked at Spark+. The boy’s eyes were fixed on the jar. The violet light beneath his skin surged, a low hum vibrating in the air.
-
-"We don't have time for miracles," Cryptolock hissed, hand on his pistol.
-
-"We don't have a choice," Kyber countered. They looked at the woman—at the raw, bleeding necessity in her gaze. "Spark. Just a touch. Low frequency."
-
-The boy reached out. As his finger brushed the jar, the violet aura didn't just jump-start the wisp; it **overwrote** it. The grey matter in the jar turned into a miniature, crystalline flower that bloomed instantly, filling the alley with the scent of night-flowers. The woman fell to her knees, weeping not for the miracle, but for the terrifying beauty of it.
-
-"Sub-level 4," she choked out, sliding a grimy data-chip across the wet concrete. "The Red Vent. Go."
-
-### **Aftermath of the Strike**
-
-As they descended into the Red Vent, they passed the "Glass Ghosts"—the remains of a Wuxing team that had been caught in the initial Thor-Lite test strike a few hours prior. The kinetic heat had been so intense it had flash-vitrified the air. Three soldiers stood frozen in a block of translucent green glass, their faces twisted in mid-shout, their armor fused to the walls.
+As they descended toward the lower transit tunnels, they passed the "Glass Ghosts"—the remains of a Wuxing team that had been caught in the initial Thor-Lite test strike a few hours prior. The kinetic heat had been so intense it had flash-vitrified the air. Three soldiers stood frozen in a block of translucent green glass, their faces twisted in mid-shout, their armor fused to the walls.
 
 A group of children was chipping away at the glass, trying to salvage the "shiny" bits of the soldiers' equipment. They played amongst the dead with a casual, horrifying familiarity. In Zkazena, even a massacre was just another source of scrap.
 
 "Keep your eyes forward," Kyber commanded, the 'Operator' persona locking down the rising nausea. "Skrag’s is two hundred meters down. Don't look at the ghosts."
 
-They disappeared into the steaming dark, leaving the neon-lit desperation of The Gut behind, moving deeper into the roots of a city that had forgotten what a law looked like.
+They pressed on, leaving the neon-lit desperation of the upper Gut behind, moving deeper into the roots of a city that had forgotten what a law looked like.
+
+Finally, Cryptolock led them down a flight of greasy metal stairs behind a stall selling questionable roasted meat on sticks. He stopped before a heavy, unmarked steel door set into the damp concrete wall, barely visible behind overflowing refuse containers. He rapped sharply, a specific coded pattern.
+
+A heavy viewport slid open, revealing a pair of suspicious, heavily augmented eyes peering out. "Yeah?" a gravelly voice growled.
+
+"Tell Skrag the Gravedigger sent me," Cryptolock said, his voice low and hard. "Got business. Urgent."
+
+The eyes lingered on Cryptolock, then flickered to Kyber, then paused on Spark+ barely visible under the hood. After a long moment, multiple heavy bolts slid back with loud clangs. The steel door groaned open inwards, revealing a dimly lit, oil-stained entryway and the massive, heavily cybered frame of the Orc bouncer filling it.
+
+"Skrag's busy," the Orc rumbled. "But he'll see *you*, Gravedigger. Get inside. And keep your friends quiet."
+
+They stepped across the threshold into Skrag's domain, the heavy door slamming shut behind them, sealing them into another pocket of Zkazena's underworld, hoping for sanctuary but prepared for betrayal.
 
 
 ---
@@ -2458,11 +2450,13 @@ As they rounded a bend, the tunnel opened into a large, sunken grotto. It was a 
 
 A group of three large scavengers, their skin mottled with strange, glowing lesions, blocked the main path forward. Their leader, a man whose jaw had been replaced by a rusted piece of mining equipment, leveled a crude, sparking arc-welder at Kyber’s chest.
 
-The leader didn't just ask for a toll. He’s holding a vibrating, cracked containment unit. His breathing is a wet whistle. "My daughter’s lungs are crystallizing," he rasps, pointing a rusted arc-welder at Spark. "That kid... he’s 'clean' mana, isn't he? I don't want your creds. I want him to touch this box. Just one pulse to clear the rot out of her chest. Do it, or we all drown in the orange together."
+In his other hand, he clutched a vibrating, cracked containment unit. His breathing was a wet, rattling whistle, labored even through a scavenged filter.
+
+"My daughter’s lungs are crystallizing," the leader rasped, not asking for credits, but pointing the arc-welder threateningly before shifting it toward Spark. "That kid... he’s 'clean' mana, isn't he? I don't want your creds. I want him to touch this box. Just one pulse to clear the rot out of her chest. Do it, or we all drown in the orange together."
 
 "We're just passing through," Kyber said, the 'Negotiator' stepping forward, hands open but hovering near their weapons. "We don't have time for miracles."
 
-"It's not a miracle," the leader choked out, his eyes locked onto the small, pale boy clinging to Cryptolock's back. "It's survival."
+"It's not a miracle," the leader choked out, his sunken eyes locked onto the small, pale boy clinging to Cryptolock's back. "It's survival."
 
 The absolute necessity of survival in the chat piles had stripped away any pretense of morality or normal negotiation. Necessity knew no law here; it only knew the desperate, gnawing need to save what little they had left.
 
