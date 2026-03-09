@@ -106,6 +106,32 @@
 - [Chapter 96: Ascension](#chapter-96-ascension)
 - [Epilogue: The Garden’s First Breath](#epilogue-the-gardens-first-breath)
 
+> **Welcome to Zkazena: Where the Dead Don't Stay Buried, and Immortality Comes at a Price.**
+>
+> In the perpetually decaying sprawl of Zkazena, where nanite-laced air chokes the unwary and corporate greed is the only law, something new and terrifying is stirring. People long dead—buried, mourned, and forgotten—are suddenly walking the streets again. Not ghouls, not spirits, but perfect echoes of the departed... except they're chillingly, fundamentally wrong.
+>
+> Enter Kyber, a jaded operative navigating Zkazena's treacherous underworld with a chorus of personality constructs for company. Alongside Logi, a technomancer whose very essence is a buzzing nanite swarm, Kyber takes a job that spirals beyond corporate espionage into a nightmare of impossible resurrections. Their investigation leads them to Francky, a slick salesman peddling 'New Beginnings Life Insurance' and a sinister 'return policy' unlike any other.
+>
+> But Francky is just a gardener in a far more twisted plot. As Kyber and Logi, along with a reluctant ghoul rocker named Cryptolock, dive deeper into the city's poisoned heart, they uncover a terrifying conspiracy woven from alien energies, corporate secrets, and a child named Spark who holds the key to a reality-bending entity. From the blighted ruins of Crispyopolis to the ancient, forbidden depths beneath the White Tower, they're hunted by Wuxing's ruthless containment teams and pursued by Sister Sinalma, a chillingly calm operative from the White Tower's Bio-Arcane Division, who wants the power of 'Project Nightingale' for herself.
+>
+> **Sulphur and Static. Chrome and Habit. Ancient Magic and Cutting-Edge Horror.**
+>
+> *Hollow Resonance* is a high-octane plunge into a cyberpunk dystopia where every choice is a gamble, every ally is suspect, and the line between life and death is dangerously blurred. Can Kyber and their fractured team protect the fragile hope of Spark, uncover the truth behind the 'falling stars' and 'waking sleepers,' and stop the 'Gardener' from cultivating a new, terrifying reality? Or will Zkazena finally consume them all?
+>
+> **Dive into *Hollow Resonance* and discover a world where the future is bleak, but the impossible is just beginning.**
+
+
+# Author's Thoughts & Acknowledgements
+
+Writing *Hollow Resonance* has been an incredible journey through the suffocating nanite-laced fog of Zkazena. Navigating Kyber's fragmented headspace, building Logi's chillingly pragmatic Save State, and writing Cryptolock's snarling ghoul-rocker dialogue was an absolute joy. It’s a world where the lines between magic and machine blur, and finding the humanity in monsters (and the monsters in humans) was the driving force behind this narrative. I wanted to drag you all into the dirt and neon, and I hope you enjoyed the ride.
+
+I want to extend a massive thank you to Conner and Phil for their unending support, to Gemini for keeping the creative engine running, and a special shoutout to Jules for the top-tier editing, world expansion, and generally keeping the story sharp enough to cut synth-leather.
+
+See you in the shadows, chummers.
+
+— Loki
+
+---
 
 ## Act 1: Sulphur and Static
 
