@@ -1,5 +1,73 @@
 **Fan made Shadowrun 7th Edition**
 
+## Shadowrun 7th Edition Homebrew: The Merged World
+
+The confluence of eldritch power and frighteningly advanced technology has forcibly merged the Matrix with the gaiasphere. The grey goo ate the world and spit it back out. Welcome to the 6th World, where everything has an AR signature and magic is bleeding into the code.
+
+### I. Core Mechanics: Dice & Tests
+
+All actions use a streamlined success-counting system.
+
+* **Dice Pool:** Attribute + Skill.
+* **Hits:** All tests use six-sided dice (D6). A result of **5 or 6** is a Hit.
+* **Glitches:** If more than half the dice rolled are **1s**, you Glitch (a complication occurs). If you Glitch with 0 hits, it's a **Critical Glitch** (catastrophe).
+* **Rule of 6 (Ro6):** When applicable (e.g., using Edge), a rolled 6 counts as a hit and is rolled again.
+* **Wild Dice:** Used in high-mana or nanite-saturated areas. Roll these with a different colored die. A **6** counts as **3 hits** (and explodes if Ro6 applies). However, a **1** cancels all standard **5s** rolled in that pool.
+
+---
+
+### II. The Matrix & The Gaiasphere
+
+The Matrix is no longer separate from reality; it is a nanite-infused environment. Even the hermit in the woods is lit up with an AR signature because the water and air are crawling with nanites.
+
+* **No Cold Sim (The Abyss Looks Back):** Cold Sim is dead. Any active skill involving the Matrix requires a Direct Neural Interface (DNI), and all DNI connections are Hot Sim. You put your brain and soul on the line. Acting in AR without DNI limits your dice pools to the flat stats of your commlink or cyberdeck.
+* **Aspected Noise:** Distinct corporate grids are gone. "Noise" now acts exactly like a magical Background Count. It has surges, voids, and aspects (Matrix Ley Lines) that can provide **Wild Dice** or severe penalties depending on the local grid.
+* **Ritual Hacking:** Remote hacking without a direct connection functions like Ritual Spellcasting. Personal data (SINs, biometric data, deeply personal secrets) acts as a sympathetic "material link." The older the data, the more the link degrades.
+
+#### Updated Matrix Actions: Tethers & G.O.D.
+
+* **Tethers (Replacing Marks):** Marks act like sympathetic bonds. Placing a Tether on a device/persona requires an Opposed Test (*Logic + Hacking vs. Willpower + Firewall*). Each Tether gives +1 Die on subsequent actions against them. *Warning:* If you Glitch while exploiting a Tether, the two-way connection gives the target a free blast of Biofeedback against you.
+* **G.O.D. Manifestations:** Grid Overwatch is now a localized, immune-system response from the merged gaiasphere. Instead of a flat timer, when a hacker rolls a **1 on a Wild Die** during a Matrix action, it summons a G.O.D. manifestation (a lethal Sprite/Spirit hybrid) directly to their digital location.
+
+---
+
+### III. Magic, Resonance, and the Soul
+
+Consciousness equals a soul. The line between flesh and data is permanently blurred, but Tech and Magic still ruthlessly repel each other.
+
+* **Digital Essence (Turing 1, Searle 0):** Any AI, Sprite, or Matrix entity complex enough to possess a self-directed persona has an **Essence of 6**, an Aura, and counts as a living being. They are vulnerable to Essence Drain and can grow or heal Essence just like metahumans.
+* **Essence Growth:** Essence is not just what you are born with; it is who you are and what you become. Lost essence can be regained through Karma, roleplay, and character growth.
+* **Oil and Water:** Tech and magic are in contact, but they do not mix. No entity can *ever* possess both a Magic (MAG) and Resonance (RES) attribute simultaneously.
+* **Background Count (BC) & The Wild Edge:** The normal BC of Seattle fluctuates between 1–6 (GM rolls 1D6). When casting in a positive BC, you substitute a number of dice in your pool with **Wild Dice** equal to the BC level. You may also Overcast a spell by adding its Force up to the BC level, adding 1 to the Drain Value for every Force level above your MAG rating.
+
+---
+
+### IV. Spirits, Sprites, and Hybrid Entities
+
+With the veil parted, digital and astral entities interact in entirely new ways.
+
+* **Manifesting Sprites:** Sprites can physically manifest by swarming nanites into a dense ball, literally munching ambient physical matter to build a temporary shell. The smarter the Sprite, the harder it is for a Technomancer to control.
+* **Crystalline Spirits:** These ancient spirits of order transmute matter into "living crystal." They act as a magical "bootloader," allowing AIs to manifest a physical presence and an astral aura.
+* **Possession vs. Inhabitation:**
+* *Possession (The Joyride):* A spirit/entity takes temporary control of a host. The host’s original stats (including RES) are suppressed but not destroyed.
+* *Inhabitation (The Merger):* A permanent, violent merging creating a dual-natured hybrid. If a spirit Inhabits a Technomancer, the host’s Resonance stat is permanently destroyed (reduced to 0 due to the Oil and Water rule), though the spirit retains the host's physical skills.
+
+---
+
+### V. Character Creation Summary
+
+All characters build and advance using **Karma**.
+
+| Special Quality | Karma Cost | Primary Benefit |
+| --- | --- | --- |
+| **Magician** | 100 | Access to all magical skills; gains 2x MAG free spells. |
+| **Technomancer** | 80 | Access to Resonance; gains 2x RES Complex Forms. |
+| **Adept** | 75 | Free Power Points equal to MAG rating. |
+| **Aspected Magician** | 50 | Specialized focus; gains 3x MAG free spells. |
+| **Mystic Adept** | 150 | Blends Adept and Magician traits; gains 1x MAG free spells. |
+
+*(Note: Magic and Resonance both start at 0. You must buy one of these qualities at character generation to unlock the stat, which starts at Rating 1).*
+
 1. [Dice & Tests](#bookmark=id.x87h504b24hr)  
 2. [Character Creation & Advancement](#bookmark=id.kkav13e62x7p)  
 3. 
@@ -176,17 +244,17 @@ Every character hails from a different strain of metahumanity, referred to as th
 | Race | BOD | AGI | REA | STR | WIL | LOG | INT | CHA | EDG | Karma Cost | Traits |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Human | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 2 / 7 | 2 / 7 | 0 |  |
-| Centaur | 3 / 8 | 1 / 6 | 1 / 5 | 3 / 8 | 1 / 6 | 1 / 6 | 2 / 7 | 1 / 6 | 1 / 6 | 90 | *Low-Light Vision, Thermographic Vision, Magic Sense, Galloping Stride, Hooves, Big & Tall (3)* |
-| Dwarf | 3 / 8 | 1 / 6 | 1 / 5 | 3 / 8 | 2 / 7 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 100 | *Thermographic Vision, Toxin Resistance (2), Reach (-1)* |
-| Giant | 4 / 9 | 1 / 5 | 1 / 5 | 7 / 12 | 1 / 6 | 1 / 5 | 1 / 5 | 1 / 5 | 1 / 6 | 190 | *Built Tough (2), Reach (+3), Big & Tall (2)* |
-| Gnome | 1 / 4 | 2 / 7 | 1 / 6 | 1 / 4 | 2 / 7 | 2 / 7 | 1 / 6 | 1 / 6 | 1 / 6 | 60 | *Thermographic Vision, Arcane Arrester (4), Neoteny, Reach (-2)* |
-| Elf | 1 / 5 | 2 / 7 | 2 / 7 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 3 / 8 | 1 / 6 | 80 | *Low-Light Vision, Reach (+1)* |
-| Hobgoblin | 3 / 8 | 1 / 6 | 2 / 7 | 2 / 7 | 1 / 6 | 1 / 5 | 2 / 7 | 1 / 5 | 1 / 6 | 80 | *Low-Light Vision, Fangs, Keen-Eared, Poor Self Control (Vindictive)* |
-| Nocturna | 1 / 5 | 3 / 8 | 1 / 6 | 1 / 5 | 1 / 6 | 1 / 6 | 2 / 7 | 2 / 7 | 1 / 6 | 45 | *Night Vision, Keen-Eared, Allergy (Sunlight, Moderate), Nocturnal* |
-| Ogre | 4 / 9 | 1 / 6 | 1 / 5 | 3 / 8 | 2 / 7 | 1 / 6 | 1 / 6 | 1 / 4 | 1 / 6 | 110 | *Low-Light Vision, Built Tough (1), Ogre Stomach, Human-Looking* |
-| Ork | 4 / 9 | 1 / 6 | 1 / 6 | 3 / 8 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 100 | *Low-Light Vision, Built Tough (2), Reach (+1)* |
-| Troll | 5 / 10 | 1 / 6 | 1 / 5 | 5 / 10 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 200 | *Thermographic Vision, Built Tough (3), Dermal Deposits, Reach (+2), Big & Tall (1)* |
-| Satyr | 2 / 7 | 1 / 6 | 2 / 7 | 2 / 7 | 1 / 6 | 1 / 6 | 1 / 6 | 2 / 7 | 1 / 6 | 80 | *Low-Light Vision, Built Tough (1), Satyr Legs, Hooves* |
+| Centaur | 3 / 8 | 1 / 6 | 1 / 5 | 3 / 8 | 1 / 6 | 1 / 6 | 2 / 7 | 1 / 6 | 1 / 6 | 45 | *Low-Light Vision, Thermographic Vision, Magic Sense, Galloping Stride, Hooves, Big & Tall (3)* |
+| Dwarf | 3 / 8 | 1 / 6 | 1 / 5 | 3 / 8 | 2 / 7 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 40 | *Thermographic Vision, Toxin Resistance (2), Reach (-1)* |
+| Giant | 4 / 9 | 1 / 5 | 1 / 5 | 7 / 12 | 1 / 6 | 1 / 5 | 1 / 5 | 1 / 5 | 1 / 6 | 65 | *Built Tough (2), Reach (+3), Big & Tall (2)* |
+| Gnome | 1 / 4 | 2 / 7 | 1 / 6 | 1 / 4 | 2 / 7 | 2 / 7 | 1 / 6 | 1 / 6 | 1 / 6 | 10 | *Thermographic Vision, Arcane Arrester (4), Neoteny, Reach (-2)* |
+| Elf | 1 / 5 | 2 / 7 | 2 / 7 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 3 / 8 | 1 / 6 | 25 | *Low-Light Vision, Reach (+1)* |
+| Hobgoblin | 3 / 8 | 1 / 6 | 2 / 7 | 2 / 7 | 1 / 6 | 1 / 5 | 2 / 7 | 1 / 5 | 1 / 6 | 20 | *Low-Light Vision, Fangs, Keen-Eared, Poor Self Control (Vindictive)* |
+| Nocturna | 1 / 5 | 3 / 8 | 1 / 6 | 1 / 5 | 1 / 6 | 1 / 6 | 2 / 7 | 2 / 7 | 1 / 6 | -15 | *Night Vision, Keen-Eared, Allergy (Sunlight, Moderate), Nocturnal* |
+| Ogre | 4 / 9 | 1 / 6 | 1 / 5 | 3 / 8 | 2 / 7 | 1 / 6 | 1 / 6 | 1 / 4 | 1 / 6 | 30 | *Low-Light Vision, Built Tough (1), Ogre Stomach, Human-Looking* |
+| Ork | 4 / 9 | 1 / 6 | 1 / 6 | 3 / 8 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 75 | *Low-Light Vision, Built Tough (2), Reach (+1)* |
+| Troll | 5 / 10 | 1 / 6 | 1 / 5 | 5 / 10 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 1 / 6 | 125 | *Thermographic Vision, Built Tough (3), Dermal Deposits, Reach (+2), Big & Tall (1)* |
+| Satyr | 2 / 7 | 1 / 6 | 2 / 7 | 2 / 7 | 1 / 6 | 1 / 6 | 1 / 6 | 2 / 7 | 1 / 6 | 45 | *Low-Light Vision, Built Tough (1), Satyr Legs, Hooves* |
 
 **Skills:**
 
