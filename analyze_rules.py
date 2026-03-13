@@ -115,7 +115,7 @@ def analyze_weapons(text):
                 else:
                     print(f"  No outliers detected (Mean DV/Cost {mean_ratio:.5f})")
 
-with open("rules.md", "r") as f:
+with open("Fan made Shadowrun 7th Edition rules.md", "r") as f:
     text = f.read()
 
 analyze_qualities(text)
