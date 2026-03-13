@@ -2,6 +2,9 @@
 
 ## Section 1: Introduction & Themes
 
+> **GM Note: Stopgap Rules**
+> Until the complete "Fan made Shadowrun 7th Edition" homebrew ruleset is finalized, GMs are strongly advised to run the *Hollow Resonance* campaign using the standard Shadowrun 5th Edition rules. The custom 7E homebrew concepts should be used strictly for narrative flavor and worldbuilding rather than enforced mechanical systems.
+
 Welcome to Zkazena, the blighted city. This document serves as a comprehensive guide for Game Masters and writers looking to craft narratives within the fractured, neon-scorched world depicted in the *Hollow Resonance* novella. Here, you will find the philosophical underpinnings of the setting, detailed descriptions of the city both before and after its cataclysmic transformation, a breakdown of the major factions and supernatural threats, and advice on how to utilize key personas and plot hooks to build your own Shadowrun campaigns.
 
 Zkazena is a city defined by extremes. It is a place where ancient magic bleeds through the cracks of hyper-advanced corporate technology, where the line between life and death has been commodified, and where survival often demands terrible compromises. The narratives set here should reflect these harsh realities, exploring the resilience of those who call the ruins home and the monstrous entities that prey upon them.
