@@ -1,3 +1,4 @@
+import argparse
 import re
 
 def parse_int_or_float(val_str):
@@ -209,21 +210,52 @@ def balance_weapons(text):
     return text
 
 def main():
-    filepath = "Fan made Shadowrun 7th Edition rules.md"
+    parser = argparse.ArgumentParser(description="Balance Metatypes and Weapons in Shadowrun 7E Homebrew rules markdown.")
+    parser.add_argument(
+        "file",
+        nargs="?",
+        default="Fan made Shadowrun 7th Edition rules.md",
+        help="Path to the markdown file to balance (default: 'Fan made Shadowrun 7th Edition rules.md')"
+    )
+    parser.add_argument(
+        "--output",
+        "-o",
+        help="Path to save the balanced markdown file. If not provided, overwrites the input file."
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print the balancing operations without saving changes to any file."
+    )
+    args = parser.parse_args()
+
+    input_filepath = args.file
+    output_filepath = args.output if args.output else input_filepath
+
     try:
-        with open(filepath, 'r') as f:
+        with open(input_filepath, 'r') as f:
             text = f.read()
-
-        print("Starting balancing...")
-        text = balance_metatypes(text)
-        text = balance_weapons(text)
-
-        with open(filepath, 'w') as f:
-            f.write(text)
-
-        print("Balancing complete! The markdown file has been updated.")
+    except FileNotFoundError:
+        print(f"Error: File '{input_filepath}' not found.")
+        return
     except Exception as e:
-        print(f"Error occurred: {e}")
+        print(f"Error reading file '{input_filepath}': {e}")
+        return
+
+    print("Starting balancing...")
+    text = balance_metatypes(text)
+    text = balance_weapons(text)
+
+    if args.dry_run:
+        print("Dry run complete. No files were modified.")
+        return
+
+    try:
+        with open(output_filepath, 'w') as f:
+            f.write(text)
+        print(f"Balancing complete! The markdown file '{output_filepath}' has been updated.")
+    except Exception as e:
+        print(f"Error writing to file '{output_filepath}': {e}")
 
 if __name__ == "__main__":
     main()

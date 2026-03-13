@@ -1,3 +1,4 @@
+import argparse
 import re
 import statistics
 
@@ -115,13 +116,6 @@ def analyze_weapons(text):
                 else:
                     print(f"  No outliers detected (Mean DV/Cost {mean_ratio:.5f})")
 
-with open("Fan made Shadowrun 7th Edition rules.md", "r") as f:
-    text = f.read()
-
-analyze_qualities(text)
-analyze_weapons(text)
-
-
 def analyze_metatypes(text):
     print("\n=== Metatype Analysis ===")
 
@@ -149,4 +143,29 @@ def analyze_metatypes(text):
     for m in metatypes:
         print(f"  {m[0]}: {m[1]} Karma")
 
-analyze_metatypes(text)
+def main():
+    parser = argparse.ArgumentParser(description="Analyze Shadowrun 7E Homebrew rules markdown.")
+    parser.add_argument(
+        "file",
+        nargs="?",
+        default="Fan made Shadowrun 7th Edition rules.md",
+        help="Path to the markdown file to analyze (default: 'Fan made Shadowrun 7th Edition rules.md')"
+    )
+    args = parser.parse_args()
+
+    try:
+        with open(args.file, "r") as f:
+            text = f.read()
+    except FileNotFoundError:
+        print(f"Error: File '{args.file}' not found.")
+        return
+    except Exception as e:
+        print(f"Error reading file '{args.file}': {e}")
+        return
+
+    analyze_qualities(text)
+    analyze_weapons(text)
+    analyze_metatypes(text)
+
+if __name__ == "__main__":
+    main()

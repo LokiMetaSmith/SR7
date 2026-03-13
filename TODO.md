@@ -21,7 +21,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 **Goal:** Fix the automated balancing and generation scripts once the underlying Markdown document is stable.
 
-*   [ ] **Fix File Paths:** Update `analyze_rules.py` to target the actual filename (`Fan made Shadowrun 7th Edition rules.md`), ideally by accepting it as a CLI argument instead of hardcoding it.
+*   [x] **Fix File Paths:** Update `analyze_rules.py` to target the actual filename (`Fan made Shadowrun 7th Edition rules.md`), ideally by accepting it as a CLI argument instead of hardcoding it.
 *   [ ] **Rewrite Parsers:** Ditch the brittle regex approach in both `analyze_rules.py` and `balance_generator.py`.
     *   *Follow-up required:* Implement a proper Markdown parsing library (e.g., `markdown-it-py` or `mistune`) to reliably extract table data.
 *   [ ] **Refine Balancing Logic:** Update `balance_generator.py`.
