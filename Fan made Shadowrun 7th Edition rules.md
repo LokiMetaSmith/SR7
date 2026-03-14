@@ -764,11 +764,14 @@ Albino characters sunburn in half the normal time of direct unprotected sunlight
 
 **Allergy (Substance, Severity)** - 4 to 24 Karma
 The *Allergy* quality must be chosen with a specific substance and the severity of the allergy.  Different amounts of Karma are awarded for both how severe the allergy is and how common the allergen is.
-Allergen:		Karma:  
-**Common**		2  
-**Seasonal**		3  
-**Uncommon**	5  
-**Rare**		9  
+
+| Allergen | Karma |
+|---|---|
+| **Common** | 2 |
+| **Seasonal** | 3 |
+| **Uncommon** | 5 |
+| **Rare** | 9 |
+
 **(Mild)** - 2 Karma
 Characters experience discomfort and receive a -1 dice pool modifier to all Physical Tests.
 
@@ -850,10 +853,12 @@ Character may never have augmentations below betaware-grade.  Must have 1 Essenc
 
 **Day Job** - 5 to 15 Karma
 You have a real job, which requires a certain number of hours per week of work and provides a monthly paycheck.  Must have a *SINner* quality to take *Day Job*.
-Karma:	Salary:	Hours per Week:
-5	1000	10
-10	2500	20
-15	5000	40
+
+| Karma | Salary | Hours per Week |
+|---|---|---|
+| 5 | 1000 | 10 |
+| 10 | 2500 | 20 |
+| 15 | 5000 | 40 |
 
 **Dead Emotion** - 3 Karma
 Lack of one type of emotion, such as happiness, sadness, anger, or fear, from BTL abuse.
