@@ -1707,7 +1707,7 @@ To use a Reaction, a character must have the required Actions available, either 
 | **Ares Klapp MP** (9mm Para): The 'Klapp' (folding) is a discreet machine pistol designed for deep concealment. Its folding stock and compact profile make it a favorite for wetwork and undercover operations where space is at a premium. | *Folding Stock*. |
 | Ares Klapp MP | 4(5) | 5P | -1 | SA/BF/FA | 1 | Near | 30(dm) | 10(F) | 2.50 | 900¥ |
 | B\&T MP9 (6.5) | 5 | 4P | -6 | SA/BF/FA | 1(2) | Near | 25(dm) | 12(F) | 2.75 | 1,300¥ |
-| B\&T MP9 | (9mm) | 5 | 5P | -1 | SA/BF/FA | 1(2) | Near | 25(dm) | 6(F) | 2.75 | 500¥ |
+| B\&T MP9 (9mm) | 5 | 5P | -1 | SA/BF/FA | 1(2) | Near | 25(dm) | 6(F) | 2.75 | 500¥ |
 | Cavalier Arms Evanator | 5(6) | 2P | -2 | BF/FA | 1(2) | Near | 24(dm) | 8(R) | 2.25 | 775¥ |
 | Cavalier Arms Flash | 4(6) | 2P | -2 | SA/BF | – | Near | 24(dm) | 8(R) | 2.25 | 1,850¥ |
 | Ceska Black Scorpion | 5 | 3P | – | SA/BF | (1) | Near | 35(dm) | 8(R) | 3.00 | 850¥ |
