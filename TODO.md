@@ -13,7 +13,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
     *   *Follow-up required (Matrix):* Need design docs for Programs, Cyberdecks/Commlinks, IC, Host architecture, and Matrix actions (how do "Tethers" work in combat?).
     *   *Follow-up required (Rigging/Vehicles):* Need design docs for Drone stats, Vehicle modifications, Chase combat, and Jumped-in mechanics.
     *   *Follow-up required (General Equipment):* Need lists and costs for Armor, Cyberware/Bioware, Commlinks, and Lifestyle.
-*   [ ] **Define the Baseline Mechanics:** Clarify how "Wild Dice" and "Digital Essence" interact with standard gameplay loops.
+*   [x] **Define the Baseline Mechanics:** Clarify how "Wild Dice" and "Digital Essence" interact with standard gameplay loops.
 
 ---
 
