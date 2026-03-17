@@ -2904,3 +2904,168 @@ Following is a list of cartridges (some real world, some entirely made up for Sh
 | 20mm H | 20x110mm | 1610 | 870 | 0.762 | 39,450 |
 | 20mm HS | 20x139mm | - | - | - | - |
 | 8 gauge slug | 21.2x89mm | 1250 | 460 | 0.079 | 8569 |
+
+### I. MAGIC: The Awakened Gaiasphere
+Magic is volatile, reacting to the background count and the emotional resonance of the world.
+
+#### 1. Spellcasting & Drain Calculations
+Drain is resisted with Willpower + Tradition Attribute (Logic or Charisma).
+
+| Spell Category | Example Spell | Type | Range | Duration | Drain Calculation | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Combat | Manabolt | Mana | LOS | Instant | Force - 2 | Direct damage to target's soul. Resisted by ESS + WIL. |
+| Combat | Nanite Ball (Fireball) | Physical | LOS | Instant | Force | Ignites ambient grey goo. Resisted by BOD + Armor. AP = Force. |
+| Health | Heal | Mana | Touch | Permanent | Force - 4 | Heals Physical boxes equal to hits. Force must equal or exceed damage. |
+| Illusion | Improved Invisibility | Physical | LOS | Sustained | Force - 1 | Bends light and fools nanite-sensors. Resisted by INT + Logic. |
+| Manipulation | Control Actions | Mana | LOS | Sustained | Force | Puppets the target's physical body. Resisted by WIL + LOG. |
+
+#### 2. Adept Powers & Metamagic
+| Power / Metamagic | Type | Cost | Mechanical Effect |
+| :--- | :--- | :--- | :--- |
+| Improved Reflexes | Adept | 1.5 PP / Lvl | +1 Reaction, +1 Initiative Die (Max +3). |
+| Killing Hands | Adept | 0.5 PP | Unarmed attacks deal Physical damage and can bypass magical armor/astral forms. |
+| Centering | Metamagic | Initiation | Add Initiate Grade to Drain Resistance tests. |
+| Wild Channeling | Metamagic | Initiation | Allows the adept to voluntarily turn up to their Initiate Grade of dice into Wild Dice on combat tests. |
+
+#### 3. Ritual Spellcasting
+Rituals rely heavily on sympathetic links and the local Background Count.
+
+| Ritual Element | Rule / Mechanic |
+| :--- | :--- |
+| Material Link | A physical piece of the target (blood, hair) or deeply guarded personal data (SIN, true name). Degrades over time (-1 Die per week old). |
+| Teamwork | Leader rolls Ritual Spellcasting + MAG. Assistants add hits to the Leader's pool. |
+| Execution | Takes (Force) Hours. Wild Dice equal to the Background Count must be rolled. A Glitch causes the ritual to backfire, dealing Drain to all participants. |
+
+### II. MATRIX: The Nanite Grid
+Cold sim is dead. AR is limited. All real hacking is DNI Hot-Sim, putting your brain and soul on the line.
+
+#### 1. Cyberdecks & Commlinks
+| Device Type | Example Model | Device Rtg | A / S / D / F | Base Cost (¥) | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Commlink | MetaLink (Burner) | 1 | 0 / 0 / 1 / 1 | 100 | Basic AR interface. No DNI capability. |
+| Commlink | Hermes Ikon | 5 | 0 / 0 / 5 / 5 | 3,000 | High-end commlink. Can host basic DNI but cannot hack. |
+| Bio-Deck | Renraku "Shinobi" | 3 | 5 / 4 / 3 / 2 | 45,000 | Entry-level hot-sim deck. Configurable Array. |
+| Bio-Deck | Fairlight Paladin | 6 | 8 / 7 / 6 / 6 | 150,000 | Military-grade. Interfaces directly with gaiasphere anomalies. |
+
+#### 2. Matrix Actions & Tethers in Combat
+Tethers replace Marks. They are two-way sympathetic soul-links.
+
+| Matrix Action | Opposed Test | Tether Req. | Effect & Combat Mechanics |
+| :--- | :--- | :--- | :--- |
+| Establish Tether (Hack on the Fly) | LOG + Hacking vs. WIL + Firewall | None | Creates 1 Tether. You gain +1 Die on all future actions against the target per Tether. |
+| Data Spike | LOG + Cybercombat vs. INT + Firewall | None | Deals (Attack Rtg + Net Hits + 2 per Tether) Matrix Damage. |
+| Puppet Nanites (Control Device) | LOG + Electronic Warfare vs. WIL + Firewall | 1 to 3 | Take control of a device/drone. Requires 1 Tether for Free actions, 2 for Simple, 3 for Major. |
+| Glitches & Tethers | Passive Consequence | N/A | If you Glitch on any Matrix Action while you hold a Tether on a target, the target gets a free blast of Biofeedback against you (Damage = target's Firewall, resisted by WIL). |
+
+#### 3. Hosts & IC (Immune Responses)
+| Entity | Concept in the 6th World | Mechanics |
+| :--- | :--- | :--- |
+| Host | Localized Nanite Hive | Hosts do not have fixed grids; they are tied to physical locations or ley lines. Ratings 1-12. |
+| Patrol IC | "White Blood Cells" | Rolls Host Rtg x 2 to spot intruders. Does not attack, but alerts the Hive. |
+| G.O.D. Manifestation | "The Antibody" | Summoned immediately if a hacker rolls a 1 on a Wild Die. Manifests as an angry, dual-natured Sprite/Spirit. |
+
+### III. RIGGING & VEHICLES: The Ghost in the Shell
+Vehicles and drones are saturated with grey goo. Rigging is a deep, instinctual merge with the machine's pseudo-Essence.
+
+#### 1. Drone & Vehicle Stats
+| Vehicle/Drone | Type | Hand/Speed | Accel | BOD | ARM | SENS | Cost (¥) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| MCT Fly-Spy | Micro-Drone | 4 / 3 | 2 | 1 | 0 | 3 | 2,000 |
+| Ares Duelist | Combat Drone | 3 / 3 | 2 | 4 | 4 | 3 | 4,500 |
+| Ford Americar | Sedan | 4 / 4 | 2 | 11 | 6 | 2 | 16,000 |
+| GMC Banshee | T-Bird / LAV | 5 / 8 | 4 | 16 | 18 | 5 | 250,000 |
+
+#### 2. Jumped-In Mechanics & Chase Combat
+| Mechanic | Rule / Application |
+| :--- | :--- |
+| Control Rig Integration | Rating 1-3. Jumping in acts as DNI Hot-Sim. The Rigger adds their Control Rig rating to all vehicle action Dice Pools and reduces all Thresholds by the Rig rating (minimum 1). |
+| Bio-Feedback | Because the vehicle is nanite-infused, it has a pseudo-Essence. If the vehicle takes physical damage, the rigger must resist half that damage (rounded down) as Stun Biofeedback (Resist with WIL + BOD). |
+| Chase Combat | Opposed Pilot + Reaction tests. Net hits determine range bands (Close, Short, Medium, Long, Extreme). Drivers can spend Complex actions to attempt maneuvers (Cut Off, Ram, Evade). |
+
+### IV. GENERAL EQUIPMENT & LIFESTYLE
+Tech is advanced, but biological purity (Essence) is heavily commodified.
+
+#### 1. Augmentations (Cyberware & Bioware)
+Losing >2 Essence risks the "Augmentation Addict" Negative Quality.
+
+| Augmentation | Type | Essence | Cost (¥) | Effect |
+| :--- | :--- | :--- | :--- | :--- |
+| Datajack | Cyber | 0.1 | 1,000 | Provides DNI. Required for all Hot-Sim/Matrix active skills. |
+| Wired Reflexes I | Cyber | 2.0 | 39,000 | +1 Reaction, +1 Initiative Die. Cannot stack with Adept Powers. |
+| Muscle Replacement (Rtg 1-4) | Cyber | 1.0 / Lvl | 25,000 / Lvl | +1 STR and +1 AGI per rating level. |
+| Synaptic Booster I | Bio | 0.5 | 95,000 | +1 Reaction, +1 Initiative Die. Lower Essence cost, highly illegal. |
+| Leónization | Genetic | 0.0 | 2,500,000 | Anti-aging treatment. Resets physical age to prime, but introduces long-term spontaneous cellular degeneration risks. |
+
+#### 2. Armor & Weapons
+| Item | Type | Rating / Stats | Capacity | Cost (¥) | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Armor Jacket | Armor | 12 | 10 | 1,000 | Standard runner gear. Highly customizable. |
+| Ares Predator V | Heavy Pistol | Dam: 8P, AP: -1 | — | 725 | Includes built-in Smartlink (requires DNI to use). |
+| Defiance T-250 | Shotgun | Dam: 10P, AP: -1 | — | 450 | Devastating in close quarters. |
+
+#### 3. Lifestyles (Monthly Upkeep)
+| Lifestyle | Monthly Cost (¥) | Description & Mechanics |
+| :--- | :--- | :--- |
+| Street / Squatter | 0 / 500 | Sleeping in the gutters or an abandoned, unheated building. Healing times are doubled. |
+| Low | 2,000 | Crappy apartment, soy-paste meals. Matrix connection is spotty (frequent Background Noise penalties). |
+| Middle | 5,000 | Safe, secure, decent food. Standard existence. |
+| High | 10,000 | Luxury condo, real meat, clean air. Gain +1 Die on all downtime healing tests. |
+
+### V. THE "WEIRD AF" WORLD: BTLs & Manifestations
+The grey goo didn't just change the Matrix; it changed how digital information interacts with the physical world. The new street craze isn't just experiencing a BTL (Better-Than-Life) chip in your head—it's letting it out.
+
+#### 1. "Manifestation" BTL Chips (The Fuchsia Dragon)
+These highly illegal, experimental BTLs utilize the ambient nanites in the user's body and environment to physically project or temporarily transform the user.
+
+| BTL Type | Mechanic / Rule | Side Effects (Glitch / Overuse) |
+| :--- | :--- | :--- |
+| Holo-Manifest BTL (e.g., "Johnny Cash") | The chip overrides the user's AR signature and manipulates ambient nanites to create a flawless, hard-light physical disguise. Mechanic: Grants +4 Dice to Disguise/Performance. | Essence Burn: User must resist 4 Stun (WIL + BOD). A Glitch causes the persona's memories to bleed into the user's, causing temporary amnesia of their true self. |
+| Physical Override BTL (e.g., "Fuchsia Dragon") | A localized Possession by a dormant Matrix Sprite. The nanites violently restructure the user's outer epidermis. Mechanic: +3 STR, +3 BOD, Unarmed attacks deal +2 Physical Damage and have Reach. Lasts (Essence) minutes. | The Abomination Risk: If the user takes Physical damage exceeding their Willpower while transformed, the Sprite takes permanent control (Inhabitation). They become a feral, dual-natured shock-troop NPC. |
+
+#### 2. Specialized Entities & NPCs
+Your homebrew heavily features unique Awakened/Digital beings. Here is how to stat and run them:
+
+| Entity Type | Example / Concept | Rules & Mechanics |
+| :--- | :--- | :--- |
+| Crystalline Spirit | Ancient beings of order. | The Bootloader: These spirits can cast a unique ritual that takes 1 hour. It transmutes physical matter into "Living Crystal," creating a permanent physical vessel for a bodiless AI, granting the AI an Astral Aura. |
+| Spirit of Man | (Ennis) A spirit guiding AIs to "Awaken." | Manifestation: Appears human (often reading AR news). Can interact with the nanite-Matrix organically without DNI. Can grant wild dice to AIs or Sprites making Matrix/Resonance tests. |
+| Ascended AI | (Sam) Born from appliances, forged in Bug City. | Overkill Protocol: If Sam acts in combat, he automatically uses Wild Dice for all weapon attacks. If crossed, he ignores collateral damage. Has an Essence of 6 and a massive physical drone body. |
+
+### VI. COMBAT & WEAPONRY (D6 System Integration)
+Guns are loud, lethal, and in the 6th world, often smart-linked to a DNI that can be hacked if you aren't careful.
+
+#### 1. Ranged Weapons
+Attack Roll: Agility + Firearms. Defense Roll: Reaction + Intuition.
+
+| Weapon | Type | Damage | AP | Ammo | Notes / Features |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Streetline Special | Hold-out | 6P | +1 | 6 (c) | Easily concealed. -2 to opponent's Perception to spot. |
+| Colt Government 2066 | Heavy Pistol | 8P | -1 | 14 (c) | Reliable. Built-in basic smartlink. |
+| HK-227 | SMG | 7P | 0 | 28 (c) | Can fire in Burst Fire (BF) mode (reduces defender's pool by 2). |
+| Ares Alpha | Assault Rifle | 11P | -2 | 42 (c) | Full Auto (FA) capable (reduces defender's pool by 4). Underbarrel grenade launcher. |
+| Ranger Arms SM-5 | Sniper | 14P | -4 | 6 (m) | Extreme range. Requires Aim action to use full AP. |
+
+#### 2. Ammo Types & Modifications
+| Ammo Type | Cost Multiplier | Effect on Damage / AP | Special Rules |
+| :--- | :--- | :--- | :--- |
+| Standard | x1 | Base | Base |
+| Armor Piercing (APDS) | x4 | - | AP -4 |
+| Explosive (EX) | x2 | +1 Damage | AP -1 |
+| Gel / Stick-n-Shock | x1.5 | -2 Damage (Stun) | AP +2 |
+| Nanite-Buster (Grey Goo) | x10 | +2 Damage | AP -2 |
+
+### VII. HEALING & DOWNTIME
+Because Essence is tied to your soul and the nanite-environment, healing is both biological and spiritual.
+
+| Healing Type | Mechanic | Timeframe / Interval |
+| :--- | :--- | :--- |
+| First Aid (Physical/Stun) | Roll Logic + Biotech. Net hits heal boxes of damage. | 1 Combat Turn (Complex Action). Cannot heal magical Drain. |
+| Natural Recovery (Stun) | Roll Body + Willpower. 1 Hit = 1 Box healed. | 1 Hour interval. |
+| Natural Recovery (Physical) | Roll Body x 2. 1 Hit = 1 Box healed. | 1 Day interval. (Double time if living on Street lifestyle). |
+| Essence Therapy | Roll Charisma + Psychology (Threshold 4). Success restores 0.1 lost Essence (from trauma, not cyberware). | 1 Month interval. Costs 5,000¥ in therapy/retreat fees. |
+
+### Summary of the "Weird AF" Vibe Check for the GM
+When running this merged ruleset, keep the following in mind:
+*   **The Matrix is Everywhere**: Do not ask if something is connected to the Matrix; ask how deeply. A puddle of water can theoretically be used to relay a signal if a Technomancer pushes hard enough.
+*   **Magic is Unpredictable**: Play up the Background Count. If the runners are in a corporate sterile zone, the mana void should feel suffocating. If they are in a feral, overgrown urban ruin, the Wild Dice should be flying constantly.
+*   **Identity is Fluid**: With AIs having Essence, BTLs manifesting physically, and spirits turning data into crystal, the central theme of your campaign is: "What does it mean to be alive?" Reward players (with Karma or Edge) for engaging with NPCs like Sam and Ennis on an emotional, philosophical level.
