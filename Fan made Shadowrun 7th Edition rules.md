@@ -35,7 +35,7 @@ The Matrix is no longer separate from reality; it is a nanite-infused environmen
 
 Consciousness equals a soul. The line between flesh and data is permanently blurred, but Tech and Magic still ruthlessly repel each other.
 
-* **Digital Essence (Turing 1, Searle 0):** Any AI, Sprite, or Matrix entity complex enough to possess a self-directed persona has an **Essence of 6**, an Aura, and counts as a living being. They are vulnerable to Essence Drain and can grow or heal Essence just like metahumans.
+* **Digital Essence (Turing 1, Searle 0):** Any AI, Sprite, or Matrix entity complex enough to possess a self-directed persona has an **Essence of 6**, an Aura, and counts as a living being. They are vulnerable to Essence Drain and can grow or heal Essence just like metahumans. Digital Essence acts exactly like metahuman Essence for the purposes of social interaction and determining the entity's baseline willpower. Should a digital entity lose Essence (e.g. through traumatic data loss or being subjected to Essence Drain), they suffer penalties to their mental attributes and social tests, reflecting their fading identity. Losing all 6 Essence means the entity has been reduced to mindless, fragmented code and is destroyed.
 * **Essence Growth:** Essence is not just what you are born with; it is who you are and what you become. Lost essence can be regained through Karma, roleplay, and character growth.
 * **Oil and Water:** Tech and magic are in contact, but they do not mix. No entity can *ever* possess both a Magic (MAG) and Resonance (RES) attribute simultaneously.
 * **Background Count (BC) & The Wild Edge:** The normal BC of Seattle fluctuates between 1–6 (GM rolls 1D6). When casting in a positive BC, you substitute a number of dice in your pool with **Wild Dice** equal to the BC level. You may also Overcast a spell by adding its Force up to the BC level, adding 1 to the Drain Value for every Force level above your MAG rating.
@@ -153,6 +153,8 @@ When various Spells, gear, or Edge Abilities grant it, dice rolled may be subjec
 **Wild Dice:**
 
 Similar to the rule of six, various situations may result in the use of **Wild Dice**.  These are special dice, denoted by a different color, that are used in addition to or in place of the regular dice.  Wild Dice function the same as other dice; a roll of 1 is a miss and counts for a glitch, while 5’s and 6’s are hits.  Where they differ from normal dice is that a roll of 6 “explodes” into 3 hits instead of 1 hit, and a result of 1 on any rolled Wild Die negates all 5’s rolled, including normal dice, counting them as a miss instead of a hit.
+
+*Example:* A character rolls a dice pool of 5 dice, which includes 2 Wild Dice. They roll 2, 5, 5 on their normal dice, and a 6 and a 1 on their Wild Dice. The 6 on the Wild Die counts as 3 hits. However, the 1 on the other Wild Die cancels out the two 5s rolled on the normal dice. The final result of the test is 3 hits (from the 6 on the Wild Die). If the player had also rolled a 6 on a normal die, that hit would not be canceled by the 1 on the Wild Die, resulting in 4 hits total.
 
 | Thresholds (Success Tests) | Thresholds (Extended Tests) | Intervals |
 |---|---|---|
