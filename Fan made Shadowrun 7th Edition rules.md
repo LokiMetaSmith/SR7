@@ -2905,8 +2905,6 @@ Following is a list of cartridges (some real world, some entirely made up for Sh
 | 20mm HS | 20x139mm | - | - | - | - |
 | 8 gauge slug | 21.2x89mm | 1250 | 460 | 0.079 | 8569 |
 
----
-
 ### I. MAGIC: The Awakened Gaiasphere
 Magic is volatile, reacting to the background count and the emotional resonance of the world.
 
@@ -2922,7 +2920,6 @@ Drain is resisted with Willpower + Tradition Attribute (Logic or Charisma).
 | Manipulation | Control Actions | Mana | LOS | Sustained | Force | Puppets the target's physical body. Resisted by WIL + LOG. |
 
 #### 2. Adept Powers & Metamagic
-
 | Power / Metamagic | Type | Cost | Mechanical Effect |
 | :--- | :--- | :--- | :--- |
 | Improved Reflexes | Adept | 1.5 PP / Lvl | +1 Reaction, +1 Initiative Die (Max +3). |
@@ -2943,7 +2940,6 @@ Rituals rely heavily on sympathetic links and the local Background Count.
 Cold sim is dead. AR is limited. All real hacking is DNI Hot-Sim, putting your brain and soul on the line.
 
 #### 1. Cyberdecks & Commlinks
-
 | Device Type | Example Model | Device Rtg | A / S / D / F | Base Cost (¥) | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Commlink | MetaLink (Burner) | 1 | 0 / 0 / 1 / 1 | 100 | Basic AR interface. No DNI capability. |
@@ -2962,7 +2958,6 @@ Tethers replace Marks. They are two-way sympathetic soul-links.
 | Glitches & Tethers | Passive Consequence | N/A | If you Glitch on any Matrix Action while you hold a Tether on a target, the target gets a free blast of Biofeedback against you (Damage = target's Firewall, resisted by WIL). |
 
 #### 3. Hosts & IC (Immune Responses)
-
 | Entity | Concept in the 6th World | Mechanics |
 | :--- | :--- | :--- |
 | Host | Localized Nanite Hive | Hosts do not have fixed grids; they are tied to physical locations or ley lines. Ratings 1-12. |
@@ -2973,16 +2968,14 @@ Tethers replace Marks. They are two-way sympathetic soul-links.
 Vehicles and drones are saturated with grey goo. Rigging is a deep, instinctual merge with the machine's pseudo-Essence.
 
 #### 1. Drone & Vehicle Stats
-
 | Vehicle/Drone | Type | Hand/Speed | Accel | BOD | ARM | SENS | Cost (¥) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | MCT Fly-Spy | Micro-Drone | 4 / 3 | 2 | 1 | 0 | 3 | 2,000 |
-| Ares Duelist | Combat Drone | 3 / 3 | 2 | 4 | 4 | 3 | 34,500 |
+| Ares Duelist | Combat Drone | 3 / 3 | 2 | 4 | 4 | 3 | 4,500 |
 | Ford Americar | Sedan | 4 / 4 | 2 | 11 | 6 | 2 | 16,000 |
 | GMC Banshee | T-Bird / LAV | 5 / 8 | 4 | 16 | 18 | 5 | 250,000 |
 
 #### 2. Jumped-In Mechanics & Chase Combat
-
 | Mechanic | Rule / Application |
 | :--- | :--- |
 | Control Rig Integration | Rating 1-3. Jumping in acts as DNI Hot-Sim. The Rigger adds their Control Rig rating to all vehicle action Dice Pools and reduces all Thresholds by the Rig rating (minimum 1). |
@@ -3004,7 +2997,6 @@ Losing >2 Essence risks the "Augmentation Addict" Negative Quality.
 | Leónization | Genetic | 0.0 | 2,500,000 | Anti-aging treatment. Resets physical age to prime, but introduces long-term spontaneous cellular degeneration risks. |
 
 #### 2. Armor & Weapons
-
 | Item | Type | Rating / Stats | Capacity | Cost (¥) | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Armor Jacket | Armor | 12 | 10 | 1,000 | Standard runner gear. Highly customizable. |
@@ -3012,7 +3004,6 @@ Losing >2 Essence risks the "Augmentation Addict" Negative Quality.
 | Defiance T-250 | Shotgun | Dam: 10P, AP: -1 | — | 450 | Devastating in close quarters. |
 
 #### 3. Lifestyles (Monthly Upkeep)
-
 | Lifestyle | Monthly Cost (¥) | Description & Mechanics |
 | :--- | :--- | :--- |
 | Street / Squatter | 0 / 500 | Sleeping in the gutters or an abandoned, unheated building. Healing times are doubled. |
@@ -3037,8 +3028,8 @@ Your homebrew heavily features unique Awakened/Digital beings. Here is how to st
 | Entity Type | Example / Concept | Rules & Mechanics |
 | :--- | :--- | :--- |
 | Crystalline Spirit | Ancient beings of order. | The Bootloader: These spirits can cast a unique ritual that takes 1 hour. It transmutes physical matter into "Living Crystal," creating a permanent physical vessel for a bodiless AI, granting the AI an Astral Aura. |
-| Spirit of Man (Ennis) | A spirit guiding AIs to "Awaken." | Manifestation: Appears human (often reading AR news). Can interact with the nanite-Matrix organically without DNI. Can grant wild dice to AIs or Sprites making Matrix/Resonance tests. |
-| Ascended AI (Sam) | Born from appliances, forged in Bug City. | Overkill Protocol: If Sam acts in combat, he automatically uses Wild Dice for all weapon attacks. If crossed, he ignores collateral damage. Has an Essence of 6 and a massive physical drone body. |
+| Spirit of Man | (Ennis) A spirit guiding AIs to "Awaken." | Manifestation: Appears human (often reading AR news). Can interact with the nanite-Matrix organically without DNI. Can grant wild dice to AIs or Sprites making Matrix/Resonance tests. |
+| Ascended AI | (Sam) Born from appliances, forged in Bug City. | Overkill Protocol: If Sam acts in combat, he automatically uses Wild Dice for all weapon attacks. If crossed, he ignores collateral damage. Has an Essence of 6 and a massive physical drone body. |
 
 ### VI. COMBAT & WEAPONRY (D6 System Integration)
 Guns are loud, lethal, and in the 6th world, often smart-linked to a DNI that can be hacked if you aren't careful.
@@ -3055,7 +3046,6 @@ Attack Roll: Agility + Firearms. Defense Roll: Reaction + Intuition.
 | Ranger Arms SM-5 | Sniper | 14P | -4 | 6 (m) | Extreme range. Requires Aim action to use full AP. |
 
 #### 2. Ammo Types & Modifications
-
 | Ammo Type | Cost Multiplier | Effect on Damage / AP | Special Rules |
 | :--- | :--- | :--- | :--- |
 | Standard | x1 | Base | Base |
@@ -3076,6 +3066,6 @@ Because Essence is tied to your soul and the nanite-environment, healing is both
 
 ### Summary of the "Weird AF" Vibe Check for the GM
 When running this merged ruleset, keep the following in mind:
-* **The Matrix is Everywhere:** Do not ask if something is connected to the Matrix; ask how deeply. A puddle of water can theoretically be used to relay a signal if a Technomancer pushes hard enough.
-* **Magic is Unpredictable:** Play up the Background Count. If the runners are in a corporate sterile zone, the mana void should feel suffocating. If they are in a feral, overgrown urban ruin, the Wild Dice should be flying constantly.
-* **Identity is Fluid:** With AIs having Essence, BTLs manifesting physically, and spirits turning data into crystal, the central theme of your campaign is: "What does it mean to be alive?" Reward players (with Karma or Edge) for engaging with NPCs like Sam and Ennis on an emotional, philosophical level.
+*   **The Matrix is Everywhere**: Do not ask if something is connected to the Matrix; ask how deeply. A puddle of water can theoretically be used to relay a signal if a Technomancer pushes hard enough.
+*   **Magic is Unpredictable**: Play up the Background Count. If the runners are in a corporate sterile zone, the mana void should feel suffocating. If they are in a feral, overgrown urban ruin, the Wild Dice should be flying constantly.
+*   **Identity is Fluid**: With AIs having Essence, BTLs manifesting physically, and spirits turning data into crystal, the central theme of your campaign is: "What does it mean to be alive?" Reward players (with Karma or Edge) for engaging with NPCs like Sam and Ennis on an emotional, philosophical level.
