@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <chummer>
   <qualities>
     <quality>
@@ -6,96 +6,112 @@
       <name>Acrobatic Defender</name>
       <karma>4</karma>
       <tags>Defensive Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_adept_healer</id>
       <name>Adept Healer</name>
       <karma>10</karma>
       <tags>Adept, Healing, Magic Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_adrenaline_surge</id>
       <name>Adrenaline Surge</name>
       <karma>12</karma>
       <tags>Combat, Initiative Quality</tags>
+      <bp>12</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_agile_defender</id>
       <name>Agile Defender</name>
       <karma>3</karma>
       <tags>Defensive Quality</tags>
+      <bp>3</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_alibi</id>
       <name>Alibi</name>
       <karma>6</karma>
       <tags>Social Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_ambidextrous</id>
       <name>Ambidextrous</name>
       <karma>6</karma>
       <tags>Combat Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_analytical_mind</id>
       <name>Analytical Mind</name>
       <karma>5</karma>
       <tags>Matrix, Mental Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_animal_empathy</id>
       <name>Animal Empathy</name>
       <karma>6</karma>
       <tags>Magic, Social Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_aptitude_(skill)</id>
       <name>Aptitude (Skill)</name>
       <karma>15</karma>
       <tags>Skill Quality</tags>
+      <bp>15</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_apt_pupil</id>
       <name>Apt Pupil</name>
       <karma>12</karma>
       <tags>Knowledge, Magic Quality</tags>
+      <bp>12</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_arcane_arrester</id>
       <name>Arcane Arrester</name>
       <karma>0</karma>
       <tags>Gnome Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_arcane_bodyguard</id>
       <name>Arcane Bodyguard</name>
       <karma>20</karma>
       <tags>Defensive, Magic Quality</tags>
+      <bp>20</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_arcane_improviser</id>
       <name>Arcane Improviser</name>
       <karma>5</karma>
       <tags>Magic Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_astral_chameleon</id>
       <name>Astral Chameleon</name>
       <karma>9</karma>
       <tags>Magic Quality</tags>
+      <bp>9</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_barehanded_adept</id>
       <name>Barehanded Adept</name>
       <karma>12</karma>
       <tags>Adept, Combat, Magic Quality</tags>
+      <bp>12</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_barrens_rat</id>
       <name>Barrens Rat</name>
       <karma>4</karma>
       <tags>Stealth Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_battle_hardened</id>
@@ -108,102 +124,119 @@
       <name>Better to be Feared than Loved</name>
       <karma>5</karma>
       <tags>Social Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_bilingual</id>
       <name>Bilingual</name>
       <karma>2</karma>
       <tags>Knowledge Quality</tags>
+      <bp>2</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_biocompatibility</id>
       <name>Biocompatibility</name>
       <karma>8</karma>
       <tags>‘Ware Quality</tags>
+      <bp>8</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_black_market_pipeline**_**(contact,_merchandise)</id>
       <name>Black Market Pipeline** **(Contact, Merchandise)</name>
       <karma>10</karma>
       <tags>Gear, Social Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_blandness</id>
       <name>Blandness</name>
       <karma>7</karma>
       <tags>Social, Stealth Quality</tags>
+      <bp>7</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_blood_magic_resistance</id>
       <name>Blood Magic Resistance</name>
       <karma>10</karma>
       <tags>Defensive, Magic Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_born_rich</id>
       <name>Born Rich</name>
       <karma>10</karma>
       <tags>Gear Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_built_tough</id>
       <name>Built Tough</name>
       <karma>0</karma>
       <tags>Giant, Ogre, Ork, Physical, Troll, Satyr Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_catlike</id>
       <name>Catlike</name>
       <karma>8</karma>
       <tags>Stealth Quality</tags>
+      <bp>8</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_closer</id>
       <name>Closer</name>
       <karma>6</karma>
       <tags>Social Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_codeslinger</id>
       <name>Codeslinger</name>
       <karma>10</karma>
       <tags>Matrix Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_college_education</id>
       <name>College Education</name>
       <karma>4</karma>
       <tags>Knowledge, Skill Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_common_sense</id>
       <name>Common Sense</name>
       <karma>7</karma>
       <tags>Meta Quality</tags>
+      <bp>7</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_community_connection</id>
       <name>Community Connection</name>
       <karma>0</karma>
       <tags>Ork, Troll Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_cyber_singularity_seeker</id>
       <name>Cyber Singularity Seeker</name>
       <karma>9</karma>
       <tags>Mental, ‘Ware Quality</tags>
+      <bp>9</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_daredevil</id>
       <name>Daredevil</name>
       <karma>8</karma>
       <tags>Meta Quality</tags>
+      <bp>8</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_data_anomaly</id>
       <name>Data Anomaly</name>
       <karma>3</karma>
       <tags>Matrix Quality</tags>
+      <bp>3</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_death_dealer</id>
@@ -216,72 +249,84 @@
       <name>Dedicated Conjurer</name>
       <karma>10</karma>
       <tags>Magic Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_dedicated_spellslinger</id>
       <name>Dedicated Spellslinger</name>
       <karma>10</karma>
       <tags>Knowledge, Magic Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_dermal_deposits</id>
       <name>Dermal Deposits</name>
       <karma>0</karma>
       <tags>Troll Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_double_jointed</id>
       <name>Double Jointed</name>
       <karma>4</karma>
       <tags>Physical, Stealth Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_drug_tolerant</id>
       <name>Drug Tolerant</name>
       <karma>6</karma>
       <tags>Mental, Physical Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_empathic_listener</id>
       <name>Empathic Listener</name>
       <karma>3</karma>
       <tags>Social Quality</tags>
+      <bp>3</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_erased</id>
       <name>Erased</name>
       <karma>16</karma>
       <tags>Matrix, Meta, Social Quality</tags>
+      <bp>16</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_exceptional_attribute</id>
       <name>Exceptional Attribute</name>
       <karma>14</karma>
       <tags>Mental, Meta, Physical Quality</tags>
+      <bp>14</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_fame</id>
       <name>Fame</name>
       <karma>5</karma>
       <tags>Meta Quality</tags>
+      <bp>5 to 15</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_fangs</id>
       <name>Fangs</name>
       <karma>0</karma>
       <tags>Hobgoblin Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_fashion_influencer</id>
       <name>Fashion Influencer</name>
       <karma>5</karma>
       <tags>Social Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_first_impression</id>
       <name>First Impression</name>
       <karma>6</karma>
       <tags>Social Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_focused_concentration</id>
@@ -294,48 +339,56 @@
       <name>Friends in High Places</name>
       <karma>10</karma>
       <tags>Meta, Social Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_galloping_stride</id>
       <name>Galloping Stride</name>
       <karma>0</karma>
       <tags>Centaur Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_gearhead</id>
       <name>Gearhead</name>
       <karma>5</karma>
       <tags>Rigger Quality</tags>
+      <bp>5 or 10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_grease_monkey</id>
       <name>Grease Monkey</name>
       <karma>8</karma>
       <tags>Rigger Quality</tags>
+      <bp>8</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_guts</id>
       <name>Guts</name>
       <karma>10</karma>
       <tags>Mental Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_hair_trigger</id>
       <name>Hair Trigger</name>
       <karma>3</karma>
       <tags>Matrix, Rigger Quality</tags>
+      <bp>3 or 5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_hawk_eye</id>
       <name>Hawk Eye</name>
       <karma>5</karma>
       <tags>Combat, Physical Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_healer</id>
       <name>Healer</name>
       <karma>10</karma>
       <tags>Healing, Magic Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_high_pain_tolerance</id>
@@ -348,108 +401,126 @@
       <name>Hi-Rez</name>
       <karma>6</karma>
       <tags>Technomancer Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_home_ground</id>
       <name>Home Ground</name>
       <karma>10</karma>
       <tags>Meta Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_honest_face</id>
       <name>Honest Face</name>
       <karma>5</karma>
       <tags>Mental, Social Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_hooves</id>
       <name>Hooves</name>
       <karma>0</karma>
       <tags>Centaur, Satyr Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_human_2.0</id>
       <name>Human 2.0</name>
       <karma>25</karma>
       <tags>Meta Quality</tags>
+      <bp>25</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_human_looking</id>
       <name>Human-Looking</name>
       <karma>5</karma>
       <tags>Meta, Physical, Ogre Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_impenetrable_logic</id>
       <name>Impenetrable Logic</name>
       <karma>4</karma>
       <tags>Matrix, Mental Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_inspired</id>
       <name>Inspired</name>
       <karma>3</karma>
       <tags>Meta Quality</tags>
+      <bp>3</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_jack_of_all_trades</id>
       <name>Jack of all Trades</name>
       <karma>12</karma>
       <tags>Meta, Skill Quality</tags>
+      <bp>12</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_juryrigger</id>
       <name>Juryrigger</name>
       <karma>10</karma>
       <tags>Matrix, Meta, Rigger Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_keen_eared</id>
       <name>Keen-Eared</name>
       <karma>3</karma>
       <tags>Hobgoblin, Meta, Nocturna Quality</tags>
+      <bp>3</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_lightning_reflexes</id>
       <name>Lightning Reflexes</name>
       <karma>15</karma>
       <tags>Initiative Quality</tags>
+      <bp>15</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_linguist</id>
       <name>Linguist</name>
       <karma>6</karma>
       <tags>Knowledge, Meta, Skill Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_logical_debater</id>
       <name>Logical Debater</name>
       <karma>4</karma>
       <tags>Mental, Social Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_long_reach</id>
       <name>Long Reach</name>
       <karma>8</karma>
       <tags>Combat, Physical Quality</tags>
+      <bp>8</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_low_light_vision</id>
       <name>Low-Light Vision</name>
       <karma>0</karma>
       <tags>Centaur, Elf, Hobgoblin, Nocturna, Ogre, Ork, Satyr Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_lucky</id>
       <name>Lucky</name>
       <karma>13</karma>
       <tags>Meta Quality</tags>
+      <bp>13</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_made_man</id>
       <name>Made Man</name>
       <karma>5</karma>
       <tags>Meta, Social Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_magic_resistance</id>
@@ -462,108 +533,126 @@
       <name>Magic Sense</name>
       <karma>5</karma>
       <tags>Magic, Meta Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_massive_networker</id>
       <name>Massive Networker</name>
       <karma>20</karma>
       <tags>Meta, Social Quality</tags>
+      <bp>20</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_mentor_spirit</id>
       <name>Mentor Spirit</name>
       <karma>5</karma>
       <tags>Magic Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_missile_deflector</id>
       <name>Missile Deflector</name>
       <karma>10</karma>
       <tags>Adept Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_murky_link</id>
       <name>Murky Link</name>
       <karma>6</karma>
       <tags>Defensive, Magic Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_natural_athlete</id>
       <name>Natural Athlete</name>
       <karma>8</karma>
       <tags>Physical Quality</tags>
+      <bp>8</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_natural_hardening</id>
       <name>Natural Hardening</name>
       <karma>10</karma>
       <tags>Defensive, Matrix Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_natural_immunity</id>
       <name>Natural Immunity</name>
       <karma>4</karma>
       <tags>Defensive, Physical Quality</tags>
+      <bp>4 or 8</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_natural_leader</id>
       <name>Natural Leader</name>
       <karma>5</karma>
       <tags>Combat, Meta, Social Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_networked_in</id>
       <name>Networked In</name>
       <karma>4</karma>
       <tags>Meta, Social Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_networker</id>
       <name>Networker</name>
       <karma>5</karma>
       <tags>Meta, Social Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_night_vision</id>
       <name>Night Vision</name>
       <karma>2</karma>
       <tags>Nocturna, Physical Quality</tags>
+      <bp>2</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_ogre_stomach</id>
       <name>Ogre Stomach</name>
       <karma>0</karma>
       <tags>Ogre Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_one_trick_pony</id>
       <name>One Trick Pony</name>
       <karma>5</karma>
       <tags>Combat Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_online_fame</id>
       <name>Online Fame</name>
       <karma>10</karma>
       <tags>Matrix, Meta, Social Quality</tags>
+      <bp>10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_outdoorsman</id>
       <name>Outdoorsman</name>
       <karma>3</karma>
       <tags>Meta, Physical Quality</tags>
+      <bp>3</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_overclocker</id>
       <name>Overclocker</name>
       <karma>5</karma>
       <tags>Matrix Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_pain_is_gain</id>
       <name>Pain is Gain</name>
       <karma>6</karma>
       <tags>Defensive, Matrix Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_pathogen/toxin_resistance</id>
@@ -576,66 +665,77 @@
       <name>Perceptive</name>
       <karma>5</karma>
       <tags>Meta, Physical Quality</tags>
+      <bp>5 or 10</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_perceptive_defender</id>
       <name>Perceptive Defender</name>
       <karma>4</karma>
       <tags>Defensive Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_perfect_time</id>
       <name>Perfect Time</name>
       <karma>5</karma>
       <tags>Meta Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_photographic_memory</id>
       <name>Photographic Memory</name>
       <karma>5</karma>
       <tags>Mental Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_prime_datahaven_membership</id>
       <name>Prime Datahaven Membership</name>
       <karma>7</karma>
       <tags>Matrix, Meta, Social Quality</tags>
+      <bp>7</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_privileged_family_name</id>
       <name>Privileged Family Name</name>
       <karma>5</karma>
       <tags>Meta, Social Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_prototype_transhuman</id>
       <name>Prototype Transhuman</name>
       <karma>15</karma>
       <tags>Meta, ‘Ware Quality</tags>
+      <bp>15</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_quick_healer</id>
       <name>Quick Healer</name>
       <karma>4</karma>
       <tags>Healing Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_rad_tolerant</id>
       <name>Rad-Tolerant</name>
       <karma>6</karma>
       <tags>Defensive, Physical Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_reach_(positive)</id>
       <name>Reach (Positive)</name>
       <karma>0</karma>
       <tags>Giant, Elf, Ork, Troll Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_reputation</id>
       <name>Reputation</name>
       <karma>2</karma>
       <tags>Meta, Social Quality</tags>
+      <bp>2 or 4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_restricted_gear</id>
@@ -648,60 +748,70 @@
       <name>Satyr Legs</name>
       <karma>0</karma>
       <tags>Satyr Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_scholastic_achievement</id>
       <name>Scholastic Achievement</name>
       <karma>5</karma>
       <tags>Knowledge Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_school_of_hard_knocks</id>
       <name>School of Hard Knocks</name>
       <karma>4</karma>
       <tags>Knowledge, Skill, Social Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_sense_of_direction</id>
       <name>Sense of Direction</name>
       <karma>3</karma>
       <tags>Meta, Physical Quality</tags>
+      <bp>3</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_sensei</id>
       <name>Sensei</name>
       <karma>13</karma>
       <tags>Skill Quality</tags>
+      <bp>13</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_silence_is_golden</id>
       <name>Silence is Golden</name>
       <karma>9</karma>
       <tags>Matrix Quality</tags>
+      <bp>9</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_social_chameleon</id>
       <name>Social Chameleon</name>
       <karma>7</karma>
       <tags>Social Quality</tags>
+      <bp>7</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_spacer</id>
       <name>Spacer</name>
       <karma>5</karma>
       <tags>Physical Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_speed_demon</id>
       <name>Speed Demon</name>
       <karma>5</karma>
       <tags>Rigger Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_speed_reader</id>
       <name>Speed Reader</name>
       <karma>2</karma>
       <tags>Mental Quality</tags>
+      <bp>2</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_spike_resistance</id>
@@ -714,54 +824,63 @@
       <name>Spirit/Sprite Affinity</name>
       <karma>12</karma>
       <tags>Magic, Technomancer Quality</tags>
+      <bp>12</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_spirit_champion</id>
       <name>Spirit Champion</name>
       <karma>14</karma>
       <tags>Magic Quality</tags>
+      <bp>14</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_spiritual_lodge</id>
       <name>Spiritual Lodge</name>
       <karma>5</karma>
       <tags>Magic, Meta Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_steely_eyed_wheelman</id>
       <name>Steely Eyed Wheelman</name>
       <karma>2</karma>
       <tags>Rigger Quality</tags>
+      <bp>2</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_stolen_gear</id>
       <name>Stolen Gear</name>
       <karma>1</karma>
       <tags>Gear, Meta Quality</tags>
+      <bp>1 to 30</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_stunt_driver</id>
       <name>Stunt Driver</name>
       <karma>12</karma>
       <tags>Rigger Quality</tags>
+      <bp>12</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_technical_school_education</id>
       <name>Technical School Education</name>
       <karma>4</karma>
       <tags>Knowledge, Skill Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_thermographic_vision</id>
       <name>Thermographic Vision</name>
       <karma>0</karma>
       <tags>Dwarf, Gnome, Troll Quality</tags>
+      <bp>0</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_too_pretty_to_hit</id>
       <name>Too Pretty to Hit</name>
       <karma>3</karma>
       <tags>Defensive Quality</tags>
+      <bp>3</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_tough_as_nails</id>
@@ -774,48 +893,56 @@
       <name>Toughness</name>
       <karma>7</karma>
       <tags>Defensive, Physical Quality</tags>
+      <bp>7</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_trust_fund</id>
       <name>Trust Fund</name>
       <karma>0</karma>
       <tags>Meta Quality</tags>
+      <bp>5, 10, or 15</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_trustworthy</id>
       <name>Trustworthy</name>
       <karma>12</karma>
       <tags>Social Quality</tags>
+      <bp>12</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_type_o_system</id>
       <name>Type O System</name>
       <karma>30</karma>
       <tags>‘Ware Quality</tags>
+      <bp>30</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_vehicle_empathy</id>
       <name>Vehicle Empathy</name>
       <karma>5</karma>
       <tags>Rigger Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_voice_of_experience</id>
       <name>Voice of Experience</name>
       <karma>5</karma>
       <tags>Meta Quality</tags>
+      <bp>5</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_watch_the_suit</id>
       <name>Watch the Suit</name>
       <karma>3</karma>
       <tags>Social Quality</tags>
+      <bp>3</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_water_sprite</id>
       <name>Water Sprite</name>
       <karma>6</karma>
       <tags>Physical Quality</tags>
+      <bp>6</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_will_to_live</id>
@@ -828,18 +955,21 @@
       <name>Witness My Hate</name>
       <karma>8</karma>
       <tags>Combat, Magic Quality</tags>
+      <bp>8</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_always_late</id>
       <name>Always Late</name>
       <karma>2</karma>
       <tags>Social Quality</tags>
+      <bp>2</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_bad_memories</id>
       <name>Bad Memories</name>
       <karma>4</karma>
       <tags>Mental, Meta Quality</tags>
+      <bp>4</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_compulsive_behavior</id>
@@ -852,12 +982,14 @@
       <name>Firearm Diplomacy</name>
       <karma>3</karma>
       <tags>Social Quality</tags>
+      <bp>3</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_pacifist</id>
       <name>Pacifist</name>
       <karma>10</karma>
       <tags>Meta Quality</tags>
+      <bp>10 or 15</bp>
     </quality>
     <quality>
       <id>custom_sr7e_qual_hollow</id>
@@ -883,6 +1015,466 @@
       <karma>10</karma>
       <tags>Campaign, Magic Quality</tags>
       <notes>An insect spirit gives the player a physical boost, in exchange for being consumed when their life is at risk. The player glows in the Astral like a beacon and association with insect spirits is usually frowned upon.</notes>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_5664610e04703fbb3d648ea3ffbe766d</id>
+      <name>Aspected Magician</name>
+      <bp>50</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_9d39ec5881d72c6b432bf2db5e8e429d</id>
+      <name>Magician</name>
+      <bp>100</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_647acfc77eba36776fb2c61bce27d3db</id>
+      <name>Adept</name>
+      <bp>75</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_72d7476d609e6f073ca565d361a11990</id>
+      <name>Mystic Adept</name>
+      <bp>150</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_eef73d6e06c625f3bfb1a6abf214c7c6</id>
+      <name>Technomancer</name>
+      <bp>80</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_6ffb55312639b6741fa27ab12177628b</id>
+      <name>Accident Prone</name>
+      <bp>4</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_ebfaeeb612390ed834350c18fb357b48</id>
+      <name>Addiction (Substance, Severity)</name>
+      <bp>3 to 15</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_1843145f98cfa69b97f5911cb6837ff6</id>
+      <name>AIPS</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_1a475636312283035439c54483dccd85</id>
+      <name>Albinism</name>
+      <bp>4</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_66b4601f8e72efbba020c81dad8e6346</id>
+      <name>Allergy (Substance, Severity)</name>
+      <bp>4 to 24</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_e811e08dddf374ccd5ce9a8f88878f5d</id>
+      <name>(Mild)</name>
+      <bp>2</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_a8b861e39480c95b5fa0edbb9116f4f1</id>
+      <name>(Moderate)</name>
+      <bp>3</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_c3b6155d0684ba3243b3bbf892b24959</id>
+      <name>Asthma</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_5a787b7d3a30edaddf5fc128c8f374e0</id>
+      <name>Astral Beacon</name>
+      <bp>9</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_eefabb2f5508b10bc7c44aa1c0dd1366</id>
+      <name>Augmentation Addict</name>
+      <bp>18</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_f41a68b38058faf53233b3983f04afb7</id>
+      <name>Bad Credit</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_fb9292cd5f8445759a17b38296214896</id>
+      <name>Bad Luck</name>
+      <bp>13</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_940ca282c42b910b6e80ab5375c70c1a</id>
+      <name>Bad Rep</name>
+      <bp>7</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_9c35da731eeef291b33163b538680edf</id>
+      <name>Basement Dweller</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_75a1eb38265d6785123717bdc07bea90</id>
+      <name>Big Baby</name>
+      <bp>4</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_7c1d3b2f24683f81670b23ad7e438fce</id>
+      <name>Big Regret</name>
+      <bp>5</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_bcd1a7f15260c0ef1b62253aae5c687a</id>
+      <name>Biosystem Overstress</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_b5163e8a0c0e8a22b12d87b86ae0ad30</id>
+      <name>Bi-Polar</name>
+      <bp>8</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_e9861abd49cc6b3041a735d66434a070</id>
+      <name>Blind</name>
+      <bp>5 or 15</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_5944eabca8967bff5f052dc8757b763d</id>
+      <name>Codeblock</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_d82887b85c157d12466959a2cc3aae84</id>
+      <name>Code of Honor</name>
+      <bp>18</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_dbd031c9da382cd05a439faf36b5fa07</id>
+      <name>Combat Paralysis</name>
+      <bp>18</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_4087bc696427bec6e1d53eec3eb99b57</id>
+      <name>Computer Illiterate</name>
+      <bp>16</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_5b4c8dd431fbfe947657798916cff47f</id>
+      <name>Cyberpsychosis</name>
+      <bp>20</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_2a32052f0412808dd1dacc3676728d07</id>
+      <name>Cyber Snob</name>
+      <bp>12</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_bb9dcb0eab2043fda0d199af2f2ad16f</id>
+      <name>Day Job</name>
+      <bp>5 to 15</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_8f10538b846c981e91a10b0bc7b64104</id>
+      <name>Dead Emotion</name>
+      <bp>3</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_d8b7c4ba8703cad42b0a31d919f3635c</id>
+      <name>Deaf</name>
+      <bp>15</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_253daee6771188b8c76b84ff008e4349</id>
+      <name>Deformed</name>
+      <bp>9</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_cbb16ba23fcdfe56938bf90943684aa4</id>
+      <name>Dependents</name>
+      <bp>3 to 15</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_737fecf5dddcadf5afbf2a8f46f4b280</id>
+      <name>Designated Omega</name>
+      <bp>5</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_ef51a182bb72b57f9f162101f60d272f</id>
+      <name>Discombobulated</name>
+      <bp>16</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_7083d6e079558b8a438b20bc68af5b7a</id>
+      <name>Disgraced</name>
+      <bp>5</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_e16fb4d29b84aa304f3fdeb5e80e985a</id>
+      <name>Disheveled</name>
+      <bp>5</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_26a1b30521eedfc87f8de3b04034c451</id>
+      <name>Distinctive Style</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_6d514a8dbb23af5c8b1512ff3be8c9e3</id>
+      <name>Elevated Stress</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_45643fe3854e48ed234ade3d21e428f8</id>
+      <name>Elf Poser</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_58ece11e1f0320f518ed5836538bc1b3</id>
+      <name>Emotional Attachment</name>
+      <bp>5</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_c0f0951b2eec10adc031c08444fe35d2</id>
+      <name>Faceless</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_f8000571a448558706a99c8c03c2988c</id>
+      <name>Family Curse</name>
+      <bp>8</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_e76be2ffabdcb76896d5253bd4998458</id>
+      <name>Flashbacks</name>
+      <bp>7 or 15</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_bf2caf8c0f8d00368cf7028b3cbd10db</id>
+      <name>Force of Chaos</name>
+      <bp>4</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_5d1801a70481550d3de71ee64068b62d</id>
+      <name>Frostbite</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_800526f1d726845a9bba96384fbf6009</id>
+      <name>Illiterate</name>
+      <bp>12</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_a5fb7a9f8aff1c4fdc4eb5e25f2a0f19</id>
+      <name>Implant-induced Immune Deficiency</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_29a7e61216d571fa06c2e129dc8bea1c</id>
+      <name>Incompetent</name>
+      <bp>5</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_5c98d6f83faaeb79add0015ba6456268</id>
+      <name>Infirm</name>
+      <bp>20</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_866d815adb055e7d4ed23ac402b221f1</id>
+      <name>Insomnia</name>
+      <bp>9 or 18</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_2f11bced07af78b88fe03a5894e86382</id>
+      <name>Lightweight</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_d62ecde8b76b2882fa67a24f83d9cbae</id>
+      <name>Loss of Confidence</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_8b3a3b0b4e102d5c7dead9c1b9ce4aa8</id>
+      <name>Low Pain Tolerance</name>
+      <bp>9</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_1ec72dfae7cc11f3d787d72d0580b84e</id>
+      <name>Malware Infection</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_b24114311e0ab5c6c4cc9408815ea579</id>
+      <name>Matrix Troll</name>
+      <bp>7</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_c9cfedb7dbc16067e2da564fcaf97428</id>
+      <name>Motion Sickness</name>
+      <bp>4</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_7cbd0eac89d10620a0a738ff92a48757</id>
+      <name>Nano Intolerance</name>
+      <bp>5</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_e4e0f1498012e3a677069472c8aa072b</id>
+      <name>Neoteny</name>
+      <bp>12</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_94bbf79e825258a80a3143b27d3d23ba</id>
+      <name>Night Blindness</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_94cdb538e3890d574c9c40cca7cee6b9</id>
+      <name>Nocturnal</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_5b2d31c265e3145c77b4336fcbb1bd76</id>
+      <name>No Man Left Behind</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_ae205510bb69817f27c5c5121cfb79ac</id>
+      <name>Ork Poser</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_5ebedf1ac058b7c02b2acbcbf098c0c4</id>
+      <name>Paranoia</name>
+      <bp>6</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_d801a38049ad10408a87c8d7a340cb33</id>
+      <name>Paraplegic</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_1e3b1cb952719cb02836c7f5ef597e89</id>
+      <name>Permafried</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_32345faf8c3a57c01306b25017d7b1f9</id>
+      <name>Phobia (Phobia, Severity)</name>
+      <bp>5 to 15</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_3fd7a036c7a4057e3b84024a6f8269ab</id>
+      <name>Poor Self Control</name>
+      <bp>4 to 12</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_668bda9251c9b56969d08ec4d94fa656</id>
+      <name>Prejudiced (Severity, Group)</name>
+      <bp>3 to 10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_5533ba3bd03fe42b3071900460ceea53</id>
+      <name>Quadriplegic</name>
+      <bp>25</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_1ba403fe713d67b9892e102b338fcfd2</id>
+      <name>Reduced (Sense)</name>
+      <bp>2 to 29</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_3cdf32f58f57abfa049c35d95bae7df3</id>
+      <name>Scorched</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_cef6d5e486c6198d7df8aece4a596ea3</id>
+      <name>Sensitive Neural Structure</name>
+      <bp>5 or 10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_178883ef9cd03b0234436ec3f5c6f4f9</id>
+      <name>Sensitive System</name>
+      <bp>15</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_56afcbfd603f57bfa2f9db8ea8ab5925</id>
+      <name>Sensory Overload Syndrome</name>
+      <bp>15</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_8c09001c99ecb6fdd8d6023fcf039054</id>
+      <name>Signature</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_8246688c946f7edb33947bebe33c34af</id>
+      <name>Simsense Vertigo</name>
+      <bp>5 or 10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_6b750751bfe4bfb79b3b2765a67843d2</id>
+      <name>SINner</name>
+      <bp>5 or 10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_e125d3724604d8e13ad8c640449edb72</id>
+      <name>Social Appearance Anxiety</name>
+      <bp>3</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_e0755e5201e92a3379cbbb74b5278f2e</id>
+      <name>Social Stress</name>
+      <bp>8</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_15c1ec8969550a2cf1e40327ca1c7285</id>
+      <name>Spirit Bane</name>
+      <bp>9</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_4e8f06c22cb9be541364dac64154a661</id>
+      <name>Spirit Pariah</name>
+      <bp>14</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_29e051c90531025e6edca9c8e9376005</id>
+      <name>Sucker</name>
+      <bp>4</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_628b703720f6d8e6e35cd29b3142b505</id>
+      <name>Ugly</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_b166e3796721be097cf80376533d5afe</id>
+      <name>Uncouth</name>
+      <bp>16</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_6e14f8da599dcd99ebe98dfa3f8f9575</id>
+      <name>Uneducated</name>
+      <bp>8</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_fee925526b67a74289e38421fe81fc58</id>
+      <name>Unsteady Hands</name>
+      <bp>10</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_798b913462fe08225a3c8ba1e31b3531</id>
+      <name>Vendetta</name>
+      <bp>9</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_746096ca2d2d6ff9c9d3042043b1c063</id>
+      <name>Wanted</name>
+      <bp>12</bp>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_ca9c5138950f437bec94dbb8c2691545</id>
+      <name>Weak Immune System</name>
+      <bp>8</bp>
     </quality>
   </qualities>
 </chummer>

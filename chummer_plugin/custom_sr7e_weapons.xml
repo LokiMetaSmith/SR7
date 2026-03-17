@@ -7,6 +7,12 @@
       <category>Dice &amp; Tests</category>
       <damage>4</damage>
       <cost>275</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>+2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>6(m)</ammo>
+      <avail>–</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_defiance_ex_shocker</id>
@@ -14,6 +20,12 @@
       <category>Dice &amp; Tests</category>
       <damage>4</damage>
       <cost>340</cost>
+      <accuracy>4</accuracy>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>4(m)</ammo>
+      <avail>–</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_defiance_super_shock</id>
@@ -21,6 +33,12 @@
       <category>Dice &amp; Tests</category>
       <damage>8</damage>
       <cost>1000</cost>
+      <accuracy>8</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>2(m)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_tingler</id>
@@ -28,6 +46,12 @@
       <category>Dice &amp; Tests</category>
       <damage>3</damage>
       <cost>240</cost>
+      <accuracy>3</accuracy>
+      <ap>-2</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>2(m)</ammo>
+      <avail>2</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_narcoject_one</id>
@@ -63,6 +87,12 @@
       <category>Dice &amp; Tests</category>
       <damage>5</damage>
       <cost>500</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>+1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>3(m)</ammo>
+      <avail>4</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_yamaha_pulsar_i/ii</id>
@@ -70,6 +100,12 @@
       <category>Dice &amp; Tests</category>
       <damage>5</damage>
       <cost>325/350</cost>
+      <accuracy>5</accuracy>
+      <ap>–</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>4(m)</ammo>
+      <avail>–</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_jupiter_taser_club</id>
@@ -77,6 +113,12 @@
       <category>Dice &amp; Tests</category>
       <damage>3</damage>
       <cost>1200</cost>
+      <accuracy>3</accuracy>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>1(m)</ammo>
+      <avail>8</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cannon_punch</id>
@@ -84,6 +126,12 @@
       <category>Hold-Outs</category>
       <damage>2</damage>
       <cost>100</cost>
+      <accuracy>2</accuracy>
+      <ap>-1</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>1(ml)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cavalier_arms_scout</id>
@@ -91,6 +139,12 @@
       <category>Hold-Outs</category>
       <damage>4</damage>
       <cost>375</cost>
+      <accuracy>4</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>7(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_new_model_revolver</id>
@@ -98,6 +152,12 @@
       <category>Hold-Outs</category>
       <damage>6</damage>
       <cost>150</cost>
+      <accuracy>6</accuracy>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>5(cy)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_secret_agent</id>
@@ -105,6 +165,12 @@
       <category>Hold-Outs</category>
       <damage>3</damage>
       <cost>550</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-1</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>6(cy)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_enfield_m1098</id>
@@ -112,6 +178,12 @@
       <category>Hold-Outs</category>
       <damage>5</damage>
       <cost>450</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>8(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fichetti_tiffani_needler</id>
@@ -119,6 +191,12 @@
       <category>Hold-Outs</category>
       <damage>5</damage>
       <cost>1000</cost>
+      <accuracy>5</accuracy>
+      <ap>+2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>4(c)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fichetti_tiffani_self_defender</id>
@@ -126,6 +204,12 @@
       <category>Hold-Outs</category>
       <damage>4</damage>
       <cost>600</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>4(c)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_p48</id>
@@ -140,6 +224,12 @@
       <category>Hold-Outs</category>
       <damage>4</damage>
       <cost>200</cost>
+      <accuracy>4</accuracy>
+      <ap>-4</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>2(b)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_morrissey_élan</id>
@@ -147,6 +237,12 @@
       <category>Hold-Outs</category>
       <damage>5</damage>
       <cost>500</cost>
+      <accuracy>5</accuracy>
+      <ap>–</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>5(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_raecor_sting</id>
@@ -154,6 +250,12 @@
       <category>Hold-Outs</category>
       <damage>3</damage>
       <cost>350</cost>
+      <accuracy>3</accuracy>
+      <ap>+4</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>4(m)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_shiawase_arms_type_k2072</id>
@@ -161,6 +263,12 @@
       <category>Hold-Outs</category>
       <damage>5</damage>
       <cost>475</cost>
+      <accuracy>5</accuracy>
+      <ap>-4</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>4(m)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_sig_sauer_p298</id>
@@ -168,6 +276,12 @@
       <category>Hold-Outs</category>
       <damage>5</damage>
       <cost>400</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>7(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_stinger_pen_gun</id>
@@ -175,6 +289,12 @@
       <category>Hold-Outs</category>
       <damage>4</damage>
       <cost>325</cost>
+      <accuracy>4</accuracy>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>1(ml)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_streetline_special</id>
@@ -182,6 +302,12 @@
       <category>Hold-Outs</category>
       <damage>4</damage>
       <cost>50</cost>
+      <accuracy>4</accuracy>
+      <ap>+2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>6(dm)</ammo>
+      <avail>–(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_terracotta_arms_pup</id>
@@ -189,6 +315,12 @@
       <category>Hold-Outs</category>
       <damage>4</damage>
       <cost>500/900</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>–</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>5(dm)</ammo>
+      <avail>4(R)/6(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_walther_palm_pistol</id>
@@ -196,6 +328,12 @@
       <category>Hold-Outs</category>
       <damage>4</damage>
       <cost>245</cost>
+      <accuracy>4</accuracy>
+      <ap>-1</ap>
+      <mode>SS/BF</mode>
+      <rc>–</rc>
+      <ammo>2(b)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_walther_secura_sk</id>
@@ -203,6 +341,12 @@
       <category>Hold-Outs</category>
       <damage>4</damage>
       <cost>1000</cost>
+      <accuracy>4</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>4(dm)</ammo>
+      <avail>8(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_light_fire_70</id>
@@ -210,6 +354,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>750</cost>
+      <accuracy>6(7)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>16(dm)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_light_fire_75</id>
@@ -217,6 +367,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>1250</cost>
+      <accuracy>6(8)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>16(dm)</ammo>
+      <avail>6(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_barrens_special</id>
@@ -224,6 +380,12 @@
       <category>Light Pistols</category>
       <damage>2</damage>
       <cost>100</cost>
+      <accuracy>2</accuracy>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>5(cy)</ammo>
+      <avail>2(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_beretta_101t</id>
@@ -231,6 +393,12 @@
       <category>Light Pistols</category>
       <damage>7</damage>
       <cost>250</cost>
+      <accuracy>7</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>2(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_beretta_200st</id>
@@ -238,6 +406,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>700</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA/FA</mode>
+      <rc>(1)</rc>
+      <ammo>26(dm)</ammo>
+      <avail>8(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_beretta_201t</id>
@@ -245,6 +419,12 @@
       <category>Light Pistols</category>
       <damage>6</damage>
       <cost>750</cost>
+      <accuracy>6</accuracy>
+      <ap>-1</ap>
+      <mode>SA/BF</mode>
+      <rc>(1)</rc>
+      <ammo>21(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_beretta_92sl</id>
@@ -252,6 +432,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>300</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>1(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_browning_ghost</id>
@@ -259,6 +445,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>1500</cost>
+      <accuracy>5(8)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>10(dm)</ammo>
+      <avail>12(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ca_adder_slivergun</id>
@@ -266,6 +458,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>460</cost>
+      <accuracy>5</accuracy>
+      <ap>+3</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>20(dm)</ammo>
+      <avail>7(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cavalier_arms_dragoon</id>
@@ -273,6 +471,12 @@
       <category>Light Pistols</category>
       <damage>6</damage>
       <cost>575</cost>
+      <accuracy>6</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>28(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ceska_vz/120</id>
@@ -280,6 +484,12 @@
       <category>Light Pistols</category>
       <damage>6</damage>
       <cost>375</cost>
+      <accuracy>6</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>18(dm)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_america_l36</id>
@@ -287,6 +497,12 @@
       <category>Light Pistols</category>
       <damage>7</damage>
       <cost>320</cost>
+      <accuracy>7</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>11(dm)</ammo>
+      <avail>–(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_asp</id>
@@ -294,6 +510,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>175</cost>
+      <accuracy>5</accuracy>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>6(cy)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_coral_snake</id>
@@ -301,6 +523,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>275</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-1</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>5(cy)</ammo>
+      <avail>1(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_special_agent</id>
@@ -308,6 +536,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>400</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>8(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fichetti_executive_action</id>
@@ -315,6 +549,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>500</cost>
+      <accuracy>5</accuracy>
+      <ap>-3</ap>
+      <mode>SA/BF</mode>
+      <rc>–</rc>
+      <ammo>18(dm)</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fichetti_security_500</id>
@@ -322,6 +562,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>300</cost>
+      <accuracy>5</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>10(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fichetti_security_500a</id>
@@ -329,6 +575,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>350</cost>
+      <accuracy>5</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>22(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fichetti_security_600</id>
@@ -336,6 +588,12 @@
       <category>Light Pistols</category>
       <damage>3</damage>
       <cost>450</cost>
+      <accuracy>6(7)</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>(1)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fichetti_thunder</id>
@@ -343,6 +601,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>800</cost>
+      <accuracy>5</accuracy>
+      <ap>-3</ap>
+      <mode>BF</mode>
+      <rc>–</rc>
+      <ammo>6(ml)x4</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hammerli_610s</id>
@@ -350,6 +614,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>1300</cost>
+      <accuracy>7(8)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>6(dm)</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hammerli_620s</id>
@@ -357,6 +627,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>650</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>6(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_caveat</id>
@@ -364,6 +640,12 @@
       <category>Light Pistols</category>
       <damage>9</damage>
       <cost>500</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>9(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_p50_tactical</id>
@@ -371,6 +653,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>600</cost>
+      <accuracy>6(8)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_stopper</id>
@@ -378,6 +666,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>375</cost>
+      <accuracy>5</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>2(b)</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_mauser_ladyline</id>
@@ -385,6 +679,12 @@
       <category>Light Pistols</category>
       <damage>8</damage>
       <cost>350</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>8(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_nitama_sporter</id>
@@ -392,6 +692,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>475</cost>
+      <accuracy>6(7)</accuracy>
+      <ap>–</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>5(m)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_onotari_arms_security_special</id>
@@ -399,6 +705,12 @@
       <category>Light Pistols</category>
       <damage>7</damage>
       <cost>625</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>11(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ruger_redhawk</id>
@@ -406,6 +718,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>500</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SS/SA</mode>
+      <rc>–</rc>
+      <ammo>8(cy)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_seco_ld_120</id>
@@ -413,6 +731,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>325</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_shiawase_hearth_protector</id>
@@ -420,6 +744,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>350</cost>
+      <accuracy>5</accuracy>
+      <ap>–</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>7(dm)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_shiawase_arms_light_tactical</id>
@@ -427,6 +757,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>1050</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-4</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>16(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_shiawase_arms_puzzler</id>
@@ -434,6 +770,12 @@
       <category>Light Pistols</category>
       <damage>4</damage>
       <cost>1000</cost>
+      <accuracy>4</accuracy>
+      <ap>-4</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>14(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_taurus_mark_xxxi</id>
@@ -441,6 +783,12 @@
       <category>Light Pistols</category>
       <damage>1</damage>
       <cost>250</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>+3</ap>
+      <mode>SS</mode>
+      <rc>1</rc>
+      <ammo>5(m)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_taurus_omni_6_(.38)</id>
@@ -448,6 +796,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>300</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>6(cy)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_taurus_omni_6_(.357)</id>
@@ -455,6 +809,12 @@
       <category>Light Pistols</category>
       <damage>6</damage>
       <cost>300</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-2</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>6(cy)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_walther_p99</id>
@@ -462,6 +822,12 @@
       <category>Light Pistols</category>
       <damage>6</damage>
       <cost>350</cost>
+      <accuracy>6</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_walther_pb_120</id>
@@ -476,6 +842,12 @@
       <category>Light Pistols</category>
       <damage>7</damage>
       <cost>675</cost>
+      <accuracy>7</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>16(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_yamaha_sakura_fubuki</id>
@@ -483,6 +855,12 @@
       <category>Light Pistols</category>
       <damage>5</damage>
       <cost>2000</cost>
+      <accuracy>5</accuracy>
+      <ap>–</ap>
+      <mode>BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>10(ml)x4</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_yamaha_sakura_fubuki_six</id>
@@ -490,6 +868,12 @@
       <category>Light Pistols</category>
       <damage>6</damage>
       <cost>750</cost>
+      <accuracy>6</accuracy>
+      <ap>–</ap>
+      <mode>SA/BF</mode>
+      <rc>1</rc>
+      <ammo>8(ml)x4</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_altmayr_black_moon</id>
@@ -497,6 +881,12 @@
       <category>Heavy Pistols</category>
       <damage>6</damage>
       <cost>1150</cost>
+      <accuracy>6</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>6(cy)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_predator_i</id>
@@ -504,6 +894,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>350</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>10(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_predator_ii</id>
@@ -511,6 +907,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>550</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_predator_iii</id>
@@ -518,6 +920,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>750</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>15(dm)</ammo>
+      <avail>9(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_predator_iv</id>
@@ -525,6 +933,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>650</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_predator_cw</id>
@@ -532,6 +946,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>1500</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>15(dm)</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_predator_v</id>
@@ -539,6 +959,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>725</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_predator_vi</id>
@@ -546,6 +972,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>1750</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>6(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_striker</id>
@@ -553,6 +985,12 @@
       <category>Heavy Pistols</category>
       <damage>6</damage>
       <cost>400</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_viper_silvergun</id>
@@ -560,6 +998,12 @@
       <category>Heavy Pistols</category>
       <damage>4</damage>
       <cost>850</cost>
+      <accuracy>4</accuracy>
+      <ap>+4</ap>
+      <mode>SA/BF</mode>
+      <rc>–</rc>
+      <ammo>30(dm)</ammo>
+      <avail>8(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_beretta_97</id>
@@ -567,6 +1011,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>750</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA/BF</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>6(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_browning_max_power</id>
@@ -574,6 +1024,12 @@
       <category>Heavy Pistols</category>
       <damage>7</damage>
       <cost>450</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>10(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_browning_mega_power</id>
@@ -581,6 +1037,12 @@
       <category>Heavy Pistols</category>
       <damage>7</damage>
       <cost>850</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_browning_phantom</id>
@@ -588,6 +1050,12 @@
       <category>Heavy Pistols</category>
       <damage>6</damage>
       <cost>1800</cost>
+      <accuracy>4(7)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>12(dm)</ammo>
+      <avail>12(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_browning_ultra_power</id>
@@ -595,6 +1063,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>650</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cavalier_arms_champion</id>
@@ -602,6 +1076,12 @@
       <category>Heavy Pistols</category>
       <damage>6</damage>
       <cost>650</cost>
+      <accuracy>6</accuracy>
+      <ap>-4</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>1(b)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cavalier_arms_deputy</id>
@@ -609,6 +1089,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>375</cost>
+      <accuracy>5</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>7(cy)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cavalier_arms_marshall</id>
@@ -623,6 +1109,12 @@
       <category>Heavy Pistols</category>
       <damage>9</damage>
       <cost>600</cost>
+      <accuracy>5(8)</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>5(cy)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cavalier_arms_thunderstruck</id>
@@ -630,6 +1122,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>1150</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>BF</mode>
+      <rc>3</rc>
+      <ammo>12(dm)</ammo>
+      <avail>12(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_future_frontier</id>
@@ -637,6 +1135,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>500</cost>
+      <accuracy>5</accuracy>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>6(cy)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_government_2066</id>
@@ -644,6 +1148,12 @@
       <category>Heavy Pistols</category>
       <damage>6</damage>
       <cost>475</cost>
+      <accuracy>6</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>14(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_manhunter</id>
@@ -651,6 +1161,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>700</cost>
+      <accuracy>6(8)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>16(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_m1991</id>
@@ -658,6 +1174,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>300</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>7(dm)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cz_64</id>
@@ -665,6 +1187,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>350</cost>
+      <accuracy>6(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>14(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_eichiro_hatamoto_ii</id>
@@ -672,6 +1200,12 @@
       <category>Heavy Pistols</category>
       <damage>4</damage>
       <cost>800</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>1(ml)</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_enfield_merlin</id>
@@ -679,6 +1213,12 @@
       <category>Heavy Pistols</category>
       <damage>12</damage>
       <cost>625</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SS</mode>
+      <rc>1</rc>
+      <ammo>6(cy)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fn_5_7c</id>
@@ -686,6 +1226,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>700</cost>
+      <accuracy>5</accuracy>
+      <ap>-7</ap>
+      <mode>SA/BF</mode>
+      <rc>1</rc>
+      <ammo>20(dm)</ammo>
+      <avail>9(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_glock_swarovski_eagle_eye</id>
@@ -693,6 +1239,12 @@
       <category>Heavy Pistols</category>
       <damage>7</damage>
       <cost>1500</cost>
+      <accuracy>6(8)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>11(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hammerli_gemini</id>
@@ -700,6 +1252,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>1400</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>8(dm)x2</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_mk31</id>
@@ -707,6 +1265,12 @@
       <category>Heavy Pistols</category>
       <damage>7</damage>
       <cost>900</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>8(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_p60_tactical</id>
@@ -714,6 +1278,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>750</cost>
+      <accuracy>6(8)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_urban_assassin</id>
@@ -721,6 +1291,12 @@
       <category>Heavy Pistols</category>
       <damage>7</damage>
       <cost>3400</cost>
+      <accuracy>6(9)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>10(m)</ammo>
+      <avail>16(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_urban_fighter</id>
@@ -728,6 +1304,12 @@
       <category>Heavy Pistols</category>
       <damage>6</damage>
       <cost>2400</cost>
+      <accuracy>6</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>1(2)</rc>
+      <ammo>10(dm)</ammo>
+      <avail>15(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_izom_hp_49b</id>
@@ -735,6 +1317,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>300</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_izom_php_131</id>
@@ -742,6 +1330,12 @@
       <category>Heavy Pistols</category>
       <damage>6</damage>
       <cost>650</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>9(dm)</ammo>
+      <avail>11(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_broom</id>
@@ -749,6 +1343,12 @@
       <category>Heavy Pistols</category>
       <damage>4</damage>
       <cost>750</cost>
+      <accuracy>4</accuracy>
+      <ap>-1</ap>
+      <mode>FA</mode>
+      <rc>–</rc>
+      <ammo>20(m)</ammo>
+      <avail>15(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_heater</id>
@@ -756,6 +1356,12 @@
       <category>Heavy Pistols</category>
       <damage>3</damage>
       <cost>275</cost>
+      <accuracy>3</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>8(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_varmint</id>
@@ -763,6 +1369,12 @@
       <category>Heavy Pistols</category>
       <damage>10</damage>
       <cost>300</cost>
+      <accuracy>3(4)</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>(1)</rc>
+      <ammo>8(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ka_lemat_2072</id>
@@ -770,13 +1382,19 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>1080</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>9(cy)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_shotgun</id>
       <name>Shotgun</name>
-      <category>Heavy Pistols</category>
-      <damage>5</damage>
-      <cost>5</cost>
+      <category>Shotguns</category>
+      <damage>4</damage>
+      <cost>4</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_makarov_v.22</id>
@@ -784,6 +1402,12 @@
       <category>Heavy Pistols</category>
       <damage>4</damage>
       <cost>3000</cost>
+      <accuracy>4</accuracy>
+      <ap>+3</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>6(dm)</ammo>
+      <avail>10(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_morrissey_alta</id>
@@ -791,6 +1415,12 @@
       <category>Heavy Pistols</category>
       <damage>7</damage>
       <cost>1200</cost>
+      <accuracy>6(7)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_morrissey_elite</id>
@@ -798,6 +1428,12 @@
       <category>Heavy Pistols</category>
       <damage>7</damage>
       <cost>500</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>5(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_nemesis_arms_praetorian</id>
@@ -805,6 +1441,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>400</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>12(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_nemesis_arms_praetorian_ii</id>
@@ -812,6 +1454,12 @@
       <category>Heavy Pistols</category>
       <damage>7</damage>
       <cost>675</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>18(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_nitama_nemax</id>
@@ -819,6 +1467,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>1700</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>10(dm)</ammo>
+      <avail>16(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_onotari_arms_steadfast</id>
@@ -826,6 +1480,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>350</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>8(dm)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_onotari_arms_troublemaker</id>
@@ -833,6 +1493,12 @@
       <category>Heavy Pistols</category>
       <damage>7</damage>
       <cost>900</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>2</rc>
+      <ammo>18(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_onotari_arms_vagabond</id>
@@ -840,6 +1506,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>475</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>6(cy)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_onotari_arms_violator</id>
@@ -847,6 +1519,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>600</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>10(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_psk_3_collapsible_pistol</id>
@@ -854,6 +1532,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>2000</cost>
+      <accuracy>5</accuracy>
+      <ap>-5</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>10(dm)</ammo>
+      <avail>18(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_remington_roomsweeper</id>
@@ -861,6 +1545,12 @@
       <category>Heavy Pistols</category>
       <damage>4</damage>
       <cost>300</cost>
+      <accuracy>4</accuracy>
+      <ap>-1</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>8(m)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ruger_bloodhawk</id>
@@ -868,6 +1558,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>450</cost>
+      <accuracy>5</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>6(cy)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ruger_super_warhawk</id>
@@ -875,6 +1571,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>500</cost>
+      <accuracy>5</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>6(cy)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ruger_thunderbolt</id>
@@ -882,6 +1584,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>750</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>BF</mode>
+      <rc>2</rc>
+      <ammo>12(dm)</ammo>
+      <avail>12(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_savalette_guardian</id>
@@ -889,6 +1597,12 @@
       <category>Heavy Pistols</category>
       <damage>8</damage>
       <cost>870</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF</mode>
+      <rc>1</rc>
+      <ammo>12(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_shiawase_arms_copernicus</id>
@@ -896,6 +1610,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>700</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>14(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_sa_heavy_tactical</id>
@@ -903,6 +1623,12 @@
       <category>Heavy Pistols</category>
       <damage>13</damage>
       <cost>2800</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>17(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_walther_p109</id>
@@ -910,6 +1636,12 @@
       <category>Heavy Pistols</category>
       <damage>7</damage>
       <cost>500</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>12(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_walther_secura</id>
@@ -917,6 +1649,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>300</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_walther_secura_kompakt</id>
@@ -924,6 +1662,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>400</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>9(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_weapons_world_infiltrator</id>
@@ -931,6 +1675,12 @@
       <category>Heavy Pistols</category>
       <damage>5</damage>
       <cost>1200</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>14(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_zastava_cz49</id>
@@ -938,6 +1688,12 @@
       <category>Heavy Pistols</category>
       <damage>4</damage>
       <cost>250</cost>
+      <accuracy>4</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>10(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_crusader</id>
@@ -945,6 +1701,12 @@
       <category>Machine Pistols</category>
       <damage>5</damage>
       <cost>950</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA/BF</mode>
+      <rc>2</rc>
+      <ammo>40(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_crusader_ii</id>
@@ -952,6 +1714,12 @@
       <category>Machine Pistols</category>
       <damage>5</damage>
       <cost>1200</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-1</ap>
+      <mode>SA/BF</mode>
+      <rc>2</rc>
+      <ammo>40(dm)</ammo>
+      <avail>9(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_b_t_mp9_(6.5)</id>
@@ -973,6 +1741,12 @@
       <category>Machine Pistols</category>
       <damage>2</damage>
       <cost>775</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-2</ap>
+      <mode>BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>24(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cavalier_arms_flash</id>
@@ -980,6 +1754,12 @@
       <category>Machine Pistols</category>
       <damage>2</damage>
       <cost>1850</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF</mode>
+      <rc>–</rc>
+      <ammo>24(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ceska_black_scorpion</id>
@@ -987,6 +1767,12 @@
       <category>Machine Pistols</category>
       <damage>5</damage>
       <cost>850</cost>
+      <accuracy>5</accuracy>
+      <ap>–</ap>
+      <mode>SA/BF</mode>
+      <rc>(1)</rc>
+      <ammo>35(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_m24</id>
@@ -994,6 +1780,12 @@
       <category>Machine Pistols</category>
       <damage>4</damage>
       <cost>750</cost>
+      <accuracy>4</accuracy>
+      <ap>-5</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>–</rc>
+      <ammo>30(dm)</ammo>
+      <avail>10(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fichetti_military_100</id>
@@ -1001,6 +1793,12 @@
       <category>Machine Pistols</category>
       <damage>3</damage>
       <cost>900</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-3</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>–</rc>
+      <ammo>20(dm)</ammo>
+      <avail>8(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_glock_51</id>
@@ -1008,6 +1806,12 @@
       <category>Machine Pistols</category>
       <damage>5</damage>
       <cost>450</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-1</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>–</rc>
+      <ammo>28(dm)</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_urban_combat</id>
@@ -1015,6 +1819,12 @@
       <category>Machine Pistols</category>
       <damage>7</damage>
       <cost>2400</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SABF/FA</mode>
+      <rc>3</rc>
+      <ammo>36(dm)</ammo>
+      <avail>16(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_chatter</id>
@@ -1022,6 +1832,12 @@
       <category>Machine Pistols</category>
       <damage>4</damage>
       <cost>180</cost>
+      <accuracy>4</accuracy>
+      <ap>-1</ap>
+      <mode>FA</mode>
+      <rc>–</rc>
+      <ammo>20(dm)</ammo>
+      <avail>9(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_izom_rp_71</id>
@@ -1029,6 +1845,12 @@
       <category>Machine Pistols</category>
       <damage>5</damage>
       <cost>600</cost>
+      <accuracy>5</accuracy>
+      <ap>+2</ap>
+      <mode>BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>25(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_mac_11</id>
@@ -1036,6 +1858,12 @@
       <category>Machine Pistols</category>
       <damage>3</damage>
       <cost>500</cost>
+      <accuracy>3</accuracy>
+      <ap>-1</ap>
+      <mode>SA/FA</mode>
+      <rc>–</rc>
+      <ammo>32(dm)</ammo>
+      <avail>12(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_onotari_arms_equalizer</id>
@@ -1043,6 +1871,12 @@
       <category>Machine Pistols</category>
       <damage>4</damage>
       <cost>750</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-6</ap>
+      <mode>BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>12(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_onotari_arms_sig_6</id>
@@ -1050,6 +1884,12 @@
       <category>Machine Pistols</category>
       <damage>8</damage>
       <cost>1000</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-3</ap>
+      <mode>SA/FA</mode>
+      <rc>2(4)</rc>
+      <ammo>16(dm)</ammo>
+      <avail>10(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ppsk_4_cmp</id>
@@ -1057,6 +1897,12 @@
       <category>Machine Pistols</category>
       <damage>5</damage>
       <cost>2800</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-5</ap>
+      <mode>SA/BF</mode>
+      <rc>(1)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>17(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_remington_suppressor</id>
@@ -1064,6 +1910,12 @@
       <category>Machine Pistols</category>
       <damage>6</damage>
       <cost>600</cost>
+      <accuracy>6</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF</mode>
+      <rc>–</rc>
+      <ammo>15(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ruger_t_983</id>
@@ -1071,6 +1923,12 @@
       <category>Machine Pistols</category>
       <damage>6</damage>
       <cost>1400</cost>
+      <accuracy>6</accuracy>
+      <ap>-1</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>17(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_steyr_tmp</id>
@@ -1078,6 +1936,12 @@
       <category>Machine Pistols</category>
       <damage>4</damage>
       <cost>350</cost>
+      <accuracy>4</accuracy>
+      <ap>-1</ap>
+      <mode>FA</mode>
+      <rc>–</rc>
+      <ammo>30(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ultimax_70</id>
@@ -1085,6 +1949,12 @@
       <category>Machine Pistols</category>
       <damage>5</damage>
       <cost>800</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-2</ap>
+      <mode>BF/FA</mode>
+      <rc>2</rc>
+      <ammo>12(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ultimax_71</id>
@@ -1092,6 +1962,12 @@
       <category>Machine Pistols</category>
       <damage>5</damage>
       <cost>550</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>–</rc>
+      <ammo>18(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_walther_p118</id>
@@ -1099,6 +1975,12 @@
       <category>Machine Pistols</category>
       <damage>7</damage>
       <cost>2300</cost>
+      <accuracy>5(8)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>3</rc>
+      <ammo>24(dm)</ammo>
+      <avail>9(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_walther_secura_ii</id>
@@ -1106,6 +1988,12 @@
       <category>Machine Pistols</category>
       <damage>8</damage>
       <cost>925</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF</mode>
+      <rc>–</rc>
+      <ammo>18(dm)</ammo>
+      <avail>10(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_executive_protector</id>
@@ -1113,6 +2001,12 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>1000</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>14(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_sigma_3</id>
@@ -1120,6 +2014,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>1100</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-3</ap>
+      <mode>BF</mode>
+      <rc>1(3)</rc>
+      <ammo>5(d)x10</ammo>
+      <avail>9(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_beretta_model_70</id>
@@ -1127,6 +2027,12 @@
       <category>Submachine Guns</category>
       <damage>8</damage>
       <cost>900</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-2</ap>
+      <mode>BF/FA</mode>
+      <rc>–</rc>
+      <ammo>35(dm)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cavalier_arms_gladius</id>
@@ -1134,6 +2040,12 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>400</cost>
+      <accuracy>3(4)</accuracy>
+      <ap>-1</ap>
+      <mode>BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>32(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_caps_emergency_responder</id>
@@ -1141,6 +2053,12 @@
       <category>Submachine Guns</category>
       <damage>3</damage>
       <cost>800</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF</mode>
+      <rc>1</rc>
+      <ammo>32(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_dartgun</id>
@@ -1155,6 +2073,12 @@
       <category>Submachine Guns</category>
       <damage>6</damage>
       <cost>850</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-7</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>32(dm)</ammo>
+      <avail>9(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_colt_m24a3_water_carbine</id>
@@ -1162,6 +2086,12 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>1200</cost>
+      <accuracy>4</accuracy>
+      <ap>-6</ap>
+      <mode>SA/BF</mode>
+      <rc>(1)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>10(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_esprit_tsunami</id>
@@ -1169,6 +2099,12 @@
       <category>Submachine Guns</category>
       <damage>8</damage>
       <cost>750</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-2</ap>
+      <mode>BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>40(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fn_p93_praetor</id>
@@ -1176,6 +2112,12 @@
       <category>Submachine Guns</category>
       <damage>6</damage>
       <cost>2250</cost>
+      <accuracy>6</accuracy>
+      <ap>-8</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>50(dm)</ammo>
+      <avail>11(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_fn_p90</id>
@@ -1183,6 +2125,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>1400</cost>
+      <accuracy>5</accuracy>
+      <ap>-8</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>50(dm)</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_glock_custodes_mpk</id>
@@ -1190,6 +2138,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>1000</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1</rc>
+      <ammo>24(dm)</ammo>
+      <avail>12(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_glock_custodes_mpv</id>
@@ -1197,6 +2151,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>1500</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>24(dm)</ammo>
+      <avail>15(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_223k</id>
@@ -1204,6 +2164,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>950</cost>
+      <accuracy>5</accuracy>
+      <ap>-6</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>9(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_227</id>
@@ -1211,6 +2177,12 @@
       <category>Submachine Guns</category>
       <damage>7</damage>
       <cost>1500</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>28(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_227_s</id>
@@ -1218,6 +2190,12 @@
       <category>Submachine Guns</category>
       <damage>7</damage>
       <cost>1600</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>28(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_229_x</id>
@@ -1225,6 +2203,12 @@
       <category>Submachine Guns</category>
       <damage>8</damage>
       <cost>1500</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>28(dm)</ammo>
+      <avail>16(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_247_arctic</id>
@@ -1232,6 +2216,12 @@
       <category>Submachine Guns</category>
       <damage>7</damage>
       <cost>2000</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>–</rc>
+      <ammo>42(dm)</ammo>
+      <avail>13(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_mp5_tx</id>
@@ -1239,6 +2229,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>850</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-9</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>20(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_mp5sd</id>
@@ -1246,6 +2242,12 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>900</cost>
+      <accuracy>4</accuracy>
+      <ap>-1</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_mp7</id>
@@ -1253,6 +2255,12 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>1450</cost>
+      <accuracy>4</accuracy>
+      <ap>-8</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(2)</rc>
+      <ammo>20(dm)</ammo>
+      <avail>15(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_mp75</id>
@@ -1260,6 +2268,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>2500</cost>
+      <accuracy>6(8)</accuracy>
+      <ap>-9</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>2(4)</rc>
+      <ammo>50(dm)</ammo>
+      <avail>12(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_hk_urban_enforcer</id>
@@ -1267,13 +2281,19 @@
       <category>Submachine Guns</category>
       <damage>7</damage>
       <cost>6200</cost>
+      <accuracy>6(9)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>3(4)</rc>
+      <ammo>36(dm)</ammo>
+      <avail>20(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_grenade_launcher</id>
       <name>Grenade Launcher</name>
-      <category>Submachine Guns</category>
-      <damage>14</damage>
-      <cost>0</cost>
+      <category>Shotguns</category>
+      <damage>4</damage>
+      <cost>4</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ingram_smartgun</id>
@@ -1281,6 +2301,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>800</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-3</ap>
+      <mode>BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>32(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ingram_supermach_100</id>
@@ -1288,6 +2314,12 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>975</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>3(4)</rc>
+      <ammo>40(dm)</ammo>
+      <avail>9(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ingram_warrior_10</id>
@@ -1295,6 +2327,12 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>650</cost>
+      <accuracy>4</accuracy>
+      <ap>-1</ap>
+      <mode>SA/BF</mode>
+      <rc>–</rc>
+      <ammo>30(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_izom_aphrodite</id>
@@ -1302,11 +2340,17 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>1600</cost>
+      <accuracy>4</accuracy>
+      <ap>-2</ap>
+      <mode>BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>40(dm)</ammo>
+      <avail>8(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_grenade_launcher</id>
       <name>Grenade Launcher</name>
-      <category>Submachine Guns</category>
+      <category>Shotguns</category>
       <damage>4</damage>
       <cost>4</cost>
     </weapon>
@@ -1316,13 +2360,19 @@
       <category>Submachine Guns</category>
       <damage>7</damage>
       <cost>1800</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-1</ap>
+      <mode>BF/FA</mode>
+      <rc>1</rc>
+      <ammo>40(dm)</ammo>
+      <avail>8(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_grenade_launcher</id>
       <name>Grenade Launcher</name>
-      <category>Submachine Guns</category>
-      <damage>3</damage>
-      <cost>0</cost>
+      <category>Shotguns</category>
+      <damage>4</damage>
+      <cost>4</cost>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_spree</id>
@@ -1330,6 +2380,12 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>750</cost>
+      <accuracy>4</accuracy>
+      <ap>-2</ap>
+      <mode>FA</mode>
+      <rc>1</rc>
+      <ammo>30(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_tradition</id>
@@ -1337,6 +2393,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>1000</cost>
+      <accuracy>5</accuracy>
+      <ap>-1</ap>
+      <mode>SA/FA</mode>
+      <rc>3(4)</rc>
+      <ammo>75(d)</ammo>
+      <avail>15(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_mac_10</id>
@@ -1344,6 +2406,12 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>550</cost>
+      <accuracy>4</accuracy>
+      <ap>-1</ap>
+      <mode>SA/FA</mode>
+      <rc>(1)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_na_spratley_stalwart</id>
@@ -1351,6 +2419,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>2300</cost>
+      <accuracy>5</accuracy>
+      <ap>-2</ap>
+      <mode>BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>40(dm)</ammo>
+      <avail>16(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_onotari_arms_s_3k</id>
@@ -1358,6 +2432,12 @@
       <category>Submachine Guns</category>
       <damage>7</damage>
       <cost>900</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-2</ap>
+      <mode>BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_sandler_tmp</id>
@@ -1365,6 +2445,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>500</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-1</ap>
+      <mode>BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>20(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_sck_model_100</id>
@@ -1372,6 +2458,12 @@
       <category>Submachine Guns</category>
       <damage>8</damage>
       <cost>1000</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF</mode>
+      <rc>(1)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_sa_tactical_model_71</id>
@@ -1379,6 +2471,12 @@
       <category>Submachine Guns</category>
       <damage>6</damage>
       <cost>4750</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-7</ap>
+      <mode>BF/FA</mode>
+      <rc>1(3)</rc>
+      <ammo>25(dm)</ammo>
+      <avail>16(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_sa_tactical_model_72</id>
@@ -1386,6 +2484,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>1300</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-4</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(3)</rc>
+      <ammo>28(dm)</ammo>
+      <avail>12(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_terracotta_arms_mordred</id>
@@ -1393,6 +2497,12 @@
       <category>Submachine Guns</category>
       <damage>8</damage>
       <cost>950</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-2</ap>
+      <mode>BF/FA</mode>
+      <rc>(2)</rc>
+      <ammo>20(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_type_84b</id>
@@ -1400,6 +2510,12 @@
       <category>Submachine Guns</category>
       <damage>4</damage>
       <cost>600</cost>
+      <accuracy>4</accuracy>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>20(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_uzi_iii</id>
@@ -1407,6 +2523,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>600</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-1</ap>
+      <mode>BF</mode>
+      <rc>(1)</rc>
+      <ammo>24(dm)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_uzi_iv</id>
@@ -1414,6 +2536,12 @@
       <category>Submachine Guns</category>
       <damage>5</damage>
       <cost>1000</cost>
+      <accuracy>5(6)</accuracy>
+      <ap>-1</ap>
+      <mode>BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>24(dm)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_uzi_v</id>
@@ -1421,6 +2549,12 @@
       <category>Submachine Guns</category>
       <damage>8</damage>
       <cost>1400</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-1</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>24(dm)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_altmayr_sp</id>
@@ -1428,6 +2562,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>500</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>7(m)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_altmayr_spx</id>
@@ -1435,6 +2575,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>350</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>4(m)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_altmayr_spx2</id>
@@ -1442,6 +2588,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>475</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS/SA</mode>
+      <rc>–</rc>
+      <ammo>8(m)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_auto_assault_16</id>
@@ -1449,6 +2601,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>1800</cost>
+      <accuracy>4</accuracy>
+      <ap>-4</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>10(dm)</ammo>
+      <avail>18(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ranger_arms_aa_16</id>
@@ -1456,6 +2614,12 @@
       <category>Shotguns</category>
       <damage>18</damage>
       <cost>2500</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-4</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>2(4)</rc>
+      <ammo>12(dm)</ammo>
+      <avail>24(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_beretta_northstar</id>
@@ -1463,6 +2627,12 @@
       <category>Shotguns</category>
       <damage>16</damage>
       <cost>2000</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>(1)</rc>
+      <ammo>2x6(m)</ammo>
+      <avail>12(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_blunderbuss</id>
@@ -1470,6 +2640,12 @@
       <category>Shotguns</category>
       <damage>3</damage>
       <cost>150</cost>
+      <accuracy>3</accuracy>
+      <ap>-1</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>1(ml)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_boyd_and_richards_desperado</id>
@@ -1477,6 +2653,12 @@
       <category>Shotguns</category>
       <damage>5</damage>
       <cost>1700</cost>
+      <accuracy>5</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>5(m)</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cavalier_arms_falchion</id>
@@ -1484,6 +2666,12 @@
       <category>Shotguns</category>
       <damage>16</damage>
       <cost>1200</cost>
+      <accuracy>5(8)</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>8(m)</ammo>
+      <avail>9(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_cavalier_arms_lancer</id>
@@ -1491,6 +2679,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>1250</cost>
+      <accuracy>4</accuracy>
+      <ap>-4</ap>
+      <mode>SA</mode>
+      <rc>(3)</rc>
+      <ammo>8(m)</ammo>
+      <avail>9(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_grenade_launcher</id>
@@ -1505,6 +2699,12 @@
       <category>Shotguns</category>
       <damage>5</damage>
       <cost>950</cost>
+      <accuracy>5</accuracy>
+      <ap>-3</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>12(dm)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_defiance_t_250</id>
@@ -1512,6 +2712,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>500</cost>
+      <accuracy>4</accuracy>
+      <ap>-4</ap>
+      <mode>SS/SA</mode>
+      <rc>(1)</rc>
+      <ammo>5(m)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_defiance_t_250_short</id>
@@ -1519,6 +2725,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>750</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS/SA</mode>
+      <rc>(1)</rc>
+      <ammo>3(m)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_defiance_t_280</id>
@@ -1526,6 +2738,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>600</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS/SA</mode>
+      <rc>1(2)</rc>
+      <ammo>8(m)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_defiance_t_285</id>
@@ -1533,6 +2751,12 @@
       <category>Shotguns</category>
       <damage>3</damage>
       <cost>275</cost>
+      <accuracy>3</accuracy>
+      <ap>-2</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>3(b)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_enfield_as_7</id>
@@ -1540,6 +2764,12 @@
       <category>Shotguns</category>
       <damage>20</damage>
       <cost>1100</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-4</ap>
+      <mode>SA/BF</mode>
+      <rc>(1)</rc>
+      <ammo>10(dm)</ammo>
+      <avail>12(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_franchi_spas_22</id>
@@ -1547,6 +2777,12 @@
       <category>Shotguns</category>
       <damage>14</damage>
       <cost>1000</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-3</ap>
+      <mode>SS/SA/BF</mode>
+      <rc>(1)</rc>
+      <ammo>10(m)</ammo>
+      <avail>12(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_franchi_spas_24</id>
@@ -1554,6 +2790,12 @@
       <category>Shotguns</category>
       <damage>14</damage>
       <cost>1050</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-3</ap>
+      <mode>SS/SA/BF</mode>
+      <rc>(2)</rc>
+      <ammo>10(m)</ammo>
+      <avail>12(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_franchi_spas_25</id>
@@ -1568,6 +2810,12 @@
       <category>Shotguns</category>
       <damage>14</damage>
       <cost>1700</cost>
+      <accuracy>4(6)</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>10(dm)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_izom_ss_374</id>
@@ -1575,6 +2823,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>850</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS/SA</mode>
+      <rc>–</rc>
+      <ammo>4(m)</ammo>
+      <avail>3(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_boss</id>
@@ -1582,6 +2836,12 @@
       <category>Shotguns</category>
       <damage>3</damage>
       <cost>1050</cost>
+      <accuracy>3</accuracy>
+      <ap>-4</ap>
+      <mode>SA</mode>
+      <rc>1(2)</rc>
+      <ammo>15(d)</ammo>
+      <avail>11(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_ditch_rifle</id>
@@ -1589,6 +2849,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>700</cost>
+      <accuracy>4</accuracy>
+      <ap>-5</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>1(b)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_shotgun</id>
@@ -1603,6 +2869,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>475</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>2(b)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_stopper_ii_shopkeeper</id>
@@ -1610,6 +2882,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>500</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>2(b)</ammo>
+      <avail>5(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_stopper_ii_homeguard</id>
@@ -1617,6 +2895,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>700</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>2(b)</ammo>
+      <avail>7(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_krime_whammy_(ranged)</id>
@@ -1624,6 +2908,12 @@
       <category>Shotguns</category>
       <damage>1</damage>
       <cost>2000</cost>
+      <accuracy>1</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>4(ml)</ammo>
+      <avail>12(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_mossberg_am_cmdt</id>
@@ -1631,6 +2921,12 @@
       <category>Shotguns</category>
       <damage>18</damage>
       <cost>1200</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-4</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(2)</rc>
+      <ammo>10(dm)</ammo>
+      <avail>12(F)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_onotari_arms_pressure_ks_x</id>
@@ -1638,6 +2934,12 @@
       <category>Shotguns</category>
       <damage>10</damage>
       <cost>1200</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-3</ap>
+      <mode>SA/BF</mode>
+      <rc>(1)</rc>
+      <ammo>6(dm)</ammo>
+      <avail>12(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_pjss_model_55</id>
@@ -1645,6 +2947,12 @@
       <category>Shotguns</category>
       <damage>6</damage>
       <cost>1000</cost>
+      <accuracy>6</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(2)</rc>
+      <ammo>2(b)</ammo>
+      <avail>9(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_pjss_model_75</id>
@@ -1722,6 +3030,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>350</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>8(m)</ammo>
+      <avail>2(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_sawed_off_remington_900</id>
@@ -1729,6 +3043,12 @@
       <category>Shotguns</category>
       <damage>3</damage>
       <cost>450</cost>
+      <accuracy>3</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>4(m)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_remington_990</id>
@@ -1736,6 +3056,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>550</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>(1)</rc>
+      <ammo>8(m)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_shiawase_arms_rain</id>
@@ -1743,6 +3069,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>450</cost>
+      <accuracy>4</accuracy>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>1(2)</rc>
+      <ammo>5(ml)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_shiawase_arms_riot_guard</id>
@@ -1750,6 +3082,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>2300</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SA/BF</mode>
+      <rc>(3)</rc>
+      <ammo>15(dm)</ammo>
+      <avail>10(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_shiawase_arms_tsunami</id>
@@ -1757,6 +3095,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>500</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>7(m)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_winchester_model_201</id>
@@ -1764,6 +3108,12 @@
       <category>Shotguns</category>
       <damage>8</damage>
       <cost>1300</cost>
+      <accuracy>8</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>2(b)</ammo>
+      <avail>8(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_winchester_model_2054</id>
@@ -1771,6 +3121,12 @@
       <category>Shotguns</category>
       <damage>20</damage>
       <cost>1150</cost>
+      <accuracy>4(5)</accuracy>
+      <ap>-4</ap>
+      <mode>SA</mode>
+      <rc>(3)</rc>
+      <ammo>7(m)</ammo>
+      <avail>6(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_winchester_model_2066</id>
@@ -1778,6 +3134,12 @@
       <category>Shotguns</category>
       <damage>4</damage>
       <cost>1050</cost>
+      <accuracy>4</accuracy>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>5(m)</ammo>
+      <avail>4(R)</avail>
     </weapon>
     <weapon>
       <id>custom_sr7e_weap_ares_ribble</id>
@@ -1835,5 +3197,1094 @@
       <damage>3</damage>
       <cost>450000</cost>
     </weapon>
-  <weapon><id>custom_sr7e_weap_monofilament_whip</id><name>Monofilament Whip</name><category>Melee Weapons</category><damage>12</damage><cost>3000</cost></weapon><weapon><id>custom_sr7e_weap_ares_alpha</id><name>Ares Alpha</name><category>Assault Rifles</category><damage>15</damage><cost>3400</cost></weapon><weapon><id>custom_sr7e_weap_assault_cannon</id><name>Assault Cannon</name><category>Assault Cannons</category><damage>16</damage><cost>2000</cost></weapon></weapons>
+    <weapon>
+      <id>custom_sr7e_weap_monofilament_whip</id>
+      <name>Monofilament Whip</name>
+      <category>Melee Weapons</category>
+      <damage>12</damage>
+      <cost>3000</cost>
+      <accuracy>5</accuracy>
+      <ap>-8</ap>
+      <mode />
+      <rc />
+      <ammo />
+      <avail>12(F)</avail>
+    </weapon>
+    <weapon>
+      <id>custom_sr7e_weap_ares_alpha</id>
+      <name>Ares Alpha</name>
+      <category>Assault Rifles</category>
+      <damage>15</damage>
+      <cost>3400</cost>
+      <accuracy>5(7)</accuracy>
+      <ap>-10</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>42(dm)</ammo>
+      <avail>11(F)</avail>
+    </weapon>
+    <weapon>
+      <id>custom_sr7e_weap_assault_cannon</id>
+      <name>Assault Cannon</name>
+      <category>Assault Cannons</category>
+      <damage>16</damage>
+      <cost>2000</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_2201593526bb992e41b58cbc33782e74</id>
+      <name>Glock-Mini Giftzwerg</name>
+      <accuracy>5</accuracy>
+      <damage>6P</damage>
+      <ap>-2</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>6(m)</ammo>
+      <avail>10(R)</avail>
+      <cost>800¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_04db60da77cee4a5b11f3e5fca96b6b1</id>
+      <name>Altmayr White Star</name>
+      <accuracy>5(6)</accuracy>
+      <damage>7P</damage>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>14(dm)</ammo>
+      <avail>5(R)</avail>
+      <cost>500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_2d7c21877819dad41f9bcbd1bc6b244c</id>
+      <name>Glock Dragon Slayer</name>
+      <accuracy>6(8)</accuracy>
+      <damage>8P</damage>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>15(dm)</ammo>
+      <avail>8(R)</avail>
+      <cost>750¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_0a9a152a2184cde8c8a4da08b9ec226c</id>
+      <name>Luger Model 58</name>
+      <accuracy>6</accuracy>
+      <damage>6P</damage>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>10(dm)</ammo>
+      <avail>6(R)</avail>
+      <cost>950¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_53a2d1d952ebdadd3bcb9cdd65b0ff1c</id>
+      <name>Mauser Gladiator</name>
+      <accuracy>5</accuracy>
+      <damage>8P</damage>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>18(dm)</ammo>
+      <avail>8(R)</avail>
+      <cost>800¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_8bf7c5a4e7e36e31125406e26730b870</id>
+      <name>Walther Nova II</name>
+      <accuracy>6</accuracy>
+      <damage>6P</damage>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>12(dm)</ammo>
+      <avail>5(R)</avail>
+      <cost>600¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_504085f4eb24c0bc05ea34882b53c661</id>
+      <name>Walther P059 Futura</name>
+      <accuracy>6(8)</accuracy>
+      <damage>8P</damage>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>14(dm)</ammo>
+      <avail>10(R)</avail>
+      <cost>1,200¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_b51bad7cc6d45ffc765f63ba547d6002</id>
+      <name>Ares Klapp MP</name>
+      <accuracy>4(5)</accuracy>
+      <damage>5P</damage>
+      <ap>-1</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1</rc>
+      <ammo>30(dm)</ammo>
+      <avail>10(F)</avail>
+      <cost>900¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_bc282983f43f4bdf1dbf709adc40bd56</id>
+      <name>B\&amp;T MP9 (6.5)</name>
+      <accuracy>5</accuracy>
+      <damage>4P</damage>
+      <ap>-6</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>25(dm)</ammo>
+      <avail>12(F)</avail>
+      <cost>1,300¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_e80355f9f5c5d918eb304b0afcafcf14</id>
+      <name>B\&amp;T MP9 (9mm)</name>
+      <accuracy>5</accuracy>
+      <damage>5P</damage>
+      <ap>-1</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>25(dm)</ammo>
+      <avail>6(F)</avail>
+      <cost>500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_12e71b9df9df8ab304a34237b8e715e1</id>
+      <name>Steyr TMP-6</name>
+      <accuracy>5(6)</accuracy>
+      <damage>5P</damage>
+      <ap>-1</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1</rc>
+      <ammo>30(dm)</ammo>
+      <avail>8(R)</avail>
+      <cost>850¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_e88ae460e81488f8c2e1b403ff3faa62</id>
+      <name>PJSS LNB/13</name>
+      <accuracy>5</accuracy>
+      <damage>12P</damage>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>8(m)</ammo>
+      <avail>6(R)</avail>
+      <cost>750¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_30fa262e72011cf7fa342dfed48cb5ff</id>
+      <name>TEC 603 Bull</name>
+      <accuracy>5(7)</accuracy>
+      <damage>9P</damage>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1</rc>
+      <ammo>35(dm)</ammo>
+      <avail>10(R)</avail>
+      <cost>1,800¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_e30ba5c094badbd7737416b720143349</id>
+      <name>Barrett Model 121</name>
+      <accuracy>7(9)</accuracy>
+      <damage>32P</damage>
+      <ap>-20</ap>
+      <mode>SA</mode>
+      <rc>(3)</rc>
+      <ammo>10(dm)</ammo>
+      <avail>18(F)</avail>
+      <cost>15,200¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_a7b4d28cec0a322db5853574b72137d9</id>
+      <name>Barrett Model 122</name>
+      <accuracy>7(9)</accuracy>
+      <damage>32P</damage>
+      <ap>-20</ap>
+      <mode>SA</mode>
+      <rc>1(5)</rc>
+      <ammo>14(dm)</ammo>
+      <avail>20(F)</avail>
+      <cost>38,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_b8e39e7669bf702c25d56b3ad61c1301</id>
+      <name>Blaser R11 Conqueror</name>
+      <accuracy>7(9)</accuracy>
+      <damage>17P</damage>
+      <ap>-9</ap>
+      <mode>SA</mode>
+      <rc>1(3)</rc>
+      <ammo>5(dm)</ammo>
+      <avail>9(R)</avail>
+      <cost>8,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_e3e0068d3302373ead18201d361ecde1</id>
+      <name>Marlin 3041 BL</name>
+      <accuracy>5</accuracy>
+      <damage>10P</damage>
+      <ap>-4</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>6(m)</ammo>
+      <avail>5(R)</avail>
+      <cost>1,100¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_ab8524fa7880b70591fc2bbec1b977a7</id>
+      <name>Marlin 3468SS</name>
+      <accuracy>4</accuracy>
+      <damage>24P</damage>
+      <ap>-4</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>4(m)</ammo>
+      <avail>6(R)</avail>
+      <cost>1,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_469880801d8c9b13cd1dbe6fe6b5a07d</id>
+      <name>Marlin 79S</name>
+      <accuracy>4</accuracy>
+      <damage>3P</damage>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>(1)</rc>
+      <ammo>10(dm)</ammo>
+      <avail>3(R)</avail>
+      <cost>300¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_6c08bbcc980b0873ac71e3f4f45917a0</id>
+      <name>Marlin X71</name>
+      <accuracy>5</accuracy>
+      <damage>18P</damage>
+      <ap>-9</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>5(m)</ammo>
+      <avail>6(R)</avail>
+      <cost>1,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_d7e5348e5ce94b727a9d3d16c29ebafa</id>
+      <name>Pioneer 60</name>
+      <accuracy>6</accuracy>
+      <damage>22P</damage>
+      <ap>-11</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>5(m)</ammo>
+      <avail>2(R)</avail>
+      <cost>500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_f237a834618173b4d7e66e76a6dcc6f3</id>
+      <name>Ranger Arms SM-3</name>
+      <accuracy>8</accuracy>
+      <damage>17P</damage>
+      <ap>-9</ap>
+      <mode>SA</mode>
+      <rc>2(4)</rc>
+      <ammo>15(dm)</ammo>
+      <avail>12(F)</avail>
+      <cost>4,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_d52697564e8ccf8e700377d50697f957</id>
+      <name>Ranger Arms SM-4</name>
+      <accuracy>8</accuracy>
+      <damage>17P</damage>
+      <ap>-9</ap>
+      <mode>SA</mode>
+      <rc>(2)</rc>
+      <ammo>15(dm)</ammo>
+      <avail>14(F)</avail>
+      <cost>6,200¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_b42f049d272dc633c375f091b8361db6</id>
+      <name>Ranger Arms SM-5</name>
+      <accuracy>8</accuracy>
+      <damage>30P</damage>
+      <ap>-15</ap>
+      <mode>SA</mode>
+      <rc>(2)</rc>
+      <ammo>10(dm)</ammo>
+      <avail>16(F)</avail>
+      <cost>13,200¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_4943a58fc7ae10b6fb9cebf7a267ca02</id>
+      <name>Ranger Arms SM-6</name>
+      <accuracy>8(10)</accuracy>
+      <damage>17P</damage>
+      <ap>-9</ap>
+      <mode>SA</mode>
+      <rc>(2)</rc>
+      <ammo>15(dm)</ammo>
+      <avail>20(F)</avail>
+      <cost>28,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_1f0304f32a9a89701615a930df8f22d6</id>
+      <name>Remington 750</name>
+      <accuracy>7</accuracy>
+      <damage>9P</damage>
+      <ap>-7</ap>
+      <mode>SS</mode>
+      <rc>(2)</rc>
+      <ammo>5(m)</ammo>
+      <avail>4(R)</avail>
+      <cost>1,800¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_932efb131ba526d281d17327538bbcf9</id>
+      <name>Remington 950</name>
+      <accuracy>7</accuracy>
+      <damage>18P</damage>
+      <ap>-9</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>5(m)</ammo>
+      <avail>4(R)</avail>
+      <cost>2,100¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_b386390819405e03bf93167ab96fceaa</id>
+      <name>Ruger 101</name>
+      <accuracy>6</accuracy>
+      <damage>15P</damage>
+      <ap>-7</ap>
+      <mode>SA</mode>
+      <rc>(2)</rc>
+      <ammo>8(m)</ammo>
+      <avail>4(R)</avail>
+      <cost>1,300¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_5623298b180a7980e4b8bf5540fd8016</id>
+      <name>Shiawase Arms Carp Hunter</name>
+      <accuracy>6</accuracy>
+      <damage>6P</damage>
+      <ap>-2</ap>
+      <mode>SA</mode>
+      <rc>(2)</rc>
+      <ammo>8(m)</ammo>
+      <avail>4(R)</avail>
+      <cost>970¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_a9b7132509daf95557936136d69f8178</id>
+      <name>SA Police Response</name>
+      <accuracy>7</accuracy>
+      <damage>13P</damage>
+      <ap>-7</ap>
+      <mode>SA</mode>
+      <rc>(1)</rc>
+      <ammo>20(dm)</ammo>
+      <avail>12(F)</avail>
+      <cost>6,100¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_4127571bed72b3d9ed94f38b582dceab</id>
+      <name>SA Tactical Model 69</name>
+      <accuracy>8</accuracy>
+      <damage>28P</damage>
+      <ap>-16</ap>
+      <mode>SA</mode>
+      <rc>1(4)</rc>
+      <ammo>10(dm)</ammo>
+      <avail>18(F)</avail>
+      <cost>23,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_74f269b8b6b0a94ea9450392b8df0fee</id>
+      <name>Springfield 2003</name>
+      <accuracy>9</accuracy>
+      <damage>18P</damage>
+      <ap>-9</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>5(m)</ammo>
+      <avail>9(R)</avail>
+      <cost>3,600¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_fd78fe945f98fca0adf220a8f48c03e5</id>
+      <name>Springfield M1A</name>
+      <accuracy>6</accuracy>
+      <damage>16P</damage>
+      <ap>-8</ap>
+      <mode>SA</mode>
+      <rc>(1)</rc>
+      <ammo>20(dm)</ammo>
+      <avail>6(R)</avail>
+      <cost>1,700¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_369be49b724fb4d3a685ef27053abfe8</id>
+      <name>Springfield M1 Garand</name>
+      <accuracy>5</accuracy>
+      <damage>18P</damage>
+      <ap>-9</ap>
+      <mode>SA</mode>
+      <rc>(1)</rc>
+      <ammo>8(c)</ammo>
+      <avail>4(R)</avail>
+      <cost>1,100¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_6ffdeb57996326143a82291f3f962e5b</id>
+      <name>Springfield Model 1855</name>
+      <accuracy>2</accuracy>
+      <damage>15P</damage>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>1(cb)</ammo>
+      <avail>5(R)</avail>
+      <cost>850¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_4bbedd5142f2f70b9557a07c563cb211</id>
+      <name>Terracotta Arms AM-47</name>
+      <accuracy>7(9)</accuracy>
+      <damage>22P</damage>
+      <ap>-18</ap>
+      <mode>SA</mode>
+      <rc>2(5)</rc>
+      <ammo>18(d)</ammo>
+      <avail>14(F)</avail>
+      <cost>35,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_0556f2d59c8f38dbbe29aeabc57b3420</id>
+      <name>Walther MA-2100</name>
+      <accuracy>6(8)</accuracy>
+      <damage>19P</damage>
+      <ap>-10</ap>
+      <mode>SA</mode>
+      <rc>(2)</rc>
+      <ammo>10(dm)</ammo>
+      <avail>10(F)</avail>
+      <cost>6,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_404abe8765af495ea9bed33a46805b81</id>
+      <name>Winchester Model 2024</name>
+      <accuracy>6</accuracy>
+      <damage>15P</damage>
+      <ap>-6</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>7(m)</ammo>
+      <avail>4(R)</avail>
+      <cost>1,800¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_8845181da9742993f65d109039b97666</id>
+      <name>Winchester 2067 (.357 Mag)</name>
+      <accuracy>5</accuracy>
+      <damage>7P</damage>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>15(m)</ammo>
+      <avail>5(R)</avail>
+      <cost>650¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_db82eb99756c8f10db4f9b7f1aae8004</id>
+      <name>Winchester 2067 (.44 Mag)</name>
+      <accuracy>5</accuracy>
+      <damage>10P</damage>
+      <ap>-4</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>14(m)</ammo>
+      <avail>5(R)</avail>
+      <cost>750¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_fb8cdb45b13216a2cb2af77450876613</id>
+      <name>Winchester 2067 (.45 LC)</name>
+      <accuracy>5</accuracy>
+      <damage>12P</damage>
+      <ap>-2</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>14(m)</ammo>
+      <avail>5(R)</avail>
+      <cost>850¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_79ebe56282c838d0b6cf3ddd0c056746</id>
+      <name>Winchester 2067 (.30-30)</name>
+      <accuracy>5</accuracy>
+      <damage>14P</damage>
+      <ap>-5</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>8(m)</ammo>
+      <avail>5(R)</avail>
+      <cost>950¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_95c12be3d81c6d9f879056aa086afdce</id>
+      <name>Winchester 2067 (.45-70)</name>
+      <accuracy>5</accuracy>
+      <damage>20P</damage>
+      <ap>-3</ap>
+      <mode>SS</mode>
+      <rc>(1)</rc>
+      <ammo>7(m)</ammo>
+      <avail>5(R)</avail>
+      <cost>1,050¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_d2ee65ab5d04e88390b145d8ae63439e</id>
+      <name>AK-74</name>
+      <accuracy>4</accuracy>
+      <damage>8P</damage>
+      <ap>-8</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>5(R)</avail>
+      <cost>650¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_2241751ff746dceeab9d82993eba4eb7</id>
+      <name>AK-97 Carbine</name>
+      <accuracy>5</accuracy>
+      <damage>10P</damage>
+      <ap>-6</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>38(dm)</ammo>
+      <avail>4(R)</avail>
+      <cost>800¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_c8277ed4cc05872843e43cc5174c36f1</id>
+      <name>AK-97</name>
+      <accuracy>5</accuracy>
+      <damage>11P</damage>
+      <ap>-7</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>38(dm)</ammo>
+      <avail>4(R)</avail>
+      <cost>950¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_eb1fd46ca7a43ea53fde49295363c802</id>
+      <name>AK-98</name>
+      <accuracy>5</accuracy>
+      <damage>11P</damage>
+      <ap>-7</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>38(dm)</ammo>
+      <avail>8(F)</avail>
+      <cost>1,250¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_349131c88bec65486ffdf58246bd891c</id>
+      <name>AN-74</name>
+      <accuracy>5(6)</accuracy>
+      <damage>8P</damage>
+      <ap>-8</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>35(dm)</ammo>
+      <avail>5(F)</avail>
+      <cost>6,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_cfd971530c4a20eb6db4d63ce80b75ff</id>
+      <name>AN-94</name>
+      <accuracy>6</accuracy>
+      <damage>8P</damage>
+      <ap>-8</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>6(R)</avail>
+      <cost>850¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_89135557d80f5fcad838df91a9216219</id>
+      <name>Ares Arctic Rifle</name>
+      <accuracy>5(7)</accuracy>
+      <damage>15P</damage>
+      <ap>-10</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>3(4)</rc>
+      <ammo>42(dm)</ammo>
+      <avail>12(F)</avail>
+      <cost>4,800¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_7a57f4206e5fee6e9aa17f20feda41f8</id>
+      <name>Ares HVAR</name>
+      <accuracy>5(7)</accuracy>
+      <damage>15P</damage>
+      <ap>-10</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>3(5)</rc>
+      <ammo>50(d)</ammo>
+      <avail>11(F)</avail>
+      <cost>5,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_571050c1b40bdbe3d7ede36128332e6b</id>
+      <name>Colt Inception</name>
+      <accuracy>7(8)</accuracy>
+      <damage>15P</damage>
+      <ap>-7</ap>
+      <mode>SA/BF</mode>
+      <rc>1(4)</rc>
+      <ammo>35(dm)</ammo>
+      <avail>11(R)</avail>
+      <cost>2,250¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_dc54e52ba75fc008511a625f77276f33</id>
+      <name>FAMAS</name>
+      <accuracy>4</accuracy>
+      <damage>9P</damage>
+      <ap>-7</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>6(R)</avail>
+      <cost>800¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_de398707aef3bc0d6d78a6059e4da3aa</id>
+      <name>FN HAR</name>
+      <accuracy>5(6)</accuracy>
+      <damage>9P</damage>
+      <ap>-7</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>35(dm)</ammo>
+      <avail>8(R)</avail>
+      <cost>2,100¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_81607bcdd37b359668ad346e74a1a703</id>
+      <name>FN CWAR</name>
+      <accuracy>5(7)</accuracy>
+      <damage>9P</damage>
+      <ap>-7</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>3(4)</rc>
+      <ammo>35(dm)</ammo>
+      <avail>8(R)</avail>
+      <cost>3,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_eb788a1febf5282c36815d52f3f8ba76</id>
+      <name>HK 416</name>
+      <accuracy>5</accuracy>
+      <damage>8P</damage>
+      <ap>-6</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>5(R)</avail>
+      <cost>850¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_f904c58b3cc0011ff2cc14fa222dea4f</id>
+      <name>HK G3</name>
+      <accuracy>5</accuracy>
+      <damage>17P</damage>
+      <ap>-9</ap>
+      <mode>SA/BF</mode>
+      <rc>1(2)</rc>
+      <ammo>20(dm)</ammo>
+      <avail>7(R)</avail>
+      <cost>900¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_e6a287ffe6f32d34c7ca022e740104fc</id>
+      <name>HK G12A3z</name>
+      <accuracy>5(6)</accuracy>
+      <damage>12P</damage>
+      <ap>-9</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>32(dm)</ammo>
+      <avail>9(F)</avail>
+      <cost>1,750¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_2dcd71d3ed31b0fcc413859e9534faaf</id>
+      <name>Carbine Configuration</name>
+      <accuracy>5(7)</accuracy>
+      <damage>8P</damage>
+      <ap>-6</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(3)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>–</avail>
+      <cost>+1,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_295ae6feb502794eb9480b17c7294fb1</id>
+      <name>Sniper Configuration</name>
+      <accuracy>7(9)</accuracy>
+      <damage>9P</damage>
+      <ap>-7</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(5)</rc>
+      <ammo>30(dm)</ammo>
+      <avail>–</avail>
+      <cost>+1,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_e1f24b311315e7792255ddb5aed784d7</id>
+      <name>LMG Configuration</name>
+      <accuracy>5(7)</accuracy>
+      <damage>8P</damage>
+      <ap>-6</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>2(6)</rc>
+      <ammo>50(dm)</ammo>
+      <avail>–</avail>
+      <cost>+1,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_58810705b6f1c6806d23deb439d77c92</id>
+      <name>Onotari Arms JP-K50</name>
+      <accuracy>7</accuracy>
+      <damage>20P</damage>
+      <ap>-8</ap>
+      <mode>SA/BF</mode>
+      <rc>1(3)</rc>
+      <ammo>25(dm)</ammo>
+      <avail>13(F)</avail>
+      <cost>12,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_97481bfe4774d0e24693f8733f109d49</id>
+      <name>Onotari Arms Kriegfaust</name>
+      <accuracy>8</accuracy>
+      <damage>24P</damage>
+      <ap>-15</ap>
+      <mode>SA/BF</mode>
+      <rc>1(3)</rc>
+      <ammo>25(d)</ammo>
+      <avail>10(F)</avail>
+      <cost>10,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_e2ca63d052137f90e6f9147af4640c6d</id>
+      <name>Onotari Arms SBd-44</name>
+      <accuracy>3</accuracy>
+      <damage>16P</damage>
+      <ap>-8</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(1)</rc>
+      <ammo>32(dm)</ammo>
+      <avail>12(R)</avail>
+      <cost>500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_9ecf708451dc3a8fe6d9d351121113e4</id>
+      <name>Sernopal vz/88V</name>
+      <accuracy>5(6)</accuracy>
+      <damage>12P</damage>
+      <ap>-8</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>35(dm)</ammo>
+      <avail>8(F)</avail>
+      <cost>1,650¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_364302aaf7fcb6dbd5af1c7531722198</id>
+      <name>Shiawase Arms Monsoon</name>
+      <accuracy>5</accuracy>
+      <damage>13P</damage>
+      <ap>-5</ap>
+      <mode>SA/FA</mode>
+      <rc>1(2)</rc>
+      <ammo>20(ml)x6</ammo>
+      <avail>10(F)</avail>
+      <cost>1,900¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_5adcb8a93431e400eb37b74f4ca523c5</id>
+      <name>Steyr AUG-CSL</name>
+      <accuracy>5(6)</accuracy>
+      <damage>9P</damage>
+      <ap>-7</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1(3)</rc>
+      <ammo>40(dm)</ammo>
+      <avail>13(F)</avail>
+      <cost>4,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_2277c28f382a05f1e128fc060c31acc1</id>
+      <name>Ultimax Rain Forest Carbine</name>
+      <accuracy>6</accuracy>
+      <damage>16P</damage>
+      <ap>-6</ap>
+      <mode>SA</mode>
+      <rc>(1)</rc>
+      <ammo>18(dm)</ammo>
+      <avail>12(R)</avail>
+      <cost>4,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_b9827b93c52f0395963b19391a826518</id>
+      <name>Ares MP-LMG</name>
+      <accuracy>4(5)</accuracy>
+      <damage>15P</damage>
+      <ap>-10</ap>
+      <mode>BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>50(dm)</ammo>
+      <avail>12(F)</avail>
+      <cost>4,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_28723b74a00a929c9602a274579e0bca</id>
+      <name>GE Vindicator Minigun</name>
+      <accuracy>4(6)</accuracy>
+      <damage>10P</damage>
+      <ap>-8</ap>
+      <mode>FA</mode>
+      <rc>–</rc>
+      <ammo>200(belt)</ammo>
+      <avail>24(F)</avail>
+      <cost>18,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_ee56681e2e7d979414d34e7a110091b8</id>
+      <name>HK MG-14</name>
+      <accuracy>5(7)</accuracy>
+      <damage>12P</damage>
+      <ap>-10</ap>
+      <mode>BF/FA</mode>
+      <rc>2(5)</rc>
+      <ammo>60(dm)</ammo>
+      <avail>10(F)</avail>
+      <cost>2,250¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_c0ff3674f1981e00d5cce728fcfae408</id>
+      <name>Ingram Valiant</name>
+      <accuracy>5(6)</accuracy>
+      <damage>9P</damage>
+      <ap>-7</ap>
+      <mode>BF/FA</mode>
+      <rc>2(4)</rc>
+      <ammo>50(dm)</ammo>
+      <avail>12(F)</avail>
+      <cost>5,800¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_d13a88947d0d651b9045ad359ef5e9cc</id>
+      <name>Krime Wave</name>
+      <accuracy>5</accuracy>
+      <damage>17P</damage>
+      <ap>-9</ap>
+      <mode>FA</mode>
+      <rc>(3)</rc>
+      <ammo>50(d)</ammo>
+      <avail>12(F)</avail>
+      <cost>2,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_b831a00a22b01d52b7431e7018184d99</id>
+      <name>RPK-74</name>
+      <accuracy>4</accuracy>
+      <damage>8P</damage>
+      <ap>-9</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>(3)</rc>
+      <ammo>45(dm)</ammo>
+      <avail>7(F)</avail>
+      <cost>850¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_d68991403c98928e462190778f402695</id>
+      <name>SA Nemesis LMG</name>
+      <accuracy>5(7)</accuracy>
+      <damage>13P</damage>
+      <ap>-7</ap>
+      <mode>BF/FA</mode>
+      <rc>2(3)</rc>
+      <ammo>60(dm)</ammo>
+      <avail>16(F)</avail>
+      <cost>6,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_793b0b8a2c69cf792db2420af83ef779</id>
+      <name>FN MAG-5 MMG</name>
+      <accuracy>4(5)</accuracy>
+      <damage>16P</damage>
+      <ap>-8</ap>
+      <mode>FA</mode>
+      <rc>2(9)</rc>
+      <ammo>50(dm)</ammo>
+      <avail>18(F)</avail>
+      <cost>8,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_1680264899687c199b1626812ceefa3f</id>
+      <name>Ultimax MMG</name>
+      <accuracy>5(6)</accuracy>
+      <damage>18P</damage>
+      <ap>-10</ap>
+      <mode>FA</mode>
+      <rc>(4)</rc>
+      <ammo>40(dm)</ammo>
+      <avail>16(F)</avail>
+      <cost>7,600¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_f40a28f32a227e41888a7b414d5967e0</id>
+      <name>RPK HMG</name>
+      <accuracy>5</accuracy>
+      <damage>30P</damage>
+      <ap>-18</ap>
+      <mode>FA</mode>
+      <rc>(6)</rc>
+      <ammo>50(dm)</ammo>
+      <avail>12(F)</avail>
+      <cost>16,300¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_431a4809bd6911bcf0ce976cea8b35f2</id>
+      <name>Ruhrmetall SF-20</name>
+      <accuracy>5(6)</accuracy>
+      <damage>35P</damage>
+      <ap>-20</ap>
+      <mode>FA</mode>
+      <rc>3(10)</rc>
+      <ammo>40(dm)</ammo>
+      <avail>18(F)</avail>
+      <cost>19,600¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_719e0ef265baef7ac667a2f0ac235f1b</id>
+      <name>Ultimax HMG</name>
+      <accuracy>4(5)</accuracy>
+      <damage>32P</damage>
+      <ap>-22</ap>
+      <mode>FA</mode>
+      <rc>1(6)</rc>
+      <ammo>20(dm)</ammo>
+      <avail>16(F)</avail>
+      <cost>16,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_b2ff715233e25f577589fd2cc8ca96a9</id>
+      <name>Ultimax HMG-2</name>
+      <accuracy>4</accuracy>
+      <damage>30P</damage>
+      <ap>-20</ap>
+      <mode>FA</mode>
+      <rc>3(11)</rc>
+      <ammo>20(dm)</ammo>
+      <avail>16(F)</avail>
+      <cost>7,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_a675d1b05eeaa38b51bf9d938055b6c7</id>
+      <name>Shiawase Arms Blazer</name>
+      <accuracy>6</accuracy>
+      <damage>10P(fl)</damage>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>4(dm)</ammo>
+      <avail>16(F)</avail>
+      <cost>2,200¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_1bfdd8401798375bf4b5bdfa1380ad3b</id>
+      <name>Shiawase Arms Incinerator</name>
+      <accuracy>4</accuracy>
+      <damage>15P(fl)</damage>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>6(dm)</ammo>
+      <avail>16(F)</avail>
+      <cost>10,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_4528335b427e0107c7590a013a91ea6a</id>
+      <name>Ares ELD-AR</name>
+      <accuracy>5</accuracy>
+      <damage>4S</damage>
+      <ap>–</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>–</rc>
+      <ammo>50(dm)</ammo>
+      <avail>4(R)</avail>
+      <cost>950¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_78093e2b7d4fb0b3ffcfe6115fe4c9f3</id>
+      <name>FN-AAL Gyrojet Pistol</name>
+      <accuracy>4</accuracy>
+      <damage>8P</damage>
+      <ap>-5</ap>
+      <mode>SA</mode>
+      <rc>–</rc>
+      <ammo>10(dm)</ammo>
+      <avail>8(F)</avail>
+      <cost>600¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_da8cc88885b46831299dd28bf0c9dbb3</id>
+      <name>Narcoject PEP</name>
+      <accuracy>6</accuracy>
+      <damage>10S</damage>
+      <ap>–</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>10(dm)</ammo>
+      <avail>12(R)</avail>
+      <cost>7,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_9585e951627b858d57b70ebb0c35026e</id>
+      <name>AN/EDQ-12 ADNDEWS</name>
+      <accuracy>10</accuracy>
+      <damage>40P</damage>
+      <ap>-30</ap>
+      <mode>SS</mode>
+      <rc>–</rc>
+      <ammo>–</ammo>
+      <avail>40(F)</avail>
+      <cost>600,000¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_74ea3e487d568e3df0ac5bb3b52185f4</id>
+      <name>Ares Medusa PD Laser</name>
+      <accuracy>8</accuracy>
+      <damage>25P</damage>
+      <ap>-25</ap>
+      <mode>FA</mode>
+      <rc>–</rc>
+      <ammo>–</ammo>
+      <avail>28(F)</avail>
+      <cost>128,000¥</cost>
+    </weapon>
+  </weapons>
 </chummer>
