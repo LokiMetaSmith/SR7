@@ -46,7 +46,7 @@ The setting explores the cruelty of the unintended kind. The tragedy of being ov
 In a cyberpunk world, how do people push back? Losing isn't dying; it's selling out. Selling out is trading autonomy for rewards. The true punk spirit is maintaining that autonomy at any cost.
 
 #### Death Becomes You
-You can't truly die, but the alternatives are messy, offering few options for your extra life. You are not yourself anymore—a snipped thread tied into a new string. You look, smell, act, and feel wrong. The fear of that knot slipping undoes drives you relentlessly. Being brought back means you owe someone big time, tied by life contracts, tokens, objects, or places. It's a terrifying, disorienting experience of being taken apart and put back together slightly wrong.
+You can't truly die, but the alternatives are messy, offering few options for your extra life. You are not yourself anymore—a snipped thread tied into a new string. You look, smell, act, and feel wrong. The fear of that knot slipping undone drives you relentlessly. Being brought back means you owe someone big time, tied by life contracts, tokens, objects, or places. It's a terrifying, disorienting experience of being taken apart and put back together slightly wrong.
 
 #### No Time Travel, No Teleportation, No Resurrection
 Rules are meant to be bent, broken, and beaten.
