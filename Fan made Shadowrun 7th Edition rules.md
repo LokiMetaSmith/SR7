@@ -2916,16 +2916,42 @@ Drain is resisted with Willpower + Tradition Attribute (Logic or Charisma).
 | Spell Category | Example Spell | Type | Range | Duration | Drain Calculation | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Combat | Manabolt | Mana | LOS | Instant | Force - 2 | Direct damage to target's soul. Resisted by ESS + WIL. |
+| Combat | Powerbolt | Physical | LOS | Instant | Force - 1 | Direct physical damage to target's body. Resisted by BOD + Armor. |
 | Combat | Nanite Ball (Fireball) | Physical | LOS | Instant | Force | Ignites ambient grey goo. Resisted by BOD + Armor. AP = Force. |
 | Health | Heal | Mana | Touch | Permanent | Force - 4 | Heals Physical boxes equal to hits. Force must equal or exceed damage. |
 | Illusion | Improved Invisibility | Physical | LOS | Sustained | Force - 1 | Bends light and fools nanite-sensors. Resisted by INT + Logic. |
+| Illusion | Trid Phantasm | Physical | LOS | Sustained | Force | Creates multi-sensory illusions that affect machines and living beings. |
+| Illusion | Confusion | Mana | LOS | Sustained | Force - 1 | Target suffers negative dice pool modifier to all actions. |
+| Illusion | Mass Confusion | Mana | LOS(A) | Sustained | Force + 1 | AoE version of Confusion. |
+| Illusion | Chaos | Physical | LOS(A) | Sustained | Force + 1 | Creates chaotic physical sensory input, affecting machines and living targets. |
+| Illusion | Agony | Mana | LOS | Sustained | Force | Target suffers intense pain and Stun damage. Resisted by WIL + LOG. |
 | Manipulation | Control Actions | Mana | LOS | Sustained | Force | Puppets the target's physical body. Resisted by WIL + LOG. |
+| Manipulation | Armor | Physical | LOS | Sustained | Force - 1 | Adds magical armor rating equal to hits. |
+| Manipulation | Barrier | Physical | LOS(A) | Sustained | Force | Creates a physical barrier of magical energy. |
+| Manipulation | Physical Barrier | Physical | LOS(A) | Sustained | Force | Creates a physical barrier of magical energy. |
+| Manipulation | Levitate | Physical | LOS | Sustained | Force | Moves target telekinetically. |
+| Manipulation | Petrify | Physical | LOS | Sustained | Force + 2 | Turns living tissue to stone. |
+| Detection | Mind Probe | Mana | Touch | Sustained | Force | Reads target's surface thoughts or deep memories. |
 
 #### 2. Adept Powers & Metamagic
 | Power / Metamagic | Type | Cost | Mechanical Effect |
 | :--- | :--- | :--- | :--- |
 | Improved Reflexes | Adept | 1.5 PP / Lvl | +1 Reaction, +1 Initiative Die (Max +3). |
 | Killing Hands | Adept | 0.5 PP | Unarmed attacks deal Physical damage and can bypass magical armor/astral forms. |
+| Critical Strike | Adept | 0.5 PP | +1 Damage to melee attacks. |
+| Improved Ability | Adept | 0.5 PP / Lvl | +1 Die to a specific physical or combat skill. |
+| Enhanced Senses | Adept / Spirit | 0.25 PP | Gains low-light, thermographic, improved hearing, etc. |
+| Danger Sense | Adept | 0.25 PP / Lvl | +1 Die to Surprise tests and avoiding ambushes. |
+| Concealment | Spirit | N/A | Conceals target from sight and sensors. |
+| Animal Control | Spirit | N/A | Controls animal behavior. |
+| Guard | Spirit | N/A | Protects target from accidents and environmental hazards. |
+| Fear | Spirit | N/A | Induces magical terror in target, causing them to flee or freeze. |
+| Natural Weapon | Creature | N/A | Physical attack like claws or bite (DV varies, typically STR+1 or STR+2). |
+| Shift | Creature | N/A | Transforms into an animal form (e.g., Jaguar). |
+| Essence Drain | Creature | N/A | Drains Essence from a victim to heal or empower the creature. |
+| Mist Form | Creature | N/A | Transforms into an invulnerable, gaseous mist. |
+| Regeneration | Creature | N/A | Rapidly heals physical damage every combat round. |
+| Immunity to Normal Weapons | Spirit | N/A | Heavy armor against non-magical attacks, reducing incoming damage significantly. |
 | Centering | Metamagic | Initiation | Add Initiate Grade to Drain Resistance tests. |
 | Wild Channeling | Metamagic | Initiation | Allows the adept to voluntarily turn up to their Initiate Grade of dice into Wild Dice on combat tests. |
 
@@ -2994,16 +3020,38 @@ Losing >2 Essence risks the "Augmentation Addict" Negative Quality.
 | :--- | :--- | :--- | :--- | :--- |
 | Datajack | Cyber | 0.1 | 1,000 | Provides DNI. Required for all Hot-Sim/Matrix active skills. |
 | Wired Reflexes I | Cyber | 2.0 | 39,000 | +1 Reaction, +1 Initiative Die. Cannot stack with Adept Powers. |
+| Wired Reflexes II | Cyber | 3.0 | 149,000 | +2 Reaction, +2 Initiative Dice. |
 | Muscle Replacement (Rtg 1-4) | Cyber | 1.0 / Lvl | 25,000 / Lvl | +1 STR and +1 AGI per rating level. |
 | Synaptic Booster I | Bio | 0.5 | 95,000 | +1 Reaction, +1 Initiative Die. Lower Essence cost, highly illegal. |
+| Synaptic Booster II | Bio | 1.0 | 190,000 | +2 Reaction, +2 Initiative Dice. |
+| Tailored Pheromones | Bio | 0.2 / Lvl | 30,000 / Lvl | +1 Die to Social skills per rating level. |
+| Muscle Toner | Bio | 0.2 / Lvl | 32,000 / Lvl | +1 Agility per rating level. |
+| Muscle Augmentation | Bio | 0.2 / Lvl | 31,000 / Lvl | +1 Strength per rating level. |
+| Bone Lacing (Aluminum) | Cyber | 1.0 | 18,000 | +2 Body for damage resistance, unarmed attacks deal Physical damage. |
+| Bone Lacing (Titanium) | Cyber | 1.5 | 30,000 | +3 Body for damage resistance, unarmed attacks deal +1 Physical damage. |
+| Cyberarm | Cyber | 1.0 | 15,000 | Replaces arm. Can be customized with increased STR/AGI. |
+| Smartlink | Cyber | 0.2 | 4,000 | Integrates weapon targeting with user's vision. +2 Dice to attacks with Smartguns. |
+| Cybereyes (Rtg 1-4) | Cyber | 0.2 / Lvl | 5,000 / Lvl | Replaces eyes. Capacity for vision enhancements (e.g., Vision Mag, Low-Light). |
 | Leónization | Genetic | 0.0 | 2,500,000 | Anti-aging treatment. Resets physical age to prime, but introduces long-term spontaneous cellular degeneration risks. |
 
 #### 2. Armor & Weapons
 | Item | Type | Rating / Stats | Capacity | Cost (¥) | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Armor Jacket | Armor | 12 | 10 | 1,000 | Standard runner gear. Highly customizable. |
+| Ares Sleeping Tiger | Armor | 14 | 14 | 13,500 | Extremely high-end, discreet armor. |
+| Heavy Mil-Spec Armor | Armor | 18 | 15 | 35,000 | Extreme combat armor. Restricted. |
+| Chameleon Suit | Armor | 12 | 8 | 5,000 | Grants +2 Dice to Stealth tests. |
+| Actioneer Business Clothes | Armor | 8 | 5 | 1,500 | Discreet, stylish armored suit. |
+| Armor Clothing | Armor | 6 | 4 | 450 | Normal-looking clothes with basic ballistic weave. |
+| Lined Coat | Armor | 9 | 8 | 900 | Classic shadowrunner trench coat. Conceals weapons well. |
+| Synthleather Jacket | Armor | 8 | 6 | 200 | Common, cheap protection. |
 | Ares Predator V | Heavy Pistol | Dam: 8P, AP: -1 | — | 725 | Includes built-in Smartlink (requires DNI to use). |
 | Defiance T-250 | Shotgun | Dam: 10P, AP: -1 | — | 450 | Devastating in close quarters. |
+| Shiawase Arms Hearth Protector | Light Pistol | Dam: 5P, AP: 0 | — | 400 | Semi-automatic light pistol. |
+| Silenced Pistol | Light Pistol | Dam: 6P, AP: -2 | — | 600 | Built in silencer. |
+| Combat Knife | Melee | Dam: (STR+2)P, AP: -2 | — | 300 | Standard military-issue combat knife. |
+| Throwing Knives | Thrown | Dam: (STR+1)P, AP: -1 | — | 50 | Balanced for throwing. |
+| Monofilament Knife | Melee | Dam: 7P, AP: -8 | — | 1,500 | Blade edged with monofilament wire. Slices through armor. |
 
 #### 3. Lifestyles (Monthly Upkeep)
 | Lifestyle | Monthly Cost (¥) | Description & Mechanics |
