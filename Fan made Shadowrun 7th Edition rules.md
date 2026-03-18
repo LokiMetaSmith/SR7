@@ -2928,7 +2928,6 @@ Drain is resisted with Willpower + Tradition Attribute (Logic or Charisma).
 | Manipulation | Control Actions | Mana | LOS | Sustained | Force | Puppets the target's physical body. Resisted by WIL + LOG. |
 | Manipulation | Armor | Physical | LOS | Sustained | Force - 1 | Adds magical armor rating equal to hits. |
 | Manipulation | Barrier | Physical | LOS(A) | Sustained | Force | Creates a physical barrier of magical energy. |
-| Manipulation | Physical Barrier | Physical | LOS(A) | Sustained | Force | Creates a physical barrier of magical energy. |
 | Manipulation | Levitate | Physical | LOS | Sustained | Force | Moves target telekinetically. |
 | Manipulation | Petrify | Physical | LOS | Sustained | Force + 2 | Turns living tissue to stone. |
 | Detection | Mind Probe | Mana | Touch | Sustained | Force | Reads target's surface thoughts or deep memories. |
