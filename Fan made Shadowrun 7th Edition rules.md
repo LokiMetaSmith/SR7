@@ -3118,3 +3118,39 @@ When running this merged ruleset, keep the following in mind:
 *   **The Matrix is Everywhere**: Do not ask if something is connected to the Matrix; ask how deeply. A puddle of water can theoretically be used to relay a signal if a Technomancer pushes hard enough.
 *   **Magic is Unpredictable**: Play up the Background Count. If the runners are in a corporate sterile zone, the mana void should feel suffocating. If they are in a feral, overgrown urban ruin, the Wild Dice should be flying constantly.
 *   **Identity is Fluid**: With AIs having Essence, BTLs manifesting physically, and spirits turning data into crystal, the central theme of your campaign is: "What does it mean to be alive?" Reward players (with Karma or Edge) for engaging with NPCs like Sam and Ennis on an emotional, philosophical level.
+
+### Balancing Baseline Formulas
+To ensure consistency and allow automated tools (like `balance_generator.py`) to function properly, the following mathematical formulas serve as the baseline for calculating costs in this ruleset.
+
+#### Metatype Karma Cost Formula
+*   **Base Cost calculation:** Calculate the sum of the maximum limits for all 9 core Attributes (BOD, AGI, REA, STR, WIL, LOG, INT, CHA, EDG).
+*   Subtract 56 from this total.
+*   Multiply the difference by 15 Karma. If the result is negative, the base cost is 0.
+*   **Trait Modifiers:**
+    *   Thermographic Vision: +10
+    *   Low-Light Vision: +5
+    *   Built Tough (Rating): +10 per Rating point
+    *   Reach (+1): +5
+    *   Reach (+2): +10
+    *   Reach (+3): +15
+    *   Allergy: -15
+*   **Final Cost:** The final calculated sum is then rounded to the nearest multiple of 5.
+
+#### Weapon Nuyen Cost Formula
+*   **Base Cost:** 100¥
+*   **Damage Value (DV):** Add `(DV ^ 2) * 2`
+*   **Armor Piercing (AP):** If AP is negative, add `Absolute Value(AP) * 50`
+*   **Firing Mode:**
+    *   Full Auto (FA): +500
+    *   Burst Fire (BF): +200
+    *   Semi-Auto (SA): +50
+*   **Recoil Compensation (RC):** Add `RC * 100`
+*   **Ammo Capacity:** Add `Ammo Count * 5`
+*   **Category Multipliers:**
+    *   Pistols or Hold-Outs: Multiply the running total by 0.8
+    *   Sniper Rifles, Cannons, or Machine Guns: Multiply the running total by 1.5
+*   **Rounding:**
+    *   Values > 10,000¥ are rounded to the nearest 1,000
+    *   Values > 1,000¥ are rounded to the nearest 100
+    *   Values > 100¥ are rounded to the nearest 50
+    *   Values ≤ 100¥ are rounded to the nearest 10
