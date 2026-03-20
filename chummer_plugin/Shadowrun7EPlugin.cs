@@ -21,12 +21,6 @@ namespace Shadowrun7EPlugin
             // Initialization if necessary
         }
 
-        // TODO: Placeholder for custom Initiative rolling or specific rule variants as requested
-        public int CalculateCustomInitiative()
-        {
-            return 0;
-        }
-
         protected virtual void Dispose(bool disposing) { }
 
         public void Dispose()
