@@ -3113,6 +3113,72 @@ Because Essence is tied to your soul and the nanite-environment, healing is both
 | Natural Recovery (Physical) | Roll Body x 2. 1 Hit = 1 Box healed. | 1 Day interval. (Double time if living on Street lifestyle). |
 | Essence Therapy | Roll Charisma + Psychology (Threshold 4). Success restores 0.1 lost Essence (from trauma, not cyberware). | 1 Month interval. Costs 5,000¥ in therapy/retreat fees. |
 
+### VIII. STEALTH IN THE PANOPTICON: Hiding from the Goo
+If the air you breathe and the water you drink are crawling with nanites, how do you sneak into a Wuxing black site? You don't just hide your body; you have to hide your data-shadow.
+
+#### 1. Signature Spoofing (Matrix Stealth)
+Physical stealth (Agility + Sneaking) still works against biological eyeballs, but to bypass the ambient gaiasphere/Matrix, a hacker or rigger must actively mask the team's AR signatures.
+
+*   **The "Spoof Signature" Action:** A Complex Action requiring a DNI. The hacker rolls Logic + Hacking against the local Grid/Host's Rating x 2.
+*   **Sustaining:** This is a Sustained Action. While sustaining, the hacker takes a -2 penalty to all other actions.
+*   **Effect:** On a success, the hacker creates a localized "white noise" bubble of dead nanites around the team (Radius = Hacker's Logic in meters). Anyone inside the bubble is invisible to automated Matrix sensors and Patrol IC.
+*   **Faraday Suits:** Runners can wear specialized Faraday-weave suits. This grants +4 dice to physical Sneaking tests against sensors, but makes you completely unable to use wireless tech or DNI while fully sealed.
+
+### IX. TECHNOMANCERS: Kings of the Weird
+While Deckers force the nanites to obey via code, Technomancers speak to the grey goo on a biological, instinctual level. They don't use decks; their brains are the decks.
+
+#### 1. Fading (Technomancer Drain)
+Shaping reality with your mind exhausts the nervous system. Technomancers resist Fading using Willpower + Resonance. Like magical Drain, if the Fading value exceeds the Technomancer's Resonance rating, it deals Physical damage instead of Stun.
+
+#### 2. Complex Forms (Nanite Shaping)
+Technomancers weave "Threads" instead of casting spells.
+
+| Complex Form | Target | Fading | Effect |
+| :--- | :--- | :--- | :--- |
+| Puppeteer | Device | Lvl + 1 | Forces a device to take an action as if the Technomancer was the owner. |
+| Resonance Veil | Matrix | Lvl - 1 | Creates a flawless illusion within the nanite grid (e.g., faking a clearance badge or a fire alarm). |
+| Goo-Spike | Persona | Lvl + 2 | Violently commands ambient nanites inside the target's gear to short out. Deals Matrix damage equal to Level + Net Hits. |
+
+#### 3. Compiling Sprites (Physical Manifestation)
+Sprites are no longer just code. When compiled, they swarm ambient physical matter (dust, trash, loose electronics) to build a temporary physical body.
+
+*   **Mechanic:** Roll Resonance + Compiling vs. Sprite Level. Fading equals the Sprite's hits x 2.
+*   **Manifestation:** A compiled Sprite is Dual-Natured. It has a physical Body and Armor rating equal to its Level, and attacks using its Level + Resonance.
+
+### X. HOPEPUNK & EDGE MECHANICS
+In a grim, cyberpunk dystopia merged with an uncaring eldritch gaiasphere, genuine empathy is a superpower. "Hopepunk" means fighting for humanity and treating the weird children of the matrix (AIs, Sprites) with respect.
+
+#### 1. Using Edge
+Edge represents luck, grit, and the universe pushing back.
+
+*   **Spend 1 Edge:** Reroll all failed dice on a test.
+*   **Spend 2 Edge:** Negate a Glitch (turns it into a normal failure).
+*   **Spend 3 Edge:** Activate the Rule of 6 for an entire dice pool (all 6s explode).
+*   **Spend 4 Edge:** Automatically establish a Tether on a target or automatically soak all incoming Biofeedback/Drain.
+
+#### 2. Regaining Edge (The Hopepunk Triggers)
+Players start each session with Edge equal to their Edge attribute. GMs should award 1 Edge point during the game when a player:
+
+*   Takes a significant physical risk to protect a bystander or innocent NPC.
+*   Treats an Awakened/Digital entity (like Sam or Ennis) with genuine empathy and humanity, rather than treating them like a tool.
+*   Sacrifices a payday or personal gain to do the "right" thing.
+
+### XI. DESTABILIZATION (The "Spark+" Problem)
+What happens when a BTL-manifested persona, a physical AI drone body, or a Crystalline Spirit takes too much damage? The grey goo loses cohesion.
+
+Entities relying on nanites for physical form have a Destabilization Track.
+
+*   **The Trigger:** Whenever a manifested entity takes Physical damage that exceeds their Body rating in a single hit, or if they critically Glitch, they must roll to stabilize.
+*   **The Test:** Roll Body + Willpower (Threshold equals the damage taken or 3 for a Glitch).
+*   **Failure (Destabilization):** The entity's physical form begins to dissolve into grey goo. They immediately take an unresistable 2 boxes of Physical damage. Additionally, for the rest of the scene, any Wild Dice they roll that come up as a 1 or 2 count as a Glitch trigger.
+*   **Total Breakdown:** If their physical condition monitor fills up, they don't just fall unconscious—their physical shell melts into a puddle of inert nanites. (If it's a runner using a BTL, they suffer severe Essence trauma and take 10 unresistable Stun damage).
+
+### XII. SOCIAL RULES: Street Cred & Comms
+You can't just text your Fixer on an open commlink anymore. The silence is speaking volumes.
+
+*   **Secure Comms:** Standard commlinks are assumed to be monitored by the gaiasphere. To arrange a secure meet, runners must use pre-arranged physical dead-drops or encrypted pulses (like Kyber's three short, pause, two long).
+*   **Street Cred & AIs:** Your Street Cred (Karma earned divided by 10) directly impacts how AIs and Spirits view you. When rolling Etiquette or Negotiation with an Awakened or Matrix entity, you may add your Street Cred to your Dice Pool if you are known to treat non-humans well. If you have Notoriety for betraying AIs, that number is subtracted from your pool.
+
 ### Summary of the "Weird AF" Vibe Check for the GM
 When running this merged ruleset, keep the following in mind:
 *   **The Matrix is Everywhere**: Do not ask if something is connected to the Matrix; ask how deeply. A puddle of water can theoretically be used to relay a signal if a Technomancer pushes hard enough.
