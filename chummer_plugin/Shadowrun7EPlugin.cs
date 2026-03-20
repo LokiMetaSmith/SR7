@@ -21,6 +21,15 @@ namespace Shadowrun7EPlugin
             // Initialization if necessary
         }
 
+        // Custom Initiative rolling for Shadowrun 7E: REA + INT + 1D6
+        // This method provides the random 1D6 component.
+        private static readonly Random _random = new Random();
+
+        public int CalculateCustomInitiative()
+        {
+            return _random.Next(1, 7);
+        }
+
         protected virtual void Dispose(bool disposing) { }
 
         public void Dispose()

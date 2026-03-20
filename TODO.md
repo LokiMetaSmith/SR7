@@ -34,7 +34,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 **Goal:** Make the `Shadowrun7EPlugin.cs` functional and safe to use.
 
-*   [x] **Remove CalculateCustomInitiative:** It was determined that `CalculateCustomInitiative` is not part of the `IPlugin` interface in Chummer5a and was an invalid stub. It has been removed.
+*   [x] **Implement CalculateCustomInitiative:** Updated the method to return a 1D6 random roll (`new Random().Next(1, 7)`) to represent the dice component of the `REA + INT + 1D6` initiative formula.
 *   [ ] **Implement Core Overrides:**
     *   *Follow-up required:* Wait for the "Digital Essence" and "Initiative" rules to be finalized in the Markdown doc, then code those specific overrides into the C# `IPlugin` interface.
 
