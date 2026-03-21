@@ -3635,4 +3635,4 @@ To ensure consistency and allow automated tools (like `balance_generator.py`) to
     *   Values > 10,000¥ are rounded to the nearest 1,000
     *   Values > 1,000¥ are rounded to the nearest 100
     *   Values > 100¥ are rounded to the nearest 50
-    *   Values ≤ 100¥ are rounded to the nearest 10
+    *   Values <= 100¥ are rounded to the nearest 10
