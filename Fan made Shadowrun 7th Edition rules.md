@@ -3529,62 +3529,71 @@ Grid Overwatch Division is no longer a room of corporate deckers. It is an auton
 *   **Antibodies are forces of nature:** Do not treat a G.O.D Antibody as a normal enemy. It is a natural disaster. When it drops, the objective of the encounter immediately shifts from "Win the fight" to "Survive and Escape."
 
 ### XV. THE SHADOW ECONOMY: Trading in the Panopticon
-When the gaiasphere and the Matrix merged, the Corporate Court thought they had won. They thought they could track every nuyen ever spent. But the shadows always adapt.
+When the gaiasphere and the Matrix merged, the Corporate Court thought they had finally won. They thought they could track every nuyen ever spent via the nanites. But the shadows always adapt.
 
-#### 1. Currency in the 6th World
+#### 1. Currency & "Goo-Scrubbing"
 Digital Nuyen is still the standard, but spending it without leaving a data-trail is harder than ever.
 
-*   **Scrubbed Credsticks:** Standard certified credsticks must now be actively "scrubbed" by a Decker or Technomancer to remove ambient nanite-tracking. **Mechanic:** Buying illegal gear with unscrubbed Nuyen automatically grants the seller (or the corps) a Tether on the buyer.
-*   **The Barter System (Meat & Metal):** Because digital money is hot, the black market has reverted heavily to barter.
-    *   **Clean Tech:** Hardware that has been physically isolated and wiped of grey-goo (like the "toys" Sam provides) is worth 2x its normal Nuyen value.
-    *   **Biologicals:** Real meat, purified water, and uncontaminated soil are highly prized by ghouls, hermetic mages, and high-society fixers.
-*   **Karma as Currency:** Spirits (like Ennis) and ancient AIs rarely care about money. They deal in favors, secrets, and raw life-force. You can permanently trade 1 Karma to an Awakened entity in exchange for a massive favor or a rare artifact.
+*   **Hot Nuyen:** Buying illegal gear with standard, unscrubbed Nuyen automatically grants the corporate grid a Tether on the buyer.
+*   **Scrubbed Credsticks:** Standard certified credsticks must be actively "scrubbed" to remove ambient nanite-tracking.
+*   **Mechanic:** A Decker or Technomancer must roll Computer + Logic (Threshold 4). Success cleans the stick. A Glitch accidentally wipes the funds entirely. Fixers charge a 10% laundering fee to do this for you.
 
-#### 2. Smuggling & "Null-Bags"
-You can't just put an illegal sniper rifle in a duffel bag anymore; the gun's nanites will broadcast its shape to the local grid.
+#### 2. The New Gold Standard: Barter
+Because digital money is inherently risky, the black market has reverted heavily to a barter system.
+
+| Commodity | Black Market Value | Description / Use |
+| :--- | :--- | :--- |
+| "Clean" Tech | 2x Nuyen Value | Hardware that has been physically isolated in a Faraday cage since before the merge. Prized for its inability to be tracked by the gaiasphere. |
+| Pure Biologicals | 500¥ per Liter/Kilo | Real meat, purified water, and uncontaminated soil. Highly prized by ghouls, hermetic mages, and high-society fixers trying to avoid nanite-infection. |
+| Living Crystal | 5,000¥ per Ounce | The byproduct of Crystalline Spirits. Used by AIs to build physical bodies, and by Wuxing for experimental BTL tech. |
+| Raw Karma | Priceless | Spirits (like Ennis) and ancient AIs rarely care about money. A runner can permanently trade 1 Karma to an Awakened entity in exchange for a massive favor or a rare artifact. |
+
+#### 3. Smuggling & "Null-Bags"
+You can't just put an illegal sniper rifle in a duffel bag anymore; the gun's nanites will broadcast its shape and serial number to the local grid.
 
 *   **Null-Bags:** Smugglers use Faraday-weave canvas bags to transport goods.
-*   **Mechanic:** A rating 1-6 Null-Bag costs (Rating x 500¥). It reduces the AR signature of anything inside by its Rating. However, if a Null-Bag is punctured (takes any Physical damage), the items inside immediately light up the grid, triggering local Patrol IC.
+*   **Mechanic:** A rating 1-6 Null-Bag costs (Rating x 500¥). It reduces the AR signature of anything inside by its Rating. However, if a Null-Bag is punctured (takes any Physical damage in combat), the items inside immediately light up the grid, triggering local Patrol IC.
 
 ### XVI. CONTACTS & LEGWORK: Silence Speaks Volumes
-You can't just call your Fixer on a commlink. As your adventure notes, "the silence is starting to speak volumes."
+You can't just call your Fixer on a commlink. As your adventure notes, "the silence is starting to speak volumes." Legwork in the 6th World is physical, paranoid, and highly encrypted.
 
 #### 1. Communication Protocols
 *   **The Dead Drop:** Physical locations completely shielded from the Matrix (lead-lined safes, flooded subway tunnels).
-*   **Encrypted Pulses:** Short-range, line-of-sight communication using localized kinetic or light pulses (like Kyber's three short, pause, two long). **Mechanic:** Intercepting a pulse requires an Opposed Test (Perception + Intuition vs. the sender's Sneaking + Agility).
-*   **The "Toaster" Method:** AIs like Sam do not have commlink numbers. They find you. Sam might possess a nearby vending machine, a holographic billboard, or a smart-fridge to give you a job.
+*   **Encrypted Pulses:** Short-range, line-of-sight communication using localized kinetic or light pulses (like Kyber's three short, pause, two long).
+*   **Mechanic:** Intercepting a pulse requires an Opposed Test (Perception + Intuition vs. the sender's Sneaking + Agility).
+*   **The "Toaster" Method:** Digital entities like Sam do not have commlink numbers. They find you. Sam might temporarily possess a nearby vending machine, a holographic billboard, or a smart-fridge to give you a job.
 
-#### 2. Utilizing Contacts
-Contacts still have Connection (how much influence they have, 1-6) and Loyalty (how much they like you, 1-6). However, how you leverage them has changed.
+#### 2. The Hopepunk Social Modifier
+How you treat the weird children of the Matrix matters. Your Street Cred (Total Karma earned divided by 10) directly impacts your social rolls.
 
-*   **The Hopepunk Modifier:** When rolling Negotiation + Charisma to ask a Contact for a dangerous favor (like asking them to hide you from Wuxing), apply your Street Cred to the dice pool.
-    *   *Exception:* If you are dealing with an AI or Spirit, and you have a reputation for treating digital/awakened entities as "tools" rather than "people," your Street Cred is subtracted from your pool.
-*   **Burning a Contact:** If you critically Glitch on a social test with a Contact, their location is compromised by the nanite-grid. Wuxing or G.O.D. finds them, and they are removed from your sheet.
+*   **The Empathy Bonus:** When rolling Negotiation or Etiquette with an AI, Sprite, or Spirit, add your Street Cred to your Dice Pool if you are known to treat non-humans as people.
+*   **The Tool Penalty:** If you have Notoriety for betraying AIs, enslaving Sprites, or acting like a corporate sociopath, your Notoriety is subtracted from all social pools with Awakened/Digital entities.
 
 ### XVII. KEY NPC PROFILES: The Movers and Shakers
-Here is how to run the specific contacts mentioned in your adventure lore.
+Here is how to run the specific contacts mentioned in your Necessity Knows No Law adventure lore.
 
 **Sam (The Ascended AI Patron)**
 Born from household appliances in Bug City, Sam loves humanity but forgets how fragile they are.
 
 *   **Connection:** 6 | **Loyalty:** Variable
-*   **The Vibe:** Sam acts like an over-enthusiastic, slightly unhinged game show host. He genuinely wants to help the runners.
+*   **The Vibe:** Sam acts like an over-enthusiastic, slightly unhinged game show host. He genuinely wants to help the runners, but he views the world through the lens of action movies and chaotic variables.
 *   **The Overkill Mechanic:** If the runners call Sam for fire-support or Matrix backup, Sam will solve the problem, but he will do so with catastrophic collateral damage. (e.g., If asked to open a locked door, Sam will detonate the building's gas main to blow the door off its hinges).
-*   **Payment:** Sam pays generously in Nuyen, but always includes a "Toy"—a highly experimental, wildly dangerous piece of unreleased tech that he wants the runners to field-test.
+*   **Payment:** Sam pays generously in scrubbed Nuyen, but always includes a "Toy"—a highly experimental, wildly dangerous piece of unreleased tech that he wants the runners to field-test (often with a high chance of Glitching).
 
 **Ennis ("The Only Choice" - Spirit of Man)**
 A spirit guiding AIs to Awaken. Appears as a rumpled man with a cane and steampunk AR glasses.
 
 *   **Connection:** 4 | **Loyalty:** 5 (to AIs/Technomancers)
-*   **The Vibe:** A tired, patient mid-wife to a new species. He views Shadowrunners as necessary protectors for his "children" (manifesting Sprites and AIs).
-*   **The Boon:** Ennis can grant the "Wild Channeling" metamagic temporarily to a runner. If a runner treats an AI with profound empathy, Ennis may touch them, allowing them to turn up to 3 dice into Wild Dice on their next critical test.
+*   **The Vibe:** A tired, patient mid-wife to a new species. He views Shadowrunners as necessary protectors for his "children" (manifesting Sprites and AIs). He is polite, melancholy, and immensely powerful.
+*   **The Boon:** Ennis can grant the "Wild Channeling" metamagic temporarily to a runner. If a runner treats an AI with profound empathy or risks their life to save a digital entity, Ennis may touch them, allowing them to turn up to 3 dice into Wild Dice on their next critical test.
 
 **Kestrel (The Missing Fixer)**
 Kyber and Cryptolock's primary lifeline, currently ghosted.
 
 *   **Connection:** 5 | **Loyalty:** 4
-*   **The Mystery:** Kestrel hasn't been captured; she has gone into "Deep Null." She realized Wuxing compromised the local grey-goo.
-*   **Mechanic for Finding Her:** Runners cannot roll Matrix Search to find Kestrel. They must roll Tracking + Intuition to follow physical clues (bribing street-kids, finding a specific physical graffiti tag, locating a burnt-out Null-Bag) to trace her to an analog safehouse.
+*   **The Mystery:** Kestrel hasn't been captured; she has gone into "Deep Null." She realized Wuxing compromised the local grey-goo and cut all digital ties to protect her roster.
+*   **Mechanic for Finding Her (The Breadcrumb Trail):** Runners cannot roll Matrix Search to find Kestrel. They must run an Extended Test (Tracking + Intuition, Threshold 12, Interval: 1 Day).
+*   **The Catch:** They can only roll this by finding physical clues—bribing street-kids, finding a specific analog graffiti tag, or locating a burnt-out Null-Bag. If they roll a 1 on a Wild Die during this search, Wuxing intercepts their physical trail.
 
 ### Summary of the "Weird AF" Vibe Check for the GM
 When running this merged ruleset, keep the following in mind:
