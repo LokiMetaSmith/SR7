@@ -465,3 +465,74 @@ The White Tower's defenses are managed by the 'Oracle' AI.
 *   **Loyalty:** 4
 *   **The Mystery:** Hasn't been captured; she has gone into "Deep Null." She realized Wuxing compromised the local grey-goo.
 *   **Mechanic for Finding Her:** Runners cannot roll Matrix Search to find Kestrel. They must roll Tracking + Intuition to follow physical clues.
+### Anatomy of a Nanite Host (The Data-Hive)
+Corporate Hosts no longer float in a pristine digital sky. They are anchored to physical locations, usually deep underground, where ambient noise (mana/nanite fluctuations) can be controlled. A Host is no longer a cloud server. It is a highly concentrated, localized swarm of nanites, often anchored to a physical location, a powerful AI, or a Matrix Ley Line. Wuxing doesn't build "server rooms" anymore; they build sensory-deprivation vats filled with living crystal and grey goo.
+
+#### 1. Hive Ratings & The Physical Overlap
+When building a Wuxing site, the Host Rating (1-12) determines not just its Matrix stats, but how physically weird the location gets. This represents the density and sophistication of the nanite swarm.
+From the Rating, generate the Host's Matrix Attributes (ASDF):
+
+*   **Firewall (F):** Rating + 3 (How hard it is to Tether and resist damage).
+*   **Data Processing (D):** Rating + 2 (How fast it processes and spots intruders).
+*   **Attack (A):** Rating + 1 (How hard it hits back with Biofeedback).
+*   **Sleaze (S):** Rating (How well it hides its deepest secrets).
+
+| Hive Rating | Concept / Target | Physical Manifestation in the Meat World | Matrix Attributes (A/S/D/F) |
+| :--- | :--- | :--- | :--- |
+| 1 - 3 | Local Stuffer Shack, Low-sec warehouse. | A faint metallic taste in the air. Static shocks when touching doors. | Rtg+1 / Rtg / Rtg+2 / Rtg+3 |
+| 4 - 6 | Wuxing Regional Branch, Kyber's Hub. | Walls seem to "breathe" slightly. Dust motes hang suspended in the air. | Rtg+1 / Rtg / Rtg+2 / Rtg+3 |
+| 7 - 9 | Wuxing Black Site, Experimental Labs. | Server rooms are replaced by pools of glowing, conductive fluid and stalagmites of Living Crystal. | Rtg+1 / Rtg / Rtg+2 / Rtg+3 |
+| 10 - 12 | Megacorp HQ, Dragon's Lair. | Complete overlap. Gravity feels wrong. The air is thick, breathable liquid data. | Rtg+1 / Rtg / Rtg+2 / Rtg+3 |
+
+#### 2. The Architecture of a Wuxing Black Site
+When a Decker (like Cryptolock) jacks in (Hot-Sim DNI only), their perception of the Host is shaped by the nanites. If Cryptolock jacks into a Rating 8 Wuxing Hive, here is what it looks like:
+
+*   **The Membrane:** The outer edge of the Host. In meatspace, this might look like a shimmering heat-wave in the air. Cryptolock must place a Tether on the Host to pass through the Membrane.
+*   **The "Server Room":** Instead of blinking lights and cooling fans, the team finds a vault filled with sensory-deprivation pods. Inside the pods are bio-engineered brains or captive Crystalline Spirits, forced to act as living processors.
+*   **The "Firewall":** Mechanically, it resists hacks. Thematically, it is a physical cloud of acidic, defensive grey-goo that thickens around the facility's perimeter. If Cryptolock fails a sleaze action, the walls of the physical room literally sweat nanites to try and short out his deck.
+*   **The "Archive":** Deep storage isn't a zip file. It is a geode of solid crystal. To access old files, the data must be physically cracked open or thawed out using a Resonance ritual.
+*   **Matrix Background Count:** High-Rating Hosts have a dense nanite atmosphere. A Host of Rating 8+ acts as a Matrix Ley Line, meaning Cryptolock must roll Wild Dice equal to (Host Rating / 2) on all hacking tests.
+
+### Intrusion Countermeasures (The Immune System)
+Standard IC programs are now manifested immune responses. They are Dual-Natured, meaning they exist in the decker's DNI interface and hover in the physical room as swarms of hard-light and dust. IC rolls Host Rating x 2 for all tests and uses the Host's ASDF limits.
+
+| IC Type | Thematic Appearance | Mechanic |
+| :--- | :--- | :--- |
+| Patrol IC ("Seeker Moths") | Floating orbs of white light or glowing, moth-like constructs fluttering around cameras. | Rolls Perception vs. Sleaze to spot intruders. Does not attack, but attaches to the runner's AR signature, illuminating them and sharing their Tether with the Host. |
+| Binder ("Tar Baby") | A localized thickening of the grey goo; physical air becomes heavy. | If the decker fails an action against it, it drops his Data Processing by 1. If DP hits 0, he is physically paralyzed and cannot jack out. |
+| Killer IC ("Phagocytes") | Jagged, red fractal shards or amorphous blobs of hungry nanites. | Roll Logic + Attack vs. Firewall. They attempt to physically chew through cables, Null-Bags, and flesh while simultaneously dealing Matrix damage. |
+| Black IC ("Necrophages") | A faceless humanoid made of black glass that physically grabs the hacker's avatar. | Deals Biofeedback Stun or Physical Damage (Attack vs. Firewall). If it scores 2 net hits, it lock-Tethers the hacker, preventing them from jacking out. In the meat world, this looks like the decker's veins turning black as corrupted nanites flood their nervous system. |
+
+### Extracting "Living" Data
+In the 6th World, a highly encrypted Wuxing paydata file isn't a text document—it is a rudimentary, trapped digital organism. You cannot just copy/paste it. You have to capture it alive.
+
+1.  **Locate the File (Matrix Perception):** *Logic + Data Processing.* The decker must sift through the Hive's background noise to find the target. The file often actively hides, mimicking the ambient code like a chameleon.
+2.  **Subdue the Organism (Cybercombat / Hacking):** *Opposed Test vs File Rating x 2.* The data will panic when grabbed. The decker must roll Logic + Hacking to soothe it (Sleaze) or Logic + Cybercombat to beat it into submission (Attack). If the decker Glitches here, the file's Destabilization Track triggers, and it begins to permanently fragment into useless grey goo.
+3.  **Sever the Tethers:** *Complex Action.* Wuxing embeds sympathetic Tethers into their high-value files. The decker must spend a Complex Action and successfully roll against the Host's Firewall to sever the file from the Host's neural network. Doing this immediately alerts the Hive.
+4.  **Physical Containment (The Null-Bag):** *Hardware + Logic.* Because the data is saturated with nanites, storing it on a standard commlink will melt the device. The data must be physically downloaded into a specialized, shielded drive and immediately placed into a Null-Bag to prevent it from broadcasting an SOS to Wuxing.
+
+### Looting the Hive
+When the runners successfully pull data or tech from a Host, roll on this table to see what strange, nanite-infused "Loot" Sam the AI might pay extra for:
+
+| 1D6 Roll | "The Grey Goo Loot Table" |
+| :--- | :--- |
+| 1 | A dormant, corrupted Sprite trapped in a physical glass vial. |
+| 2 | A Wuxing Null-Bag containing 3 clips of experimental APDS rounds. |
+| 3 | A "Fuchsia Dragon" BTL master-chip (Highly volatile, worth 10,000¥ to the right Fixer). |
+| 4 | A shard of Living Crystal (Can be used by Ennis as a material link for a ritual). |
+| 5 | A scrubbed, high-capacity credstick holding 5,000¥. |
+| 6 | A pristine piece of "Dead Tech" (an old-world, non-wireless hard drive with uncorrupted blueprints). |
+
+### Running the Hack: A Practical Example
+Here is how an infiltration into a Wuxing Black Site plays out at the table, keeping both the Hacker (Cryptolock) and the Street Sam/Rigger (Kyber) engaged. Split the party's tension: while Cryptolock is hot-simmed in, wrestling with a terrified, glowing data-entity that is trying to melt his brain, Kyber has to physically defend Cryptolock's meat body from the facility's physical security and the manifested IC swarms that are leaking out of the walls. It creates a beautiful, chaotic synthesis of meat-space and Matrix combat.
+
+*   **Step 1: The Approach (Signature Spoofing)**
+    Kyber and Cryptolock are outside the Wuxing lab. Cryptolock rolls Spoof Signature (Sustained) to create a white-noise bubble of dead nanites around them. Kyber rolls Physical Sneaking, benefiting from the bubble, to get them to the physical access point (a data-tap on a coolant pipe).
+*   **Step 2: The Breach (Establishing a Tether)**
+    Cryptolock jacks in (Hot-Sim). He needs to enter the Host. He rolls Logic + Hacking vs. Host Rating + Firewall. Success: He gains 1 Tether and slips through the Membrane.
+*   **Step 3: The Heist (Extracting "Living Data")**
+    Cryptolock locates the payload—evidence of the Fuchsia Dragon experiments. But in the 6th World, data is alive. It is a dense, crystalline memory-cluster. Cryptolock realizes he cannot just "download" it. He has to extract it into a secure, physical Null-Bag or a blank, high-capacity Bio-Deck. He begins an Extended Test (Logic + Computer) to unpack the crystal.
+*   **Step 4: The Escalation (Combat in Two Worlds)**
+    While unpacking the data, Cryptolock rolls a 1 on a Wild Die.
+    *The Consequence:* The Host spawns a G.O.D. Antibody (as statted in the Bestiary) directly into the room with Kyber's physical body.
+    *The Split-Screen Action:* Cryptolock is desperately fighting off Black IC in the Matrix to finish the download, while Kyber is physically shooting a hard-light Antibody with Nanite-Buster rounds to protect Cryptolock's meat-body from being vaporized.
