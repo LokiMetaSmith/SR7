@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <characters>
   <character>
     <name>Kyber</name>
-    <metatype>Human</metatype>
+    <metatype>Ork</metatype>
     <attributes>
       <attribute>
         <name>BOD</name>
-        <value>5</value>
+        <value>7</value>
       </attribute>
       <attribute>
         <name>AGI</name>
-        <value>6</value>
+        <value>5</value>
       </attribute>
       <attribute>
         <name>REA</name>
@@ -18,23 +18,23 @@
       </attribute>
       <attribute>
         <name>STR</name>
-        <value>4</value>
+        <value>6</value>
       </attribute>
       <attribute>
         <name>WIL</name>
-        <value>5</value>
-      </attribute>
-      <attribute>
-        <name>LOG</name>
         <value>4</value>
       </attribute>
       <attribute>
+        <name>LOG</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
         <name>INT</name>
-        <value>5</value>
+        <value>4</value>
       </attribute>
       <attribute>
         <name>CHA</name>
-        <value>3</value>
+        <value>2</value>
       </attribute>
       <attribute>
         <name>EDG</name>
@@ -42,7 +42,7 @@
       </attribute>
       <attribute>
         <name>ESS</name>
-        <value>2.1</value>
+        <value>2.5</value>
       </attribute>
       <attribute>
         <name>MAG</name>

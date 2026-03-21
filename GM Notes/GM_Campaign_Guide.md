@@ -256,14 +256,17 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Skills:** Unarmed Combat 5, Tracking 6, Perception 6.
 *   **Powers:** Animal Control, Enhanced Senses, Fear, Guard.
 
-**Kyber (Jaded Operative / Street Samurai)**
-*   **BOD** 5, **AGI** 6(8), **REA** 5(7), **STR** 4(6), **WIL** 5, **LOG** 4, **INT** 5, **CHA** 3, **EDG** 4, **ESS** 2.1
-*   **Condition Monitor:** 11/11
-*   **Armor:** 12 (Armor Jacket)
-*   **Skills:** Automatics 6, Unarmed Combat 5, Sneaking 5, Perception 5, Intimidation 4.
-*   **Qualities:** CFD (Observer, Enforcer, Negotiator), Toughness.
-*   **Weapons:** Ares Alpha (Assault Rifle, 15P, -10 AP, SA/BF/FA), Unarmed Strike (6P, Close).
-*   **Augmentations:** Wired Reflexes 2, Muscle Replacement 2, Smartlink, Cybereyes (Rating 2).
+**Kyber: The Paranoid Vanguard (Street Samurai / Scout)**
+Kyber knows that in a world where the air watches you, the only way to survive is to go analog. They rely on heavy armor, old-school traps, and brutal efficiency to keep Cryptolock breathing while the hacker is deep in the goo.
+*   **Metatype:** Ork (High physical resilience)
+*   **Street Cred:** 4 | **Notoriety:** 1
+*   **Karma Spent:** ~350 (Veteran level)
+*   **BOD** 7, **AGI** 5, **REA** 5(6), **STR** 6, **WIL** 4, **LOG** 3, **INT** 4, **CHA** 2, **EDG** 4, **ESS** 2.5
+*   **Initiative:** 10 + 2D6
+*   **Condition Monitor:** Physical 12 / Stun 10
+*   **Core Skills (Dice Pools):** Firearms 5 (Pool: 10) — Spec: Shotguns (12); Sneaking 5 (Pool: 10) — Uses Null-Suit for +4 vs. Sensors; Close Combat 4 (Pool: 9); Perception 4 (Pool: 8) — Spec: Analog/Physical tracking (10); Engineering (Traps) 4 (Pool: 7).
+*   **Augmentations (The Cost of Meat):** Wired Reflexes I (Essence 2.0): +1 REA, +1 Initiative Die; Muscle Replacement I (Essence 1.0): +1 STR, +1 AGI; Datajack (Essence 0.1): Kept strictly offline unless absolutely necessary. (Note: Kyber is at 2.5 Essence. If they lose 0.6 more, they risk gaining the "Augmentation Addict" quality.)
+*   **Gear & Arsenal:** Wuxing "Acquired" Null-Suit (Armor 14): Grants immunity to passive Matrix tracking and Tethers (no wireless); Defiance T-250 Shotgun (Damage: 10P | AP: -1): Loaded with standard rounds. Has one spare clip of Nanite-Buster Rounds (Damage 12P, AP -3 vs manifested entities) hidden in a lead-lined pouch; Analog Survival Kit: Tripwires, thermal smoke grenades, and a mechanical pulse-emitter for secure, non-Matrix comms (three short, pause, two long); Null-Bags (Rating 4): Two of them, used to stash Cryptolock's hot loot or severed data-drives.
 
 **Logi Prime (Deceased Technomancer Ghost)**
 *   **BOD** 3, **AGI** 4, **REA** 4, **STR** 3, **WIL** 6, **LOG** 6, **INT** 5, **CHA** 5, **EDG** 5, **ESS** 6.0, **RES** 6
@@ -297,13 +300,18 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Qualities:** Magician, Technomancer, Reality Warper (Custom).
 *   **Powers:** Warps reality, absorbs magical/kinetic energy, stabilized Ley Line.
 
-**Cryptolock (Ghoul Rocker / Fixer)**
-*   **BOD** 6, **AGI** 4, **REA** 4, **STR** 5, **WIL** 4, **LOG** 3, **INT** 4, **CHA** 5, **EDG** 3, **ESS** 0.1, **MAG** 1
-*   **Condition Monitor:** 11/10
-*   **Armor:** 8 (Synthleather Jacket)
-*   **Skills:** Performance (Guitar) 6, Con 5, Negotiation 5, Unarmed Combat 4.
-*   **Qualities:** Infection (HMHVV III), Dual Natured, Fame (Local), First Impression.
-*   **Weapons:** Unarmed Strike (Claws) (5P, -1 AP, Close).
+**Cryptolock: The Gaiasphere Whisperer (Technomancer)**
+Cryptolock doesn't just hack the Matrix; they breathe it. They are a Technomancer in a world where the grey goo is everywhere. When they close their eyes, they don't see code—they see the living, crystalline pulse of the planet.
+*   **Metatype:** Elf (High Charisma for Sprite control and Street Cred)
+*   **Street Cred:** 6 | **Notoriety:** 0
+*   **Karma Spent:** ~350 (Veteran level)
+*   **BOD** 3, **AGI** 3, **REA** 3, **STR** 2, **WIL** 6, **LOG** 5, **INT** 5, **CHA** 6, **EDG** 3, **RES** 6
+*   **Initiative:** 8 + 1D6 (Hot-Sim Matrix Initiative: 10 + 3D6)
+*   **Condition Monitor:** Physical 10 / Stun 11
+*   **Fading Resistance:** 12 Dice (WIL + RES)
+*   **Core Skills (Dice Pools):** Compiling (Sprites) 6 (Pool: 12); Hacking 5 (Pool: 10) — Used for Spoof Signature & Tethers; Computer 5 (Pool: 10); Electronic Warfare 4 (Pool: 9); Etiquette (Matrix Entities) 4 (Pool: 10) — Adds Street Cred (+6) when dealing with AIs like Sam.
+*   **Complex Forms (Nanite Threads):** Spoof Signature (Lvl - 1 Fading): Creates the sustained white-noise bubble that allows Kyber to actually use their Sneaking skill without setting off alarms; Goo-Spike (Lvl + 2 Fading): Deals Matrix damage equal to Level + Net Hits by violently shorting out the nanites in a target's gear; Puppeteer (Lvl + 1 Fading): Forces a device to take an action.
+*   **Sprites & Gear:** Manifesting Courier Sprite (Level 4): Cryptolock keeps a registered Sprite on standby. When called, it swarms ambient dust to form a physical, crystalline ferret. It can physically run a datachip across a room while dodging bullets; Hermes Ikon Commlink: Used strictly to project a fake AR profile to avoid looking completely "blank" to casual observers; Lined Coat (Armor 9): Woven with minor Faraday threading.
 
 **Himerus (Scholar / Ancient Vampire)**
 *   **BOD** 6, **AGI** 6, **REA** 6(8), **STR** 6, **WIL** 7, **LOG** 7, **INT** 6, **CHA** 8, **EDG** 5, **ESS** 6.0, **MAG** 8
@@ -523,16 +531,9 @@ When the runners successfully pull data or tech from a Host, roll on this table 
 | 5 | A scrubbed, high-capacity credstick holding 5,000¥. |
 | 6 | A pristine piece of "Dead Tech" (an old-world, non-wireless hard drive with uncorrupted blueprints). |
 
-### Running the Hack: A Practical Example
-Here is how an infiltration into a Wuxing Black Site plays out at the table, keeping both the Hacker (Cryptolock) and the Street Sam/Rigger (Kyber) engaged. Split the party's tension: while Cryptolock is hot-simmed in, wrestling with a terrified, glowing data-entity that is trying to melt his brain, Kyber has to physically defend Cryptolock's meat body from the facility's physical security and the manifested IC swarms that are leaking out of the walls. It creates a beautiful, chaotic synthesis of meat-space and Matrix combat.
+### How They Play Together (The Synergy): A Practical Example
+If these two hit a Wuxing Black Site, here is the mechanical loop:
 
-*   **Step 1: The Approach (Signature Spoofing)**
-    Kyber and Cryptolock are outside the Wuxing lab. Cryptolock rolls Spoof Signature (Sustained) to create a white-noise bubble of dead nanites around them. Kyber rolls Physical Sneaking, benefiting from the bubble, to get them to the physical access point (a data-tap on a coolant pipe).
-*   **Step 2: The Breach (Establishing a Tether)**
-    Cryptolock jacks in (Hot-Sim). He needs to enter the Host. He rolls Logic + Hacking vs. Host Rating + Firewall. Success: He gains 1 Tether and slips through the Membrane.
-*   **Step 3: The Heist (Extracting "Living Data")**
-    Cryptolock locates the payload—evidence of the Fuchsia Dragon experiments. But in the 6th World, data is alive. It is a dense, crystalline memory-cluster. Cryptolock realizes he cannot just "download" it. He has to extract it into a secure, physical Null-Bag or a blank, high-capacity Bio-Deck. He begins an Extended Test (Logic + Computer) to unpack the crystal.
-*   **Step 4: The Escalation (Combat in Two Worlds)**
-    While unpacking the data, Cryptolock rolls a 1 on a Wild Die.
-    *The Consequence:* The Host spawns a G.O.D. Antibody (as statted in the Bestiary) directly into the room with Kyber's physical body.
-    *The Split-Screen Action:* Cryptolock is desperately fighting off Black IC in the Matrix to finish the download, while Kyber is physically shooting a hard-light Antibody with Nanite-Buster rounds to protect Cryptolock's meat-body from being vaporized.
+*   **The Approach:** Cryptolock threads Spoof Signature, rolling Logic + Hacking. They sustain the bubble of dead nanites around Kyber. Kyber rolls Agility + Sneaking (+4 from the Null-Suit) to physically breach the facility.
+*   **The Hack:** Once inside, Cryptolock goes into a DNI Hot-Sim trance to pull data from a localized Nanite Host. They are physically helpless.
+*   **The Defense:** Kyber sets up analog tripwires at the door. If a Wuxing Null-Sec team breaches, Kyber engages in brutal, close-quarters physical combat while Cryptolock fights Black IC in the digital realm. If Cryptolock rolls a 1 on a Wild Die and summons a G.O.D. Antibody, Kyber has to load the Nanite-Buster rounds to physically destroy the immune response before it fries Cryptolock's brain.
