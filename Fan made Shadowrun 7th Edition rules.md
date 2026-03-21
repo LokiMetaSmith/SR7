@@ -68,6 +68,7 @@ All characters build and advance using **Karma**.
 
 *(Note: Magic and Resonance both start at 0. You must buy one of these qualities at character generation to unlock the stat, which starts at Rating 1).*
 
+
 1. [Dice & Tests](#bookmark=id.x87h504b24hr)  
 2. [Character Creation & Advancement](#bookmark=id.kkav13e62x7p)  
 3. 
@@ -3084,7 +3085,293 @@ Your homebrew heavily features unique Awakened/Digital beings. Here is how to st
 | Spirit of Man | (Ennis) A spirit guiding AIs to "Awaken." | Manifestation: Appears human (often reading AR news). Can interact with the nanite-Matrix organically without DNI. Can grant wild dice to AIs or Sprites making Matrix/Resonance tests. |
 | Ascended AI | (Sam) Born from appliances, forged in Bug City. | Overkill Protocol: If Sam acts in combat, he automatically uses Wild Dice for all weapon attacks. If crossed, he ignores collateral damage. Has an Essence of 6 and a massive physical drone body. |
 
-### VI. COMBAT & WEAPONRY (D6 System Integration)
+---
+
+### VI. LIFE PATH CHARACTER CREATION (Optional)
+
+The Life Path system provides an alternative or supplementary method to standard Karma-buy generation. Inspired by classic sci-fi RPGs but adapted to the Shadowrun 7th Edition D6 dice pool system, it generates a character's history in 4-year terms, granting Karma pools, Skills, Attributes, Nuyen, and narrative elements like Essence changes or Contacts.
+
+**1. Origins & Backgrounds**
+Roll 1D6 or choose a background. You gain a pool of 10 Karma specifically dedicated to the listed Skills, or you gain +1 rating in one of the listed Skills (up to a maximum rating of 4).
+
+| D6 | Origin | Starting Skills / Benefits |
+| :--- | :--- | :--- |
+| 1 | Corporate Arcology | Academics, Computers, Etiquette |
+| 2 | The Barrens | Survival, Unarmed Combat, Street Navigation |
+| 3 | SINless Drifter | Con, Stealth, Scavenging |
+| 4 | Rural Awakened | Animal Handling, Survival, Arcana |
+| 5 | Street Gang | Intimidation, Pistols, Blades |
+| 6 | Matrix Junkie | Hacking, Hardware, Electronics |
+
+**2. Pre-Career Education (Ages 18-21)**
+Attempt to enter higher education before starting a career.
+* **Corporate University:** Qualification: LOG + Academics (Threshold 2). If successful: Gain +1 LOG or +1 EDU (Knowledge skill), and 15 Karma for Knowledge/Technical skills. Graduation: INT + Academics (Threshold 3). If successful, graduate with honors, gain +1 Etiquette, and +1 Dice Pool on Corporate Qualification checks.
+* **Magical Academy:** (Requires Awakened Quality). Qualification: INT + Arcana (Threshold 2). If successful: Gain +1 MAG (up to max) or 15 Karma for Magical skills. Graduation: WIL + Spellcasting/Conjuring (Threshold 3). If successful, gain 1 Free Spell or Spirit Name and +1 Dice Pool on Magical Initiate Qualification.
+* **Military Training:** Qualification: BOD + Athletics (Threshold 2). If successful: Gain +1 BOD or +1 STR, and 15 Karma for Combat skills. Graduation: WIL + Firearms/Melee (Threshold 3). If successful, gain +1 Dice Pool on Military/Mercenary or Lone Star Qualification checks.
+* **Street Schooling:** Automatic qualification. Gain 10 Karma for any Street or Active skills. You learn the hard way. Gain a Contact (Rating 1).
+
+**3. Career Terms (4 Years Each)**
+For each term, follow these steps:
+1. **Qualification:** Roll Attribute + Skill against the listed Threshold. If you fail, you must choose the Drifter/SINless career or be Drafted (Military) for this term.
+2. **Survival:** Roll Attribute + Skill against the listed Threshold. If you fail, roll on the Mishap Table for that career and you are ejected from the career (must change careers next term).
+3. **Events:** If you survive, roll 2D6 on the Career Event Table.
+4. **Advancement:** Roll Attribute + Skill against the listed Threshold. If successful, gain an extra roll on the Benefits table when you leave the career, and increase your Rank. If you roll a Critical Glitch, you are fired (ejected).
+5. **Benefits:** For every term completed, you gain 1 roll on the Career Benefits table when you finally muster out. Advancing ranks gives +1 roll per rank.
+6. **Aging:** Starting at age 34 (after 4 terms if you start at 18), make an Aging Check (see below).
+
+**Career Profiles**
+
+**Corporate Wage Slave**
+* **Qualification:** LOG + Computers or Etiquette (Threshold 2)
+* **Survival:** WIL + Etiquette (Threshold 2)
+* **Advancement:** INT + Negotiation (Threshold 3)
+* **Benefits Table (1D6):**
+
+| Roll | Benefit |
+| :--- | :--- |
+| 1 | +5 Karma (Knowledge Skills) |
+| 2 | 5,000¥ |
+| 3 | +1 LOG or INT |
+| 4 | 10,000¥ |
+| 5 | Corporate Contact (Rating 2) |
+| 6 | Mid-level Lifestyle (1 Year) |
+
+* **Mishaps Table (1D6):**
+
+| Roll | Mishap |
+| :--- | :--- |
+| 1-2 | Corporate downsizing. Ejected. Gain 1,000¥ severance. |
+| 3-4 | Betrayed by a rival. Ejected. Gain an Enemy (Rating 2). |
+| 5 | Caught in a shadowrun crossfire. Suffer a physical injury (lose 1 Physical Attribute point or pay 10,000¥ for cyberware, losing 0.5 Essence). |
+| 6 | Burned out. Lose 1 WIL. Ejected. |
+
+**Lone Star / Knight Errant Cop**
+* **Qualification:** BOD + Firearms or Unarmed (Threshold 2)
+* **Survival:** REA + Firearms (Threshold 3)
+* **Advancement:** LOG + Investigation (Threshold 3)
+* **Benefits Table (1D6):**
+
+| Roll | Benefit |
+| :--- | :--- |
+| 1 | +5 Karma (Combat Skills) |
+| 2 | Armor Jacket or Standard Weapon |
+| 3 | +1 AGI or REA |
+| 4 | 5,000¥ |
+| 5 | Police/Fixer Contact (Rating 2) |
+| 6 | Weapon Permit / Fake SIN (Rating 3) |
+
+* **Mishaps Table (1D6):**
+
+| Roll | Mishap |
+| :--- | :--- |
+| 1-2 | Framed for corruption. Ejected. |
+| 3-4 | Bad call results in civilian casualties. Lose 0.5 Essence due to trauma. Ejected. |
+| 5 | Severely wounded in the line of duty. Reduce physical attribute by 1 or get forced cyber-replacement (lose 1 Essence). Ejected. |
+| 6 | Crossed the wrong syndicate. Gain an Enemy (Syndicate). |
+
+**Ganger / Syndicate Member**
+* **Qualification:** STR + Intimidation (Threshold 2)
+* **Survival:** REA + Street Navigation (Threshold 2)
+* **Advancement:** CHA + Intimidation (Threshold 3)
+* **Benefits Table (1D6):**
+
+| Roll | Benefit |
+| :--- | :--- |
+| 1 | +5 Karma (Street Skills) |
+| 2 | Melee Weapon or Pistol |
+| 3 | +1 BOD or STR |
+| 4 | 3,000¥ |
+| 5 | Street/Gang Contact (Rating 2) |
+| 6 | 10,000¥ (Stolen Goods) |
+
+* **Mishaps Table (1D6):**
+
+| Roll | Mishap |
+| :--- | :--- |
+| 1-2 | Gang wiped out by rivals. You survived but are on your own. Ejected. |
+| 3-4 | Arrested. Spend term in prison (treat as Drifter for 1 term). |
+| 5 | Brutal street fight. Suffer a grievous injury (lose 1 Physical Attribute point or pay for cheap cyberware, losing 1 Essence). |
+| 6 | Betrayed the boss. Gain a powerful Syndicate Enemy. |
+
+**Smuggler / Courier**
+* **Qualification:** REA + Piloting or Navigation (Threshold 2)
+* **Survival:** INT + Piloting (Threshold 2)
+* **Advancement:** LOG + Negotiation or Mechanics (Threshold 3)
+* **Benefits Table (1D6):**
+
+| Roll | Benefit |
+| :--- | :--- |
+| 1 | +5 Karma (Vehicle/Tech Skills) |
+| 2 | Smuggling Compartment (Cyber or Vehicle) |
+| 3 | +1 REA or INT |
+| 4 | 15,000¥ |
+| 5 | Fixer Contact (Rating 3) |
+| 6 | Used Vehicle (e.g., Ford Americar) |
+
+* **Mishaps Table (1D6):**
+
+| Roll | Mishap |
+| :--- | :--- |
+| 1-2 | Cargo seized by G.O.D. or Corps. Ejected and owe 10,000¥. |
+| 3-4 | Ambushed by pirates. Ship/Vehicle destroyed. Ejected. |
+| 5 | Crashed. Suffer physical injury (lose 1 Physical Attribute or lose 1 Essence to cyber-replacement). |
+| 6 | Exposed to toxic waste/radiation in the Barrens. Lose 1 BOD. |
+
+**Military / Mercenary**
+* **Qualification:** BOD + Firearms or Athletics (Threshold 2)
+* **Survival:** WIL + Athletics (Threshold 3)
+* **Advancement:** INT + Tactics or Leadership (Threshold 3)
+* **Benefits Table (1D6):**
+
+| Roll | Benefit |
+| :--- | :--- |
+| 1 | +5 Karma (Combat Skills) |
+| 2 | Military-Grade Weapon |
+| 3 | +1 BOD or STR |
+| 4 | 10,000¥ |
+| 5 | Mercenary/Arms Dealer Contact (Rating 2) |
+| 6 | Combat Cyberware (up to 30,000¥ value, costs normal Essence) |
+
+* **Mishaps Table (1D6):**
+
+| Roll | Mishap |
+| :--- | :--- |
+| 1-2 | Unit wiped out. Ejected with PTSD (Lose 0.5 Essence). |
+| 3-4 | Dishonorably discharged. Ejected. |
+| 5 | Grievous combat wound. Lose 1 Physical Attribute or accept Corporate Cyber-Prosthetics (Lose 1.5 Essence, but gain +1 BOD). Ejected. |
+| 6 | Captured as POW. Spend next term imprisoned (no benefits). |
+
+**Matrix Decker / Hacker**
+* **Qualification:** LOG + Hacking (Threshold 2)
+* **Survival:** INT + Electronic Warfare (Threshold 3)
+* **Advancement:** LOG + Computers (Threshold 3)
+* **Benefits Table (1D6):**
+
+| Roll | Benefit |
+| :--- | :--- |
+| 1 | +5 Karma (Matrix Skills) |
+| 2 | 10,000¥ |
+| 3 | +1 LOG or INT |
+| 4 | Matrix Program or Utility |
+| 5 | Hacker Contact (Rating 2) |
+| 6 | Used Cyberdeck |
+
+* **Mishaps Table (1D6):**
+
+| Roll | Mishap |
+| :--- | :--- |
+| 1-2 | Burned by IC. Deck fried. Ejected. |
+| 3-4 | Tracked by G.O.D. Forced to dump SIN and run. Ejected. |
+| 5 | Lethal Black IC feedback. Suffer severe neural damage (Lose 1 LOG or 1 WIL). |
+| 6 | Data heist gone wrong. Owe a powerful entity a major favor. |
+
+**Magical Initiate**
+* **Qualification:** MAG + Arcana (Threshold 2) (Requires Awakened)
+* **Survival:** WIL + Assensing (Threshold 2)
+* **Advancement:** MAG + Spellcasting/Conjuring (Threshold 3)
+* **Benefits Table (1D6):**
+
+| Roll | Benefit |
+| :--- | :--- |
+| 1 | +5 Karma (Magical Skills) |
+| 2 | Magical Lodge Materials (Rating 3) |
+| 3 | +1 WIL or CHA |
+| 4 | Focus (Rating 2) |
+| 5 | Talismonger Contact (Rating 2) |
+| 6 | 1 Free Spell or Bound Spirit |
+
+* **Mishaps Table (1D6):**
+
+| Roll | Mishap |
+| :--- | :--- |
+| 1-2 | Magical experiment goes awry. Suffer magical backlash (Lose 1 Physical Attribute). Ejected. |
+| 3-4 | Conflict with a toxic spirit or rival mage. Gain Magical Enemy. |
+| 5 | Severe Drain trauma. Lose 1 MAG. Ejected. |
+| 6 | Exiled from magical order or tradition. Ejected. |
+
+**Rock Star / Media Icon**
+* **Qualification:** CHA + Performance (Threshold 2)
+* **Survival:** WIL + Etiquette or Con (Threshold 2)
+* **Advancement:** CHA + Leadership or Performance (Threshold 3)
+* **Benefits Table (1D6):**
+
+| Roll | Benefit |
+| :--- | :--- |
+| 1 | +5 Karma (Social Skills) |
+| 2 | High Lifestyle (1 Year) |
+| 3 | +1 CHA or EDG |
+| 4 | 20,000¥ |
+| 5 | Media/Fixer Contact (Rating 3) |
+| 6 | Cult Following (Gain a dedicated group of fans/contacts) |
+
+* **Mishaps Table (1D6):**
+
+| Roll | Mishap |
+| :--- | :--- |
+| 1-2 | Cancelled by a corp or rival media outlet. Ejected. |
+| 3-4 | Addiction to BTLs or hard drugs. Lose 0.5 Essence. |
+| 5 | Assassination attempt. Survive but suffer an injury (Lose 1 Physical Attribute or get cyberware losing 1 Essence). Ejected. |
+| 6 | Screwed by a manager. Lose all saved Nuyen. Ejected. |
+
+**Street Racer / Drone Jockey / Delivery Driver**
+* **Qualification:** REA + Piloting (Threshold 2)
+* **Survival:** REA + Piloting (Threshold 2)
+* **Advancement:** INT + Mechanics (Threshold 3)
+* **Benefits Table (1D6):**
+
+| Roll | Benefit |
+| :--- | :--- |
+| 1 | +5 Karma (Vehicle/Tech Skills) |
+| 2 | Vehicle/Drone Modification |
+| 3 | +1 REA or LOG |
+| 4 | 10,000¥ |
+| 5 | Mechanic/Rigger Contact (Rating 2) |
+| 6 | Racing/Delivery Vehicle or Combat Drone |
+
+* **Mishaps Table (1D6):**
+
+| Roll | Mishap |
+| :--- | :--- |
+| 1-2 | Severe crash during a race/delivery. Vehicle destroyed. Ejected. |
+| 3-4 | Crossed the wrong syndicate during a delivery. Gain Enemy. |
+| 5 | Mangled in a crash. Lose 1 Physical Attribute or take cyber-replacement (Lose 1 Essence). Ejected. |
+| 6 | Arrested for illegal street racing. Lose 1 term to prison. |
+
+**4. Generic Event Table (Roll 2D6 for all Careers if Survival passed)**
+
+| 2D6 | Event |
+| :--- | :--- |
+| 2 | Disaster! Roll on the Mishap table, but you are not ejected. |
+| 3 | You uncover a dark secret. Gain a Contact, but also an Enemy. |
+| 4 | Cross-training. Gain +5 Karma in a skill outside your career. |
+| 5 | Assignment to a hazardous zone (e.g., The Barrens). Gain +1 Survival or Street Navigation. |
+| 6 | You form a deep connection. Gain an Ally (Rating 2 Contact). |
+| 7 | Standard term. Gain +5 Karma for any Career Skill. |
+| 8 | Therapy and grounding. Recover 0.5 Essence (up to your maximum, reflecting holistic healing of trauma), or gain +1 WIL. |
+| 9 | A lucrative side-hustle. Gain 1D6 x 2,000¥. |
+| 10 | You save someone important. Gain a powerful Corporate or Syndicate Contact (Rating 3). |
+| 11 | Breakthrough! Gain +1 to any Attribute (up to metatype max). |
+| 12 | Exceptional success. Automatically succeed on Advancement check and gain +1 roll on Benefits. |
+
+**5. Aging & Essence Tracking**
+Starting at **Age 34** (typically after completing 4 terms), the wear and tear of the 6th World catches up to you.
+At the end of your 4th term, and every term thereafter, make an **Aging Roll**: Roll 2D6 and subtract the number of terms you have completed.
+* **Positive Result:** No effect. You age gracefully.
+* **0:** Reduce one Physical Attribute (BOD, AGI, REA, STR) by 1.
+* **-1:** Reduce two Physical Attributes by 1.
+* **-2:** Reduce three Physical Attributes by 1.
+* **-3 or lower:** Reduce all physical attributes by 1, and one Mental Attribute by 1.
+
+**Essence and Aging:** If a stat is reduced to 0, you suffer an Aging Crisis. You must spend 20,000¥ on life-saving medical care or cyber-prosthetics. If you take the cyber-prosthetics, the Attribute returns to 1, but you lose 1.0 Essence.
+
+**Anti-Geriatics (Anagathics):** You can take Anagathics starting at age 34 to halt the aging process. While on Anagathics, you add the number of terms since you started taking them as a positive modifier to your Aging Roll. However, Anagathics cost 1D6 x 10,000¥ per term, putting you deep in debt if you cannot pay.
+
+**6. Mustering Out (Retirement)**
+When you decide to stop running terms and begin "adventuring" (the start of the campaign), tally up your Benefits rolls. You get 1 roll per term successfully completed, plus 1 additional roll for every Rank you advanced. You may distribute these rolls between your final Career's Benefits Table or a general Cash Table (1D6 x 5,000¥). Calculate your final Essence, Attributes, and Karma, and you are ready for the shadows.
+
+---
+
+### VII. COMBAT & WEAPONRY (D6 System Integration)
 Guns are loud, lethal, and in the 6th world, often smart-linked to a DNI that can be hacked if you aren't careful.
 
 #### 1. Ranged Weapons
@@ -3107,7 +3394,7 @@ Attack Roll: Agility + Firearms. Defense Roll: Reaction + Intuition.
 | Gel / Stick-n-Shock | x1.5 | -2 Damage (Stun) | AP +2 |
 | Nanite-Buster (Grey Goo) | x10 | +2 Damage | AP -2 |
 
-### VII. HEALING & DOWNTIME
+### VIII. HEALING & DOWNTIME
 Because Essence is tied to your soul and the nanite-environment, healing is both biological and spiritual.
 
 | Healing Type | Mechanic | Timeframe / Interval |
@@ -3117,7 +3404,7 @@ Because Essence is tied to your soul and the nanite-environment, healing is both
 | Natural Recovery (Physical) | Roll Body x 2. 1 Hit = 1 Box healed. | 1 Day interval. (Double time if living on Street lifestyle). |
 | Essence Therapy | Roll Charisma + Psychology (Threshold 4). Success restores 0.1 lost Essence (from trauma, not cyberware). | 1 Month interval. Costs 5,000¥ in therapy/retreat fees. |
 
-### VIII. STEALTH IN THE PANOPTICON: Hiding from the Goo
+### IX. STEALTH IN THE PANOPTICON: Hiding from the Goo
 If the air you breathe and the water you drink are crawling with nanites, how do you sneak into a Wuxing black site? You don't just hide your body; you have to hide your data-shadow.
 
 #### 1. Signature Spoofing (Matrix Stealth)
@@ -3128,7 +3415,7 @@ Physical stealth (Agility + Sneaking) still works against biological eyeballs, b
 *   **Effect:** On a success, the hacker creates a localized "white noise" bubble of dead nanites around the team (Radius = Hacker's Logic in meters). Anyone inside the bubble is invisible to automated Matrix sensors and Patrol IC.
 *   **Faraday Suits:** Runners can wear specialized Faraday-weave suits. This grants +4 dice to physical Sneaking tests against sensors, but makes you completely unable to use wireless tech or DNI while fully sealed.
 
-### IX. TECHNOMANCERS: Kings of the Weird
+### X. TECHNOMANCERS: Kings of the Weird
 While Deckers force the nanites to obey via code, Technomancers speak to the grey goo on a biological, instinctual level. They don't use decks; their brains are the decks.
 
 #### 1. Fading (Technomancer Drain)
@@ -3149,7 +3436,7 @@ Sprites are no longer just code. When compiled, they swarm ambient physical matt
 *   **Mechanic:** Roll Resonance + Compiling vs. Sprite Level. Fading equals the Sprite's hits x 2.
 *   **Manifestation:** A compiled Sprite is Dual-Natured. It has a physical Body and Armor rating equal to its Level, and attacks using its Level + Resonance.
 
-### X. HOPEPUNK & EDGE MECHANICS
+### XI. HOPEPUNK & EDGE MECHANICS
 In a grim, cyberpunk dystopia merged with an uncaring eldritch gaiasphere, genuine empathy is a superpower. "Hopepunk" means fighting for humanity and treating the weird children of the matrix (AIs, Sprites) with respect.
 
 #### 1. Using Edge
@@ -3167,7 +3454,7 @@ Players start each session with Edge equal to their Edge attribute. GMs should a
 *   Treats an Awakened/Digital entity (like Sam or Ennis) with genuine empathy and humanity, rather than treating them like a tool.
 *   Sacrifices a payday or personal gain to do the "right" thing.
 
-### XI. DESTABILIZATION (The "Spark+" Problem)
+### XII. DESTABILIZATION (The "Spark+" Problem)
 What happens when a BTL-manifested persona, a physical AI drone body, or a Crystalline Spirit takes too much damage? The grey goo loses cohesion.
 
 Entities relying on nanites for physical form have a Destabilization Track.
@@ -3177,13 +3464,13 @@ Entities relying on nanites for physical form have a Destabilization Track.
 *   **Failure (Destabilization):** The entity's physical form begins to dissolve into grey goo. They immediately take an unresistable 2 boxes of Physical damage. Additionally, for the rest of the scene, any Wild Dice they roll that come up as a 1 or 2 count as a Glitch trigger.
 *   **Total Breakdown:** If their physical condition monitor fills up, they don't just fall unconscious—their physical shell melts into a puddle of inert nanites. (If it's a runner using a BTL, they suffer severe Essence trauma and take 10 unresistable Stun damage).
 
-### XII. SOCIAL RULES: Street Cred & Comms
+### XIII. SOCIAL RULES: Street Cred & Comms
 You can't just text your Fixer on an open commlink anymore. The silence is speaking volumes.
 
 *   **Secure Comms:** Standard commlinks are assumed to be monitored by the gaiasphere. To arrange a secure meet, runners must use pre-arranged physical dead-drops or encrypted pulses (like Kyber's three short, pause, two long).
 *   **Street Cred & AIs:** Your Street Cred (Karma earned divided by 10) directly impacts how AIs and Spirits view you. When rolling Etiquette or Negotiation with an Awakened or Matrix entity, you may add your Street Cred to your Dice Pool if you are known to treat non-humans well. If you have Notoriety for betraying AIs, that number is subtracted from your pool.
 
-### XIII. BESTIARY & ADVERSARIES
+### XIV. BESTIARY & ADVERSARIES
 
 #### 1. Wuxing "Null-Sec" Strike Teams
 Wuxing knows the world is a panopticon, so their elite black ops teams don't just hide—they erase themselves from reality. They deploy in specialized "Null-Suits" that act as localized Faraday cages, scrubbing their AR signatures and isolating them from the nanite-grid. They are heavily armed, disciplined, and terrifyingly silent in the Matrix.
@@ -3240,7 +3527,8 @@ Grid Overwatch Division is no longer a room of corporate deckers. It is an auton
 *   **Make them choose their ammo:** If the runners are fighting Wuxing, standard APDS ammo is best. But if a G.O.D Antibody spawns or a Fuchsia Dragon attacks, they will desperately wish they had loaded expensive Nanite-Buster rounds. Let them use a Minor Action to swap magazines if they thought ahead!
 *   **The Horror of the Abominations:** Describe the Fuchsia Dragons tragically. Underneath the glowing scales and feral roars, there is still a metahuman weeping. This plays into your "Hopepunk" theme—killing them should feel like a tragic necessity, and trying to subdue them non-lethally (Stun damage) should be rewarded with Edge.
 *   **Antibodies are forces of nature:** Do not treat a G.O.D Antibody as a normal enemy. It is a natural disaster. When it drops, the objective of the encounter immediately shifts from "Win the fight" to "Survive and Escape."
-### XIII. THE SHADOW ECONOMY: Trading in the Panopticon
+
+### XV. THE SHADOW ECONOMY: Trading in the Panopticon
 When the gaiasphere and the Matrix merged, the Corporate Court thought they had won. They thought they could track every nuyen ever spent. But the shadows always adapt.
 
 #### 1. Currency in the 6th World
@@ -3258,7 +3546,7 @@ You can't just put an illegal sniper rifle in a duffel bag anymore; the gun's na
 *   **Null-Bags:** Smugglers use Faraday-weave canvas bags to transport goods.
 *   **Mechanic:** A rating 1-6 Null-Bag costs (Rating x 500¥). It reduces the AR signature of anything inside by its Rating. However, if a Null-Bag is punctured (takes any Physical damage), the items inside immediately light up the grid, triggering local Patrol IC.
 
-### XIV. CONTACTS & LEGWORK: Silence Speaks Volumes
+### XVI. CONTACTS & LEGWORK: Silence Speaks Volumes
 You can't just call your Fixer on a commlink. As your adventure notes, "the silence is starting to speak volumes."
 
 #### 1. Communication Protocols
@@ -3273,7 +3561,7 @@ Contacts still have Connection (how much influence they have, 1-6) and Loyalty (
     *   *Exception:* If you are dealing with an AI or Spirit, and you have a reputation for treating digital/awakened entities as "tools" rather than "people," your Street Cred is subtracted from your pool.
 *   **Burning a Contact:** If you critically Glitch on a social test with a Contact, their location is compromised by the nanite-grid. Wuxing or G.O.D. finds them, and they are removed from your sheet.
 
-### XV. KEY NPC PROFILES: The Movers and Shakers
+### XVII. KEY NPC PROFILES: The Movers and Shakers
 Here is how to run the specific contacts mentioned in your adventure lore.
 
 **Sam (The Ascended AI Patron)**
