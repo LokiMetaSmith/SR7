@@ -63,7 +63,116 @@
 \author{}
 \date{}
 
+
+% --- SHADOWRUN 7E CUSTOM STYLING ---
+% Typography & Layout
+\usepackage[margin=0.75in]{geometry}
+\usepackage{multicol}
+\usepackage{helvet} % Sans-serif clean font
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+
+% Structural Spacing & Formatting
+\usepackage{parskip}   % Remove paragraph indents, add vertical space
+\usepackage{enumitem}  % Control list spacing
+\setlist{nosep}        % Make all lists compact by default
+
+% Game Term Styling (No math-mode for crunch)
+\newcommand{\gameterm}[1]{\textbf{\sffamily #1}}
+
+% Colors
+\definecolor{matrixblue}{HTML}{00CCFF} % Neon blue for HUD elements
+\definecolor{srdark}{HTML}{1A1A1A}     % Deep charcoal for JackPoint backgrounds
+\definecolor{sraccent}{HTML}{E63946}   % Warning/Glitch red
+
+% Headers and Footers (HUD Style)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1.5pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{matrixblue}\leaders\hrule height \footrulewidth\hfill}}
+\fancyfoot[L]{\ttfamily\small SYSTEM STATUS: ONLINE \textbar{} GRID LOCATION: OKC-METRO}
+\fancyfoot[R]{\ttfamily\small PAGE \thepage}
+
+% Watermark
+\usepackage[pages=all]{background}
+\backgroundsetup{
+  scale=1,
+  color=black,
+  opacity=0.05,
+  angle=0,
+  position=current page.center,
+  vshift=0pt,
+  hshift=0pt,
+  contents={%
+  \begin{tikzpicture}[remember picture,overlay]
+    \draw [step=0.5cm,line width=0.5mm]
+      (current page.south west) grid (current page.north east);
+  \end{tikzpicture}%
+  }
+}
+
+% Chapter Headings (Tight Spacing)
+\usepackage{titlesec}
+\titleformat{\section}[block]
+  {\normalfont\LARGE\bfseries\color{matrixblue}\MakeUppercase}
+  {\thesection}{1em}{}
+  [\vspace{0.5ex}\color{matrixblue}\titlerule\vspace{0.25ex}\color{sraccent}\titlerule]
+\titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+
+\titleformat{\subsection}[block]
+  {\normalfont\Large\bfseries\color{srdark}\MakeUppercase}
+  {\thesubsection}{1em}{}
+  [\color{matrixblue}\titlerule]
+\titlespacing*{\subsection}{0pt}{1.2ex plus 1ex minus .2ex}{0.8ex plus .2ex}
+
+\titleformat{\subsubsection}[block]
+  {\normalfont\large\bfseries\color{srdark}\MakeUppercase}
+  {\thesubsubsection}{1em}{}
+  [\color{matrixblue}\titlerule]
+\titlespacing*{\subsubsection}{0pt}{1ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+
+% Tables
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+% Callout Boxes
+\usepackage[most]{tcolorbox}
+
+% The JackPoint Commentary Box
+\newtcolorbox{jackpoint}[2][]{
+    enhanced,
+    colback=srdark,
+    colframe=matrixblue,
+    coltext=white,
+    boxrule=0.5pt,
+    leftrule=4pt, % Thick accent line on the left
+    arc=0mm,      % Sharp, digital corners
+    fonttitle=\bfseries\ttfamily\small,
+    title={>> USER: #2 <<},
+    attach title to upper,
+    after title={\par\vspace{0.5em}\hrule\vspace{0.5em}},
+    #1
+}
+
+% GM Advice Box
+\newtcolorbox{gmadvice}[1][GM Advice]{
+  colback=gray!10,
+  colframe=sraccent,
+  coltitle=white,
+  fonttitle=\bfseries\MakeUppercase,
+  title={#1},
+  boxrule=1.5pt,
+  leftrule=4pt,
+  arc=0mm,
+  coltext=black
+}
+% --- END SHADOWRUN 7E CUSTOM STYLING ---
+
 \begin{document}
+\begin{multicols}{2}
+
 
 \textbf{Fan made Shadowrun 7th Edition}
 
@@ -83,7 +192,7 @@ Tests}\label{i.-core-mechanics-dice-tests}}
 All actions use a streamlined success-counting system.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Dice Pool:} Attribute + Skill.
 \item
@@ -114,7 +223,7 @@ environment. Even the hermit in the woods is lit up with an AR signature
 because the water and air are crawling with nanites.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{No Cold Sim (The Abyss Looks Back):} Cold Sim is dead. Any
   active skill involving the Matrix requires a Direct Neural Interface
@@ -138,7 +247,7 @@ because the water and air are crawling with nanites.
 G.O.D.}\label{updated-matrix-actions-tethers-g.o.d.}}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Tethers (Replacing Marks):} Marks act like sympathetic bonds.
   Placing a Tether on a device/persona requires an Opposed Test
@@ -165,7 +274,7 @@ permanently blurred, but Tech and Magic still ruthlessly repel each
 other.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Digital Essence (Turing 1, Searle 0):} Any AI, Sprite, or
   Matrix entity complex enough to possess a self-directed persona has an
@@ -205,7 +314,7 @@ With the veil parted, digital and astral entities interact in entirely
 new ways.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Manifesting Sprites:} Sprites can physically manifest by
   swarming nanites into a dense ball, literally munching ambient
@@ -237,6 +346,7 @@ Summary}\label{v.-character-creation-summary}}
 
 All characters build and advance using \textbf{Karma}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -263,6 +373,7 @@ spells. \\
 \textbf{Mystic Adept} & 150 & Blends Adept and Magician traits; gains 1x
 MAG free spells. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \emph{(Note: Magic and Resonance both start at 0. You must buy one of
 these qualities at character generation to unlock the stat, which starts
@@ -270,7 +381,7 @@ at Rating 1).}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
+
 \item
   \protect\hyperlink{bookmark=id.x87h504b24hr}{Dice \& Tests}\\
 \item
@@ -485,6 +596,7 @@ The final result of the test is 3 hits (from the 6 on the Wild Die). If
 the player had also rolled a 6 on a normal die, that hit would not be
 canceled by the 1 on the Wild Die, resulting in 4 hits total.
 
+\end{multicols}
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
 Thresholds (Success Tests) & Thresholds (Extended Tests) & Intervals \\
@@ -501,6 +613,7 @@ Thresholds (Success Tests) & Thresholds (Extended Tests) & Intervals \\
 7 - Extreme & 32 - Extreme & Exhaustive - 1 week \\
 & & Mammoth - 1 month \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Character Creation \& Advancement}
 
@@ -692,6 +805,7 @@ has been balanced to consider both their starting minimum Attributes and
 their potential for growth at maximum Attribute levels, as well as any
 innate qualities.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
@@ -768,6 +882,7 @@ Satyr & 2 / 7 & 1 / 6 & 2 / 7 & 2 / 7 & 1 / 6 & 1 / 6 & 1 / 6 & 2 / 7 &
 1 / 6 & 45 & \emph{Low-Light Vision, Built Tough (1), Satyr Legs,
 Hooves} \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Skills:}
 
@@ -1641,6 +1756,7 @@ taken during character creation the quality gives no bonus Karma..
 severity of the allergy. Different amounts of Karma are awarded for both
 how severe the allergy is and how common the allergen is.
 
+\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Allergen & Karma \\
@@ -1653,6 +1769,7 @@ Allergen & Karma \\
 \textbf{Uncommon} & 5 \\
 \textbf{Rare} & 9 \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{(Mild)} - 2 Karma Characters experience discomfort and receive a
 -1 dice pool modifier to all Physical Tests.
@@ -1807,6 +1924,7 @@ quality.
 certain number of hours per week of work and provides a monthly
 paycheck. Must have a \emph{SINner} quality to take \emph{Day Job}.
 
+\end{multicols}
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
 Karma & Salary & Hours per Week \\
@@ -1818,6 +1936,7 @@ Karma & Salary & Hours per Week \\
 10 & 2500 & 20 \\
 15 & 5000 & 40 \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Dead Emotion} - 3 Karma Lack of one type of emotion, such as
 happiness, sadness, anger, or fear, from BTL abuse.
@@ -2643,6 +2762,7 @@ eliminating the need for wires and increasing the rate of fire.
 predecessor, the Pulsar II includes a pair of contacts at the base of
 the grip to allow it to function as a stun club.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -2707,6 +2827,7 @@ Yamaha Pulsar I/II & 5 & 6S(e) & -- & SA & -- & Near & 4(m) & -- & 1.50
 Jupiter Taser Club & 3 & 6S(e) & -- & SS & -- & Close & 1(m) & 8 & 2.50
 & 1,200¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Hold-Outs} - Hold-Outs are very small, easily concealed pistols
 that are usually weak and inaccurate, but make the perfect last ditch
@@ -2815,6 +2936,7 @@ cartridge but miniscule by comparison, the SuperKompakt is easily
 concealed and constructed from MAD scanner defeating materials.
 \emph{Ceramic/Plasteel Components Rating 4}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -2891,6 +3013,7 @@ Walther Palm Pistol & 4 & 7P & -1 & SS/BF & -- & Near & 2(b) & 4(R) &
 Walther Secura SK & 4 & 7P & -2 & SA & -- & Near & 4(dm) & 8(F) & 0.75 &
 1,000¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Light Pistols} - Light Pistols occupy the middle ground between
 hold-outs and heavy pistols, they are usually accurate and can accept
@@ -3136,6 +3259,7 @@ each trigger pull fires a single round, or a 4 round burst of 1 shot
 from each barrel simultaneously; otherwise the Fubuki Six functions the
 same as its predecessor. \emph{Electronic Firing}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -3269,6 +3393,7 @@ Yamaha Sakura Fubuki & 5 & 3P & -- & BF/FA & 1(2) & Close & 10(ml)x4 &
 Yamaha Sakura Fubuki Six & 6 & 3P & -- & SA/BF & 1 & Close & 8(ml)x4 &
 10(R) & 1.50 & 750¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Heavy Pistols} - Large pistols that pack lots of firepower.
 Capable of taking both barrel mounted and top-mounted accessories.
@@ -3691,6 +3816,7 @@ Zastava for various eastern European military and police concerns. It
 became very popular with the criminal underworld and shadowrunners after
 all records of production were lost in Crash 2.0.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -3895,6 +4021,7 @@ Weapons World Infiltrator & 5 & 8P & -2 & SA & -- & Near & 15(dm) &
 Zastava CZ49 & 4 & 4P & -2 & SA & -- & Near & 10(dm) & 4(R) & 1.50 &
 250¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Machine Pistols} - Rapid firing pistol-sized weapons that are
 capable of burst fire or fully automatic fire while still being
@@ -4069,6 +4196,7 @@ extended magazine in a larger caliber over its predecessor, along with
 an internal smartgun system and an underbarrel flashlight.
 \emph{Extended Magazine}, \emph{Flashlight}, \emph{Smartlink}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -4171,6 +4299,7 @@ Walther P118 & 5(8) & 7P & -2 & SA/BF/FA & 3 & Far & 24(dm) & 9(R) &
 Walther Secura II & 5(7) & 8P & -2 & SA/BF & -- & Near & 18(dm) & 10(F)
 & 2.75 & 925¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Submachine Guns} - Fully automatic capable, lighter caliber guns
 that are usually more compact than even the smallest assault rifles.
@@ -4491,6 +4620,7 @@ barrel. A larger, heavier hitting caliber completes the new Uzi, keeping
 the same magazine capacity with a slight increase in overall size of the
 magazine. \emph{Smartlink}, \emph{Sound Suppressor}, \emph{Stock}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -4620,6 +4750,7 @@ Uzi IV & 5(6) & 5P & -1 & BF/FA & (1) & Near & 24(dm) & 6(R) & 1.75 &
 Uzi V & 4(6) & 8P & -1 & SA/BF/FA & (1) & Near & 24(dm) & 8(R) & 3.00 &
 1,400¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Shotguns} - Firearms that usually fire shot shells or flechettes
 with the use of a choke, but can also fire solid slugs and may even be
@@ -4925,6 +5056,7 @@ strengthened internal parts, and more combine into a truly modern
 classic capable of accepting longer magnum shells and even custom
 handloads. \emph{Stock}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -5078,6 +5210,7 @@ Winchester Model 2054 & 4(5) & 20P & -4 & SA & (3) & Near & 7(m) & 6(R)
 Winchester Model 2066 & 4 & 15P & -3 & SS & (1) & Near & 5(m) & 4(R) &
 3.25 & 1,050¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Sporting Rifles \& Sniper Rifles} - Sporting rifles are
 typically high caliber full length rifles designed for hunting big game.
@@ -5426,6 +5559,7 @@ calibers. Features a top-mounted rail system to add your choice of
 improvements to the base iron sights. \emph{Stock}, \emph{Tactical Rail
 (Top)}, \emph{Vintage}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -5578,6 +5712,7 @@ Winchester 2067 (.30-30) & 5 & 14P & -5 & SS & (1) & Far & 8(m) & 5(R) &
 Winchester 2067 (.45-70) & 5 & 20P & -3 & SS & (1) & Far & 7(m) & 5(R) &
 4.50 & 1,050¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Assault Rifles} - Assault rifles are the standard infantry
 weapon of the modern battlefield, offering a balance of range, accuracy,
@@ -6107,6 +6242,7 @@ the shotgun fires a single round or both simultaneously as a burst.
 \emph{Grenade Launcher (Underbarrel)}, \emph{Shotgun (Underbarrel)},
 \emph{Smartlink}, \emph{Sound Suppressor}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6301,6 +6437,7 @@ Shotgun & 4(6) & 24P(f) & +2 & SS & (1) & Close & 2(ml) & -- & -- &
 Grenade Launcher & 3(5) & -- & -- & SS & -- & Far & 6(m) & -- & -- &
 -- \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Light Machine Guns} - Most often assault rifle size or slightly
 larger and always capable of fully automatic fire, LMGs fulfill mostly
@@ -6406,6 +6543,7 @@ and a rail mount to improve the iron sights, if desired. \emph{Gas Vent
 Rating 2}, \emph{Safe Target System (Advanced)}, \emph{Smartlink},
 \emph{Stock}, \emph{Tactical Rail (Top)}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6470,6 +6608,7 @@ RPK-74 & 4 & 8P & -9 & SA/BF/FA & (3) & Far & 45(dm) & 7(F) & 4.50 &
 SA Nemesis LMG & 5(7) & 13P & -7 & BF/FA & 2(3) & Far & 60(dm) & 16(F) &
 6.25 & 6,500¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Medium Machine Guns} - MMGs require STR rating 8 to successfully
 wield as a weapon, which is why they are more commonly found as vehicle
@@ -6512,6 +6651,7 @@ A standard peak discharge battery supplies effectively unlimited power
 for the barrels' rotating mechanism. Cannot accept barrel or underbarrel
 modifications or accessories. \emph{Belt Fed Only}, \emph{Tripod}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6562,6 +6702,7 @@ Ultimax MMG & 5(6) & 18P & -10 & FA & (4) & Distant & 40(dm) & 16(F) &
 Whitney-Morgan MG & 3 & 18P & -10 & FA & (6) & Distant & 100(belt) &
 10(F) & & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Heavy Machine Guns} - HMGs require STR rating 10 to wield as a
 personal weapon. The same as LMGs and MMGs, they can accept 100 or 250
@@ -6620,6 +6761,7 @@ optional rigid stock and shock pad. Includes a mounting point for a
 tripod as well. \emph{Gas Vent Rating 3}, \emph{Shock Pad},
 \emph{Stock}, \emph{Tripod (Underbarrel)}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6672,6 +6814,7 @@ Ultimax HMG & 4(5) & 32P & -22 & FA & 1(6) & Distant & 20(dm) & 16(F) &
 Ultimax HMG-2 & 4 & 30P & -20 & FA & 3(11) & Distant & 20(dm) & 16(F) &
 20.00 & 7,500¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Assault Cannons} - Assault Cannons are heavy anti-material and
 anti-vehicle weapons that can barely be counted as a hand held firearm,
@@ -6743,6 +6886,7 @@ that is more than made up for by its cheap cost and popular branding.
 
 \textbf{Ruhrmetall SMK 252} (
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6800,6 +6944,7 @@ Panther XXL & 5(7) & SS & -- & Distant & 15(m) & 24(F) & 43,000¥ & &
 & \\
 Ruhrmetall SMK 252 & & & & & & & & & & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Grenade Launchers} - Launchers for directly, or indirectly,
 lobbing grenades at medium ranges. Many different types of grenades
@@ -6871,6 +7016,7 @@ equally capable of firing standard 30mm minigrenades. The 5 round
 internal magazine can even be loaded with a mix of less lethal and
 lethal options.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6932,6 +7078,7 @@ Terracotta X-6 MGL & 4 & -- & -- & SS & (2) & Near & 6(cy) & 8(F) &
 2,000 & \\
 Wirtz SW31 Demo Control & 5(m) & 3.00 & 600¥ & & & & & & & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Grenades} - Grenades come in many forms and size factors, both
 throwable and launched, from handheld pistol-sized launchers up to large
@@ -6973,6 +7120,7 @@ KLV-IV main charge. The result is a versatile, precision-configurable
 grenade system designed for environments where conventional impact
 triggers would be either too unpredictable or too limiting.
 
+\end{multicols}
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule\noalign{}
 Grenades & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
@@ -6983,6 +7131,7 @@ Grenades & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
 Winter Systems IFE & various & -- & -2 per meter & 0.25 & 50¥ & \\
 Winter Systems IPE & -1 per 2 meters & 0.25 & & & & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Mortar Launchers} - Mortars have been in use for centuries,
 usually consisting of a baseplate, a bipod or tripod mount, and a tube
@@ -7006,6 +7155,7 @@ LOG (12, 1 minute) Extended Test. Carrying the component pieces of the
 system when disassembled usually requires multiple people, due to its
 excessive weight. The M-12 can only fire once per Combat Turn.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7049,6 +7199,7 @@ COST
 M-12 Portable Mortar & 4 & -- & -- & SS & -- & -- & -- & 16(F) & 120.00
 & 2,250¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Rocket Launchers} - Rocket launchers are heavy weapons designed
 to deliver explosive payloads over medium distances. They may accept
@@ -7094,6 +7245,7 @@ Link, Low-Light, Vision Magnification)}, \emph{Laser Designator}.
 launcher with a sophisticated targeting system. Designed to defeat
 heavily armored vehicles. \emph{Smartlink}, \emph{Stock}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7146,6 +7298,7 @@ Mitsubishi Yakusoku MRL & 4 & -- & -- & SA/BF & -- & -- & 4(dm)x2 &
 Ruhrmetall GPRL-Alpha & 4(m) & 9.00 & 9,000¥ & & & & & & & \\
 Spike Disposable Launcher & & & & & & & & & & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Rockets} - Un-guided explosive projectiles fired from rocket
 launchers.
@@ -7154,6 +7307,7 @@ launchers.
 Ares, the Dagger is a lightweight collapsible anti-armor rocket that
 excels at armor penetration.
 
+\end{multicols}
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule\noalign{}
 Rockets & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
@@ -7163,6 +7317,7 @@ Rockets & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
 \endlastfoot
 IMI Dagger & 50P & -45 & 5S & 12(F) & 8.00 & 1,300¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Missile Launchers} - Missile launchers fire guided munitions
 capable of tracking and intercepting moving targets. They may accept
@@ -7231,6 +7386,7 @@ in the early 2020's. It is a simple system comprised of a launch tube
 and a fold out sensor and sighting system. It is a short range
 surface-to-air missile.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7286,6 +7442,7 @@ PS Vogeljäger II & -- & -- & -- & SS & -- & -- & 1(ml) & 22(F) & 8,750¥
 & \\
 Scorpion & -- & -- & -- & SS & -- & -- & 1 & 22(F) & 15.25 & 2,100¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Missiles} - Guided explosive projectiles that can lock onto and
 track targets, fired from missile launchers.
@@ -7300,6 +7457,7 @@ seeking capabilities that can pick out targets through doors and windows
 and follow up with an operator's choice of 3 delayed ignition settings.
 \emph{Airburst Link}, \emph{Heat Seeker}.
 
+\end{multicols}
 \begin{longtable}[]{@{}lllllllll@{}}
 \toprule\noalign{}
 Missiles & SENSOR & DV & AP & BLAST & RANGE & AVAIL & WEIGHT & COST \\
@@ -7312,6 +7470,7 @@ LR SAM & 4 & 5,000 m & 1.50 & 2,200¥ & & & & \\
 MTR & 5 & 3,200 m & -- & -- & -- & & & \\
 Scorpion & 2 & -- & 10.00 & -- & & & & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Flamethrowers} - Flamethrowers project a stream of ignited
 flammable liquid or gas. They are devastating in close quarters and can
@@ -7334,6 +7493,7 @@ pre-mixed, pressurized fuel for roughly 6 seconds of continuous flame.
 Includes a rail system for mounting accessories. \emph{Tactical Rail
 (Underbarrel)}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7380,6 +7540,7 @@ Shiawase Arms Blazer & 6 & 10P(fl) & -- & SS & -- & Close & 4(dm) &
 Shiawase Arms Incinerator & 4 & 15P(fl) & -- & SS & -- & Near & 6(dm) &
 16(F) & 4.25 & 10,000¥ \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Laser Weapons} - Laser weapons project concentrated beams of
 light to deliver thermal energy and essentially burn a hole in their
@@ -7441,6 +7602,7 @@ laser weapon. Can accept power from 2 Peak Discharge Battery Packs or an
 external power source; consumes 2 energy per shot. Includes an integral
 smartgun system. \emph{Smartlink}, \emph{Stock}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7496,6 +7658,7 @@ Ares Redline & 9 & 7P & -7 & SA & (1) & Near & 10(dm) & 14(F) & 7,500¥
 Onotari Arms Assault Laser & 7(9) & 15P & -15 & SA & (1) & Far &
 10(dm)x2 & 12(F) & 26,000¥ & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Special \& Exotic Weapons} - A catch-all category for weapons
 that do not fit into standard classifications, ranging from chemical
@@ -7638,6 +7801,7 @@ a canister of Pepper Punch. With the press of a button it sprays Pepper
 Punch or your choice of another Inhalation Vector Toxin up to 2 meters
 away.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7709,12 +7873,14 @@ Spraytank & & & & & & & & & & \\
 Walther-AGC Liquidator & & & & & & & & & & \\
 Walther PPD & & & & & & & & & & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Monofilament Whip}: A deadly, nearly invisible monofilament line
 stored in a weighted tip. The weapon easily slices through most armor.
 It's notoriously difficult to master, and a critical glitch might result
 in self-amputation.
 
+\end{multicols}
 \begin{longtable}[]{@{}llllllll@{}}
 \toprule\noalign{}
 Melee Weapons & ACC & DV & AP & REACH & AVAIL & WEIGHT & COST \\
@@ -7727,6 +7893,7 @@ Stun Baton & - & 9S(e) & -2 & 1 & - & - & - \\
 Nanite Claws / Bite & - & 8P & -2 & - & - & - & - \\
 Bio-Luminescent Whip & - & 10P & -4 & 2 & - & - & - \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Vehicular Weaponry} - Heavy weapon systems designed specifically
 for mounting on vehicles, drones, or fixed emplacements. They are
@@ -7762,6 +7929,7 @@ Availability 12(F), while the AV smartmunitions are available for +600¥
 per 10 at the weapon's Availability. \emph{Smartlink}, \emph{Trigger
 Removal}, \emph{Underbarrel Weapon}.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7813,6 +7981,7 @@ Ruhrmetall SFW-30 & 6(8) & SA & -- & Far & 100(belt) & 24(F) & 78.00 &
 SFW-30 Underbarrel Weapon & 6(8) & -- & -- & SS & -- & Far & 10(m) & --
 & -- & -- \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Vehicular Bombs -}
 
@@ -7827,6 +7996,7 @@ is capable of gliding to its target through GPS positioning, giving it a
 much greater range than conventional bombs. It was massively stockpiled
 prior to the Euro Wars and still widely available.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
@@ -7864,6 +8034,7 @@ COST
 AGM-154 JSOW & 2 & 35 km & 26(F) & 495.00 & 181,000¥ & & & \\
 GBU-39 SBD & 3 & 10 km & 16(F) & 129.00 & 125,500¥ & & & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Vehicular Rockets} - Unguided rocket munitions designed to be
 fired from vehicular weapon mounts.
@@ -7878,6 +8049,7 @@ in rocket pods or on light hard points. Intended for use by paramilitary
 forces, the Cranston has a low power high explosive warhead to mitigate
 collateral damage.
 
+\end{multicols}
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule\noalign{}
 Vehicular Rockets & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
@@ -7888,6 +8060,7 @@ Vehicular Rockets & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
 Ares Zuni IX & 20(F) & 60.00 & 800¥ & & & \\
 Cranston & 14(F) & 5.00 & 800¥ & & & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Vehicular Missiles} - Heavy guided missiles intended for use by
 vehicles and aircraft, capable of engaging ground, air, or naval targets
@@ -8053,6 +8226,7 @@ cell. The small size of these missiles allow two to fit inside one
 vertical launch cell. To fire, a submarine must be within 50 meters of
 the surface.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
@@ -8124,6 +8298,7 @@ UGM-188 Sea Saber ASM & 5 & 6 & 30 & -30 & 250 km & 32(F) & 900.00 &
 UIM-199 Kingfisher SSAM & 4 & 3 & 24 & -6 & 4,000 m & 16(F) & 25.00 &
 15,000¥ & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Vehicular Torpedoes} - Underwater propelled weapons designed to
 be fired from naval vessels or submarines.
@@ -8143,6 +8318,7 @@ Perfectly capable of swiftly eliminating close targets. Nominally has a
 12 kilometer range with customizable payload and guidance options. Stats
 given are for Mercury's standard guidance package and HE warhead.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
@@ -8184,6 +8360,7 @@ MK 197 MADCAP & 2 & 5 & 28 & -32 & -5 per m & 15 km & 18(F) & 750.00 &
 350,000¥ \\
 Mercury Riptide & 3 & 24(F) & 800.00 & 450,000¥ & & & & & \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Ammunition:}
 
@@ -8210,6 +8387,7 @@ as an educated guess, and these values have been abstracted into the
 damage codes presented with each individual weapon listing, subject to
 weapon specifics and characteristics such as barrel lengths.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
@@ -8323,6 +8501,7 @@ FN 5.7 & 5.7x28mm & 23-31 & 720-850 & 0.193 & 515-540 \\
 20mm HS & 20x139mm & - & - & - & - \\
 8 gauge slug & 21.2x89mm & 1250 & 460 & 0.079 & 8569 \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{i.-magic-the-awakened-gaiasphere}{%
 \subsubsection{I. MAGIC: The Awakened
@@ -8338,6 +8517,7 @@ Calculations}\label{spellcasting-drain-calculations}}
 Drain is resisted with Willpower + Tradition Attribute (Logic or
 Charisma).
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
@@ -8400,10 +8580,12 @@ living tissue to stone. \\
 Detection & Mind Probe & Mana & Touch & Sustained & Force & Reads
 target's surface thoughts or deep memories. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{adept-powers-metamagic}{%
 \paragraph{2. Adept Powers \& Metamagic}\label{adept-powers-metamagic}}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
@@ -8458,6 +8640,7 @@ Wild Channeling & Metamagic & Initiation & Allows the adept to
 voluntarily turn up to their Initiate Grade of dice into Wild Dice on
 combat tests. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{ritual-spellcasting}{%
 \paragraph{3. Ritual Spellcasting}\label{ritual-spellcasting}}
@@ -8465,6 +8648,7 @@ combat tests. \\
 Rituals rely heavily on sympathetic links and the local Background
 Count.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -8487,6 +8671,7 @@ Execution & Takes (Force) Hours. Wild Dice equal to the Background Count
 must be rolled. A Glitch causes the ritual to backfire, dealing Drain to
 all participants. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{ii.-matrix-the-nanite-grid}{%
 \subsubsection{II. MATRIX: The Nanite
@@ -8498,6 +8683,7 @@ putting your brain and soul on the line.
 \hypertarget{cyberdecks-commlinks}{%
 \paragraph{1. Cyberdecks \& Commlinks}\label{cyberdecks-commlinks}}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
@@ -8532,6 +8718,7 @@ Entry-level hot-sim deck. Configurable Array. \\
 Bio-Deck & Fairlight Paladin & 6 & 8 / 7 / 6 / 6 & 150,000 &
 Military-grade. Interfaces directly with gaiasphere anomalies. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{matrix-actions-tethers-in-combat}{%
 \paragraph{2. Matrix Actions \& Tethers in
@@ -8539,6 +8726,7 @@ Combat}\label{matrix-actions-tethers-in-combat}}
 
 Tethers replace Marks. They are two-way sympathetic soul-links.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
@@ -8573,11 +8761,13 @@ Matrix Action while you hold a Tether on a target, the target gets a
 free blast of Biofeedback against you (Damage = target's Firewall,
 resisted by WIL). \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{hosts-ic-immune-responses}{%
 \paragraph{3. Hosts \& IC (Immune
 Responses)}\label{hosts-ic-immune-responses}}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -8602,6 +8792,7 @@ G.O.D. Manifestation & ``The Antibody'' & Summoned immediately if a
 hacker rolls a 1 on a Wild Die. Manifests as an angry, dual-natured
 Sprite/Spirit. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{iii.-rigging-vehicles-the-ghost-in-the-shell}{%
 \subsubsection{III. RIGGING \& VEHICLES: The Ghost in the
@@ -8613,6 +8804,7 @@ instinctual merge with the machine's pseudo-Essence.
 \hypertarget{drone-vehicle-stats}{%
 \paragraph{1. Drone \& Vehicle Stats}\label{drone-vehicle-stats}}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
@@ -8649,11 +8841,13 @@ Ares Duelist & Combat Drone & 3 / 3 & 2 & 4 & 4 & 3 & 4,500 \\
 Ford Americar & Sedan & 4 / 4 & 2 & 11 & 6 & 2 & 16,000 \\
 GMC Banshee & T-Bird / LAV & 5 / 8 & 4 & 16 & 18 & 5 & 250,000 \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{jumped-in-mechanics-chase-combat}{%
 \paragraph{2. Jumped-In Mechanics \& Chase
 Combat}\label{jumped-in-mechanics-chase-combat}}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -8678,6 +8872,7 @@ Chase Combat & Opposed Pilot + Reaction tests. Net hits determine range
 bands (Close, Short, Medium, Long, Extreme). Drivers can spend Complex
 actions to attempt maneuvers (Cut Off, Ram, Evade). \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{iv.-general-equipment-lifestyle}{%
 \subsubsection{IV. GENERAL EQUIPMENT \&
@@ -8693,6 +8888,7 @@ Bioware)}\label{augmentations-cyberware-bioware}}
 Losing \textgreater2 Essence risks the ``Augmentation Addict'' Negative
 Quality.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
@@ -8747,10 +8943,12 @@ Leónization & Genetic & 0.0 & 2,500,000 & Anti-aging treatment. Resets
 physical age to prime, but introduces long-term spontaneous cellular
 degeneration risks. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{armor-weapons}{%
 \paragraph{2. Armor \& Weapons}\label{armor-weapons}}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
@@ -8806,11 +9004,13 @@ for throwing. \\
 Monofilament Knife & Melee & Dam: 7P, AP: -8 & --- & 1,500 & Blade edged
 with monofilament wire. Slices through armor. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{lifestyles-monthly-upkeep}{%
 \paragraph{3. Lifestyles (Monthly
 Upkeep)}\label{lifestyles-monthly-upkeep}}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -8835,6 +9035,7 @@ Middle & 5,000 & Safe, secure, decent food. Standard existence. \\
 High & 10,000 & Luxury condo, real meat, clean air. Gain +1 Die on all
 downtime healing tests. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{v.-the-weird-af-world-btls-manifestations}{%
 \subsubsection{V. THE ``WEIRD AF'' WORLD: BTLs \&
@@ -8853,6 +9054,7 @@ These highly illegal, experimental BTLs utilize the ambient nanites in
 the user's body and environment to physically project or temporarily
 transform the user.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -8883,6 +9085,7 @@ Abomination Risk: If the user takes Physical damage exceeding their
 Willpower while transformed, the Sprite takes permanent control
 (Inhabitation). They become a feral, dual-natured shock-troop NPC. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{specialized-entities-npcs}{%
 \paragraph{2. Specialized Entities \&
@@ -8891,6 +9094,7 @@ NPCs}\label{specialized-entities-npcs}}
 Your homebrew heavily features unique Awakened/Digital beings. Here is
 how to stat and run them:
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -8920,6 +9124,7 @@ Protocol: If Sam acts in combat, he automatically uses Wild Dice for all
 weapon attacks. If crossed, he ignores collateral damage. Has an Essence
 of 6 and a massive physical drone body. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -8939,6 +9144,7 @@ gain a pool of 10 Karma specifically dedicated to the listed Skills, or
 you gain +1 rating in one of the listed Skills (up to a maximum rating
 of 4).
 
+\end{multicols}
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
 D6 & Origin & Starting Skills / Benefits \\
@@ -8953,6 +9159,7 @@ D6 & Origin & Starting Skills / Benefits \\
 5 & Street Gang & Intimidation, Pistols, Blades \\
 6 & Matrix Junkie & Hacking, Hardware, Electronics \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{2. Pre-Career Education (Ages 18-21)} Attempt to enter higher
 education before starting a career. * \textbf{Corporate University:}
@@ -8996,6 +9203,7 @@ or Etiquette (Threshold 2) * \textbf{Survival:} WIL + Etiquette
 (Threshold 2) * \textbf{Advancement:} INT + Negotiation (Threshold 3) *
 \textbf{Benefits Table (1D6):}
 
+\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9010,13 +9218,15 @@ Roll & Benefit \\
 5 & Corporate Contact (Rating 2) \\
 6 & Mid-level Lifestyle (1 Year) \\
 \end{longtable}
+\begin{multicols}{2}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9037,12 +9247,14 @@ Physical Attribute point or pay 10,000¥ for cyberware, losing 0.5
 Essence). \\
 6 & Burned out. Lose 1 WIL. Ejected. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Lone Star / Knight Errant Cop} * \textbf{Qualification:} BOD +
 Firearms or Unarmed (Threshold 2) * \textbf{Survival:} REA + Firearms
 (Threshold 3) * \textbf{Advancement:} LOG + Investigation (Threshold 3)
 * \textbf{Benefits Table (1D6):}
 
+\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9057,13 +9269,15 @@ Roll & Benefit \\
 5 & Police/Fixer Contact (Rating 2) \\
 6 & Weapon Permit / Fake SIN (Rating 3) \\
 \end{longtable}
+\begin{multicols}{2}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9084,12 +9298,14 @@ trauma. Ejected. \\
 or get forced cyber-replacement (lose 1 Essence). Ejected. \\
 6 & Crossed the wrong syndicate. Gain an Enemy (Syndicate). \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Ganger / Syndicate Member} * \textbf{Qualification:} STR +
 Intimidation (Threshold 2) * \textbf{Survival:} REA + Street Navigation
 (Threshold 2) * \textbf{Advancement:} CHA + Intimidation (Threshold 3) *
 \textbf{Benefits Table (1D6):}
 
+\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9104,13 +9320,15 @@ Roll & Benefit \\
 5 & Street/Gang Contact (Rating 2) \\
 6 & 10,000¥ (Stolen Goods) \\
 \end{longtable}
+\begin{multicols}{2}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9131,12 +9349,14 @@ Ejected. \\
 Attribute point or pay for cheap cyberware, losing 1 Essence). \\
 6 & Betrayed the boss. Gain a powerful Syndicate Enemy. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Smuggler / Courier} * \textbf{Qualification:} REA + Piloting or
 Navigation (Threshold 2) * \textbf{Survival:} INT + Piloting (Threshold
 2) * \textbf{Advancement:} LOG + Negotiation or Mechanics (Threshold 3)
 * \textbf{Benefits Table (1D6):}
 
+\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9151,13 +9371,15 @@ Roll & Benefit \\
 5 & Fixer Contact (Rating 3) \\
 6 & Used Vehicle (e.g., Ford Americar) \\
 \end{longtable}
+\begin{multicols}{2}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9177,12 +9399,14 @@ Mishap
 Essence to cyber-replacement). \\
 6 & Exposed to toxic waste/radiation in the Barrens. Lose 1 BOD. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Military / Mercenary} * \textbf{Qualification:} BOD + Firearms
 or Athletics (Threshold 2) * \textbf{Survival:} WIL + Athletics
 (Threshold 3) * \textbf{Advancement:} INT + Tactics or Leadership
 (Threshold 3) * \textbf{Benefits Table (1D6):}
 
+\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9197,13 +9421,15 @@ Roll & Benefit \\
 5 & Mercenary/Arms Dealer Contact (Rating 2) \\
 6 & Combat Cyberware (up to 30,000¥ value, costs normal Essence) \\
 \end{longtable}
+\begin{multicols}{2}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9223,12 +9449,14 @@ Mishap
 Cyber-Prosthetics (Lose 1.5 Essence, but gain +1 BOD). Ejected. \\
 6 & Captured as POW. Spend next term imprisoned (no benefits). \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Matrix Decker / Hacker} * \textbf{Qualification:} LOG + Hacking
 (Threshold 2) * \textbf{Survival:} INT + Electronic Warfare (Threshold
 3) * \textbf{Advancement:} LOG + Computers (Threshold 3) *
 \textbf{Benefits Table (1D6):}
 
+\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9243,13 +9471,15 @@ Roll & Benefit \\
 5 & Hacker Contact (Rating 2) \\
 6 & Used Cyberdeck \\
 \end{longtable}
+\begin{multicols}{2}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9269,12 +9499,14 @@ Mishap
 1 WIL). \\
 6 & Data heist gone wrong. Owe a powerful entity a major favor. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Magical Initiate} * \textbf{Qualification:} MAG + Arcana
 (Threshold 2) (Requires Awakened) * \textbf{Survival:} WIL + Assensing
 (Threshold 2) * \textbf{Advancement:} MAG + Spellcasting/Conjuring
 (Threshold 3) * \textbf{Benefits Table (1D6):}
 
+\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9289,13 +9521,15 @@ Roll & Benefit \\
 5 & Talismonger Contact (Rating 2) \\
 6 & 1 Free Spell or Bound Spirit \\
 \end{longtable}
+\begin{multicols}{2}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9315,12 +9549,14 @@ Physical Attribute). Ejected. \\
 5 & Severe Drain trauma. Lose 1 MAG. Ejected. \\
 6 & Exiled from magical order or tradition. Ejected. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Rock Star / Media Icon} * \textbf{Qualification:} CHA +
 Performance (Threshold 2) * \textbf{Survival:} WIL + Etiquette or Con
 (Threshold 2) * \textbf{Advancement:} CHA + Leadership or Performance
 (Threshold 3) * \textbf{Benefits Table (1D6):}
 
+\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9335,13 +9571,15 @@ Roll & Benefit \\
 5 & Media/Fixer Contact (Rating 3) \\
 6 & Cult Following (Gain a dedicated group of fans/contacts) \\
 \end{longtable}
+\begin{multicols}{2}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9361,12 +9599,14 @@ Mishap
 Attribute or get cyberware losing 1 Essence). Ejected. \\
 6 & Screwed by a manager. Lose all saved Nuyen. Ejected. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{Street Racer / Drone Jockey / Delivery Driver} *
 \textbf{Qualification:} REA + Piloting (Threshold 2) *
 \textbf{Survival:} REA + Piloting (Threshold 2) * \textbf{Advancement:}
 INT + Mechanics (Threshold 3) * \textbf{Benefits Table (1D6):}
 
+\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9381,13 +9621,15 @@ Roll & Benefit \\
 5 & Mechanic/Rigger Contact (Rating 2) \\
 6 & Racing/Delivery Vehicle or Combat Drone \\
 \end{longtable}
+\begin{multicols}{2}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9408,10 +9650,12 @@ Ejected. \\
 cyber-replacement (Lose 1 Essence). Ejected. \\
 6 & Arrested for illegal street racing. Lose 1 term to prison. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{4. Generic Event Table (Roll 2D6 for all Careers if Survival
 passed)}
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9441,6 +9685,7 @@ Contact (Rating 3). \\
 12 & Exceptional success. Automatically succeed on Advancement check and
 gain +1 roll on Benefits. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \textbf{5. Aging \& Essence Tracking} Starting at \textbf{Age 34}
 (typically after completing 4 terms), the wear and tear of the 6th World
@@ -9486,6 +9731,7 @@ that can be hacked if you aren't careful.
 
 Attack Roll: Agility + Firearms. Defense Roll: Reaction + Intuition.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
@@ -9522,11 +9768,13 @@ Ares Alpha & Assault Rifle & 11P & -2 & 42 (c) & Full Auto (FA) capable
 Ranger Arms SM-5 & Sniper & 14P & -4 & 6 (m) & Extreme range. Requires
 Aim action to use full AP. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{ammo-types-modifications}{%
 \paragraph{2. Ammo Types \&
 Modifications}\label{ammo-types-modifications}}
 
+\end{multicols}
 \begin{longtable}[]{@{}llll@{}}
 \toprule\noalign{}
 Ammo Type & Cost Multiplier & Effect on Damage / AP & Special Rules \\
@@ -9540,6 +9788,7 @@ Explosive (EX) & x2 & +1 Damage & AP -1 \\
 Gel / Stick-n-Shock & x1.5 & -2 Damage (Stun) & AP +2 \\
 Nanite-Buster (Grey Goo) & x10 & +2 Damage & AP -2 \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{viii.-healing-downtime}{%
 \subsubsection{VIII. HEALING \& DOWNTIME}\label{viii.-healing-downtime}}
@@ -9547,6 +9796,7 @@ Nanite-Buster (Grey Goo) & x10 & +2 Damage & AP -2 \\
 Because Essence is tied to your soul and the nanite-environment, healing
 is both biological and spiritual.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -9573,6 +9823,7 @@ Essence Therapy & Roll Charisma + Psychology (Threshold 4). Success
 restores 0.1 lost Essence (from trauma, not cyberware). & 1 Month
 interval. Costs 5,000¥ in therapy/retreat fees. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{ix.-stealth-in-the-panopticon-hiding-from-the-goo}{%
 \subsubsection{IX. STEALTH IN THE PANOPTICON: Hiding from the
@@ -9591,7 +9842,7 @@ eyeballs, but to bypass the ambient gaiasphere/Matrix, a hacker or
 rigger must actively mask the team's AR signatures.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{The ``Spoof Signature'' Action:} A Complex Action requiring a
   DNI. The hacker rolls Logic + Hacking against the local Grid/Host's
@@ -9634,6 +9885,7 @@ Shaping)}\label{complex-forms-nanite-shaping}}
 
 Technomancers weave ``Threads'' instead of casting spells.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
@@ -9661,6 +9913,7 @@ Goo-Spike & Persona & Lvl + 2 & Violently commands ambient nanites
 inside the target's gear to short out. Deals Matrix damage equal to
 Level + Net Hits. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{compiling-sprites-physical-manifestation}{%
 \paragraph{3. Compiling Sprites (Physical
@@ -9671,7 +9924,7 @@ physical matter (dust, trash, loose electronics) to build a temporary
 physical body.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Mechanic:} Roll Resonance + Compiling vs.~Sprite Level. Fading
   equals the Sprite's hits x 2.
@@ -9696,7 +9949,7 @@ Sprites) with respect.
 Edge represents luck, grit, and the universe pushing back.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Spend 1 Edge:} Reroll all failed dice on a test.
 \item
@@ -9718,7 +9971,7 @@ Players start each session with Edge equal to their Edge attribute. GMs
 should award 1 Edge point during the game when a player:
 
 \begin{itemize}
-\tightlist
+
 \item
   Takes a significant physical risk to protect a bystander or innocent
   NPC.
@@ -9740,7 +9993,7 @@ Entities relying on nanites for physical form have a Destabilization
 Track.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{The Trigger:} Whenever a manifested entity takes Physical
   damage that exceeds their Body rating in a single hit, or if they
@@ -9769,7 +10022,7 @@ You can't just text your Fixer on an open commlink anymore. The silence
 is speaking volumes.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Secure Comms:} Standard commlinks are assumed to be monitored
   by the gaiasphere. To arrange a secure meet, runners must use
@@ -9893,7 +10146,7 @@ jacks out (taking Dump Shock) and drops off the grid.
 World}\label{gm-advice-running-combat-in-the-6th-world}}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Make them choose their ammo:} If the runners are fighting
   Wuxing, standard APDS ammo is best. But if a G.O.D Antibody spawns or
@@ -9930,7 +10183,7 @@ Digital Nuyen is still the standard, but spending it without leaving a
 data-trail is harder than ever.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Hot Nuyen:} Buying illegal gear with standard, unscrubbed
   Nuyen automatically grants the corporate grid a Tether on the buyer.
@@ -9951,6 +10204,7 @@ Barter}\label{the-new-gold-standard-barter}}
 Because digital money is inherently risky, the black market has reverted
 heavily to a barter system.
 
+\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -9980,6 +10234,7 @@ Raw Karma & Priceless & Spirits (like Ennis) and ancient AIs rarely care
 about money. A runner can permanently trade 1 Karma to an Awakened
 entity in exchange for a massive favor or a rare artifact. \\
 \end{longtable}
+\begin{multicols}{2}
 
 \hypertarget{smuggling-null-bags}{%
 \paragraph{3. Smuggling \& ``Null-Bags''}\label{smuggling-null-bags}}
@@ -9989,7 +10244,7 @@ gun's nanites will broadcast its shape and serial number to the local
 grid.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Null-Bags:} Smugglers use Faraday-weave canvas bags to
   transport goods.
@@ -10013,7 +10268,7 @@ is physical, paranoid, and highly encrypted.
 \paragraph{1. Communication Protocols}\label{communication-protocols}}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{The Dead Drop:} Physical locations completely shielded from
   the Matrix (lead-lined safes, flooded subway tunnels).
@@ -10039,7 +10294,7 @@ How you treat the weird children of the Matrix matters. Your Street Cred
 (Total Karma earned divided by 10) directly impacts your social rolls.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{The Empathy Bonus:} When rolling Negotiation or Etiquette with
   an AI, Sprite, or Spirit, add your Street Cred to your Dice Pool if
@@ -10062,7 +10317,7 @@ Knows No Law adventure lore.
 Bug City, Sam loves humanity but forgets how fragile they are.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Connection:} 6 \textbar{} \textbf{Loyalty:} Variable
 \item
@@ -10088,7 +10343,7 @@ AIs to Awaken. Appears as a rumpled man with a cane and steampunk AR
 glasses.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Connection:} 4 \textbar{} \textbf{Loyalty:} 5 (to
   AIs/Technomancers)
@@ -10109,7 +10364,7 @@ glasses.
 lifeline, currently ghosted.
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Connection:} 5 \textbar{} \textbf{Loyalty:} 4
 \item
@@ -10158,7 +10413,7 @@ this ruleset.
 Formula}\label{metatype-karma-cost-formula}}
 
 \begin{itemize}
-\tightlist
+
 \item
   \textbf{Base Cost calculation:} Calculate the sum of the maximum
   limits for all 9 core Attributes (BOD, AGI, REA, STR, WIL, LOG, INT,
@@ -10172,7 +10427,7 @@ Formula}\label{metatype-karma-cost-formula}}
   \textbf{Trait Modifiers:}
 
   \begin{itemize}
-  \tightlist
+
   \item
     Thermographic Vision: +10
   \item
@@ -10197,55 +10452,39 @@ Formula}\label{metatype-karma-cost-formula}}
 \paragraph{Weapon Nuyen Cost Formula}\label{weapon-nuyen-cost-formula}}
 
 \begin{itemize}
-\tightlist
 \item
   \textbf{Base Cost:} 100¥
 \item
-  \textbf{Damage Value (DV):} Add \texttt{(DV\ \^{}\ 2)\ *\ 2}
+  \textbf{Damage Value (\gameterm{DV}):} Add \gameterm{DV} \^{} 2 * 2
 \item
-  \textbf{Armor Piercing (AP):} If AP is negative, add
-  \texttt{Absolute\ Value(AP)\ *\ 50}
+  \textbf{Armor Piercing (\gameterm{AP}):} If \gameterm{AP} is negative, add Absolute Value(\gameterm{AP}) * 50
 \item
   \textbf{Firing Mode:}
-
   \begin{itemize}
-  \tightlist
-  \item
-    Full Auto (FA): +500
-  \item
-    Burst Fire (BF): +200
-  \item
-    Semi-Auto (SA): +50
+  \item Full Auto (\gameterm{FA}): +500
+  \item Burst Fire (\gameterm{BF}): +200
+  \item Semi-Auto (\gameterm{SA}): +50
   \end{itemize}
 \item
-  \textbf{Recoil Compensation (RC):} Add \texttt{RC\ *\ 100}
+  \textbf{Recoil Compensation (\gameterm{RC}):} Add \gameterm{RC} * 100
 \item
-  \textbf{Ammo Capacity:} Add \texttt{Ammo\ Count\ *\ 5}
+  \textbf{Ammo Capacity:} Add \gameterm{AMMO COUNT} * 5
 \item
   \textbf{Category Multipliers:}
-
   \begin{itemize}
-  \tightlist
-  \item
-    Pistols or Hold-Outs: Multiply the running total by 0.8
-  \item
-    Sniper Rifles, Cannons, or Machine Guns: Multiply the running total
-    by 1.5
+  \item Pistols or Hold-Outs: Multiply the running total by 0.8
+  \item Sniper Rifles, Cannons, or Machine Guns: Multiply the running total by 1.5
   \end{itemize}
 \item
   \textbf{Rounding:}
-
   \begin{itemize}
-  \tightlist
-  \item
-    Values \textgreater{} 10,000¥ are rounded to the nearest 1,000
-  \item
-    Values \textgreater{} 1,000¥ are rounded to the nearest 100
-  \item
-    Values \textgreater{} 100¥ are rounded to the nearest 50
-  \item
-    Values \textless= 100¥ are rounded to the nearest 10
+  \item Values > 10,000¥ are rounded to the nearest 1,000
+  \item Values > 1,000¥ are rounded to the nearest 100
+  \item Values > 100¥ are rounded to the nearest 50
+  \item Values <= 100¥ are rounded to the nearest 10
   \end{itemize}
 \end{itemize}
 
+\vfill\null
+\end{multicols}
 \end{document}
