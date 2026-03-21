@@ -1,45 +1,56 @@
 \documentclass[10pt, letterpaper]{article}
 
-% Layout & Typography
+% Typography & Layout
 \usepackage[margin=0.75in]{geometry}
 \usepackage{multicol}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault} % Sans-serif body font
-
-% Microtype for better text justification
+\usepackage{helvet} % Sans-serif clean font (close to Roboto/Inter available in standard pdflatex)
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{microtype}
 
 % Colors
 \usepackage[table]{xcolor}
-\definecolor{matrixgreen}{HTML}{00FF41}
-\definecolor{darkgray}{HTML}{222222}
-\definecolor{lightgray}{HTML}{E0E0E0}
-\definecolor{cyberred}{HTML}{FF003C}
+\definecolor{matrixblue}{HTML}{00CCFF} % Neon blue for HUD elements
+\definecolor{srdark}{HTML}{1A1A1A}     % Deep charcoal for JackPoint backgrounds
+\definecolor{sraccent}{HTML}{E63946}   % Warning/Glitch red
 
-% Headers and Footers
+% Headers and Footers (HUD Style)
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{1pt}
-\renewcommand{\footrule}{\hbox to\headwidth{\color{matrixgreen}\leaders\hrule height \footrulewidth\hfill}}
-\fancyfoot[L]{\textbf{LOCAL GRID: SEATTLE-METRO}}
-\fancyfoot[R]{\textbf{\thepage}}
+\renewcommand{\footrulewidth}{1.5pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{matrixblue}\leaders\hrule height \footrulewidth\hfill}}
+\fancyfoot[L]{\ttfamily\small SYSTEM STATUS: ONLINE \textbar{} GRID LOCATION: OKC-METRO}
+\fancyfoot[R]{\ttfamily\small PAGE \thepage}
+
+% Watermark
+\usepackage[pages=all]{background}
+\backgroundsetup{
+  scale=1,
+  color=black,
+  opacity=0.05,
+  angle=0,
+  position=current page.center,
+  vshift=0pt,
+  hshift=0pt,
+  contents={%
+  \begin{tikzpicture}[remember picture,overlay]
+    \draw [step=0.5cm,line width=0.5mm]
+      (current page.south west) grid (current page.north east);
+  \end{tikzpicture}%
+  }
+}
 
 % Chapter Headings
 \usepackage{titlesec}
 \titleformat{\section}[block]
-  {\normalfont\LARGE\bfseries\color{darkgray}}
+  {\normalfont\LARGE\bfseries\color{matrixblue}\MakeUppercase}
   {\thesection}{1em}{}
-  [\vspace{1ex}\color{matrixgreen}\titlerule\vspace{0.5ex}\color{cyberred}\titlerule]
+  [\vspace{1ex}\color{matrixblue}\titlerule\vspace{0.5ex}\color{sraccent}\titlerule]
 \titleformat{\subsection}[block]
-  {\normalfont\Large\bfseries\color{darkgray}}
+  {\normalfont\Large\bfseries\color{srdark}\MakeUppercase}
   {\thesubsection}{1em}{}
-  [\color{matrixgreen}\titlerule]
-\titleformat{\subsubsection}[block]
-  {\normalfont\large\bfseries\color{darkgray}}
-  {\thesubsubsection}{1em}{}
-  [\color{matrixgreen}\titlerule]
+  [\color{matrixblue}\titlerule]
 
 % Tables
 \usepackage{tabularray}
@@ -48,29 +59,32 @@
 % Callout Boxes
 \usepackage[most]{tcolorbox}
 
-% JackPoint Commentary Box
-\newtcolorbox{jackpoint}[1][]{
-  colback=darkgray,
-  colframe=matrixgreen,
-  coltitle=matrixgreen,
-  fonttitle=\bfseries\ttfamily,
-  title={> USER ID: #1},
-  boxrule=0.5pt,
-  sharp corners,
-  coltext=white,
-  enhanced,
-  drop shadow
+% The JackPoint Commentary Box
+\newtcolorbox{jackpoint}[2][]{
+    enhanced,
+    colback=srdark,
+    colframe=matrixblue,
+    coltext=white,
+    boxrule=0.5pt,
+    leftrule=4pt, % Thick accent line on the left
+    arc=0mm,      % Sharp, digital corners
+    fonttitle=\bfseries\ttfamily\small,
+    title={>> USER: #2 <<},
+    attach title to upper,
+    after title={\par\vspace{0.5em}\hrule\vspace{0.5em}},
+    #1
 }
 
 % GM Advice Box
 \newtcolorbox{gmadvice}[1][GM Advice]{
-  colback=lightgray,
-  colframe=cyberred,
+  colback=gray!10,
+  colframe=sraccent,
   coltitle=white,
-  fonttitle=\bfseries,
+  fonttitle=\bfseries\MakeUppercase,
   title={#1},
-  boxrule=1pt,
-  arc=3mm,
+  boxrule=1.5pt,
+  leftrule=4pt,
+  arc=0mm,
   coltext=black
 }
 
@@ -84,82 +98,87 @@ All actions use a streamlined success-counting system.
 \begin{itemize}
 \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
 \item
-  \textbf{Dice Pool:} Attribute + Skill.
+  \textbf{DICE POOL:} Attribute + Skill.
 \item
-  \textbf{Hits:} All tests use six-sided dice (D6). A result of
-  \textbf{5 or 6} is a Hit.
+  \textbf{\textsc{hits}:} All tests use six-sided dice (D6). A result of
+  \textbf{5 or 6} is a \textsc{hit}.
 \item
-  \textbf{Glitches:} If more than half the dice rolled are \textbf{1s},
-  you Glitch (a complication occurs). If you Glitch with 0 hits, it's a
-  \textbf{Critical Glitch} (catastrophe).
+  \textbf{\textsc{glitches}:} If more than half the dice rolled are \textbf{1s},
+  you \textsc{glitch} (a complication occurs). If you \textsc{glitch} with 0 hits, it's a
+  \textbf{\color{sraccent}CRITICAL GLITCH} (catastrophe).
 \item
   \textbf{Rule of 6 (Ro6):} When applicable (e.g., using Edge), a rolled
-  6 counts as a hit and is rolled again.
+  6 counts as a \textsc{hit} and is rolled again.
 \item
   \textbf{Wild Dice:} Used in high-mana or nanite-saturated areas. Roll
   these with a different colored die. A \textbf{6} counts as \textbf{3
-  hits} (and explodes if Ro6 applies). However, a \textbf{1} cancels all
+  \textsc{hits}} (and explodes if Ro6 applies). However, a \textbf{1} cancels all
   standard \textbf{5s} rolled in that pool.
 \end{itemize}
 
-\begin{jackpoint}[Bull]
-The streets have changed, chummers. Nanites in the rain, spirits in the code. Bring your Wild Dice or don't bother jacking in.
-Also, make sure you don't roll a 1 on those Wild Dice unless you want G.O.D. breathing down your neck.
+\begin{jackpoint}{Glitch\_Walker}
+Watch your back, chummer. The nanite density in OKC is spiking again. The streets have changed. Nanites in the rain, spirits in the code. Bring your Wild Dice or don't bother jacking in.
 \end{jackpoint}
 
-\begin{gmadvice}[Rules Reminder: Glitches]
-Remember that a Glitch doesn't always mean failure. A character can succeed at a task but still suffer a complication! Only a Critical Glitch means a complete failure.
+\begin{gmadvice}[Rules Reminder: GLITCHES]
+Remember that a \textsc{glitch} doesn't always mean failure. A character can succeed at a task but still suffer a complication! Only a \textsc{critical glitch} means a complete catastrophe.
 \end{gmadvice}
 
+\subsection*{The Matrix \& The Gaiasphere}
+
+The Matrix is no longer separate from reality; it is a nanite-infused
+environment. Even the hermit in the woods is lit up with an AR signature
+because the water and air are crawling with nanites.
+
+\textbf{No Cold Sim (The Abyss Looks Back):} Cold Sim is dead. Any
+active skill involving the Matrix requires a Direct Neural Interface
+(\textsc{dni}), and all \textsc{dni} connections are Hot Sim. You put your brain and
+soul on the line. Acting in AR without \textsc{dni} limits your dice pools to
+the flat stats of your commlink or cyberdeck.
 
 \vfill\null
 \columnbreak
 
-\section*{Gear: Missile Launchers}
+\section*{Metatype Karma Cost Formulas}
 
-\textbf{Missile Launchers} - Missile launchers fire guided munitions
-capable of tracking and intercepting moving targets. They may accept
-top-mounted and underbarrel accessories.
+To ensure consistency and allow automated tools (like \texttt{balance\_generator.py}) to function properly, the following mathematical formulas serve as the baseline for calculating costs in this ruleset.
 
-\textbf{9K135 Missile System} (Kornet Missiles): An ancient Soviet-era
-launch system that combines a tripod launcher with a laser guidance
-system for designating targets. It was designed to only fire the
-Kornet/AT-14 Spriggan missile. \emph{Laser Designator}, \emph{Tripod}.
+\begin{jackpoint}{Loki}
+Keep in mind, chummers: these formulas are the hardcoded foundation. If you try to manually tweak a metatype without running the math, the whole drekking system might crash on you during character generation.
+\end{jackpoint}
 
-\textbf{Great Dragon ATGM} (Great Dragon Missiles): This Anti-Tank
-Guided Missile Launcher is a stripped down version of a popular
-surface-to-air missile system. The Great Dragon is mounted on a tripod
-and features an optical imaging scope. It may mount no other upgrades
-and may only fire its proprietary guided missiles. \emph{Optical Scope},
-\emph{Tripod}.
+\subsection*{Base Cost Calculation}
+\begin{enumerate}
+    \item Calculate the sum of the maximum limits for all 9 core Attributes (\textsc{bod}, \textsc{agi}, \textsc{rea}, \textsc{str}, \textsc{wil}, \textsc{log}, \textsc{int}, \textsc{cha}, \textsc{edg}).
+    \item Subtract 56 from this total.
+    \item Multiply the difference by \textbf{15 Karma}. \textit{(If the result is negative, the base cost is 0.)}
+\end{enumerate}
 
-\textbf{Onotari Arms Interceptor} (Medium Missiles/Rockets): A versatile
-launcher from Saeder-Krupp which features a smartgun system and two
-separate tubes, each capable of loading either rockets or missiles.
-\emph{Smartlink}.
+\subsection*{Trait Modifiers}
 
-\textbf{Scorpion} (Scorpion Missiles): An evolution of the venerable
-Stinger platform, the Scorpion was created with off-the-shelf components
-in the early 2020's. It is a short range surface-to-air missile.
-
-\vspace{1em}
-
+% Tabularray for a sleek, alternating-color gear/crunch table
 \begin{center}
 \begin{tblr}{
-  width = \linewidth,
-  colspec = {X[2,l] *{6}{c} r r},
-  row{odd} = {lightgray},
-  row{1} = {bg=darkgray, fg=white, font=\bfseries},
-  hlines,
-  column{2-7} = {cmd=\centering}
+    width = \linewidth,
+    colspec = {X[2,l] X[1,c]},
+    row{1} = {bg=srdark, fg=white, font=\bfseries\sffamily}, % Dark Header
+    row{even} = {bg=gray!10}, % Subtle zebra striping
+    hline{1,Z} = {1.5pt, solid, matrixblue}, % Thick neon top/bottom borders
+    hline{2} = {0.5pt, solid, matrixblue},   % Thin neon line under header
 }
-Weapon & ACC & DV & AP & MODE & RC & AMMO & AVAIL & COST \\
-9K135 System & -- & -- & -- & SS & -- & 1(ml) & 15(F) & 1,000¥ \\
-Great Dragon & -- & -- & -- & SS & -- & 1(ml) & 17(F) & 1,200¥ \\
-Onotari Arms & 4(6) & -- & -- & SS & -- & 2(ml) & 18(F) & 14,000¥ \\
-Scorpion & -- & -- & -- & SS & -- & 1 & 22(F) & 2,100¥ \\
+Trait & Karma Modifier \\
+Thermographic Vision & +10 \\
+Low-Light Vision & +5 \\
+Built Tough (Rating) & +10 per Rating \\
+Reach (+1) & +5 \\
+Reach (+2) & +10 \\
+Reach (+3) & +15 \\
+Allergy & -15 \\
 \end{tblr}
 \end{center}
+
+\vspace{1em}
+\noindent\textbf{Final Cost:} The final calculated sum is then rounded to the nearest multiple of 5.
 
 \end{multicols}
 \end{document}
