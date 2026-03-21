@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>G.O.D. "Antibody"</name>
+    <metatype>Unknown</metatype>
+    <attributes>
+      <attribute>
+        <name>BOD</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>AGI</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>REA</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>STR</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>WIL</name>
+        <value>7</value>
+      </attribute>
+      <attribute>
+        <name>LOG</name>
+        <value>7</value>
+      </attribute>
+      <attribute>
+        <name>INT</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>CHA</name>
+        <value>1</value>
+      </attribute>
+      <attribute>
+        <name>EDG</name>
+        <value>1</value>
+      </attribute>
+      <attribute>
+        <name>ESS</name>
+        <value>6</value>
+      </attribute>
+    </attributes>
+    <skills>
+      <skill>
+        <name>Cybercombat</name>
+        <value>8</value>
+      </skill>
+      <skill>
+        <name>Hacking</name>
+        <value>7</value>
+      </skill>
+      <skill>
+        <name>Close Combat</name>
+        <value>6</value>
+      </skill>
+      <skill>
+        <name>Perception</name>
+        <value>6</value>
+      </skill>
+    </skills>
+    <gear>
+      <item>Hard-Light Crystal Shell (Armor 14)</item>
+      <item>Bio-Luminescent Whip</item>
+      <item>Neural Purge</item>
+    </gear>
+  </character>
+</characters>

@@ -4286,5 +4286,41 @@
       <avail>28(F)</avail>
       <cost>128,000¥</cost>
     </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_fbaf2439bd39501b1d774391e0d95cd7</id>
+      <name>Stun Baton</name>
+      <accuracy>-</accuracy>
+      <damage>9S(e)</damage>
+      <ap>-2</ap>
+      <mode/>
+      <rc/>
+      <ammo/>
+      <avail>-</avail>
+      <cost>-</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_98968456094c32f977608ef4eedada04</id>
+      <name>Nanite Claws / Bite</name>
+      <accuracy>-</accuracy>
+      <damage>8P</damage>
+      <ap>-2</ap>
+      <mode/>
+      <rc/>
+      <ammo/>
+      <avail>-</avail>
+      <cost>-</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_5ea4dcba8d6726571b9736b99ce31b47</id>
+      <name>Bio-Luminescent Whip</name>
+      <accuracy>-</accuracy>
+      <damage>10P</damage>
+      <ap>-4</ap>
+      <mode/>
+      <rc/>
+      <ammo/>
+      <avail>-</avail>
+      <cost>-</cost>
+    </weapon>
   </weapons>
 </chummer>

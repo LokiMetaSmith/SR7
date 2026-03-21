@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>Wuxing "Null-Sec" Strike Team</name>
+    <metatype>Human</metatype>
+    <attributes>
+      <attribute>
+        <name>BOD</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>AGI</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>REA</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>STR</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>WIL</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>LOG</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>INT</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>CHA</name>
+        <value>2</value>
+      </attribute>
+      <attribute>
+        <name>EDG</name>
+        <value>1</value>
+      </attribute>
+      <attribute>
+        <name>ESS</name>
+        <value>4.2</value>
+      </attribute>
+    </attributes>
+    <skills>
+      <skill>
+        <name>Firearms</name>
+        <value>6</value>
+      </skill>
+      <skill>
+        <name>Sneaking</name>
+        <value>5</value>
+      </skill>
+      <skill>
+        <name>Close Combat</name>
+        <value>4</value>
+      </skill>
+      <skill>
+        <name>Perception</name>
+        <value>4</value>
+      </skill>
+      <skill>
+        <name>Athletics</name>
+        <value>3</value>
+      </skill>
+    </skills>
+    <gear>
+      <item>Wuxing Null-Suit</item>
+      <item>Ares Alpha Assault Rifle</item>
+      <item>Stun Baton</item>
+    </gear>
+    <cyberware>
+      <item>Wired Reflexes I</item>
+    </cyberware>
+  </character>
+</characters>
