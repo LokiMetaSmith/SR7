@@ -2677,6 +2677,9 @@ bipod or tripod mount system is easily adjustable to change the angle of fire, a
 | Melee Weapons | ACC | DV | AP | REACH | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|
 | Monofilament Whip | 5 | 12P | -8 | 2 | 12(F) | 0.5 | 3,000¥ |
+| Stun Baton | - | 9S(e) | -2 | 1 | - | - | - |
+| Nanite Claws / Bite | - | 8P | -2 | - | - | - | - |
+| Bio-Luminescent Whip | - | 10P | -4 | 2 | - | - | - |
 
 **Vehicular Weaponry** - Heavy weapon systems designed specifically for mounting on vehicles, drones, or fixed emplacements. They are typically too heavy or require too much power to be man-portable.
 
@@ -2982,6 +2985,7 @@ Tethers replace Marks. They are two-way sympathetic soul-links.
 | Establish Tether (Hack on the Fly) | LOG + Hacking vs. WIL + Firewall | None | Creates 1 Tether. You gain +1 Die on all future actions against the target per Tether. |
 | Data Spike | LOG + Cybercombat vs. INT + Firewall | None | Deals (Attack Rtg + Net Hits + 2 per Tether) Matrix Damage. |
 | Puppet Nanites (Control Device) | LOG + Electronic Warfare vs. WIL + Firewall | 1 to 3 | Take control of a device/drone. Requires 1 Tether for Free actions, 2 for Simple, 3 for Major. |
+| Neural Purge (Digital) | WIL + BOD | 1 | The Antibody floods a Tethered target with raw gaiasphere noise. Damage is 8 Stun (Biofeedback). |
 | Glitches & Tethers | Passive Consequence | N/A | If you Glitch on any Matrix Action while you hold a Tether on a target, the target gets a free blast of Biofeedback against you (Damage = target's Firewall, resisted by WIL). |
 
 #### 3. Hosts & IC (Immune Responses)
@@ -3178,6 +3182,64 @@ You can't just text your Fixer on an open commlink anymore. The silence is speak
 
 *   **Secure Comms:** Standard commlinks are assumed to be monitored by the gaiasphere. To arrange a secure meet, runners must use pre-arranged physical dead-drops or encrypted pulses (like Kyber's three short, pause, two long).
 *   **Street Cred & AIs:** Your Street Cred (Karma earned divided by 10) directly impacts how AIs and Spirits view you. When rolling Etiquette or Negotiation with an Awakened or Matrix entity, you may add your Street Cred to your Dice Pool if you are known to treat non-humans well. If you have Notoriety for betraying AIs, that number is subtracted from your pool.
+
+### XIII. BESTIARY & ADVERSARIES
+
+#### 1. Wuxing "Null-Sec" Strike Teams
+Wuxing knows the world is a panopticon, so their elite black ops teams don't just hide—they erase themselves from reality. They deploy in specialized "Null-Suits" that act as localized Faraday cages, scrubbing their AR signatures and isolating them from the nanite-grid. They are heavily armed, disciplined, and terrifyingly silent in the Matrix.
+
+**Attributes:** BOD 4 | AGI 5 | REA 4 (5) | STR 4 | WIL 4 | LOG 3 | INT 4 | CHA 2 | ESS 4.2
+**Initiative:** 9 + 2D6 (Wired Reflexes I)
+**Condition Monitor:** Physical 10 / Stun 10
+
+**Skills:** Firearms 6, Sneaking 5, Close Combat 4, Perception 4, Athletics 3.
+**Gear & Augmentations:**
+*   **Wuxing Null-Suit** (Armor 14): Grants immunity to Matrix actions and Tethers (they have no wireless DNI). Grants +4 dice to physical Sneaking tests against nanite-sensors.
+*   **Ares Alpha** Assault Rifle: (Damage 11P | AP -2 | Ammo 42). Smartlinked via internal fiber-optics, not wireless.
+*   **Stun Baton**: (Damage 9S(e) | AP -2).
+
+**Squad Tactics (The "Spotter"):**
+Null-Sec teams operate completely off the grid, which means they are blind to the Matrix. To compensate, every 4-man squad is accompanied by a Wuxing Spotter (usually an Aspected Magician or a loyal Technomancer) who stays in the backlines, sustaining Signature Masking over the team and calling out target locations. Kill the Spotter, and the team loses their tactical advantage.
+
+#### 2. Feral "Fuchsia Dragon" Abominations
+These were once regular people looking for an escape through the new physical-manifestation BTLs. They pushed too hard, their physical forms destabilized, and the rogue Matrix Sprites inside the chips permanently Inhabited them. Now, they are twisted, dual-natured shock troops—fleshy abominations scaled in hardened, fuchsia-colored nanites.
+
+**Attributes:** BOD 7 | AGI 5 | REA 5 | STR 6 | WIL 4 | LOG 1 | INT 4 | CHA 1 | ESS 1 (Corrupted)
+**Initiative:** 9 + 2D6
+**Condition Monitor:** Physical 12 / Stun 10
+
+**Skills:** Close Combat 8, Running 5, Perception (Smell/Matrix) 5, Intimidation 6.
+**Armor:** Subdermal Nanite Scales (Armor 10)
+**Weapons:**
+*   **Nanite Claws / Bite**: (Damage 8P | AP -2). These attacks are treated as magical/digital and can strike dual-natured or manifested entities.
+
+**Special Rules:**
+*   **Dual-Natured:** They exist in the physical world and the Matrix simultaneously. They can be targeted by Spells and Matrix Data Spikes, but they can also physically punch a manifested AI.
+*   **Grey-Goo Regeneration:** The rogue nanites constantly repair their host. At the end of every Combat Turn, the Abomination heals 1 box of Physical damage. Weakness: Damage caused by Fire, Magic, or Nanite-Buster ammo cannot be regenerated.
+*   **Feral Surge:** If the Abomination rolls a Wild Die and it comes up as a 6 (3 hits), it enters a frenzy and may take an immediate, free Close Combat attack action against the nearest target (friend or foe).
+
+#### 3. G.O.D. "Antibodies" (Grid Immune Responses)
+Grid Overwatch Division is no longer a room of corporate deckers. It is an autonomic immune response generated by the merged gaiasphere. When a hacker rolls a 1 on a Wild Die, the grid detects an "infection." Ambient nanites in the room violently swarm together, pulling in dust, trash, and air moisture to build a terrifying, faceless humanoid made of Living Crystal and white light.
+
+**Attributes:** BOD 6 | AGI 6 | REA 6 | STR 5 | WIL 7 | LOG 7 | INT 6 | CHA 1 | ESS 6
+**Initiative:** 12 + 3D6
+**Condition Monitor:** Physical 11 / Stun 12
+
+**Skills:** Cybercombat 8, Hacking 7, Close Combat 6, Perception 6.
+**Armor:** Hard-Light Crystal Shell (Armor 14)
+**Weapons:**
+*   **Bio-Luminescent Whip** (Physical): (Damage 10P | AP -4 | Reach 2). Slices through matter like a plasma torch.
+*   **Neural Purge** (Digital): (Complex Action). The Antibody floods a Tethered target with raw gaiasphere noise. Target resists with WIL + BOD. Damage is 8 Stun (Biofeedback).
+
+**Special Rules:**
+*   **Auto-Tether:** The moment the Antibody manifests, it automatically possesses 1 Tether on the Hacker who triggered the Wild Die glitch.
+*   **The Bootloader:** It physically spawns within 5 meters of the offending Hacker's meat-body. It will attempt to destroy the Hacker's physical brain, or fry their deck, whichever is faster.
+*   **Dissipation:** The Antibody is a temporary immune response. It dissolves back into inert dust and grey goo if its Physical Condition Monitor is filled, OR if the Hacker successfully jacks out (taking Dump Shock) and drops off the grid.
+
+#### GM Advice: Running Combat in the 6th World
+*   **Make them choose their ammo:** If the runners are fighting Wuxing, standard APDS ammo is best. But if a G.O.D Antibody spawns or a Fuchsia Dragon attacks, they will desperately wish they had loaded expensive Nanite-Buster rounds. Let them use a Minor Action to swap magazines if they thought ahead!
+*   **The Horror of the Abominations:** Describe the Fuchsia Dragons tragically. Underneath the glowing scales and feral roars, there is still a metahuman weeping. This plays into your "Hopepunk" theme—killing them should feel like a tragic necessity, and trying to subdue them non-lethally (Stun damage) should be rewarded with Edge.
+*   **Antibodies are forces of nature:** Do not treat a G.O.D Antibody as a normal enemy. It is a natural disaster. When it drops, the objective of the encounter immediately shifts from "Win the fight" to "Survive and Escape."
 
 ### Summary of the "Weird AF" Vibe Check for the GM
 When running this merged ruleset, keep the following in mind:
