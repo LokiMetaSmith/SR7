@@ -1261,211 +1261,192 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Hold-Outs** - Hold-Outs are very small, easily concealed pistols that are usually weak and inaccurate, but make the perfect last ditch backup weapon.  They are too small to mount any normal off the rack firearms accessories.
 
-\gearitem{Cannon Punch (various)}{Essentially a short, wide metal tube with an ignition switch and a strap for attaching to the hand.  It can be loaded with a variety of material from crushed glass, rocks, or nails and powered by a variety of homemade explosives or cheap black powder cubes available for +10¥ per box of 10.  Activation can be done with a simple clenching of the fist; timing this correctly allows the weapon to fire as it comes into contact with the target, but it is possible to land a wel aimed shot at very short distances.  At GM discretion the damage may be modified based on the explosives used to power this weapon or the material loaded into it.  Accuracy for this weapon is equal to AGI when used as a contact weapon.}{}
+**Cannon Punch** (various): Essentially a short, wide metal tube with an ignition switch and a strap for attaching to the hand.  It can be loaded with a variety of material from crushed glass, rocks, or nails and powered by a variety of homemade explosives or cheap black powder cubes available for +10¥ per box of 10.  Activation can be done with a simple clenching of the fist; timing this correctly allows the weapon to fire as it comes into contact with the target, but it is possible to land a wel aimed shot at very short distances.  At GM discretion the damage may be modified based on the explosives used to power this weapon or the material loaded into it.  Accuracy for this weapon is equal to AGI when used as a contact weapon.
 
-\gearitem{Cavalier Arms Scout (3mm Cavalier)}{The world’s most compact semi-automatic pistol that can easily fit in a pocket, it even includes a pocket clip on the frame.}{Caseless Only}
+**Cavalier Arms Scout** (3mm Cavalier): The world’s most compact semi-automatic pistol that can easily fit in a pocket, it even includes a pocket clip on the frame.  *Caseless Only*.
 
-\gearitem{Colt New Model Revolver (.32 Colt)}{Colt’s attempt at a cheap civilian revolver through resurrecting an ancient design.  Only reliable with Colt brand speed loaders.  A very low recoil and surprisingly accurate hammerless revolver, if anemic in power.}{Cased Only, Double Action}
+**Colt New Model Revolver** (.32 Colt): Colt’s attempt at a cheap civilian revolver through resurrecting an ancient design.  Only reliable with Colt brand speed loaders.  A very low recoil and surprisingly accurate hammerless revolver, if anemic in power.  *Cased Only*, *Double Action*.
 
-\gearitem{Colt Secret Agent (.22 WMR)}{Colt’s modern, light, concealed carry revolver.  The Secret Agent is a very thin and flat pistol that is easily concealable and with non-metal construction can evade MAD scanners.  Standard features include a detachable form fitting laser sight with grip activation.}{Cased Only, Ceramic/Plasteel Components Rating 3, Double Action, Laser Sight}
+**Colt Secret Agent** (.22 WMR): Colt’s modern, light, concealed carry revolver.  The Secret Agent is a very thin and flat pistol that is easily concealable and with non-metal construction can evade MAD scanners.  Standard features include a detachable form fitting laser sight with grip activation.  *Cased Only*, *Ceramic/Plasteel Components Rating 3*, *Double Action*, *Laser Sight*.
 
-\gearitem{Enfield M1098 (9mm Para)}{An obsolete pistol that went out of service with the RAF in the 2050’s, the Enfield is nevertheless prized for its small size and ergonomic features.}{Vintage}
+**Enfield M1098** (9mm Para): An obsolete pistol that went out of service with the RAF in the 2050’s, the Enfield is nevertheless prized for its small size and ergonomic features.  *Vintage*.
 
-\gearitem{Fichetti Tiffani Needler (4mm Fichetti)}{A designer handgun that fires caseless flechette rounds.  The color-changing coating can be manipulated wirelessly, making it the perfect lethal fashion accessory.  When changing the coating color to an appropriate camouflage pattern for the setting, increase the Concealability of the weapon by 1.  The Needler’s damage codes are factored for the flechette ammunition.}{Caseless Only, Flechette Only}
+**Fichetti Tiffani Needler** (4mm Fichetti): A designer handgun that fires caseless flechette rounds.  The color-changing coating can be manipulated wirelessly, making it the perfect lethal fashion accessory.  When changing the coating color to an appropriate camouflage pattern for the setting, increase the Concealability of the weapon by 1.  The Needler’s damage codes are factored for the flechette ammunition.  *Caseless Only*, *Flechette Only*.
 
-\gearitem{Fichetti Tiffani Self-Defender (4mm Fichetti)}{The predecessor to the Needler, this hold-out pistol features the same color-changing nano-coating, but is not limited to flechette rounds.}{Caseless Only}
+**Fichetti Tiffani Self-Defender** (4mm Fichetti): The predecessor to the Needler, this hold-out pistol features the same color-changing nano-coating, but is not limited to flechette rounds.  *Caseless Only*.
 
-\gearitem{HK P48 (.22 LR)}{Smaller than the palm of your hand and capable of full auto fire, the HK P48 only uses caseless ammunition and is capable of a 3 round burst activation by a re-trigger mechanism similar to the Browning Ultra-Power.}{Caseless Only}
+**HK P48** (.22 LR): Smaller than the palm of your hand and capable of full auto fire, the HK P48 only uses caseless ammunition and is capable of a 3 round burst activation by a re-trigger mechanism similar to the Browning Ultra-Power.  *Caseless Only*.
 
-\gearitem{Krime Vester (.357 Magnum)}{Krime’s metahuman adapted derringer is barely large enough for a troll to utilize.  It comes equipped with an integral knife blade which can function as a punch dagger.}{Bayonet, Metahuman Adaptation}
+**Krime Vester** (.357 Magnum): Krime’s metahuman adapted derringer is barely large enough for a troll to utilize.  It comes equipped with an integral knife blade which can function as a punch dagger.  *Bayonet*, *Metahuman Adaptation*.
 
-\gearitem{Morrissey Élan (.38 Auto)}{An elegant hold-out pistol designed to look and feel as if it is an extension of its owner’s hand, the Morrissey Élan is the epitome of concealability, being made entirely of polyresin materials, and thus immune to MAD scanners.}{Ceramic/Plasteel Components Rating 5}
+**Morrissey Élan** (.38 Auto): An elegant hold-out pistol designed to look and feel as if it is an extension of its owner’s hand, the Morrissey Élan is the epitome of concealability, being made entirely of polyresin materials, and thus immune to MAD scanners.  *Ceramic/Plasteel Components Rating 5*.
 
-\gearitem{Raecor Sting (.22 LR)}{An unobtrusive, easily concealable “lemon squeezer” that fits entirely in your hand, the Reacor Sting has a very low capacity and exclusively fires anemic flechette rounds, barely suitable for more than point blank pest control.  It is made entirely of non-metallic, ceramic materials, rendering it immune to MAD scanners.  The Sting’s damage codes are factored for the flechette ammunition.}{Ceramic/Plasteel Components Rating 6}
+**Raecor Sting** (.22 LR): An unobtrusive, easily concealable “lemon squeezer” that fits entirely in your hand, the Reacor Sting has a very low capacity and exclusively fires anemic flechette rounds, barely suitable for more than point blank pest control.  It is made entirely of non-metallic, ceramic materials, rendering it immune to MAD scanners.  The Sting’s damage codes are factored for the flechette ammunition.  *Ceramic/Plasteel Components Rating 6*.
 
-\gearitem{Shiawase Arms Type K2072 (5mm Shiawase)}{Shiawase’s hold-out pistol in their new Fashion Line.  Features StayGrip technology.}{Caseless Only, Gecko Grip, Single Action}
+**Shiawase Arms Type K2072** (5mm Shiawase): Shiawase’s hold-out pistol in their new Fashion Line.  Features StayGrip technology.  *Caseless Only, Gecko Grip, Single Action*.
 
-\gearitem{SIG Sauer P298 (.38 Auto)}{Last produced in 2037, this very old model of pistol is still reliable and features an ambidextrous safety and configurable ejection port.}{Vintage}
+**SIG Sauer P298** (.38 Auto): Last produced in 2037, this very old model of pistol is still reliable and features an ambidextrous safety and configurable ejection port.  *Vintage*.
 
-\gearitem{Stinger Pen Gun (.22 LR)}{A simple ink pen modified to contain a single low caliber cartridge and set off by depressing the pen cap.  Receives +4 to Concealability Thresholds.}{}
+**Stinger Pen Gun** (.22 LR): A simple ink pen modified to contain a single low caliber cartridge and set off by depressing the pen cap.  Receives +4 to Concealability Thresholds.
 
-\begin{jackpoint}{Loki}
-If you're stuck in the OKC-Metro grid without a piece, just fire up your localized fabber. The Streetline Special is a cheap, easily 3D printed pistol made of composite materials. It won't beat an Ares Predator, but it beats harsh language.
-\end{jackpoint}
+**Streetline Special** (.25 Auto): A cheap, easily 3D or nano printed pistol made of compositie materials.  *Ceramic/Plasteel Components Rating 3*.
 
-\gearitem{Streetline Special (.25 Auto)}{A cheap, easily 3D or nano printed pistol made of compositie materials.}{Ceramic/Plasteel Components Rating 3}
+**Terracotta Arms Pup** (.38 Auto): Both the civilian and government models of this pistol contain an integral Smartgun system.  The government version, with higher availability, also comes with a customized suppressor.  *Smartlink*, *Suppressor*
 
-\gearitem{Terracotta Arms Pup (.38 Auto)}{Both the civilian and government models of this pistol contain an integral Smartgun system.  The government version, with higher availability, also comes with a customized suppressor.}{Smartlink, Suppressor}
+**Walther Palm Pistol** (.40 S\&W): This European hold-out packs large caliber rounds in an over-under configuration with a tilting break action barrel.  Both barrels can be fired simultaneously with Burst Fire.  *Cased Only*.
 
-\gearitem{Walther Palm Pistol (.40 S\&W)}{This European hold-out packs large caliber rounds in an over-under configuration with a tilting break action barrel.  Both barrels can be fired simultaneously with Burst Fire.}{Cased Only}
+**Walther Secura SuperKompakt** (7mm Auto): Walther’s larger Secura & Secura Kompakt just got a tiny little brother.  Firing the same cartridge but miniscule by comparison, the SuperKompakt is easily concealed and constructed from MAD scanner defeating materials.  *Ceramic/Plasteel Components Rating 4*.
 
-\gearitem{Walther Secura SuperKompakt (7mm Auto)}{Walther’s larger Secura & Secura Kompakt just got a tiny little brother.  Firing the same cartridge but miniscule by comparison, the SuperKompakt is easily concealed and constructed from MAD scanner defeating materials.}{Ceramic/Plasteel Components Rating 4}
-
-\begin{longtblr}{
-  colspec = {X[1.5,l] *{10}{X[c]}},
-  row{1} = {bg=srdark, fg=white, font=\bfseries},
-  row{even} = {bg=gray!10},
-  hlines, vlines
-}
-Hold-Outs & ACC & DV & AP & MODE & RC & RANGE & AMMO & AVAIL & WEIGHT & COST \\
-Cannon Punch & 2 & 9P(f) & -1 & SS & – & PB & 1(ml) & 6(R) & 1.00 & 100¥ \\
-Cavalier Arms Scout & 4 & 2P & -2 & SA & – & Close & 7(dm) & 6(R) & 0.25 & 375¥ \\
-Colt New Model Revolver & 6 & 3P & – & SS & – & Close & 5(cy) & 3(R) & 0.75 & 150¥ \\
-Colt Secret Agent & 5(6) & 3P & -1 & SS & – & Close & 6(cy) & 4(R) & 0.50 & 550¥ \\
-Enfield M1098 & 5 & 5P & -1 & SA & 1 & Near & 8(dm) & 5(R) & 1.00 & 450¥ \\
-Fichetti Tiffani Needler & 5 & 6P(fl) & +2 & SA & – & Close & 4(c) & 5(R) & 0.50 & 1,000¥ \\
-Fichetti Tiffani Self-Defender & 4 & 4P & -3 & SA & – & Near & 4(c) & 4(R) & 0.50 & 600¥ \\
-HK P48 & 2P & – & BF/FA & – & Close & 6(dm) & 0.50 & 300¥ &  &  \\
-Krime Vester & 4 & 8P & -4 & SS & – & Close & 2(b) & 7(R) & 2.00 & 200¥ \\
-Morrissey Élan & 5 & 3P & – & SA & – & Close & 5(dm) & 7(R) & 0.50 & 500¥ \\
-Raecor Sting & 3 & 4P(fl) & +4 & SS & – & PB & 4(m) & 6(R) & 0.25 & 350¥ \\
-Shiawase Arms Type K2072 & 5 & 5P & -4 & SS & – & Near & 4(m) & 3(R) & 0.50 & 475¥ \\
-SIG Sauer P298 & 5 & 4P & -1 & SA & – & Near & 7(dm) & 4(R) & 0.75 & 400¥ \\
-Stinger Pen Gun & 4 & 2P & – & SS & – & PB & 1(ml) & 6(R) & 0.25 & 325¥ \\
-Streetline Special & 4 & 1P & +2 & SA & – & Close & 6(dm) & –(R) & 0.50 & 50¥ \\
-Terracotta Arms Pup & 4(6) & 4P & – & SA & – & Close & 5(dm) & 4(R)/6(F) & 0.75 & 500/900¥ \\
-Walther Palm Pistol & 4 & 7P & -1 & SS/BF & – & Near & 2(b) & 4(R) & 0.25 & 245¥ \\
-Walther Secura SK & 4 & 7P & -2 & SA & – & Near & 4(dm) & 8(F) & 0.75 & 1,000¥ \\
-\end{longtblr}
+| Hold-Outs | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Cannon Punch | 2 | 9P(f) | -1 | SS | – | PB | 1(ml) | 6(R) | 1.00 | 100¥ |
+| Cavalier Arms Scout | 4 | 2P | -2 | SA | – | Close | 7(dm) | 6(R) | 0.25 | 375¥ |
+| Colt New Model Revolver | 6 | 3P | – | SS | – | Close | 5(cy) | 3(R) | 0.75 | 150¥ |
+| Colt Secret Agent | 5(6) | 3P | -1 | SS | – | Close | 6(cy) | 4(R) | 0.50 | 550¥ |
+| Enfield M1098 | 5 | 5P | -1 | SA | 1 | Near | 8(dm) | 5(R) | 1.00 | 450¥ |
+| Fichetti Tiffani Needler | 5 | 6P(fl) | +2 | SA | – | Close | 4(c) | 5(R) | 0.50 | 1,000¥ |
+| Fichetti Tiffani Self-Defender | 4 | 4P | -3 | SA | – | Near | 4(c) | 4(R) | 0.50 | 600¥ |
+| HK P48 | 2P | – | BF/FA | – | Close | 6(dm) | 0.50 | 300¥ |
+| Krime Vester | 4 | 8P | -4 | SS | – | Close | 2(b) | 7(R) | 2.00 | 200¥ |
+| Morrissey Élan | 5 | 3P | – | SA | – | Close | 5(dm) | 7(R) | 0.50 | 500¥ |
+| Raecor Sting | 3 | 4P(fl) | +4 | SS | – | PB | 4(m) | 6(R) | 0.25 | 350¥ |
+| Shiawase Arms Type K2072 | 5 | 5P | -4 | SS | – | Near | 4(m) | 3(R) | 0.50 | 475¥ |
+| SIG Sauer P298 | 5 | 4P | -1 | SA | – | Near | 7(dm) | 4(R) | 0.75 | 400¥ |
+| Stinger Pen Gun | 4 | 2P | – | SS | – | PB | 1(ml) | 6(R) | 0.25 | 325¥ |
+| Streetline Special | 4 | 1P | +2 | SA | – | Close | 6(dm) | –(R) | 0.50 | 50¥ |
+| Terracotta Arms Pup | 4(6) | 4P | – | SA | – | Close | 5(dm) | 4(R)/6(F) | 0.75 | 500/900¥ |
+| Walther Palm Pistol | 4 | 7P | -1 | SS/BF | – | Near | 2(b) | 4(R) | 0.25 | 245¥ |
+| Walther Secura SK | 4 | 7P | -2 | SA | – | Near | 4(dm) | 8(F) | 0.75 | 1,000¥ |
 
 **Light Pistols** - Light Pistols occupy the middle ground between hold-outs and heavy pistols, they are usually accurate and can accept top-mounted and barrel-mounted accessories.
 
-\gearitem{Ares Light Fire 70 (9mm Para)}{A professional operator’s pistol made by Ares.  Comes standard with laser sight and an optional suppressor for +750¥.  This highly efficient suppressor increases the Threshold for auditory Perception tests by 3 when equipped.}{Laser Sight, Suppressor}
+**Ares Light Fire 70** (9mm Para): A professional operator’s pistol made by Ares.  Comes standard with laser sight and an optional suppressor for +750¥.  This highly efficient suppressor increases the Threshold for auditory Perception tests by 3 when equipped.  *Laser Sight*, *Suppressor*.
 
-\gearitem{Ares Light Fire 75 (9mm Para)}{An upgraded Light Fire 70 that comes standard with smartlink software and hardware.}{Laser Sight, Smartlink, Suppressor}
+**Ares Light Fire 75** (9mm Para): An upgraded Light Fire 70 that comes standard with smartlink software and hardware.  *Laser Sight*, *Smartlink*, *Suppressor*.
 
-\gearitem{Barrens Special (Various)}{Illegally manufactured revolvers off the streets of the sprawl.  Shoddy construction, unreliable, and usually with some form of bayonet or knife mated witht he barrel as a last resort for when the gun inevitably jams.}{Bayonet}
+**Barrens Special** (Various): Illegally manufactured revolvers off the streets of the sprawl.  Shoddy construction, unreliable, and usually with some form of bayonet or knife mated witht he barrel as a last resort for when the gun inevitably jams.  *Bayonet*.
 
-\gearitem{Beretta 101T (.38 Auto)}{A popular pistol with security forces thanks to its ease of maintenance.}{}
+**Beretta 101T** (.38 Auto): A popular pistol with security forces thanks to its ease of maintenance.
 
-\gearitem{Beretta 200ST (.38 Auto)}{A military service version of the classic Beretta line capable of fully automatic fire.  Comes with a detachable shoulder stock and very high capacity triple stack magazines.}{Folding Stock}
+**Beretta 200ST** (.38 Auto): A military service version of the classic Beretta line capable of fully automatic fire.  Comes with a detachable shoulder stock and very high capacity triple stack magazines.  *Folding Stock*.
 
-\gearitem{Beretta 201T (.38 Auto)}{Burst fire capable version of the 101T, it comes with a detachable shoulder stock and an extended magazine.}{Extended Magazine, Folding Stock}
+**Beretta 201T** (.38 Auto): Burst fire capable version of the 101T, it comes with a detachable shoulder stock and an extended magazine.  *Extended Magazine*, *Folding Stock*.
 
-\gearitem{Beretta 92SL (9mm Para)}{A veteran of the Second EuroWar, earlier models command a premium with collectors.  One of the most common and functional pistols in the gutters of the shadows worldwide.}{Vintage}
+**Beretta 92SL** (9mm Para): A veteran of the Second EuroWar, earlier models command a premium with collectors.  One of the most common and functional pistols in the gutters of the shadows worldwide.  *Vintage*.
 
-\gearitem{Browning Ghost (9mm Para)}{A joint venture between Browning and Victorinox resulted in a remarkable concealed carry pistol.  The Ghost is constructed from a polymer based on Victorinox’s SmartSteel, allowing it to mold and contour itself in a flexible state when not in use.  While in the flexible state, increase Concealability Thresholds by 3.  Changing to or from this flexible state requires an Interact with Device Action.  The Ghost may not fire while in it’s flexible state, and may not accept any other modifications or accessories.}{Electronic Firing, Personalized Grip, Smartlink}
+**Browning Ghost** (9mm Para): A joint venture between Browning and Victorinox resulted in a remarkable concealed carry pistol.  The Ghost is constructed from a polymer based on Victorinox’s SmartSteel, allowing it to mold and contour itself in a flexible state when not in use.  While in the flexible state, increase Concealability Thresholds by 3.  Changing to or from this flexible state requires an Interact with Device Action.  The Ghost may not fire while in it’s flexible state, and may not accept any other modifications or accessories.  *Electronic Firing*, *Personalized Grip*, *Smartlink*.
 
-\gearitem{Cavalier Arms Adder Slivergun (3mm Cavalier)}{Reminiscent of a pared down Ares Viper Slivergun, this pistol was originally developed for a mail-delivery corp.  The Adder’s damage codes have been factored for flechette ammunition.}{Caseless Only, Flechette Only}
+**Cavalier Arms Adder Slivergun** (3mm Cavalier): Reminiscent of a pared down Ares Viper Slivergun, this pistol was originally developed for a mail-delivery corp.  The Adder’s damage codes have been factored for flechette ammunition.  *Caseless Only*, *Flechette Only*.
 
-\gearitem{Cavalier Arms Dragoon (3mm Cavalier)}{A pistol designed for larger metahumans and designed to exacting quality control standards.}{Metahuman Adaptation}
+**Cavalier Arms Dragoon** (3mm Cavalier): A pistol designed for larger metahumans and designed to exacting quality control standards.  *Metahuman Adaptation*.
 
-\gearitem{Ceska vz/120 (.38 Auto)}{This Czech made light service pistol is widely used in Eastern Euoprean militaries.}{}
+**Ceska vz/120** (.38 Auto): This Czech made light service pistol is widely used in Eastern Euoprean militaries.
 
-\gearitem{Colt America L36 (.38 Auto)}{Colt’s ubiquitous classic light pistol design.  Available anywhere, easily concealable, and cheap; the perfect throwaway weapon.  When wirelessly enabled this pistol’s registry info and ownership data can be changed at the drop of a hat.}{}
+**Colt America L36** (.38 Auto): Colt’s ubiquitous classic light pistol design.  Available anywhere, easily concealable, and cheap; the perfect throwaway weapon.  When wirelessly enabled this pistol’s registry info and ownership data can be changed at the drop of a hat.
 
-\gearitem{Colt Asp (.38 Special)}{The Colt Asp is a cheap, effective, solid performer of a revolver, but it lacks the power or ammo capacity of many other light pistols.}{Double Action}
+**Colt Asp** (.38 Special): The Colt Asp is a cheap, effective, solid performer of a revolver, but it lacks the power or ammo capacity of many other light pistols.  *Double Action*.
 
-\gearitem{Colt Coral Snake (9mm Para)}{A best selling home defense weapon that offers exceptional range to other sidearms in its class.  Endorsed by Lone Star.}{Double Action, Laser Sight}
+**Colt Coral Snake** (9mm Para): A best selling home defense weapon that offers exceptional range to other sidearms in its class.  Endorsed by Lone Star.  *Double Action*, *Laser Sight*.
 
-\gearitem{Colt Special Agent (.40 S\&W)}{Continuous upgrades have kept this Colt frame in service for over a century.  An easily concealable, nearly hold-out sized pistol that packs in a small, but quite powerful number of rounds more suited to a heavy pistol.  The Colt Special Agent does not have room for any internal modifications.}{Vintage}
+**Colt Special Agent** (.40 S\&W): Continuous upgrades have kept this Colt frame in service for over a century.  An easily concealable, nearly hold-out sized pistol that packs in a small, but quite powerful number of rounds more suited to a heavy pistol.  The Colt Special Agent does not have room for any internal modifications.  *Vintage*.
 
-\gearitem{Fichetti Executive Action (4mm Fichetti)}{Burst fire capable light pistol with a high magazine capacity.  Simple and Effective, it has no other stock features.}{Caseless Only, Extended Magazine}
+**Fichetti Executive Action** (4mm Fichetti): Burst fire capable light pistol with a high magazine capacity.  Simple and Effective, it has no other stock features.  *Caseless Only*, *Extended Magazine*.
 
-\gearitem{Fichetti Security 500 (4mm Fichetti)}{Popular with security forces for its ease of use.}{Caseless Only}
+**Fichetti Security 500** (4mm Fichetti): Popular with security forces for its ease of use.  *Caseless Only*.
 
-\gearitem{Fichetti Security 500A (4mm Fichetti)}{Extended magazine variant of the Fichetti Security 500.}{Caseless Only, Extended Magazine}
+**Fichetti Security 500A** (4mm Fichetti): Extended magazine variant of the Fichetti Security 500.  *Caseless Only*, *Extended Magazine*.
 
-\gearitem{Fichetti Security 600 (4mm Fichetti)}{Updated version of Fichetti’s popular security pistol witih an even more efficient feeding mechanism.  Comes standard with a detachable folding stock and a laser sight.}{Caseless Only, Folding Stock, Laser Sight}
+**Fichetti Security 600** (4mm Fichetti): Updated version of Fichetti’s popular security pistol witih an even more efficient feeding mechanism.  Comes standard with a detachable folding stock and a laser sight.  *Caseless Only*, *Folding Stock*, *Laser Sight*.
 
-\gearitem{Fichetti Thunder (4mm Fichetti)}{A strange offering from Fichetti, the Thunder makes use of the ‘metal storm’ concept of barrels packed with multiple in-line rounds that can be electronically fired in quick succession, increasing the rate of fire but requiring a full barrel replacement (with pre-loaded ammunition) or a lengthy muzzle loading process.  The Thunder is designed to quickly swap its 4 barrels, each containing 6 caseless rounds.  Designed for larger metahumans, a puzzling choice given the small caliber and most Ork and Troll desires when it comes to firearms.  When firing the Thunder empties an entire barrel, shooting 6 shots with a single burst.  The Thunder can be reloaded by inserting individual caseless rounds into a barrel, but more commonly entire loaded barrels are swapped out for empty barrels; this uses the same mechanics as a normal magazine change with 1 Reload Action per barrel switched.}{Electronic Firing, Metahuman Adaptation}
+**Fichetti Thunder** (4mm Fichetti): A strange offering from Fichetti, the Thunder makes use of the ‘metal storm’ concept of barrels packed with multiple in-line rounds that can be electronically fired in quick succession, increasing the rate of fire but requiring a full barrel replacement (with pre-loaded ammunition) or a lengthy muzzle loading process.  The Thunder is designed to quickly swap its 4 barrels, each containing 6 caseless rounds.  Designed for larger metahumans, a puzzling choice given the small caliber and most Ork and Troll desires when it comes to firearms.  When firing the Thunder empties an entire barrel, shooting 6 shots with a single burst.  The Thunder can be reloaded by inserting individual caseless rounds into a barrel, but more commonly entire loaded barrels are swapped out for empty barrels; this uses the same mechanics as a normal magazine change with 1 Reload Action per barrel switched.  *Electronic Firing*, *Metahuman Adaptation*.
 
-\gearitem{Hammerli 610S (9mm Para)}{A target pistol that is highly accurate to extended ranges, the Hammerli 610S features custom, personalized grips and the precision machined components one would expect of Hammerli.  It cannot mount barrel accessories due to an integral gas-vent system.}{Gas Vent Rating 1, Personalized Grip}
+**Hammerli 610S** (9mm Para): A target pistol that is highly accurate to extended ranges, the Hammerli 610S features custom, personalized grips and the precision machined components one would expect of Hammerli.  It cannot mount barrel accessories due to an integral gas-vent system.  *Gas Vent Rating 1*, *Personalized Grip*.
 
-\gearitem{Hammerli 620S (9mm Para)}{An update of the 610S, the Hammerli 620S features the same sleek and stylish design and quality of manufacture, along with the integral gas-vent system.  It may not live up to its predecessor’s potential accuracy as a customized target pistol, but makes up for it with a cheaper cost and the addition of a smartgun system.}{Gas Vent Rating 1, Smartlink}
+**Hammerli 620S** (9mm Para):  An update of the 610S, the Hammerli 620S features the same sleek and stylish design and quality of manufacture, along with the integral gas-vent system.  It may not live up to its predecessor’s potential accuracy as a customized target pistol, but makes up for it with a cheaper cost and the addition of a smartgun system.  *Gas Vent Rating 1*, *Smartlink*.
 
-\gearitem{HK Caveat}{A large framed H\&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon.  Commonly carried by corp suits with more bark than bite.}{}
+**HK Caveat** (): A large framed H\&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon.  Commonly carried by corp suits with more bark than bite.
 
-\gearitem{HK P50 Tactical (9mm Para)}{An integral Smartgun system, an offline laser sight, and the ability to field strip to base parts in seconds make this sleek offering from HK quite desirable.}{Easy Breakdown, Laser Sight, Smartlink}
+**HK P50 Tactical** (9mm Para): An integral Smartgun system, an offline laser sight, and the ability to field strip to base parts in seconds make this sleek offering from HK quite desirable.  *Easy Breakdown*, *Laser Sight*, *Smartlink*.
 
-\gearitem{Krime Stopper (12 gauge)}{A break action 12 gauge side-by-side shotgun that has essentially been cut down into a pistol, but sized for beefy hands as is the standard of Krime weapons.  Contains a clip for hodling 5 shells under the barrels for quick and easy reloading.}{Ammo Storage, Metahuman Adaptation, Short Barrel}
+**Krime Stopper** (12 gauge): A break action 12 gauge side-by-side shotgun that has essentially been cut down into a pistol, but sized for beefy hands as is the standard of Krime weapons.  Contains a clip for hodling 5 shells under the barrels for quick and easy reloading.  *Ammo Storage*, *Metahuman Adaptation*, *Short Barrel*.
 
-\gearitem{Mauser Ladyline}{An elegant pistol with a feminine design but suprising stopping power.}{}
+**Mauser Ladyline** (): An elegant pistol with a feminine design but suprising stopping power.
 
-\gearitem{Nitama Sporter (.38 Special)}{A popular home defense pistol that suffers from a small internal magazine.  The Nitama Sporter is lightweight, has low felt recoil, is equipped with a long barrel, and features a built in laser sight,  Originally marketed for smaller sized metahumans.}{Laser Sight, Long Barrel, Metahuman Adaptation}
+**Nitama Sporter** (.38 Special): A popular home defense pistol that suffers from a small internal magazine.  The Nitama Sporter is lightweight, has low felt recoil, is equipped with a long barrel, and features a built in laser sight,  Originally marketed for smaller sized metahumans.  *Laser Sight*, *Long Barrel*, *Metahuman Adaptation*.
 
-\gearitem{Onotari Arms Security Special (.40 S\&W)}{Onotari Arms’ Security Special is a highly advanced pistol with a complete electronics suite intended for security and law enforcement.  It features a smartgun system enhanced by an ammunition skip and safe target system, allowing its users to know where every shot will go and when it needs to be there.}{Ammo Skip System, Safe Target System, Smartlink}
+**Onotari Arms Security Special** (.40 S\&W): Onotari Arms’ Security Special is a highly advanced pistol with a complete electronics suite intended for security and law enforcement.  It features a smartgun system enhanced by an ammunition skip and safe target system, allowing its users to know where every shot will go and when it needs to be there.  *Ammo Skip System*, *Safe Target System*, *Smartlink*.
 
-\gearitem{Ruger Redhawk (.357 Magnum)}{This revolver is the little brother of Ruger’s Super Warhawk and features the same rugged construction and dependability.  A revolutionary action system allows this revolver to switch from single action to an automatic action with the flip of a switch, requiring an Interact with Device action.}{Single Action}
+**Ruger Redhawk** (.357 Magnum):  This revolver is the little brother of Ruger’s Super Warhawk and features the same rugged construction and dependability.  A revolutionary action system allows this revolver to switch from single action to an automatic action with the flip of a switch, requiring an Interact with Device action.  *Single Action*.
 
-\gearitem{Seco LD-120 (9mm Para)}{A remake of Israel’s LD-100 pistol, the Seco LD-120 comes with an integral top-mounted laser sight.}{Laser Sight}
+**Seco LD-120** (9mm Para): A remake of Israel’s LD-100 pistol, the Seco LD-120 comes with an integral top-mounted laser sight.  *Laser Sight*.
 
-\gearitem{Shiawase Arms Hearth Protector (.32 Auto)}{Marketed as a home defense pistol, the Hearth Protector has been endorsed by law enforcement agencies and features a lightweight, slim, low recoiling design that is easily controllable.}{Advanced Safety (Basic)}
+**Shiawase Arms Hearth Protector** (.32 Auto): Marketed as a home defense pistol, the Hearth Protector has been endorsed by law enforcement agencies and features a lightweight, slim, low recoiling design that is easily controllable.  *Advanced Safety (Basic)*.
 
-\gearitem{Shiawase Arms Light Tactical (5mm Shiawase)}{Shiawase Arms’ Light Tactical is a lightweight service pistol designed with input from law enforcement.  Polymer panels and an alloy frame allow extended carry without discomfort.  Various inserts allow any user to customize the grip to their requirements.  To top it off, a powered slide crammed into the underside of the barrel allows this pistol to accept one more aftermarket accessory than normal.}{Personalized Grip, Powered Slide}
+**Shiawase Arms Light Tactical** (5mm Shiawase): Shiawase Arms’ Light Tactical is a lightweight service pistol designed with input from law enforcement.  Polymer panels and an alloy frame allow extended carry without discomfort.  Various inserts allow any user to customize the grip to their requirements.  To top it off, a powered slide crammed into the underside of the barrel allows this pistol to accept one more aftermarket accessory than normal.  *Personalized Grip*, *Powered Slide*.
 
-\gearitem{Shiawase Arms Puzzler (5mm Shiawase)}{The Puzzler is made from what appear to be twenty different ordinary everyday items.  To assemble into a firearm or to disassemble back to the component pieces requires an Armor + LOG (6, 1 minute) Extended Test.  A glitch requires starting over; a critical glitch causes damage, rendering the weapon inoperative.  Identifying the individual items as a firearm requires an Armor + LOG (3) Test or Perception + INT (4).}{}
+**Shiawase Arms Puzzler** (5mm Shiawase): The Puzzler is made from what appear to be twenty different ordinary everyday items.  To assemble into a firearm or to disassemble back to the component pieces requires an Armor + LOG (6, 1 minute) Extended Test.  A glitch requires starting over; a critical glitch causes damage, rendering the weapon inoperative.  Identifying the individual items as a firearm requires an Armor + LOG (3) Test or Perception + INT (4).
 
-\gearitem{Taurus Mark XXXI (5mm Taurus)}{Endorsed by multiple corporations as the epitome of home defense, this light pistol features RFID tracking ammunition that is more useful for tagging an intruder than harming them.  It is so unlikely to cause death that multiple insurance corps have offered a discount to homeowners who possess this, and only this, firearm.}{Caseless Only, Laser Sight}
+**Taurus Mark XXXI** (5mm Taurus): Endorsed by multiple corporations as the epitome of home defense, this light pistol features RFID tracking ammunition that is more useful for tagging an intruder than harming them.  It is so unlikely to cause death that multiple insurance corps have offered a discount to homeowners who possess this, and only this, firearm.  *Caseless Only*, *Laser Sight*.
 
-\gearitem{Taurus Omni-6 (.38 Special/.357 Magnum)}{A rugged and reliable revolver design that can load multiple types of ammunition.  Interchangeable cylinders offer an easy swap between cased and caseless ammunition.  Comes with an integral laser sight.}{Laser Sight, Single Action}
+**Taurus Omni-6** (.38 Special/.357 Magnum): A rugged and reliable revolver design that can load multiple types of ammunition.  Interchangeable cylinders offer an easy swap between cased and caseless ammunition.  Comes with an integral laser sight.  *Laser Sight*, *Single Action*.
 
-\gearitem{Walther P99 (9mm Para)}{A classic Walther design with new production under Saeder-Krupp and many unlicensed knock-offs worldwide.}{Vintage}
+**Walther P99** (9mm Para): A classic Walther design with new production under Saeder-Krupp and many unlicensed knock-offs worldwide.  *Vintage*.
 
-\gearitem{Walther PB-120 (.38 Auto)}{Walther’s modern evolution of the venerable PPK is one of the most popular, if a bit dated, sidearms of mercenaries and air crews.  An extended magazine is readily available for 12¥ each, but lowers the Concealability threshold by 1 when equipped.}{}
+**Walther PB-120** (.38 Auto): Walther’s modern evolution of the venerable PPK is one of the most popular, if a bit dated, sidearms of mercenaries and air crews.  An extended magazine is readily available for 12¥ each, but lowers the Concealability threshold by 1 when equipped.
 
-\gearitem{Walther PP110 (.38 Auto)}{In response to glitches in the initial run of the Fichetti Executive Action, Walther attempted to increase their market share by releasing the PP110.  Remarkably accurate, but lacking in stopping power, the PP110 benefits from a high capacity double stack magazine, an integral flashlight that can be swapped for a laser sight for +150¥, and a customizable backstrap to fit any size hand.  Walther included a highly advanced biometric safety system since this pistol was intended for corporate security and law enforcement use.}{Advanced Safety, Flashlight, Metahuman Adaptation}
+**Walther PP110** (.38 Auto): In response to glitches in the initial run of the Fichetti Executive Action, Walther attempted to increase their market share by releasing the PP110.  Remarkably accurate, but lacking in stopping power, the PP110 benefits from a high capacity double stack magazine, an integral flashlight that can be swapped for a laser sight for +150¥, and a customizable backstrap to fit any size hand.  Walther included a highly advanced biometric safety system since this pistol was intended for corporate security and law enforcement use.  *Advanced Safety*, *Flashlight*, *Metahuman Adaptation*.
 
-\gearitem{Yamaha Sakura Fubuki (6mm Yamaha)}{Yamaha’s “Cherry Blossom Storm” is a radical design for a light pistol.  In place of normal magazines, it features a quartet of barrels stacked for most of their length with in-line caseless rounds firing a flat, coin shaped bullet.  There are no moving parts inside the pistol and it is capable of firing rapid bursts; for this reason a folding stock is included that merges with the pistol grip when not in use.  Each pull of the trigger fires 1 shot from all 4 barrels (a 4 round burst), or 10 shots from a single barrel (a full auto attack);  may be wirelessly or manually selected.  Reloads the same as the Fichetti Thunder, swapping 1 pre-loaded barrel for an empty barrel with a Reload Action the same as magazine changes for detachable mag firearms.}{Electronic Firing, Folding Stock}
+**Yamaha Sakura Fubuki** (6mm Yamaha): Yamaha’s “Cherry Blossom Storm” is a radical design for a light pistol.  In place of normal magazines, it features a quartet of barrels stacked for most of their length with in-line caseless rounds firing a flat, coin shaped bullet.  There are no moving parts inside the pistol and it is capable of firing rapid bursts; for this reason a folding stock is included that merges with the pistol grip when not in use.  Each pull of the trigger fires 1 shot from all 4 barrels (a 4 round burst), or 10 shots from a single barrel (a full auto attack);  may be wirelessly or manually selected.  Reloads the same as the Fichetti Thunder, swapping 1 pre-loaded barrel for an empty barrel with a Reload Action the same as magazine changes for detachable mag firearms.  *Electronic Firing*, *Folding Stock*.
 
-\gearitem{Yamaha Sakura Fubuki Six (6mm Yamaha)}{A new version of the “Cherry Blossom Storm” that is more reliable, more compact, and less than half the cost, but carries slightly less ammunition.  Each of the four barrels only holds 8 caseless rounds and it lacks the folding stock of the original.  A manual switch or wireless activation can set whether each trigger pull fires a single round, or a 4 round burst of 1 shot from each barrel simultaneously; otherwise the Fubuki Six functions the same as its predecessor.}{Electronic Firing}
+**Yamaha Sakura Fubuki Six** (6mm Yamaha): A new version of the “Cherry Blossom Storm” that is more reliable, more compact, and less than half the cost, but carries slightly less ammunition.  Each of the four barrels only holds 8 caseless rounds and it lacks the folding stock of the original.  A manual switch or wireless activation can set whether each trigger pull fires a single round, or a 4 round burst of 1 shot from each barrel simultaneously; otherwise the Fubuki Six functions the same as its predecessor.  *Electronic Firing*.
 
-\gearitem{Glock-Mini Giftzwerg (Special)}{Known as the 'poison dwarf', this unique light pistol only fires special explosive rounds. Although it operates as a single shot weapon, the impact makes up for it.}{Custom Ammo}
-
-\gearitem{HK Caveat (9mm Para)}{A large framed H&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon. Commonly carried by corp suits with more bark than bite.}{}
-
-\gearitem{Mauser Ladyline (5mm Shiawase)}{An elegant pistol with a feminine design but suprising stopping power.}{}
-
-\begin{longtblr}{
-  colspec = {X[1.5,l] *{10}{X[c]}},
-  row{1} = {bg=srdark, fg=white, font=\bfseries},
-  row{even} = {bg=gray!10},
-  hlines, vlines
-}
-Light Pistols & ACC & DV & AP & MODE & RC & RANGE & AMMO & AVAIL & WEIGHT & COST \\
-Ares Light Fire 70 & 6(7) & 5P & -1 & SA & – & Near & 16(dm) & 3(R) & 0.50 & 750¥ \\
-Ares Light Fire 75 & 6(8) & 5P & -1 & SA & – & Near & 16(dm) & 6(F) & 0.50 & 1,250¥ \\
-Barrens Special & 2 & 3P & – & SS & – & Close & 5(cy) & 2(R) & 1.00 & 100¥ \\
-Beretta 101T & 7 & 4P & -1 & SA & – & Near & 12(dm) & 2(R) & 1.00 & 250¥ \\
-Beretta 200ST & 5 & 4P & -1 & SA/FA & (1) & Near & 26(dm) & 8(F) & 2.00 & 700¥ \\
-Beretta 201T & 6 & 4P & -1 & SA/BF & (1) & Near & 21(dm) & 7(R) & 2.00 & 750¥ \\
-Beretta 92SL & 5 & 5P & -1 & SA & – & Near & 15(dm) & 1(R) & 1.50 & 300¥ \\
-Browning Ghost & 5(8) & 5P & -1 & SA & 1 & Near & 10(dm) & 12(R) & 1.25 & 1,500¥ \\
-CA Adder Slivergun & 5 & 4P(f) & +3 & SA & – & Close & 20(dm) & 7(F) & 1.50 & 460¥ \\
-Cavalier Arms Dragoon & 6 & 2P & -2 & SA & – & Near & 28(dm) & 5(R) & 2.00 & 575¥ \\
-Ceska vz/120 & 6 & 4P & -1 & SA & – & Near & 18(dm) & 3(R) & 1.00 & 375¥ \\
-Colt America L36 & 7 & 4P & -1 & SA & – & Near & 11(dm) & –(R) & 1.00 & 320¥ \\
-Colt Asp & 5 & 5P & – & SS & – & Near & 6(cy) & 3(R) & 1.00 & 175¥ \\
-Colt Coral Snake & 4(5) & 5P & -1 & SS & – & Far & 5(cy) & 1(R) & 1.00 & 275¥ \\
-Colt Special Agent & 5 & 7P & -1 & SA & – & Near & 8(dm) & 5(R) & 1.25 & 400¥ \\
-Fichetti Executive Action & 5 & 3P & -3 & SA/BF & – & Near & 18(dm) & 10(R) & 1.25 & 500¥ \\
-Fichetti Security 500 & 5 & 3P & -3 & SA & – & Near & 10(dm) & 4(R) & 1.00 & 300¥ \\
-Fichetti Security 500A & 5 & 3P & -3 & SA & – & Near & 22(dm) & 6(R) & 1.25 & 350¥ \\
-Fichetti Security 600 & 6(7) & 3P & -3 & SA & (1) & Near & 30(dm) & 6(R) & 1.50 & 450¥ \\
-Fichetti Thunder & 5 & 3P & -3 & BF & – & Near & 6(ml)x4 & 6(R) & 2.00 & 800¥ \\
-Glock-Mini Giftzwerg & 5 & 6P & -2 & SS & – & Near & 6(m) & 10(R) & 1.50 & 800¥ \\
-Hammerli 610S & 7(8) & 5P & -1 & SA & 1 & Far & 6(dm) & 10(R) & 2.50 & 1,300¥ \\
-Hammerli 620S & 5(7) & 5P & -1 & SA & 1 & Far & 6(dm) & 8(R) & 2.50 & 650¥ \\
-HK Caveat & 5 & 5P & -1 & SA & – & Near & 9(dm) & 4(R) & 1.25 & 500¥ \\
-HK P50 Tactical & 6(8) & 5P & -1 & SA & – & Near & 15(dm) & 4(R) & 2.00 & 600¥ \\
-Krime Stopper & 5 & 10P & -3 & SS & – & Close & 2(b) & 10(R) & 2.75 & 375¥ \\
-Mauser Ladyline & 5 & 4P & -2 & SA & – & Near & 8(dm) & 4(R) & 0.75 & 350¥ \\
-Nitama Sporter & 6(7) & 5P & – & SA & 1 & Far & 5(m) & 4(R) & 0.75 & 475¥ \\
-Onotari Arms Security Special & 5(7) & 7P & -1 & SA & – & Near & 11(dm) & 7(R) & 2.25 & 625¥ \\
-Ruger Redhawk & 5 & 6P & -2 & SS/SA & – & Near & 8(cy) & 6(R) & 1.75 & 500¥ \\
-Seco LD-120 & 5(6) & 5P & -1 & SA & – & Near & 12(dm) & 4(R) & 1.00 & 325¥ \\
-Shiawase Hearth Protector & 5 & 3P & – & SA & – & Near & 7(dm) & 3(R) & 0.50 & 350¥ \\
-Shiawase Arms Light Tactical & 5(6) & 5P & -4 & SA & – & Near & 16(dm) & 7(R) & 1.25 & 1,050¥ \\
-Shiawase Arms Puzzler & 4 & 5P & -4 & SA & – & Near & 12(dm) & 14(F) & 1.00 & 1,000¥ \\
-Taurus Mark XXXI & 4(5) & 1P & +3 & SS & 1 & Close & 5(m) & 5(R) & 1.00 & 250¥ \\
-Taurus Omni-6 (.38) & 5(6) & 5P & – & SS & – & Near & 6(cy) & 3(R) & 1.25 & 300¥ \\
-Taurus Omni-6 (.357) & 5(6) & 6P & -2 & SS & – & Near & 6(cy) & 3(R) & 1.25 & 300¥ \\
-Walther P99 & 6 & 5P & -1 & SA & – & Near & 12(dm) & 4(R) & 1.25 & 350¥ \\
-Walther PB-120 & 6 & 4P & -1 & SA & -- & Near & 10/15(dm) & 7(R) & 0.75 & 450¥ \\
-Walther PP110 & 7 & 4P & -1 & SA & – & Near & 16(dm) & 7(R) & 1.50 & 675¥ \\
-Yamaha Sakura Fubuki & 5 & 3P & – & BF/FA & 1(2) & Close & 10(ml)x4 & 10(R) & 1.75 & 2,000¥ \\
-Yamaha Sakura Fubuki Six & 6 & 3P & – & SA/BF & 1 & Close & 8(ml)x4 & 10(R) & 1.50 & 750¥ \\
-\end{longtblr}
+| Light Pistols | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Ares Light Fire 70 | 6(7) | 5P | -1 | SA | – | Near | 16(dm) | 3(R) | 0.50 | 750¥ |
+| Ares Light Fire 75 | 6(8) | 5P | -1 | SA | – | Near | 16(dm) | 6(F) | 0.50 | 1,250¥ |
+| Barrens Special | 2 | 3P | – | SS | – | Close | 5(cy) | 2(R) | 1.00 | 100¥ |
+| Beretta 101T | 7 | 4P | -1 | SA | – | Near | 12(dm) | 2(R) | 1.00 | 250¥ |
+| Beretta 200ST | 5 | 4P | -1 | SA/FA | (1) | Near | 26(dm) | 8(F) | 2.00 | 700¥ |
+| Beretta 201T | 6 | 4P | -1 | SA/BF | (1) | Near | 21(dm) | 7(R) | 2.00 | 750¥ |
+| Beretta 92SL | 5 | 5P | -1 | SA | – | Near | 15(dm) | 1(R) | 1.50 | 300¥ |
+| Browning Ghost | 5(8) | 5P | -1 | SA | 1 | Near | 10(dm) | 12(R) | 1.25 | 1,500¥ |
+| CA Adder Slivergun | 5 | 4P(f) | +3 | SA | – | Close | 20(dm) | 7(F) | 1.50 | 460¥ |
+| Cavalier Arms Dragoon | 6 | 2P | -2 | SA | – | Near | 28(dm) | 5(R) | 2.00 | 575¥ |
+| Ceska vz/120 | 6 | 4P | -1 | SA | – | Near | 18(dm) | 3(R) | 1.00 | 375¥ |
+| Colt America L36 | 7 | 4P | -1 | SA | – | Near | 11(dm) | –(R) | 1.00 | 320¥ |
+| Colt Asp | 5 | 5P | – | SS | – | Near | 6(cy) | 3(R) | 1.00 | 175¥ |
+| Colt Coral Snake | 4(5) | 5P | -1 | SS | – | Far | 5(cy) | 1(R) | 1.00 | 275¥ |
+| Colt Special Agent | 5 | 7P | -1 | SA | – | Near | 8(dm) | 5(R) | 1.25 | 400¥ |
+| Fichetti Executive Action | 5 | 3P | -3 | SA/BF | – | Near | 18(dm) | 10(R) | 1.25 | 500¥ |
+| Fichetti Security 500 | 5 | 3P | -3 | SA | – | Near | 10(dm) | 4(R) | 1.00 | 300¥ |
+| Fichetti Security 500A | 5 | 3P | -3 | SA | – | Near | 22(dm) | 6(R) | 1.25 | 350¥ |
+| Fichetti Security 600 | 6(7) | 3P | -3 | SA | (1) | Near | 30(dm) | 6(R) | 1.50 | 450¥ |
+| Fichetti Thunder | 5 | 3P | -3 | BF | – | Near | 6(ml)x4 | 6(R) | 2.00 | 800¥ |
+| **Glock-Mini Giftzwerg** (Special): Known as the 'poison dwarf', this unique light pistol only fires special explosive rounds. Although it operates as a single shot weapon, the impact makes up for it. | *Custom Ammo*. |
+| Glock-Mini Giftzwerg | 5 | 6P | -2 | SS | – | Near | 6(m) | 10(R) | 1.50 | 800¥ |
+| Hammerli 610S | 7(8) | 5P | -1 | SA | 1 | Far | 6(dm) | 10(R) | 2.50 | 1,300¥ |
+| Hammerli 620S | 5(7) | 5P | -1 | SA | 1 | Far | 6(dm) | 8(R) | 2.50 | 650¥ |
+| **HK Caveat** (9mm Para): A large framed H&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon. Commonly carried by corp suits with more bark than bite. |
+| HK Caveat | 5 | 5P | -1 | SA | – | Near | 9(dm) | 4(R) | 1.25 | 500¥ |
+| HK P50 Tactical | 6(8) | 5P | -1 | SA | – | Near | 15(dm) | 4(R) | 2.00 | 600¥ |
+| Krime Stopper | 5 | 10P | -3 | SS | – | Close | 2(b) | 10(R) | 2.75 | 375¥ |
+| **Mauser Ladyline** (5mm Shiawase): An elegant pistol with a feminine design but suprising stopping power. |
+| Mauser Ladyline | 5 | 4P | -2 | SA | – | Near | 8(dm) | 4(R) | 0.75 | 350¥ |
+| Nitama Sporter | 6(7) | 5P | – | SA | 1 | Far | 5(m) | 4(R) | 0.75 | 475¥ |
+| Onotari Arms Security Special | 5(7) | 7P | -1 | SA | – | Near | 11(dm) | 7(R) | 2.25 | 625¥ |
+| Ruger Redhawk | 5 | 6P | -2 | SS/SA | – | Near | 8(cy) | 6(R) | 1.75 | 500¥ |
+| Seco LD-120 | 5(6) | 5P | -1 | SA | – | Near | 12(dm) | 4(R) | 1.00 | 325¥ |
+| Shiawase Hearth Protector | 5 | 3P | – | SA | – | Near | 7(dm) | 3(R) | 0.50 | 350¥ |
+| Shiawase Arms Light Tactical | 5(6) | 5P | -4 | SA | – | Near | 16(dm) | 7(R) | 1.25 | 1,050¥ |
+| Shiawase Arms Puzzler | 4 | 5P | -4 | SA | – | Near | 12(dm) | 14(F) | 1.00 | 1,000¥ |
+| Taurus Mark XXXI | 4(5) | 1P | +3 | SS | 1 | Close | 5(m) | 5(R) | 1.00 | 250¥ |
+| Taurus Omni-6 (.38) | 5(6) | 5P | – | SS | – | Near | 6(cy) | 3(R) | 1.25 | 300¥ |
+| Taurus Omni-6 (.357) | 5(6) | 6P | -2 | SS | – | Near | 6(cy) | 3(R) | 1.25 | 300¥ |
+| Walther P99 | 6 | 5P | -1 | SA | – | Near | 12(dm) | 4(R) | 1.25 | 350¥ |
+| Walther PB-120 | 6 | 4P | -1 | SA | – | Near | 10/15(dm)7(R) | 0.75 | 450¥ |
+| Walther PP110 | 7 | 4P | -1 | SA | – | Near | 16(dm) | 7(R) | 1.50 | 675¥ |
+| Yamaha Sakura Fubuki | 5 | 3P | – | BF/FA | 1(2) | Close | 10(ml)x4 | 10(R) | 1.75 | 2,000¥ |
+| Yamaha Sakura Fubuki Six | 6 | 3P | – | SA/BF | 1 | Close | 8(ml)x4 | 10(R) | 1.50 | 750¥ |
 
 **Heavy Pistols** - Large pistols that pack lots of firepower.  Capable of taking both barrel mounted and top-mounted accessories.
 
