@@ -86,6 +86,9 @@ def balance_metatypes(text):
             new_table_lines = []
 
             for i in range(start_line, end_line):
+                if i == start_line or i == start_line + 1:
+                    new_table_lines.append(lines[i])
+                    continue
                 line = lines[i]
                 if '---' in line or 'Race |' in line:
                     new_table_lines.append(line)
@@ -158,6 +161,9 @@ def balance_weapons(text):
             new_table_lines = []
 
             for i in range(start_line, end_line):
+                if i == start_line or i == start_line + 1:
+                    new_table_lines.append(lines[i])
+                    continue
                 line = lines[i]
                 if not line.strip() or '|' not in line:
                     new_table_lines.append(line)
