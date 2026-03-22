@@ -1360,11 +1360,13 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Fichetti Thunder** (4mm Fichetti): A strange offering from Fichetti, the Thunder makes use of the ‘metal storm’ concept of barrels packed with multiple in-line rounds that can be electronically fired in quick succession, increasing the rate of fire but requiring a full barrel replacement (with pre-loaded ammunition) or a lengthy muzzle loading process.  The Thunder is designed to quickly swap its 4 barrels, each containing 6 caseless rounds.  Designed for larger metahumans, a puzzling choice given the small caliber and most Ork and Troll desires when it comes to firearms.  When firing the Thunder empties an entire barrel, shooting 6 shots with a single burst.  The Thunder can be reloaded by inserting individual caseless rounds into a barrel, but more commonly entire loaded barrels are swapped out for empty barrels; this uses the same mechanics as a normal magazine change with 1 Reload Action per barrel switched.  *Electronic Firing*, *Metahuman Adaptation*.
 
+ **Glock-Mini Giftzwerg** (Special): Known as the 'poison dwarf', this unique light pistol only fires special explosive rounds. Although it operates as a single shot weapon, the impact makes up for it. , *Custom Ammo*.
+
 **Hammerli 610S** (9mm Para): A target pistol that is highly accurate to extended ranges, the Hammerli 610S features custom, personalized grips and the precision machined components one would expect of Hammerli.  It cannot mount barrel accessories due to an integral gas-vent system.  *Gas Vent Rating 1*, *Personalized Grip*.
 
 **Hammerli 620S** (9mm Para):  An update of the 610S, the Hammerli 620S features the same sleek and stylish design and quality of manufacture, along with the integral gas-vent system.  It may not live up to its predecessor’s potential accuracy as a customized target pistol, but makes up for it with a cheaper cost and the addition of a smartgun system.  *Gas Vent Rating 1*, *Smartlink*.
 
-**HK Caveat** (): A large framed H\&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon.  Commonly carried by corp suits with more bark than bite.
+**HK Caveat** (9mm Para): A large framed H&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon. Commonly carried by corp suits with more bark than bite.
 
 **HK P50 Tactical** (9mm Para): An integral Smartgun system, an offline laser sight, and the ability to field strip to base parts in seconds make this sleek offering from HK quite desirable.  *Easy Breakdown*, *Laser Sight*, *Smartlink*.
 
@@ -1422,15 +1424,12 @@ To use a Reaction, a character must have the required Actions available, either 
 | Fichetti Security 500A | 5 | 3P | -3 | SA | 0 | Near | 22(dm) | 6(R) | 1.25 | 450¥ |
 | Fichetti Security 600 | 6(7) | 3P | -3 | SA | (1) | Near | 30(dm) | 6(R) | 1.50 | 550¥ |
 | Fichetti Thunder | 5 | 3P | -3 | BF | 0 | Near | 6(ml)x4 | 6(R) | 2.00 | 500¥ |
-| **Glock-Mini Giftzwerg** (Special): Known as the 'poison dwarf', this unique light pistol only fires special explosive rounds. Although it operates as a single shot weapon, the impact makes up for it. | *Custom Ammo*. |
 | Glock-Mini Giftzwerg | 5 | 6P | -2 | SS | 0 | Near | 6(m) | 10(R) | 1.50 | 300¥ |
 | Hammerli 610S | 7(8) | 5P | -1 | SA | 1 | Far | 6(dm) | 10(R) | 2.50 | 400¥ |
 | Hammerli 620S | 5(7) | 5P | -1 | SA | 1 | Far | 6(dm) | 8(R) | 2.50 | 400¥ |
-| **HK Caveat** (9mm Para): A large framed H&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon. Commonly carried by corp suits with more bark than bite. |
 | HK Caveat | 5 | 5P | -1 | SA | 0 | Near | 9(dm) | 4(R) | 1.25 | 300¥ |
 | HK P50 Tactical | 6(8) | 5P | -1 | SA | 0 | Near | 15(dm) | 4(R) | 2.00 | 300¥ |
 | Krime Stopper | 5 | 10P | -3 | SS | 0 | Close | 2(b) | 10(R) | 2.75 | 450¥ |
-| **Mauser Ladyline** (5mm Shiawase): An elegant pistol with a feminine design but suprising stopping power. |
 | Mauser Ladyline | 5 | 4P | -2 | SA | 0 | Near | 8(dm) | 4(R) | 0.75 | 300¥ |
 | Nitama Sporter | 6(7) | 5P | 0 | SA | 1 | Far | 5(m) | 4(R) | 0.75 | 300¥ |
 | Onotari Arms Security Special | 5(7) | 7P | -1 | SA | 0 | Near | 11(dm) | 7(R) | 2.25 | 350¥ |
@@ -1451,6 +1450,8 @@ To use a Reaction, a character must have the required Actions available, either 
 **Heavy Pistols** - Large pistols that pack lots of firepower.  Capable of taking both barrel mounted and top-mounted accessories.
 
 **Altmayr Black Moon** (.41 Mag): A high quality german-made revolver with exceptional accuracy in a large caliber.  The Black Moon features a lower than normal barrel alignment and does away with an external hammer in favor of electronic firing.  Features tactical railing both above and below a long barrel to accept a level of customization most other revolvers can’t match.  *Caseless Only*, *Double Action*, *Electronic Firing*, *Long Barrel*, *Tactical Rail*.
+
+**Altmayr White Star** (10mm Auto): The standard issue sidearm for Sternschutz Security personnel. Reliable, sturdy, and packs a sufficient punch for law enforcement operations. 
 
 **Ares Predator I** (10mm Auto): The original offering from Ares, or a suitable knockoff, that provides the reliability and stability that the entire series has staked its reputation on.  It does not mount an internal smartgun system, which would become standard on later models, but it is still a solid and dependable firearm.  *Incompatible*.
 
@@ -1506,6 +1507,8 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **FN 5-7C** (FN 5.7): A modern update of a venerable classic, firing the same high speed, low caliber rounds designed to defeat personal body armor.  Capable of burst fire in a highly stable platform.
 
+**Glock Dragon Slayer** (10mm Auto): Marketed directly against the Ares Predator, this Austrian heavy pistol features aggressive styling, an integrated smartlink, and built-in recoil compensation to tame high-velocity rounds. , *Smartlink*.
+
 **Glock-Swarovski Eagle Eye** (7mm Auto): Essentially a sniping pistol, the Eagle Eye’s range is unsurpassed.  It is a highly accurate design with an internal smartgun, an improved range finder, and an extended barrel.  *Improved Range Finder*, *Long Barrel*, *Smartlink*.
 
 **Hammerli Gemini** (.45 Auto): A boutique gunsmith’s design licensed for mass production by Hammerli.  The Gemini has a strikingly different appearance; it resembles a normal semi-automatic pistol but it has 2 barrels side by side and 2 magazines.  A single action to fire shoots twice and consumes a round from each magazine.  Double the cost of all barrel and magazine modifications and decrease Concealability Threshold by 1.  *Custom Look*.
@@ -1530,7 +1533,11 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Krupp Arms Lemat 2072** (.357 Mag/20 ga): Krupp’s throwback to a classic American Civil War revolver that uses a double barrel design with the cylinder rotating around a central chamber holding a single shotgun shell.  A built in ammo skipping system can be activated manually to switch to with the shotgun chamber with an Interact with Device action.  *Ammo Skip System*, *Single Action*.
 
+**Luger Model 58** (9mm Para): A modern resurrection of the classic Luger design, featuring the distinctive toggle-lock action with updated materials. Popular among collectors and traditionalists who want a piece of history that still holds its own in a firefight.
+
 **Makarov V.22** (.22 LR): An older model Makarov with an integral silencer barrel and chambered in a low power cartridge and tuned to function with subsonic ammo.  An active listener 10 meters distant cannot detect a gunshot.  It cannot accept any further barrel modifications or accessories.  *Caseless Only*, *Suppressor*.
+
+**Mauser Gladiator** (10mm Auto): A robust heavy pistol from Mauser designed for intense combat situations. It boasts an exceptionally durable frame and a high-capacity magazine, sacrificing some concealability for sheer firepower. , *Extended Magazine*.
 
 **Morrissey Alta** (.40 S\&W): A fashionable heavy pistol known for reliabliity and accuracy.  Comes with a top-mounted laser sight and a guarantee of satisfaction from Morrissey based on their previous 20 years of production and high sales.  This pistol is always appropriate for higher end social situations.  *Laser Sight*.
 
@@ -1566,6 +1573,10 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Shiawase Arms Heavy Tactical** (.454 Casull): Don’t believe the hype surrounding the marketing campaigns for this pistol.  Yes, it has every modern convienance one could ever want in a firearm.  Yes, it packs enough punch to scare a heavily armored troll.  However, it kicks like a cannon and is nearly uncontrollable thanks to its featherweight composite construction.  It remains to be seen whether the technological advancements can make up for a difficult to use, inaccurate weapon. Comes standard equipped with a thermal suppressor to reduce the burst of flame that comes with every over powered shot.  *Advanced Safety*, *Ceramic/Plasteel Components Rating 1*, *Safe Target System*, *Smartlink*, *Thermal Suppressor*.
 
+**Walther Nova II** (9mm Para): An elegant and streamlined heavy pistol from Walther. The Nova II is favored by corporate security and executive protection details for its sleek design, which prevents snagging on clothing when drawn quickly. , *Concealable Holster*.
+
+**Walther P059 Futura** (10mm Auto): A cutting-edge heavy pistol that incorporates lightweight composites and advanced ergonomics. It comes standard with a smartgun system and an underbarrel weight to reduce muzzle climb. , *Personalized Grip, Smartlink*.
+
 **Walther P109** (.40 S\&W): A large bore semi-auto derived from Walther’s burst capable P108 that features an early iteration of the gas vent system and a short detachable barrel extension to achieve slightly higher velocities.  With the extension attached, the pistol receives +1 to Accuracy and -1 to Concealability Thresholds.  It may not mount any other barrel accessories or modifications.  *Vintage*.
 
 **Walther Secura** (7mm Auto): The standard sidearm of German police forces and many other European security agencies.  Comes with an optional smartgun system for an extra +150¥.
@@ -1579,7 +1590,6 @@ To use a Reaction, a character must have the required Actions available, either 
 | Heavy Pistols | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Altmayr Black Moon | 6 | 8P | -3 | SA | 1 | Far | 6(cy) | 6(R) | 2.75 | 550¥ |
-| **Altmayr White Star** (10mm Auto): The standard issue sidearm for Sternschutz Security personnel. Reliable, sturdy, and packs a sufficient punch for law enforcement operations. |
 | Altmayr White Star | 5(6) | 7P | -1 | SA | 1 | Near | 14(dm) | 5(R) | 2.25 | 450¥ |
 | Ares Predator I | 5 | 8P | -2 | SA | 1 | Near | 10(dm) | 8(R) | 2.00 | 550¥ |
 | Ares Predator II | 5 | 5P | -1 | SA | 0 | Near | 15(dm) | 8(R) | 1.50 | 300¥ |
@@ -1608,7 +1618,6 @@ To use a Reaction, a character must have the required Actions available, either 
 | Eichiro Hatamoto II | 4 | 16P | -3 | SS | 0 | Near | 1(ml) | 10(R) | 2.50 | 750¥ |
 | Enfield Merlin | 5(7) | 12P | -2 | SS | 1 | Near | 6(cy) | 8(R) | 3.00 | 600¥ |
 | FN 5-7C | 5 | 4P | -7 | SA/BF | 1 | Far | 20(dm) | 9(F) | 2.50 | 900¥ |
-| **Glock Dragon Slayer** (10mm Auto): Marketed directly against the Ares Predator, this Austrian heavy pistol features aggressive styling, an integrated smartlink, and built-in recoil compensation to tame high-velocity rounds. | *Smartlink*. |
 | Glock Dragon Slayer | 6(8) | 8P | -2 | SA | 1 | Near | 15(dm) | 8(R) | 2.50 | 550¥ |
 | Glock-Swarovski Eagle Eye | 6(8) | 7P | -2 | SA | 0 | Distant | 12(dm) | 11(R) | 2.50 | 400¥ |
 | Hammerli Gemini | 5 | 8P | -1 | SA | 0 | Far | 8(dm)x2 | 10(R) | 3.50 | 350¥ |
@@ -1623,10 +1632,8 @@ To use a Reaction, a character must have the required Actions available, either 
 | Krime Varmint | 3(4) | 10P | -3 | SA | (1) | Far | 8(dm) | 7(R) | 3.75 | 650¥ |
 | KA Lemat 2072 | 5 | 6P | -2 | SS | 0 | Near | 9(cy) | 8(R) | 3.75 | 300¥ |
 | Shotgun | 5 | 8P | -2 | SS | 0 | Close | 1(ml) | – | – | 350 |
-| **Luger Model 58** (9mm Para): A modern resurrection of the classic Luger design, featuring the distinctive toggle-lock action with updated materials. Popular among collectors and traditionalists who want a piece of history that still holds its own in a firefight. |
 | Luger Model 58 | 6 | 6P | -1 | SA | 0 | Near | 10(dm) | 6(R) | 1.75 | 300¥ |
 | Makarov V.22 | 4 | 1P | +3 | SA | 0 | Close | 6(dm) | 10(F) | 1.50 | 200¥ |
-| **Mauser Gladiator** (10mm Auto): A robust heavy pistol from Mauser designed for intense combat situations. It boasts an exceptionally durable frame and a high-capacity magazine, sacrificing some concealability for sheer firepower. | *Extended Magazine*. |
 | Mauser Gladiator | 5 | 8P | -1 | SA | 1 | Near | 18(dm) | 8(R) | 3.00 | 500¥ |
 | Morrissey Alta | 6(7) | 7P | -1 | SA | 0 | Near | 12(dm) | 7(R) | 1.00 | 350¥ |
 | Morrissey Elite | 5(6) | 7P | -1 | SA | 0 | Close | 5(dm) | 5(R) | 1.00 | 300¥ |
@@ -1645,9 +1652,7 @@ To use a Reaction, a character must have the required Actions available, either 
 | Savalette Guardian | 5(7) | 8P | -2 | SA/BF | 1 | Far | 12(dm) | 6(R) | 3.25 | 700¥ |
 | Shiawase Arms Copernicus | 5(7) | 5P | -1 | SA | 0 | Near | 14(dm) | 5(R) | 2.25 | 300¥ |
 | SA Heavy Tactical | 5(7) | 13P | -3 | SA | 0 | Far | 12(dm) | 17(R) | 1.25 | 700¥ |
-| **Walther Nova II** (9mm Para): An elegant and streamlined heavy pistol from Walther. The Nova II is favored by corporate security and executive protection details for its sleek design, which prevents snagging on clothing when drawn quickly. | *Concealable Holster*. |
 | Walther Nova II | 6 | 6P | -1 | SA | 0 | Near | 12(dm) | 5(R) | 1.50 | 350¥ |
-| **Walther P059 Futura** (10mm Auto): A cutting-edge heavy pistol that incorporates lightweight composites and advanced ergonomics. It comes standard with a smartgun system and an underbarrel weight to reduce muzzle climb. | *Personalized Grip, Smartlink*. |
 | Walther P059 Futura | 6(8) | 8P | -2 | SA | 1 | Near | 14(dm) | 10(R) | 2.25 | 550¥ |
 | Walther P109 | 5(6) | 7P | -1 | SA | 1 | Near | 12(dm) | 4(R) | 2.50 | 450¥ |
 | Walther Secura | 5 | 7P | -2 | SA | 0 | Far | 12(dm) | 5(R) | 2.00 | 400¥ |
@@ -1660,6 +1665,8 @@ To use a Reaction, a character must have the required Actions available, either 
 **Ares Crusader** (9mm Para): A small, but heavy machine pistol that has large capacity and a very controllable high rate of fire thanks to an integral barrel-mounted gas vent system.  *Extended Magazine*, *Gas Vent Rating 2*.
 
 **Ares Crusader II** (9mm Para): This variant of the Crusader is an updated, but otherwise identical gun, that features an integral smartgun system and the same barrel-mounted gas vent system.  *Extended Magazine*, *Gas Vent Rating 2*, *Smartlink*.
+
+**Ares Klapp MP** (9mm Para): The 'Klapp' (folding) is a discreet machine pistol designed for deep concealment. Its folding stock and compact profile make it a favorite for wetwork and undercover operations where space is at a premium. , *Folding Stock*.
 
 **B\&T MP9** (6.5 CBJ/9mm Para): An advanced design from the turn of the century that features a foregrip, high accuracy, and controllable automatic fire.  Features a full tactical rail system that allows attachments in the top-mount position, underbarrel, or on either side.  New production copies, of sometimes questionable manufacture, pop up from time to time in Middle Eastern and Asian countries.  Original guns are usually found chambered in 6.5 CBJ, while newly made copies are usually in 9mm.  *Foregrip*, *Tactical Rail*, *Vintage*.
 
@@ -1695,6 +1702,8 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Steyr TMP** (9mm Para): The lightweight polymer frame makes the TMP very easily wielded, but accuracy suffers, especially when firing on full auto.  *Vintage*.
 
+**Steyr TMP-6** (9mm Para): A modernization of the venerable Steyr Tactical Machine Pistol. It features improved polymer construction, a built-in foregrip for better control during fully automatic fire, and an integrated laser sight. , *Laser Sight*.
+
 **Ultimax 70** (7.62 Tok): While the stock version of this pistol comes without any advanced electronics, it is still a reliable pistol with above average accuracy and controllable fully automatic fire.  *Gas Vent Rating 2*, *Laser Sight*.
 
 **Ultimax 71** (7.62 Tok): A smaller and simpler redesign of the Ultimax 70, the 71 model can function as a regular semi-automatic pistol and comes with an extended magazine as standard, but drops the gas vent system.  *Extended Magazine*, *Laser Sight*.
@@ -1707,7 +1716,6 @@ To use a Reaction, a character must have the required Actions available, either 
 |---|---|---|---|---|---|---|---|---|---|---|
 | Ares Crusader | 5 | 5P | -1 | SA/BF | 2 | Near | 40(dm) | 7(R) | 3.25 | 800¥ |
 | Ares Crusader II | 5(7) | 5P | -1 | SA/BF | 2 | Near | 40(dm) | 9(R) | 3.50 | 800¥ |
-| **Ares Klapp MP** (9mm Para): The 'Klapp' (folding) is a discreet machine pistol designed for deep concealment. Its folding stock and compact profile make it a favorite for wetwork and undercover operations where space is at a premium. | *Folding Stock*. |
 | Ares Klapp MP | 4(5) | 5P | -1 | SA/BF/FA | 1 | Near | 30(dm) | 10(F) | 2.50 | 950¥ |
 | B\&T MP9 (6.5) | 5 | 4P | -6 | SA/BF/FA | 1(2) | Near | 25(dm) | 12(F) | 2.75 | 1200¥ |
 | B\&T MP9 (9mm) | 5 | 5P | -1 | SA/BF/FA | 1(2) | Near | 25(dm) | 6(F) | 2.75 | 900¥ |
@@ -1727,7 +1735,6 @@ To use a Reaction, a character must have the required Actions available, either 
 | Remington Suppressor | 6 | 8P | -2 | SA/BF | 0 | Far | 15(dm) | 6(R) | 2.50 | 600¥ |
 | Ruger T-983 | 6 | 5P | -1 | SA/BF/FA | (1) | Near | 17(dm) | 8(R) | 2.75 | 900¥ |
 | Steyr TMP | 4 | 5P | -1 | FA | 0 | Near | 30(dm) | 8(R) | 2.00 | 850¥ |
-| **Steyr TMP-6** (9mm Para): A modernization of the venerable Steyr Tactical Machine Pistol. It features improved polymer construction, a built-in foregrip for better control during fully automatic fire, and an integrated laser sight. | *Laser Sight*. |
 | Steyr TMP-6 | 5(6) | 5P | -1 | SA/BF/FA | 1 | Near | 30(dm) | 8(R) | 2.50 | 950¥ |
 | Ultimax 70 | 5(6) | 5P | -2 | BF/FA | 2 | Near | 12(dm) | 7(R) | 2.75 | 1000¥ |
 | Ultimax 71 | 5(6) | 5P | -2 | SA/BF/FA | 0 | Near | 18(dm) | 5(R) | 2.25 | 850¥ |
@@ -1920,6 +1927,8 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Onotari Arms Pressure KS-X** (12ga): A compact, submachine gun sized shotgun capable of burst fire that includes an extending stock and a built in laser sight.  A revolutionary suppressor is available from Onotari Arms for +900¥ at Availability 14(R).  Lacks ammo capacity but has a top rail to accommodate most accessories.  Without the suppressor equipped or the stock extended, the Pressure KS-X receives a +2 to Concealability Thresholds.  *Folding Stock*, *Laser Sight*, *Tactical Rail (Top)*.
 
+**PJSS LNB/13** (12 Gauge): A pump-action shotgun from Praezisions Jagd- und Sportwaffen Suhl. Known for its rock-solid reliability in the harshest conditions, the LNB/13 is a staple for security forces and hunters alike. 
+
 **PJSS Model 55** (12ga): A finely crafted, break action, double barrel hunting and sporting shotgun favored by European hunters and trap shooters.  The over-under double barrels can be fired simultaneously via Burst Fire.  *Shock Pad*, *Stock*.
 
 **PJSS Model 75** (various): An improvement over their Model 55, the Suhl Hunting & Sporting Weapons Production Association’s Model 75 is a side-by-side shotgun of exceptional workmanship and quality.  Old world craftsmanship meets modern materials, from the customized and reinforced old growth stocks with nearly invisible shock absorbers to the cheek piece inserts of anti-bacterial artificial leather made from mushroom caps.  The high level of accuracy and robust design are combined with modern barrels capable of changing calibers with the use of insert sleeves.  Additional barrels in a caliber of your choice are available for +400¥ each.  Each barrel has its own set trigger, allowing one or both to be fired with a simple pull; this is not treated as a burst but as two separate shots.  An optional thermal targeting system can be attached to the forearm of the stock for +900¥ which can display a wide view display of the sight picture’s thermal signatures directly to your AR feed if wirelessly enabled; treat as a thermal imaging scope.  While the caliber of the barrels may be customized on this weapon, both must shoot the same cartridge.  *Shock Pad*, *Stock*.
@@ -1937,6 +1946,8 @@ To use a Reaction, a character must have the required Actions available, either 
 **Shiawase Arms Riot Guard** (12ga): A magazine fed, bullpup, gas operated shotgun from Shiawase.  The reinforced, compact frame provides +1 to Concealability Thresholds.  *Foregrip (Underbarrel)*, *Melee Hardening*, *Shock Pad*, *Stock*.
 
 **Shiawase Arms Tsunami** (.410 bore): A bare bones shotgun with a high magazine capacity that has garnered a Recommended status from law enforcement agencies worldwide.  Intended as a home defense gun, much like Shiawase’s Rain but much simpler in construction and operation, the Tsunami features an enlarged trigger guard to accept a trigger lock when not in use and the only electronic component on the entire weapon is a series of RFID tags, ostensibly for a theft tracking system.  *Stock*.
+
+**TEC 603 Bull** (5.56mm): A bullpup assault rifle known for its compact size without sacrificing barrel length. The TEC 603 Bull offers excellent maneuverability in urban combat scenarios and comes with an integrated smartlink. , *Smartlink*.
 
 **Winchester Model 201** (20ga): A quality over-under, double barrel shotgun favored by the wealthy.  Lighter shells than a common combat shotgun, but well designed for target shooting and fowling.  Exceptionally fine craftsmanship and dozens of patterns available in the custom wood engraving and checkering.  Both barrels may be fired as a burst, the same as the PJSS Model 55.  *Custom Look*, *Stock*.
 
@@ -1977,7 +1988,6 @@ To use a Reaction, a character must have the required Actions available, either 
 | Krime Whammy (Ranged) | 1 | 25P | -3 | SS | (1) | PB | 4(ml) | 12(F) | 13.00 | 1600¥ |
 | Mossberg AM-CMDT | 5(7) | 18P | -4 | SA/BF/FA | (2) | Far | 10(dm) | 12(F) | 5.50 | 1700¥ |
 | Onotari Arms Pressure KS-X | 4(5) | 10P | -3 | SA/BF | (1) | Close | 6(dm) | 12(R) | 2.75 | 800¥ |
-| **PJSS LNB/13** (12 Gauge): A pump-action shotgun from Praezisions Jagd- und Sportwaffen Suhl. Known for its rock-solid reliability in the harshest conditions, the LNB/13 is a staple for security forces and hunters alike. |
 | PJSS LNB/13 | 5 | 12P | -2 | SA | 0 | Near | 8(m) | 6(R) | 3.50 | 600¥ |
 | PJSS Model 55 | 6 | 16P | -3 | SS | (2) | Far | 2(b) | 9(R) | 2.50 | 950¥ |
 | PJSS Model 75 | 6 | 4P | 0 | SS | (2) | – | 2(b) | 8(R) | 2.75 | 350¥ |
@@ -1996,7 +2006,6 @@ To use a Reaction, a character must have the required Actions available, either 
 | Shiawase Arms Rain | 4 | 10P | -2 | SA | 1(2) | Near | 5(ml) | 4(R) | 2.75 | 600¥ |
 | Shiawase Arms Riot Guard | 4 | 16P | -3 | SA/BF | (3) | Near | 15(dm) | 10(R) | 3.00 | 1300¥ |
 | Shiawase Arms Tsunami | 4 | 10P | -3 | SS | (1) | Near | 7(m) | 4(R) | 2.75 | 600¥ |
-| **TEC 603 Bull** (5.56mm): A bullpup assault rifle known for its compact size without sacrificing barrel length. The TEC 603 Bull offers excellent maneuverability in urban combat scenarios and comes with an integrated smartlink. | *Smartlink*. |
 | TEC 603 Bull | 5(7) | 9P | -2 | SA/BF/FA | 1 | Far | 35(dm) | 10(R) | 3.75 | 1100¥ |
 | Winchester Model 201 | 8 | 12P | -3 | SS | (1) | Far | 2(b) | 8(R) | 2.25 | 650¥ |
 | Winchester Model 2054 | 4(5) | 20P | -4 | SA | (3) | Near | 7(m) | 6(R) | 3.75 | 1500¥ |
