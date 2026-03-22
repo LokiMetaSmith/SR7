@@ -1246,18 +1246,18 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Tasers & Dart Guns | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Cavalier SafeGuard | 5(6) | 4S(e) | +2 | SA | – | Close | 6(m) | – | 0.75 | 275¥ |
-| Defiance EX Shocker | 4 | 8S(e) | – | SS | – | Close | 4(m) | – | 1.25 | 340¥ |
-| Defiance Super Shock | 8 | 7S(e) | -1 | SA | – | Near | 2(m) | 3(R) | 2.00 | 1,000¥ |
+| Cavalier SafeGuard | 5(6) | 4S(e) | +2 | SA | 0 | Close | 6(m) | – | 0.75 | 200¥ |
+| Defiance EX Shocker | 4 | 8S(e) | -5 | SS | 0 | Close | 4(m) | – | 1.25 | 500¥ |
+| Defiance Super Shock | 8 | 7S(e) | -1 | SA | 0 | Near | 2(m) | 3(R) | 2.00 | 300¥ |
 | HK Urban Tempest |
-| Krime Tingler | 3 | 10S(e) | -2 | SS | – | Close | 2(m) | 2 | 3.00 | 240¥ |
-| Narcoject One | 5 | – | – | SA | – | Close | 6(m) | 6(R) | 1.50 | 1,200¥ |
-| Parashield Dart Pistol | 5 | – | – | SA | – | Near | 5(dm) | 4(R) | 600¥ |
-| Parashield Dart Rifle | 6 | – | – | SA | – | Far | 5(m) | 6(R) | 1,200¥ |
-| S-1130 Assassin | 5 | – | -3 | SA | – | Close | 6(m) | 15(F) | 0.50 | 1,450¥ |
-| Tiffani-Defiance Protector | 5(6) | 5S(e) | +1 | SA | – | Close | 3(m) | 4 | 0.50 | 500¥ |
-| Yamaha Pulsar I/II | 5 | 6S(e) | – | SA | – | Near | 4(m) | – | 1.50 | 325/350¥ |
-| Jupiter Taser Club | 3 | 6S(e) | – | SS | – | Close | 1(m) | 8 | 2.50 | 1,200¥ |
+| Krime Tingler | 3 | 10S(e) | -2 | SS | 0 | Close | 2(m) | 2 | 3.00 | 400¥ |
+| Narcoject One | 5 | 6S(e) | -5 | SA | 0 | Close | 6(m) | 6(R) | 1.50 | 500¥ |
+| Parashield Dart Pistol | 5 | 6S(e) | -5 | SA | 0 | Near | 5(dm) | 4(R) | 500¥ |
+| Parashield Dart Rifle | 6 | 6S(e) | -5 | SA | 0 | Far | 5(m) | 6(R) | 500¥ |
+| S-1130 Assassin | 5 | 6S(e) | -3 | SA | 0 | Close | 6(m) | 15(F) | 0.50 | 400¥ |
+| Tiffani-Defiance Protector | 5(6) | 5S(e) | +1 | SA | 0 | Close | 3(m) | 4 | 0.50 | 200¥ |
+| Yamaha Pulsar I/II | 5 | 6S(e) | -5 | SA | 0 | Near | 4(m) | – | 1.50 | 500¥ |
+| Jupiter Taser Club | 3 | 6S(e) | -5 | SS | 0 | Close | 1(m) | 8 | 2.50 | 450¥ |
 
 **Hold-Outs** - Hold-Outs are very small, easily concealed pistols that are usually weak and inaccurate, but make the perfect last ditch backup weapon.  They are too small to mount any normal off the rack firearms accessories.
 
@@ -1299,24 +1299,24 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Hold-Outs | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Cannon Punch | 2 | 9P(f) | -1 | SS | – | PB | 1(ml) | 6(R) | 1.00 | 100¥ |
-| Cavalier Arms Scout | 4 | 2P | -2 | SA | – | Close | 7(dm) | 6(R) | 0.25 | 375¥ |
-| Colt New Model Revolver | 6 | 3P | – | SS | – | Close | 5(cy) | 3(R) | 0.75 | 150¥ |
-| Colt Secret Agent | 5(6) | 3P | -1 | SS | – | Close | 6(cy) | 4(R) | 0.50 | 550¥ |
-| Enfield M1098 | 5 | 5P | -1 | SA | 1 | Near | 8(dm) | 5(R) | 1.00 | 450¥ |
-| Fichetti Tiffani Needler | 5 | 6P(fl) | +2 | SA | – | Close | 4(c) | 5(R) | 0.50 | 1,000¥ |
-| Fichetti Tiffani Self-Defender | 4 | 4P | -3 | SA | – | Near | 4(c) | 4(R) | 0.50 | 600¥ |
-| HK P48 | 2P | – | BF/FA | – | Close | 6(dm) | 0.50 | 300¥ |
-| Krime Vester | 4 | 8P | -4 | SS | – | Close | 2(b) | 7(R) | 2.00 | 200¥ |
-| Morrissey Élan | 5 | 3P | – | SA | – | Close | 5(dm) | 7(R) | 0.50 | 500¥ |
-| Raecor Sting | 3 | 4P(fl) | +4 | SS | – | PB | 4(m) | 6(R) | 0.25 | 350¥ |
-| Shiawase Arms Type K2072 | 5 | 5P | -4 | SS | – | Near | 4(m) | 3(R) | 0.50 | 475¥ |
-| SIG Sauer P298 | 5 | 4P | -1 | SA | – | Near | 7(dm) | 4(R) | 0.75 | 400¥ |
-| Stinger Pen Gun | 4 | 2P | – | SS | – | PB | 1(ml) | 6(R) | 0.25 | 325¥ |
-| Streetline Special | 4 | 1P | +2 | SA | – | Close | 6(dm) | –(R) | 0.50 | 50¥ |
-| Terracotta Arms Pup | 4(6) | 4P | – | SA | – | Close | 5(dm) | 4(R)/6(F) | 0.75 | 500/900¥ |
-| Walther Palm Pistol | 4 | 7P | -1 | SS/BF | – | Near | 2(b) | 4(R) | 0.25 | 245¥ |
-| Walther Secura SK | 4 | 7P | -2 | SA | – | Near | 4(dm) | 8(F) | 0.75 | 1,000¥ |
+| Cannon Punch | 2 | 9P(f) | -1 | SS | 0 | PB | 1(ml) | 6(R) | 1.00 | 300¥ |
+| Cavalier Arms Scout | 4 | 2P | -2 | SA | 0 | Close | 7(dm) | 6(R) | 0.25 | 300¥ |
+| Colt New Model Revolver | 6 | 3P | 0 | SS | 0 | Close | 5(cy) | 3(R) | 0.75 | 150¥ |
+| Colt Secret Agent | 5(6) | 3P | -1 | SS | 0 | Close | 6(cy) | 4(R) | 0.50 | 200¥ |
+| Enfield M1098 | 5 | 5P | -1 | SA | 1 | Near | 8(dm) | 5(R) | 1.00 | 400¥ |
+| Fichetti Tiffani Needler | 5 | 6P(fl) | +2 | SA | 0 | Close | 4(c) | 5(R) | 0.50 | 250¥ |
+| Fichetti Tiffani Self-Defender | 4 | 4P | -3 | SA | 0 | Near | 4(c) | 4(R) | 0.50 | 350¥ |
+| HK P48 | 2P | 4P | BF/FA | SA | 0 | 6(dm) | 0.50 | 200¥ |
+| Krime Vester | 4 | 8P | -4 | SS | 0 | Close | 2(b) | 7(R) | 2.00 | 450¥ |
+| Morrissey Élan | 5 | 3P | 0 | SA | 0 | Close | 5(dm) | 7(R) | 0.50 | 200¥ |
+| Raecor Sting | 3 | 4P(fl) | +4 | SS | 0 | PB | 4(m) | 6(R) | 0.25 | 150¥ |
+| Shiawase Arms Type K2072 | 5 | 5P | -4 | SS | 0 | Near | 4(m) | 3(R) | 0.50 | 350¥ |
+| SIG Sauer P298 | 5 | 4P | -1 | SA | 0 | Near | 7(dm) | 4(R) | 0.75 | 250¥ |
+| Stinger Pen Gun | 4 | 2P | 0 | SS | 0 | PB | 1(ml) | 6(R) | 0.25 | 100¥ |
+| Streetline Special | 4 | 1P | +2 | SA | 0 | Close | 6(dm) | –(R) | 0.50 | 200¥ |
+| Terracotta Arms Pup | 4(6) | 4P | 0 | SA | 0 | Close | 5(dm) | 4(R)/6(F) | 0.75 | 200¥ |
+| Walther Palm Pistol | 4 | 7P | -1 | SS/BF | 0 | Near | 2(b) | 4(R) | 0.25 | 450¥ |
+| Walther Secura SK | 4 | 7P | -2 | SA | 0 | Near | 4(dm) | 8(F) | 0.75 | 350¥ |
 
 **Light Pistols** - Light Pistols occupy the middle ground between hold-outs and heavy pistols, they are usually accurate and can accept top-mounted and barrel-mounted accessories.
 
@@ -1360,11 +1360,13 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Fichetti Thunder** (4mm Fichetti): A strange offering from Fichetti, the Thunder makes use of the ‘metal storm’ concept of barrels packed with multiple in-line rounds that can be electronically fired in quick succession, increasing the rate of fire but requiring a full barrel replacement (with pre-loaded ammunition) or a lengthy muzzle loading process.  The Thunder is designed to quickly swap its 4 barrels, each containing 6 caseless rounds.  Designed for larger metahumans, a puzzling choice given the small caliber and most Ork and Troll desires when it comes to firearms.  When firing the Thunder empties an entire barrel, shooting 6 shots with a single burst.  The Thunder can be reloaded by inserting individual caseless rounds into a barrel, but more commonly entire loaded barrels are swapped out for empty barrels; this uses the same mechanics as a normal magazine change with 1 Reload Action per barrel switched.  *Electronic Firing*, *Metahuman Adaptation*.
 
+ **Glock-Mini Giftzwerg** (Special): Known as the 'poison dwarf', this unique light pistol only fires special explosive rounds. Although it operates as a single shot weapon, the impact makes up for it. , *Custom Ammo*.
+
 **Hammerli 610S** (9mm Para): A target pistol that is highly accurate to extended ranges, the Hammerli 610S features custom, personalized grips and the precision machined components one would expect of Hammerli.  It cannot mount barrel accessories due to an integral gas-vent system.  *Gas Vent Rating 1*, *Personalized Grip*.
 
 **Hammerli 620S** (9mm Para):  An update of the 610S, the Hammerli 620S features the same sleek and stylish design and quality of manufacture, along with the integral gas-vent system.  It may not live up to its predecessor’s potential accuracy as a customized target pistol, but makes up for it with a cheaper cost and the addition of a smartgun system.  *Gas Vent Rating 1*, *Smartlink*.
 
-**HK Caveat** (): A large framed H\&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon.  Commonly carried by corp suits with more bark than bite.
+**HK Caveat** (9mm Para): A large framed H&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon. Commonly carried by corp suits with more bark than bite.
 
 **HK P50 Tactical** (9mm Para): An integral Smartgun system, an offline laser sight, and the ability to field strip to base parts in seconds make this sleek offering from HK quite desirable.  *Easy Breakdown*, *Laser Sight*, *Smartlink*.
 
@@ -1402,55 +1404,54 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Light Pistols | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Ares Light Fire 70 | 6(7) | 5P | -1 | SA | – | Near | 16(dm) | 3(R) | 0.50 | 750¥ |
-| Ares Light Fire 75 | 6(8) | 5P | -1 | SA | – | Near | 16(dm) | 6(F) | 0.50 | 1,250¥ |
-| Barrens Special | 2 | 3P | – | SS | – | Close | 5(cy) | 2(R) | 1.00 | 100¥ |
-| Beretta 101T | 7 | 4P | -1 | SA | – | Near | 12(dm) | 2(R) | 1.00 | 250¥ |
-| Beretta 200ST | 5 | 4P | -1 | SA/FA | (1) | Near | 26(dm) | 8(F) | 2.00 | 700¥ |
-| Beretta 201T | 6 | 4P | -1 | SA/BF | (1) | Near | 21(dm) | 7(R) | 2.00 | 750¥ |
-| Beretta 92SL | 5 | 5P | -1 | SA | – | Near | 15(dm) | 1(R) | 1.50 | 300¥ |
-| Browning Ghost | 5(8) | 5P | -1 | SA | 1 | Near | 10(dm) | 12(R) | 1.25 | 1,500¥ |
-| CA Adder Slivergun | 5 | 4P(f) | +3 | SA | – | Close | 20(dm) | 7(F) | 1.50 | 460¥ |
-| Cavalier Arms Dragoon | 6 | 2P | -2 | SA | – | Near | 28(dm) | 5(R) | 2.00 | 575¥ |
-| Ceska vz/120 | 6 | 4P | -1 | SA | – | Near | 18(dm) | 3(R) | 1.00 | 375¥ |
-| Colt America L36 | 7 | 4P | -1 | SA | – | Near | 11(dm) | –(R) | 1.00 | 320¥ |
-| Colt Asp | 5 | 5P | – | SS | – | Near | 6(cy) | 3(R) | 1.00 | 175¥ |
-| Colt Coral Snake | 4(5) | 5P | -1 | SS | – | Far | 5(cy) | 1(R) | 1.00 | 275¥ |
-| Colt Special Agent | 5 | 7P | -1 | SA | – | Near | 8(dm) | 5(R) | 1.25 | 400¥ |
-| Fichetti Executive Action | 5 | 3P | -3 | SA/BF | – | Near | 18(dm) | 10(R) | 1.25 | 500¥ |
-| Fichetti Security 500 | 5 | 3P | -3 | SA | – | Near | 10(dm) | 4(R) | 1.00 | 300¥ |
-| Fichetti Security 500A | 5 | 3P | -3 | SA | – | Near | 22(dm) | 6(R) | 1.25 | 350¥ |
-| Fichetti Security 600 | 6(7) | 3P | -3 | SA | (1) | Near | 30(dm) | 6(R) | 1.50 | 450¥ |
-| Fichetti Thunder | 5 | 3P | -3 | BF | – | Near | 6(ml)x4 | 6(R) | 2.00 | 800¥ |
-| **Glock-Mini Giftzwerg** (Special): Known as the 'poison dwarf', this unique light pistol only fires special explosive rounds. Although it operates as a single shot weapon, the impact makes up for it. | *Custom Ammo*. |
-| Glock-Mini Giftzwerg | 5 | 6P | -2 | SS | – | Near | 6(m) | 10(R) | 1.50 | 800¥ |
-| Hammerli 610S | 7(8) | 5P | -1 | SA | 1 | Far | 6(dm) | 10(R) | 2.50 | 1,300¥ |
-| Hammerli 620S | 5(7) | 5P | -1 | SA | 1 | Far | 6(dm) | 8(R) | 2.50 | 650¥ |
-| **HK Caveat** (9mm Para): A large framed H&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon. Commonly carried by corp suits with more bark than bite. |
-| HK Caveat | 5 | 5P | -1 | SA | – | Near | 9(dm) | 4(R) | 1.25 | 500¥ |
-| HK P50 Tactical | 6(8) | 5P | -1 | SA | – | Near | 15(dm) | 4(R) | 2.00 | 600¥ |
-| Krime Stopper | 5 | 10P | -3 | SS | – | Close | 2(b) | 10(R) | 2.75 | 375¥ |
-| **Mauser Ladyline** (5mm Shiawase): An elegant pistol with a feminine design but suprising stopping power. |
-| Mauser Ladyline | 5 | 4P | -2 | SA | – | Near | 8(dm) | 4(R) | 0.75 | 350¥ |
-| Nitama Sporter | 6(7) | 5P | – | SA | 1 | Far | 5(m) | 4(R) | 0.75 | 475¥ |
-| Onotari Arms Security Special | 5(7) | 7P | -1 | SA | – | Near | 11(dm) | 7(R) | 2.25 | 625¥ |
-| Ruger Redhawk | 5 | 6P | -2 | SS/SA | – | Near | 8(cy) | 6(R) | 1.75 | 500¥ |
-| Seco LD-120 | 5(6) | 5P | -1 | SA | – | Near | 12(dm) | 4(R) | 1.00 | 325¥ |
-| Shiawase Hearth Protector | 5 | 3P | – | SA | – | Near | 7(dm) | 3(R) | 0.50 | 350¥ |
-| Shiawase Arms Light Tactical | 5(6) | 5P | -4 | SA | – | Near | 16(dm) | 7(R) | 1.25 | 1,050¥ |
-| Shiawase Arms Puzzler | 4 | 5P | -4 | SA | – | Near | 12(dm) | 14(F) | 1.00 | 1,000¥ |
+| Ares Light Fire 70 | 6(7) | 5P | -1 | SA | 0 | Near | 16(dm) | 3(R) | 0.50 | 350¥ |
+| Ares Light Fire 75 | 6(8) | 5P | -1 | SA | 0 | Near | 16(dm) | 6(F) | 0.50 | 350¥ |
+| Barrens Special | 2 | 3P | 0 | SS | 0 | Close | 5(cy) | 2(R) | 1.00 | 150¥ |
+| Beretta 101T | 7 | 4P | -1 | SA | 0 | Near | 12(dm) | 2(R) | 1.00 | 300¥ |
+| Beretta 200ST | 5 | 4P | -1 | SA/FA | (1) | Near | 26(dm) | 8(F) | 2.00 | 900¥ |
+| Beretta 201T | 6 | 4P | -1 | SA/BF | (1) | Near | 21(dm) | 7(R) | 2.00 | 600¥ |
+| Beretta 92SL | 5 | 5P | -1 | SA | 0 | Near | 15(dm) | 1(R) | 1.50 | 300¥ |
+| Browning Ghost | 5(8) | 5P | -1 | SA | 1 | Near | 10(dm) | 12(R) | 1.25 | 400¥ |
+| CA Adder Slivergun | 5 | 4P(f) | +3 | SA | 0 | Close | 20(dm) | 7(F) | 1.50 | 300¥ |
+| Cavalier Arms Dragoon | 6 | 2P | -2 | SA | 0 | Near | 28(dm) | 5(R) | 2.00 | 400¥ |
+| Ceska vz/120 | 6 | 4P | -1 | SA | 0 | Near | 18(dm) | 3(R) | 1.00 | 300¥ |
+| Colt America L36 | 7 | 4P | -1 | SA | 0 | Near | 11(dm) | –(R) | 1.00 | 300¥ |
+| Colt Asp | 5 | 5P | 0 | SS | 0 | Near | 6(cy) | 3(R) | 1.00 | 200¥ |
+| Colt Coral Snake | 4(5) | 5P | -1 | SS | 0 | Far | 5(cy) | 1(R) | 1.00 | 200¥ |
+| Colt Special Agent | 5 | 7P | -1 | SA | 0 | Near | 8(dm) | 5(R) | 1.25 | 350¥ |
+| Fichetti Executive Action | 5 | 3P | -3 | SA/BF | 0 | Near | 18(dm) | 10(R) | 1.25 | 550¥ |
+| Fichetti Security 500 | 5 | 3P | -3 | SA | 0 | Near | 10(dm) | 4(R) | 1.00 | 350¥ |
+| Fichetti Security 500A | 5 | 3P | -3 | SA | 0 | Near | 22(dm) | 6(R) | 1.25 | 450¥ |
+| Fichetti Security 600 | 6(7) | 3P | -3 | SA | (1) | Near | 30(dm) | 6(R) | 1.50 | 550¥ |
+| Fichetti Thunder | 5 | 3P | -3 | BF | 0 | Near | 6(ml)x4 | 6(R) | 2.00 | 500¥ |
+| Glock-Mini Giftzwerg | 5 | 6P | -2 | SS | 0 | Near | 6(m) | 10(R) | 1.50 | 300¥ |
+| Hammerli 610S | 7(8) | 5P | -1 | SA | 1 | Far | 6(dm) | 10(R) | 2.50 | 400¥ |
+| Hammerli 620S | 5(7) | 5P | -1 | SA | 1 | Far | 6(dm) | 8(R) | 2.50 | 400¥ |
+| HK Caveat | 5 | 5P | -1 | SA | 0 | Near | 9(dm) | 4(R) | 1.25 | 300¥ |
+| HK P50 Tactical | 6(8) | 5P | -1 | SA | 0 | Near | 15(dm) | 4(R) | 2.00 | 300¥ |
+| Krime Stopper | 5 | 10P | -3 | SS | 0 | Close | 2(b) | 10(R) | 2.75 | 450¥ |
+| Mauser Ladyline | 5 | 4P | -2 | SA | 0 | Near | 8(dm) | 4(R) | 0.75 | 300¥ |
+| Nitama Sporter | 6(7) | 5P | 0 | SA | 1 | Far | 5(m) | 4(R) | 0.75 | 300¥ |
+| Onotari Arms Security Special | 5(7) | 7P | -1 | SA | 0 | Near | 11(dm) | 7(R) | 2.25 | 350¥ |
+| Ruger Redhawk | 5 | 6P | -2 | SS/SA | 0 | Near | 8(cy) | 6(R) | 1.75 | 350¥ |
+| Seco LD-120 | 5(6) | 5P | -1 | SA | 0 | Near | 12(dm) | 4(R) | 1.00 | 300¥ |
+| Shiawase Hearth Protector | 5 | 3P | 0 | SA | 0 | Near | 7(dm) | 3(R) | 0.50 | 200¥ |
+| Shiawase Arms Light Tactical | 5(6) | 5P | -4 | SA | 0 | Near | 16(dm) | 7(R) | 1.25 | 500¥ |
+| Shiawase Arms Puzzler | 4 | 5P | -4 | SA | 0 | Near | 12(dm) | 14(F) | 1.00 | 450¥ |
 | Taurus Mark XXXI | 4(5) | 1P | +3 | SS | 1 | Close | 5(m) | 5(R) | 1.00 | 250¥ |
-| Taurus Omni-6 (.38) | 5(6) | 5P | – | SS | – | Near | 6(cy) | 3(R) | 1.25 | 300¥ |
-| Taurus Omni-6 (.357) | 5(6) | 6P | -2 | SS | – | Near | 6(cy) | 3(R) | 1.25 | 300¥ |
-| Walther P99 | 6 | 5P | -1 | SA | – | Near | 12(dm) | 4(R) | 1.25 | 350¥ |
-| Walther PB-120 | 6 | 4P | -1 | SA | – | Near | 10/15(dm)7(R) | 0.75 | 450¥ |
-| Walther PP110 | 7 | 4P | -1 | SA | – | Near | 16(dm) | 7(R) | 1.50 | 675¥ |
-| Yamaha Sakura Fubuki | 5 | 3P | – | BF/FA | 1(2) | Close | 10(ml)x4 | 10(R) | 1.75 | 2,000¥ |
-| Yamaha Sakura Fubuki Six | 6 | 3P | – | SA/BF | 1 | Close | 8(ml)x4 | 10(R) | 1.50 | 750¥ |
+| Taurus Omni-6 (.38) | 5(6) | 5P | 0 | SS | 0 | Near | 6(cy) | 3(R) | 1.25 | 200¥ |
+| Taurus Omni-6 (.357) | 5(6) | 6P | -2 | SS | 0 | Near | 6(cy) | 3(R) | 1.25 | 300¥ |
+| Walther P99 | 6 | 5P | -1 | SA | 0 | Near | 12(dm) | 4(R) | 1.25 | 300¥ |
+| Walther PB-120 | 6 | 4P | -1 | SA | 0 | Near | 10/15(dm)7(R) | 0.75 | 300¥ |
+| Walther PP110 | 7 | 4P | -1 | SA | 0 | Near | 16(dm) | 7(R) | 1.50 | 300¥ |
+| Yamaha Sakura Fubuki | 5 | 3P | 0 | BF/FA | 1(2) | Close | 10(ml)x4 | 10(R) | 1.75 | 750¥ |
+| Yamaha Sakura Fubuki Six | 6 | 3P | 0 | SA/BF | 1 | Close | 8(ml)x4 | 10(R) | 1.50 | 450¥ |
 
 **Heavy Pistols** - Large pistols that pack lots of firepower.  Capable of taking both barrel mounted and top-mounted accessories.
 
 **Altmayr Black Moon** (.41 Mag): A high quality german-made revolver with exceptional accuracy in a large caliber.  The Black Moon features a lower than normal barrel alignment and does away with an external hammer in favor of electronic firing.  Features tactical railing both above and below a long barrel to accept a level of customization most other revolvers can’t match.  *Caseless Only*, *Double Action*, *Electronic Firing*, *Long Barrel*, *Tactical Rail*.
+
+**Altmayr White Star** (10mm Auto): The standard issue sidearm for Sternschutz Security personnel. Reliable, sturdy, and packs a sufficient punch for law enforcement operations. 
 
 **Ares Predator I** (10mm Auto): The original offering from Ares, or a suitable knockoff, that provides the reliability and stability that the entire series has staked its reputation on.  It does not mount an internal smartgun system, which would become standard on later models, but it is still a solid and dependable firearm.  *Incompatible*.
 
@@ -1506,6 +1507,8 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **FN 5-7C** (FN 5.7): A modern update of a venerable classic, firing the same high speed, low caliber rounds designed to defeat personal body armor.  Capable of burst fire in a highly stable platform.
 
+**Glock Dragon Slayer** (10mm Auto): Marketed directly against the Ares Predator, this Austrian heavy pistol features aggressive styling, an integrated smartlink, and built-in recoil compensation to tame high-velocity rounds. , *Smartlink*.
+
 **Glock-Swarovski Eagle Eye** (7mm Auto): Essentially a sniping pistol, the Eagle Eye’s range is unsurpassed.  It is a highly accurate design with an internal smartgun, an improved range finder, and an extended barrel.  *Improved Range Finder*, *Long Barrel*, *Smartlink*.
 
 **Hammerli Gemini** (.45 Auto): A boutique gunsmith’s design licensed for mass production by Hammerli.  The Gemini has a strikingly different appearance; it resembles a normal semi-automatic pistol but it has 2 barrels side by side and 2 magazines.  A single action to fire shoots twice and consumes a round from each magazine.  Double the cost of all barrel and magazine modifications and decrease Concealability Threshold by 1.  *Custom Look*.
@@ -1530,7 +1533,11 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Krupp Arms Lemat 2072** (.357 Mag/20 ga): Krupp’s throwback to a classic American Civil War revolver that uses a double barrel design with the cylinder rotating around a central chamber holding a single shotgun shell.  A built in ammo skipping system can be activated manually to switch to with the shotgun chamber with an Interact with Device action.  *Ammo Skip System*, *Single Action*.
 
+**Luger Model 58** (9mm Para): A modern resurrection of the classic Luger design, featuring the distinctive toggle-lock action with updated materials. Popular among collectors and traditionalists who want a piece of history that still holds its own in a firefight.
+
 **Makarov V.22** (.22 LR): An older model Makarov with an integral silencer barrel and chambered in a low power cartridge and tuned to function with subsonic ammo.  An active listener 10 meters distant cannot detect a gunshot.  It cannot accept any further barrel modifications or accessories.  *Caseless Only*, *Suppressor*.
+
+**Mauser Gladiator** (10mm Auto): A robust heavy pistol from Mauser designed for intense combat situations. It boasts an exceptionally durable frame and a high-capacity magazine, sacrificing some concealability for sheer firepower. , *Extended Magazine*.
 
 **Morrissey Alta** (.40 S\&W): A fashionable heavy pistol known for reliabliity and accuracy.  Comes with a top-mounted laser sight and a guarantee of satisfaction from Morrissey based on their previous 20 years of production and high sales.  This pistol is always appropriate for higher end social situations.  *Laser Sight*.
 
@@ -1566,6 +1573,10 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Shiawase Arms Heavy Tactical** (.454 Casull): Don’t believe the hype surrounding the marketing campaigns for this pistol.  Yes, it has every modern convienance one could ever want in a firearm.  Yes, it packs enough punch to scare a heavily armored troll.  However, it kicks like a cannon and is nearly uncontrollable thanks to its featherweight composite construction.  It remains to be seen whether the technological advancements can make up for a difficult to use, inaccurate weapon. Comes standard equipped with a thermal suppressor to reduce the burst of flame that comes with every over powered shot.  *Advanced Safety*, *Ceramic/Plasteel Components Rating 1*, *Safe Target System*, *Smartlink*, *Thermal Suppressor*.
 
+**Walther Nova II** (9mm Para): An elegant and streamlined heavy pistol from Walther. The Nova II is favored by corporate security and executive protection details for its sleek design, which prevents snagging on clothing when drawn quickly. , *Concealable Holster*.
+
+**Walther P059 Futura** (10mm Auto): A cutting-edge heavy pistol that incorporates lightweight composites and advanced ergonomics. It comes standard with a smartgun system and an underbarrel weight to reduce muzzle climb. , *Personalized Grip, Smartlink*.
+
 **Walther P109** (.40 S\&W): A large bore semi-auto derived from Walther’s burst capable P108 that features an early iteration of the gas vent system and a short detachable barrel extension to achieve slightly higher velocities.  With the extension attached, the pistol receives +1 to Accuracy and -1 to Concealability Thresholds.  It may not mount any other barrel accessories or modifications.  *Vintage*.
 
 **Walther Secura** (7mm Auto): The standard sidearm of German police forces and many other European security agencies.  Comes with an optional smartgun system for an extra +150¥.
@@ -1578,88 +1589,84 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Heavy Pistols | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Altmayr Black Moon | 6 | 8P | -3 | SA | 1 | Far | 6(cy) | 6(R) | 2.75 | 1,150¥ |
-| **Altmayr White Star** (10mm Auto): The standard issue sidearm for Sternschutz Security personnel. Reliable, sturdy, and packs a sufficient punch for law enforcement operations. |
-| Altmayr White Star | 5(6) | 7P | -1 | SA | 1 | Near | 14(dm) | 5(R) | 2.25 | 500¥ |
-| Ares Predator I | 5 | 8P | -2 | SA | 1 | Near | 10(dm) | 8(R) | 2.00 | 350¥ |
-| Ares Predator II | 5 | 5P | -1 | SA | – | Near | 15(dm) | 8(R) | 1.50 | 550¥ |
-| Ares Predator III | 5(7) | 8P | -2 | SA | 1 | Near | 15(dm) | 9(R) | 2.50 | 750¥ |
-| Ares Predator IV | 5(7) | 8P | -2 | SA | – | Near | 15(dm) | 4(R) | 2.50 | 650¥ |
-| Ares Predator CW | 5(7) | 8P | -2 | SA | 1 | Near | 15(dm) | 10(R) | 2.50 | 1,500¥ |
-| Ares Predator V | 5(7) | 8P | -2 | SA | – | Near | 15(dm) | 5(R) | 2.25 | 725¥ |
-| Ares Predator VI | 5(7) | 8P | -2 | SA/BF | – | Near | 15(dm) | 6(F) | 2.25 | 1,750¥ |
-| Ares Striker | 5(6) | 6P | -1 | SA | – | Near | 12(dm) | 4(R) | 2.00 | 400¥ |
-| Ares Viper Silvergun | 4 | 6P(f) | +4 | SA/BF | – | Near | 30(dm) | 8(F) | 2.00 | 850¥ |
-| Beretta 97 | 5 | 7P | -1 | SA/BF | – | Near | 15(dm) | 6(F) | 2.25 | 750¥ |
-| Browning Max-Power | 5(6) | 7P | -1 | SA | – | Near | 10(dm) | 4(R) | 2.00 | 450¥ |
-| Browning Mega-Power | 5(7) | 7P | -1 | SA | – | Near | 15(dm) | 5(R) | 2.25 | 850¥ |
-| Browning Phantom | 4(7) | 6P | -1 | SA | 1 | Near | 12(dm) | 12(R) | 1.75 | 1,800¥ |
-| Browning Ultra-Power | 5(6) | 8P | -2 | SA | – | Near | 15(dm) | 6(R) | 2.25 | 650¥ |
-| Cavalier Arms Champion | 6 | 13P | -4 | SS | – | Far | 1(b) | 8(R) | 3.75 | 650¥ |
-| Cavalier Arms Deputy | 5 | 8P | -3 | SS | – | Far | 7(cy) | 3(R) | 2.25 | 375¥ |
-| Cavalier Arms Marshall | 4(6) | 9P | -2 | SS | – | Far | 6(cy)/6(m)5(R) | 4.00 | 800¥ |
-| Cavalier Arms Sheriff | 5(8) | 9P | -3 | SS | – | Far | 5(cy) | 7(R) | 4.25 | 600¥ |
-| Cavalier Arms Thunderstruck | 5(7) | 8P | -2 | BF | 3 | Near | 12(dm) | 12(F) | 2.50 | 1,150¥ |
-| Colt Future Frontier | 5 | 10P | – | SS | – | Near | 6(cy) | 4(R) | 2.75 | 500¥ |
-| Colt Government 2066 | 6 | 8P | -1 | SA | 1 | Far | 14(dm) | 5(R) | 2.25 | 475¥ |
-| Colt Manhunter | 6(8) | 8P | -2 | SA | – | Far | 16(dm) | 5(R) | 2.50 | 700¥ |
-| Colt M1991 | 5 | 8P | -1 | SA | – | Far | 7(dm) | 3(R) | 2.00 | 300¥ |
-| CZ-64 | 6(7) | 5P | -2 | SA | 1 | Near | 14(dm) | 6(R) | 1.75 | 350¥ |
-| Eichiro Hatamoto II | 4 | 16P | -3 | SS | – | Near | 1(ml) | 10(R) | 2.50 | 800¥ |
-| Enfield Merlin | 5(7) | 12P | -2 | SS | 1 | Near | 6(cy) | 8(R) | 3.00 | 625¥ |
-| FN 5-7C | 5 | 4P | -7 | SA/BF | 1 | Far | 20(dm) | 9(F) | 2.50 | 700¥ |
-| **Glock Dragon Slayer** (10mm Auto): Marketed directly against the Ares Predator, this Austrian heavy pistol features aggressive styling, an integrated smartlink, and built-in recoil compensation to tame high-velocity rounds. | *Smartlink*. |
-| Glock Dragon Slayer | 6(8) | 8P | -2 | SA | 1 | Near | 15(dm) | 8(R) | 2.50 | 750¥ |
-| Glock-Swarovski Eagle Eye | 6(8) | 7P | -2 | SA | – | Distant | 12(dm) | 11(R) | 2.50 | 1,500¥ |
-| Hammerli Gemini | 5 | 8P | -1 | SA | – | Far | 8(dm)x2 | 10(R) | 3.50 | 1,400¥ |
-| HK Mk31 | 5(6) | 7P | -2 | SA | – | Far | 15(dm) | 8(F) | 2.50 | 900¥ |
-| HK P60 Tactical | 6(8) | 8P | -2 | SA | – | Near | 15(dm) | 4(R) | 3.00 | 750¥ |
-| HK Urban Assassin | 6(9) | 7P | -2 | SA | – | Near | 10(m) | 16(F) | 1.25 | 3,400¥ |
-| HK Urban Fighter | 6 | 7P | -2 | SA | 1(2) | Near | 10(dm) | 15(F) | 2.00 | 2,400¥ |
-| Izom HP-49B | 5 | 7P | -1 | SA | – | Near | 12(dm) | 5(R) | 2.25 | 300¥ |
-| Izom PHP-131 | 5(6) | 6P | -1 | SA | – | Near | 9(dm) | 11(R) | 1.75 | 650¥ |
-| Krime Broom | 4 | 7P | -1 | FA | – | Close | 20(m) | 15(F) | 4.50 | 750¥ |
-| Krime Heater | 3 | 10P | -3 | SA | – | Near | 8(dm) | 4(R) | 3.50 | 275¥ |
-| Krime Varmint | 3(4) | 10P | -3 | SA | (1) | Far | 8(dm) | 7(R) | 3.75 | 300¥ |
-| KA Lemat 2072 | 5 | 6P | -2 | SS | – | Near | 9(cy) | 8(R) | 3.75 | 1,080¥ |
-| Shotgun | 5 | 8P | -2 | SS | – | Close | 1(ml) | – | – | – |
-| **Luger Model 58** (9mm Para): A modern resurrection of the classic Luger design, featuring the distinctive toggle-lock action with updated materials. Popular among collectors and traditionalists who want a piece of history that still holds its own in a firefight. |
-| Luger Model 58 | 6 | 6P | -1 | SA | – | Near | 10(dm) | 6(R) | 1.75 | 950¥ |
-| Makarov V.22 | 4 | 1P | +3 | SA | – | Close | 6(dm) | 10(F) | 1.50 | 3,000¥ |
-| **Mauser Gladiator** (10mm Auto): A robust heavy pistol from Mauser designed for intense combat situations. It boasts an exceptionally durable frame and a high-capacity magazine, sacrificing some concealability for sheer firepower. | *Extended Magazine*. |
-| Mauser Gladiator | 5 | 8P | -1 | SA | 1 | Near | 18(dm) | 8(R) | 3.00 | 800¥ |
-| Morrissey Alta | 6(7) | 7P | -1 | SA | – | Near | 12(dm) | 7(R) | 1.00 | 1,200¥ |
-| Morrissey Elite | 5(6) | 7P | -1 | SA | – | Close | 5(dm) | 5(R) | 1.00 | 500¥ |
-| Nemesis Arms Praetorian | 4(5) | 8P | -2 | SA | 1 | Near | 12(dm) | 4(R) | 2.25 | 400¥ |
-| Nemesis Arms Praetorian II | 5(7) | 7P | -1 | SA | – | Near | 18(dm) | 6(R) | 2.50 | 675¥ |
-| Nitama NeMax | 5(7) | 8P | -2 | SA | – | Near | 10(dm) | 16(R) | 3.25 | 1,700¥ |
-| Onotari Arms Steadfast | 5 | 8P | -2 | SA | – | Far | 8(dm) | 3(R) | 2.75 | 350¥ |
-| Onotari Arms Troublemaker | 5(6) | 7P | -2 | SA | 2 | Far | 18(dm) | 8(R) | 2.75 | 900¥ |
-| Onotari Arms Vagabond | 5 | 6P | -2 | SA | 1 | Far | 6(cy) | 6(R) | 1.75 | 475¥ |
-| Onotari Arms Violator | 5(7) | 5P | -2 | SA | – | Near | 10(dm) | 7(R) | 2.50 | 600¥ |
-| PSK-3 Collapsible Pistol | 5 | 5P | -5 | SA | – | Close | 10(dm) | 18(F) | 1.75 | 2,000¥ |
-| Remington Roomsweeper | 4 | 7P | -1 | SS | – | Close | 8(m) | 6(R) | 2.50 | 300¥ |
-| Ruger Bloodhawk | 5 | 8P | -3 | SS | – | Far | 6(cy) | 3(R) | 3.50 | 450¥ |
-| Ruger Super Warhawk | 5 | 9P | -3 | SS | – | Far | 6(cy) | 4(R) | 2.50 | 500¥ |
+| Altmayr Black Moon | 6 | 8P | -3 | SA | 1 | Far | 6(cy) | 6(R) | 2.75 | 550¥ |
+| Altmayr White Star | 5(6) | 7P | -1 | SA | 1 | Near | 14(dm) | 5(R) | 2.25 | 450¥ |
+| Ares Predator I | 5 | 8P | -2 | SA | 1 | Near | 10(dm) | 8(R) | 2.00 | 550¥ |
+| Ares Predator II | 5 | 5P | -1 | SA | 0 | Near | 15(dm) | 8(R) | 1.50 | 300¥ |
+| Ares Predator III | 5(7) | 8P | -2 | SA | 1 | Near | 15(dm) | 9(R) | 2.50 | 550¥ |
+| Ares Predator IV | 5(7) | 8P | -2 | SA | 0 | Near | 15(dm) | 4(R) | 2.50 | 450¥ |
+| Ares Predator CW | 5(7) | 8P | -2 | SA | 1 | Near | 15(dm) | 10(R) | 2.50 | 550¥ |
+| Ares Predator V | 5(7) | 8P | -2 | SA | 0 | Near | 15(dm) | 5(R) | 2.25 | 450¥ |
+| Ares Predator VI | 5(7) | 8P | -2 | SA/BF | 0 | Near | 15(dm) | 6(F) | 2.25 | 600¥ |
+| Ares Striker | 5(6) | 6P | -1 | SA | 0 | Near | 12(dm) | 4(R) | 2.00 | 350¥ |
+| Ares Viper Silvergun | 4 | 6P(f) | +4 | SA/BF | 0 | Near | 30(dm) | 8(F) | 2.00 | 500¥ |
+| Beretta 97 | 5 | 7P | -1 | SA/BF | 0 | Near | 15(dm) | 6(F) | 2.25 | 500¥ |
+| Browning Max-Power | 5(6) | 7P | -1 | SA | 0 | Near | 10(dm) | 4(R) | 2.00 | 350¥ |
+| Browning Mega-Power | 5(7) | 7P | -1 | SA | 0 | Near | 15(dm) | 5(R) | 2.25 | 350¥ |
+| Browning Phantom | 4(7) | 6P | -1 | SA | 1 | Near | 12(dm) | 12(R) | 1.75 | 450¥ |
+| Browning Ultra-Power | 5(6) | 8P | -2 | SA | 0 | Near | 15(dm) | 6(R) | 2.25 | 450¥ |
+| Cavalier Arms Champion | 6 | 13P | -4 | SS | 0 | Far | 1(b) | 8(R) | 3.75 | 650¥ |
+| Cavalier Arms Deputy | 5 | 8P | -3 | SS | 0 | Far | 7(cy) | 3(R) | 2.25 | 400¥ |
+| Cavalier Arms Marshall | 4(6) | 9P | -2 | SS | 0 | Far | 6(cy)/6(m)5(R) | 4.00 | 400¥ |
+| Cavalier Arms Sheriff | 5(8) | 9P | -3 | SS | 0 | Far | 5(cy) | 7(R) | 4.25 | 450¥ |
+| Cavalier Arms Thunderstruck | 5(7) | 8P | -2 | BF | 3 | Near | 12(dm) | 12(F) | 2.50 | 900¥ |
+| Colt Future Frontier | 5 | 10P | 0 | SS | 0 | Near | 6(cy) | 4(R) | 2.75 | 350¥ |
+| Colt Government 2066 | 6 | 8P | -1 | SA | 1 | Far | 14(dm) | 5(R) | 2.25 | 500¥ |
+| Colt Manhunter | 6(8) | 8P | -2 | SA | 0 | Far | 16(dm) | 5(R) | 2.50 | 450¥ |
+| Colt M1991 | 5 | 8P | -1 | SA | 0 | Far | 7(dm) | 3(R) | 2.00 | 350¥ |
+| CZ-64 | 6(7) | 5P | -2 | SA | 1 | Near | 14(dm) | 6(R) | 1.75 | 450¥ |
+| Eichiro Hatamoto II | 4 | 16P | -3 | SS | 0 | Near | 1(ml) | 10(R) | 2.50 | 750¥ |
+| Enfield Merlin | 5(7) | 12P | -2 | SS | 1 | Near | 6(cy) | 8(R) | 3.00 | 600¥ |
+| FN 5-7C | 5 | 4P | -7 | SA/BF | 1 | Far | 20(dm) | 9(F) | 2.50 | 900¥ |
+| Glock Dragon Slayer | 6(8) | 8P | -2 | SA | 1 | Near | 15(dm) | 8(R) | 2.50 | 550¥ |
+| Glock-Swarovski Eagle Eye | 6(8) | 7P | -2 | SA | 0 | Distant | 12(dm) | 11(R) | 2.50 | 400¥ |
+| Hammerli Gemini | 5 | 8P | -1 | SA | 0 | Far | 8(dm)x2 | 10(R) | 3.50 | 350¥ |
+| HK Mk31 | 5(6) | 7P | -2 | SA | 0 | Far | 15(dm) | 8(F) | 2.50 | 400¥ |
+| HK P60 Tactical | 6(8) | 8P | -2 | SA | 0 | Near | 15(dm) | 4(R) | 3.00 | 450¥ |
+| HK Urban Assassin | 6(9) | 7P | -2 | SA | 0 | Near | 10(m) | 16(F) | 1.25 | 400¥ |
+| HK Urban Fighter | 6 | 7P | -2 | SA | 1(2) | Near | 10(dm) | 15(F) | 2.00 | 500¥ |
+| Izom HP-49B | 5 | 7P | -1 | SA | 0 | Near | 12(dm) | 5(R) | 2.25 | 350¥ |
+| Izom PHP-131 | 5(6) | 6P | -1 | SA | 0 | Near | 9(dm) | 11(R) | 1.75 | 300¥ |
+| Krime Broom | 4 | 7P | -1 | FA | 0 | Close | 20(m) | 15(F) | 4.50 | 850¥ |
+| Krime Heater | 3 | 10P | -3 | SA | 0 | Near | 8(dm) | 4(R) | 3.50 | 550¥ |
+| Krime Varmint | 3(4) | 10P | -3 | SA | (1) | Far | 8(dm) | 7(R) | 3.75 | 650¥ |
+| KA Lemat 2072 | 5 | 6P | -2 | SS | 0 | Near | 9(cy) | 8(R) | 3.75 | 300¥ |
+| Shotgun | 5 | 8P | -2 | SS | 0 | Close | 1(ml) | – | – | 350 |
+| Luger Model 58 | 6 | 6P | -1 | SA | 0 | Near | 10(dm) | 6(R) | 1.75 | 300¥ |
+| Makarov V.22 | 4 | 1P | +3 | SA | 0 | Close | 6(dm) | 10(F) | 1.50 | 200¥ |
+| Mauser Gladiator | 5 | 8P | -1 | SA | 1 | Near | 18(dm) | 8(R) | 3.00 | 500¥ |
+| Morrissey Alta | 6(7) | 7P | -1 | SA | 0 | Near | 12(dm) | 7(R) | 1.00 | 350¥ |
+| Morrissey Elite | 5(6) | 7P | -1 | SA | 0 | Close | 5(dm) | 5(R) | 1.00 | 300¥ |
+| Nemesis Arms Praetorian | 4(5) | 8P | -2 | SA | 1 | Near | 12(dm) | 4(R) | 2.25 | 550¥ |
+| Nemesis Arms Praetorian II | 5(7) | 7P | -1 | SA | 0 | Near | 18(dm) | 6(R) | 2.50 | 400¥ |
+| Nitama NeMax | 5(7) | 8P | -2 | SA | 0 | Near | 10(dm) | 16(R) | 3.25 | 450¥ |
+| Onotari Arms Steadfast | 5 | 8P | -2 | SA | 0 | Far | 8(dm) | 3(R) | 2.75 | 400¥ |
+| Onotari Arms Troublemaker | 5(6) | 7P | -2 | SA | 2 | Far | 18(dm) | 8(R) | 2.75 | 650¥ |
+| Onotari Arms Vagabond | 5 | 6P | -2 | SA | 1 | Far | 6(cy) | 6(R) | 1.75 | 450¥ |
+| Onotari Arms Violator | 5(7) | 5P | -2 | SA | 0 | Near | 10(dm) | 7(R) | 2.50 | 350¥ |
+| PSK-3 Collapsible Pistol | 5 | 5P | -5 | SA | 0 | Close | 10(dm) | 18(F) | 1.75 | 500¥ |
+| Remington Roomsweeper | 4 | 7P | -1 | SS | 0 | Close | 8(m) | 6(R) | 2.50 | 300¥ |
+| Ruger Bloodhawk | 5 | 8P | -3 | SS | 0 | Far | 6(cy) | 3(R) | 3.50 | 400¥ |
+| Ruger Super Warhawk | 5 | 9P | -3 | SS | 0 | Far | 6(cy) | 4(R) | 2.50 | 450¥ |
 | Ruger Thunderbolt | 5 | 8P | -1 | BF | 2 | Far | 12(dm) | 12(R) | 2.75 | 750¥ |
-| Savalette Guardian | 5(7) | 8P | -2 | SA/BF | 1 | Far | 12(dm) | 6(R) | 3.25 | 870¥ |
-| Shiawase Arms Copernicus | 5(7) | 5P | -1 | SA | – | Near | 14(dm) | 5(R) | 2.25 | 700¥ |
-| SA Heavy Tactical | 5(7) | 13P | -3 | SA | – | Far | 12(dm) | 17(R) | 1.25 | 2,800¥ |
-| **Walther Nova II** (9mm Para): An elegant and streamlined heavy pistol from Walther. The Nova II is favored by corporate security and executive protection details for its sleek design, which prevents snagging on clothing when drawn quickly. | *Concealable Holster*. |
-| Walther Nova II | 6 | 6P | -1 | SA | – | Near | 12(dm) | 5(R) | 1.50 | 600¥ |
-| **Walther P059 Futura** (10mm Auto): A cutting-edge heavy pistol that incorporates lightweight composites and advanced ergonomics. It comes standard with a smartgun system and an underbarrel weight to reduce muzzle climb. | *Personalized Grip, Smartlink*. |
-| Walther P059 Futura | 6(8) | 8P | -2 | SA | 1 | Near | 14(dm) | 10(R) | 2.25 | 1,200¥ |
-| Walther P109 | 5(6) | 7P | -1 | SA | 1 | Near | 12(dm) | 4(R) | 2.50 | 500¥ |
-| Walther Secura | 5 | 7P | -2 | SA | – | Far | 12(dm) | 5(R) | 2.00 | 300¥ |
-| Walther Secura Kompakt | 5 | 7P | -2 | SA | – | Far | 9(dm) | 7(R) | 1.50 | 400¥ |
-| Weapons World Infiltrator | 5 | 8P | -2 | SA | – | Near | 15(dm) | 14(F) | 2.00 | 1,200¥ |
-| Zastava CZ49 | 4 | 4P | -2 | SA | – | Near | 10(dm) | 4(R) | 1.50 | 250¥ |
+| Savalette Guardian | 5(7) | 8P | -2 | SA/BF | 1 | Far | 12(dm) | 6(R) | 3.25 | 700¥ |
+| Shiawase Arms Copernicus | 5(7) | 5P | -1 | SA | 0 | Near | 14(dm) | 5(R) | 2.25 | 300¥ |
+| SA Heavy Tactical | 5(7) | 13P | -3 | SA | 0 | Far | 12(dm) | 17(R) | 1.25 | 700¥ |
+| Walther Nova II | 6 | 6P | -1 | SA | 0 | Near | 12(dm) | 5(R) | 1.50 | 350¥ |
+| Walther P059 Futura | 6(8) | 8P | -2 | SA | 1 | Near | 14(dm) | 10(R) | 2.25 | 550¥ |
+| Walther P109 | 5(6) | 7P | -1 | SA | 1 | Near | 12(dm) | 4(R) | 2.50 | 450¥ |
+| Walther Secura | 5 | 7P | -2 | SA | 0 | Far | 12(dm) | 5(R) | 2.00 | 400¥ |
+| Walther Secura Kompakt | 5 | 7P | -2 | SA | 0 | Far | 9(dm) | 7(R) | 1.50 | 400¥ |
+| Weapons World Infiltrator | 5 | 8P | -2 | SA | 0 | Near | 15(dm) | 14(F) | 2.00 | 450¥ |
+| Zastava CZ49 | 4 | 4P | -2 | SA | 0 | Near | 10(dm) | 4(R) | 1.50 | 350¥ |
 
 **Machine Pistols** - Rapid firing pistol-sized weapons that are capable of burst fire or fully automatic fire while still being wieldable, if not fully controllable, in one hand.  Can take top-mounted and barrel-mounted accessories or modifications.
 
 **Ares Crusader** (9mm Para): A small, but heavy machine pistol that has large capacity and a very controllable high rate of fire thanks to an integral barrel-mounted gas vent system.  *Extended Magazine*, *Gas Vent Rating 2*.
 
 **Ares Crusader II** (9mm Para): This variant of the Crusader is an updated, but otherwise identical gun, that features an integral smartgun system and the same barrel-mounted gas vent system.  *Extended Magazine*, *Gas Vent Rating 2*, *Smartlink*.
+
+**Ares Klapp MP** (9mm Para): The 'Klapp' (folding) is a discreet machine pistol designed for deep concealment. Its folding stock and compact profile make it a favorite for wetwork and undercover operations where space is at a premium. , *Folding Stock*.
 
 **B\&T MP9** (6.5 CBJ/9mm Para): An advanced design from the turn of the century that features a foregrip, high accuracy, and controllable automatic fire.  Features a full tactical rail system that allows attachments in the top-mount position, underbarrel, or on either side.  New production copies, of sometimes questionable manufacture, pop up from time to time in Middle Eastern and Asian countries.  Original guns are usually found chambered in 6.5 CBJ, while newly made copies are usually in 9mm.  *Foregrip*, *Tactical Rail*, *Vintage*.
 
@@ -1695,6 +1702,8 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Steyr TMP** (9mm Para): The lightweight polymer frame makes the TMP very easily wielded, but accuracy suffers, especially when firing on full auto.  *Vintage*.
 
+**Steyr TMP-6** (9mm Para): A modernization of the venerable Steyr Tactical Machine Pistol. It features improved polymer construction, a built-in foregrip for better control during fully automatic fire, and an integrated laser sight. , *Laser Sight*.
+
 **Ultimax 70** (7.62 Tok): While the stock version of this pistol comes without any advanced electronics, it is still a reliable pistol with above average accuracy and controllable fully automatic fire.  *Gas Vent Rating 2*, *Laser Sight*.
 
 **Ultimax 71** (7.62 Tok): A smaller and simpler redesign of the Ultimax 70, the 71 model can function as a regular semi-automatic pistol and comes with an extended magazine as standard, but drops the gas vent system.  *Extended Magazine*, *Laser Sight*.
@@ -1705,34 +1714,32 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Machine Pistols | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Ares Crusader | 5 | 5P | -1 | SA/BF | 2 | Near | 40(dm) | 7(R) | 3.25 | 950¥ |
-| Ares Crusader II | 5(7) | 5P | -1 | SA/BF | 2 | Near | 40(dm) | 9(R) | 3.50 | 1,200¥ |
-| **Ares Klapp MP** (9mm Para): The 'Klapp' (folding) is a discreet machine pistol designed for deep concealment. Its folding stock and compact profile make it a favorite for wetwork and undercover operations where space is at a premium. | *Folding Stock*. |
-| Ares Klapp MP | 4(5) | 5P | -1 | SA/BF/FA | 1 | Near | 30(dm) | 10(F) | 2.50 | 900¥ |
-| B\&T MP9 (6.5) | 5 | 4P | -6 | SA/BF/FA | 1(2) | Near | 25(dm) | 12(F) | 2.75 | 1,300¥ |
-| B\&T MP9 (9mm) | 5 | 5P | -1 | SA/BF/FA | 1(2) | Near | 25(dm) | 6(F) | 2.75 | 500¥ |
-| Cavalier Arms Evanator | 5(6) | 2P | -2 | BF/FA | 1(2) | Near | 24(dm) | 8(R) | 2.25 | 775¥ |
-| Cavalier Arms Flash | 4(6) | 2P | -2 | SA/BF | – | Near | 24(dm) | 8(R) | 2.25 | 1,850¥ |
-| Ceska Black Scorpion | 5 | 3P | – | SA/BF | (1) | Near | 35(dm) | 8(R) | 3.00 | 850¥ |
-| Colt M24 | 4 | 7P | -5 | SA/BF/FA | – | Far | 30(dm) | 10(F) | 2.75 | 750¥ |
-| Fichetti Military 100 | 5(7) | 3P | -3 | SA/BF/FA | – | Near | 20(dm) | 8(F) | 2.75 | 900¥ |
-| Glock 51 | 5(6) | 5P | -1 | SA/BF/FA | – | Near | 28(dm) | 10(R) | 2.50 | 450¥ |
-| HK Urban Combat | 5(7) | 7P | -2 | SABF/FA | 3 | Near | 36(dm) | 16(F) | 3.00 | 2,400¥ |
-| Krime Chatter | 4 | 4P | -1 | FA | – | Near | 20(dm) | 9(F) | 3.75 | 180¥ |
-| Izom RP-71 | 5 | 1P | +2 | BF/FA | (1) | Near | 25(dm) | 7(R) | 1.75 | 600¥ |
-| MAC-11 | 3 | 4P | -1 | SA/FA | – | Near | 32(dm) | 12(R) | 1.50 | 500¥ |
-| Onotari Arms Equalizer | 4(5) | 4P | -6 | BF/FA | (1) | Far | 12(dm) | 7(R) | 2.75 | 750¥ |
-| Onotari Arms SIG-6 | 4(6) | 8P | -3 | SA/FA | 2(4) | Far | 16(dm) | 10(F) | 3.00 | 1,000¥ |
-| PPSK-4 CMP | 5(6) | 5P | -5 | SA/BF | (1) | Near | 30(dm) | 17(F) | 2.75 | 2,800¥ |
-| Remington Suppressor | 6 | 8P | -2 | SA/BF | – | Far | 15(dm) | 6(R) | 2.50 | 600¥ |
-| Ruger T-983 | 6 | 5P | -1 | SA/BF/FA | (1) | Near | 17(dm) | 8(R) | 2.75 | 1,400¥ |
-| Steyr TMP | 4 | 5P | -1 | FA | – | Near | 30(dm) | 8(R) | 2.00 | 350¥ |
-| **Steyr TMP-6** (9mm Para): A modernization of the venerable Steyr Tactical Machine Pistol. It features improved polymer construction, a built-in foregrip for better control during fully automatic fire, and an integrated laser sight. | *Laser Sight*. |
-| Steyr TMP-6 | 5(6) | 5P | -1 | SA/BF/FA | 1 | Near | 30(dm) | 8(R) | 2.50 | 850¥ |
-| Ultimax 70 | 5(6) | 5P | -2 | BF/FA | 2 | Near | 12(dm) | 7(R) | 2.75 | 800¥ |
-| Ultimax 71 | 5(6) | 5P | -2 | SA/BF/FA | – | Near | 18(dm) | 5(R) | 2.25 | 550¥ |
-| Walther P118 | 5(8) | 7P | -2 | SA/BF/FA | 3 | Far | 24(dm) | 9(R) | 2.25 | 2,300¥ |
-| Walther Secura II | 5(7) | 8P | -2 | SA/BF | – | Near | 18(dm) | 10(F) | 2.75 | 925¥ |
+| Ares Crusader | 5 | 5P | -1 | SA/BF | 2 | Near | 40(dm) | 7(R) | 3.25 | 800¥ |
+| Ares Crusader II | 5(7) | 5P | -1 | SA/BF | 2 | Near | 40(dm) | 9(R) | 3.50 | 800¥ |
+| Ares Klapp MP | 4(5) | 5P | -1 | SA/BF/FA | 1 | Near | 30(dm) | 10(F) | 2.50 | 950¥ |
+| B\&T MP9 (6.5) | 5 | 4P | -6 | SA/BF/FA | 1(2) | Near | 25(dm) | 12(F) | 2.75 | 1200¥ |
+| B\&T MP9 (9mm) | 5 | 5P | -1 | SA/BF/FA | 1(2) | Near | 25(dm) | 6(F) | 2.75 | 900¥ |
+| Cavalier Arms Evanator | 5(6) | 2P | -2 | BF/FA | 1(2) | Near | 24(dm) | 8(R) | 2.25 | 950¥ |
+| Cavalier Arms Flash | 4(6) | 2P | -2 | SA/BF | 0 | Near | 24(dm) | 8(R) | 2.25 | 550¥ |
+| Ceska Black Scorpion | 5 | 3P | 0 | SA/BF | (1) | Near | 35(dm) | 8(R) | 3.00 | 600¥ |
+| Colt M24 | 4 | 7P | -5 | SA/BF/FA | 0 | Far | 30(dm) | 10(F) | 2.75 | 1100¥ |
+| Fichetti Military 100 | 5(7) | 3P | -3 | SA/BF/FA | 0 | Near | 20(dm) | 8(F) | 2.75 | 850¥ |
+| Glock 51 | 5(6) | 5P | -1 | SA/BF/FA | 0 | Near | 28(dm) | 10(R) | 2.50 | 850¥ |
+| HK Urban Combat | 5(7) | 7P | -2 | SABF/FA | 3 | Near | 36(dm) | 16(F) | 3.00 | 1300¥ |
+| Krime Chatter | 4 | 4P | -1 | FA | 0 | Near | 20(dm) | 9(F) | 3.75 | 800¥ |
+| Izom RP-71 | 5 | 1P | +2 | BF/FA | (1) | Near | 25(dm) | 7(R) | 1.75 | 850¥ |
+| MAC-11 | 3 | 4P | -1 | SA/FA | 0 | Near | 32(dm) | 12(R) | 1.50 | 850¥ |
+| Onotari Arms Equalizer | 4(5) | 4P | -6 | BF/FA | (1) | Far | 12(dm) | 7(R) | 2.75 | 1100¥ |
+| Onotari Arms SIG-6 | 4(6) | 8P | -3 | SA/FA | 2(4) | Far | 16(dm) | 10(F) | 3.00 | 1200¥ |
+| PPSK-4 CMP | 5(6) | 5P | -5 | SA/BF | (1) | Near | 30(dm) | 17(F) | 2.75 | 850¥ |
+| Remington Suppressor | 6 | 8P | -2 | SA/BF | 0 | Far | 15(dm) | 6(R) | 2.50 | 600¥ |
+| Ruger T-983 | 6 | 5P | -1 | SA/BF/FA | (1) | Near | 17(dm) | 8(R) | 2.75 | 900¥ |
+| Steyr TMP | 4 | 5P | -1 | FA | 0 | Near | 30(dm) | 8(R) | 2.00 | 850¥ |
+| Steyr TMP-6 | 5(6) | 5P | -1 | SA/BF/FA | 1 | Near | 30(dm) | 8(R) | 2.50 | 950¥ |
+| Ultimax 70 | 5(6) | 5P | -2 | BF/FA | 2 | Near | 12(dm) | 7(R) | 2.75 | 1000¥ |
+| Ultimax 71 | 5(6) | 5P | -2 | SA/BF/FA | 0 | Near | 18(dm) | 5(R) | 2.25 | 850¥ |
+| Walther P118 | 5(8) | 7P | -2 | SA/BF/FA | 3 | Far | 24(dm) | 9(R) | 2.25 | 1200¥ |
+| Walther Secura II | 5(7) | 8P | -2 | SA/BF | 0 | Near | 18(dm) | 10(F) | 2.75 | 600¥ |
 
 **Submachine Guns** - Fully automatic capable, lighter caliber guns that are usually more compact than even the smallest assault rifles.  Capable of accepting top-mounted, barrel-mounted, and underbarrel modifications and accessories.
 
@@ -1818,51 +1825,51 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Submachine Guns | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Ares Executive Protector | 4 | 5P | -3 | SA/BF/FA | (1) | Near | 30(dm) | 14(F) | 3.50 | 1,000¥ |
-| Ares Sigma-3 | 4(6) | 5P | -3 | BF | 1(3) | Near | 5(d)x10 | 9(R) | 4.25 | 1,100¥ |
-| Beretta Model 70 | 4(5) | 8P | -2 | BF/FA | – | Near | 35(dm) | 5(R) | 3.75 | 900¥ |
-| Cavalier Arms Gladius | 3(4) | 4P | -1 | BF/FA | 1(2) | Near | 32(dm) | 6(R) | 3.25 | 400¥ |
-| CAPS Emergency Responder | 4(6) | 3P | -2 | SA/BF | 1 | Near | 32(dm) | 7(R) | 3.75 | 800¥ |
-| Dartgun | – | – | – | SA | 1 | Near | 10(dm) | – | – | – |
-| Colt Cobra | 4(5) | 6P | -7 | SA/BF/FA | 2(3) | Far | 32(dm) | 9(R) | 3.25 | 850¥ |
-| Colt M24A3 Water Carbine | 4 | 8P | -6 | SA/BF | (1) | Far | 30(dm) | 10(F) | 3.50 | 1,200¥ |
-| Esprit Tsunami | 4(6) | 8P | -2 | BF/FA | (1) | Near | 40(dm) | 8(R) | 4.00 | 750¥ |
-| FN P93 Praetor | 6 | 5P | -8 | SA/BF/FA | 1(2) | Far | 50(dm) | 11(F) | 4.50 | 2,250¥ |
-| FN P90 | 5 | 5P | -8 | SA/BF/FA | (1) | Far | 50(dm) | 10(R) | 4.25 | 1,400¥ |
-| Glock Custodes MPK | 5 | 7P | -2 | SA/BF/FA | 1 | Near | 24(dm) | 12(F) | 2.25 | 1,000¥ |
-| Glock Custodes MPV | 5 | 7P | -2 | SA/BF/FA | 1(2) | Near | 24(dm) | 15(F) | 2.75 | 1,500¥ |
-| HK 223K | 5 | 8P | -6 | SA/BF/FA | (1) | Far | 30(dm) | 9(R) | 3.50 | 950¥ |
-| HK 227 | 5(6) | 7P | -2 | SA/BF/FA | 2(3) | Far | 28(dm) | 8(R) | 3.75 | 1,500¥ |
-| HK 227-S | 5(6) | 7P | -2 | SA/BF/FA | (1) | Near | 28(dm) | 8(R) | 3.25 | 1,600¥ |
-| HK 229-X | 5(7) | 8P | -2 | SA/BF/FA | (1) | Near | 28(dm) | 16(F) | 3.50 | 1,500¥ |
-| HK 247-Arctic | 5(7) | 7P | -2 | SA/BF/FA | – | Near | 42(dm) | 13(R) | 3.50 | 2,000¥ |
-| HK MP5 TX | 4(5) | 5P | -9 | SA/BF/FA | 1(2) | Near | 20(dm) | 6(R) | 3.00 | 850¥ |
-| HK MP5SD | 4 | 5P | -1 | SA/BF/FA | 1(2) | Near | 30(dm) | 7(R) | 3.00 | 900¥ |
-| HK MP7 | 4 | 4P | -8 | SA/BF/FA | (2) | Near | 20(dm) | 15(F) | 2.00 | 1,450¥ |
-| HK MP75 | 6(8) | 5P | -9 | SA/BF/FA | 2(4) | Near | 50(dm) | 12(F) | 4.25 | 2,500¥ |
-| HK Urban Enforcer | 6(9) | 7P | -2 | SA/BF/FA | 3(4) | Near | 36(dm) | 20(F) | 4.25 | 6,200¥ |
-| Grenade Launcher | 3(6) | 14P | -2 | SS | – | Near | 4(m) | – | – | – |
-| Ingram Smartgun | 4(6) | 5P | -3 | BF/FA | 2(3) | Near | 32(dm) | 8(R) | 3.00 | 800¥ |
-| Ingram SuperMach 100 | 4 | 5P | -3 | SA/BF/FA | 3(4) | Near | 40(dm) | 9(F) | 3.00 | 975¥ |
-| Ingram Warrior 10 | 4 | 5P | -1 | SA/BF | – | Near | 30(dm) | 4(R) | 3.00 | 650¥ |
-| Izom Aphrodite | 4 | 8P | -2 | BF/FA | 1(2) | Near | 40(dm) | 8(F) | 4.00 | 1,600¥ |
-| Grenade Launcher | 4 | – | – | SS | – | Far | 1(ml) | – | – | – |
-| Izom Artemis | 5(6) | 7P | -1 | BF/FA | 1 | Near | 40(dm) | 8(F) | 3.25 | 1,800¥ |
-| Grenade Launcher | 3(4) | – | – | SS | – | Near | 1(ml) | – | – | – |
-| Krime Spree | 4 | 8P | -2 | FA | 1 | Near | 30(dm) | 8(R) | 5.00 | 750¥ |
-| Krime Tradition | 5 | 8P | -1 | SA/FA | 3(4) | Far | 75(d) | 15(F) | 8.25 | 1,000¥ |
-| MAC-10 | 4 | 8P | -1 | SA/FA | (1) | Near | 30(dm) | 4(R) | 2.75 | 550¥ |
-| NA Spratley Stalwart | 5 | 8P | -2 | BF/FA | 2(3) | Near | 40(dm) | 16(F) | 5.25 | 2,300¥ |
-| Onotari Arms S-3K | 4(6) | 7P | -2 | BF/FA | (1) | Far | 30(dm) | 8(R) | 3.25 | 900¥ |
-| Sandler TMP | 4(5) | 5P | -1 | BF/FA | (1) | Near | 20(dm) | 4(R) | 3.25 | 500¥ |
-| SCK Model 100 | 5(7) | 8P | -2 | SA/BF | (1) | Near | 30(dm) | 6(R) | 4.50 | 1,000¥ |
-| SA Tactical Model 71 | 4(6) | 6P | -7 | BF/FA | 1(3) | Far | 25(dm) | 16(F) | 2.50 | 4,750¥ |
-| SA Tactical Model 72 | 5(7) | 5P | -4 | SA/BF/FA | 1(3) | Far | 28(dm) | 12(F) | 2.75 | 1,300¥ |
-| Terracotta Arms Mordred | 4(6) | 8P | -2 | BF/FA | (2) | Near | 20(dm) | 7(R) | 4.25 | 950¥ |
-| Type 84B | 4 | 5P | -2 | SA/BF/FA | (1) | Near | 20(dm) | 4(R) | 2.75 | 600¥ |
+| Ares Executive Protector | 4 | 5P | -3 | SA/BF/FA | (1) | Near | 30(dm) | 14(F) | 3.50 | 1000¥ |
+| Ares Sigma-3 | 4(6) | 5P | -3 | BF | 1(3) | Near | 5(d)x10 | 9(R) | 4.25 | 600¥ |
+| Beretta Model 70 | 4(5) | 8P | -2 | BF/FA | 0 | Near | 35(dm) | 5(R) | 3.75 | 1000¥ |
+| Cavalier Arms Gladius | 3(4) | 4P | -1 | BF/FA | 1(2) | Near | 32(dm) | 6(R) | 3.25 | 950¥ |
+| CAPS Emergency Responder | 4(6) | 3P | -2 | SA/BF | 1 | Near | 32(dm) | 7(R) | 3.75 | 700¥ |
+| Dartgun | 5 | 4P | 0 | SA | 1 | Near | 10(dm) | – | – | 350 |
+| Colt Cobra | 4(5) | 6P | -7 | SA/BF/FA | 2(3) | Far | 32(dm) | 9(R) | 3.25 | 1400¥ |
+| Colt M24A3 Water Carbine | 4 | 8P | -6 | SA/BF | (1) | Far | 30(dm) | 10(F) | 3.50 | 1000¥ |
+| Esprit Tsunami | 4(6) | 8P | -2 | BF/FA | (1) | Near | 40(dm) | 8(R) | 4.00 | 1100¥ |
+| FN P93 Praetor | 6 | 5P | -8 | SA/BF/FA | 1(2) | Far | 50(dm) | 11(F) | 4.50 | 1400¥ |
+| FN P90 | 5 | 5P | -8 | SA/BF/FA | (1) | Far | 50(dm) | 10(R) | 4.25 | 1400¥ |
+| Glock Custodes MPK | 5 | 7P | -2 | SA/BF/FA | 1 | Near | 24(dm) | 12(F) | 2.25 | 1000¥ |
+| Glock Custodes MPV | 5 | 7P | -2 | SA/BF/FA | 1(2) | Near | 24(dm) | 15(F) | 2.75 | 1000¥ |
+| HK 223K | 5 | 8P | -6 | SA/BF/FA | (1) | Far | 30(dm) | 9(R) | 3.50 | 1300¥ |
+| HK 227 | 5(6) | 7P | -2 | SA/BF/FA | 2(3) | Far | 28(dm) | 8(R) | 3.75 | 1100¥ |
+| HK 227-S | 5(6) | 7P | -2 | SA/BF/FA | (1) | Near | 28(dm) | 8(R) | 3.25 | 1000¥ |
+| HK 229-X | 5(7) | 8P | -2 | SA/BF/FA | (1) | Near | 28(dm) | 16(F) | 3.50 | 1100¥ |
+| HK 247-Arctic | 5(7) | 7P | -2 | SA/BF/FA | 0 | Near | 42(dm) | 13(R) | 3.50 | 1000¥ |
+| HK MP5 TX | 4(5) | 5P | -9 | SA/BF/FA | 1(2) | Near | 20(dm) | 6(R) | 3.00 | 1300¥ |
+| HK MP5SD | 4 | 5P | -1 | SA/BF/FA | 1(2) | Near | 30(dm) | 7(R) | 3.00 | 950¥ |
+| HK MP7 | 4 | 4P | -8 | SA/BF/FA | (2) | Near | 20(dm) | 15(F) | 2.00 | 1300¥ |
+| HK MP75 | 6(8) | 5P | -9 | SA/BF/FA | 2(4) | Near | 50(dm) | 12(F) | 4.25 | 1600¥ |
+| HK Urban Enforcer | 6(9) | 7P | -2 | SA/BF/FA | 3(4) | Near | 36(dm) | 20(F) | 4.25 | 1300¥ |
+| Grenade Launcher | 3(6) | 14P | -2 | SS | 0 | Near | 4(m) | – | – | 600 |
+| Ingram Smartgun | 4(6) | 5P | -3 | BF/FA | 2(3) | Near | 32(dm) | 8(R) | 3.00 | 1200¥ |
+| Ingram SuperMach 100 | 4 | 5P | -3 | SA/BF/FA | 3(4) | Near | 40(dm) | 9(F) | 3.00 | 1300¥ |
+| Ingram Warrior 10 | 4 | 5P | -1 | SA/BF | 0 | Near | 30(dm) | 4(R) | 3.00 | 550¥ |
+| Izom Aphrodite | 4 | 8P | -2 | BF/FA | 1(2) | Near | 40(dm) | 8(F) | 4.00 | 1100¥ |
+| Grenade Launcher | 4 | 4P | 0 | SS | 0 | Far | 1(ml) | – | – | 150 |
+| Izom Artemis | 5(6) | 7P | -1 | BF/FA | 1 | Near | 40(dm) | 8(F) | 3.25 | 1000¥ |
+| Grenade Launcher | 3(4) | 4P | 0 | SS | 0 | Near | 1(ml) | – | – | 150 |
+| Krime Spree | 4 | 8P | -2 | FA | 1 | Near | 30(dm) | 8(R) | 5.00 | 1100¥ |
+| Krime Tradition | 5 | 8P | -1 | SA/FA | 3(4) | Far | 75(d) | 15(F) | 8.25 | 1500¥ |
+| MAC-10 | 4 | 8P | -1 | SA/FA | (1) | Near | 30(dm) | 4(R) | 2.75 | 1000¥ |
+| NA Spratley Stalwart | 5 | 8P | -2 | BF/FA | 2(3) | Near | 40(dm) | 16(F) | 5.25 | 1200¥ |
+| Onotari Arms S-3K | 4(6) | 7P | -2 | BF/FA | (1) | Far | 30(dm) | 8(R) | 3.25 | 1000¥ |
+| Sandler TMP | 4(5) | 5P | -1 | BF/FA | (1) | Near | 20(dm) | 4(R) | 3.25 | 900¥ |
+| SCK Model 100 | 5(7) | 8P | -2 | SA/BF | (1) | Near | 30(dm) | 6(R) | 4.50 | 800¥ |
+| SA Tactical Model 71 | 4(6) | 6P | -7 | BF/FA | 1(3) | Far | 25(dm) | 16(F) | 2.50 | 1200¥ |
+| SA Tactical Model 72 | 5(7) | 5P | -4 | SA/BF/FA | 1(3) | Far | 28(dm) | 12(F) | 2.75 | 1100¥ |
+| Terracotta Arms Mordred | 4(6) | 8P | -2 | BF/FA | (2) | Near | 20(dm) | 7(R) | 4.25 | 1100¥ |
+| Type 84B | 4 | 5P | -2 | SA/BF/FA | (1) | Near | 20(dm) | 4(R) | 2.75 | 950¥ |
 | Uzi III | 4(5) | 5P | -1 | BF | (1) | Near | 24(dm) | 3(R) | 2.00 | 600¥ |
-| Uzi IV | 5(6) | 5P | -1 | BF/FA | (1) | Near | 24(dm) | 6(R) | 1.75 | 1,000¥ |
-| Uzi V | 4(6) | 8P | -1 | SA/BF/FA | (1) | Near | 24(dm) | 8(R) | 3.00 | 1,400¥ |
+| Uzi IV | 5(6) | 5P | -1 | BF/FA | (1) | Near | 24(dm) | 6(R) | 1.75 | 900¥ |
+| Uzi V | 4(6) | 8P | -1 | SA/BF/FA | (1) | Near | 24(dm) | 8(R) | 3.00 | 1000¥ |
 
 **Shotguns** - Firearms that usually fire shot shells or flechettes with the use of a choke, but can also fire solid slugs and may even be rifled with the intent of primarily using slugs.  Can take top-mounted, barrel-mounted, and underbarrel accessories and modifications.  Damage codes are for solid shot or slug ammunition unless otherwise noted.
 
@@ -1920,6 +1927,8 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Onotari Arms Pressure KS-X** (12ga): A compact, submachine gun sized shotgun capable of burst fire that includes an extending stock and a built in laser sight.  A revolutionary suppressor is available from Onotari Arms for +900¥ at Availability 14(R).  Lacks ammo capacity but has a top rail to accommodate most accessories.  Without the suppressor equipped or the stock extended, the Pressure KS-X receives a +2 to Concealability Thresholds.  *Folding Stock*, *Laser Sight*, *Tactical Rail (Top)*.
 
+**PJSS LNB/13** (12 Gauge): A pump-action shotgun from Praezisions Jagd- und Sportwaffen Suhl. Known for its rock-solid reliability in the harshest conditions, the LNB/13 is a staple for security forces and hunters alike. 
+
 **PJSS Model 55** (12ga): A finely crafted, break action, double barrel hunting and sporting shotgun favored by European hunters and trap shooters.  The over-under double barrels can be fired simultaneously via Burst Fire.  *Shock Pad*, *Stock*.
 
 **PJSS Model 75** (various): An improvement over their Model 55, the Suhl Hunting & Sporting Weapons Production Association’s Model 75 is a side-by-side shotgun of exceptional workmanship and quality.  Old world craftsmanship meets modern materials, from the customized and reinforced old growth stocks with nearly invisible shock absorbers to the cheek piece inserts of anti-bacterial artificial leather made from mushroom caps.  The high level of accuracy and robust design are combined with modern barrels capable of changing calibers with the use of insert sleeves.  Additional barrels in a caliber of your choice are available for +400¥ each.  Each barrel has its own set trigger, allowing one or both to be fired with a simple pull; this is not treated as a burst but as two separate shots.  An optional thermal targeting system can be attached to the forearm of the stock for +900¥ which can display a wide view display of the sight picture’s thermal signatures directly to your AR feed if wirelessly enabled; treat as a thermal imaging scope.  While the caliber of the barrels may be customized on this weapon, both must shoot the same cartridge.  *Shock Pad*, *Stock*.
@@ -1938,6 +1947,8 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Shiawase Arms Tsunami** (.410 bore): A bare bones shotgun with a high magazine capacity that has garnered a Recommended status from law enforcement agencies worldwide.  Intended as a home defense gun, much like Shiawase’s Rain but much simpler in construction and operation, the Tsunami features an enlarged trigger guard to accept a trigger lock when not in use and the only electronic component on the entire weapon is a series of RFID tags, ostensibly for a theft tracking system.  *Stock*.
 
+**TEC 603 Bull** (5.56mm): A bullpup assault rifle known for its compact size without sacrificing barrel length. The TEC 603 Bull offers excellent maneuverability in urban combat scenarios and comes with an integrated smartlink. , *Smartlink*.
+
 **Winchester Model 201** (20ga): A quality over-under, double barrel shotgun favored by the wealthy.  Lighter shells than a common combat shotgun, but well designed for target shooting and fowling.  Exceptionally fine craftsmanship and dozens of patterns available in the custom wood engraving and checkering.  Both barrels may be fired as a burst, the same as the PJSS Model 55.  *Custom Look*, *Stock*.
 
 **Winchester Model 2054** (12ga Mag): A combat shotgun originally marketed the Ute Nation military and police.  Features a retractable stock, foregrip, top-mounted laser sight, and easily upgraded to accept a smartlink and other electronics.  *Folding Stock*, *Foregrip (Underbarrel)*, *Laser Sight (Top)*, *Stock*.
@@ -1946,61 +1957,59 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Shotguns | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Altmayr SP | 4 | 10P | -3 | SS | – | Close | 7(m) | 8(R) | 2.75 | 500¥ |
-| Altmayr SPX | 4 | 10P | -3 | SS | – | Close | 4(m) | 4(R) | 3.00 | 350¥ |
-| Altmayr SPX2 | 4 | 10P | -3 | SS/SA | – | Close | 8(m) | 4(R) | 3.25 | 475¥ |
-| Auto-Assault 16 | 4 | 18P | -4 | SA/BF/FA | 2(3) | Near | 10(dm) | 18(F) | 4.25 | 1,800¥ |
-| Ranger Arms AA-16 | 4(6) | 18P | -4 | SA/BF/FA | 2(4) | Near | 12(dm) | 24(F) | 4.25 | 2,500¥ |
-| Beretta Northstar | 4(6) | 16P | -3 | SA | (1) | Near | 2x6(m) | 12(R) | 4.75 | 2,000¥ |
-| Blunderbuss | 3 | 9P(f) | -1 | SS | (1) | PB | 1(ml) | 3(R) | 2.50 | 150¥ |
-| Boyd & Richards Desperado | 5 | 14P | -3 | SS | (1) | Near | 5(m) | 10(R) | 3.50 | 1,700¥ |
-| Cavalier Arms Falchion | 5(8) | 16P | -3 | SS | (1) | Far | 8(m) | 9(R) | 4.00 | 1,200¥ |
-| Cavalier Arms Lancer | 4 | 18P | -4 | SA | (3) | Far | 8(m) | 9(R) | 4.75 | 1,250¥ |
-| Grenade Launcher | 4 | – | – | SS | – | Far | 1(m) | – | – | – |
-| Colt MS-27 | 5 | 14P | -3 | SA/BF/FA | (1) | Near | 12(dm) | 7(R) | 3.50 | 950¥ |
-| Defiance T-250 | 4 | 20P | -4 | SS/SA | (1) | Near | 5(m) | 4(R) | 3.00 | 500¥ |
-| Defiance T-250 Short | 4 | 16P | -3 | SS/SA | (1) | Near | 3(m) | 5(R) | 2.50 | 750¥ |
-| Defiance T-280 | 4 | 12P | -3 | SS/SA | 1(2) | Near | 8(m) | 6(R) | 2.25 | 600¥ |
-| Defiance T-285 | 3 | 9P | -2 | SS | – | Close | 3(b) | 6(R) | 2.00 | 275¥ |
-| Enfield AS-7 | 4(5) | 20P | -4 | SA/BF | (1) | Near | 10(dm) | 12(F) | 4.00 | 1,100¥ |
-| Franchi SPAS-22 | 4(6) | 14P | -3 | SS/SA/BF | (1) | Near | 10(m) | 12(F) | 4.00 | 1,000¥ |
-| Franchi SPAS-24 | 4(6) | 14P | -3 | SS/SA/BF | (2) | Near | 10(m) | 12(F) | 4.25 | 1,050¥ |
-| Franchi SPAS-25 | 4(6) | 14P | -3 | SS/SA/BF(2) | Near | 10(m) | 14(F) | 4.25 | 1,200¥ |
-| Izom CSM-419 | 4(6) | 14P | -3 | SA | – | Near | 10(dm) | 4(R) | 3.75 | 1,700¥ |
-| Izom SS-374 | 4 | 12P | -3 | SS/SA | – | Close | 4(m) | 3(R) | 3.00 | 850¥ |
-| Krime Boss | 3 | 18P | -4 | SA | 1(2) | Near | 15(d) | 11(R) | 5.00 | 1,050¥ |
-| Krime Ditch Rifle | 4 | 14P | -5 | SS | (1) | Far | 1(b) | 6(R) | 4.75 | 700¥ |
-| Shotgun | 4 | 12P | -3 | SS | (1) | Near | 1(b) | – | – | – |
-| Krime Stopper II | 4 | 10P | -3 | SS | – | Close | 2(b) | 5(R) | 4.00 | 475¥ |
-| Krime Stopper II Shopkeeper | 4 | 10P | -3 | SS | (1) | Close | 2(b) | 5(R) | 4.25 | 500¥ |
+| Altmayr SP | 4 | 10P | -3 | SS | 0 | Close | 7(m) | 8(R) | 2.75 | 500¥ |
+| Altmayr SPX | 4 | 10P | -3 | SS | 0 | Close | 4(m) | 4(R) | 3.00 | 450¥ |
+| Altmayr SPX2 | 4 | 10P | -3 | SS/SA | 0 | Close | 8(m) | 4(R) | 3.25 | 550¥ |
+| Auto-Assault 16 | 4 | 18P | -4 | SA/BF/FA | 2(3) | Near | 10(dm) | 18(F) | 4.25 | 1700¥ |
+| Ranger Arms AA-16 | 4(6) | 18P | -4 | SA/BF/FA | 2(4) | Near | 12(dm) | 24(F) | 4.25 | 1700¥ |
+| Beretta Northstar | 4(6) | 16P | -3 | SA | (1) | Near | 2x6(m) | 12(R) | 4.75 | 900¥ |
+| Blunderbuss | 3 | 9P(f) | -1 | SS | (1) | PB | 1(ml) | 3(R) | 2.50 | 400¥ |
+| Boyd & Richards Desperado | 5 | 14P | -3 | SS | (1) | Near | 5(m) | 10(R) | 3.50 | 750¥ |
+| Cavalier Arms Falchion | 5(8) | 16P | -3 | SS | (1) | Far | 8(m) | 9(R) | 4.00 | 900¥ |
+| Cavalier Arms Lancer | 4 | 18P | -4 | SA | (3) | Far | 8(m) | 9(R) | 4.75 | 1300¥ |
+| Grenade Launcher | 4 | 4P | 0 | SS | 0 | Far | 1(m) | – | – | 150 |
+| Colt MS-27 | 5 | 14P | -3 | SA/BF/FA | (1) | Near | 12(dm) | 7(R) | 3.50 | 1300¥ |
+| Defiance T-250 | 4 | 20P | -4 | SS/SA | (1) | Near | 5(m) | 4(R) | 3.00 | 1300¥ |
+| Defiance T-250 Short | 4 | 16P | -3 | SS/SA | (1) | Near | 3(m) | 5(R) | 2.50 | 950¥ |
+| Defiance T-280 | 4 | 12P | -3 | SS/SA | 1(2) | Near | 8(m) | 6(R) | 2.25 | 750¥ |
+| Defiance T-285 | 3 | 9P | -2 | SS | 0 | Close | 3(b) | 6(R) | 2.00 | 400¥ |
+| Enfield AS-7 | 4(5) | 20P | -4 | SA/BF | (1) | Near | 10(dm) | 12(F) | 4.00 | 1400¥ |
+| Franchi SPAS-22 | 4(6) | 14P | -3 | SS/SA/BF | (1) | Near | 10(m) | 12(F) | 4.00 | 1000¥ |
+| Franchi SPAS-24 | 4(6) | 14P | -3 | SS/SA/BF | (2) | Near | 10(m) | 12(F) | 4.25 | 1100¥ |
+| Franchi SPAS-25 | 4(6) | 14P | -3 | SS/SA/BF(2) | 0 | 10(m) | 14(F) | 4.25 | 900¥ |
+| Izom CSM-419 | 4(6) | 14P | -3 | SA | 0 | Near | 10(dm) | 4(R) | 3.75 | 750¥ |
+| Izom SS-374 | 4 | 12P | -3 | SS/SA | 0 | Close | 4(m) | 3(R) | 3.00 | 600¥ |
+| Krime Boss | 3 | 18P | -4 | SA | 1(2) | Near | 15(d) | 11(R) | 5.00 | 1200¥ |
+| Krime Ditch Rifle | 4 | 14P | -5 | SS | (1) | Far | 1(b) | 6(R) | 4.75 | 850¥ |
+| Shotgun | 4 | 12P | -3 | SS | (1) | Near | 1(b) | – | – | 650 |
+| Krime Stopper II | 4 | 10P | -3 | SS | 0 | Close | 2(b) | 5(R) | 4.00 | 450¥ |
+| Krime Stopper II Shopkeeper | 4 | 10P | -3 | SS | (1) | Close | 2(b) | 5(R) | 4.25 | 550¥ |
 | Krime Stopper II Homeguard | 4 | 13P | -3 | SS | (1) | Near | 2(b) | 7(R) | 4.75 | 700¥ |
-| Krime Whammy (Ranged) | 1 | 25P | -3 | SS | (1) | PB | 4(ml) | 12(F) | 13.00 | 2,000¥ |
-| Mossberg AM-CMDT | 5(7) | 18P | -4 | SA/BF/FA | (2) | Far | 10(dm) | 12(F) | 5.50 | 1,200¥ |
-| Onotari Arms Pressure KS-X | 4(5) | 10P | -3 | SA/BF | (1) | Close | 6(dm) | 12(R) | 2.75 | 1,200¥ |
-| **PJSS LNB/13** (12 Gauge): A pump-action shotgun from Praezisions Jagd- und Sportwaffen Suhl. Known for its rock-solid reliability in the harshest conditions, the LNB/13 is a staple for security forces and hunters alike. |
-| PJSS LNB/13 | 5 | 12P | -2 | SA | – | Near | 8(m) | 6(R) | 3.50 | 750¥ |
-| PJSS Model 55 | 6 | 16P | -3 | SS | (2) | Far | 2(b) | 9(R) | 2.50 | 1,000¥ |
-| PJSS Model 75 | 6 | – | – | SS | (2) | – | 2(b) | 8(R) | 2.75 | 1,200¥ |
-| PJSS Model 75-III | 6 | – | – | SS | (2) | – | 2(b)+1(b) | 12(R) | 3.25 | 1,700¥ |
-| Shotgun Barrel (20ga) | – | 12P | -3 | – | – | Near | – | – | – | – |
-| Shotgun Barrel (16ga) | – | 14P | -3 | – | – | Near | – | – | – | – |
-| Shotgun Barrel (12ga) | – | 16P | -4 | – | – | Near | – | – | – | – |
-| Rifle Barrel (6.5x55) | +1 | 16P | -8 | – | +1 | Distant | – | – | – | – |
-| Rifle Barrel (.308) | – | 17P | -9 | – | – | Distant | – | – | – | – |
-| Rifle Barrel (8x57) | – | 20P | -10 | – | – | Distant | – | – | – | – |
-| Rifle Barrel (.30-06) | – | 18P | -9 | – | – | Distant | – | – | – | – |
-| Rifle Barrel (9.3x74R) | – | 24P | -6 | – | – | Distant | – | – | – | – |
-| Remington 900 | 4 | 16P | -3 | SS | (1) | Near | 8(m) | 2(R) | 4.00 | 350¥ |
-| Sawed Off Remington 900 | 3 | 12P | -3 | SS | (1) | Close | 4(m) | 4(R) | 3.00 | 450¥ |
-| Remington 990 | 4 | 16P | -3 | SA | (1) | Near | 8(m) | 6(R) | 4.00 | 550¥ |
-| Shiawase Arms Rain | 4 | 10P | -2 | SA | 1(2) | Near | 5(ml) | 4(R) | 2.75 | 450¥ |
-| Shiawase Arms Riot Guard | 4 | 16P | -3 | SA/BF | (3) | Near | 15(dm) | 10(R) | 3.00 | 2,300¥ |
-| Shiawase Arms Tsunami | 4 | 10P | -3 | SS | (1) | Near | 7(m) | 4(R) | 2.75 | 500¥ |
-| **TEC 603 Bull** (5.56mm): A bullpup assault rifle known for its compact size without sacrificing barrel length. The TEC 603 Bull offers excellent maneuverability in urban combat scenarios and comes with an integrated smartlink. | *Smartlink*. |
-| TEC 603 Bull | 5(7) | 9P | -2 | SA/BF/FA | 1 | Far | 35(dm) | 10(R) | 3.75 | 1,800¥ |
-| Winchester Model 201 | 8 | 12P | -3 | SS | (1) | Far | 2(b) | 8(R) | 2.25 | 1,300¥ |
-| Winchester Model 2054 | 4(5) | 20P | -4 | SA | (3) | Near | 7(m) | 6(R) | 3.75 | 1,150¥ |
-| Winchester Model 2066 | 4 | 15P | -3 | SS | (1) | Near | 5(m) | 4(R) | 3.25 | 1,050¥ |
+| Krime Whammy (Ranged) | 1 | 25P | -3 | SS | (1) | PB | 4(ml) | 12(F) | 13.00 | 1600¥ |
+| Mossberg AM-CMDT | 5(7) | 18P | -4 | SA/BF/FA | (2) | Far | 10(dm) | 12(F) | 5.50 | 1700¥ |
+| Onotari Arms Pressure KS-X | 4(5) | 10P | -3 | SA/BF | (1) | Close | 6(dm) | 12(R) | 2.75 | 800¥ |
+| PJSS LNB/13 | 5 | 12P | -2 | SA | 0 | Near | 8(m) | 6(R) | 3.50 | 600¥ |
+| PJSS Model 55 | 6 | 16P | -3 | SS | (2) | Far | 2(b) | 9(R) | 2.50 | 950¥ |
+| PJSS Model 75 | 6 | 4P | 0 | SS | (2) | – | 2(b) | 8(R) | 2.75 | 350¥ |
+| PJSS Model 75-III | 6 | 4P | 0 | SS | (2) | – | 2(b)+1(b) | 12(R) | 3.25 | 350¥ |
+| Shotgun Barrel (20ga) | 5 | 12P | -3 | SA | 0 | Near | 10(c) | – | – | 650 |
+| Shotgun Barrel (16ga) | 5 | 14P | -3 | SA | 0 | Near | 10(c) | – | – | 750 |
+| Shotgun Barrel (12ga) | 5 | 16P | -4 | SA | 0 | Near | 10(c) | – | – | 900 |
+| Rifle Barrel (6.5x55) | +1 | 16P | -8 | SA | +1 | Distant | 10(c) | – | – | 1200 |
+| Rifle Barrel (.308) | 5 | 17P | -9 | SA | 0 | Distant | 10(c) | – | – | 1200 |
+| Rifle Barrel (8x57) | 5 | 20P | -10 | SA | 0 | Distant | 10(c) | – | – | 1500 |
+| Rifle Barrel (.30-06) | 5 | 18P | -9 | SA | 0 | Distant | 10(c) | – | – | 1300 |
+| Rifle Barrel (9.3x74R) | 5 | 24P | -6 | SA | 0 | Distant | 10(c) | – | – | 1700 |
+| Remington 900 | 4 | 16P | -3 | SS | (1) | Near | 8(m) | 2(R) | 4.00 | 900¥ |
+| Sawed Off Remington 900 | 3 | 12P | -3 | SS | (1) | Close | 4(m) | 4(R) | 3.00 | 650¥ |
+| Remington 990 | 4 | 16P | -3 | SA | (1) | Near | 8(m) | 6(R) | 4.00 | 950¥ |
+| Shiawase Arms Rain | 4 | 10P | -2 | SA | 1(2) | Near | 5(ml) | 4(R) | 2.75 | 600¥ |
+| Shiawase Arms Riot Guard | 4 | 16P | -3 | SA/BF | (3) | Near | 15(dm) | 10(R) | 3.00 | 1300¥ |
+| Shiawase Arms Tsunami | 4 | 10P | -3 | SS | (1) | Near | 7(m) | 4(R) | 2.75 | 600¥ |
+| TEC 603 Bull | 5(7) | 9P | -2 | SA/BF/FA | 1 | Far | 35(dm) | 10(R) | 3.75 | 1100¥ |
+| Winchester Model 201 | 8 | 12P | -3 | SS | (1) | Far | 2(b) | 8(R) | 2.25 | 650¥ |
+| Winchester Model 2054 | 4(5) | 20P | -4 | SA | (3) | Near | 7(m) | 6(R) | 3.75 | 1500¥ |
+| Winchester Model 2066 | 4 | 15P | -3 | SS | (1) | Near | 5(m) | 4(R) | 3.25 | 800¥ |
 
 **Sporting Rifles & Sniper Rifles** - Sporting rifles are typically high caliber full length rifles designed for hunting big game.  Sniper rifles are essentially the same, but their primary use is to hunt “the most dangerous game”.  Both are similar enough to warrant their listing in the same section, as often there are minor differences, if any, between them other than their intended use.  Can accept top-mounted, barrel, and underbarrel accessories and modifications.
 
@@ -2084,64 +2093,64 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Sporting & Sniper Rifles | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Ares Canadian Sporter | 5 | 2P | -1 | SA | (2) | Far | 24(dm) | 3(R) | 900¥ |
-| Ares Canadian Sporter (.308) | 5 | 17P | -9 | SA | (2) | Distant | 8(dm) | 3(R) | 1,100¥ |
-| Ares Desert Strike | 7 | 23P | -12 | SA | (2) | Distant | 14(dm) | 10(F) | 17,500¥ |
-| Barrett Model 121 | 7(9) | 32P | -20 | SA | (3) | Distant | 10(dm) | 18(F) | 10.00 | 15,200¥ |
-| Barrett Model 122 | 7(9) | 32P | -20 | SA | 1(5) | Distant | 14(dm) | 20(F) | 11.00 | 38,500¥ |
-| Blaser R11 Conqueror | 7(9) | 17P | -9 | SA | 1(3) | Distant | 5(dm) | 9(R) | 2.75 | 8,500¥ |
-| CA Crockett EBR | 6 | 15P | -8 | SA/BF | (2) | Distant | 20(dm) | 12(F) | 10,300¥ |
+| Ares Canadian Sporter | 5 | 2P | -1 | SA | (2) | Far | 24(dm) | 3(R) | 550¥ |
+| Ares Canadian Sporter (.308) | 5 | 17P | -9 | SA | (2) | Distant | 8(dm) | 3(R) | 1400¥ |
+| Ares Desert Strike | 7 | 23P | -12 | SA | (2) | Distant | 14(dm) | 10(F) | 2100¥ |
+| Barrett Model 121 | 7(9) | 32P | -20 | SA | (3) | Distant | 10(dm) | 18(F) | 10.00 | 3500¥ |
+| Barrett Model 122 | 7(9) | 32P | -20 | SA | 1(5) | Distant | 14(dm) | 20(F) | 11.00 | 3400¥ |
+| Blaser R11 Conqueror | 7(9) | 17P | -9 | SA | 1(3) | Distant | 5(dm) | 9(R) | 2.75 | 1300¥ |
+| CA Crockett EBR | 6 | 15P | -8 | SA/BF | (2) | Distant | 20(dm) | 12(F) | 1400¥ |
 | HK DMR 11D |
-| HK PSG Enforcer | 7 | 17P | -9 | SA | (1) | Distant | 12(dm)x2 | 12(F) | 11,000¥ |
+| HK PSG Enforcer | 7 | 17P | -9 | SA | (1) | Distant | 12(dm)x2 | 12(F) | 1300¥ |
 | HK Urban Striker |
-| Mannlicher Dirmingen SX BD | 6 | – | – | SS/SA | (1) | – | \* | 6(R) | 4.25 | 2,500¥ |
-| Shotgun Barrel (12ga) | – | 16P | -4 | – | – | Near | 1(b) | – | – | – |
-| Rifle Barrel (9.3x74R) | – | 24P | -6 | – | – | Distant | 1(b) | – | – | – |
-| Rifle Barrel (.22 LR) | – | 2P | -1 | – | – | Far | 10(dm) | – | – | – |
-| Mannlicher Marpingen Pro D | – | – | – | SS/SA | (2) | – | 2(b)+6(m) | 5(R) | 4.00 | 2,800¥ |
-| Shotgun Barrel (12ga) | 5 | 16P | -4 | – | – | Near | – | – | – | – |
-| Shotgun Barrel (8ga) | 5 | 24P | -4 | – | – | Far | – | – | – | – |
-| Rifle Barrel (.308) | 6 | 17P | -9 | – | – | Distant | – | – | – | – |
-| Rifle Barrel (8x57) | 6 | 20P | -10 | – | – | Distant | – | – | – | – |
-| Rifle Barrel (9.3x74R) | 6 | 24P | -6 | – | – | Distant | – | – | – | – |
-| Mannlicher Wildhüter | 7 | 20P | -10 | SS | (2) | Distant | 6(dm) | 7(R) | 1,200¥ |
-| Marlin 3041 BL | 5 | 10P | -4 | SS | (1) | Far | 6(m) | 5(R) | 2.75 | 1,100¥ |
-| Marlin 3468SS | 4 | 24P | -4 | SS | (1) | Far | 4(m) | 6(R) | 3.00 | 1,000¥ |
-| Marlin 79S | 4 | 3P | -1 | SA | (1) | Near | 10(dm) | 3(R) | 2.00 | 300¥ |
-| Marlin M-58 (.22 LR) | 6(7) | 2P | -1 | SA | (1) | Far | 15(m) | 3(R) | 800¥ |
-| Marlin M-58 (.30-30) | 6(7) | 14P | -5 | SA | (1) | Far | 8(m) | 4(R) | 1,000¥ |
-| Marlin M-58 (.308) | 6(7) | 16P | -8 | SA | (1) | Distant | 7(m) | 4(R) | 1,400¥ |
-| Marlin X71 | 5 | 18P | -9 | SS | (1) | Distant | 5(m) | 6(R) | 2.75 | 1,500¥ |
+| Mannlicher Dirmingen SX BD | 6 | 4P | 0 | SS/SA | (1) | – | \* | 6(R) | 4.25 | 300¥ |
+| Shotgun Barrel (12ga) | 5 | 16P | -4 | SA | 0 | Near | 1(b) | – | – | 850 |
+| Rifle Barrel (9.3x74R) | 5 | 24P | -6 | SA | 0 | Distant | 1(b) | – | – | 1600 |
+| Rifle Barrel (.22 LR) | 5 | 2P | -1 | SA | 0 | Far | 10(dm) | – | – | 250 |
+| Mannlicher Marpingen Pro D | 5 | 4P | 0 | SS/SA | (2) | – | 2(b)+6(m) | 5(R) | 4.00 | 400¥ |
+| Shotgun Barrel (12ga) | 5 | 16P | -4 | SA | 0 | Near | 10(c) | – | – | 900 |
+| Shotgun Barrel (8ga) | 5 | 24P | -4 | SA | 0 | Far | 10(c) | – | – | 1600 |
+| Rifle Barrel (.308) | 6 | 17P | -9 | SA | 0 | Distant | 10(c) | – | – | 1200 |
+| Rifle Barrel (8x57) | 6 | 20P | -10 | SA | 0 | Distant | 10(c) | – | – | 1500 |
+| Rifle Barrel (9.3x74R) | 6 | 24P | -6 | SA | 0 | Distant | 10(c) | – | – | 1700 |
+| Mannlicher Wildhüter | 7 | 20P | -10 | SS | (2) | Distant | 6(dm) | 7(R) | 1600¥ |
+| Marlin 3041 BL | 5 | 10P | -4 | SS | (1) | Far | 6(m) | 5(R) | 2.75 | 650¥ |
+| Marlin 3468SS | 4 | 24P | -4 | SS | (1) | Far | 4(m) | 6(R) | 3.00 | 1600¥ |
+| Marlin 79S | 4 | 3P | -1 | SA | (1) | Near | 10(dm) | 3(R) | 2.00 | 350¥ |
+| Marlin M-58 (.22 LR) | 6(7) | 2P | -1 | SA | (1) | Far | 15(m) | 3(R) | 400¥ |
+| Marlin M-58 (.30-30) | 6(7) | 14P | -5 | SA | (1) | Far | 8(m) | 4(R) | 950¥ |
+| Marlin M-58 (.308) | 6(7) | 16P | -8 | SA | (1) | Distant | 7(m) | 4(R) | 1200¥ |
+| Marlin X71 | 5 | 18P | -9 | SS | (1) | Distant | 5(m) | 6(R) | 2.75 | 1300¥ |
 | Mauser SEK 41 |
-| Onotari Arms Rhino Hunter | 6 | 35P | -20 | SS | (1) | Distant | 7(m) | 8(R) | 5,500¥ |
-| Onotari Arms Sierra Libra | 7 | 22P | -5 | SS | 1(3) | Distant | 7(m) | 6(R) | 1,000¥ |
-| Pioneer 60 | 6 | 22P | -11 | SS | (1) | Distant | 5(m) | 2(R) | 4.00 | 500¥ |
+| Onotari Arms Rhino Hunter | 6 | 35P | -20 | SS | (1) | Distant | 7(m) | 8(R) | 3700¥ |
+| Onotari Arms Sierra Libra | 7 | 22P | -5 | SS | 1(3) | Distant | 7(m) | 6(R) | 1500¥ |
+| Pioneer 60 | 6 | 22P | -11 | SS | (1) | Distant | 5(m) | 2(R) | 4.00 | 1700¥ |
 | PJSS Elephant Gun | 6 | SS | 2(ml) | 12(R) | 6,000¥ |
-| Ranger Arms SM-3 | 8 | 17P | -9 | SA | 2(4) | Distant | 15(dm) | 12(F) | 4.00 | 4,000¥ |
-| Ranger Arms SM-4 | 8 | 17P | -9 | SA | (2) | Distant | 15(dm) | 14(F) | 3.75 | 6,200¥ |
-| Ranger Arms SM-5 | 8 | 30P | -15 | SA | (2) | Distant | 10(dm) | 16(F) | 4.75 | 13,200¥ |
-| Ranger Arms SM-6 | 8(10) | 17P | -9 | SA | (2) | Distant | 15(dm) | 20(F) | 4.50 | 28,000¥ |
-| Remington 750 | 7 | 9P | -7 | SS | (2) | Far | 5(m) | 4(R) | 4.00 | 1,800¥ |
-| Remington 950 | 7 | 18P | -9 | SS | (1) | Distant | 5(m) | 4(R) | 4.00 | 2,100¥ |
+| Ranger Arms SM-3 | 8 | 17P | -9 | SA | 2(4) | Distant | 15(dm) | 12(F) | 4.00 | 1500¥ |
+| Ranger Arms SM-4 | 8 | 17P | -9 | SA | (2) | Distant | 15(dm) | 14(F) | 3.75 | 1500¥ |
+| Ranger Arms SM-5 | 8 | 30P | -15 | SA | (2) | Distant | 10(dm) | 16(F) | 4.75 | 3000¥ |
+| Ranger Arms SM-6 | 8(10) | 17P | -9 | SA | (2) | Distant | 15(dm) | 20(F) | 4.50 | 1500¥ |
+| Remington 750 | 7 | 9P | -7 | SS | (2) | Far | 5(m) | 4(R) | 4.00 | 850¥ |
+| Remington 950 | 7 | 18P | -9 | SS | (1) | Distant | 5(m) | 4(R) | 4.00 | 1300¥ |
 | Ruger 100 | 6 | SA | 5(m) | 4(R) | 900¥ |
-| Ruger 101 | 6 | 15P | -7 | SA | (2) | Distant | 8(m) | 4(R) | 3.75 | 1,300¥ |
-| Shiawase Arms Carp Hunter | 6 | 6P | -2 | SA | (2) | Near | 8(m) | 4(R) | 2.00 | 970¥ |
-| SA Police Response | 7 | 13P | -7 | SA | (1) | Distant | 20(dm) | 12(F) | 2.50 | 6,100¥ |
-| SA Tactical Model 69 | 8 | 28P | -16 | SA | 1(4) | Distant | 10(dm) | 18(F) | 4.75 | 23,500¥ |
-| Springfield 2003 | 9 | 18P | -9 | SS | (1) | Distant | 5(m) | 9(R) | 3.50 | 3,600¥ |
-| Springfield M1A | 6 | 16P | -8 | SA | (1) | Distant | 20(dm) | 6(R) | 5.25 | 1,700¥ |
-| Springfield M1 Garand | 5 | 18P | -9 | SA | (1) | Distant | 8(c) | 4(R) | 5.00 | 1,100¥ |
-| Springfield Model 1855 | 2 | 15P | – | SS | (1) | Far | 1(cb) | 5(R) | 4.25 | 850¥ |
-| Steyr Minotaur AMR | 7(9) | 40P | -24 | SS | 1(4) | Distant | 14(dm) | 18(F) | 32,000¥ |
-| Terracotta Arms AM-47 | 7(9) | 22P | -18 | SA | 2(5) | Distant | 18(d) | 14(F) | 16.00 | 35,000¥ |
-| Terracotta Arms Caravan | 6 | 9P | -7 | SA | (2) | Far | 10(dm) | 7(R) | 950¥ |
-| Walther MA-2100 | 6(8) | 19P | -10 | SA | (2) | Distant | 10(dm) | 10(F) | 4.50 | 6,500¥ |
-| Winchester Model 2024 | 6 | 15P | -6 | SS | (1) | Far | 7(m) | 4(R) | 3.00 | 1,800¥ |
-| Winchester 2067 (.357 Mag) | 5 | 7P | -3 | SS | (1) | Far | 15(m) | 5(R) | 4.50 | 650¥ |
-| Winchester 2067 (.44 Mag) | 5 | 10P | -4 | SS | (1) | Far | 14(m) | 5(R) | 4.50 | 750¥ |
-| Winchester 2067 (.45 LC) | 5 | 12P | -2 | SS | (1) | Far | 14(m) | 5(R) | 4.50 | 850¥ |
-| Winchester 2067 (.30-30) | 5 | 14P | -5 | SS | (1) | Far | 8(m) | 5(R) | 4.50 | 950¥ |
-| Winchester 2067 (.45-70) | 5 | 20P | -3 | SS | (1) | Far | 7(m) | 5(R) | 4.50 | 1,050¥ |
+| Ruger 101 | 6 | 15P | -7 | SA | (2) | Distant | 8(m) | 4(R) | 3.75 | 1200¥ |
+| Shiawase Arms Carp Hunter | 6 | 6P | -2 | SA | (2) | Near | 8(m) | 4(R) | 2.00 | 550¥ |
+| SA Police Response | 7 | 13P | -7 | SA | (1) | Distant | 20(dm) | 12(F) | 2.50 | 1000¥ |
+| SA Tactical Model 69 | 8 | 28P | -16 | SA | 1(4) | Distant | 10(dm) | 18(F) | 4.75 | 2700¥ |
+| Springfield 2003 | 9 | 18P | -9 | SS | (1) | Distant | 5(m) | 9(R) | 3.50 | 1300¥ |
+| Springfield M1A | 6 | 16P | -8 | SA | (1) | Distant | 20(dm) | 6(R) | 5.25 | 1300¥ |
+| Springfield M1 Garand | 5 | 18P | -9 | SA | (1) | Distant | 8(c) | 4(R) | 5.00 | 1400¥ |
+| Springfield Model 1855 | 2 | 15P | 0 | SS | (1) | Far | 1(cb) | 5(R) | 4.25 | 650¥ |
+| Steyr Minotaur AMR | 7(9) | 40P | -24 | SS | 1(4) | Distant | 14(dm) | 18(F) | 4700¥ |
+| Terracotta Arms AM-47 | 7(9) | 22P | -18 | SA | 2(5) | Distant | 18(d) | 14(F) | 16.00 | 2300¥ |
+| Terracotta Arms Caravan | 6 | 9P | -7 | SA | (2) | Far | 10(dm) | 7(R) | 900¥ |
+| Walther MA-2100 | 6(8) | 19P | -10 | SA | (2) | Distant | 10(dm) | 10(F) | 4.50 | 1600¥ |
+| Winchester Model 2024 | 6 | 15P | -6 | SS | (1) | Far | 7(m) | 4(R) | 3.00 | 1000¥ |
+| Winchester 2067 (.357 Mag) | 5 | 7P | -3 | SS | (1) | Far | 15(m) | 5(R) | 4.50 | 500¥ |
+| Winchester 2067 (.44 Mag) | 5 | 10P | -4 | SS | (1) | Far | 14(m) | 5(R) | 4.50 | 650¥ |
+| Winchester 2067 (.45 LC) | 5 | 12P | -2 | SS | (1) | Far | 14(m) | 5(R) | 4.50 | 650¥ |
+| Winchester 2067 (.30-30) | 5 | 14P | -5 | SS | (1) | Far | 8(m) | 5(R) | 4.50 | 900¥ |
+| Winchester 2067 (.45-70) | 5 | 20P | -3 | SS | (1) | Far | 7(m) | 5(R) | 4.50 | 1200¥ |
 
 **Assault Rifles** - Assault rifles are the standard infantry weapon of the modern battlefield, offering a balance of range, accuracy, and fully automatic fire capability. They may accept top-mounted, barrel-mounted, and underbarrel accessories.
 
@@ -2257,95 +2266,95 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Assault Rifles | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| AK-74 | 4 | 8P | -8 | SA/BF/FA | (1) | Far | 30(dm) | 5(R) | 3.25 | 650¥ |
-| AK-97 Carbine | 5 | 10P | -6 | SA/BF/FA | (1) | Far | 38(dm) | 4(R) | 4.00 | 800¥ |
-| AK-97 | 5 | 11P | -7 | SA/BF/FA | (1) | Far | 38(dm) | 4(R) | 4.50 | 950¥ |
-| AK-98 | 5 | 11P | -7 | SA/BF/FA | (1) | Far | 38(dm) | 8(F) | 6.00 | 1,250¥ |
-| Grenade Launcher | 4 | – | – | SS | – | Near | 6(m) | – | – | – |
-| AK-112 | 5 | 9P | -7 | SA/BF | (3) | Far | 30(dm) | 6(F) | 800¥ |
+| AK-74 | 4 | 8P | -8 | SA/BF/FA | (1) | Far | 30(dm) | 5(R) | 3.25 | 1400¥ |
+| AK-97 Carbine | 5 | 10P | -6 | SA/BF/FA | (1) | Far | 38(dm) | 4(R) | 4.00 | 1400¥ |
+| AK-97 | 5 | 11P | -7 | SA/BF/FA | (1) | Far | 38(dm) | 4(R) | 4.50 | 1500¥ |
+| AK-98 | 5 | 11P | -7 | SA/BF/FA | (1) | Far | 38(dm) | 8(F) | 6.00 | 1500¥ |
+| Grenade Launcher | 4 | 8P | -1 | SS | 0 | Near | 6(m) | – | – | 300 |
+| AK-112 | 5 | 9P | -7 | SA/BF | (3) | Far | 30(dm) | 6(F) | 1300¥ |
 | AK-127 | SA/BF/FA | 2(4) | Far | 50(d)x2 | 12(F) | 3,250¥ |
-| AN-74 | 5(6) | 8P | -8 | SA/BF/FA | 1(2) | Far | 35(dm) | 5(F) | 3.75 | 6,000¥ |
-| AN-94 | 6 | 8P | -8 | SA/BF/FA | 1(2) | Far | 30(dm) | 6(R) | 4.25 | 850¥ |
-| Ares Alpha | 5(7) | 15P | -10 | SA/BF/FA | 2(3) | Distant | 42(dm) | 11(F) | 5.25 | 3,400¥ |
-| Grenade Launcher | 4(6) | – | – | SS | – | Far | 6(dm) | – | – | – |
-| Ares Arctic Rifle | 5(7) | 15P | -10 | SA/BF/FA | 3(4) | Distant | 42(dm) | 12(F) | 5.50 | 4,800¥ |
-| Grenade Launcher | 4(6) | – | – | SS | – | Far | 6(dm) | – | – | – |
-| Ares HVAR | 5(7) | 15P | -10 | SA/BF/FA | 3(5) | Distant | 50(d) | 11(F) | 5.00 | 5,000¥ |
-| Ares Stalwart | 5 | 9P | -7 | SA/BF/FA | (1) | Far | 36(dm) | 6(R) | 950¥ |
-| AR Platform Military | 4\* | 9P | -7 | SA/BF\* | (1) | Far | 30(dm) | 4(F) | 700¥ |
-| AR Platform Civilian | 4\* | 9P | -7 | SA\* | (1) | Far | 30(dm) | 4(R) | 400¥ |
-| Cavalier Frontier | 5 | 9P | -7 | SA/BF/FA | (1) | Far | 30(dm) | 6(R) | 1,750¥ |
-| Colt Inception | 7(8) | 15P | -7 | SA/BF | 1(4) | Distant | 35(dm) | 11(R) | 5.00 | 2,250¥ |
+| AN-74 | 5(6) | 8P | -8 | SA/BF/FA | 1(2) | Far | 35(dm) | 5(F) | 3.75 | 1400¥ |
+| AN-94 | 6 | 8P | -8 | SA/BF/FA | 1(2) | Far | 30(dm) | 6(R) | 4.25 | 1400¥ |
+| Ares Alpha | 5(7) | 15P | -10 | SA/BF/FA | 2(3) | Distant | 42(dm) | 11(F) | 5.25 | 2000¥ |
+| Grenade Launcher | 4(6) | 8P | -1 | SS | 0 | Far | 6(dm) | – | – | 300 |
+| Ares Arctic Rifle | 5(7) | 15P | -10 | SA/BF/FA | 3(4) | Distant | 42(dm) | 12(F) | 5.50 | 2100¥ |
+| Grenade Launcher | 4(6) | 8P | -1 | SS | 0 | Far | 6(dm) | – | – | 300 |
+| Ares HVAR | 5(7) | 15P | -10 | SA/BF/FA | 3(5) | Distant | 50(d) | 11(F) | 5.00 | 2100¥ |
+| Ares Stalwart | 5 | 9P | -7 | SA/BF/FA | (1) | Far | 36(dm) | 6(R) | 1400¥ |
+| AR Platform Military | 4\* | 9P | -7 | SA/BF\* | (1) | Far | 30(dm) | 4(F) | 1100¥ |
+| AR Platform Civilian | 4\* | 9P | -7 | SA\* | (1) | Far | 30(dm) | 4(R) | 900¥ |
+| Cavalier Frontier | 5 | 9P | -7 | SA/BF/FA | (1) | Far | 30(dm) | 6(R) | 1400¥ |
+| Colt Inception | 7(8) | 15P | -7 | SA/BF | 1(4) | Distant | 35(dm) | 11(R) | 5.00 | 1400¥ |
 | Colt M22 |
 | Colt M22A2 | 40(dm) | 4.75 | 1,600¥ |
 | Grenade Launcher |
 | Colt M22A3 | 5 |
 | Grenade Launcher | 4 |
-| Colt M23 | 4 | 9P | -7 | SA/BF/FA | (1) | Far | 40(dm) | 4(R) | 550¥ |
-| Colt M23A2 | 5(7) | 8P | -6 | SA/BF/FA | (1) | Far | 40(dm) | 10(R) | 3,150¥ |
-| Colt M24A3 Water Carbine | 4 | 8P | -6 | SA/BF/FA | (1) | Far | 30(dm) | 12(R) | 3.50 | 3,000¥ |
-| FAMAS | 4 | 9P | -7 | SA/BF/FA | (1) | Far | 30(dm) | 6(R) | 3.75 | 800¥ |
-| FN HAR | 5(6) | 9P | -7 | SA/BF/FA | 2(3) | Far | 35(dm) | 8(R) | 4.50 | 2,100¥ |
-| FN CWAR | 5(7) | 9P | -7 | SA/BF/FA | 3(4) | Far | 35(dm) | 8(R) | 4.75 | 3,500¥ |
-| HK 416 | 5 | 8P | -6 | SA/BF/FA | 1(2) | Far | 30(dm) | 5(R) | 4.25 | 850¥ |
-| HK G3 | 5 | 17P | -9 | SA/BF | 1(2) | Distant | 20(dm) | 7(R) | 5.50 | 900¥ |
+| Colt M23 | 4 | 9P | -7 | SA/BF/FA | (1) | Far | 40(dm) | 4(R) | 1400¥ |
+| Colt M23A2 | 5(7) | 8P | -6 | SA/BF/FA | (1) | Far | 40(dm) | 10(R) | 1300¥ |
+| Colt M24A3 Water Carbine | 4 | 8P | -6 | SA/BF/FA | (1) | Far | 30(dm) | 12(R) | 3.50 | 1300¥ |
+| FAMAS | 4 | 9P | -7 | SA/BF/FA | (1) | Far | 30(dm) | 6(R) | 3.75 | 1400¥ |
+| FN HAR | 5(6) | 9P | -7 | SA/BF/FA | 2(3) | Far | 35(dm) | 8(R) | 4.50 | 1500¥ |
+| FN CWAR | 5(7) | 9P | -7 | SA/BF/FA | 3(4) | Far | 35(dm) | 8(R) | 4.75 | 1600¥ |
+| HK 416 | 5 | 8P | -6 | SA/BF/FA | 1(2) | Far | 30(dm) | 5(R) | 4.25 | 1300¥ |
+| HK G3 | 5 | 17P | -9 | SA/BF | 1(2) | Distant | 20(dm) | 7(R) | 5.50 | 1500¥ |
 | HK G9A4z | 30(dm) | 1500¥ |
-| HK G12A3z | 5(6) | 12P | -9 | SA/BF/FA | 2(3) | Far | 32(dm) | 9(F) | 5.25 | 1,750¥ |
+| HK G12A3z | 5(6) | 12P | -9 | SA/BF/FA | 2(3) | Far | 32(dm) | 9(F) | 5.25 | 1700¥ |
 | HK G12A4 |
 | HK G13 |
-| HK G36 | 5 | 9P | -7 | SA/BF | (1) | Far | 32(dm) | 5(F) | 850¥ |
-| HK G36 Sport | 6 | 10P | -8 | SA | (1) | Far | 32(dm) | 9(R) | 1,250¥ |
+| HK G36 | 5 | 9P | -7 | SA/BF | (1) | Far | 32(dm) | 5(F) | 1100¥ |
+| HK G36 Sport | 6 | 10P | -8 | SA | (1) | Far | 32(dm) | 9(R) | 1000¥ |
 | HK G38 |
 | HK G61A2 |
-| HK XM30 (Assault Rifle) | 5(7) | 7P | -5 | SA/BF/FA | 1(3) | Far | 30(dm) | 15(F) | 4,500¥ |
-| Shotgun | 4(6) | 10P | -3 | SA | 1(3) | Close | 10(dm) | – | – | – |
-| Grenade Launcher | 4(6) | – | – | SS | – | Near | 6(dm) | – | – | – |
-| Carbine Configuration | 5(7) | 8P | -6 | SA/BF/FA | 1(3) | Far | 30(dm) | – | – | +1,000¥ |
-| Sniper Configuration | 7(9) | 9P | -7 | SA/BF/FA | 1(5) | Distant | 30(dm) | – | – | +1,000¥ |
-| LMG Configuration | 5(7) | 8P | -6 | SA/BF/FA | 2(6) | Far | 50(dm) | – | – | +1,000¥ |
-| Jianshi QBZ-14 | 5 | 10P | -10 | SA/BF | – | Far | 25(dm)x2 | 9(R) | 1,850¥ |
-| Jianshi QBZ-21 | 6 | 10P | -10 | SA/BF/FA | (2) | Far | 25(dm) | 9(F) | 4,625¥ |
-| Grenade Launcher | 4 | – | – | SS | – | Far | 1(m) | – | – | – |
-| Krime Happiness | 3 | 8P | -6 | FA | (1) | Far | 100(belt) | 6(F) | 500¥ |
+| HK XM30 (Assault Rifle) | 5(7) | 7P | -5 | SA/BF/FA | 1(3) | Far | 30(dm) | 15(F) | 1200¥ |
+| Shotgun | 4(6) | 10P | -3 | SA | 1(3) | Close | 10(dm) | – | – | 650 |
+| Grenade Launcher | 4(6) | 8P | -1 | SS | 0 | Near | 6(dm) | – | – | 300 |
+| Carbine Configuration | 5(7) | 8P | -6 | SA/BF/FA | 1(3) | Far | 30(dm) | – | – | 1300¥ |
+| Sniper Configuration | 7(9) | 9P | -7 | SA/BF/FA | 1(5) | Distant | 30(dm) | – | – | 1400¥ |
+| LMG Configuration | 5(7) | 8P | -6 | SA/BF/FA | 2(6) | Far | 50(dm) | – | – | 1500¥ |
+| Jianshi QBZ-14 | 5 | 10P | -10 | SA/BF | 0 | Far | 25(dm)x2 | 9(R) | 1100¥ |
+| Jianshi QBZ-21 | 6 | 10P | -10 | SA/BF/FA | (2) | Far | 25(dm) | 9(F) | 1600¥ |
+| Grenade Launcher | 4 | 8P | -1 | SS | 0 | Far | 1(m) | – | – | 300 |
+| Krime Happiness | 3 | 8P | -6 | FA | (1) | Far | 100(belt) | 6(F) | 1600¥ |
 | Nitama Optimum |
-| Nitama Optimum II | 5(7) | 8P | -6 | SA/BF/FA | (2) | Far | 30(dm) | 10(F) | 2,300¥ |
-| Shotgun | 4(6) | 12P | -3 | SS | (2) | Near | 5(m) | – | – | – |
-| Onotari Arms HL-13 Rifle | 5(7) | 8P | -6 | SA/BF/FA | (1) | Far | 30(dm) | 15(F) | 3,500¥ |
-| SMG | 4(6) | 7P | -2 | SA/BF/FA | (1) | Near | 50(dm) | – | – | – |
-| PDW | 3(5) | 4P | -6 | SA/BF/FA | (1) | Near | 25(dm) | – | – | – |
-| Onotari Arms JP-K49 | 6 | 20P | -8 | SA | 1(3) | Far | 25(dm) | 15(R) | 3,400¥ |
-| Onotari Arms JP-K50 | 7 | 20P | -8 | SA/BF | 1(3) | Far | 25(dm) | 13(F) | 7.75 | 12,500¥ |
-| Onotari Arms Kali | 4 | 11P | -7 | SA/BF/FA | (1) | Far | 32(dm) | 4(R) | 700¥ |
-| Onotari Arms Kriegfaust | 8 | 24P | -15 | SA/BF | 1(3) | Distant | 25(d) | 10(F) | 14.00 | 10,500¥ |
-| Onotari Arms L-493 | 5 | 20P | -8 | SA/BF | (1) | Far | 25(dm) | 5(R) | 4,800¥ |
-| Onotari Arms Punisher | 5 | 11P | -7 | SA/FA | (1) | Far | 32(dm) | 5(R) | 1,000¥ |
-| Onotari Arms Room Sweeper | 5(7) | 11P | -8 | SA/BF/FA | 1(2) | Far | 32(dm) | 10(F) | 2,100¥ |
-| Onotari Arms SBd-44 | 3 | 16P | -8 | SA/BF/FA | (1) | Far | 32(dm) | 12(R) | 5.00 | 500¥ |
-| Onotari Arms Urban Hunter | 6(7) | 35P | -18 | SA/BF | 1(2) | Far | 25(dm) | 14(F) | 6,250¥ |
-| Onotari Arms XFactor III | 5 | 9P | -7 | SA/BF/FA | (2) | Far | 30(dm)x2 | 10(F) | 2,100¥ |
-| Shotgun | 4 | 12P | -3 | SA | (2) | Near | 5(m) | – | – | – |
-| Sernopal vz/88V | 5(6) | 12P | -8 | SA/BF/FA | 2(3) | Far | 35(dm) | 8(F) | 5.50 | 1,650¥ |
-| Shiawase Arms Monsoon | 5 | 13P | -5 | SA/FA | 1(2) | Far | 20(ml)x6 | 10(F) | 6.25 | 1,900¥ |
-| SA Tactical Model 73 | 6(8) | 5P | -4 | SA/BF/FA | 3(4) | Far | 100(d) | 12(F) | 2,750¥ |
-| SA Tactical Model 75 | 6(8) | 13P | -6 | SA/BF/FA | 3(5) | Far | 60(d) | 14(F) | 4,900¥ |
-| SIG Sauer 574 | 6(7) | 17P | -9 | SA/BF | (3) | Distant | 20(dm) | 9(R) | 3,000¥ |
+| Nitama Optimum II | 5(7) | 8P | -6 | SA/BF/FA | (2) | Far | 30(dm) | 10(F) | 1400¥ |
+| Shotgun | 4(6) | 12P | -3 | SS | (2) | Near | 5(m) | – | – | 750 |
+| Onotari Arms HL-13 Rifle | 5(7) | 8P | -6 | SA/BF/FA | (1) | Far | 30(dm) | 15(F) | 1300¥ |
+| SMG | 4(6) | 7P | -2 | SA/BF/FA | (1) | Near | 50(dm) | – | – | 1100 |
+| PDW | 3(5) | 4P | -6 | SA/BF/FA | (1) | Near | 25(dm) | – | – | 1200 |
+| Onotari Arms JP-K49 | 6 | 20P | -8 | SA | 1(3) | Far | 25(dm) | 15(R) | 1600¥ |
+| Onotari Arms JP-K50 | 7 | 20P | -8 | SA/BF | 1(3) | Far | 25(dm) | 13(F) | 7.75 | 1700¥ |
+| Onotari Arms Kali | 4 | 11P | -7 | SA/BF/FA | (1) | Far | 32(dm) | 4(R) | 1500¥ |
+| Onotari Arms Kriegfaust | 8 | 24P | -15 | SA/BF | 1(3) | Distant | 25(d) | 10(F) | 14.00 | 2400¥ |
+| Onotari Arms L-493 | 5 | 20P | -8 | SA/BF | (1) | Far | 25(dm) | 5(R) | 1700¥ |
+| Onotari Arms Punisher | 5 | 11P | -7 | SA/FA | (1) | Far | 32(dm) | 5(R) | 1500¥ |
+| Onotari Arms Room Sweeper | 5(7) | 11P | -8 | SA/BF/FA | 1(2) | Far | 32(dm) | 10(F) | 1500¥ |
+| Onotari Arms SBd-44 | 3 | 16P | -8 | SA/BF/FA | (1) | Far | 32(dm) | 12(R) | 5.00 | 1800¥ |
+| Onotari Arms Urban Hunter | 6(7) | 35P | -18 | SA/BF | 1(2) | Far | 25(dm) | 14(F) | 3900¥ |
+| Onotari Arms XFactor III | 5 | 9P | -7 | SA/BF/FA | (2) | Far | 30(dm)x2 | 10(F) | 1500¥ |
+| Shotgun | 4 | 12P | -3 | SA | (2) | Near | 5(m) | – | – | 800 |
+| Sernopal vz/88V | 5(6) | 12P | -8 | SA/BF/FA | 2(3) | Far | 35(dm) | 8(F) | 5.50 | 1700¥ |
+| Shiawase Arms Monsoon | 5 | 13P | -5 | SA/FA | 1(2) | Far | 20(ml)x6 | 10(F) | 6.25 | 1400¥ |
+| SA Tactical Model 73 | 6(8) | 5P | -4 | SA/BF/FA | 3(4) | Far | 100(d) | 12(F) | 1600¥ |
+| SA Tactical Model 75 | 6(8) | 13P | -6 | SA/BF/FA | 3(5) | Far | 60(d) | 14(F) | 1800¥ |
+| SIG Sauer 574 | 6(7) | 17P | -9 | SA/BF | (3) | Distant | 20(dm) | 9(R) | 1700¥ |
 | Steinhardt StG 58/F |
-| Steyr AUG-CSL | 5(6) | 9P | -7 | SA/BF/FA | 1(3) | Far | 40(dm) | 13(F) | 4.00 | 4,000¥ |
-| Rifle Configuration | 6(7) | 10P | -8 | SA/BF/FA | 2(5) | Distant | 20(dm) | – | 4.75 | – |
-| SMG Configuration | 4(5) | 8P | -6 | SA/BF/FA | 1(3) | Near | 40(dm) | – | 3.50 | – |
-| LMG Configuration | 5(6) | 9P | -7 | SA/BF/FA | 2(5) | Far | 100(belt) | – | 5.50 | – |
+| Steyr AUG-CSL | 5(6) | 9P | -7 | SA/BF/FA | 1(3) | Far | 40(dm) | 13(F) | 4.00 | 1400¥ |
+| Rifle Configuration | 6(7) | 10P | -8 | SA/BF/FA | 2(5) | Distant | 20(dm) | – | 4.75 | 1500 |
+| SMG Configuration | 4(5) | 8P | -6 | SA/BF/FA | 1(3) | Near | 40(dm) | – | 3.50 | 1300 |
+| LMG Configuration | 5(6) | 9P | -7 | SA/BF/FA | 2(5) | Far | 100(belt) | – | 5.50 | 1800 |
 | Steyr AUG-A-CSL II |
 | Steyr AUG-CSL III |
 | Steyr UCR |
-| Ultimax 47 | 6(7) | 20P | -10 | SA/BF | (1) | Distant | 20(dm) | 6(R) | 3,350¥ |
-| Ultimax 68 | 5 | 9P | -5 | SA/BF/FA | (1) | Far | 35(dm) | 9(R) | 1,100¥ |
-| Ultimax 83 | 4(5) | 8P | -8 | FA | (1) | Near | 32(dm) | 5(R) | 650¥ |
-| Ultimax 150 | 6(8) | 20P | -16 | SA/BF | 3(7) | Distant | 24(dm) | 10(F) | 9,600¥ |
-| Ultimax Rain Forest Carbine | 6 | 16P | -6 | SA | (1) | Far | 18(dm) | 12(R) | 3.75 | 4,000¥ |
-| Yamaha Raiden | 6(8) | 10P | -15 | BF/FA | 1(2) | Distant | 60(dm) | 14(F) | 2,600¥ |
-| Yamaha Raiden II | 6(8) | 10P | -15 | BF/FA | 1(2) | Distant | 60(dm) | 16(F) | 3,200¥ |
-| Shotgun | 4(6) | 24P(f) | +2 | SS | (1) | Close | 2(ml) | – | – | – |
-| Grenade Launcher | 3(5) | – | – | SS | – | Far | 6(m) | – | – | – |
+| Ultimax 47 | 6(7) | 20P | -10 | SA/BF | (1) | Distant | 20(dm) | 6(R) | 1800¥ |
+| Ultimax 68 | 5 | 9P | -5 | SA/BF/FA | (1) | Far | 35(dm) | 9(R) | 1300¥ |
+| Ultimax 83 | 4(5) | 8P | -8 | FA | (1) | Near | 32(dm) | 5(R) | 1400¥ |
+| Ultimax 150 | 6(8) | 20P | -16 | SA/BF | 3(7) | Distant | 24(dm) | 10(F) | 2300¥ |
+| Ultimax Rain Forest Carbine | 6 | 16P | -6 | SA | (1) | Far | 18(dm) | 12(R) | 3.75 | 1200¥ |
+| Yamaha Raiden | 6(8) | 10P | -15 | BF/FA | 1(2) | Distant | 60(dm) | 14(F) | 2000¥ |
+| Yamaha Raiden II | 6(8) | 10P | -15 | BF/FA | 1(2) | Distant | 60(dm) | 16(F) | 2000¥ |
+| Shotgun | 4(6) | 24P(f) | +2 | SS | (1) | Close | 2(ml) | – | – | 1400 |
+| Grenade Launcher | 3(5) | 8P | -1 | SS | 0 | Far | 6(m) | – | – | 300 |
 
 **Light Machine Guns** - Most often assault rifle size or slightly larger and always capable of fully automatic fire, LMGs fulfill mostly the same role but usually have much higher ammunition capacities to better lay down suppressive fire.  May take top-mounted, barrel-mounted, and underbarrel accessories and modifications.  Unless otherwise noted, all LMGs may accept 100 round or 250 round belts in place of their detachable magazines.  LMGs suffer double the penalty from Uncompensated Recoil.
 
@@ -2376,18 +2385,18 @@ To use a Reaction, a character must have the required Actions available, either 
 | Light Machine Guns | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Ares HV MP-LMG |
-| Ares MP-LMG | 4(5) | 15P | -10 | BF/FA | 2(3) | Distant | 50(dm) | 12(F) | 7.50 | 4,500¥ |
-| GE Vindicator Minigun | 4(6) | 10P | -8 | FA | – | Far | 200(belt) | 24(F) | 15.00 | 18,000¥ |
+| Ares MP-LMG | 4(5) | 15P | -10 | BF/FA | 2(3) | Distant | 50(dm) | 12(F) | 7.50 | 2000¥ |
+| GE Vindicator Minigun | 4(6) | 10P | -8 | FA | 0 | Far | 200(belt) | 24(F) | 15.00 | 2200¥ |
 | HK MG4/46 | 100(d) | 7.00 | 2,500¥ |
-| HK MG-14 | 5(7) | 12P | -10 | BF/FA | 2(5) | Far | 60(dm) | 10(F) | 6.00 | 2,250¥ |
-| Ingram Valiant | 5(6) | 9P | -7 | BF/FA | 2(4) | Far | 50(dm) | 12(F) | 9.00 | 5,800¥ |
+| HK MG-14 | 5(7) | 12P | -10 | BF/FA | 2(5) | Far | 60(dm) | 10(F) | 6.00 | 1900¥ |
+| Ingram Valiant | 5(6) | 9P | -7 | BF/FA | 2(4) | Far | 50(dm) | 12(F) | 9.00 | 1600¥ |
 | Ingram White Knight | BF/FA | 12(F) | 2,000¥ |
-| Krime Triple-Dwarf Nanogun | 3(6) | 5P | -1 | FA | – | Near | 100(belt) | 14(F) | 1,000¥ |
-| Krime Triple-Ork Microgun | 3(6) | 9P | -7 | FA | – | Far | 100(belt) | 16(F) | 2,400¥ |
-| Krime Triple-Troll Minigun | 3(6) | 17P | -9 | FA | – | Distant | 100(belt) | 18(F) | 3,000¥ |
-| Krime Wave | 5 | 17P | -9 | FA | (3) | Distant | 50(d) | 12(F) | 10.50 | 2,500¥ |
-| RPK-74 | 4 | 8P | -9 | SA/BF/FA | (3) | Far | 45(dm) | 7(F) | 4.50 | 850¥ |
-| SA Nemesis LMG | 5(7) | 13P | -7 | BF/FA | 2(3) | Far | 60(dm) | 16(F) | 6.25 | 6,500¥ |
+| Krime Triple-Dwarf Nanogun | 3(6) | 5P | -1 | FA | 0 | Near | 100(belt) | 14(F) | 1200¥ |
+| Krime Triple-Ork Microgun | 3(6) | 9P | -7 | FA | 0 | Far | 100(belt) | 16(F) | 1600¥ |
+| Krime Triple-Troll Minigun | 3(6) | 17P | -9 | FA | 0 | Distant | 100(belt) | 18(F) | 2100¥ |
+| Krime Wave | 5 | 17P | -9 | FA | (3) | Distant | 50(d) | 12(F) | 10.50 | 2200¥ |
+| RPK-74 | 4 | 8P | -9 | SA/BF/FA | (3) | Far | 45(dm) | 7(F) | 4.50 | 1700¥ |
+| SA Nemesis LMG | 5(7) | 13P | -7 | BF/FA | 2(3) | Far | 60(dm) | 16(F) | 6.25 | 1800¥ |
 
 **Medium Machine Guns** - MMGs require STR rating 8 to successfully wield as a weapon, which is why they are more commonly found as vehicle mounted, drone mounted, or fixed emplacement weaponry.  They may accept top-mounted, barrel-mounted, or underbarrel accessories or modifications, and like LMGs may accept 100 round or 250 round belts in place of their detachable magazines unless otherwise noted.  MMGs suffer double the penalty from Uncompensated Recoil.
 
@@ -2401,11 +2410,11 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Medium Machine Guns | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| FN MAG-5 MMG | 4(5) | 16P | -8 | FA | 2(9) | Distant | 50(dm) | 18(F) | 9.50 | 8,500¥ |
+| FN MAG-5 MMG | 4(5) | 16P | -8 | FA | 2(9) | Distant | 50(dm) | 18(F) | 9.50 | 2000¥ |
 | Ruhrmetall R506 Balmung |
-| Stoner-Ares M202 | 5 | 18P | -10 | FA | – | Distant | 50(d) | 12(F) | 7,000¥ |
-| Ultimax MMG | 5(6) | 18P | -10 | FA | (4) | Distant | 40(dm) | 16(F) | 12.00 | 7,600¥ |
-| Whitney-Morgan MG | 3 | 18P | -10 | FA | (6) | Distant | 100(belt) | 10(F) |
+| Stoner-Ares M202 | 5 | 18P | -10 | FA | 0 | Distant | 50(d) | 12(F) | 2000¥ |
+| Ultimax MMG | 5(6) | 18P | -10 | FA | (4) | Distant | 40(dm) | 16(F) | 12.00 | 2300¥ |
+| Whitney-Morgan MG | 3 | 18P | -10 | FA | (6) | Distant | 100(belt) | 2800 |
 
 **Heavy Machine Guns** - HMGs require STR rating 10 to wield as a personal weapon.  The same as LMGs and MMGs, they can accept 100 or 250 round belts unless otherwise noted and may be upgraded with top-mounted, barrel-mounted, and underbarrel modifications and accessories.  HMGs suffer double the penalty from Uncompensated Recoil.
 
@@ -2423,12 +2432,12 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Heavy Machine Guns | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Ares Arctic Suppressor | 5 | 30P | -20 | FA | 4(6) | Distant | 50(d)x2 | 16(F) | 18,000¥ |
-| RPK HMG | 5 | 30P | -18 | FA | (6) | Distant | 50(dm) | 12(F) | 15.00 | 16,300¥ |
-| Ruhrmetall SF-20 | 5(6) | 35P | -20 | FA | 3(10) | Distant | 40(dm) | 18(F) | 14.00 | 19,600¥ |
+| Ares Arctic Suppressor | 5 | 30P | -20 | FA | 4(6) | Distant | 50(d)x2 | 16(F) | 4000¥ |
+| RPK HMG | 5 | 30P | -18 | FA | (6) | Distant | 50(dm) | 12(F) | 15.00 | 4200¥ |
+| Ruhrmetall SF-20 | 5(6) | 35P | -20 | FA | 3(10) | Distant | 40(dm) | 18(F) | 14.00 | 4600¥ |
 | Stoner-Ares M107 GP-HMG | 40(dm) | 12.50 | 5,200¥ |
-| Ultimax HMG | 4(5) | 32P | -22 | FA | 1(6) | Distant | 20(dm) | 16(F) | 32.00 | 16,000¥ |
-| Ultimax HMG-2 | 4 | 30P | -20 | FA | 3(11) | Distant | 20(dm) | 16(F) | 20.00 | 7,500¥ |
+| Ultimax HMG | 4(5) | 32P | -22 | FA | 1(6) | Distant | 20(dm) | 16(F) | 32.00 | 3900¥ |
+| Ultimax HMG-2 | 4 | 30P | -20 | FA | 3(11) | Distant | 20(dm) | 16(F) | 20.00 | 3800¥ |
 
 **Assault Cannons** - Assault Cannons are heavy anti-material and anti-vehicle weapons that can barely be counted as a hand held firearm, unless you happen to be a Troll.  They may accept top-mounted and underbarrel modifications and accessories.  Assault Cannons suffer double the penalties from Uncompensated Recoil.
 
@@ -2448,12 +2457,12 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Assault Cannons | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Ares Ogre Hammer SWS | 6 | 60P | -32 | SA | 2(4) | Distant | 6(dm) | 20(F) | 38,000¥ |
-| Ares Thunderstruck GR | 7(8) | 60P | -64 | SS | – | Distant | 10(dm) | 24(F) | 56,000¥ |
-| Ares Vigorous | 4 | 50P | -24 | SS | (1) | Distant | 12(dm) | 18(F) | 24,500¥ |
-| Charter Arms Curse | 5 | 28P | -16 | SS | 1(2) | Far | 20(dm) | 24(F) | 7,500¥ |
-| Krime Bomb | 6(7) | 25P | -15 | SS | 1(3) | Far | 4(m) | 18(F) | 4,150¥ |
-| Krime Cannon | 4 | 36P | -20 | SS | (2) | Far | 6(dm) | 20(F) | 4,400¥ |
+| Ares Ogre Hammer SWS | 6 | 60P | -32 | SA | 2(4) | Distant | 6(dm) | 20(F) | 9200¥ |
+| Ares Thunderstruck GR | 7(8) | 60P | -64 | SS | 0 | Distant | 10(dm) | 24(F) | 11000¥ |
+| Ares Vigorous | 4 | 50P | -24 | SS | (1) | Distant | 12(dm) | 18(F) | 6500¥ |
+| Charter Arms Curse | 5 | 28P | -16 | SS | 1(2) | Far | 20(dm) | 24(F) | 2700¥ |
+| Krime Bomb | 6(7) | 25P | -15 | SS | 1(3) | Far | 4(m) | 18(F) | 2200¥ |
+| Krime Cannon | 4 | 36P | -20 | SS | (2) | Far | 6(dm) | 20(F) | 3900¥ |
 | Panther Assault Cannon | 22(dm) | 18.00 | 7,200¥ |
 | Panther XXL | 5(7) | SS | – | Distant | 15(m) | 24(F) | 43,000¥ |
 | Ruhrmetall SMK 252 |
@@ -2482,16 +2491,16 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Grenade Launchers | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| AGS-35 | 4 | – | – | SA/BF/FA | (6) | Far | 30(d) | 10(F) | 16.00 | 9,000¥ |
+| AGS-35 | 4 | 4P | 0 | SA/BF/FA | (6) | Far | 30(d) | 10(F) | 16.00 | 1400¥ |
 | Ares Antioch |
-| Ares Antioch-2 | 4(6) | – | – | SS | – | Far | 8(m) | 8(F) | 3,200¥ |
-| ArmTech MGL-6 | 4 | – | – | SA | – | Near | 6(dm) | 10(F) | 1,800¥ |
-| ArmTech MGL-12 | 4 | – | – | SA | – | Near | 12(dm) | 10(F) | 5,000¥ |
-| ArmTech SSG-67 | 4(6) | – | – | SA | – | Near | 6(dm) | 10(F) | 3,500¥ |
-| ArmTech SSG-69 | 4(6) | – | – | SA/BF | – | Near | 10(dm) | 25(F) | 4,500¥ |
-| Enfield GL-67 | 4(6) | – | – | SS | (2) | Near | 20(d) | 14(F) | 4,000¥ |
-| HK 82A1 | 3 | – | – | SA | (1) | Near | 5(dm) | 6(F) | 2.50 | 1,500¥ |
-| Terracotta X-6 MGL | 4 | – | – | SS | (2) | Near | 6(cy) | 8(F) | 2,000 |
+| Ares Antioch-2 | 4(6) | 4P | 0 | SS | 0 | Far | 8(m) | 8(F) | 150¥ |
+| ArmTech MGL-6 | 4 | 4P | 0 | SA | 0 | Near | 6(dm) | 10(F) | 200¥ |
+| ArmTech MGL-12 | 4 | 4P | 0 | SA | 0 | Near | 12(dm) | 10(F) | 250¥ |
+| ArmTech SSG-67 | 4(6) | 4P | 0 | SA | 0 | Near | 6(dm) | 10(F) | 200¥ |
+| ArmTech SSG-69 | 4(6) | 4P | 0 | SA/BF | 0 | Near | 10(dm) | 25(F) | 400¥ |
+| Enfield GL-67 | 4(6) | 4P | 0 | SS | (2) | Near | 20(d) | 14(F) | 450¥ |
+| HK 82A1 | 3 | 4P | 0 | SA | (1) | Near | 5(dm) | 6(F) | 2.50 | 300¥ |
+| Terracotta X-6 MGL | 4 | 4P | 0 | SS | (2) | Near | 6(cy) | 8(F) | 350 |
 | Wirtz SW31 Demo Control | 5(m) | 3.00 | 600¥ |
 
 **Grenades** - Grenades come in many forms and size factors, both throwable and launched, from handheld pistol-sized launchers up to large military vehicle grade systems.  Standard sized grenades and smaller, such as microgrenades or minigrenades, can be thrown by hand easily, but they may not always have the common push button or pin pulling activations that regular grenades commonly utilize.  In general, assume that any wirelessly enabled grenade can be remotely triggered before or after it has been thrown or launched.
@@ -2513,7 +2522,7 @@ bipod or tripod mount system is easily adjustable to change the angle of fire, a
 
 | Mortar Launchers | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| M-12 Portable Mortar | 4 | – | – | SS | – | – | – | 16(F) | 120.00 | 2,250¥ |
+| M-12 Portable Mortar | 4 | 12P | -4 | SS | 0 | – | 1(m) | 16(F) | 120.00 | 600¥ |
 
 **Rocket Launchers** - Rocket launchers are heavy weapons designed to deliver explosive payloads over medium distances. They may accept top-mounted and underbarrel accessories.
 
@@ -2529,12 +2538,12 @@ bipod or tripod mount system is easily adjustable to change the angle of fire, a
 
 | Rocket Launchers | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Arbalest II MAW | 5 | – | – | SS | – | – | 1(ml) | 14(F) | 1,200¥ |
+| Arbalest II MAW | 5 | 4P | 0 | SS | 0 | – | 1(ml) | 14(F) | 150¥ |
 | Aztechnology Lasher |
-| Aztechnology Striker | 5 | – | – | SS | – | 1(ml) | 10(F) | 1,200¥ |
+| Aztechnology Striker | 5 | 4P | 0 | SS | 0 | 1(ml) | 10(F) | 200¥ |
 | IWS Multi-Launcher |
-| M79B1 LAW | 4 | – | – | SS | – | – | 1(ml) | 12(F) | 2.50 | 750¥ |
-| Mitsubishi Yakusoku MRL | 4 | – | – | SA/BF | – | – | 4(dm)x2 | 20(F) | 14,000¥ |
+| M79B1 LAW | 4 | 4P | 0 | SS | 0 | – | 1(ml) | 12(F) | 2.50 | 150¥ |
+| Mitsubishi Yakusoku MRL | 4 | 4P | 0 | SA/BF | 0 | – | 4(dm)x2 | 20(F) | 350¥ |
 | Ruhrmetall GPRL-Alpha | 4(m) | 9.00 | 9,000¥ |
 | Spike Disposable Launcher |
 
@@ -2564,15 +2573,15 @@ bipod or tripod mount system is easily adjustable to change the angle of fire, a
 
 | Missile Launchers | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 9K135 Missile System | – | – | – | SS | – | – | 1(ml) | 15(F) | 1,000¥ |
+| 9K135 Missile System | 5 | 4P | 0 | SS | 0 | – | 1(ml) | 15(F) | 150¥ |
 | Ballista |
-| Great Dragon ATGM | – | – | – | SS | – | – | 1(ml) | 17(F) | 1,200¥ |
-| MTR/M-231 | – | – | – | SS | – | – | 1 | 24(F) | 8,000¥ |
-| Onotari Arms Ballista MML | – | – | – | SS | – | – | 4(m) | 19(F) | 7,500¥ |
-| Onotari Arms Interceptor | 4(6) | – | – | SS | – | – | 2(ml) | 18(F) | 14,000¥ |
+| Great Dragon ATGM | 5 | 4P | 0 | SS | 0 | – | 1(ml) | 17(F) | 150¥ |
+| MTR/M-231 | 5 | 4P | 0 | SS | 0 | – | 1 | 24(F) | 150¥ |
+| Onotari Arms Ballista MML | 5 | 4P | 0 | SS | 0 | – | 4(m) | 19(F) | 150¥ |
+| Onotari Arms Interceptor | 4(6) | 4P | 0 | SS | 0 | – | 2(ml) | 18(F) | 150¥ |
 | PS Vogeljäger |
-| PS Vogeljäger II | – | – | – | SS | – | – | 1(ml) | 22(F) | 8,750¥ |
-| Scorpion | – | – | – | SS | – | – | 1 | 22(F) | 15.25 | 2,100¥ |
+| PS Vogeljäger II | 5 | 4P | 0 | SS | 0 | – | 1(ml) | 22(F) | 150¥ |
+| Scorpion | 5 | 4P | 0 | SS | 0 | – | 1 | 22(F) | 15.25 | 150¥ |
 
 **Missiles** - Guided explosive projectiles that can lock onto and track targets, fired from missile launchers.
 
@@ -2594,8 +2603,8 @@ bipod or tripod mount system is easily adjustable to change the angle of fire, a
 | Flamethrowers | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Aztechnology F3a |
-| Shiawase Arms Blazer | 6 | 10P(fl) | – | SS | – | Close | 4(dm) | 16(F) | 2.75 | 2,200¥ |
-| Shiawase Arms Incinerator | 4 | 15P(fl) | – | SS | – | Near | 6(dm) | 16(F) | 4.25 | 10,000¥ |
+| Shiawase Arms Blazer | 6 | 10P(fl) | 0 | SS | 0 | Close | 4(dm) | 16(F) | 2.75 | 300¥ |
+| Shiawase Arms Incinerator | 4 | 15P(fl) | 0 | SS | 0 | Near | 6(dm) | 16(F) | 4.25 | 600¥ |
 
 **Laser Weapons** - Laser weapons project concentrated beams of light to deliver thermal energy and essentially burn a hole in their target, or at least boil away some layers of armor.  They operate off of Peak Discharge Battery Packs and are commonly found linked to a larger power source, especially if vehicle-mounted.  All lasers suffer a reduction in their DV by 1 per range bracket their target lies beyond Close.  They also suffer a DV reduction of 1 per Visibility Modifier encountered, as particulate matter in the air disrupts the cohesion of their beam.  Lasers can accept top-mounted and underbarrel accessories or modifications unless otherwise noted, but they may never have barrel modifications or upgrades of any kind.
 
@@ -2613,15 +2622,15 @@ bipod or tripod mount system is easily adjustable to change the angle of fire, a
 
 | Laser Weapons | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Ares Archon Heavy MP Laser | 7 | 25P | -25 | SA | (2) | Distant | – | 24(F) | 35,000¥ |
-| Ares Lancer MP Laser | 7 | 15P | -15 | SA | (2) | Far | 10(dm)x2 | 18(F) | 16,000¥ |
+| Ares Archon Heavy MP Laser | 7 | 25P | -25 | SA | (2) | Distant | 10(c) | 24(F) | 2900¥ |
+| Ares Lancer MP Laser | 7 | 15P | -15 | SA | (2) | Far | 10(dm)x2 | 18(F) | 1600¥ |
 | Ares MP Laser III |
 | Ares Heavy MP Laser |
 | Ares Heavy MP Laser Plus |
-| Ares Pulse Fire | 7 | 15P | -15 | SA | (1) | Far | 10(dm)x2 | 22(F) | 20,000¥ |
-| Rapid Cycle | 6 | 7P | -7 | FA | (1) | Far | – | – | – | – |
-| Ares Redline | 9 | 7P | -7 | SA | (1) | Near | 10(dm) | 14(F) | 7,500¥ |
-| Onotari Arms Assault Laser | 7(9) | 15P | -15 | SA | (1) | Far | 10(dm)x2 | 12(F) | 26,000¥ |
+| Ares Pulse Fire | 7 | 15P | -15 | SA | (1) | Far | 10(dm)x2 | 22(F) | 1500¥ |
+| Rapid Cycle | 6 | 7P | -7 | FA | (1) | Far | 10(c) | – | – | 1200 |
+| Ares Redline | 9 | 7P | -7 | SA | (1) | Near | 10(dm) | 14(F) | 750¥ |
+| Onotari Arms Assault Laser | 7(9) | 15P | -15 | SA | (1) | Far | 10(dm)x2 | 12(F) | 1500¥ |
 
 **Special & Exotic Weapons** - A catch-all category for weapons that do not fit into standard classifications, ranging from chemical sprayers to microwave pain inducers.
 
@@ -2651,22 +2660,22 @@ bipod or tripod mount system is easily adjustable to change the angle of fire, a
 
 | Special & Exotic Weapons | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Ares Cascade | – | – | – | SA | – | – | 100(dm) | 8(R) | 5.50 | 1,800¥ |
-| Power | 4 | – | – | – | – | Near | – | – | – | – |
-| Spread | 3 | – | – | – | – | Close | – | – | – | – |
-| Ares ELD-AR | 5 | 4S | – | SA/BF/FA | – | Near | 50(dm) | 4(R) | 4.50 | 950¥ |
-| Ares S-II SuperSquirt | 3 | – | – | SA | – | Close | 20(dm) | 6(R) | 2.00 | 800¥ |
-| Ares S-III SuperSquirt | 3 | – | – | SA | – | Near | 20(dm) | 7(R) | 950¥ |
-| Fichetti Pain Inducer | 3 | – | – | SS | – | Close | 10 | 11(R) | 5,000¥ |
-| FN-AAL Gyrojet Pistol | 4 | 8P | -5 | SA | – | Near | 10(dm) | 8(F) | 2.00 | 600¥ |
+| Ares Cascade | 5 | 4S | 0 | SA | 0 | – | 100(dm) | 8(R) | 5.50 | 700¥ |
+| Power | 4 | 4S | 0 | SS | 0 | Near | 1(m) | – | – | 150 |
+| Spread | 3 | 4S | 0 | SS | 0 | Close | 1(m) | – | – | 150 |
+| Ares ELD-AR | 5 | 4S | 0 | SA/BF/FA | 0 | Near | 50(dm) | 4(R) | 4.50 | 900¥ |
+| Ares S-II SuperSquirt | 3 | 4S | 0 | SA | 0 | Close | 20(dm) | 6(R) | 2.00 | 300¥ |
+| Ares S-III SuperSquirt | 3 | 4S | 0 | SA | 0 | Near | 20(dm) | 7(R) | 300¥ |
+| Fichetti Pain Inducer | 3 | 4S | 0 | SS | 0 | Close | 10 | 11(R) | 200¥ |
+| FN-AAL Gyrojet Pistol | 4 | 8P | -5 | SA | 0 | Near | 10(dm) | 8(F) | 2.00 | 600¥ |
 | Harpoons |
-| HK Icethrower | 4 | 6S | – | BF | – | Close | 54\* | 10(R) | 800¥ |
-| Narcoject Gas Gun | 5 | – | – | SS | – | Close | 5x2\* | 8(R) | 1,500¥ |
-| Narcoject PEP | 6 | 10S | – | SS | – | PB | 10(dm) | 12(R) | 1.50 | 7,500¥ |
-| Narcoject Trackstopper | 5 | – | – | SS | – | Near | 6 | 15(R) | 8,500¥ |
+| HK Icethrower | 4 | 6S | 0 | BF | 0 | Close | 54\* | 10(R) | 650¥ |
+| Narcoject Gas Gun | 5 | 4S | 0 | SS | 0 | Close | 5x2\* | 8(R) | 150¥ |
+| Narcoject PEP | 6 | 10S | 0 | SS | 0 | PB | 10(dm) | 12(R) | 1.50 | 350¥ |
+| Narcoject Trackstopper | 5 | 4S | 0 | SS | 0 | Near | 6 | 15(R) | 150¥ |
 | Net Gun |
-| Onotari Arms Slingshot | 6 | – | – | SS | – | Close | 10(m) | 5(R) | 1.75 | 250¥ |
-| Pepper Punch Pen | 3 | – | – | SS | – | PB | 1(m) | 3 | 0.25 | 45¥ |
+| Onotari Arms Slingshot | 6 | 4S | 0 | SS | 0 | Close | 10(m) | 5(R) | 1.75 | 200¥ |
+| Pepper Punch Pen | 3 | 4S | 0 | SS | 0 | PB | 1(m) | 3 | 0.25 | 150¥ |
 | Splatgun |
 | Spraytank |
 | Walther-AGC Liquidator |
@@ -2694,11 +2703,11 @@ bipod or tripod mount system is easily adjustable to change the angle of fire, a
 
 | Vehicular Weaponry | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
-| AN/EDQ-12 ADNDEWS | 10 | 40P | -30 | SS | – | 20 km | – | 40(F) | 1200.00 | 600,000¥ |
-| Ares Doru Launch System | – | – | – | SS | – | – | 1 | 28(F) | 60.00 | 16,000¥ |
-| Ares Medusa PD Laser | 8 | 25P | -25 | FA | – | 5 km | – | 28(F) | 350.00 | 128,000¥ |
-| Ruhrmetall SFW-30 | 6(8) | SA | – | Far | 100(belt) | 24(F) | 78.00 | 60,000¥ |
-| SFW-30 Underbarrel Weapon | 6(8) | – | – | SS | – | Far | 10(m) | – | – | – |
+| AN/EDQ-12 ADNDEWS | 10 | 40P | -30 | SS | 0 | 20 km | 10(c) | 40(F) | 1200.00 | 4800¥ |
+| Ares Doru Launch System | 5 | 4P | 0 | SS | 0 | – | 1 | 28(F) | 60.00 | 150¥ |
+| Ares Medusa PD Laser | 8 | 25P | -25 | FA | 0 | 5 km | 10(c) | 28(F) | 350.00 | 3200¥ |
+| Ruhrmetall SFW-30 | 6(8) | 4P | 0 | Far | 100(belt) | 24(F) | 78.00 | 11000¥ |
+| SFW-30 Underbarrel Weapon | 6(8) | 4P | 0 | SS | 0 | Far | 10(m) | – | – | 200 |
 
 **Vehicular Bombs -**
 
