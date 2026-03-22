@@ -63,124 +63,7 @@
 \author{}
 \date{}
 
-
-% --- SHADOWRUN 7E CUSTOM STYLING ---
-% Typography & Layout
-\usepackage[margin=0.75in]{geometry}
-\usepackage{multicol}
-\usepackage{helvet} % Sans-serif clean font
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage{microtype}
-
-% Structural Spacing & Formatting
-\usepackage{parskip}   % Remove paragraph indents, add vertical space
-\usepackage{enumitem}  % Control list spacing
-\setlist{nosep}        % Make all lists compact by default
-
-% Game Term Styling (No math-mode for crunch)
-\newcommand{\gameterm}[1]{\textbf{\sffamily #1}}
-
-% Colors
-\definecolor{matrixblue}{HTML}{00CCFF} % Neon blue for HUD elements
-\definecolor{srdark}{HTML}{1A1A1A}     % Deep charcoal for JackPoint backgrounds
-\definecolor{sraccent}{HTML}{E63946}   % Warning/Glitch red
-
-% Headers and Footers (HUD Style)
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{1.5pt}
-\renewcommand{\footrule}{\hbox to\headwidth{\color{matrixblue}\leaders\hrule height \footrulewidth\hfill}}
-\fancyfoot[L]{\ttfamily\small SYSTEM STATUS: ONLINE \textbar{} GRID LOCATION: OKC-METRO}
-\fancyfoot[R]{\ttfamily\small PAGE \thepage}
-
-% Watermark
-\usepackage[pages=all]{background}
-\backgroundsetup{
-  scale=1,
-  color=black,
-  opacity=0.05,
-  angle=0,
-  position=current page.center,
-  vshift=0pt,
-  hshift=0pt,
-  contents={%
-  \begin{tikzpicture}[remember picture,overlay]
-    \draw [step=0.5cm,line width=0.5mm]
-      (current page.south west) grid (current page.north east);
-  \end{tikzpicture}%
-  }
-}
-
-% Chapter Headings (Tight Spacing)
-\usepackage{titlesec}
-\titleformat{\section}[block]
-  {\normalfont\LARGE\bfseries\color{matrixblue}\MakeUppercase}
-  {\thesection}{1em}{}
-  [\vspace{0.5ex}\color{matrixblue}\titlerule\vspace{0.25ex}\color{sraccent}\titlerule]
-\titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{1ex plus .2ex}
-
-\titleformat{\subsection}[block]
-  {\normalfont\Large\bfseries\color{srdark}\MakeUppercase}
-  {\thesubsection}{1em}{}
-  [\color{matrixblue}\titlerule]
-\titlespacing*{\subsection}{0pt}{1.2ex plus 1ex minus .2ex}{0.8ex plus .2ex}
-
-\titleformat{\subsubsection}[block]
-  {\normalfont\large\bfseries\color{srdark}\MakeUppercase}
-  {\thesubsubsection}{1em}{}
-  [\color{matrixblue}\titlerule]
-\titlespacing*{\subsubsection}{0pt}{1ex plus 1ex minus .2ex}{0.5ex plus .2ex}
-
-% Tables
-\usepackage{tabularray}
-\UseTblrLibrary{booktabs}
-
-% Callout Boxes
-\usepackage[most]{tcolorbox}
-
-% The JackPoint Commentary Box
-\newtcolorbox{jackpoint}[2][]{
-    enhanced,
-    colback=srdark,
-    colframe=matrixblue,
-    coltext=white,
-    boxrule=0.5pt,
-    leftrule=4pt, % Thick accent line on the left
-    arc=0mm,      % Sharp, digital corners
-    fonttitle=\bfseries\ttfamily\small,
-    title={>> USER: #2 <<},
-    attach title to upper,
-    after title={\par\vspace{0.5em}\hrule\vspace{0.5em}},
-    #1
-}
-
-% GM Advice Box
-\newtcolorbox{gmadvice}[1][GM Advice]{
-  colback=gray!10,
-  colframe=sraccent,
-  coltitle=white,
-  fonttitle=\bfseries\MakeUppercase,
-  title={#1},
-  boxrule=1.5pt,
-  leftrule=4pt,
-  arc=0mm,
-  coltext=black
-}
-% --- END SHADOWRUN 7E CUSTOM STYLING ---
-
-% Custom Gear Entry Macro
-\newcommand{\gearitem}[3]{%
-  \noindent\textbf{\textcolor{matrixblue}{#1}} #2%
-  \ifx&#3&\else\\ \textit{\textcolor{gray!80}{#3}}\fi
-  \par\vspace{1em}%
-}
-
-
 \begin{document}
-\begin{multicols}{2}
-
 
 \textbf{Fan made Shadowrun 7th Edition}
 
@@ -200,7 +83,7 @@ Tests}\label{i.-core-mechanics-dice-tests}}
 All actions use a streamlined success-counting system.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Dice Pool:} Attribute + Skill.
 \item
@@ -231,7 +114,7 @@ environment. Even the hermit in the woods is lit up with an AR signature
 because the water and air are crawling with nanites.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{No Cold Sim (The Abyss Looks Back):} Cold Sim is dead. Any
   active skill involving the Matrix requires a Direct Neural Interface
@@ -255,7 +138,7 @@ because the water and air are crawling with nanites.
 G.O.D.}\label{updated-matrix-actions-tethers-g.o.d.}}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Tethers (Replacing Marks):} Marks act like sympathetic bonds.
   Placing a Tether on a device/persona requires an Opposed Test
@@ -282,7 +165,7 @@ permanently blurred, but Tech and Magic still ruthlessly repel each
 other.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Digital Essence (Turing 1, Searle 0):} Any AI, Sprite, or
   Matrix entity complex enough to possess a self-directed persona has an
@@ -322,7 +205,7 @@ With the veil parted, digital and astral entities interact in entirely
 new ways.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Manifesting Sprites:} Sprites can physically manifest by
   swarming nanites into a dense ball, literally munching ambient
@@ -354,7 +237,6 @@ Summary}\label{v.-character-creation-summary}}
 
 All characters build and advance using \textbf{Karma}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -381,7 +263,6 @@ spells. \\
 \textbf{Mystic Adept} & 150 & Blends Adept and Magician traits; gains 1x
 MAG free spells. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \emph{(Note: Magic and Resonance both start at 0. You must buy one of
 these qualities at character generation to unlock the stat, which starts
@@ -389,7 +270,7 @@ at Rating 1).}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-
+\tightlist
 \item
   \protect\hyperlink{bookmark=id.x87h504b24hr}{Dice \& Tests}\\
 \item
@@ -604,7 +485,6 @@ The final result of the test is 3 hits (from the 6 on the Wild Die). If
 the player had also rolled a 6 on a normal die, that hit would not be
 canceled by the 1 on the Wild Die, resulting in 4 hits total.
 
-\end{multicols}
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
 Thresholds (Success Tests) & Thresholds (Extended Tests) & Intervals \\
@@ -621,7 +501,6 @@ Thresholds (Success Tests) & Thresholds (Extended Tests) & Intervals \\
 7 - Extreme & 32 - Extreme & Exhaustive - 1 week \\
 & & Mammoth - 1 month \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Character Creation \& Advancement}
 
@@ -813,7 +692,6 @@ has been balanced to consider both their starting minimum Attributes and
 their potential for growth at maximum Attribute levels, as well as any
 innate qualities.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
@@ -890,7 +768,6 @@ Satyr & 2 / 7 & 1 / 6 & 2 / 7 & 2 / 7 & 1 / 6 & 1 / 6 & 1 / 6 & 2 / 7 &
 1 / 6 & 45 & \emph{Low-Light Vision, Built Tough (1), Satyr Legs,
 Hooves} \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Skills:}
 
@@ -1764,7 +1641,6 @@ taken during character creation the quality gives no bonus Karma..
 severity of the allergy. Different amounts of Karma are awarded for both
 how severe the allergy is and how common the allergen is.
 
-\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Allergen & Karma \\
@@ -1777,7 +1653,6 @@ Allergen & Karma \\
 \textbf{Uncommon} & 5 \\
 \textbf{Rare} & 9 \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{(Mild)} - 2 Karma Characters experience discomfort and receive a
 -1 dice pool modifier to all Physical Tests.
@@ -1932,7 +1807,6 @@ quality.
 certain number of hours per week of work and provides a monthly
 paycheck. Must have a \emph{SINner} quality to take \emph{Day Job}.
 
-\end{multicols}
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
 Karma & Salary & Hours per Week \\
@@ -1944,7 +1818,6 @@ Karma & Salary & Hours per Week \\
 10 & 2500 & 20 \\
 15 & 5000 & 40 \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Dead Emotion} - 3 Karma Lack of one type of emotion, such as
 happiness, sadness, anger, or fear, from BTL abuse.
@@ -2770,7 +2643,6 @@ eliminating the need for wires and increasing the rate of fire.
 predecessor, the Pulsar II includes a pair of contacts at the base of
 the grip to allow it to function as a stun club.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -2811,256 +2683,592 @@ COST
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Cavalier SafeGuard & 5(6) & 4S(e) & +2 & SA & -- & Close & 6(m) & -- &
-0.75 & 275¥ \\
-Defiance EX Shocker & 4 & 8S(e) & -- & SS & -- & Close & 4(m) & -- &
-1.25 & 340¥ \\
-Defiance Super Shock & 8 & 7S(e) & -1 & SA & -- & Near & 2(m) & 3(R) &
-2.00 & 1,000¥ \\
+Cavalier SafeGuard & 5(6) & 4S(e) & +2 & SA & 0 & Close & 6(m) & -- &
+0.75 & 200¥ \\
+Defiance EX Shocker & 4 & 8S(e) & -5 & SS & 0 & Close & 4(m) & -- & 1.25
+& 500¥ \\
+Defiance Super Shock & 8 & 7S(e) & -1 & SA & 0 & Near & 2(m) & 3(R) &
+2.00 & 300¥ \\
 HK Urban Tempest & & & & & & & & & & \\
-Krime Tingler & 3 & 10S(e) & -2 & SS & -- & Close & 2(m) & 2 & 3.00 &
-240¥ \\
-Narcoject One & 5 & -- & -- & SA & -- & Close & 6(m) & 6(R) & 1.50 &
-1,200¥ \\
-Parashield Dart Pistol & 5 & -- & -- & SA & -- & Near & 5(dm) & 4(R) &
-600¥ & \\
-Parashield Dart Rifle & 6 & -- & -- & SA & -- & Far & 5(m) & 6(R) &
-1,200¥ & \\
-S-1130 Assassin & 5 & -- & -3 & SA & -- & Close & 6(m) & 15(F) & 0.50 &
-1,450¥ \\
-Tiffani-Defiance Protector & 5(6) & 5S(e) & +1 & SA & -- & Close & 3(m)
-& 4 & 0.50 & 500¥ \\
-Yamaha Pulsar I/II & 5 & 6S(e) & -- & SA & -- & Near & 4(m) & -- & 1.50
-& 325/350¥ \\
-Jupiter Taser Club & 3 & 6S(e) & -- & SS & -- & Close & 1(m) & 8 & 2.50
-& 1,200¥ \\
+Krime Tingler & 3 & 10S(e) & -2 & SS & 0 & Close & 2(m) & 2 & 3.00 &
+400¥ \\
+Narcoject One & 5 & 6S(e) & -5 & SA & 0 & Close & 6(m) & 6(R) & 1.50 &
+500¥ \\
+Parashield Dart Pistol & 5 & 6S(e) & -5 & SA & 0 & Near & 5(dm) & 4(R) &
+500¥ & \\
+Parashield Dart Rifle & 6 & 6S(e) & -5 & SA & 0 & Far & 5(m) & 6(R) &
+500¥ & \\
+S-1130 Assassin & 5 & 6S(e) & -3 & SA & 0 & Close & 6(m) & 15(F) & 0.50
+& 400¥ \\
+Tiffani-Defiance Protector & 5(6) & 5S(e) & +1 & SA & 0 & Close & 3(m) &
+4 & 0.50 & 200¥ \\
+Yamaha Pulsar I/II & 5 & 6S(e) & -5 & SA & 0 & Near & 4(m) & -- & 1.50 &
+500¥ \\
+Jupiter Taser Club & 3 & 6S(e) & -5 & SS & 0 & Close & 1(m) & 8 & 2.50 &
+450¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Hold-Outs} - Hold-Outs are very small, easily concealed pistols
 that are usually weak and inaccurate, but make the perfect last ditch
 backup weapon. They are too small to mount any normal off the rack
 firearms accessories.
 
-\gearitem{Cannon Punch (various)}{Essentially a short, wide metal tube with an ignition switch and a strap for attaching to the hand. It can be loaded with a variety of material from crushed glass, rocks, or nails and powered by a variety of homemade explosives or cheap black powder cubes available for +10¥ per box of 10. Activation can be done with a simple clenching of the fist; timing this correctly allows the weapon to fire as it comes into contact with the target, but it is possible to land a wel aimed shot at very short distances. At GM discretion the damage may be modified based on the explosives used to power this weapon or the material loaded into it. Accuracy for this weapon is equal to AGI when used as a contact weapon.}{}
+\textbf{Cannon Punch} (various): Essentially a short, wide metal tube
+with an ignition switch and a strap for attaching to the hand. It can be
+loaded with a variety of material from crushed glass, rocks, or nails
+and powered by a variety of homemade explosives or cheap black powder
+cubes available for +10¥ per box of 10. Activation can be done with a
+simple clenching of the fist; timing this correctly allows the weapon to
+fire as it comes into contact with the target, but it is possible to
+land a wel aimed shot at very short distances. At GM discretion the
+damage may be modified based on the explosives used to power this weapon
+or the material loaded into it. Accuracy for this weapon is equal to AGI
+when used as a contact weapon.
 
-\gearitem{Cavalier Arms Scout (3mm Cavalier)}{The world's most compact semi-automatic pistol that can easily fit in a pocket, it even includes a pocket clip on the frame.}{Caseless Only}
+\textbf{Cavalier Arms Scout} (3mm Cavalier): The world's most compact
+semi-automatic pistol that can easily fit in a pocket, it even includes
+a pocket clip on the frame. \emph{Caseless Only}.
 
-\gearitem{Colt New Model Revolver (.32 Colt)}{Colt's attempt at a cheap civilian revolver through resurrecting an ancient design. Only reliable with Colt brand speed loaders. A very low recoil and surprisingly accurate hammerless revolver, if anemic in power.}{Cased Only, Double Action}
+\textbf{Colt New Model Revolver} (.32 Colt): Colt's attempt at a cheap
+civilian revolver through resurrecting an ancient design. Only reliable
+with Colt brand speed loaders. A very low recoil and surprisingly
+accurate hammerless revolver, if anemic in power. \emph{Cased Only},
+\emph{Double Action}.
 
-\gearitem{Colt Secret Agent (.22 WMR)}{Colt's modern, light, concealed carry revolver. The Secret Agent is a very thin and flat pistol that is easily concealable and with non-metal construction can evade MAD scanners. Standard features include a detachable form fitting laser sight with grip activation.}{Cased Only, Ceramic/Plasteel Components Rating 3, Double Action, Laser Sight}
+\textbf{Colt Secret Agent} (.22 WMR): Colt's modern, light, concealed
+carry revolver. The Secret Agent is a very thin and flat pistol that is
+easily concealable and with non-metal construction can evade MAD
+scanners. Standard features include a detachable form fitting laser
+sight with grip activation. \emph{Cased Only}, \emph{Ceramic/Plasteel
+Components Rating 3}, \emph{Double Action}, \emph{Laser Sight}.
 
-\gearitem{Enfield M1098 (9mm Para)}{An obsolete pistol that went out of service with the RAF in the 2050's, the Enfield is nevertheless prized for its small size and ergonomic features.}{Vintage}
+\textbf{Enfield M1098} (9mm Para): An obsolete pistol that went out of
+service with the RAF in the 2050's, the Enfield is nevertheless prized
+for its small size and ergonomic features. \emph{Vintage}.
 
-\gearitem{Fichetti Tiffani Needler (4mm Fichetti)}{A designer handgun that fires caseless flechette rounds. The color-changing coating can be manipulated wirelessly, making it the perfect lethal fashion accessory. When changing the coating color to an appropriate camouflage pattern for the setting, increase the Concealability of the weapon by 1. The Needler's damage codes are factored for the flechette ammunition.}{Caseless Only, Flechette Only}
+\textbf{Fichetti Tiffani Needler} (4mm Fichetti): A designer handgun
+that fires caseless flechette rounds. The color-changing coating can be
+manipulated wirelessly, making it the perfect lethal fashion accessory.
+When changing the coating color to an appropriate camouflage pattern for
+the setting, increase the Concealability of the weapon by 1. The
+Needler's damage codes are factored for the flechette ammunition.
+\emph{Caseless Only}, \emph{Flechette Only}.
 
-\gearitem{Fichetti Tiffani Self-Defender (4mm Fichetti)}{The predecessor to the Needler, this hold-out pistol features the same color-changing nano-coating, but is not limited to flechette rounds.}{Caseless Only}
+\textbf{Fichetti Tiffani Self-Defender} (4mm Fichetti): The predecessor
+to the Needler, this hold-out pistol features the same color-changing
+nano-coating, but is not limited to flechette rounds. \emph{Caseless
+Only}.
 
-\gearitem{HK P48 (.22 LR)}{Smaller than the palm of your hand and capable of full auto fire, the HK P48 only uses caseless ammunition and is capable of a 3 round burst activation by a re-trigger mechanism similar to the Browning Ultra-Power.}{Caseless Only}
+\textbf{HK P48} (.22 LR): Smaller than the palm of your hand and capable
+of full auto fire, the HK P48 only uses caseless ammunition and is
+capable of a 3 round burst activation by a re-trigger mechanism similar
+to the Browning Ultra-Power. \emph{Caseless Only}.
 
-\gearitem{Krime Vester (.357 Magnum)}{Krime's metahuman adapted derringer is barely large enough for a troll to utilize. It comes equipped with an integral knife blade which can function as a punch dagger.}{Bayonet, Metahuman Adaptation}
+\textbf{Krime Vester} (.357 Magnum): Krime's metahuman adapted derringer
+is barely large enough for a troll to utilize. It comes equipped with an
+integral knife blade which can function as a punch dagger.
+\emph{Bayonet}, \emph{Metahuman Adaptation}.
 
-\gearitem{Morrissey Élan (.38 Auto)}{An elegant hold-out pistol designed to look and feel as if it is an extension of its owner's hand, the Morrissey Élan is the epitome of concealability, being made entirely of polyresin materials, and thus immune to MAD scanners.}{Ceramic/Plasteel Components Rating 5}
+\textbf{Morrissey Élan} (.38 Auto): An elegant hold-out pistol designed
+to look and feel as if it is an extension of its owner's hand, the
+Morrissey Élan is the epitome of concealability, being made entirely of
+polyresin materials, and thus immune to MAD scanners.
+\emph{Ceramic/Plasteel Components Rating 5}.
 
-\gearitem{Raecor Sting (.22 LR)}{An unobtrusive, easily concealable ``lemon squeezer'' that fits entirely in your hand, the Reacor Sting has a very low capacity and exclusively fires anemic flechette rounds, barely suitable for more than point blank pest control. It is made entirely of non-metallic, ceramic materials, rendering it immune to MAD scanners. The Sting's damage codes are factored for the flechette ammunition.}{Ceramic/Plasteel Components Rating 6}
+\textbf{Raecor Sting} (.22 LR): An unobtrusive, easily concealable
+``lemon squeezer'' that fits entirely in your hand, the Reacor Sting has
+a very low capacity and exclusively fires anemic flechette rounds,
+barely suitable for more than point blank pest control. It is made
+entirely of non-metallic, ceramic materials, rendering it immune to MAD
+scanners. The Sting's damage codes are factored for the flechette
+ammunition. \emph{Ceramic/Plasteel Components Rating 6}.
 
-\gearitem{Shiawase Arms Type K2072 (5mm Shiawase)}{Shiawase's hold-out pistol in their new Fashion Line. Features StayGrip technology.}{Caseless Only, Gecko Grip, Single Action}
+\textbf{Shiawase Arms Type K2072} (5mm Shiawase): Shiawase's hold-out
+pistol in their new Fashion Line. Features StayGrip technology.
+\emph{Caseless Only, Gecko Grip, Single Action}.
 
-\gearitem{SIG Sauer P298 (.38 Auto)}{Last produced in 2037, this very old model of pistol is still reliable and features an ambidextrous safety and configurable ejection port.}{Vintage}
+\textbf{SIG Sauer P298} (.38 Auto): Last produced in 2037, this very old
+model of pistol is still reliable and features an ambidextrous safety
+and configurable ejection port. \emph{Vintage}.
 
-\gearitem{Stinger Pen Gun (.22 LR)}{A simple ink pen modified to contain a single low caliber cartridge and set off by depressing the pen cap. Receives +4 to Concealability Thresholds.}{}
+\textbf{Stinger Pen Gun} (.22 LR): A simple ink pen modified to contain
+a single low caliber cartridge and set off by depressing the pen cap.
+Receives +4 to Concealability Thresholds.
 
+\textbf{Streetline Special} (.25 Auto): A cheap, easily 3D or nano
+printed pistol made of compositie materials. \emph{Ceramic/Plasteel
+Components Rating 3}.
 
-\begin{jackpoint}{Loki}
-If you're stuck in the OKC-Metro grid without a piece, just fire up your localized fabber. The Streetline Special is a cheap, easily 3D printed pistol made of composite materials. It won't beat an Ares Predator, but it beats harsh language.
-\end{jackpoint}
+\textbf{Terracotta Arms Pup} (.38 Auto): Both the civilian and
+government models of this pistol contain an integral Smartgun system.
+The government version, with higher availability, also comes with a
+customized suppressor. \emph{Smartlink}, \emph{Suppressor}
 
-\gearitem{Streetline Special (.25 Auto)}{A cheap, easily 3D or nano printed pistol made of compositie materials.}{Ceramic/Plasteel Components Rating 3}
+\textbf{Walther Palm Pistol} (.40 S\&W): This European hold-out packs
+large caliber rounds in an over-under configuration with a tilting break
+action barrel. Both barrels can be fired simultaneously with Burst Fire.
+\emph{Cased Only}.
 
-\gearitem{Terracotta Arms Pup (.38 Auto)}{Both the civilian and government models of this pistol contain an integral Smartgun system. The government version, with higher availability, also comes with a customized suppressor.}{Smartlink, Suppressor}
+\textbf{Walther Secura SuperKompakt} (7mm Auto): Walther's larger Secura
+\& Secura Kompakt just got a tiny little brother. Firing the same
+cartridge but miniscule by comparison, the SuperKompakt is easily
+concealed and constructed from MAD scanner defeating materials.
+\emph{Ceramic/Plasteel Components Rating 4}.
 
-\gearitem{Walther Palm Pistol (.40 S\&W)}{This European hold-out packs large caliber rounds in an over-under configuration with a tilting break action barrel. Both barrels can be fired simultaneously with Burst Fire.}{Cased Only}
-
-\gearitem{Walther Secura SuperKompakt (7mm Auto)}{Walther's larger Secura \& Secura Kompakt just got a tiny little brother. Firing the same cartridge but miniscule by comparison, the SuperKompakt is easily concealed and constructed from MAD scanner defeating materials.}{Ceramic/Plasteel Components Rating 4}
-
-\end{multicols}
-\begin{longtblr}{
-  colspec = {X[1.5,l] *{10}{X[c]}},
-  row{1} = {bg=srdark, fg=white, font=\bfseries},
-  row{even} = {bg=gray!10},
-  hlines, vlines
-}
-Hold-Outs & ACC & DV & AP & MODE & RC & RANGE & AMMO & AVAIL & WEIGHT & COST \\
-Cannon Punch & 2 & 9P(f) & -1 & SS & – & PB & 1(ml) & 6(R) & 1.00 & 100¥ \\
-Cavalier Arms Scout & 4 & 2P & -2 & SA & – & Close & 7(dm) & 6(R) & 0.25 & 375¥ \\
-Colt New Model Revolver & 6 & 3P & – & SS & – & Close & 5(cy) & 3(R) & 0.75 & 150¥ \\
-Colt Secret Agent & 5(6) & 3P & -1 & SS & – & Close & 6(cy) & 4(R) & 0.50 & 550¥ \\
-Enfield M1098 & 5 & 5P & -1 & SA & 1 & Near & 8(dm) & 5(R) & 1.00 & 450¥ \\
-Fichetti Tiffani Needler & 5 & 6P(fl) & +2 & SA & – & Close & 4(c) & 5(R) & 0.50 & 1,000¥ \\
-Fichetti Tiffani Self-Defender & 4 & 4P & -3 & SA & – & Near & 4(c) & 4(R) & 0.50 & 600¥ \\
-HK P48 & 2P & – & BF/FA & – & Close & 6(dm) & 0.50 & 300¥ &  &  \\
-Krime Vester & 4 & 8P & -4 & SS & – & Close & 2(b) & 7(R) & 2.00 & 200¥ \\
-Morrissey Élan & 5 & 3P & – & SA & – & Close & 5(dm) & 7(R) & 0.50 & 500¥ \\
-Raecor Sting & 3 & 4P(fl) & +4 & SS & – & PB & 4(m) & 6(R) & 0.25 & 350¥ \\
-Shiawase Arms Type K2072 & 5 & 5P & -4 & SS & – & Near & 4(m) & 3(R) & 0.50 & 475¥ \\
-SIG Sauer P298 & 5 & 4P & -1 & SA & – & Near & 7(dm) & 4(R) & 0.75 & 400¥ \\
-Stinger Pen Gun & 4 & 2P & – & SS & – & PB & 1(ml) & 6(R) & 0.25 & 325¥ \\
-Streetline Special & 4 & 1P & +2 & SA & – & Close & 6(dm) & –(R) & 0.50 & 50¥ \\
-Terracotta Arms Pup & 4(6) & 4P & – & SA & – & Close & 5(dm) & 4(R)/6(F) & 0.75 & 500/900¥ \\
-Walther Palm Pistol & 4 & 7P & -1 & SS/BF & – & Near & 2(b) & 4(R) & 0.25 & 245¥ \\
-Walther Secura SK & 4 & 7P & -2 & SA & – & Near & 4(dm) & 8(F) & 0.75 & 1,000¥ \\
-\end{longtblr}
-\begin{multicols}{2}
-
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Hold-Outs
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ACC
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+DV
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AP
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+MODE
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+RC
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+RANGE
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AMMO
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AVAIL
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+WEIGHT
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+COST
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Cannon Punch & 2 & 9P(f) & -1 & SS & 0 & PB & 1(ml) & 6(R) & 1.00 &
+300¥ \\
+Cavalier Arms Scout & 4 & 2P & -2 & SA & 0 & Close & 7(dm) & 6(R) & 0.25
+& 300¥ \\
+Colt New Model Revolver & 6 & 3P & 0 & SS & 0 & Close & 5(cy) & 3(R) &
+0.75 & 150¥ \\
+Colt Secret Agent & 5(6) & 3P & -1 & SS & 0 & Close & 6(cy) & 4(R) &
+0.50 & 200¥ \\
+Enfield M1098 & 5 & 5P & -1 & SA & 1 & Near & 8(dm) & 5(R) & 1.00 &
+400¥ \\
+Fichetti Tiffani Needler & 5 & 6P(fl) & +2 & SA & 0 & Close & 4(c) &
+5(R) & 0.50 & 250¥ \\
+Fichetti Tiffani Self-Defender & 4 & 4P & -3 & SA & 0 & Near & 4(c) &
+4(R) & 0.50 & 350¥ \\
+HK P48 & 2P & 4P & BF/FA & SA & 0 & 6(dm) & 0.50 & 200¥ & & \\
+Krime Vester & 4 & 8P & -4 & SS & 0 & Close & 2(b) & 7(R) & 2.00 &
+450¥ \\
+Morrissey Élan & 5 & 3P & 0 & SA & 0 & Close & 5(dm) & 7(R) & 0.50 &
+200¥ \\
+Raecor Sting & 3 & 4P(fl) & +4 & SS & 0 & PB & 4(m) & 6(R) & 0.25 &
+150¥ \\
+Shiawase Arms Type K2072 & 5 & 5P & -4 & SS & 0 & Near & 4(m) & 3(R) &
+0.50 & 350¥ \\
+SIG Sauer P298 & 5 & 4P & -1 & SA & 0 & Near & 7(dm) & 4(R) & 0.75 &
+250¥ \\
+Stinger Pen Gun & 4 & 2P & 0 & SS & 0 & PB & 1(ml) & 6(R) & 0.25 &
+100¥ \\
+Streetline Special & 4 & 1P & +2 & SA & 0 & Close & 6(dm) & --(R) & 0.50
+& 200¥ \\
+Terracotta Arms Pup & 4(6) & 4P & 0 & SA & 0 & Close & 5(dm) & 4(R)/6(F)
+& 0.75 & 200¥ \\
+Walther Palm Pistol & 4 & 7P & -1 & SS/BF & 0 & Near & 2(b) & 4(R) &
+0.25 & 450¥ \\
+Walther Secura SK & 4 & 7P & -2 & SA & 0 & Near & 4(dm) & 8(F) & 0.75 &
+350¥ \\
+\end{longtable}
 
 \textbf{Light Pistols} - Light Pistols occupy the middle ground between
 hold-outs and heavy pistols, they are usually accurate and can accept
 top-mounted and barrel-mounted accessories.
 
-\gearitem{Ares Light Fire 70 (9mm Para)}{A professional operator's pistol made by Ares. Comes standard with laser sight and an optional suppressor for +750¥. This highly efficient suppressor increases the Threshold for auditory Perception tests by 3 when equipped.}{Laser Sight, Suppressor}
+\textbf{Ares Light Fire 70} (9mm Para): A professional operator's pistol
+made by Ares. Comes standard with laser sight and an optional suppressor
+for +750¥. This highly efficient suppressor increases the Threshold for
+auditory Perception tests by 3 when equipped. \emph{Laser Sight},
+\emph{Suppressor}.
 
-\gearitem{Ares Light Fire 75 (9mm Para)}{An upgraded Light Fire 70 that comes standard with smartlink software and hardware.}{Laser Sight, Smartlink, Suppressor}
+\textbf{Ares Light Fire 75} (9mm Para): An upgraded Light Fire 70 that
+comes standard with smartlink software and hardware. \emph{Laser Sight},
+\emph{Smartlink}, \emph{Suppressor}.
 
-\gearitem{Barrens Special (Various)}{Illegally manufactured revolvers off the streets of the sprawl. Shoddy construction, unreliable, and usually with some form of bayonet or knife mated witht he barrel as a last resort for when the gun inevitably jams.}{Bayonet}
+\textbf{Barrens Special} (Various): Illegally manufactured revolvers off
+the streets of the sprawl. Shoddy construction, unreliable, and usually
+with some form of bayonet or knife mated witht he barrel as a last
+resort for when the gun inevitably jams. \emph{Bayonet}.
 
-\gearitem{Beretta 101T (.38 Auto)}{A popular pistol with security forces thanks to its ease of maintenance.}{}
+\textbf{Beretta 101T} (.38 Auto): A popular pistol with security forces
+thanks to its ease of maintenance.
 
-\gearitem{Beretta 200ST (.38 Auto)}{A military service version of the classic Beretta line capable of fully automatic fire. Comes with a detachable shoulder stock and very high capacity triple stack magazines.}{Folding Stock}
+\textbf{Beretta 200ST} (.38 Auto): A military service version of the
+classic Beretta line capable of fully automatic fire. Comes with a
+detachable shoulder stock and very high capacity triple stack magazines.
+\emph{Folding Stock}.
 
-\gearitem{Beretta 201T (.38 Auto)}{Burst fire capable version of the 101T, it comes with a detachable shoulder stock and an extended magazine.}{Extended Magazine, Folding Stock}
+\textbf{Beretta 201T} (.38 Auto): Burst fire capable version of the
+101T, it comes with a detachable shoulder stock and an extended
+magazine. \emph{Extended Magazine}, \emph{Folding Stock}.
 
-\gearitem{Beretta 92SL (9mm Para)}{A veteran of the Second EuroWar, earlier models command a premium with collectors. One of the most common and functional pistols in the gutters of the shadows worldwide.}{Vintage}
+\textbf{Beretta 92SL} (9mm Para): A veteran of the Second EuroWar,
+earlier models command a premium with collectors. One of the most common
+and functional pistols in the gutters of the shadows worldwide.
+\emph{Vintage}.
 
-\gearitem{Browning Ghost (9mm Para)}{A joint venture between Browning and Victorinox resulted in a remarkable concealed carry pistol. The Ghost is constructed from a polymer based on Victorinox's SmartSteel, allowing it to mold and contour itself in a flexible state when not in use. While in the flexible state, increase Concealability Thresholds by 3. Changing to or from this flexible state requires an Interact with Device Action. The Ghost may not fire while in it's flexible state, and may not accept any other modifications or accessories.}{Electronic Firing, Personalized Grip, Smartlink}
+\textbf{Browning Ghost} (9mm Para): A joint venture between Browning and
+Victorinox resulted in a remarkable concealed carry pistol. The Ghost is
+constructed from a polymer based on Victorinox's SmartSteel, allowing it
+to mold and contour itself in a flexible state when not in use. While in
+the flexible state, increase Concealability Thresholds by 3. Changing to
+or from this flexible state requires an Interact with Device Action. The
+Ghost may not fire while in it's flexible state, and may not accept any
+other modifications or accessories. \emph{Electronic Firing},
+\emph{Personalized Grip}, \emph{Smartlink}.
 
-\gearitem{Cavalier Arms Adder Slivergun (3mm Cavalier)}{Reminiscent of a pared down Ares Viper Slivergun, this pistol was originally developed for a mail-delivery corp. The Adder's damage codes have been factored for flechette ammunition.}{Caseless Only, Flechette Only}
+\textbf{Cavalier Arms Adder Slivergun} (3mm Cavalier): Reminiscent of a
+pared down Ares Viper Slivergun, this pistol was originally developed
+for a mail-delivery corp. The Adder's damage codes have been factored
+for flechette ammunition. \emph{Caseless Only}, \emph{Flechette Only}.
 
-\gearitem{Cavalier Arms Dragoon (3mm Cavalier)}{A pistol designed for larger metahumans and designed to exacting quality control standards.}{Metahuman Adaptation}
+\textbf{Cavalier Arms Dragoon} (3mm Cavalier): A pistol designed for
+larger metahumans and designed to exacting quality control standards.
+\emph{Metahuman Adaptation}.
 
-\gearitem{Ceska vz/120 (.38 Auto)}{This Czech made light service pistol is widely used in Eastern Euoprean militaries.}{}
+\textbf{Ceska vz/120} (.38 Auto): This Czech made light service pistol
+is widely used in Eastern Euoprean militaries.
 
-\gearitem{Colt America L36 (.38 Auto)}{Colt's ubiquitous classic light pistol design. Available anywhere, easily concealable, and cheap; the perfect throwaway weapon. When wirelessly enabled this pistol's registry info and ownership data can be changed at the drop of a hat.}{}
+\textbf{Colt America L36} (.38 Auto): Colt's ubiquitous classic light
+pistol design. Available anywhere, easily concealable, and cheap; the
+perfect throwaway weapon. When wirelessly enabled this pistol's registry
+info and ownership data can be changed at the drop of a hat.
 
-\gearitem{Colt Asp (.38 Special)}{The Colt Asp is a cheap, effective, solid performer of a revolver, but it lacks the power or ammo capacity of many other light pistols.}{Double Action}
+\textbf{Colt Asp} (.38 Special): The Colt Asp is a cheap, effective,
+solid performer of a revolver, but it lacks the power or ammo capacity
+of many other light pistols. \emph{Double Action}.
 
-\gearitem{Colt Coral Snake (9mm Para)}{A best selling home defense weapon that offers exceptional range to other sidearms in its class. Endorsed by Lone Star.}{Double Action, Laser Sight}
+\textbf{Colt Coral Snake} (9mm Para): A best selling home defense weapon
+that offers exceptional range to other sidearms in its class. Endorsed
+by Lone Star. \emph{Double Action}, \emph{Laser Sight}.
 
-\gearitem{Colt Special Agent (.40 S\&W)}{Continuous upgrades have kept this Colt frame in service for over a century. An easily concealable, nearly hold-out sized pistol that packs in a small, but quite powerful number of rounds more suited to a heavy pistol. The Colt Special Agent does not have room for any internal modifications.}{Vintage}
+\textbf{Colt Special Agent} (.40 S\&W): Continuous upgrades have kept
+this Colt frame in service for over a century. An easily concealable,
+nearly hold-out sized pistol that packs in a small, but quite powerful
+number of rounds more suited to a heavy pistol. The Colt Special Agent
+does not have room for any internal modifications. \emph{Vintage}.
 
-\gearitem{Fichetti Executive Action (4mm Fichetti)}{Burst fire capable light pistol with a high magazine capacity. Simple and Effective, it has no other stock features.}{Caseless Only, Extended Magazine}
+\textbf{Fichetti Executive Action} (4mm Fichetti): Burst fire capable
+light pistol with a high magazine capacity. Simple and Effective, it has
+no other stock features. \emph{Caseless Only}, \emph{Extended Magazine}.
 
-\gearitem{Fichetti Security 500 (4mm Fichetti)}{Popular with security forces for its ease of use.}{Caseless Only}
+\textbf{Fichetti Security 500} (4mm Fichetti): Popular with security
+forces for its ease of use. \emph{Caseless Only}.
 
-\gearitem{Fichetti Security 500A (4mm Fichetti)}{Extended magazine variant of the Fichetti Security 500.}{Caseless Only, Extended Magazine}
+\textbf{Fichetti Security 500A} (4mm Fichetti): Extended magazine
+variant of the Fichetti Security 500. \emph{Caseless Only},
+\emph{Extended Magazine}.
 
-\gearitem{Fichetti Security 600 (4mm Fichetti)}{Updated version of Fichetti's popular security pistol witih an even more efficient feeding mechanism. Comes standard with a detachable folding stock and a laser sight.}{Caseless Only, Folding Stock, Laser Sight}
+\textbf{Fichetti Security 600} (4mm Fichetti): Updated version of
+Fichetti's popular security pistol witih an even more efficient feeding
+mechanism. Comes standard with a detachable folding stock and a laser
+sight. \emph{Caseless Only}, \emph{Folding Stock}, \emph{Laser Sight}.
 
-\gearitem{Fichetti Thunder (4mm Fichetti)}{A strange offering from Fichetti, the Thunder makes use of the `metal storm' concept of barrels packed with multiple in-line rounds that can be electronically fired in quick succession, increasing the rate of fire but requiring a full barrel replacement (with pre-loaded ammunition) or a lengthy muzzle loading process. The Thunder is designed to quickly swap its 4 barrels, each containing 6 caseless rounds. Designed for larger metahumans, a puzzling choice given the small caliber and most Ork and Troll desires when it comes to firearms. When firing the Thunder empties an entire barrel, shooting 6 shots with a single burst. The Thunder can be reloaded by inserting individual caseless rounds into a barrel, but more commonly entire loaded barrels are swapped out for empty barrels; this uses the same mechanics as a normal magazine change with 1 Reload Action per barrel switched.}{Electronic Firing, Metahuman Adaptation}
+\textbf{Fichetti Thunder} (4mm Fichetti): A strange offering from
+Fichetti, the Thunder makes use of the `metal storm' concept of barrels
+packed with multiple in-line rounds that can be electronically fired in
+quick succession, increasing the rate of fire but requiring a full
+barrel replacement (with pre-loaded ammunition) or a lengthy muzzle
+loading process. The Thunder is designed to quickly swap its 4 barrels,
+each containing 6 caseless rounds. Designed for larger metahumans, a
+puzzling choice given the small caliber and most Ork and Troll desires
+when it comes to firearms. When firing the Thunder empties an entire
+barrel, shooting 6 shots with a single burst. The Thunder can be
+reloaded by inserting individual caseless rounds into a barrel, but more
+commonly entire loaded barrels are swapped out for empty barrels; this
+uses the same mechanics as a normal magazine change with 1 Reload Action
+per barrel switched. \emph{Electronic Firing}, \emph{Metahuman
+Adaptation}.
 
-\gearitem{Hammerli 610S (9mm Para)}{A target pistol that is highly accurate to extended ranges, the Hammerli 610S features custom, personalized grips and the precision machined components one would expect of Hammerli. It cannot mount barrel accessories due to an integral gas-vent system.}{Gas Vent Rating 1, Personalized Grip}
+\textbf{Hammerli 610S} (9mm Para): A target pistol that is highly
+accurate to extended ranges, the Hammerli 610S features custom,
+personalized grips and the precision machined components one would
+expect of Hammerli. It cannot mount barrel accessories due to an
+integral gas-vent system. \emph{Gas Vent Rating 1}, \emph{Personalized
+Grip}.
 
-\gearitem{Hammerli 620S (9mm Para)}{An update of the 610S, the Hammerli 620S features the same sleek and stylish design and quality of manufacture, along with the integral gas-vent system. It may not live up to its predecessor's potential accuracy as a customized target pistol, but makes up for it with a cheaper cost and the addition of a smartgun system.}{Gas Vent Rating 1, Smartlink}
+\textbf{Hammerli 620S} (9mm Para): An update of the 610S, the Hammerli
+620S features the same sleek and stylish design and quality of
+manufacture, along with the integral gas-vent system. It may not live up
+to its predecessor's potential accuracy as a customized target pistol,
+but makes up for it with a cheaper cost and the addition of a smartgun
+system. \emph{Gas Vent Rating 1}, \emph{Smartlink}.
 
 \textbf{HK Caveat} (): A large framed H\&K pistol that can intimidating
 pass for a much heavier, more powerful, and dangerous weapon. Commonly
 carried by corp suits with more bark than bite.
 
-\gearitem{HK P50 Tactical (9mm Para)}{An integral Smartgun system, an offline laser sight, and the ability to field strip to base parts in seconds make this sleek offering from HK quite desirable.}{Easy Breakdown, Laser Sight, Smartlink}
+\textbf{HK P50 Tactical} (9mm Para): An integral Smartgun system, an
+offline laser sight, and the ability to field strip to base parts in
+seconds make this sleek offering from HK quite desirable. \emph{Easy
+Breakdown}, \emph{Laser Sight}, \emph{Smartlink}.
 
-\gearitem{Krime Stopper (12 gauge)}{A break action 12 gauge side-by-side shotgun that has essentially been cut down into a pistol, but sized for beefy hands as is the standard of Krime weapons. Contains a clip for hodling 5 shells under the barrels for quick and easy reloading.}{Ammo Storage, Metahuman Adaptation, Short Barrel}
+\textbf{Krime Stopper} (12 gauge): A break action 12 gauge side-by-side
+shotgun that has essentially been cut down into a pistol, but sized for
+beefy hands as is the standard of Krime weapons. Contains a clip for
+hodling 5 shells under the barrels for quick and easy reloading.
+\emph{Ammo Storage}, \emph{Metahuman Adaptation}, \emph{Short Barrel}.
 
 \textbf{Mauser Ladyline} (): An elegant pistol with a feminine design
 but suprising stopping power.
 
-\gearitem{Nitama Sporter (.38 Special)}{A popular home defense pistol that suffers from a small internal magazine. The Nitama Sporter is lightweight, has low felt recoil, is equipped with a long barrel, and features a built in laser sight, Originally marketed for smaller sized metahumans.}{Laser Sight, Long Barrel, Metahuman Adaptation}
+\textbf{Nitama Sporter} (.38 Special): A popular home defense pistol
+that suffers from a small internal magazine. The Nitama Sporter is
+lightweight, has low felt recoil, is equipped with a long barrel, and
+features a built in laser sight, Originally marketed for smaller sized
+metahumans. \emph{Laser Sight}, \emph{Long Barrel}, \emph{Metahuman
+Adaptation}.
 
-\gearitem{Onotari Arms Security Special (.40 S\&W)}{Onotari Arms' Security Special is a highly advanced pistol with a complete electronics suite intended for security and law enforcement. It features a smartgun system enhanced by an ammunition skip and safe target system, allowing its users to know where every shot will go and when it needs to be there.}{Ammo Skip System, Safe Target System, Smartlink}
+\textbf{Onotari Arms Security Special} (.40 S\&W): Onotari Arms'
+Security Special is a highly advanced pistol with a complete electronics
+suite intended for security and law enforcement. It features a smartgun
+system enhanced by an ammunition skip and safe target system, allowing
+its users to know where every shot will go and when it needs to be
+there. \emph{Ammo Skip System}, \emph{Safe Target System},
+\emph{Smartlink}.
 
-\gearitem{Ruger Redhawk (.357 Magnum)}{This revolver is the little brother of Ruger's Super Warhawk and features the same rugged construction and dependability. A revolutionary action system allows this revolver to switch from single action to an automatic action with the flip of a switch, requiring an Interact with Device action.}{Single Action}
+\textbf{Ruger Redhawk} (.357 Magnum): This revolver is the little
+brother of Ruger's Super Warhawk and features the same rugged
+construction and dependability. A revolutionary action system allows
+this revolver to switch from single action to an automatic action with
+the flip of a switch, requiring an Interact with Device action.
+\emph{Single Action}.
 
-\gearitem{Seco LD-120 (9mm Para)}{A remake of Israel's LD-100 pistol, the Seco LD-120 comes with an integral top-mounted laser sight.}{Laser Sight}
+\textbf{Seco LD-120} (9mm Para): A remake of Israel's LD-100 pistol, the
+Seco LD-120 comes with an integral top-mounted laser sight. \emph{Laser
+Sight}.
 
-\gearitem{Shiawase Arms Hearth Protector (.32 Auto)}{Marketed as a home defense pistol, the Hearth Protector has been endorsed by law enforcement agencies and features a lightweight, slim, low recoiling design that is easily controllable.}{Advanced Safety (Basic)}
+\textbf{Shiawase Arms Hearth Protector} (.32 Auto): Marketed as a home
+defense pistol, the Hearth Protector has been endorsed by law
+enforcement agencies and features a lightweight, slim, low recoiling
+design that is easily controllable. \emph{Advanced Safety (Basic)}.
 
-\gearitem{Shiawase Arms Light Tactical (5mm Shiawase)}{Shiawase Arms' Light Tactical is a lightweight service pistol designed with input from law enforcement. Polymer panels and an alloy frame allow extended carry without discomfort. Various inserts allow any user to customize the grip to their requirements. To top it off, a powered slide crammed into the underside of the barrel allows this pistol to accept one more aftermarket accessory than normal.}{Personalized Grip, Powered Slide}
+\textbf{Shiawase Arms Light Tactical} (5mm Shiawase): Shiawase Arms'
+Light Tactical is a lightweight service pistol designed with input from
+law enforcement. Polymer panels and an alloy frame allow extended carry
+without discomfort. Various inserts allow any user to customize the grip
+to their requirements. To top it off, a powered slide crammed into the
+underside of the barrel allows this pistol to accept one more
+aftermarket accessory than normal. \emph{Personalized Grip},
+\emph{Powered Slide}.
 
-\gearitem{Shiawase Arms Puzzler (5mm Shiawase)}{The Puzzler is made from what appear to be twenty different ordinary everyday items. To assemble into a firearm or to disassemble back to the component pieces requires an Armor + LOG (6, 1 minute) Extended Test. A glitch requires starting over; a critical glitch causes damage, rendering the weapon inoperative. Identifying the individual items as a firearm requires an Armor + LOG (3) Test or Perception + INT (4).}{}
+\textbf{Shiawase Arms Puzzler} (5mm Shiawase): The Puzzler is made from
+what appear to be twenty different ordinary everyday items. To assemble
+into a firearm or to disassemble back to the component pieces requires
+an Armor + LOG (6, 1 minute) Extended Test. A glitch requires starting
+over; a critical glitch causes damage, rendering the weapon inoperative.
+Identifying the individual items as a firearm requires an Armor + LOG
+(3) Test or Perception + INT (4).
 
-\gearitem{Taurus Mark XXXI (5mm Taurus)}{Endorsed by multiple corporations as the epitome of home defense, this light pistol features RFID tracking ammunition that is more useful for tagging an intruder than harming them. It is so unlikely to cause death that multiple insurance corps have offered a discount to homeowners who possess this, and only this, firearm.}{Caseless Only, Laser Sight}
+\textbf{Taurus Mark XXXI} (5mm Taurus): Endorsed by multiple
+corporations as the epitome of home defense, this light pistol features
+RFID tracking ammunition that is more useful for tagging an intruder
+than harming them. It is so unlikely to cause death that multiple
+insurance corps have offered a discount to homeowners who possess this,
+and only this, firearm. \emph{Caseless Only}, \emph{Laser Sight}.
 
-\gearitem{Taurus Omni-6 (.38 Special/.357 Magnum)}{A rugged and reliable revolver design that can load multiple types of ammunition. Interchangeable cylinders offer an easy swap between cased and caseless ammunition. Comes with an integral laser sight.}{Laser Sight, Single Action}
+\textbf{Taurus Omni-6} (.38 Special/.357 Magnum): A rugged and reliable
+revolver design that can load multiple types of ammunition.
+Interchangeable cylinders offer an easy swap between cased and caseless
+ammunition. Comes with an integral laser sight. \emph{Laser Sight},
+\emph{Single Action}.
 
-\gearitem{Walther P99 (9mm Para)}{A classic Walther design with new production under Saeder-Krupp and many unlicensed knock-offs worldwide.}{Vintage}
+\textbf{Walther P99} (9mm Para): A classic Walther design with new
+production under Saeder-Krupp and many unlicensed knock-offs worldwide.
+\emph{Vintage}.
 
-\gearitem{Walther PB-120 (.38 Auto)}{Walther's modern evolution of the venerable PPK is one of the most popular, if a bit dated, sidearms of mercenaries and air crews. An extended magazine is readily available for 12¥ each, but lowers the Concealability threshold by 1 when equipped.}{}
+\textbf{Walther PB-120} (.38 Auto): Walther's modern evolution of the
+venerable PPK is one of the most popular, if a bit dated, sidearms of
+mercenaries and air crews. An extended magazine is readily available for
+12¥ each, but lowers the Concealability threshold by 1 when equipped.
 
-\gearitem{Walther PP110 (.38 Auto)}{In response to glitches in the initial run of the Fichetti Executive Action, Walther attempted to increase their market share by releasing the PP110. Remarkably accurate, but lacking in stopping power, the PP110 benefits from a high capacity double stack magazine, an integral flashlight that can be swapped for a laser sight for +150¥, and a customizable backstrap to fit any size hand. Walther included a highly advanced biometric safety system since this pistol was intended for corporate security and law enforcement use.}{Advanced Safety, Flashlight, Metahuman Adaptation}
+\textbf{Walther PP110} (.38 Auto): In response to glitches in the
+initial run of the Fichetti Executive Action, Walther attempted to
+increase their market share by releasing the PP110. Remarkably accurate,
+but lacking in stopping power, the PP110 benefits from a high capacity
+double stack magazine, an integral flashlight that can be swapped for a
+laser sight for +150¥, and a customizable backstrap to fit any size
+hand. Walther included a highly advanced biometric safety system since
+this pistol was intended for corporate security and law enforcement use.
+\emph{Advanced Safety}, \emph{Flashlight}, \emph{Metahuman Adaptation}.
 
-\gearitem{Yamaha Sakura Fubuki (6mm Yamaha)}{Yamaha's ``Cherry Blossom Storm'' is a radical design for a light pistol. In place of normal magazines, it features a quartet of barrels stacked for most of their length with in-line caseless rounds firing a flat, coin shaped bullet. There are no moving parts inside the pistol and it is capable of firing rapid bursts; for this reason a folding stock is included that merges with the pistol grip when not in use. Each pull of the trigger fires 1 shot from all 4 barrels (a 4 round burst), or 10 shots from a single barrel (a full auto attack); may be wirelessly or manually selected. Reloads the same as the Fichetti Thunder, swapping 1 pre-loaded barrel for an empty barrel with a Reload Action the same as magazine changes for detachable mag firearms.}{Electronic Firing, Folding Stock}
+\textbf{Yamaha Sakura Fubuki} (6mm Yamaha): Yamaha's ``Cherry Blossom
+Storm'' is a radical design for a light pistol. In place of normal
+magazines, it features a quartet of barrels stacked for most of their
+length with in-line caseless rounds firing a flat, coin shaped bullet.
+There are no moving parts inside the pistol and it is capable of firing
+rapid bursts; for this reason a folding stock is included that merges
+with the pistol grip when not in use. Each pull of the trigger fires 1
+shot from all 4 barrels (a 4 round burst), or 10 shots from a single
+barrel (a full auto attack); may be wirelessly or manually selected.
+Reloads the same as the Fichetti Thunder, swapping 1 pre-loaded barrel
+for an empty barrel with a Reload Action the same as magazine changes
+for detachable mag firearms. \emph{Electronic Firing}, \emph{Folding
+Stock}.
 
-\gearitem{Yamaha Sakura Fubuki Six (6mm Yamaha)}{A new version of the ``Cherry Blossom Storm'' that is more reliable, more compact, and less than half the cost, but carries slightly less ammunition. Each of the four barrels only holds 8 caseless rounds and it lacks the folding stock of the original. A manual switch or wireless activation can set whether each trigger pull fires a single round, or a 4 round burst of 1 shot from each barrel simultaneously; otherwise the Fubuki Six functions the same as its predecessor.}{Electronic Firing}
+\textbf{Yamaha Sakura Fubuki Six} (6mm Yamaha): A new version of the
+``Cherry Blossom Storm'' that is more reliable, more compact, and less
+than half the cost, but carries slightly less ammunition. Each of the
+four barrels only holds 8 caseless rounds and it lacks the folding stock
+of the original. A manual switch or wireless activation can set whether
+each trigger pull fires a single round, or a 4 round burst of 1 shot
+from each barrel simultaneously; otherwise the Fubuki Six functions the
+same as its predecessor. \emph{Electronic Firing}.
 
-
-
-\gearitem{Glock-Mini Giftzwerg (Special)}{Known as the 'poison dwarf', this unique light pistol only fires special explosive rounds. Although it operates as a single shot weapon, the impact makes up for it.}{Custom Ammo}
-
-\gearitem{HK Caveat (9mm Para)}{A large framed H\&K pistol that can intimidating pass for a much heavier, more powerful, and dangerous weapon. Commonly carried by corp suits with more bark than bite.}{}
-
-\gearitem{Mauser Ladyline (.38 Auto)}{Mauser’s “Ladyline” models were originally made for female execs, tailored to fit smaller hands, but they soon found widespread acceptance amongst the metahuman varieties since they fit dwarves almost identically.}{Metahuman Customization}
-
-\end{multicols}
-\begin{longtblr}{
-  colspec = {X[1.5,l] *{10}{X[c]}},
-  row{1} = {bg=srdark, fg=white, font=\bfseries},
-  row{even} = {bg=gray!10},
-  hlines, vlines
-}
-Light Pistols & ACC & DV & AP & MODE & RC & RANGE & AMMO & AVAIL & WEIGHT & COST \\
-Ares Light Fire 70 & 6(7) & 5P & -1 & SA & – & Near & 16(dm) & 3(R) & 0.50 & 750¥ \\
-Ares Light Fire 75 & 6(8) & 5P & -1 & SA & – & Near & 16(dm) & 6(F) & 0.50 & 1,250¥ \\
-Barrens Special & 2 & 3P & – & SS & – & Close & 5(cy) & 2(R) & 1.00 & 100¥ \\
-Beretta 101T & 7 & 4P & -1 & SA & – & Near & 12(dm) & 2(R) & 1.00 & 250¥ \\
-Beretta 200ST & 5 & 4P & -1 & SA/FA & (1) & Near & 26(dm) & 8(F) & 2.00 & 700¥ \\
-Beretta 201T & 6 & 4P & -1 & SA/BF & (1) & Near & 21(dm) & 7(R) & 2.00 & 750¥ \\
-Beretta 92SL & 5 & 5P & -1 & SA & – & Near & 15(dm) & 1(R) & 1.50 & 300¥ \\
-Browning Ghost & 5(8) & 5P & -1 & SA & 1 & Near & 10(dm) & 12(R) & 1.25 & 1,500¥ \\
-CA Adder Slivergun & 5 & 4P(f) & +3 & SA & – & Close & 20(dm) & 7(F) & 1.50 & 460¥ \\
-Cavalier Arms Dragoon & 6 & 2P & -2 & SA & – & Near & 28(dm) & 5(R) & 2.00 & 575¥ \\
-Ceska vz/120 & 6 & 4P & -1 & SA & – & Near & 18(dm) & 3(R) & 1.00 & 375¥ \\
-Colt America L36 & 7 & 4P & -1 & SA & – & Near & 11(dm) & –(R) & 1.00 & 320¥ \\
-Colt Asp & 5 & 5P & – & SS & – & Near & 6(cy) & 3(R) & 1.00 & 175¥ \\
-Colt Coral Snake & 4(5) & 5P & -1 & SS & – & Far & 5(cy) & 1(R) & 1.00 & 275¥ \\
-Colt Special Agent & 5 & 7P & -1 & SA & – & Near & 8(dm) & 5(R) & 1.25 & 400¥ \\
-Fichetti Executive Action & 5 & 3P & -3 & SA/BF & – & Near & 18(dm) & 10(R) & 1.25 & 500¥ \\
-Fichetti Security 500 & 5 & 3P & -3 & SA & – & Near & 10(dm) & 4(R) & 1.00 & 300¥ \\
-Fichetti Security 500A & 5 & 3P & -3 & SA & – & Near & 22(dm) & 6(R) & 1.25 & 350¥ \\
-Fichetti Security 600 & 6(7) & 3P & -3 & SA & (1) & Near & 30(dm) & 6(R) & 1.50 & 450¥ \\
-Fichetti Thunder & 5 & 3P & -3 & BF & – & Near & 6(ml)x4 & 6(R) & 2.00 & 800¥ \\
-Glock-Mini Giftzwerg & 5 & 6P & -2 & SS & – & Near & 6(m) & 10(R) & 1.50 & 800¥ \\
-Hammerli 610S & 7(8) & 5P & -1 & SA & 1 & Far & 6(dm) & 10(R) & 2.50 & 1,300¥ \\
-Hammerli 620S & 5(7) & 5P & -1 & SA & 1 & Far & 6(dm) & 8(R) & 2.50 & 650¥ \\
-HK Caveat & 5 & 5P & -1 & SA & – & Near & 9(dm) & 4(R) & 1.25 & 500¥ \\
-HK P50 Tactical & 6(8) & 5P & -1 & SA & – & Near & 15(dm) & 4(R) & 2.00 & 600¥ \\
-Krime Stopper & 5 & 10P & -3 & SS & – & Close & 2(b) & 10(R) & 2.75 & 375¥ \\
-Mauser Ladyline & 5 & 4P & -2 & SA & – & Near & 8(dm) & 4(R) & 0.75 & 350¥ \\
-Nitama Sporter & 6(7) & 5P & – & SA & 1 & Far & 5(m) & 4(R) & 0.75 & 475¥ \\
-Onotari Arms Security Special & 5(7) & 7P & -1 & SA & – & Near & 11(dm) & 7(R) & 2.25 & 625¥ \\
-Ruger Redhawk & 5 & 6P & -2 & SS/SA & – & Near & 8(cy) & 6(R) & 1.75 & 500¥ \\
-Seco LD-120 & 5(6) & 5P & -1 & SA & – & Near & 12(dm) & 4(R) & 1.00 & 325¥ \\
-Shiawase Hearth Protector & 5 & 3P & – & SA & – & Near & 7(dm) & 3(R) & 0.50 & 350¥ \\
-Shiawase Arms Light Tactical & 5(6) & 5P & -4 & SA & – & Near & 16(dm) & 7(R) & 1.25 & 1,050¥ \\
-Shiawase Arms Puzzler & 4 & 5P & -4 & SA & – & Near & 12(dm) & 14(F) & 1.00 & 1,000¥ \\
-Taurus Mark XXXI & 4(5) & 1P & +3 & SS & 1 & Close & 5(m) & 5(R) & 1.00 & 250¥ \\
-Taurus Omni-6 (.38) & 5(6) & 5P & – & SS & – & Near & 6(cy) & 3(R) & 1.25 & 300¥ \\
-Taurus Omni-6 (.357) & 5(6) & 6P & -2 & SS & – & Near & 6(cy) & 3(R) & 1.25 & 300¥ \\
-Walther P99 & 6 & 5P & -1 & SA & – & Near & 12(dm) & 4(R) & 1.25 & 350¥ \\
-Walther PB-120 & 6 & 4P & -1 & SA & – & Near & 10/15(dm) & 7(R) & 0.75 & 450¥ \\
-Walther PP110 & 7 & 4P & -1 & SA & – & Near & 16(dm) & 7(R) & 1.50 & 675¥ \\
-Yamaha Sakura Fubuki & 5 & 3P & – & BF/FA & 1(2) & Close & 10(ml)x4 & 10(R) & 1.75 & 2,000¥ \\
-Yamaha Sakura Fubuki Six & 6 & 3P & – & SA/BF & 1 & Close & 8(ml)x4 & 10(R) & 1.50 & 750¥ \\
-\end{longtblr}
-\begin{multicols}{2}
-
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Light Pistols
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ACC
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+DV
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AP
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+MODE
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+RC
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+RANGE
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AMMO
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AVAIL
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+WEIGHT
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+COST
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ares Light Fire 70 & 6(7) & 5P & -1 & SA & 0 & Near & 16(dm) & 3(R) &
+0.50 & 350¥ \\
+Ares Light Fire 75 & 6(8) & 5P & -1 & SA & 0 & Near & 16(dm) & 6(F) &
+0.50 & 350¥ \\
+Barrens Special & 2 & 3P & 0 & SS & 0 & Close & 5(cy) & 2(R) & 1.00 &
+150¥ \\
+Beretta 101T & 7 & 4P & -1 & SA & 0 & Near & 12(dm) & 2(R) & 1.00 &
+300¥ \\
+Beretta 200ST & 5 & 4P & -1 & SA/FA & (1) & Near & 26(dm) & 8(F) & 2.00
+& 900¥ \\
+Beretta 201T & 6 & 4P & -1 & SA/BF & (1) & Near & 21(dm) & 7(R) & 2.00 &
+600¥ \\
+Beretta 92SL & 5 & 5P & -1 & SA & 0 & Near & 15(dm) & 1(R) & 1.50 &
+300¥ \\
+Browning Ghost & 5(8) & 5P & -1 & SA & 1 & Near & 10(dm) & 12(R) & 1.25
+& 400¥ \\
+CA Adder Slivergun & 5 & 4P(f) & +3 & SA & 0 & Close & 20(dm) & 7(F) &
+1.50 & 300¥ \\
+Cavalier Arms Dragoon & 6 & 2P & -2 & SA & 0 & Near & 28(dm) & 5(R) &
+2.00 & 400¥ \\
+Ceska vz/120 & 6 & 4P & -1 & SA & 0 & Near & 18(dm) & 3(R) & 1.00 &
+300¥ \\
+Colt America L36 & 7 & 4P & -1 & SA & 0 & Near & 11(dm) & --(R) & 1.00 &
+300¥ \\
+Colt Asp & 5 & 5P & 0 & SS & 0 & Near & 6(cy) & 3(R) & 1.00 & 200¥ \\
+Colt Coral Snake & 4(5) & 5P & -1 & SS & 0 & Far & 5(cy) & 1(R) & 1.00 &
+200¥ \\
+Colt Special Agent & 5 & 7P & -1 & SA & 0 & Near & 8(dm) & 5(R) & 1.25 &
+350¥ \\
+Fichetti Executive Action & 5 & 3P & -3 & SA/BF & 0 & Near & 18(dm) &
+10(R) & 1.25 & 550¥ \\
+Fichetti Security 500 & 5 & 3P & -3 & SA & 0 & Near & 10(dm) & 4(R) &
+1.00 & 350¥ \\
+Fichetti Security 500A & 5 & 3P & -3 & SA & 0 & Near & 22(dm) & 6(R) &
+1.25 & 450¥ \\
+Fichetti Security 600 & 6(7) & 3P & -3 & SA & (1) & Near & 30(dm) & 6(R)
+& 1.50 & 550¥ \\
+Fichetti Thunder & 5 & 3P & -3 & BF & 0 & Near & 6(ml)x4 & 6(R) & 2.00 &
+500¥ \\
+\textbf{Glock-Mini Giftzwerg} (Special): Known as the `poison dwarf',
+this unique light pistol only fires special explosive rounds. Although
+it operates as a single shot weapon, the impact makes up for it. &
+\emph{Custom Ammo}. & & & & & & & & & \\
+Glock-Mini Giftzwerg & 5 & 6P & -2 & SS & 0 & Near & 6(m) & 10(R) & 1.50
+& 300¥ \\
+Hammerli 610S & 7(8) & 5P & -1 & SA & 1 & Far & 6(dm) & 10(R) & 2.50 &
+400¥ \\
+Hammerli 620S & 5(7) & 5P & -1 & SA & 1 & Far & 6(dm) & 8(R) & 2.50 &
+400¥ \\
+\textbf{HK Caveat} (9mm Para): A large framed H\&K pistol that can
+intimidating pass for a much heavier, more powerful, and dangerous
+weapon. Commonly carried by corp suits with more bark than bite. & & & &
+& & & & & & \\
+HK Caveat & 5 & 5P & -1 & SA & 0 & Near & 9(dm) & 4(R) & 1.25 & 300¥ \\
+HK P50 Tactical & 6(8) & 5P & -1 & SA & 0 & Near & 15(dm) & 4(R) & 2.00
+& 300¥ \\
+Krime Stopper & 5 & 10P & -3 & SS & 0 & Close & 2(b) & 10(R) & 2.75 &
+450¥ \\
+\textbf{Mauser Ladyline} (5mm Shiawase): An elegant pistol with a
+feminine design but suprising stopping power. & & & & & & & & & & \\
+Mauser Ladyline & 5 & 4P & -2 & SA & 0 & Near & 8(dm) & 4(R) & 0.75 &
+300¥ \\
+Nitama Sporter & 6(7) & 5P & 0 & SA & 1 & Far & 5(m) & 4(R) & 0.75 &
+300¥ \\
+Onotari Arms Security Special & 5(7) & 7P & -1 & SA & 0 & Near & 11(dm)
+& 7(R) & 2.25 & 350¥ \\
+Ruger Redhawk & 5 & 6P & -2 & SS/SA & 0 & Near & 8(cy) & 6(R) & 1.75 &
+350¥ \\
+Seco LD-120 & 5(6) & 5P & -1 & SA & 0 & Near & 12(dm) & 4(R) & 1.00 &
+300¥ \\
+Shiawase Hearth Protector & 5 & 3P & 0 & SA & 0 & Near & 7(dm) & 3(R) &
+0.50 & 200¥ \\
+Shiawase Arms Light Tactical & 5(6) & 5P & -4 & SA & 0 & Near & 16(dm) &
+7(R) & 1.25 & 500¥ \\
+Shiawase Arms Puzzler & 4 & 5P & -4 & SA & 0 & Near & 12(dm) & 14(F) &
+1.00 & 450¥ \\
+Taurus Mark XXXI & 4(5) & 1P & +3 & SS & 1 & Close & 5(m) & 5(R) & 1.00
+& 250¥ \\
+Taurus Omni-6 (.38) & 5(6) & 5P & 0 & SS & 0 & Near & 6(cy) & 3(R) &
+1.25 & 200¥ \\
+Taurus Omni-6 (.357) & 5(6) & 6P & -2 & SS & 0 & Near & 6(cy) & 3(R) &
+1.25 & 300¥ \\
+Walther P99 & 6 & 5P & -1 & SA & 0 & Near & 12(dm) & 4(R) & 1.25 &
+300¥ \\
+Walther PB-120 & 6 & 4P & -1 & SA & 0 & Near & 10/15(dm)7(R) & 0.75 &
+300¥ & \\
+Walther PP110 & 7 & 4P & -1 & SA & 0 & Near & 16(dm) & 7(R) & 1.50 &
+300¥ \\
+Yamaha Sakura Fubuki & 5 & 3P & 0 & BF/FA & 1(2) & Close & 10(ml)x4 &
+10(R) & 1.75 & 750¥ \\
+Yamaha Sakura Fubuki Six & 6 & 3P & 0 & SA/BF & 1 & Close & 8(ml)x4 &
+10(R) & 1.50 & 450¥ \\
+\end{longtable}
 
 \textbf{Heavy Pistols} - Large pistols that pack lots of firepower.
 Capable of taking both barrel mounted and top-mounted accessories.
@@ -3483,7 +3691,6 @@ Zastava for various eastern European military and police concerns. It
 became very popular with the criminal underworld and shadowrunners after
 all records of production were lost in Crash 2.0.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -3525,170 +3732,168 @@ COST
 \bottomrule\noalign{}
 \endlastfoot
 Altmayr Black Moon & 6 & 8P & -3 & SA & 1 & Far & 6(cy) & 6(R) & 2.75 &
-1,150¥ \\
+550¥ \\
 \textbf{Altmayr White Star} (10mm Auto): The standard issue sidearm for
 Sternschutz Security personnel. Reliable, sturdy, and packs a sufficient
 punch for law enforcement operations. & & & & & & & & & & \\
 Altmayr White Star & 5(6) & 7P & -1 & SA & 1 & Near & 14(dm) & 5(R) &
-2.25 & 500¥ \\
+2.25 & 450¥ \\
 Ares Predator I & 5 & 8P & -2 & SA & 1 & Near & 10(dm) & 8(R) & 2.00 &
-350¥ \\
-Ares Predator II & 5 & 5P & -1 & SA & -- & Near & 15(dm) & 8(R) & 1.50 &
 550¥ \\
+Ares Predator II & 5 & 5P & -1 & SA & 0 & Near & 15(dm) & 8(R) & 1.50 &
+300¥ \\
 Ares Predator III & 5(7) & 8P & -2 & SA & 1 & Near & 15(dm) & 9(R) &
-2.50 & 750¥ \\
-Ares Predator IV & 5(7) & 8P & -2 & SA & -- & Near & 15(dm) & 4(R) &
-2.50 & 650¥ \\
+2.50 & 550¥ \\
+Ares Predator IV & 5(7) & 8P & -2 & SA & 0 & Near & 15(dm) & 4(R) & 2.50
+& 450¥ \\
 Ares Predator CW & 5(7) & 8P & -2 & SA & 1 & Near & 15(dm) & 10(R) &
-2.50 & 1,500¥ \\
-Ares Predator V & 5(7) & 8P & -2 & SA & -- & Near & 15(dm) & 5(R) & 2.25
-& 725¥ \\
-Ares Predator VI & 5(7) & 8P & -2 & SA/BF & -- & Near & 15(dm) & 6(F) &
-2.25 & 1,750¥ \\
-Ares Striker & 5(6) & 6P & -1 & SA & -- & Near & 12(dm) & 4(R) & 2.00 &
-400¥ \\
-Ares Viper Silvergun & 4 & 6P(f) & +4 & SA/BF & -- & Near & 30(dm) &
-8(F) & 2.00 & 850¥ \\
-Beretta 97 & 5 & 7P & -1 & SA/BF & -- & Near & 15(dm) & 6(F) & 2.25 &
-750¥ \\
-Browning Max-Power & 5(6) & 7P & -1 & SA & -- & Near & 10(dm) & 4(R) &
-2.00 & 450¥ \\
-Browning Mega-Power & 5(7) & 7P & -1 & SA & -- & Near & 15(dm) & 5(R) &
-2.25 & 850¥ \\
+2.50 & 550¥ \\
+Ares Predator V & 5(7) & 8P & -2 & SA & 0 & Near & 15(dm) & 5(R) & 2.25
+& 450¥ \\
+Ares Predator VI & 5(7) & 8P & -2 & SA/BF & 0 & Near & 15(dm) & 6(F) &
+2.25 & 600¥ \\
+Ares Striker & 5(6) & 6P & -1 & SA & 0 & Near & 12(dm) & 4(R) & 2.00 &
+350¥ \\
+Ares Viper Silvergun & 4 & 6P(f) & +4 & SA/BF & 0 & Near & 30(dm) & 8(F)
+& 2.00 & 500¥ \\
+Beretta 97 & 5 & 7P & -1 & SA/BF & 0 & Near & 15(dm) & 6(F) & 2.25 &
+500¥ \\
+Browning Max-Power & 5(6) & 7P & -1 & SA & 0 & Near & 10(dm) & 4(R) &
+2.00 & 350¥ \\
+Browning Mega-Power & 5(7) & 7P & -1 & SA & 0 & Near & 15(dm) & 5(R) &
+2.25 & 350¥ \\
 Browning Phantom & 4(7) & 6P & -1 & SA & 1 & Near & 12(dm) & 12(R) &
-1.75 & 1,800¥ \\
-Browning Ultra-Power & 5(6) & 8P & -2 & SA & -- & Near & 15(dm) & 6(R) &
-2.25 & 650¥ \\
-Cavalier Arms Champion & 6 & 13P & -4 & SS & -- & Far & 1(b) & 8(R) &
+1.75 & 450¥ \\
+Browning Ultra-Power & 5(6) & 8P & -2 & SA & 0 & Near & 15(dm) & 6(R) &
+2.25 & 450¥ \\
+Cavalier Arms Champion & 6 & 13P & -4 & SS & 0 & Far & 1(b) & 8(R) &
 3.75 & 650¥ \\
-Cavalier Arms Deputy & 5 & 8P & -3 & SS & -- & Far & 7(cy) & 3(R) & 2.25
-& 375¥ \\
-Cavalier Arms Marshall & 4(6) & 9P & -2 & SS & -- & Far & 6(cy)/6(m)5(R)
-& 4.00 & 800¥ & \\
-Cavalier Arms Sheriff & 5(8) & 9P & -3 & SS & -- & Far & 5(cy) & 7(R) &
-4.25 & 600¥ \\
+Cavalier Arms Deputy & 5 & 8P & -3 & SS & 0 & Far & 7(cy) & 3(R) & 2.25
+& 400¥ \\
+Cavalier Arms Marshall & 4(6) & 9P & -2 & SS & 0 & Far & 6(cy)/6(m)5(R)
+& 4.00 & 400¥ & \\
+Cavalier Arms Sheriff & 5(8) & 9P & -3 & SS & 0 & Far & 5(cy) & 7(R) &
+4.25 & 450¥ \\
 Cavalier Arms Thunderstruck & 5(7) & 8P & -2 & BF & 3 & Near & 12(dm) &
-12(F) & 2.50 & 1,150¥ \\
-Colt Future Frontier & 5 & 10P & -- & SS & -- & Near & 6(cy) & 4(R) &
-2.75 & 500¥ \\
+12(F) & 2.50 & 900¥ \\
+Colt Future Frontier & 5 & 10P & 0 & SS & 0 & Near & 6(cy) & 4(R) & 2.75
+& 350¥ \\
 Colt Government 2066 & 6 & 8P & -1 & SA & 1 & Far & 14(dm) & 5(R) & 2.25
-& 475¥ \\
-Colt Manhunter & 6(8) & 8P & -2 & SA & -- & Far & 16(dm) & 5(R) & 2.50 &
-700¥ \\
-Colt M1991 & 5 & 8P & -1 & SA & -- & Far & 7(dm) & 3(R) & 2.00 & 300¥ \\
-CZ-64 & 6(7) & 5P & -2 & SA & 1 & Near & 14(dm) & 6(R) & 1.75 & 350¥ \\
-Eichiro Hatamoto II & 4 & 16P & -3 & SS & -- & Near & 1(ml) & 10(R) &
-2.50 & 800¥ \\
+& 500¥ \\
+Colt Manhunter & 6(8) & 8P & -2 & SA & 0 & Far & 16(dm) & 5(R) & 2.50 &
+450¥ \\
+Colt M1991 & 5 & 8P & -1 & SA & 0 & Far & 7(dm) & 3(R) & 2.00 & 350¥ \\
+CZ-64 & 6(7) & 5P & -2 & SA & 1 & Near & 14(dm) & 6(R) & 1.75 & 450¥ \\
+Eichiro Hatamoto II & 4 & 16P & -3 & SS & 0 & Near & 1(ml) & 10(R) &
+2.50 & 750¥ \\
 Enfield Merlin & 5(7) & 12P & -2 & SS & 1 & Near & 6(cy) & 8(R) & 3.00 &
-625¥ \\
-FN 5-7C & 5 & 4P & -7 & SA/BF & 1 & Far & 20(dm) & 9(F) & 2.50 & 700¥ \\
+600¥ \\
+FN 5-7C & 5 & 4P & -7 & SA/BF & 1 & Far & 20(dm) & 9(F) & 2.50 & 900¥ \\
 \textbf{Glock Dragon Slayer} (10mm Auto): Marketed directly against the
 Ares Predator, this Austrian heavy pistol features aggressive styling,
 an integrated smartlink, and built-in recoil compensation to tame
 high-velocity rounds. & \emph{Smartlink}. & & & & & & & & & \\
 Glock Dragon Slayer & 6(8) & 8P & -2 & SA & 1 & Near & 15(dm) & 8(R) &
-2.50 & 750¥ \\
-Glock-Swarovski Eagle Eye & 6(8) & 7P & -2 & SA & -- & Distant & 12(dm)
-& 11(R) & 2.50 & 1,500¥ \\
-Hammerli Gemini & 5 & 8P & -1 & SA & -- & Far & 8(dm)x2 & 10(R) & 3.50 &
-1,400¥ \\
-HK Mk31 & 5(6) & 7P & -2 & SA & -- & Far & 15(dm) & 8(F) & 2.50 &
-900¥ \\
-HK P60 Tactical & 6(8) & 8P & -2 & SA & -- & Near & 15(dm) & 4(R) & 3.00
-& 750¥ \\
-HK Urban Assassin & 6(9) & 7P & -2 & SA & -- & Near & 10(m) & 16(F) &
-1.25 & 3,400¥ \\
+2.50 & 550¥ \\
+Glock-Swarovski Eagle Eye & 6(8) & 7P & -2 & SA & 0 & Distant & 12(dm) &
+11(R) & 2.50 & 400¥ \\
+Hammerli Gemini & 5 & 8P & -1 & SA & 0 & Far & 8(dm)x2 & 10(R) & 3.50 &
+350¥ \\
+HK Mk31 & 5(6) & 7P & -2 & SA & 0 & Far & 15(dm) & 8(F) & 2.50 & 400¥ \\
+HK P60 Tactical & 6(8) & 8P & -2 & SA & 0 & Near & 15(dm) & 4(R) & 3.00
+& 450¥ \\
+HK Urban Assassin & 6(9) & 7P & -2 & SA & 0 & Near & 10(m) & 16(F) &
+1.25 & 400¥ \\
 HK Urban Fighter & 6 & 7P & -2 & SA & 1(2) & Near & 10(dm) & 15(F) &
-2.00 & 2,400¥ \\
-Izom HP-49B & 5 & 7P & -1 & SA & -- & Near & 12(dm) & 5(R) & 2.25 &
+2.00 & 500¥ \\
+Izom HP-49B & 5 & 7P & -1 & SA & 0 & Near & 12(dm) & 5(R) & 2.25 &
+350¥ \\
+Izom PHP-131 & 5(6) & 6P & -1 & SA & 0 & Near & 9(dm) & 11(R) & 1.75 &
 300¥ \\
-Izom PHP-131 & 5(6) & 6P & -1 & SA & -- & Near & 9(dm) & 11(R) & 1.75 &
-650¥ \\
-Krime Broom & 4 & 7P & -1 & FA & -- & Close & 20(m) & 15(F) & 4.50 &
-750¥ \\
-Krime Heater & 3 & 10P & -3 & SA & -- & Near & 8(dm) & 4(R) & 3.50 &
-275¥ \\
+Krime Broom & 4 & 7P & -1 & FA & 0 & Close & 20(m) & 15(F) & 4.50 &
+850¥ \\
+Krime Heater & 3 & 10P & -3 & SA & 0 & Near & 8(dm) & 4(R) & 3.50 &
+550¥ \\
 Krime Varmint & 3(4) & 10P & -3 & SA & (1) & Far & 8(dm) & 7(R) & 3.75 &
+650¥ \\
+KA Lemat 2072 & 5 & 6P & -2 & SS & 0 & Near & 9(cy) & 8(R) & 3.75 &
 300¥ \\
-KA Lemat 2072 & 5 & 6P & -2 & SS & -- & Near & 9(cy) & 8(R) & 3.75 &
-1,080¥ \\
-Shotgun & 5 & 8P & -2 & SS & -- & Close & 1(ml) & -- & -- & -- \\
+Shotgun & 5 & 8P & -2 & SS & 0 & Close & 1(ml) & -- & -- & 350 \\
 \textbf{Luger Model 58} (9mm Para): A modern resurrection of the classic
 Luger design, featuring the distinctive toggle-lock action with updated
 materials. Popular among collectors and traditionalists who want a piece
 of history that still holds its own in a firefight. & & & & & & & & &
 & \\
-Luger Model 58 & 6 & 6P & -1 & SA & -- & Near & 10(dm) & 6(R) & 1.75 &
-950¥ \\
-Makarov V.22 & 4 & 1P & +3 & SA & -- & Close & 6(dm) & 10(F) & 1.50 &
-3,000¥ \\
+Luger Model 58 & 6 & 6P & -1 & SA & 0 & Near & 10(dm) & 6(R) & 1.75 &
+300¥ \\
+Makarov V.22 & 4 & 1P & +3 & SA & 0 & Close & 6(dm) & 10(F) & 1.50 &
+200¥ \\
 \textbf{Mauser Gladiator} (10mm Auto): A robust heavy pistol from Mauser
 designed for intense combat situations. It boasts an exceptionally
 durable frame and a high-capacity magazine, sacrificing some
 concealability for sheer firepower. & \emph{Extended Magazine}. & & & &
 & & & & & \\
 Mauser Gladiator & 5 & 8P & -1 & SA & 1 & Near & 18(dm) & 8(R) & 3.00 &
-800¥ \\
-Morrissey Alta & 6(7) & 7P & -1 & SA & -- & Near & 12(dm) & 7(R) & 1.00
-& 1,200¥ \\
-Morrissey Elite & 5(6) & 7P & -1 & SA & -- & Close & 5(dm) & 5(R) & 1.00
-& 500¥ \\
+500¥ \\
+Morrissey Alta & 6(7) & 7P & -1 & SA & 0 & Near & 12(dm) & 7(R) & 1.00 &
+350¥ \\
+Morrissey Elite & 5(6) & 7P & -1 & SA & 0 & Close & 5(dm) & 5(R) & 1.00
+& 300¥ \\
 Nemesis Arms Praetorian & 4(5) & 8P & -2 & SA & 1 & Near & 12(dm) & 4(R)
-& 2.25 & 400¥ \\
-Nemesis Arms Praetorian II & 5(7) & 7P & -1 & SA & -- & Near & 18(dm) &
-6(R) & 2.50 & 675¥ \\
-Nitama NeMax & 5(7) & 8P & -2 & SA & -- & Near & 10(dm) & 16(R) & 3.25 &
-1,700¥ \\
-Onotari Arms Steadfast & 5 & 8P & -2 & SA & -- & Far & 8(dm) & 3(R) &
-2.75 & 350¥ \\
-Onotari Arms Troublemaker & 5(6) & 7P & -2 & SA & 2 & Far & 18(dm) &
-8(R) & 2.75 & 900¥ \\
-Onotari Arms Vagabond & 5 & 6P & -2 & SA & 1 & Far & 6(cy) & 6(R) & 1.75
-& 475¥ \\
-Onotari Arms Violator & 5(7) & 5P & -2 & SA & -- & Near & 10(dm) & 7(R)
-& 2.50 & 600¥ \\
-PSK-3 Collapsible Pistol & 5 & 5P & -5 & SA & -- & Close & 10(dm) &
-18(F) & 1.75 & 2,000¥ \\
-Remington Roomsweeper & 4 & 7P & -1 & SS & -- & Close & 8(m) & 6(R) &
-2.50 & 300¥ \\
-Ruger Bloodhawk & 5 & 8P & -3 & SS & -- & Far & 6(cy) & 3(R) & 3.50 &
+& 2.25 & 550¥ \\
+Nemesis Arms Praetorian II & 5(7) & 7P & -1 & SA & 0 & Near & 18(dm) &
+6(R) & 2.50 & 400¥ \\
+Nitama NeMax & 5(7) & 8P & -2 & SA & 0 & Near & 10(dm) & 16(R) & 3.25 &
 450¥ \\
-Ruger Super Warhawk & 5 & 9P & -3 & SS & -- & Far & 6(cy) & 4(R) & 2.50
-& 500¥ \\
+Onotari Arms Steadfast & 5 & 8P & -2 & SA & 0 & Far & 8(dm) & 3(R) &
+2.75 & 400¥ \\
+Onotari Arms Troublemaker & 5(6) & 7P & -2 & SA & 2 & Far & 18(dm) &
+8(R) & 2.75 & 650¥ \\
+Onotari Arms Vagabond & 5 & 6P & -2 & SA & 1 & Far & 6(cy) & 6(R) & 1.75
+& 450¥ \\
+Onotari Arms Violator & 5(7) & 5P & -2 & SA & 0 & Near & 10(dm) & 7(R) &
+2.50 & 350¥ \\
+PSK-3 Collapsible Pistol & 5 & 5P & -5 & SA & 0 & Close & 10(dm) & 18(F)
+& 1.75 & 500¥ \\
+Remington Roomsweeper & 4 & 7P & -1 & SS & 0 & Close & 8(m) & 6(R) &
+2.50 & 300¥ \\
+Ruger Bloodhawk & 5 & 8P & -3 & SS & 0 & Far & 6(cy) & 3(R) & 3.50 &
+400¥ \\
+Ruger Super Warhawk & 5 & 9P & -3 & SS & 0 & Far & 6(cy) & 4(R) & 2.50 &
+450¥ \\
 Ruger Thunderbolt & 5 & 8P & -1 & BF & 2 & Far & 12(dm) & 12(R) & 2.75 &
 750¥ \\
 Savalette Guardian & 5(7) & 8P & -2 & SA/BF & 1 & Far & 12(dm) & 6(R) &
-3.25 & 870¥ \\
-Shiawase Arms Copernicus & 5(7) & 5P & -1 & SA & -- & Near & 14(dm) &
-5(R) & 2.25 & 700¥ \\
-SA Heavy Tactical & 5(7) & 13P & -3 & SA & -- & Far & 12(dm) & 17(R) &
-1.25 & 2,800¥ \\
+3.25 & 700¥ \\
+Shiawase Arms Copernicus & 5(7) & 5P & -1 & SA & 0 & Near & 14(dm) &
+5(R) & 2.25 & 300¥ \\
+SA Heavy Tactical & 5(7) & 13P & -3 & SA & 0 & Far & 12(dm) & 17(R) &
+1.25 & 700¥ \\
 \textbf{Walther Nova II} (9mm Para): An elegant and streamlined heavy
 pistol from Walther. The Nova II is favored by corporate security and
 executive protection details for its sleek design, which prevents
 snagging on clothing when drawn quickly. & \emph{Concealable Holster}. &
 & & & & & & & & \\
-Walther Nova II & 6 & 6P & -1 & SA & -- & Near & 12(dm) & 5(R) & 1.50 &
-600¥ \\
+Walther Nova II & 6 & 6P & -1 & SA & 0 & Near & 12(dm) & 5(R) & 1.50 &
+350¥ \\
 \textbf{Walther P059 Futura} (10mm Auto): A cutting-edge heavy pistol
 that incorporates lightweight composites and advanced ergonomics. It
 comes standard with a smartgun system and an underbarrel weight to
 reduce muzzle climb. & \emph{Personalized Grip, Smartlink}. & & & & & &
 & & & \\
 Walther P059 Futura & 6(8) & 8P & -2 & SA & 1 & Near & 14(dm) & 10(R) &
-2.25 & 1,200¥ \\
+2.25 & 550¥ \\
 Walther P109 & 5(6) & 7P & -1 & SA & 1 & Near & 12(dm) & 4(R) & 2.50 &
-500¥ \\
-Walther Secura & 5 & 7P & -2 & SA & -- & Far & 12(dm) & 5(R) & 2.00 &
-300¥ \\
-Walther Secura Kompakt & 5 & 7P & -2 & SA & -- & Far & 9(dm) & 7(R) &
+450¥ \\
+Walther Secura & 5 & 7P & -2 & SA & 0 & Far & 12(dm) & 5(R) & 2.00 &
+400¥ \\
+Walther Secura Kompakt & 5 & 7P & -2 & SA & 0 & Far & 9(dm) & 7(R) &
 1.50 & 400¥ \\
-Weapons World Infiltrator & 5 & 8P & -2 & SA & -- & Near & 15(dm) &
-14(F) & 2.00 & 1,200¥ \\
-Zastava CZ49 & 4 & 4P & -2 & SA & -- & Near & 10(dm) & 4(R) & 1.50 &
-250¥ \\
+Weapons World Infiltrator & 5 & 8P & -2 & SA & 0 & Near & 15(dm) & 14(F)
+& 2.00 & 450¥ \\
+Zastava CZ49 & 4 & 4P & -2 & SA & 0 & Near & 10(dm) & 4(R) & 1.50 &
+350¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Machine Pistols} - Rapid firing pistol-sized weapons that are
 capable of burst fire or fully automatic fire while still being
@@ -3863,7 +4068,6 @@ extended magazine in a larger caliber over its predecessor, along with
 an internal smartgun system and an underbarrel flashlight.
 \emph{Extended Magazine}, \emph{Flashlight}, \emph{Smartlink}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -3905,68 +4109,66 @@ COST
 \bottomrule\noalign{}
 \endlastfoot
 Ares Crusader & 5 & 5P & -1 & SA/BF & 2 & Near & 40(dm) & 7(R) & 3.25 &
-950¥ \\
+800¥ \\
 Ares Crusader II & 5(7) & 5P & -1 & SA/BF & 2 & Near & 40(dm) & 9(R) &
-3.50 & 1,200¥ \\
+3.50 & 800¥ \\
 \textbf{Ares Klapp MP} (9mm Para): The `Klapp' (folding) is a discreet
 machine pistol designed for deep concealment. Its folding stock and
 compact profile make it a favorite for wetwork and undercover operations
 where space is at a premium. & \emph{Folding Stock}. & & & & & & & &
 & \\
 Ares Klapp MP & 4(5) & 5P & -1 & SA/BF/FA & 1 & Near & 30(dm) & 10(F) &
-2.50 & 900¥ \\
+2.50 & 950¥ \\
 B\&T MP9 (6.5) & 5 & 4P & -6 & SA/BF/FA & 1(2) & Near & 25(dm) & 12(F) &
-2.75 & 1,300¥ \\
+2.75 & 1200¥ \\
 B\&T MP9 (9mm) & 5 & 5P & -1 & SA/BF/FA & 1(2) & Near & 25(dm) & 6(F) &
-2.75 & 500¥ \\
+2.75 & 900¥ \\
 Cavalier Arms Evanator & 5(6) & 2P & -2 & BF/FA & 1(2) & Near & 24(dm) &
-8(R) & 2.25 & 775¥ \\
-Cavalier Arms Flash & 4(6) & 2P & -2 & SA/BF & -- & Near & 24(dm) & 8(R)
-& 2.25 & 1,850¥ \\
-Ceska Black Scorpion & 5 & 3P & -- & SA/BF & (1) & Near & 35(dm) & 8(R)
-& 3.00 & 850¥ \\
-Colt M24 & 4 & 7P & -5 & SA/BF/FA & -- & Far & 30(dm) & 10(F) & 2.75 &
-750¥ \\
-Fichetti Military 100 & 5(7) & 3P & -3 & SA/BF/FA & -- & Near & 20(dm) &
-8(F) & 2.75 & 900¥ \\
-Glock 51 & 5(6) & 5P & -1 & SA/BF/FA & -- & Near & 28(dm) & 10(R) & 2.50
-& 450¥ \\
+8(R) & 2.25 & 950¥ \\
+Cavalier Arms Flash & 4(6) & 2P & -2 & SA/BF & 0 & Near & 24(dm) & 8(R)
+& 2.25 & 550¥ \\
+Ceska Black Scorpion & 5 & 3P & 0 & SA/BF & (1) & Near & 35(dm) & 8(R) &
+3.00 & 600¥ \\
+Colt M24 & 4 & 7P & -5 & SA/BF/FA & 0 & Far & 30(dm) & 10(F) & 2.75 &
+1100¥ \\
+Fichetti Military 100 & 5(7) & 3P & -3 & SA/BF/FA & 0 & Near & 20(dm) &
+8(F) & 2.75 & 850¥ \\
+Glock 51 & 5(6) & 5P & -1 & SA/BF/FA & 0 & Near & 28(dm) & 10(R) & 2.50
+& 850¥ \\
 HK Urban Combat & 5(7) & 7P & -2 & SABF/FA & 3 & Near & 36(dm) & 16(F) &
-3.00 & 2,400¥ \\
-Krime Chatter & 4 & 4P & -1 & FA & -- & Near & 20(dm) & 9(F) & 3.75 &
-180¥ \\
+3.00 & 1300¥ \\
+Krime Chatter & 4 & 4P & -1 & FA & 0 & Near & 20(dm) & 9(F) & 3.75 &
+800¥ \\
 Izom RP-71 & 5 & 1P & +2 & BF/FA & (1) & Near & 25(dm) & 7(R) & 1.75 &
-600¥ \\
-MAC-11 & 3 & 4P & -1 & SA/FA & -- & Near & 32(dm) & 12(R) & 1.50 &
-500¥ \\
+850¥ \\
+MAC-11 & 3 & 4P & -1 & SA/FA & 0 & Near & 32(dm) & 12(R) & 1.50 &
+850¥ \\
 Onotari Arms Equalizer & 4(5) & 4P & -6 & BF/FA & (1) & Far & 12(dm) &
-7(R) & 2.75 & 750¥ \\
+7(R) & 2.75 & 1100¥ \\
 Onotari Arms SIG-6 & 4(6) & 8P & -3 & SA/FA & 2(4) & Far & 16(dm) &
-10(F) & 3.00 & 1,000¥ \\
+10(F) & 3.00 & 1200¥ \\
 PPSK-4 CMP & 5(6) & 5P & -5 & SA/BF & (1) & Near & 30(dm) & 17(F) & 2.75
-& 2,800¥ \\
-Remington Suppressor & 6 & 8P & -2 & SA/BF & -- & Far & 15(dm) & 6(R) &
+& 850¥ \\
+Remington Suppressor & 6 & 8P & -2 & SA/BF & 0 & Far & 15(dm) & 6(R) &
 2.50 & 600¥ \\
 Ruger T-983 & 6 & 5P & -1 & SA/BF/FA & (1) & Near & 17(dm) & 8(R) & 2.75
-& 1,400¥ \\
-Steyr TMP & 4 & 5P & -1 & FA & -- & Near & 30(dm) & 8(R) & 2.00 &
-350¥ \\
+& 900¥ \\
+Steyr TMP & 4 & 5P & -1 & FA & 0 & Near & 30(dm) & 8(R) & 2.00 & 850¥ \\
 \textbf{Steyr TMP-6} (9mm Para): A modernization of the venerable Steyr
 Tactical Machine Pistol. It features improved polymer construction, a
 built-in foregrip for better control during fully automatic fire, and an
 integrated laser sight. & \emph{Laser Sight}. & & & & & & & & & \\
 Steyr TMP-6 & 5(6) & 5P & -1 & SA/BF/FA & 1 & Near & 30(dm) & 8(R) &
-2.50 & 850¥ \\
+2.50 & 950¥ \\
 Ultimax 70 & 5(6) & 5P & -2 & BF/FA & 2 & Near & 12(dm) & 7(R) & 2.75 &
-800¥ \\
-Ultimax 71 & 5(6) & 5P & -2 & SA/BF/FA & -- & Near & 18(dm) & 5(R) &
-2.25 & 550¥ \\
+1000¥ \\
+Ultimax 71 & 5(6) & 5P & -2 & SA/BF/FA & 0 & Near & 18(dm) & 5(R) & 2.25
+& 850¥ \\
 Walther P118 & 5(8) & 7P & -2 & SA/BF/FA & 3 & Far & 24(dm) & 9(R) &
-2.25 & 2,300¥ \\
-Walther Secura II & 5(7) & 8P & -2 & SA/BF & -- & Near & 18(dm) & 10(F)
-& 2.75 & 925¥ \\
+2.25 & 1200¥ \\
+Walther Secura II & 5(7) & 8P & -2 & SA/BF & 0 & Near & 18(dm) & 10(F) &
+2.75 & 600¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Submachine Guns} - Fully automatic capable, lighter caliber guns
 that are usually more compact than even the smallest assault rifles.
@@ -4287,7 +4489,6 @@ barrel. A larger, heavier hitting caliber completes the new Uzi, keeping
 the same magazine capacity with a slight increase in overall size of the
 magazine. \emph{Smartlink}, \emph{Sound Suppressor}, \emph{Stock}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -4329,95 +4530,94 @@ COST
 \bottomrule\noalign{}
 \endlastfoot
 Ares Executive Protector & 4 & 5P & -3 & SA/BF/FA & (1) & Near & 30(dm)
-& 14(F) & 3.50 & 1,000¥ \\
+& 14(F) & 3.50 & 1000¥ \\
 Ares Sigma-3 & 4(6) & 5P & -3 & BF & 1(3) & Near & 5(d)x10 & 9(R) & 4.25
-& 1,100¥ \\
-Beretta Model 70 & 4(5) & 8P & -2 & BF/FA & -- & Near & 35(dm) & 5(R) &
-3.75 & 900¥ \\
+& 600¥ \\
+Beretta Model 70 & 4(5) & 8P & -2 & BF/FA & 0 & Near & 35(dm) & 5(R) &
+3.75 & 1000¥ \\
 Cavalier Arms Gladius & 3(4) & 4P & -1 & BF/FA & 1(2) & Near & 32(dm) &
-6(R) & 3.25 & 400¥ \\
+6(R) & 3.25 & 950¥ \\
 CAPS Emergency Responder & 4(6) & 3P & -2 & SA/BF & 1 & Near & 32(dm) &
-7(R) & 3.75 & 800¥ \\
-Dartgun & -- & -- & -- & SA & 1 & Near & 10(dm) & -- & -- & -- \\
+7(R) & 3.75 & 700¥ \\
+Dartgun & 5 & 4P & 0 & SA & 1 & Near & 10(dm) & -- & -- & 350 \\
 Colt Cobra & 4(5) & 6P & -7 & SA/BF/FA & 2(3) & Far & 32(dm) & 9(R) &
-3.25 & 850¥ \\
+3.25 & 1400¥ \\
 Colt M24A3 Water Carbine & 4 & 8P & -6 & SA/BF & (1) & Far & 30(dm) &
-10(F) & 3.50 & 1,200¥ \\
+10(F) & 3.50 & 1000¥ \\
 Esprit Tsunami & 4(6) & 8P & -2 & BF/FA & (1) & Near & 40(dm) & 8(R) &
-4.00 & 750¥ \\
+4.00 & 1100¥ \\
 FN P93 Praetor & 6 & 5P & -8 & SA/BF/FA & 1(2) & Far & 50(dm) & 11(F) &
-4.50 & 2,250¥ \\
+4.50 & 1400¥ \\
 FN P90 & 5 & 5P & -8 & SA/BF/FA & (1) & Far & 50(dm) & 10(R) & 4.25 &
-1,400¥ \\
+1400¥ \\
 Glock Custodes MPK & 5 & 7P & -2 & SA/BF/FA & 1 & Near & 24(dm) & 12(F)
-& 2.25 & 1,000¥ \\
+& 2.25 & 1000¥ \\
 Glock Custodes MPV & 5 & 7P & -2 & SA/BF/FA & 1(2) & Near & 24(dm) &
-15(F) & 2.75 & 1,500¥ \\
+15(F) & 2.75 & 1000¥ \\
 HK 223K & 5 & 8P & -6 & SA/BF/FA & (1) & Far & 30(dm) & 9(R) & 3.50 &
-950¥ \\
+1300¥ \\
 HK 227 & 5(6) & 7P & -2 & SA/BF/FA & 2(3) & Far & 28(dm) & 8(R) & 3.75 &
-1,500¥ \\
+1100¥ \\
 HK 227-S & 5(6) & 7P & -2 & SA/BF/FA & (1) & Near & 28(dm) & 8(R) & 3.25
-& 1,600¥ \\
+& 1000¥ \\
 HK 229-X & 5(7) & 8P & -2 & SA/BF/FA & (1) & Near & 28(dm) & 16(F) &
-3.50 & 1,500¥ \\
-HK 247-Arctic & 5(7) & 7P & -2 & SA/BF/FA & -- & Near & 42(dm) & 13(R) &
-3.50 & 2,000¥ \\
+3.50 & 1100¥ \\
+HK 247-Arctic & 5(7) & 7P & -2 & SA/BF/FA & 0 & Near & 42(dm) & 13(R) &
+3.50 & 1000¥ \\
 HK MP5 TX & 4(5) & 5P & -9 & SA/BF/FA & 1(2) & Near & 20(dm) & 6(R) &
-3.00 & 850¥ \\
+3.00 & 1300¥ \\
 HK MP5SD & 4 & 5P & -1 & SA/BF/FA & 1(2) & Near & 30(dm) & 7(R) & 3.00 &
-900¥ \\
+950¥ \\
 HK MP7 & 4 & 4P & -8 & SA/BF/FA & (2) & Near & 20(dm) & 15(F) & 2.00 &
-1,450¥ \\
+1300¥ \\
 HK MP75 & 6(8) & 5P & -9 & SA/BF/FA & 2(4) & Near & 50(dm) & 12(F) &
-4.25 & 2,500¥ \\
+4.25 & 1600¥ \\
 HK Urban Enforcer & 6(9) & 7P & -2 & SA/BF/FA & 3(4) & Near & 36(dm) &
-20(F) & 4.25 & 6,200¥ \\
-Grenade Launcher & 3(6) & 14P & -2 & SS & -- & Near & 4(m) & -- & -- &
--- \\
+20(F) & 4.25 & 1300¥ \\
+Grenade Launcher & 3(6) & 14P & -2 & SS & 0 & Near & 4(m) & -- & -- &
+600 \\
 Ingram Smartgun & 4(6) & 5P & -3 & BF/FA & 2(3) & Near & 32(dm) & 8(R) &
-3.00 & 800¥ \\
+3.00 & 1200¥ \\
 Ingram SuperMach 100 & 4 & 5P & -3 & SA/BF/FA & 3(4) & Near & 40(dm) &
-9(F) & 3.00 & 975¥ \\
-Ingram Warrior 10 & 4 & 5P & -1 & SA/BF & -- & Near & 30(dm) & 4(R) &
-3.00 & 650¥ \\
+9(F) & 3.00 & 1300¥ \\
+Ingram Warrior 10 & 4 & 5P & -1 & SA/BF & 0 & Near & 30(dm) & 4(R) &
+3.00 & 550¥ \\
 Izom Aphrodite & 4 & 8P & -2 & BF/FA & 1(2) & Near & 40(dm) & 8(F) &
-4.00 & 1,600¥ \\
-Grenade Launcher & 4 & -- & -- & SS & -- & Far & 1(ml) & -- & -- & -- \\
+4.00 & 1100¥ \\
+Grenade Launcher & 4 & 4P & 0 & SS & 0 & Far & 1(ml) & -- & -- & 150 \\
 Izom Artemis & 5(6) & 7P & -1 & BF/FA & 1 & Near & 40(dm) & 8(F) & 3.25
-& 1,800¥ \\
-Grenade Launcher & 3(4) & -- & -- & SS & -- & Near & 1(ml) & -- & -- &
--- \\
+& 1000¥ \\
+Grenade Launcher & 3(4) & 4P & 0 & SS & 0 & Near & 1(ml) & -- & -- &
+150 \\
 Krime Spree & 4 & 8P & -2 & FA & 1 & Near & 30(dm) & 8(R) & 5.00 &
-750¥ \\
+1100¥ \\
 Krime Tradition & 5 & 8P & -1 & SA/FA & 3(4) & Far & 75(d) & 15(F) &
-8.25 & 1,000¥ \\
+8.25 & 1500¥ \\
 MAC-10 & 4 & 8P & -1 & SA/FA & (1) & Near & 30(dm) & 4(R) & 2.75 &
-550¥ \\
+1000¥ \\
 NA Spratley Stalwart & 5 & 8P & -2 & BF/FA & 2(3) & Near & 40(dm) &
-16(F) & 5.25 & 2,300¥ \\
+16(F) & 5.25 & 1200¥ \\
 Onotari Arms S-3K & 4(6) & 7P & -2 & BF/FA & (1) & Far & 30(dm) & 8(R) &
-3.25 & 900¥ \\
+3.25 & 1000¥ \\
 Sandler TMP & 4(5) & 5P & -1 & BF/FA & (1) & Near & 20(dm) & 4(R) & 3.25
-& 500¥ \\
+& 900¥ \\
 SCK Model 100 & 5(7) & 8P & -2 & SA/BF & (1) & Near & 30(dm) & 6(R) &
-4.50 & 1,000¥ \\
+4.50 & 800¥ \\
 SA Tactical Model 71 & 4(6) & 6P & -7 & BF/FA & 1(3) & Far & 25(dm) &
-16(F) & 2.50 & 4,750¥ \\
+16(F) & 2.50 & 1200¥ \\
 SA Tactical Model 72 & 5(7) & 5P & -4 & SA/BF/FA & 1(3) & Far & 28(dm) &
-12(F) & 2.75 & 1,300¥ \\
+12(F) & 2.75 & 1100¥ \\
 Terracotta Arms Mordred & 4(6) & 8P & -2 & BF/FA & (2) & Near & 20(dm) &
-7(R) & 4.25 & 950¥ \\
+7(R) & 4.25 & 1100¥ \\
 Type 84B & 4 & 5P & -2 & SA/BF/FA & (1) & Near & 20(dm) & 4(R) & 2.75 &
-600¥ \\
+950¥ \\
 Uzi III & 4(5) & 5P & -1 & BF & (1) & Near & 24(dm) & 3(R) & 2.00 &
 600¥ \\
 Uzi IV & 5(6) & 5P & -1 & BF/FA & (1) & Near & 24(dm) & 6(R) & 1.75 &
-1,000¥ \\
+900¥ \\
 Uzi V & 4(6) & 8P & -1 & SA/BF/FA & (1) & Near & 24(dm) & 8(R) & 3.00 &
-1,400¥ \\
+1000¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Shotguns} - Firearms that usually fire shot shells or flechettes
 with the use of a choke, but can also fire solid slugs and may even be
@@ -4723,7 +4923,6 @@ strengthened internal parts, and more combine into a truly modern
 classic capable of accepting longer magnum shells and even custom
 handloads. \emph{Stock}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -4764,120 +4963,119 @@ COST
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Altmayr SP & 4 & 10P & -3 & SS & -- & Close & 7(m) & 8(R) & 2.75 &
+Altmayr SP & 4 & 10P & -3 & SS & 0 & Close & 7(m) & 8(R) & 2.75 &
 500¥ \\
-Altmayr SPX & 4 & 10P & -3 & SS & -- & Close & 4(m) & 4(R) & 3.00 &
-350¥ \\
-Altmayr SPX2 & 4 & 10P & -3 & SS/SA & -- & Close & 8(m) & 4(R) & 3.25 &
-475¥ \\
+Altmayr SPX & 4 & 10P & -3 & SS & 0 & Close & 4(m) & 4(R) & 3.00 &
+450¥ \\
+Altmayr SPX2 & 4 & 10P & -3 & SS/SA & 0 & Close & 8(m) & 4(R) & 3.25 &
+550¥ \\
 Auto-Assault 16 & 4 & 18P & -4 & SA/BF/FA & 2(3) & Near & 10(dm) & 18(F)
-& 4.25 & 1,800¥ \\
+& 4.25 & 1700¥ \\
 Ranger Arms AA-16 & 4(6) & 18P & -4 & SA/BF/FA & 2(4) & Near & 12(dm) &
-24(F) & 4.25 & 2,500¥ \\
+24(F) & 4.25 & 1700¥ \\
 Beretta Northstar & 4(6) & 16P & -3 & SA & (1) & Near & 2x6(m) & 12(R) &
-4.75 & 2,000¥ \\
+4.75 & 900¥ \\
 Blunderbuss & 3 & 9P(f) & -1 & SS & (1) & PB & 1(ml) & 3(R) & 2.50 &
-150¥ \\
+400¥ \\
 Boyd \& Richards Desperado & 5 & 14P & -3 & SS & (1) & Near & 5(m) &
-10(R) & 3.50 & 1,700¥ \\
+10(R) & 3.50 & 750¥ \\
 Cavalier Arms Falchion & 5(8) & 16P & -3 & SS & (1) & Far & 8(m) & 9(R)
-& 4.00 & 1,200¥ \\
+& 4.00 & 900¥ \\
 Cavalier Arms Lancer & 4 & 18P & -4 & SA & (3) & Far & 8(m) & 9(R) &
-4.75 & 1,250¥ \\
-Grenade Launcher & 4 & -- & -- & SS & -- & Far & 1(m) & -- & -- & -- \\
+4.75 & 1300¥ \\
+Grenade Launcher & 4 & 4P & 0 & SS & 0 & Far & 1(m) & -- & -- & 150 \\
 Colt MS-27 & 5 & 14P & -3 & SA/BF/FA & (1) & Near & 12(dm) & 7(R) & 3.50
-& 950¥ \\
+& 1300¥ \\
 Defiance T-250 & 4 & 20P & -4 & SS/SA & (1) & Near & 5(m) & 4(R) & 3.00
-& 500¥ \\
+& 1300¥ \\
 Defiance T-250 Short & 4 & 16P & -3 & SS/SA & (1) & Near & 3(m) & 5(R) &
-2.50 & 750¥ \\
+2.50 & 950¥ \\
 Defiance T-280 & 4 & 12P & -3 & SS/SA & 1(2) & Near & 8(m) & 6(R) & 2.25
-& 600¥ \\
-Defiance T-285 & 3 & 9P & -2 & SS & -- & Close & 3(b) & 6(R) & 2.00 &
-275¥ \\
+& 750¥ \\
+Defiance T-285 & 3 & 9P & -2 & SS & 0 & Close & 3(b) & 6(R) & 2.00 &
+400¥ \\
 Enfield AS-7 & 4(5) & 20P & -4 & SA/BF & (1) & Near & 10(dm) & 12(F) &
-4.00 & 1,100¥ \\
+4.00 & 1400¥ \\
 Franchi SPAS-22 & 4(6) & 14P & -3 & SS/SA/BF & (1) & Near & 10(m) &
-12(F) & 4.00 & 1,000¥ \\
+12(F) & 4.00 & 1000¥ \\
 Franchi SPAS-24 & 4(6) & 14P & -3 & SS/SA/BF & (2) & Near & 10(m) &
-12(F) & 4.25 & 1,050¥ \\
-Franchi SPAS-25 & 4(6) & 14P & -3 & SS/SA/BF(2) & Near & 10(m) & 14(F) &
-4.25 & 1,200¥ & \\
-Izom CSM-419 & 4(6) & 14P & -3 & SA & -- & Near & 10(dm) & 4(R) & 3.75 &
-1,700¥ \\
-Izom SS-374 & 4 & 12P & -3 & SS/SA & -- & Close & 4(m) & 3(R) & 3.00 &
-850¥ \\
+12(F) & 4.25 & 1100¥ \\
+Franchi SPAS-25 & 4(6) & 14P & -3 & SS/SA/BF(2) & 0 & 10(m) & 14(F) &
+4.25 & 900¥ & \\
+Izom CSM-419 & 4(6) & 14P & -3 & SA & 0 & Near & 10(dm) & 4(R) & 3.75 &
+750¥ \\
+Izom SS-374 & 4 & 12P & -3 & SS/SA & 0 & Close & 4(m) & 3(R) & 3.00 &
+600¥ \\
 Krime Boss & 3 & 18P & -4 & SA & 1(2) & Near & 15(d) & 11(R) & 5.00 &
-1,050¥ \\
+1200¥ \\
 Krime Ditch Rifle & 4 & 14P & -5 & SS & (1) & Far & 1(b) & 6(R) & 4.75 &
-700¥ \\
-Shotgun & 4 & 12P & -3 & SS & (1) & Near & 1(b) & -- & -- & -- \\
-Krime Stopper II & 4 & 10P & -3 & SS & -- & Close & 2(b) & 5(R) & 4.00 &
-475¥ \\
+850¥ \\
+Shotgun & 4 & 12P & -3 & SS & (1) & Near & 1(b) & -- & -- & 650 \\
+Krime Stopper II & 4 & 10P & -3 & SS & 0 & Close & 2(b) & 5(R) & 4.00 &
+450¥ \\
 Krime Stopper II Shopkeeper & 4 & 10P & -3 & SS & (1) & Close & 2(b) &
-5(R) & 4.25 & 500¥ \\
+5(R) & 4.25 & 550¥ \\
 Krime Stopper II Homeguard & 4 & 13P & -3 & SS & (1) & Near & 2(b) &
 7(R) & 4.75 & 700¥ \\
 Krime Whammy (Ranged) & 1 & 25P & -3 & SS & (1) & PB & 4(ml) & 12(F) &
-13.00 & 2,000¥ \\
+13.00 & 1600¥ \\
 Mossberg AM-CMDT & 5(7) & 18P & -4 & SA/BF/FA & (2) & Far & 10(dm) &
-12(F) & 5.50 & 1,200¥ \\
+12(F) & 5.50 & 1700¥ \\
 Onotari Arms Pressure KS-X & 4(5) & 10P & -3 & SA/BF & (1) & Close &
-6(dm) & 12(R) & 2.75 & 1,200¥ \\
+6(dm) & 12(R) & 2.75 & 800¥ \\
 \textbf{PJSS LNB/13} (12 Gauge): A pump-action shotgun from Praezisions
 Jagd- und Sportwaffen Suhl. Known for its rock-solid reliability in the
 harshest conditions, the LNB/13 is a staple for security forces and
 hunters alike. & & & & & & & & & & \\
-PJSS LNB/13 & 5 & 12P & -2 & SA & -- & Near & 8(m) & 6(R) & 3.50 &
-750¥ \\
+PJSS LNB/13 & 5 & 12P & -2 & SA & 0 & Near & 8(m) & 6(R) & 3.50 &
+600¥ \\
 PJSS Model 55 & 6 & 16P & -3 & SS & (2) & Far & 2(b) & 9(R) & 2.50 &
-1,000¥ \\
-PJSS Model 75 & 6 & -- & -- & SS & (2) & -- & 2(b) & 8(R) & 2.75 &
-1,200¥ \\
-PJSS Model 75-III & 6 & -- & -- & SS & (2) & -- & 2(b)+1(b) & 12(R) &
-3.25 & 1,700¥ \\
-Shotgun Barrel (20ga) & -- & 12P & -3 & -- & -- & Near & -- & -- & -- &
--- \\
-Shotgun Barrel (16ga) & -- & 14P & -3 & -- & -- & Near & -- & -- & -- &
--- \\
-Shotgun Barrel (12ga) & -- & 16P & -4 & -- & -- & Near & -- & -- & -- &
--- \\
-Rifle Barrel (6.5x55) & +1 & 16P & -8 & -- & +1 & Distant & -- & -- & --
-& -- \\
-Rifle Barrel (.308) & -- & 17P & -9 & -- & -- & Distant & -- & -- & -- &
--- \\
-Rifle Barrel (8x57) & -- & 20P & -10 & -- & -- & Distant & -- & -- & --
-& -- \\
-Rifle Barrel (.30-06) & -- & 18P & -9 & -- & -- & Distant & -- & -- & --
-& -- \\
-Rifle Barrel (9.3x74R) & -- & 24P & -6 & -- & -- & Distant & -- & -- &
--- & -- \\
-Remington 900 & 4 & 16P & -3 & SS & (1) & Near & 8(m) & 2(R) & 4.00 &
+950¥ \\
+PJSS Model 75 & 6 & 4P & 0 & SS & (2) & -- & 2(b) & 8(R) & 2.75 &
 350¥ \\
+PJSS Model 75-III & 6 & 4P & 0 & SS & (2) & -- & 2(b)+1(b) & 12(R) &
+3.25 & 350¥ \\
+Shotgun Barrel (20ga) & 5 & 12P & -3 & SA & 0 & Near & 10(c) & -- & -- &
+650 \\
+Shotgun Barrel (16ga) & 5 & 14P & -3 & SA & 0 & Near & 10(c) & -- & -- &
+750 \\
+Shotgun Barrel (12ga) & 5 & 16P & -4 & SA & 0 & Near & 10(c) & -- & -- &
+900 \\
+Rifle Barrel (6.5x55) & +1 & 16P & -8 & SA & +1 & Distant & 10(c) & -- &
+-- & 1200 \\
+Rifle Barrel (.308) & 5 & 17P & -9 & SA & 0 & Distant & 10(c) & -- & --
+& 1200 \\
+Rifle Barrel (8x57) & 5 & 20P & -10 & SA & 0 & Distant & 10(c) & -- & --
+& 1500 \\
+Rifle Barrel (.30-06) & 5 & 18P & -9 & SA & 0 & Distant & 10(c) & -- &
+-- & 1300 \\
+Rifle Barrel (9.3x74R) & 5 & 24P & -6 & SA & 0 & Distant & 10(c) & -- &
+-- & 1700 \\
+Remington 900 & 4 & 16P & -3 & SS & (1) & Near & 8(m) & 2(R) & 4.00 &
+900¥ \\
 Sawed Off Remington 900 & 3 & 12P & -3 & SS & (1) & Close & 4(m) & 4(R)
-& 3.00 & 450¥ \\
+& 3.00 & 650¥ \\
 Remington 990 & 4 & 16P & -3 & SA & (1) & Near & 8(m) & 6(R) & 4.00 &
-550¥ \\
+950¥ \\
 Shiawase Arms Rain & 4 & 10P & -2 & SA & 1(2) & Near & 5(ml) & 4(R) &
-2.75 & 450¥ \\
+2.75 & 600¥ \\
 Shiawase Arms Riot Guard & 4 & 16P & -3 & SA/BF & (3) & Near & 15(dm) &
-10(R) & 3.00 & 2,300¥ \\
+10(R) & 3.00 & 1300¥ \\
 Shiawase Arms Tsunami & 4 & 10P & -3 & SS & (1) & Near & 7(m) & 4(R) &
-2.75 & 500¥ \\
+2.75 & 600¥ \\
 \textbf{TEC 603 Bull} (5.56mm): A bullpup assault rifle known for its
 compact size without sacrificing barrel length. The TEC 603 Bull offers
 excellent maneuverability in urban combat scenarios and comes with an
 integrated smartlink. & \emph{Smartlink}. & & & & & & & & & \\
 TEC 603 Bull & 5(7) & 9P & -2 & SA/BF/FA & 1 & Far & 35(dm) & 10(R) &
-3.75 & 1,800¥ \\
+3.75 & 1100¥ \\
 Winchester Model 201 & 8 & 12P & -3 & SS & (1) & Far & 2(b) & 8(R) &
-2.25 & 1,300¥ \\
+2.25 & 650¥ \\
 Winchester Model 2054 & 4(5) & 20P & -4 & SA & (3) & Near & 7(m) & 6(R)
-& 3.75 & 1,150¥ \\
+& 3.75 & 1500¥ \\
 Winchester Model 2066 & 4 & 15P & -3 & SS & (1) & Near & 5(m) & 4(R) &
-3.25 & 1,050¥ \\
+3.25 & 800¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Sporting Rifles \& Sniper Rifles} - Sporting rifles are
 typically high caliber full length rifles designed for hunting big game.
@@ -5226,7 +5424,6 @@ calibers. Features a top-mounted rail system to add your choice of
 improvements to the base iron sights. \emph{Stock}, \emph{Tactical Rail
 (Top)}, \emph{Vintage}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -5268,118 +5465,117 @@ COST
 \bottomrule\noalign{}
 \endlastfoot
 Ares Canadian Sporter & 5 & 2P & -1 & SA & (2) & Far & 24(dm) & 3(R) &
-900¥ & \\
+550¥ & \\
 Ares Canadian Sporter (.308) & 5 & 17P & -9 & SA & (2) & Distant & 8(dm)
-& 3(R) & 1,100¥ & \\
+& 3(R) & 1400¥ & \\
 Ares Desert Strike & 7 & 23P & -12 & SA & (2) & Distant & 14(dm) & 10(F)
-& 17,500¥ & \\
+& 2100¥ & \\
 Barrett Model 121 & 7(9) & 32P & -20 & SA & (3) & Distant & 10(dm) &
-18(F) & 10.00 & 15,200¥ \\
+18(F) & 10.00 & 3500¥ \\
 Barrett Model 122 & 7(9) & 32P & -20 & SA & 1(5) & Distant & 14(dm) &
-20(F) & 11.00 & 38,500¥ \\
+20(F) & 11.00 & 3400¥ \\
 Blaser R11 Conqueror & 7(9) & 17P & -9 & SA & 1(3) & Distant & 5(dm) &
-9(R) & 2.75 & 8,500¥ \\
+9(R) & 2.75 & 1300¥ \\
 CA Crockett EBR & 6 & 15P & -8 & SA/BF & (2) & Distant & 20(dm) & 12(F)
-& 10,300¥ & \\
+& 1400¥ & \\
 HK DMR 11D & & & & & & & & & & \\
 HK PSG Enforcer & 7 & 17P & -9 & SA & (1) & Distant & 12(dm)x2 & 12(F) &
-11,000¥ & \\
+1300¥ & \\
 HK Urban Striker & & & & & & & & & & \\
-Mannlicher Dirmingen SX BD & 6 & -- & -- & SS/SA & (1) & -- & * & 6(R) &
-4.25 & 2,500¥ \\
-Shotgun Barrel (12ga) & -- & 16P & -4 & -- & -- & Near & 1(b) & -- & --
-& -- \\
-Rifle Barrel (9.3x74R) & -- & 24P & -6 & -- & -- & Distant & 1(b) & -- &
--- & -- \\
-Rifle Barrel (.22 LR) & -- & 2P & -1 & -- & -- & Far & 10(dm) & -- & --
-& -- \\
-Mannlicher Marpingen Pro D & -- & -- & -- & SS/SA & (2) & -- & 2(b)+6(m)
-& 5(R) & 4.00 & 2,800¥ \\
-Shotgun Barrel (12ga) & 5 & 16P & -4 & -- & -- & Near & -- & -- & -- &
--- \\
-Shotgun Barrel (8ga) & 5 & 24P & -4 & -- & -- & Far & -- & -- & -- &
--- \\
-Rifle Barrel (.308) & 6 & 17P & -9 & -- & -- & Distant & -- & -- & -- &
--- \\
-Rifle Barrel (8x57) & 6 & 20P & -10 & -- & -- & Distant & -- & -- & -- &
--- \\
-Rifle Barrel (9.3x74R) & 6 & 24P & -6 & -- & -- & Distant & -- & -- & --
-& -- \\
+Mannlicher Dirmingen SX BD & 6 & 4P & 0 & SS/SA & (1) & -- & * & 6(R) &
+4.25 & 300¥ \\
+Shotgun Barrel (12ga) & 5 & 16P & -4 & SA & 0 & Near & 1(b) & -- & -- &
+850 \\
+Rifle Barrel (9.3x74R) & 5 & 24P & -6 & SA & 0 & Distant & 1(b) & -- &
+-- & 1600 \\
+Rifle Barrel (.22 LR) & 5 & 2P & -1 & SA & 0 & Far & 10(dm) & -- & -- &
+250 \\
+Mannlicher Marpingen Pro D & 5 & 4P & 0 & SS/SA & (2) & -- & 2(b)+6(m) &
+5(R) & 4.00 & 400¥ \\
+Shotgun Barrel (12ga) & 5 & 16P & -4 & SA & 0 & Near & 10(c) & -- & -- &
+900 \\
+Shotgun Barrel (8ga) & 5 & 24P & -4 & SA & 0 & Far & 10(c) & -- & -- &
+1600 \\
+Rifle Barrel (.308) & 6 & 17P & -9 & SA & 0 & Distant & 10(c) & -- & --
+& 1200 \\
+Rifle Barrel (8x57) & 6 & 20P & -10 & SA & 0 & Distant & 10(c) & -- & --
+& 1500 \\
+Rifle Barrel (9.3x74R) & 6 & 24P & -6 & SA & 0 & Distant & 10(c) & -- &
+-- & 1700 \\
 Mannlicher Wildhüter & 7 & 20P & -10 & SS & (2) & Distant & 6(dm) & 7(R)
-& 1,200¥ & \\
+& 1600¥ & \\
 Marlin 3041 BL & 5 & 10P & -4 & SS & (1) & Far & 6(m) & 5(R) & 2.75 &
-1,100¥ \\
+650¥ \\
 Marlin 3468SS & 4 & 24P & -4 & SS & (1) & Far & 4(m) & 6(R) & 3.00 &
-1,000¥ \\
+1600¥ \\
 Marlin 79S & 4 & 3P & -1 & SA & (1) & Near & 10(dm) & 3(R) & 2.00 &
-300¥ \\
+350¥ \\
 Marlin M-58 (.22 LR) & 6(7) & 2P & -1 & SA & (1) & Far & 15(m) & 3(R) &
-800¥ & \\
+400¥ & \\
 Marlin M-58 (.30-30) & 6(7) & 14P & -5 & SA & (1) & Far & 8(m) & 4(R) &
-1,000¥ & \\
+950¥ & \\
 Marlin M-58 (.308) & 6(7) & 16P & -8 & SA & (1) & Distant & 7(m) & 4(R)
-& 1,400¥ & \\
+& 1200¥ & \\
 Marlin X71 & 5 & 18P & -9 & SS & (1) & Distant & 5(m) & 6(R) & 2.75 &
-1,500¥ \\
+1300¥ \\
 Mauser SEK 41 & & & & & & & & & & \\
 Onotari Arms Rhino Hunter & 6 & 35P & -20 & SS & (1) & Distant & 7(m) &
-8(R) & 5,500¥ & \\
+8(R) & 3700¥ & \\
 Onotari Arms Sierra Libra & 7 & 22P & -5 & SS & 1(3) & Distant & 7(m) &
-6(R) & 1,000¥ & \\
+6(R) & 1500¥ & \\
 Pioneer 60 & 6 & 22P & -11 & SS & (1) & Distant & 5(m) & 2(R) & 4.00 &
-500¥ \\
+1700¥ \\
 PJSS Elephant Gun & 6 & SS & 2(ml) & 12(R) & 6,000¥ & & & & & \\
 Ranger Arms SM-3 & 8 & 17P & -9 & SA & 2(4) & Distant & 15(dm) & 12(F) &
-4.00 & 4,000¥ \\
+4.00 & 1500¥ \\
 Ranger Arms SM-4 & 8 & 17P & -9 & SA & (2) & Distant & 15(dm) & 14(F) &
-3.75 & 6,200¥ \\
+3.75 & 1500¥ \\
 Ranger Arms SM-5 & 8 & 30P & -15 & SA & (2) & Distant & 10(dm) & 16(F) &
-4.75 & 13,200¥ \\
+4.75 & 3000¥ \\
 Ranger Arms SM-6 & 8(10) & 17P & -9 & SA & (2) & Distant & 15(dm) &
-20(F) & 4.50 & 28,000¥ \\
+20(F) & 4.50 & 1500¥ \\
 Remington 750 & 7 & 9P & -7 & SS & (2) & Far & 5(m) & 4(R) & 4.00 &
-1,800¥ \\
+850¥ \\
 Remington 950 & 7 & 18P & -9 & SS & (1) & Distant & 5(m) & 4(R) & 4.00 &
-2,100¥ \\
+1300¥ \\
 Ruger 100 & 6 & SA & 5(m) & 4(R) & 900¥ & & & & & \\
 Ruger 101 & 6 & 15P & -7 & SA & (2) & Distant & 8(m) & 4(R) & 3.75 &
-1,300¥ \\
+1200¥ \\
 Shiawase Arms Carp Hunter & 6 & 6P & -2 & SA & (2) & Near & 8(m) & 4(R)
-& 2.00 & 970¥ \\
+& 2.00 & 550¥ \\
 SA Police Response & 7 & 13P & -7 & SA & (1) & Distant & 20(dm) & 12(F)
-& 2.50 & 6,100¥ \\
+& 2.50 & 1000¥ \\
 SA Tactical Model 69 & 8 & 28P & -16 & SA & 1(4) & Distant & 10(dm) &
-18(F) & 4.75 & 23,500¥ \\
+18(F) & 4.75 & 2700¥ \\
 Springfield 2003 & 9 & 18P & -9 & SS & (1) & Distant & 5(m) & 9(R) &
-3.50 & 3,600¥ \\
+3.50 & 1300¥ \\
 Springfield M1A & 6 & 16P & -8 & SA & (1) & Distant & 20(dm) & 6(R) &
-5.25 & 1,700¥ \\
+5.25 & 1300¥ \\
 Springfield M1 Garand & 5 & 18P & -9 & SA & (1) & Distant & 8(c) & 4(R)
-& 5.00 & 1,100¥ \\
-Springfield Model 1855 & 2 & 15P & -- & SS & (1) & Far & 1(cb) & 5(R) &
-4.25 & 850¥ \\
+& 5.00 & 1400¥ \\
+Springfield Model 1855 & 2 & 15P & 0 & SS & (1) & Far & 1(cb) & 5(R) &
+4.25 & 650¥ \\
 Steyr Minotaur AMR & 7(9) & 40P & -24 & SS & 1(4) & Distant & 14(dm) &
-18(F) & 32,000¥ & \\
+18(F) & 4700¥ & \\
 Terracotta Arms AM-47 & 7(9) & 22P & -18 & SA & 2(5) & Distant & 18(d) &
-14(F) & 16.00 & 35,000¥ \\
+14(F) & 16.00 & 2300¥ \\
 Terracotta Arms Caravan & 6 & 9P & -7 & SA & (2) & Far & 10(dm) & 7(R) &
-950¥ & \\
+900¥ & \\
 Walther MA-2100 & 6(8) & 19P & -10 & SA & (2) & Distant & 10(dm) & 10(F)
-& 4.50 & 6,500¥ \\
+& 4.50 & 1600¥ \\
 Winchester Model 2024 & 6 & 15P & -6 & SS & (1) & Far & 7(m) & 4(R) &
-3.00 & 1,800¥ \\
+3.00 & 1000¥ \\
 Winchester 2067 (.357 Mag) & 5 & 7P & -3 & SS & (1) & Far & 15(m) & 5(R)
-& 4.50 & 650¥ \\
+& 4.50 & 500¥ \\
 Winchester 2067 (.44 Mag) & 5 & 10P & -4 & SS & (1) & Far & 14(m) & 5(R)
-& 4.50 & 750¥ \\
+& 4.50 & 650¥ \\
 Winchester 2067 (.45 LC) & 5 & 12P & -2 & SS & (1) & Far & 14(m) & 5(R)
-& 4.50 & 850¥ \\
+& 4.50 & 650¥ \\
 Winchester 2067 (.30-30) & 5 & 14P & -5 & SS & (1) & Far & 8(m) & 5(R) &
-4.50 & 950¥ \\
+4.50 & 900¥ \\
 Winchester 2067 (.45-70) & 5 & 20P & -3 & SS & (1) & Far & 7(m) & 5(R) &
-4.50 & 1,050¥ \\
+4.50 & 1200¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Assault Rifles} - Assault rifles are the standard infantry
 weapon of the modern battlefield, offering a balance of range, accuracy,
@@ -5909,7 +6105,6 @@ the shotgun fires a single round or both simultaneously as a burst.
 \emph{Grenade Launcher (Underbarrel)}, \emph{Shotgun (Underbarrel)},
 \emph{Smartlink}, \emph{Sound Suppressor}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -5951,160 +6146,162 @@ COST
 \bottomrule\noalign{}
 \endlastfoot
 AK-74 & 4 & 8P & -8 & SA/BF/FA & (1) & Far & 30(dm) & 5(R) & 3.25 &
-650¥ \\
+1400¥ \\
 AK-97 Carbine & 5 & 10P & -6 & SA/BF/FA & (1) & Far & 38(dm) & 4(R) &
-4.00 & 800¥ \\
+4.00 & 1400¥ \\
 AK-97 & 5 & 11P & -7 & SA/BF/FA & (1) & Far & 38(dm) & 4(R) & 4.50 &
-950¥ \\
+1500¥ \\
 AK-98 & 5 & 11P & -7 & SA/BF/FA & (1) & Far & 38(dm) & 8(F) & 6.00 &
-1,250¥ \\
-Grenade Launcher & 4 & -- & -- & SS & -- & Near & 6(m) & -- & -- & -- \\
-AK-112 & 5 & 9P & -7 & SA/BF & (3) & Far & 30(dm) & 6(F) & 800¥ & \\
+1500¥ \\
+Grenade Launcher & 4 & 8P & -1 & SS & 0 & Near & 6(m) & -- & -- & 300 \\
+AK-112 & 5 & 9P & -7 & SA/BF & (3) & Far & 30(dm) & 6(F) & 1300¥ & \\
 AK-127 & SA/BF/FA & 2(4) & Far & 50(d)x2 & 12(F) & 3,250¥ & & & & \\
 AN-74 & 5(6) & 8P & -8 & SA/BF/FA & 1(2) & Far & 35(dm) & 5(F) & 3.75 &
-6,000¥ \\
+1400¥ \\
 AN-94 & 6 & 8P & -8 & SA/BF/FA & 1(2) & Far & 30(dm) & 6(R) & 4.25 &
-850¥ \\
+1400¥ \\
 Ares Alpha & 5(7) & 15P & -10 & SA/BF/FA & 2(3) & Distant & 42(dm) &
-11(F) & 5.25 & 3,400¥ \\
-Grenade Launcher & 4(6) & -- & -- & SS & -- & Far & 6(dm) & -- & -- &
--- \\
+11(F) & 5.25 & 2000¥ \\
+Grenade Launcher & 4(6) & 8P & -1 & SS & 0 & Far & 6(dm) & -- & -- &
+300 \\
 Ares Arctic Rifle & 5(7) & 15P & -10 & SA/BF/FA & 3(4) & Distant &
-42(dm) & 12(F) & 5.50 & 4,800¥ \\
-Grenade Launcher & 4(6) & -- & -- & SS & -- & Far & 6(dm) & -- & -- &
--- \\
+42(dm) & 12(F) & 5.50 & 2100¥ \\
+Grenade Launcher & 4(6) & 8P & -1 & SS & 0 & Far & 6(dm) & -- & -- &
+300 \\
 Ares HVAR & 5(7) & 15P & -10 & SA/BF/FA & 3(5) & Distant & 50(d) & 11(F)
-& 5.00 & 5,000¥ \\
+& 5.00 & 2100¥ \\
 Ares Stalwart & 5 & 9P & -7 & SA/BF/FA & (1) & Far & 36(dm) & 6(R) &
-950¥ & \\
+1400¥ & \\
 AR Platform Military & 4* & 9P & -7 & SA/BF* & (1) & Far & 30(dm) & 4(F)
-& 700¥ & \\
+& 1100¥ & \\
 AR Platform Civilian & 4* & 9P & -7 & SA* & (1) & Far & 30(dm) & 4(R) &
-400¥ & \\
+900¥ & \\
 Cavalier Frontier & 5 & 9P & -7 & SA/BF/FA & (1) & Far & 30(dm) & 6(R) &
-1,750¥ & \\
+1400¥ & \\
 Colt Inception & 7(8) & 15P & -7 & SA/BF & 1(4) & Distant & 35(dm) &
-11(R) & 5.00 & 2,250¥ \\
+11(R) & 5.00 & 1400¥ \\
 Colt M22 & & & & & & & & & & \\
 Colt M22A2 & 40(dm) & 4.75 & 1,600¥ & & & & & & & \\
 Grenade Launcher & & & & & & & & & & \\
 Colt M22A3 & 5 & & & & & & & & & \\
 Grenade Launcher & 4 & & & & & & & & & \\
-Colt M23 & 4 & 9P & -7 & SA/BF/FA & (1) & Far & 40(dm) & 4(R) & 550¥
+Colt M23 & 4 & 9P & -7 & SA/BF/FA & (1) & Far & 40(dm) & 4(R) & 1400¥
 & \\
 Colt M23A2 & 5(7) & 8P & -6 & SA/BF/FA & (1) & Far & 40(dm) & 10(R) &
-3,150¥ & \\
+1300¥ & \\
 Colt M24A3 Water Carbine & 4 & 8P & -6 & SA/BF/FA & (1) & Far & 30(dm) &
-12(R) & 3.50 & 3,000¥ \\
+12(R) & 3.50 & 1300¥ \\
 FAMAS & 4 & 9P & -7 & SA/BF/FA & (1) & Far & 30(dm) & 6(R) & 3.75 &
-800¥ \\
+1400¥ \\
 FN HAR & 5(6) & 9P & -7 & SA/BF/FA & 2(3) & Far & 35(dm) & 8(R) & 4.50 &
-2,100¥ \\
+1500¥ \\
 FN CWAR & 5(7) & 9P & -7 & SA/BF/FA & 3(4) & Far & 35(dm) & 8(R) & 4.75
-& 3,500¥ \\
+& 1600¥ \\
 HK 416 & 5 & 8P & -6 & SA/BF/FA & 1(2) & Far & 30(dm) & 5(R) & 4.25 &
-850¥ \\
+1300¥ \\
 HK G3 & 5 & 17P & -9 & SA/BF & 1(2) & Distant & 20(dm) & 7(R) & 5.50 &
-900¥ \\
+1500¥ \\
 HK G9A4z & 30(dm) & 1500¥ & & & & & & & & \\
 HK G12A3z & 5(6) & 12P & -9 & SA/BF/FA & 2(3) & Far & 32(dm) & 9(F) &
-5.25 & 1,750¥ \\
+5.25 & 1700¥ \\
 HK G12A4 & & & & & & & & & & \\
 HK G13 & & & & & & & & & & \\
-HK G36 & 5 & 9P & -7 & SA/BF & (1) & Far & 32(dm) & 5(F) & 850¥ & \\
-HK G36 Sport & 6 & 10P & -8 & SA & (1) & Far & 32(dm) & 9(R) & 1,250¥
+HK G36 & 5 & 9P & -7 & SA/BF & (1) & Far & 32(dm) & 5(F) & 1100¥ & \\
+HK G36 Sport & 6 & 10P & -8 & SA & (1) & Far & 32(dm) & 9(R) & 1000¥
 & \\
 HK G38 & & & & & & & & & & \\
 HK G61A2 & & & & & & & & & & \\
 HK XM30 (Assault Rifle) & 5(7) & 7P & -5 & SA/BF/FA & 1(3) & Far &
-30(dm) & 15(F) & 4,500¥ & \\
-Shotgun & 4(6) & 10P & -3 & SA & 1(3) & Close & 10(dm) & -- & -- & -- \\
-Grenade Launcher & 4(6) & -- & -- & SS & -- & Near & 6(dm) & -- & -- &
--- \\
+30(dm) & 15(F) & 1200¥ & \\
+Shotgun & 4(6) & 10P & -3 & SA & 1(3) & Close & 10(dm) & -- & -- &
+650 \\
+Grenade Launcher & 4(6) & 8P & -1 & SS & 0 & Near & 6(dm) & -- & -- &
+300 \\
 Carbine Configuration & 5(7) & 8P & -6 & SA/BF/FA & 1(3) & Far & 30(dm)
-& -- & -- & +1,000¥ \\
+& -- & -- & 1300¥ \\
 Sniper Configuration & 7(9) & 9P & -7 & SA/BF/FA & 1(5) & Distant &
-30(dm) & -- & -- & +1,000¥ \\
+30(dm) & -- & -- & 1400¥ \\
 LMG Configuration & 5(7) & 8P & -6 & SA/BF/FA & 2(6) & Far & 50(dm) & --
-& -- & +1,000¥ \\
-Jianshi QBZ-14 & 5 & 10P & -10 & SA/BF & -- & Far & 25(dm)x2 & 9(R) &
-1,850¥ & \\
+& -- & 1500¥ \\
+Jianshi QBZ-14 & 5 & 10P & -10 & SA/BF & 0 & Far & 25(dm)x2 & 9(R) &
+1100¥ & \\
 Jianshi QBZ-21 & 6 & 10P & -10 & SA/BF/FA & (2) & Far & 25(dm) & 9(F) &
-4,625¥ & \\
-Grenade Launcher & 4 & -- & -- & SS & -- & Far & 1(m) & -- & -- & -- \\
-Krime Happiness & 3 & 8P & -6 & FA & (1) & Far & 100(belt) & 6(F) & 500¥
-& \\
+1600¥ & \\
+Grenade Launcher & 4 & 8P & -1 & SS & 0 & Far & 1(m) & -- & -- & 300 \\
+Krime Happiness & 3 & 8P & -6 & FA & (1) & Far & 100(belt) & 6(F) &
+1600¥ & \\
 Nitama Optimum & & & & & & & & & & \\
 Nitama Optimum II & 5(7) & 8P & -6 & SA/BF/FA & (2) & Far & 30(dm) &
-10(F) & 2,300¥ & \\
-Shotgun & 4(6) & 12P & -3 & SS & (2) & Near & 5(m) & -- & -- & -- \\
+10(F) & 1400¥ & \\
+Shotgun & 4(6) & 12P & -3 & SS & (2) & Near & 5(m) & -- & -- & 750 \\
 Onotari Arms HL-13 Rifle & 5(7) & 8P & -6 & SA/BF/FA & (1) & Far &
-30(dm) & 15(F) & 3,500¥ & \\
-SMG & 4(6) & 7P & -2 & SA/BF/FA & (1) & Near & 50(dm) & -- & -- & -- \\
-PDW & 3(5) & 4P & -6 & SA/BF/FA & (1) & Near & 25(dm) & -- & -- & -- \\
+30(dm) & 15(F) & 1300¥ & \\
+SMG & 4(6) & 7P & -2 & SA/BF/FA & (1) & Near & 50(dm) & -- & -- &
+1100 \\
+PDW & 3(5) & 4P & -6 & SA/BF/FA & (1) & Near & 25(dm) & -- & -- &
+1200 \\
 Onotari Arms JP-K49 & 6 & 20P & -8 & SA & 1(3) & Far & 25(dm) & 15(R) &
-3,400¥ & \\
+1600¥ & \\
 Onotari Arms JP-K50 & 7 & 20P & -8 & SA/BF & 1(3) & Far & 25(dm) & 13(F)
-& 7.75 & 12,500¥ \\
+& 7.75 & 1700¥ \\
 Onotari Arms Kali & 4 & 11P & -7 & SA/BF/FA & (1) & Far & 32(dm) & 4(R)
-& 700¥ & \\
+& 1500¥ & \\
 Onotari Arms Kriegfaust & 8 & 24P & -15 & SA/BF & 1(3) & Distant & 25(d)
-& 10(F) & 14.00 & 10,500¥ \\
+& 10(F) & 14.00 & 2400¥ \\
 Onotari Arms L-493 & 5 & 20P & -8 & SA/BF & (1) & Far & 25(dm) & 5(R) &
-4,800¥ & \\
+1700¥ & \\
 Onotari Arms Punisher & 5 & 11P & -7 & SA/FA & (1) & Far & 32(dm) & 5(R)
-& 1,000¥ & \\
+& 1500¥ & \\
 Onotari Arms Room Sweeper & 5(7) & 11P & -8 & SA/BF/FA & 1(2) & Far &
-32(dm) & 10(F) & 2,100¥ & \\
+32(dm) & 10(F) & 1500¥ & \\
 Onotari Arms SBd-44 & 3 & 16P & -8 & SA/BF/FA & (1) & Far & 32(dm) &
-12(R) & 5.00 & 500¥ \\
+12(R) & 5.00 & 1800¥ \\
 Onotari Arms Urban Hunter & 6(7) & 35P & -18 & SA/BF & 1(2) & Far &
-25(dm) & 14(F) & 6,250¥ & \\
+25(dm) & 14(F) & 3900¥ & \\
 Onotari Arms XFactor III & 5 & 9P & -7 & SA/BF/FA & (2) & Far & 30(dm)x2
-& 10(F) & 2,100¥ & \\
-Shotgun & 4 & 12P & -3 & SA & (2) & Near & 5(m) & -- & -- & -- \\
+& 10(F) & 1500¥ & \\
+Shotgun & 4 & 12P & -3 & SA & (2) & Near & 5(m) & -- & -- & 800 \\
 Sernopal vz/88V & 5(6) & 12P & -8 & SA/BF/FA & 2(3) & Far & 35(dm) &
-8(F) & 5.50 & 1,650¥ \\
+8(F) & 5.50 & 1700¥ \\
 Shiawase Arms Monsoon & 5 & 13P & -5 & SA/FA & 1(2) & Far & 20(ml)x6 &
-10(F) & 6.25 & 1,900¥ \\
+10(F) & 6.25 & 1400¥ \\
 SA Tactical Model 73 & 6(8) & 5P & -4 & SA/BF/FA & 3(4) & Far & 100(d) &
-12(F) & 2,750¥ & \\
+12(F) & 1600¥ & \\
 SA Tactical Model 75 & 6(8) & 13P & -6 & SA/BF/FA & 3(5) & Far & 60(d) &
-14(F) & 4,900¥ & \\
+14(F) & 1800¥ & \\
 SIG Sauer 574 & 6(7) & 17P & -9 & SA/BF & (3) & Distant & 20(dm) & 9(R)
-& 3,000¥ & \\
+& 1700¥ & \\
 Steinhardt StG 58/F & & & & & & & & & & \\
 Steyr AUG-CSL & 5(6) & 9P & -7 & SA/BF/FA & 1(3) & Far & 40(dm) & 13(F)
-& 4.00 & 4,000¥ \\
+& 4.00 & 1400¥ \\
 Rifle Configuration & 6(7) & 10P & -8 & SA/BF/FA & 2(5) & Distant &
-20(dm) & -- & 4.75 & -- \\
+20(dm) & -- & 4.75 & 1500 \\
 SMG Configuration & 4(5) & 8P & -6 & SA/BF/FA & 1(3) & Near & 40(dm) &
--- & 3.50 & -- \\
+-- & 3.50 & 1300 \\
 LMG Configuration & 5(6) & 9P & -7 & SA/BF/FA & 2(5) & Far & 100(belt) &
--- & 5.50 & -- \\
+-- & 5.50 & 1800 \\
 Steyr AUG-A-CSL II & & & & & & & & & & \\
 Steyr AUG-CSL III & & & & & & & & & & \\
 Steyr UCR & & & & & & & & & & \\
 Ultimax 47 & 6(7) & 20P & -10 & SA/BF & (1) & Distant & 20(dm) & 6(R) &
-3,350¥ & \\
-Ultimax 68 & 5 & 9P & -5 & SA/BF/FA & (1) & Far & 35(dm) & 9(R) & 1,100¥
+1800¥ & \\
+Ultimax 68 & 5 & 9P & -5 & SA/BF/FA & (1) & Far & 35(dm) & 9(R) & 1300¥
 & \\
-Ultimax 83 & 4(5) & 8P & -8 & FA & (1) & Near & 32(dm) & 5(R) & 650¥
+Ultimax 83 & 4(5) & 8P & -8 & FA & (1) & Near & 32(dm) & 5(R) & 1400¥
 & \\
 Ultimax 150 & 6(8) & 20P & -16 & SA/BF & 3(7) & Distant & 24(dm) & 10(F)
-& 9,600¥ & \\
+& 2300¥ & \\
 Ultimax Rain Forest Carbine & 6 & 16P & -6 & SA & (1) & Far & 18(dm) &
-12(R) & 3.75 & 4,000¥ \\
+12(R) & 3.75 & 1200¥ \\
 Yamaha Raiden & 6(8) & 10P & -15 & BF/FA & 1(2) & Distant & 60(dm) &
-14(F) & 2,600¥ & \\
+14(F) & 2000¥ & \\
 Yamaha Raiden II & 6(8) & 10P & -15 & BF/FA & 1(2) & Distant & 60(dm) &
-16(F) & 3,200¥ & \\
+16(F) & 2000¥ & \\
 Shotgun & 4(6) & 24P(f) & +2 & SS & (1) & Close & 2(ml) & -- & -- &
--- \\
-Grenade Launcher & 3(5) & -- & -- & SS & -- & Far & 6(m) & -- & -- &
--- \\
+1400 \\
+Grenade Launcher & 3(5) & 8P & -1 & SS & 0 & Far & 6(m) & -- & -- &
+300 \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Light Machine Guns} - Most often assault rifle size or slightly
 larger and always capable of fully automatic fire, LMGs fulfill mostly
@@ -6210,7 +6407,6 @@ and a rail mount to improve the iron sights, if desired. \emph{Gas Vent
 Rating 2}, \emph{Safe Target System (Advanced)}, \emph{Smartlink},
 \emph{Stock}, \emph{Tactical Rail (Top)}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6253,29 +6449,28 @@ COST
 \endlastfoot
 Ares HV MP-LMG & & & & & & & & & & \\
 Ares MP-LMG & 4(5) & 15P & -10 & BF/FA & 2(3) & Distant & 50(dm) & 12(F)
-& 7.50 & 4,500¥ \\
-GE Vindicator Minigun & 4(6) & 10P & -8 & FA & -- & Far & 200(belt) &
-24(F) & 15.00 & 18,000¥ \\
+& 7.50 & 2000¥ \\
+GE Vindicator Minigun & 4(6) & 10P & -8 & FA & 0 & Far & 200(belt) &
+24(F) & 15.00 & 2200¥ \\
 HK MG4/46 & 100(d) & 7.00 & 2,500¥ & & & & & & & \\
 HK MG-14 & 5(7) & 12P & -10 & BF/FA & 2(5) & Far & 60(dm) & 10(F) & 6.00
-& 2,250¥ \\
+& 1900¥ \\
 Ingram Valiant & 5(6) & 9P & -7 & BF/FA & 2(4) & Far & 50(dm) & 12(F) &
-9.00 & 5,800¥ \\
+9.00 & 1600¥ \\
 Ingram White Knight & BF/FA & 12(F) & 2,000¥ & & & & & & & \\
-Krime Triple-Dwarf Nanogun & 3(6) & 5P & -1 & FA & -- & Near & 100(belt)
-& 14(F) & 1,000¥ & \\
-Krime Triple-Ork Microgun & 3(6) & 9P & -7 & FA & -- & Far & 100(belt) &
-16(F) & 2,400¥ & \\
-Krime Triple-Troll Minigun & 3(6) & 17P & -9 & FA & -- & Distant &
-100(belt) & 18(F) & 3,000¥ & \\
+Krime Triple-Dwarf Nanogun & 3(6) & 5P & -1 & FA & 0 & Near & 100(belt)
+& 14(F) & 1200¥ & \\
+Krime Triple-Ork Microgun & 3(6) & 9P & -7 & FA & 0 & Far & 100(belt) &
+16(F) & 1600¥ & \\
+Krime Triple-Troll Minigun & 3(6) & 17P & -9 & FA & 0 & Distant &
+100(belt) & 18(F) & 2100¥ & \\
 Krime Wave & 5 & 17P & -9 & FA & (3) & Distant & 50(d) & 12(F) & 10.50 &
-2,500¥ \\
+2200¥ \\
 RPK-74 & 4 & 8P & -9 & SA/BF/FA & (3) & Far & 45(dm) & 7(F) & 4.50 &
-850¥ \\
+1700¥ \\
 SA Nemesis LMG & 5(7) & 13P & -7 & BF/FA & 2(3) & Far & 60(dm) & 16(F) &
-6.25 & 6,500¥ \\
+6.25 & 1800¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Medium Machine Guns} - MMGs require STR rating 8 to successfully
 wield as a weapon, which is why they are more commonly found as vehicle
@@ -6318,7 +6513,6 @@ A standard peak discharge battery supplies effectively unlimited power
 for the barrels' rotating mechanism. Cannot accept barrel or underbarrel
 modifications or accessories. \emph{Belt Fed Only}, \emph{Tripod}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6360,16 +6554,15 @@ COST
 \bottomrule\noalign{}
 \endlastfoot
 FN MAG-5 MMG & 4(5) & 16P & -8 & FA & 2(9) & Distant & 50(dm) & 18(F) &
-9.50 & 8,500¥ \\
+9.50 & 2000¥ \\
 Ruhrmetall R506 Balmung & & & & & & & & & & \\
-Stoner-Ares M202 & 5 & 18P & -10 & FA & -- & Distant & 50(d) & 12(F) &
-7,000¥ & \\
+Stoner-Ares M202 & 5 & 18P & -10 & FA & 0 & Distant & 50(d) & 12(F) &
+2000¥ & \\
 Ultimax MMG & 5(6) & 18P & -10 & FA & (4) & Distant & 40(dm) & 16(F) &
-12.00 & 7,600¥ \\
+12.00 & 2300¥ \\
 Whitney-Morgan MG & 3 & 18P & -10 & FA & (6) & Distant & 100(belt) &
-10(F) & & \\
+2800 & & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Heavy Machine Guns} - HMGs require STR rating 10 to wield as a
 personal weapon. The same as LMGs and MMGs, they can accept 100 or 250
@@ -6428,7 +6621,6 @@ optional rigid stock and shock pad. Includes a mounting point for a
 tripod as well. \emph{Gas Vent Rating 3}, \emph{Shock Pad},
 \emph{Stock}, \emph{Tripod (Underbarrel)}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6470,18 +6662,17 @@ COST
 \bottomrule\noalign{}
 \endlastfoot
 Ares Arctic Suppressor & 5 & 30P & -20 & FA & 4(6) & Distant & 50(d)x2 &
-16(F) & 18,000¥ & \\
+16(F) & 4000¥ & \\
 RPK HMG & 5 & 30P & -18 & FA & (6) & Distant & 50(dm) & 12(F) & 15.00 &
-16,300¥ \\
+4200¥ \\
 Ruhrmetall SF-20 & 5(6) & 35P & -20 & FA & 3(10) & Distant & 40(dm) &
-18(F) & 14.00 & 19,600¥ \\
+18(F) & 14.00 & 4600¥ \\
 Stoner-Ares M107 GP-HMG & 40(dm) & 12.50 & 5,200¥ & & & & & & & \\
 Ultimax HMG & 4(5) & 32P & -22 & FA & 1(6) & Distant & 20(dm) & 16(F) &
-32.00 & 16,000¥ \\
+32.00 & 3900¥ \\
 Ultimax HMG-2 & 4 & 30P & -20 & FA & 3(11) & Distant & 20(dm) & 16(F) &
-20.00 & 7,500¥ \\
+20.00 & 3800¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Assault Cannons} - Assault Cannons are heavy anti-material and
 anti-vehicle weapons that can barely be counted as a hand held firearm,
@@ -6553,7 +6744,6 @@ that is more than made up for by its cheap cost and popular branding.
 
 \textbf{Ruhrmetall SMK 252} (
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6595,23 +6785,22 @@ COST
 \bottomrule\noalign{}
 \endlastfoot
 Ares Ogre Hammer SWS & 6 & 60P & -32 & SA & 2(4) & Distant & 6(dm) &
-20(F) & 38,000¥ & \\
-Ares Thunderstruck GR & 7(8) & 60P & -64 & SS & -- & Distant & 10(dm) &
-24(F) & 56,000¥ & \\
+20(F) & 9200¥ & \\
+Ares Thunderstruck GR & 7(8) & 60P & -64 & SS & 0 & Distant & 10(dm) &
+24(F) & 11000¥ & \\
 Ares Vigorous & 4 & 50P & -24 & SS & (1) & Distant & 12(dm) & 18(F) &
-24,500¥ & \\
+6500¥ & \\
 Charter Arms Curse & 5 & 28P & -16 & SS & 1(2) & Far & 20(dm) & 24(F) &
-7,500¥ & \\
-Krime Bomb & 6(7) & 25P & -15 & SS & 1(3) & Far & 4(m) & 18(F) & 4,150¥
+2700¥ & \\
+Krime Bomb & 6(7) & 25P & -15 & SS & 1(3) & Far & 4(m) & 18(F) & 2200¥
 & \\
-Krime Cannon & 4 & 36P & -20 & SS & (2) & Far & 6(dm) & 20(F) & 4,400¥
+Krime Cannon & 4 & 36P & -20 & SS & (2) & Far & 6(dm) & 20(F) & 3900¥
 & \\
 Panther Assault Cannon & 22(dm) & 18.00 & 7,200¥ & & & & & & & \\
 Panther XXL & 5(7) & SS & -- & Distant & 15(m) & 24(F) & 43,000¥ & &
 & \\
 Ruhrmetall SMK 252 & & & & & & & & & & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Grenade Launchers} - Launchers for directly, or indirectly,
 lobbing grenades at medium ranges. Many different types of grenades
@@ -6683,7 +6872,6 @@ equally capable of firing standard 30mm minigrenades. The 5 round
 internal magazine can even be loaded with a mix of less lethal and
 lethal options.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6724,28 +6912,23 @@ COST
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-AGS-35 & 4 & -- & -- & SA/BF/FA & (6) & Far & 30(d) & 10(F) & 16.00 &
-9,000¥ \\
+AGS-35 & 4 & 4P & 0 & SA/BF/FA & (6) & Far & 30(d) & 10(F) & 16.00 &
+1400¥ \\
 Ares Antioch & & & & & & & & & & \\
-Ares Antioch-2 & 4(6) & -- & -- & SS & -- & Far & 8(m) & 8(F) & 3,200¥
+Ares Antioch-2 & 4(6) & 4P & 0 & SS & 0 & Far & 8(m) & 8(F) & 150¥ & \\
+ArmTech MGL-6 & 4 & 4P & 0 & SA & 0 & Near & 6(dm) & 10(F) & 200¥ & \\
+ArmTech MGL-12 & 4 & 4P & 0 & SA & 0 & Near & 12(dm) & 10(F) & 250¥ & \\
+ArmTech SSG-67 & 4(6) & 4P & 0 & SA & 0 & Near & 6(dm) & 10(F) & 200¥
 & \\
-ArmTech MGL-6 & 4 & -- & -- & SA & -- & Near & 6(dm) & 10(F) & 1,800¥
+ArmTech SSG-69 & 4(6) & 4P & 0 & SA/BF & 0 & Near & 10(dm) & 25(F) &
+400¥ & \\
+Enfield GL-67 & 4(6) & 4P & 0 & SS & (2) & Near & 20(d) & 14(F) & 450¥
 & \\
-ArmTech MGL-12 & 4 & -- & -- & SA & -- & Near & 12(dm) & 10(F) & 5,000¥
+HK 82A1 & 3 & 4P & 0 & SA & (1) & Near & 5(dm) & 6(F) & 2.50 & 300¥ \\
+Terracotta X-6 MGL & 4 & 4P & 0 & SS & (2) & Near & 6(cy) & 8(F) & 350
 & \\
-ArmTech SSG-67 & 4(6) & -- & -- & SA & -- & Near & 6(dm) & 10(F) &
-3,500¥ & \\
-ArmTech SSG-69 & 4(6) & -- & -- & SA/BF & -- & Near & 10(dm) & 25(F) &
-4,500¥ & \\
-Enfield GL-67 & 4(6) & -- & -- & SS & (2) & Near & 20(d) & 14(F) &
-4,000¥ & \\
-HK 82A1 & 3 & -- & -- & SA & (1) & Near & 5(dm) & 6(F) & 2.50 &
-1,500¥ \\
-Terracotta X-6 MGL & 4 & -- & -- & SS & (2) & Near & 6(cy) & 8(F) &
-2,000 & \\
 Wirtz SW31 Demo Control & 5(m) & 3.00 & 600¥ & & & & & & & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Grenades} - Grenades come in many forms and size factors, both
 throwable and launched, from handheld pistol-sized launchers up to large
@@ -6787,7 +6970,6 @@ KLV-IV main charge. The result is a versatile, precision-configurable
 grenade system designed for environments where conventional impact
 triggers would be either too unpredictable or too limiting.
 
-\end{multicols}
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule\noalign{}
 Grenades & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
@@ -6798,7 +6980,6 @@ Grenades & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
 Winter Systems IFE & various & -- & -2 per meter & 0.25 & 50¥ & \\
 Winter Systems IPE & -1 per 2 meters & 0.25 & & & & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Mortar Launchers} - Mortars have been in use for centuries,
 usually consisting of a baseplate, a bipod or tripod mount, and a tube
@@ -6822,7 +7003,6 @@ LOG (12, 1 minute) Extended Test. Carrying the component pieces of the
 system when disassembled usually requires multiple people, due to its
 excessive weight. The M-12 can only fire once per Combat Turn.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6863,10 +7043,9 @@ COST
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-M-12 Portable Mortar & 4 & -- & -- & SS & -- & -- & -- & 16(F) & 120.00
-& 2,250¥ \\
+M-12 Portable Mortar & 4 & 12P & -4 & SS & 0 & -- & 1(m) & 16(F) &
+120.00 & 600¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Rocket Launchers} - Rocket launchers are heavy weapons designed
 to deliver explosive payloads over medium distances. They may accept
@@ -6912,7 +7091,6 @@ Link, Low-Light, Vision Magnification)}, \emph{Laser Designator}.
 launcher with a sophisticated targeting system. Designed to defeat
 heavily armored vehicles. \emph{Smartlink}, \emph{Stock}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -6953,19 +7131,16 @@ COST
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Arbalest II MAW & 5 & -- & -- & SS & -- & -- & 1(ml) & 14(F) & 1,200¥
-& \\
+Arbalest II MAW & 5 & 4P & 0 & SS & 0 & -- & 1(ml) & 14(F) & 150¥ & \\
 Aztechnology Lasher & & & & & & & & & & \\
-Aztechnology Striker & 5 & -- & -- & SS & -- & 1(ml) & 10(F) & 1,200¥ &
-& \\
+Aztechnology Striker & 5 & 4P & 0 & SS & 0 & 1(ml) & 10(F) & 200¥ & & \\
 IWS Multi-Launcher & & & & & & & & & & \\
-M79B1 LAW & 4 & -- & -- & SS & -- & -- & 1(ml) & 12(F) & 2.50 & 750¥ \\
-Mitsubishi Yakusoku MRL & 4 & -- & -- & SA/BF & -- & -- & 4(dm)x2 &
-20(F) & 14,000¥ & \\
+M79B1 LAW & 4 & 4P & 0 & SS & 0 & -- & 1(ml) & 12(F) & 2.50 & 150¥ \\
+Mitsubishi Yakusoku MRL & 4 & 4P & 0 & SA/BF & 0 & -- & 4(dm)x2 & 20(F)
+& 350¥ & \\
 Ruhrmetall GPRL-Alpha & 4(m) & 9.00 & 9,000¥ & & & & & & & \\
 Spike Disposable Launcher & & & & & & & & & & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Rockets} - Un-guided explosive projectiles fired from rocket
 launchers.
@@ -6974,7 +7149,6 @@ launchers.
 Ares, the Dagger is a lightweight collapsible anti-armor rocket that
 excels at armor penetration.
 
-\end{multicols}
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule\noalign{}
 Rockets & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
@@ -6984,7 +7158,6 @@ Rockets & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
 \endlastfoot
 IMI Dagger & 50P & -45 & 5S & 12(F) & 8.00 & 1,300¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Missile Launchers} - Missile launchers fire guided munitions
 capable of tracking and intercepting moving targets. They may accept
@@ -7053,7 +7226,6 @@ in the early 2020's. It is a simple system comprised of a launch tube
 and a fold out sensor and sighting system. It is a short range
 surface-to-air missile.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7094,22 +7266,19 @@ COST
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-9K135 Missile System & -- & -- & -- & SS & -- & -- & 1(ml) & 15(F) &
-1,000¥ & \\
+9K135 Missile System & 5 & 4P & 0 & SS & 0 & -- & 1(ml) & 15(F) & 150¥
+& \\
 Ballista & & & & & & & & & & \\
-Great Dragon ATGM & -- & -- & -- & SS & -- & -- & 1(ml) & 17(F) & 1,200¥
-& \\
-MTR/M-231 & -- & -- & -- & SS & -- & -- & 1 & 24(F) & 8,000¥ & \\
-Onotari Arms Ballista MML & -- & -- & -- & SS & -- & -- & 4(m) & 19(F) &
-7,500¥ & \\
-Onotari Arms Interceptor & 4(6) & -- & -- & SS & -- & -- & 2(ml) & 18(F)
-& 14,000¥ & \\
+Great Dragon ATGM & 5 & 4P & 0 & SS & 0 & -- & 1(ml) & 17(F) & 150¥ & \\
+MTR/M-231 & 5 & 4P & 0 & SS & 0 & -- & 1 & 24(F) & 150¥ & \\
+Onotari Arms Ballista MML & 5 & 4P & 0 & SS & 0 & -- & 4(m) & 19(F) &
+150¥ & \\
+Onotari Arms Interceptor & 4(6) & 4P & 0 & SS & 0 & -- & 2(ml) & 18(F) &
+150¥ & \\
 PS Vogeljäger & & & & & & & & & & \\
-PS Vogeljäger II & -- & -- & -- & SS & -- & -- & 1(ml) & 22(F) & 8,750¥
-& \\
-Scorpion & -- & -- & -- & SS & -- & -- & 1 & 22(F) & 15.25 & 2,100¥ \\
+PS Vogeljäger II & 5 & 4P & 0 & SS & 0 & -- & 1(ml) & 22(F) & 150¥ & \\
+Scorpion & 5 & 4P & 0 & SS & 0 & -- & 1 & 22(F) & 15.25 & 150¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Missiles} - Guided explosive projectiles that can lock onto and
 track targets, fired from missile launchers.
@@ -7124,7 +7293,6 @@ seeking capabilities that can pick out targets through doors and windows
 and follow up with an operator's choice of 3 delayed ignition settings.
 \emph{Airburst Link}, \emph{Heat Seeker}.
 
-\end{multicols}
 \begin{longtable}[]{@{}lllllllll@{}}
 \toprule\noalign{}
 Missiles & SENSOR & DV & AP & BLAST & RANGE & AVAIL & WEIGHT & COST \\
@@ -7137,7 +7305,6 @@ LR SAM & 4 & 5,000 m & 1.50 & 2,200¥ & & & & \\
 MTR & 5 & 3,200 m & -- & -- & -- & & & \\
 Scorpion & 2 & -- & 10.00 & -- & & & & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Flamethrowers} - Flamethrowers project a stream of ignited
 flammable liquid or gas. They are devastating in close quarters and can
@@ -7160,7 +7327,6 @@ pre-mixed, pressurized fuel for roughly 6 seconds of continuous flame.
 Includes a rail system for mounting accessories. \emph{Tactical Rail
 (Underbarrel)}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7202,12 +7368,11 @@ COST
 \bottomrule\noalign{}
 \endlastfoot
 Aztechnology F3a & & & & & & & & & & \\
-Shiawase Arms Blazer & 6 & 10P(fl) & -- & SS & -- & Close & 4(dm) &
-16(F) & 2.75 & 2,200¥ \\
-Shiawase Arms Incinerator & 4 & 15P(fl) & -- & SS & -- & Near & 6(dm) &
-16(F) & 4.25 & 10,000¥ \\
+Shiawase Arms Blazer & 6 & 10P(fl) & 0 & SS & 0 & Close & 4(dm) & 16(F)
+& 2.75 & 300¥ \\
+Shiawase Arms Incinerator & 4 & 15P(fl) & 0 & SS & 0 & Near & 6(dm) &
+16(F) & 4.25 & 600¥ \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Laser Weapons} - Laser weapons project concentrated beams of
 light to deliver thermal energy and essentially burn a hole in their
@@ -7269,7 +7434,6 @@ laser weapon. Can accept power from 2 Peak Discharge Battery Packs or an
 external power source; consumes 2 energy per shot. Includes an integral
 smartgun system. \emph{Smartlink}, \emph{Stock}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7310,22 +7474,21 @@ COST
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Ares Archon Heavy MP Laser & 7 & 25P & -25 & SA & (2) & Distant & -- &
-24(F) & 35,000¥ & \\
+Ares Archon Heavy MP Laser & 7 & 25P & -25 & SA & (2) & Distant & 10(c)
+& 24(F) & 2900¥ & \\
 Ares Lancer MP Laser & 7 & 15P & -15 & SA & (2) & Far & 10(dm)x2 & 18(F)
-& 16,000¥ & \\
+& 1600¥ & \\
 Ares MP Laser III & & & & & & & & & & \\
 Ares Heavy MP Laser & & & & & & & & & & \\
 Ares Heavy MP Laser Plus & & & & & & & & & & \\
 Ares Pulse Fire & 7 & 15P & -15 & SA & (1) & Far & 10(dm)x2 & 22(F) &
-20,000¥ & \\
-Rapid Cycle & 6 & 7P & -7 & FA & (1) & Far & -- & -- & -- & -- \\
-Ares Redline & 9 & 7P & -7 & SA & (1) & Near & 10(dm) & 14(F) & 7,500¥
+1500¥ & \\
+Rapid Cycle & 6 & 7P & -7 & FA & (1) & Far & 10(c) & -- & -- & 1200 \\
+Ares Redline & 9 & 7P & -7 & SA & (1) & Near & 10(dm) & 14(F) & 750¥
 & \\
 Onotari Arms Assault Laser & 7(9) & 15P & -15 & SA & (1) & Far &
-10(dm)x2 & 12(F) & 26,000¥ & \\
+10(dm)x2 & 12(F) & 1500¥ & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Special \& Exotic Weapons} - A catch-all category for weapons
 that do not fit into standard classifications, ranging from chemical
@@ -7468,7 +7631,6 @@ a canister of Pepper Punch. With the press of a button it sprays Pepper
 Punch or your choice of another Inhalation Vector Toxin up to 2 meters
 away.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7509,45 +7671,43 @@ COST
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Ares Cascade & -- & -- & -- & SA & -- & -- & 100(dm) & 8(R) & 5.50 &
-1,800¥ \\
-Power & 4 & -- & -- & -- & -- & Near & -- & -- & -- & -- \\
-Spread & 3 & -- & -- & -- & -- & Close & -- & -- & -- & -- \\
-Ares ELD-AR & 5 & 4S & -- & SA/BF/FA & -- & Near & 50(dm) & 4(R) & 4.50
-& 950¥ \\
-Ares S-II SuperSquirt & 3 & -- & -- & SA & -- & Close & 20(dm) & 6(R) &
-2.00 & 800¥ \\
-Ares S-III SuperSquirt & 3 & -- & -- & SA & -- & Near & 20(dm) & 7(R) &
-950¥ & \\
-Fichetti Pain Inducer & 3 & -- & -- & SS & -- & Close & 10 & 11(R) &
-5,000¥ & \\
-FN-AAL Gyrojet Pistol & 4 & 8P & -5 & SA & -- & Near & 10(dm) & 8(F) &
+Ares Cascade & 5 & 4S & 0 & SA & 0 & -- & 100(dm) & 8(R) & 5.50 &
+700¥ \\
+Power & 4 & 4S & 0 & SS & 0 & Near & 1(m) & -- & -- & 150 \\
+Spread & 3 & 4S & 0 & SS & 0 & Close & 1(m) & -- & -- & 150 \\
+Ares ELD-AR & 5 & 4S & 0 & SA/BF/FA & 0 & Near & 50(dm) & 4(R) & 4.50 &
+900¥ \\
+Ares S-II SuperSquirt & 3 & 4S & 0 & SA & 0 & Close & 20(dm) & 6(R) &
+2.00 & 300¥ \\
+Ares S-III SuperSquirt & 3 & 4S & 0 & SA & 0 & Near & 20(dm) & 7(R) &
+300¥ & \\
+Fichetti Pain Inducer & 3 & 4S & 0 & SS & 0 & Close & 10 & 11(R) & 200¥
+& \\
+FN-AAL Gyrojet Pistol & 4 & 8P & -5 & SA & 0 & Near & 10(dm) & 8(F) &
 2.00 & 600¥ \\
 Harpoons & & & & & & & & & & \\
-HK Icethrower & 4 & 6S & -- & BF & -- & Close & 54* & 10(R) & 800¥ & \\
-Narcoject Gas Gun & 5 & -- & -- & SS & -- & Close & 5x2* & 8(R) & 1,500¥
+HK Icethrower & 4 & 6S & 0 & BF & 0 & Close & 54* & 10(R) & 650¥ & \\
+Narcoject Gas Gun & 5 & 4S & 0 & SS & 0 & Close & 5x2* & 8(R) & 150¥
 & \\
-Narcoject PEP & 6 & 10S & -- & SS & -- & PB & 10(dm) & 12(R) & 1.50 &
-7,500¥ \\
-Narcoject Trackstopper & 5 & -- & -- & SS & -- & Near & 6 & 15(R) &
-8,500¥ & \\
+Narcoject PEP & 6 & 10S & 0 & SS & 0 & PB & 10(dm) & 12(R) & 1.50 &
+350¥ \\
+Narcoject Trackstopper & 5 & 4S & 0 & SS & 0 & Near & 6 & 15(R) & 150¥
+& \\
 Net Gun & & & & & & & & & & \\
-Onotari Arms Slingshot & 6 & -- & -- & SS & -- & Close & 10(m) & 5(R) &
-1.75 & 250¥ \\
-Pepper Punch Pen & 3 & -- & -- & SS & -- & PB & 1(m) & 3 & 0.25 & 45¥ \\
+Onotari Arms Slingshot & 6 & 4S & 0 & SS & 0 & Close & 10(m) & 5(R) &
+1.75 & 200¥ \\
+Pepper Punch Pen & 3 & 4S & 0 & SS & 0 & PB & 1(m) & 3 & 0.25 & 150¥ \\
 Splatgun & & & & & & & & & & \\
 Spraytank & & & & & & & & & & \\
 Walther-AGC Liquidator & & & & & & & & & & \\
 Walther PPD & & & & & & & & & & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Monofilament Whip}: A deadly, nearly invisible monofilament line
 stored in a weighted tip. The weapon easily slices through most armor.
 It's notoriously difficult to master, and a critical glitch might result
 in self-amputation.
 
-\end{multicols}
 \begin{longtable}[]{@{}llllllll@{}}
 \toprule\noalign{}
 Melee Weapons & ACC & DV & AP & REACH & AVAIL & WEIGHT & COST \\
@@ -7560,7 +7720,6 @@ Stun Baton & - & 9S(e) & -2 & 1 & - & - & - \\
 Nanite Claws / Bite & - & 8P & -2 & - & - & - & - \\
 Bio-Luminescent Whip & - & 10P & -4 & 2 & - & - & - \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Vehicular Weaponry} - Heavy weapon systems designed specifically
 for mounting on vehicles, drones, or fixed emplacements. They are
@@ -7596,7 +7755,6 @@ Availability 12(F), while the AV smartmunitions are available for +600¥
 per 10 at the weapon's Availability. \emph{Smartlink}, \emph{Trigger
 Removal}, \emph{Underbarrel Weapon}.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7637,18 +7795,17 @@ COST
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-AN/EDQ-12 ADNDEWS & 10 & 40P & -30 & SS & -- & 20 km & -- & 40(F) &
-1200.00 & 600,000¥ \\
-Ares Doru Launch System & -- & -- & -- & SS & -- & -- & 1 & 28(F) &
-60.00 & 16,000¥ \\
-Ares Medusa PD Laser & 8 & 25P & -25 & FA & -- & 5 km & -- & 28(F) &
-350.00 & 128,000¥ \\
-Ruhrmetall SFW-30 & 6(8) & SA & -- & Far & 100(belt) & 24(F) & 78.00 &
-60,000¥ & & \\
-SFW-30 Underbarrel Weapon & 6(8) & -- & -- & SS & -- & Far & 10(m) & --
-& -- & -- \\
+AN/EDQ-12 ADNDEWS & 10 & 40P & -30 & SS & 0 & 20 km & 10(c) & 40(F) &
+1200.00 & 4800¥ \\
+Ares Doru Launch System & 5 & 4P & 0 & SS & 0 & -- & 1 & 28(F) & 60.00 &
+150¥ \\
+Ares Medusa PD Laser & 8 & 25P & -25 & FA & 0 & 5 km & 10(c) & 28(F) &
+350.00 & 3200¥ \\
+Ruhrmetall SFW-30 & 6(8) & 4P & 0 & Far & 100(belt) & 24(F) & 78.00 &
+11000¥ & & \\
+SFW-30 Underbarrel Weapon & 6(8) & 4P & 0 & SS & 0 & Far & 10(m) & -- &
+-- & 200 \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Vehicular Bombs -}
 
@@ -7663,7 +7820,6 @@ is capable of gliding to its target through GPS positioning, giving it a
 much greater range than conventional bombs. It was massively stockpiled
 prior to the Euro Wars and still widely available.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
@@ -7701,7 +7857,6 @@ COST
 AGM-154 JSOW & 2 & 35 km & 26(F) & 495.00 & 181,000¥ & & & \\
 GBU-39 SBD & 3 & 10 km & 16(F) & 129.00 & 125,500¥ & & & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Vehicular Rockets} - Unguided rocket munitions designed to be
 fired from vehicular weapon mounts.
@@ -7716,7 +7871,6 @@ in rocket pods or on light hard points. Intended for use by paramilitary
 forces, the Cranston has a low power high explosive warhead to mitigate
 collateral damage.
 
-\end{multicols}
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule\noalign{}
 Vehicular Rockets & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
@@ -7727,7 +7881,6 @@ Vehicular Rockets & DV & AP & BLAST & AVAIL & WEIGHT & COST \\
 Ares Zuni IX & 20(F) & 60.00 & 800¥ & & & \\
 Cranston & 14(F) & 5.00 & 800¥ & & & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Vehicular Missiles} - Heavy guided missiles intended for use by
 vehicles and aircraft, capable of engaging ground, air, or naval targets
@@ -7893,7 +8046,6 @@ cell. The small size of these missiles allow two to fit inside one
 vertical launch cell. To fire, a submarine must be within 50 meters of
 the surface.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
@@ -7965,7 +8117,6 @@ UGM-188 Sea Saber ASM & 5 & 6 & 30 & -30 & 250 km & 32(F) & 900.00 &
 UIM-199 Kingfisher SSAM & 4 & 3 & 24 & -6 & 4,000 m & 16(F) & 25.00 &
 15,000¥ & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Vehicular Torpedoes} - Underwater propelled weapons designed to
 be fired from naval vessels or submarines.
@@ -7985,7 +8136,6 @@ Perfectly capable of swiftly eliminating close targets. Nominally has a
 12 kilometer range with customizable payload and guidance options. Stats
 given are for Mercury's standard guidance package and HE warhead.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
@@ -8027,7 +8177,6 @@ MK 197 MADCAP & 2 & 5 & 28 & -32 & -5 per m & 15 km & 18(F) & 750.00 &
 350,000¥ \\
 Mercury Riptide & 3 & 24(F) & 800.00 & 450,000¥ & & & & & \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Ammunition:}
 
@@ -8054,7 +8203,6 @@ as an educated guess, and these values have been abstracted into the
 damage codes presented with each individual weapon listing, subject to
 weapon specifics and characteristics such as barrel lengths.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
@@ -8168,7 +8316,6 @@ FN 5.7 & 5.7x28mm & 23-31 & 720-850 & 0.193 & 515-540 \\
 20mm HS & 20x139mm & - & - & - & - \\
 8 gauge slug & 21.2x89mm & 1250 & 460 & 0.079 & 8569 \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{i.-magic-the-awakened-gaiasphere}{%
 \subsubsection{I. MAGIC: The Awakened
@@ -8184,7 +8331,6 @@ Calculations}\label{spellcasting-drain-calculations}}
 Drain is resisted with Willpower + Tradition Attribute (Logic or
 Charisma).
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
@@ -8247,12 +8393,10 @@ living tissue to stone. \\
 Detection & Mind Probe & Mana & Touch & Sustained & Force & Reads
 target's surface thoughts or deep memories. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{adept-powers-metamagic}{%
 \paragraph{2. Adept Powers \& Metamagic}\label{adept-powers-metamagic}}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
@@ -8307,7 +8451,6 @@ Wild Channeling & Metamagic & Initiation & Allows the adept to
 voluntarily turn up to their Initiate Grade of dice into Wild Dice on
 combat tests. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{ritual-spellcasting}{%
 \paragraph{3. Ritual Spellcasting}\label{ritual-spellcasting}}
@@ -8315,7 +8458,6 @@ combat tests. \\
 Rituals rely heavily on sympathetic links and the local Background
 Count.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -8338,7 +8480,6 @@ Execution & Takes (Force) Hours. Wild Dice equal to the Background Count
 must be rolled. A Glitch causes the ritual to backfire, dealing Drain to
 all participants. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{ii.-matrix-the-nanite-grid}{%
 \subsubsection{II. MATRIX: The Nanite
@@ -8350,7 +8491,6 @@ putting your brain and soul on the line.
 \hypertarget{cyberdecks-commlinks}{%
 \paragraph{1. Cyberdecks \& Commlinks}\label{cyberdecks-commlinks}}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
@@ -8385,7 +8525,6 @@ Entry-level hot-sim deck. Configurable Array. \\
 Bio-Deck & Fairlight Paladin & 6 & 8 / 7 / 6 / 6 & 150,000 &
 Military-grade. Interfaces directly with gaiasphere anomalies. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{matrix-actions-tethers-in-combat}{%
 \paragraph{2. Matrix Actions \& Tethers in
@@ -8393,7 +8532,6 @@ Combat}\label{matrix-actions-tethers-in-combat}}
 
 Tethers replace Marks. They are two-way sympathetic soul-links.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
@@ -8428,13 +8566,11 @@ Matrix Action while you hold a Tether on a target, the target gets a
 free blast of Biofeedback against you (Damage = target's Firewall,
 resisted by WIL). \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{hosts-ic-immune-responses}{%
 \paragraph{3. Hosts \& IC (Immune
 Responses)}\label{hosts-ic-immune-responses}}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -8459,7 +8595,6 @@ G.O.D. Manifestation & ``The Antibody'' & Summoned immediately if a
 hacker rolls a 1 on a Wild Die. Manifests as an angry, dual-natured
 Sprite/Spirit. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{iii.-rigging-vehicles-the-ghost-in-the-shell}{%
 \subsubsection{III. RIGGING \& VEHICLES: The Ghost in the
@@ -8471,7 +8606,6 @@ instinctual merge with the machine's pseudo-Essence.
 \hypertarget{drone-vehicle-stats}{%
 \paragraph{1. Drone \& Vehicle Stats}\label{drone-vehicle-stats}}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
@@ -8508,13 +8642,11 @@ Ares Duelist & Combat Drone & 3 / 3 & 2 & 4 & 4 & 3 & 4,500 \\
 Ford Americar & Sedan & 4 / 4 & 2 & 11 & 6 & 2 & 16,000 \\
 GMC Banshee & T-Bird / LAV & 5 / 8 & 4 & 16 & 18 & 5 & 250,000 \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{jumped-in-mechanics-chase-combat}{%
 \paragraph{2. Jumped-In Mechanics \& Chase
 Combat}\label{jumped-in-mechanics-chase-combat}}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -8539,7 +8671,6 @@ Chase Combat & Opposed Pilot + Reaction tests. Net hits determine range
 bands (Close, Short, Medium, Long, Extreme). Drivers can spend Complex
 actions to attempt maneuvers (Cut Off, Ram, Evade). \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{iv.-general-equipment-lifestyle}{%
 \subsubsection{IV. GENERAL EQUIPMENT \&
@@ -8555,7 +8686,6 @@ Bioware)}\label{augmentations-cyberware-bioware}}
 Losing \textgreater2 Essence risks the ``Augmentation Addict'' Negative
 Quality.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
@@ -8610,12 +8740,10 @@ Leónization & Genetic & 0.0 & 2,500,000 & Anti-aging treatment. Resets
 physical age to prime, but introduces long-term spontaneous cellular
 degeneration risks. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{armor-weapons}{%
 \paragraph{2. Armor \& Weapons}\label{armor-weapons}}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
@@ -8671,13 +8799,11 @@ for throwing. \\
 Monofilament Knife & Melee & Dam: 7P, AP: -8 & --- & 1,500 & Blade edged
 with monofilament wire. Slices through armor. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{lifestyles-monthly-upkeep}{%
 \paragraph{3. Lifestyles (Monthly
 Upkeep)}\label{lifestyles-monthly-upkeep}}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -8702,7 +8828,6 @@ Middle & 5,000 & Safe, secure, decent food. Standard existence. \\
 High & 10,000 & Luxury condo, real meat, clean air. Gain +1 Die on all
 downtime healing tests. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{v.-the-weird-af-world-btls-manifestations}{%
 \subsubsection{V. THE ``WEIRD AF'' WORLD: BTLs \&
@@ -8721,7 +8846,6 @@ These highly illegal, experimental BTLs utilize the ambient nanites in
 the user's body and environment to physically project or temporarily
 transform the user.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -8752,7 +8876,6 @@ Abomination Risk: If the user takes Physical damage exceeding their
 Willpower while transformed, the Sprite takes permanent control
 (Inhabitation). They become a feral, dual-natured shock-troop NPC. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{specialized-entities-npcs}{%
 \paragraph{2. Specialized Entities \&
@@ -8761,7 +8884,6 @@ NPCs}\label{specialized-entities-npcs}}
 Your homebrew heavily features unique Awakened/Digital beings. Here is
 how to stat and run them:
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -8791,7 +8913,6 @@ Protocol: If Sam acts in combat, he automatically uses Wild Dice for all
 weapon attacks. If crossed, he ignores collateral damage. Has an Essence
 of 6 and a massive physical drone body. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -8811,7 +8932,6 @@ gain a pool of 10 Karma specifically dedicated to the listed Skills, or
 you gain +1 rating in one of the listed Skills (up to a maximum rating
 of 4).
 
-\end{multicols}
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
 D6 & Origin & Starting Skills / Benefits \\
@@ -8826,7 +8946,6 @@ D6 & Origin & Starting Skills / Benefits \\
 5 & Street Gang & Intimidation, Pistols, Blades \\
 6 & Matrix Junkie & Hacking, Hardware, Electronics \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{2. Pre-Career Education (Ages 18-21)} Attempt to enter higher
 education before starting a career. * \textbf{Corporate University:}
@@ -8870,7 +8989,6 @@ or Etiquette (Threshold 2) * \textbf{Survival:} WIL + Etiquette
 (Threshold 2) * \textbf{Advancement:} INT + Negotiation (Threshold 3) *
 \textbf{Benefits Table (1D6):}
 
-\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -8885,15 +9003,13 @@ Roll & Benefit \\
 5 & Corporate Contact (Rating 2) \\
 6 & Mid-level Lifestyle (1 Year) \\
 \end{longtable}
-\begin{multicols}{2}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -8914,14 +9030,12 @@ Physical Attribute point or pay 10,000¥ for cyberware, losing 0.5
 Essence). \\
 6 & Burned out. Lose 1 WIL. Ejected. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Lone Star / Knight Errant Cop} * \textbf{Qualification:} BOD +
 Firearms or Unarmed (Threshold 2) * \textbf{Survival:} REA + Firearms
 (Threshold 3) * \textbf{Advancement:} LOG + Investigation (Threshold 3)
 * \textbf{Benefits Table (1D6):}
 
-\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -8936,15 +9050,13 @@ Roll & Benefit \\
 5 & Police/Fixer Contact (Rating 2) \\
 6 & Weapon Permit / Fake SIN (Rating 3) \\
 \end{longtable}
-\begin{multicols}{2}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -8965,14 +9077,12 @@ trauma. Ejected. \\
 or get forced cyber-replacement (lose 1 Essence). Ejected. \\
 6 & Crossed the wrong syndicate. Gain an Enemy (Syndicate). \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Ganger / Syndicate Member} * \textbf{Qualification:} STR +
 Intimidation (Threshold 2) * \textbf{Survival:} REA + Street Navigation
 (Threshold 2) * \textbf{Advancement:} CHA + Intimidation (Threshold 3) *
 \textbf{Benefits Table (1D6):}
 
-\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -8987,15 +9097,13 @@ Roll & Benefit \\
 5 & Street/Gang Contact (Rating 2) \\
 6 & 10,000¥ (Stolen Goods) \\
 \end{longtable}
-\begin{multicols}{2}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9016,14 +9124,12 @@ Ejected. \\
 Attribute point or pay for cheap cyberware, losing 1 Essence). \\
 6 & Betrayed the boss. Gain a powerful Syndicate Enemy. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Smuggler / Courier} * \textbf{Qualification:} REA + Piloting or
 Navigation (Threshold 2) * \textbf{Survival:} INT + Piloting (Threshold
 2) * \textbf{Advancement:} LOG + Negotiation or Mechanics (Threshold 3)
 * \textbf{Benefits Table (1D6):}
 
-\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9038,15 +9144,13 @@ Roll & Benefit \\
 5 & Fixer Contact (Rating 3) \\
 6 & Used Vehicle (e.g., Ford Americar) \\
 \end{longtable}
-\begin{multicols}{2}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9066,14 +9170,12 @@ Mishap
 Essence to cyber-replacement). \\
 6 & Exposed to toxic waste/radiation in the Barrens. Lose 1 BOD. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Military / Mercenary} * \textbf{Qualification:} BOD + Firearms
 or Athletics (Threshold 2) * \textbf{Survival:} WIL + Athletics
 (Threshold 3) * \textbf{Advancement:} INT + Tactics or Leadership
 (Threshold 3) * \textbf{Benefits Table (1D6):}
 
-\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9088,15 +9190,13 @@ Roll & Benefit \\
 5 & Mercenary/Arms Dealer Contact (Rating 2) \\
 6 & Combat Cyberware (up to 30,000¥ value, costs normal Essence) \\
 \end{longtable}
-\begin{multicols}{2}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9116,14 +9216,12 @@ Mishap
 Cyber-Prosthetics (Lose 1.5 Essence, but gain +1 BOD). Ejected. \\
 6 & Captured as POW. Spend next term imprisoned (no benefits). \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Matrix Decker / Hacker} * \textbf{Qualification:} LOG + Hacking
 (Threshold 2) * \textbf{Survival:} INT + Electronic Warfare (Threshold
 3) * \textbf{Advancement:} LOG + Computers (Threshold 3) *
 \textbf{Benefits Table (1D6):}
 
-\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9138,15 +9236,13 @@ Roll & Benefit \\
 5 & Hacker Contact (Rating 2) \\
 6 & Used Cyberdeck \\
 \end{longtable}
-\begin{multicols}{2}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9166,14 +9262,12 @@ Mishap
 1 WIL). \\
 6 & Data heist gone wrong. Owe a powerful entity a major favor. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Magical Initiate} * \textbf{Qualification:} MAG + Arcana
 (Threshold 2) (Requires Awakened) * \textbf{Survival:} WIL + Assensing
 (Threshold 2) * \textbf{Advancement:} MAG + Spellcasting/Conjuring
 (Threshold 3) * \textbf{Benefits Table (1D6):}
 
-\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9188,15 +9282,13 @@ Roll & Benefit \\
 5 & Talismonger Contact (Rating 2) \\
 6 & 1 Free Spell or Bound Spirit \\
 \end{longtable}
-\begin{multicols}{2}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9216,14 +9308,12 @@ Physical Attribute). Ejected. \\
 5 & Severe Drain trauma. Lose 1 MAG. Ejected. \\
 6 & Exiled from magical order or tradition. Ejected. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Rock Star / Media Icon} * \textbf{Qualification:} CHA +
 Performance (Threshold 2) * \textbf{Survival:} WIL + Etiquette or Con
 (Threshold 2) * \textbf{Advancement:} CHA + Leadership or Performance
 (Threshold 3) * \textbf{Benefits Table (1D6):}
 
-\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9238,15 +9328,13 @@ Roll & Benefit \\
 5 & Media/Fixer Contact (Rating 3) \\
 6 & Cult Following (Gain a dedicated group of fans/contacts) \\
 \end{longtable}
-\begin{multicols}{2}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9266,14 +9354,12 @@ Mishap
 Attribute or get cyberware losing 1 Essence). Ejected. \\
 6 & Screwed by a manager. Lose all saved Nuyen. Ejected. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{Street Racer / Drone Jockey / Delivery Driver} *
 \textbf{Qualification:} REA + Piloting (Threshold 2) *
 \textbf{Survival:} REA + Piloting (Threshold 2) * \textbf{Advancement:}
 INT + Mechanics (Threshold 3) * \textbf{Benefits Table (1D6):}
 
-\end{multicols}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Roll & Benefit \\
@@ -9288,15 +9374,13 @@ Roll & Benefit \\
 5 & Mechanic/Rigger Contact (Rating 2) \\
 6 & Racing/Delivery Vehicle or Combat Drone \\
 \end{longtable}
-\begin{multicols}{2}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Mishaps Table (1D6):}
 \end{itemize}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9317,12 +9401,10 @@ Ejected. \\
 cyber-replacement (Lose 1 Essence). Ejected. \\
 6 & Arrested for illegal street racing. Lose 1 term to prison. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{4. Generic Event Table (Roll 2D6 for all Careers if Survival
 passed)}
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
@@ -9352,7 +9434,6 @@ Contact (Rating 3). \\
 12 & Exceptional success. Automatically succeed on Advancement check and
 gain +1 roll on Benefits. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \textbf{5. Aging \& Essence Tracking} Starting at \textbf{Age 34}
 (typically after completing 4 terms), the wear and tear of the 6th World
@@ -9398,7 +9479,6 @@ that can be hacked if you aren't careful.
 
 Attack Roll: Agility + Firearms. Defense Roll: Reaction + Intuition.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
@@ -9435,13 +9515,11 @@ Ares Alpha & Assault Rifle & 11P & -2 & 42 (c) & Full Auto (FA) capable
 Ranger Arms SM-5 & Sniper & 14P & -4 & 6 (m) & Extreme range. Requires
 Aim action to use full AP. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{ammo-types-modifications}{%
 \paragraph{2. Ammo Types \&
 Modifications}\label{ammo-types-modifications}}
 
-\end{multicols}
 \begin{longtable}[]{@{}llll@{}}
 \toprule\noalign{}
 Ammo Type & Cost Multiplier & Effect on Damage / AP & Special Rules \\
@@ -9455,7 +9533,6 @@ Explosive (EX) & x2 & +1 Damage & AP -1 \\
 Gel / Stick-n-Shock & x1.5 & -2 Damage (Stun) & AP +2 \\
 Nanite-Buster (Grey Goo) & x10 & +2 Damage & AP -2 \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{viii.-healing-downtime}{%
 \subsubsection{VIII. HEALING \& DOWNTIME}\label{viii.-healing-downtime}}
@@ -9463,7 +9540,6 @@ Nanite-Buster (Grey Goo) & x10 & +2 Damage & AP -2 \\
 Because Essence is tied to your soul and the nanite-environment, healing
 is both biological and spiritual.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -9490,7 +9566,6 @@ Essence Therapy & Roll Charisma + Psychology (Threshold 4). Success
 restores 0.1 lost Essence (from trauma, not cyberware). & 1 Month
 interval. Costs 5,000¥ in therapy/retreat fees. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{ix.-stealth-in-the-panopticon-hiding-from-the-goo}{%
 \subsubsection{IX. STEALTH IN THE PANOPTICON: Hiding from the
@@ -9509,7 +9584,7 @@ eyeballs, but to bypass the ambient gaiasphere/Matrix, a hacker or
 rigger must actively mask the team's AR signatures.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{The ``Spoof Signature'' Action:} A Complex Action requiring a
   DNI. The hacker rolls Logic + Hacking against the local Grid/Host's
@@ -9552,7 +9627,6 @@ Shaping)}\label{complex-forms-nanite-shaping}}
 
 Technomancers weave ``Threads'' instead of casting spells.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
@@ -9580,7 +9654,6 @@ Goo-Spike & Persona & Lvl + 2 & Violently commands ambient nanites
 inside the target's gear to short out. Deals Matrix damage equal to
 Level + Net Hits. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{compiling-sprites-physical-manifestation}{%
 \paragraph{3. Compiling Sprites (Physical
@@ -9591,7 +9664,7 @@ physical matter (dust, trash, loose electronics) to build a temporary
 physical body.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Mechanic:} Roll Resonance + Compiling vs.~Sprite Level. Fading
   equals the Sprite's hits x 2.
@@ -9616,7 +9689,7 @@ Sprites) with respect.
 Edge represents luck, grit, and the universe pushing back.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Spend 1 Edge:} Reroll all failed dice on a test.
 \item
@@ -9638,7 +9711,7 @@ Players start each session with Edge equal to their Edge attribute. GMs
 should award 1 Edge point during the game when a player:
 
 \begin{itemize}
-
+\tightlist
 \item
   Takes a significant physical risk to protect a bystander or innocent
   NPC.
@@ -9660,7 +9733,7 @@ Entities relying on nanites for physical form have a Destabilization
 Track.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{The Trigger:} Whenever a manifested entity takes Physical
   damage that exceeds their Body rating in a single hit, or if they
@@ -9689,7 +9762,7 @@ You can't just text your Fixer on an open commlink anymore. The silence
 is speaking volumes.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Secure Comms:} Standard commlinks are assumed to be monitored
   by the gaiasphere. To arrange a secure meet, runners must use
@@ -9813,7 +9886,7 @@ jacks out (taking Dump Shock) and drops off the grid.
 World}\label{gm-advice-running-combat-in-the-6th-world}}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Make them choose their ammo:} If the runners are fighting
   Wuxing, standard APDS ammo is best. But if a G.O.D Antibody spawns or
@@ -9850,7 +9923,7 @@ Digital Nuyen is still the standard, but spending it without leaving a
 data-trail is harder than ever.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Hot Nuyen:} Buying illegal gear with standard, unscrubbed
   Nuyen automatically grants the corporate grid a Tether on the buyer.
@@ -9871,7 +9944,6 @@ Barter}\label{the-new-gold-standard-barter}}
 Because digital money is inherently risky, the black market has reverted
 heavily to a barter system.
 
-\end{multicols}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -9901,7 +9973,6 @@ Raw Karma & Priceless & Spirits (like Ennis) and ancient AIs rarely care
 about money. A runner can permanently trade 1 Karma to an Awakened
 entity in exchange for a massive favor or a rare artifact. \\
 \end{longtable}
-\begin{multicols}{2}
 
 \hypertarget{smuggling-null-bags}{%
 \paragraph{3. Smuggling \& ``Null-Bags''}\label{smuggling-null-bags}}
@@ -9911,7 +9982,7 @@ gun's nanites will broadcast its shape and serial number to the local
 grid.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Null-Bags:} Smugglers use Faraday-weave canvas bags to
   transport goods.
@@ -9935,7 +10006,7 @@ is physical, paranoid, and highly encrypted.
 \paragraph{1. Communication Protocols}\label{communication-protocols}}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{The Dead Drop:} Physical locations completely shielded from
   the Matrix (lead-lined safes, flooded subway tunnels).
@@ -9961,7 +10032,7 @@ How you treat the weird children of the Matrix matters. Your Street Cred
 (Total Karma earned divided by 10) directly impacts your social rolls.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{The Empathy Bonus:} When rolling Negotiation or Etiquette with
   an AI, Sprite, or Spirit, add your Street Cred to your Dice Pool if
@@ -9984,7 +10055,7 @@ Knows No Law adventure lore.
 Bug City, Sam loves humanity but forgets how fragile they are.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Connection:} 6 \textbar{} \textbf{Loyalty:} Variable
 \item
@@ -10010,7 +10081,7 @@ AIs to Awaken. Appears as a rumpled man with a cane and steampunk AR
 glasses.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Connection:} 4 \textbar{} \textbf{Loyalty:} 5 (to
   AIs/Technomancers)
@@ -10031,7 +10102,7 @@ glasses.
 lifeline, currently ghosted.
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Connection:} 5 \textbar{} \textbf{Loyalty:} 4
 \item
@@ -10080,7 +10151,7 @@ this ruleset.
 Formula}\label{metatype-karma-cost-formula}}
 
 \begin{itemize}
-
+\tightlist
 \item
   \textbf{Base Cost calculation:} Calculate the sum of the maximum
   limits for all 9 core Attributes (BOD, AGI, REA, STR, WIL, LOG, INT,
@@ -10094,7 +10165,7 @@ Formula}\label{metatype-karma-cost-formula}}
   \textbf{Trait Modifiers:}
 
   \begin{itemize}
-
+  \tightlist
   \item
     Thermographic Vision: +10
   \item
@@ -10119,39 +10190,55 @@ Formula}\label{metatype-karma-cost-formula}}
 \paragraph{Weapon Nuyen Cost Formula}\label{weapon-nuyen-cost-formula}}
 
 \begin{itemize}
+\tightlist
 \item
   \textbf{Base Cost:} 100¥
 \item
-  \textbf{Damage Value (\gameterm{DV}):} Add \gameterm{DV} \^{} 2 * 2
+  \textbf{Damage Value (DV):} Add \texttt{(DV\ \^{}\ 2)\ *\ 2}
 \item
-  \textbf{Armor Piercing (\gameterm{AP}):} If \gameterm{AP} is negative, add Absolute Value(\gameterm{AP}) * 50
+  \textbf{Armor Piercing (AP):} If AP is negative, add
+  \texttt{Absolute\ Value(AP)\ *\ 50}
 \item
   \textbf{Firing Mode:}
+
   \begin{itemize}
-  \item Full Auto (\gameterm{FA}): +500
-  \item Burst Fire (\gameterm{BF}): +200
-  \item Semi-Auto (\gameterm{SA}): +50
+  \tightlist
+  \item
+    Full Auto (FA): +500
+  \item
+    Burst Fire (BF): +200
+  \item
+    Semi-Auto (SA): +50
   \end{itemize}
 \item
-  \textbf{Recoil Compensation (\gameterm{RC}):} Add \gameterm{RC} * 100
+  \textbf{Recoil Compensation (RC):} Add \texttt{RC\ *\ 100}
 \item
-  \textbf{Ammo Capacity:} Add \gameterm{AMMO COUNT} * 5
+  \textbf{Ammo Capacity:} Add \texttt{Ammo\ Count\ *\ 5}
 \item
   \textbf{Category Multipliers:}
+
   \begin{itemize}
-  \item Pistols or Hold-Outs: Multiply the running total by 0.8
-  \item Sniper Rifles, Cannons, or Machine Guns: Multiply the running total by 1.5
+  \tightlist
+  \item
+    Pistols or Hold-Outs: Multiply the running total by 0.8
+  \item
+    Sniper Rifles, Cannons, or Machine Guns: Multiply the running total
+    by 1.5
   \end{itemize}
 \item
   \textbf{Rounding:}
+
   \begin{itemize}
-  \item Values > 10,000¥ are rounded to the nearest 1,000
-  \item Values > 1,000¥ are rounded to the nearest 100
-  \item Values > 100¥ are rounded to the nearest 50
-  \item Values <= 100¥ are rounded to the nearest 10
+  \tightlist
+  \item
+    Values \textgreater{} 10,000¥ are rounded to the nearest 1,000
+  \item
+    Values \textgreater{} 1,000¥ are rounded to the nearest 100
+  \item
+    Values \textgreater{} 100¥ are rounded to the nearest 50
+  \item
+    Values \textless= 100¥ are rounded to the nearest 10
   \end{itemize}
 \end{itemize}
 
-\vfill\null
-\end{multicols}
 \end{document}
