@@ -2995,7 +2995,7 @@ Tethers replace Marks. They are two-way sympathetic soul-links.
 | Establish Tether (Hack on the Fly) | LOG + Hacking vs. WIL + Firewall | None | Creates 1 Tether. You gain +1 Die on all future actions against the target per Tether. |
 | Data Spike | LOG + Cybercombat vs. INT + Firewall | None | Deals (Attack Rtg + Net Hits + 2 per Tether) Matrix Damage. |
 | Neural Purge (Digital) | WIL + BOD | 1 | The Antibody floods a Tethered target with raw gaiasphere noise. Damage is 8 Stun (Biofeedback). |
-| Control Device | LOG + Electronic Warfare vs. WIL + Firewall | 1 to 3 | Take control of a device/drone. Requires 1 Tether for Free actions, 2 for Simple, 3 for Major. |
+| Puppet Nanites (Control Device) | LOG + Electronic Warfare vs. WIL + Firewall | 1 to 3 | Take control of a device/drone. Requires 1 Tether for Free actions, 2 for Simple, 3 for Major. |
 | Crack File | LOG + Hacking vs. INT + Firewall | 1 | Remove encryption from a file. |
 | Disarm Data Bomb | LOG + Software vs. Device Rating x 2 | 1 | Disarm a Data Bomb. If you fail, it detonates. |
 | Edit File | LOG + Computer vs. INT + Firewall | 1 | Create, change, copy, or delete a file. |
