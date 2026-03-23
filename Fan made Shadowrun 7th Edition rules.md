@@ -2925,6 +2925,10 @@ Magic is volatile, reacting to the background count and the emotional resonance 
 
 #### 1. Spellcasting & Drain Calculations
 Drain is resisted with Willpower + Tradition Attribute (Logic or Charisma).
+If the modified Drain Value exceeds the character's Magic Rating, the Drain is Physical Damage instead of Stun Damage.
+
+**Learning Spells:**
+New Spells cost 5 Karma to learn. Magicians learn spells from formula patterns or mentor spirits. Each downtime period a character may learn 1 new Spell.
 
 | Spell Category | Example Spell | Type | Range | Duration | Drain Calculation | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -2946,6 +2950,8 @@ Drain is resisted with Willpower + Tradition Attribute (Logic or Charisma).
 | Detection | Mind Probe | Mana | Touch | Sustained | Force | Reads target's surface thoughts or deep memories. |
 
 #### 2. Adept Powers & Metamagic
+Adept powers are fueled by the adept's Magic Rating and Power Points (PP). Adepts receive Power Points equal to their Magic Rating at character generation. They can also acquire more by initiating.
+
 | Power / Metamagic | Type | Cost | Mechanical Effect |
 | :--- | :--- | :--- | :--- |
 | Improved Reflexes | Adept | 1.5 PP / Lvl | +1 Reaction, +1 Initiative Die (Max +3). |
@@ -2966,9 +2972,20 @@ Drain is resisted with Willpower + Tradition Attribute (Logic or Charisma).
 | Immunity to Normal Weapons | Spirit | N/A | Heavy armor against non-magical attacks, reducing incoming damage significantly. |
 | Centering | Metamagic | Initiation | Add Initiate Grade to Drain Resistance tests. |
 | Wild Channeling | Metamagic | Initiation | Allows the adept to voluntarily turn up to their Initiate Grade of dice into Wild Dice on combat tests. |
+| Masking | Metamagic | Initiation | Hide your true Magic rating and aura from Assensing tests. |
+| Shielding | Metamagic | Initiation | Add your Initiate Grade to Counterspelling dice pools. |
+
+**Initiation & Submersion:**
+Initiation and Submersion for characters costs 10 + (Initiation Grade x 5) Karma and 10 + (Submersion Level x 5) Karma respectively. A character may choose to undergo an ordeal to reduce this cost by 10% to 20%.
 
 #### 3. Ritual Spellcasting
-Rituals rely heavily on sympathetic links and the local Background Count.
+Rituals rely heavily on sympathetic links and the local Background Count. The process requires a physical space prepared with a Magical Lodge, appropriate to the tradition and force of the spell.
+
+**The Ritual Process:**
+1. **Choose Leader and Assistants:** A single Leader directs the spell. Other participants act as Assistants.
+2. **Determine Force:** The Force of the ritual must be chosen, limited by the Leader's Magic Rating and the Lodge's Rating.
+3. **Establish Link:** The material link provides the sympathetic connection to the target across distance.
+4. **Execution:** The ritual takes (Force) hours to complete. A teamwork test is made, and the total hits dictate the ritual's effectiveness.
 
 | Ritual Element | Rule / Mechanic |
 | :--- | :--- |
