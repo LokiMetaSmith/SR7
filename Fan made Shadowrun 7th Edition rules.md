@@ -1451,7 +1451,7 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Altmayr Black Moon** (.41 Mag): A high quality german-made revolver with exceptional accuracy in a large caliber.  The Black Moon features a lower than normal barrel alignment and does away with an external hammer in favor of electronic firing.  Features tactical railing both above and below a long barrel to accept a level of customization most other revolvers can’t match.  *Caseless Only*, *Double Action*, *Electronic Firing*, *Long Barrel*, *Tactical Rail*.
 
-**Altmayr White Star** (10mm Auto): The standard issue sidearm for Sternschutz Security personnel. Reliable, sturdy, and packs a sufficient punch for law enforcement operations. 
+**Altmayr White Star** (10mm Auto): The standard issue sidearm for Sternschutz Security personnel. Reliable, sturdy, and packs a sufficient punch for law enforcement operations.
 
 **Ares Predator I** (10mm Auto): The original offering from Ares, or a suitable knockoff, that provides the reliability and stability that the entire series has staked its reputation on.  It does not mount an internal smartgun system, which would become standard on later models, but it is still a solid and dependable firearm.  *Incompatible*.
 
@@ -1927,7 +1927,7 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Onotari Arms Pressure KS-X** (12ga): A compact, submachine gun sized shotgun capable of burst fire that includes an extending stock and a built in laser sight.  A revolutionary suppressor is available from Onotari Arms for +900¥ at Availability 14(R).  Lacks ammo capacity but has a top rail to accommodate most accessories.  Without the suppressor equipped or the stock extended, the Pressure KS-X receives a +2 to Concealability Thresholds.  *Folding Stock*, *Laser Sight*, *Tactical Rail (Top)*.
 
-**PJSS LNB/13** (12 Gauge): A pump-action shotgun from Praezisions Jagd- und Sportwaffen Suhl. Known for its rock-solid reliability in the harshest conditions, the LNB/13 is a staple for security forces and hunters alike. 
+**PJSS LNB/13** (12 Gauge): A pump-action shotgun from Praezisions Jagd- und Sportwaffen Suhl. Known for its rock-solid reliability in the harshest conditions, the LNB/13 is a staple for security forces and hunters alike.
 
 **PJSS Model 55** (12ga): A finely crafted, break action, double barrel hunting and sporting shotgun favored by European hunters and trap shooters.  The over-under double barrels can be fired simultaneously via Burst Fire.  *Shock Pad*, *Stock*.
 
@@ -2994,8 +2994,19 @@ Tethers replace Marks. They are two-way sympathetic soul-links.
 | :--- | :--- | :--- | :--- |
 | Establish Tether (Hack on the Fly) | LOG + Hacking vs. WIL + Firewall | None | Creates 1 Tether. You gain +1 Die on all future actions against the target per Tether. |
 | Data Spike | LOG + Cybercombat vs. INT + Firewall | None | Deals (Attack Rtg + Net Hits + 2 per Tether) Matrix Damage. |
-| Puppet Nanites (Control Device) | LOG + Electronic Warfare vs. WIL + Firewall | 1 to 3 | Take control of a device/drone. Requires 1 Tether for Free actions, 2 for Simple, 3 for Major. |
 | Neural Purge (Digital) | WIL + BOD | 1 | The Antibody floods a Tethered target with raw gaiasphere noise. Damage is 8 Stun (Biofeedback). |
+| Control Device | LOG + Electronic Warfare vs. WIL + Firewall | 1 to 3 | Take control of a device/drone. Requires 1 Tether for Free actions, 2 for Simple, 3 for Major. |
+| Crack File | LOG + Hacking vs. INT + Firewall | 1 | Remove encryption from a file. |
+| Disarm Data Bomb | LOG + Software vs. Device Rating x 2 | 1 | Disarm a Data Bomb. If you fail, it detonates. |
+| Edit File | LOG + Computer vs. INT + Firewall | 1 | Create, change, copy, or delete a file. |
+| Enter/Exit Host | None | None | Enter or exit a Host. Entering requires you to have a Tether on the Host. |
+| Format Device | LOG + Computer vs. WIL + Firewall | 3 | Device reboots at the end of the combat turn and its OS is wiped. |
+| Matrix Perception | INT + Computer | None | Spot hidden icons, analyze targets, or check your own OS. |
+| Matrix Search | INT + Computer | None | Search the Matrix for information. Takes 1 minute (Basic) or 1 hour (Detailed). |
+| Reboot Device | LOG + Computer vs. WIL + Firewall | 3 | Target device reboots, clearing all Tethers and OS. |
+| Send Message | LOG + Computer | None | Send a text, audio, or video message to a target you have a Tether on, or broadcast locally. |
+| Snoop | LOG + Electronic Warfare vs. LOG + Firewall | 1 | Intercept Matrix traffic to or from the target. |
+| Spoof Command | LOG + Hacking vs. LOG + Firewall | 1 | Send a command to a device pretending to be its legitimate owner. Requires 1 Tether on the owner. |
 | Glitches & Tethers | Passive Consequence | N/A | If you Glitch on any Matrix Action while you hold a Tether on a target, the target gets a free blast of Biofeedback against you (Damage = target's Firewall, resisted by WIL). |
 
 #### 3. Hosts & IC (Immune Responses)
