@@ -8387,6 +8387,46 @@ Military-grade. Interfaces directly with gaiasphere anomalies. \\
 \end{longtable}
 \begin{multicols}{2}
 
+\hypertarget{cyberdeck-programs}{%
+\paragraph{Cyberdeck Programs}\label{cyberdeck-programs}}
+
+Active programs take up a program slot on a cyberdeck. Swapping a
+program is a Minor Action. Programs act as localized rules-overrides or
+dice pool modifiers for your \gameterm{DNI} connection.
+
+\end{multicols}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Program
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Effect
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Browse} & Common & Cuts Matrix Search time in half. \\
+\textbf{Edit} & Common & +2 Dice to Edit File actions. \\
+\textbf{Encryption} & Common & +1 to Firewall. \\
+\textbf{Signal Scrub} & Common & Reduces Background Noise penalties by 2. \\
+\textbf{Toolbox} & Common & +1 to Data Processing. \\
+\textbf{Virtual Machine} & Common & Adds 2 additional program slots, but you take 1 unresisted Matrix damage whenever you take Matrix damage. \\
+\textbf{Armor} & Hacking & +2 to resist Matrix damage. \\
+\textbf{Biofeedback} & Hacking & Your Matrix attacks deal Biofeedback damage (Stun or Physical depending on target's sim module). \\
+\textbf{Blackout} & Hacking & Similar to Biofeedback, but only deals Stun damage. \\
+\textbf{Decryption} & Hacking & +1 to Attack rating. \\
+\textbf{Defuse} & Hacking & +4 Dice to resist Data Bomb damage. \\
+\textbf{Exploit} & Hacking & +2 to Sleaze rating. \\
+\textbf{Stealth} & Hacking & +1 to Sleaze rating. \\
+\end{longtable}
+\begin{multicols}{2}
+
 \hypertarget{matrix-actions-tethers-in-combat}{%
 \paragraph{2. Matrix Actions \& Tethers in
 Combat}\label{matrix-actions-tethers-in-combat}}
@@ -8418,21 +8458,44 @@ None & Creates 1 Tether. You gain +1 Die on all future actions against
 the target per Tether. \\
 Data Spike & LOG + Cybercombat vs.~INT + Firewall & None & Deals (Attack
 Rtg + Net Hits + 2 per Tether) Matrix Damage. \\
-Puppet Nanites (Control Device) & LOG + Electronic Warfare vs.~WIL +
-Firewall & 1 to 3 & Take control of a device/drone. Requires 1 Tether
-for Free actions, 2 for Simple, 3 for Major. \\
-Neural Purge (Digital) & WIL + BOD & 1 & The Antibody floods a Tethered
-target with raw gaiasphere noise. Damage is 8 Stun (Biofeedback). \\
-Glitches \& Tethers & Passive Consequence & N/A & If you Glitch on any
-Matrix Action while you hold a Tether on a target, the target gets a
-free blast of Biofeedback against you (Damage = target's Firewall,
-resisted by WIL). \\
+Neural Purge (Digital) & WIL + BOD & 1 & The Antibody floods a Tethered target with raw gaiasphere noise. Damage is 8 Stun (Biofeedback). \\
+Control Device & LOG + Electronic Warfare vs. WIL + Firewall & 1 to 3 & Take control of a device/drone. Requires 1 Tether for Free actions, 2 for Simple, 3 for Major. \\
+Crack File & LOG + Hacking vs. INT + Firewall & 1 & Remove encryption from a file. \\
+Disarm Data Bomb & LOG + Software vs. Device Rating x 2 & 1 & Disarm a Data Bomb. If you fail, it detonates. \\
+Edit File & LOG + Computer vs. INT + Firewall & 1 & Create, change, copy, or delete a file. \\
+Enter/Exit Host & None & None & Enter or exit a Host. Entering requires you to have a Tether on the Host. \\
+Format Device & LOG + Computer vs. WIL + Firewall & 3 & Device reboots at the end of the combat turn and its OS is wiped. \\
+Matrix Perception & INT + Computer & None & Spot hidden icons, analyze targets, or check your own OS. \\
+Matrix Search & INT + Computer & None & Search the Matrix for information. Takes 1 minute (Basic) or 1 hour (Detailed). \\
+Reboot Device & LOG + Computer vs. WIL + Firewall & 3 & Target device reboots, clearing all Tethers and OS. \\
+Send Message & LOG + Computer & None & Send a text, audio, or video message to a target you have a Tether on, or broadcast locally. \\
+Snoop & LOG + Electronic Warfare vs. LOG + Firewall & 1 & Intercept Matrix traffic to or from the target. \\
+Spoof Command & LOG + Hacking vs. LOG + Firewall & 1 & Send a command to a device pretending to be its legitimate owner. Requires 1 Tether on the owner. \\
+Glitches \& Tethers & Passive Consequence & N/A & If you Glitch on any Matrix Action while you hold a Tether on a target, the target gets a free blast of Biofeedback against you (Damage = target's Firewall, resisted by WIL). \\
 \end{longtable}
 \begin{multicols}{2}
 
 \hypertarget{hosts-ic-immune-responses}{%
 \paragraph{3. Hosts \& IC (Immune
 Responses)}\label{hosts-ic-immune-responses}}
+
+Hosts represent dedicated nexuses in the nanite-Matrix. Instead of distinct corporate grids floating in virtual reality, Hosts are localized data-hives physically anchored to specific geography or high-density ley lines.
+
+\textbf{Host Ratings:}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Ratings 1-3 (Local):} Small business servers, personal comm-networks, smart homes.
+\item
+  \textbf{Ratings 4-6 (Commercial):} Regional corporate hubs, large retail centers, local security grids.
+\item
+  \textbf{Ratings 7-9 (Enterprise):} Major corporate division headquarters, secure government databases.
+\item
+  \textbf{Ratings 10-12 (Black Site):} Megacorporate zero-zones, experimental gaiasphere nodes (e.g., Wuxing Null-Sites).
+\end{itemize}
+
+A Host uses its Rating to calculate its Matrix Attributes (typically Rating, Rating + 1, Rating + 2, and Rating + 3, distributed by the GM as needed based on the Host's purpose). IC programs use the Host's Rating x 2 for their Dice Pools.
 
 \end{multicols}
 \begin{longtable}[]{@{}
@@ -8458,6 +8521,17 @@ intruders. Does not attack, but alerts the Hive. \\
 G.O.D. Manifestation & ``The Antibody'' & Summoned immediately if a
 hacker rolls a 1 on a Wild Die. Manifests as an angry, dual-natured
 Sprite/Spirit. \\
+Acid IC & ``Digestive Enzyme'' & Deals Matrix damage and permanently reduces target's Firewall by 1. \\
+Binder IC & ``Fibrin'' & Deals Matrix damage and reduces target's Data Processing by 1. \\
+Blaster IC & ``Neutrophil'' & Deals Matrix damage and link-locks the target. \\
+Crash IC & ``Apoptosis'' & Deals Matrix damage and forces the target's device to reboot. \\
+Jammer IC & ``Histamine'' & Deals Matrix damage and reduces target's Attack by 1. \\
+Killer IC & ``Cytotoxic T-Cell'' & Deals pure Matrix damage. \\
+Marker IC & ``Opsonin'' & Deals Matrix damage and adds 1 Tether to the target. \\
+Scramble IC & ``Prion'' & Deals Matrix damage and forces target to reboot and clears their Tethers. \\
+Tar Baby IC & ``Macrophage'' & Deals Matrix damage and link-locks the target, preventing them from rebooting or jacking out. \\
+Track IC & ``Dendritic Cell'' & Tracks the target's physical location. \\
+Black IC & ``Necrosis'' & Deals Biofeedback damage (Physical if target is Hot-Sim) and link-locks. \\
 \end{longtable}
 \begin{multicols}{2}
 
