@@ -5,5 +5,40 @@
     "lighting": -1,
     "footing": -2,
     "background_count": 3
+  },
+  "map": {
+    "layout_ascii": [
+      " C C . . R R . . C C ",
+      " C C . . R R . . C C ",
+      " . . . . R R . . . . ",
+      " B . . . R R . . B . ",
+      " C C . . R R . . C C "
+    ],
+    "legend": {
+      "C": "Chat Pile (Heavy Cover, Unstable Footing)",
+      "R": "Tar Creek River (Toxic, Deep Water, Movement Penalty)",
+      "B": "Burnt Out Wuxing Drone (Medium Cover, Electronic Noise)",
+      ".": "Muddy Bank (Open Ground, Poor Footing)"
+    },
+    "zones": [
+      {
+        "name": "Western Bank",
+        "type": "Start Zone",
+        "cover": "Medium",
+        "description": "Muddy, unstable ground near a burnt-out drone husk. Offers moderate cover but makes running treacherous."
+      },
+      {
+        "name": "The Creek",
+        "type": "Hazard",
+        "cover": "None",
+        "description": "Deep, fluorescent orange toxic water. Crossing takes twice as long and exposes combatants to toxic splashing."
+      },
+      {
+        "name": "Eastern Chat Piles",
+        "type": "High Ground",
+        "cover": "Heavy",
+        "description": "Steep hills of mining waste. Excellent vantage points and heavy cover, but the loose scree makes slipping easy."
+      }
+    ]
   }
 }
