@@ -1,0 +1,9 @@
+{
+  "name": "Tar Creek Ambush",
+  "description": "The banks of Tar Creek run thick with toxic, fluorescent orange water. Crumbling chat piles of mining waste loom on either side like man-made mountains, providing unstable cover. The air smells heavily of sulphur, blooming night-flowers, and rapid decay. Wuxing 'glass ghosts' occasionally flicker in the periphery, remnants of Thor strikes. Desperate, nanite-infused scavengers often use the chat piles to ambush those moving through the gully.",
+  "modifiers": {
+    "lighting": -1,
+    "footing": -2,
+    "background_count": 3
+  }
+}
