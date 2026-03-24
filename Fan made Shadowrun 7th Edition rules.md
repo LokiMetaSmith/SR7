@@ -89,6 +89,7 @@ All characters build and advance using **Karma**.
   * [III. RIGGING & VEHICLES: The Ghost in the Shell](#iii-rigging--vehicles-the-ghost-in-the-shell)
     * [1. Drone & Vehicle Stats](#1-drone--vehicle-stats)
     * [2. Jumped-In Mechanics & Chase Combat](#2-jumped-in-mechanics--chase-combat)
+    * [3. Vehicle Modifications](#3-vehicle-modifications)
   * [IV. GENERAL EQUIPMENT & LIFESTYLE](#iv-general-equipment--lifestyle)
     * [1. Augmentations (Cyberware & Bioware)](#1-augmentations-cyberware--bioware)
     * [2. Armor & Weapons](#2-armor--weapons)
@@ -3107,6 +3108,16 @@ Vehicles and drones are saturated with grey goo. Rigging is a deep, instinctual 
 | Control Rig Integration | Rating 1-3. Jumping in acts as DNI Hot-Sim. The Rigger adds their Control Rig rating to all vehicle action Dice Pools and reduces all Thresholds by the Rig rating (minimum 1). |
 | Bio-Feedback | Because the vehicle is nanite-infused, it has a pseudo-Essence. If the vehicle takes physical damage, the rigger must resist half that damage (rounded down) as Stun Biofeedback (Resist with WIL + BOD). |
 | Chase Combat | Opposed Pilot + Reaction tests. Net hits determine range bands (Close, Short, Medium, Long, Extreme). Drivers can spend Complex actions to attempt maneuvers (Cut Off, Ram, Evade). |
+
+#### 3. Vehicle Modifications
+| Modification | Slots | Cost (¥) | Description |
+| :--- | :--- | :--- | :--- |
+| Armor Plating | 1 | 2,000 | Adds +2 to the vehicle's Armor Rating. Can be taken multiple times. |
+| Rigger Interface | 1 | 1,000 | Allows a rigger to jump into the vehicle using a Control Rig. Required for jumping in. |
+| Weapon Mount (Standard) | 2 | 2,500 | Mounts an Assault Rifle or smaller weapon. Requires Gunnery skill to fire. |
+| Weapon Mount (Heavy) | 4 | 5,000 | Mounts heavy weapons (LMG, HMG, Assault Cannon). Requires Gunnery skill. |
+| Smuggling Compartment | 1 | 1,500 | A hidden compartment. Imposes a -4 penalty on Perception checks to find it. |
+| Spoofing Emitters | 2 | 4,000 | Emits false sensor data. Grants a +2 bonus to tests to resist being locked onto. |
 
 ### IV. GENERAL EQUIPMENT & LIFESTYLE
 Tech is advanced, but biological purity (Essence) is heavily commodified.

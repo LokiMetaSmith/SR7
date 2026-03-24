@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  24 MAR 2026 07:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  24 MAR 2026 18:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2650,11 +2650,6 @@ Overfull \hbox (8.28197pt too wide) in paragraph at lines 6738--6738
  []
 
 [86]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 20 on input line 6794.
-
-
 Overfull \hbox (3.34355pt too wide) in paragraph at lines 6852--6853
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
@@ -2710,11 +2705,6 @@ Overfull \hbox (5.77965pt too wide) in paragraph at lines 6960--6960
  []
 
 [88]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 23 on input line 6980.
-
-
 Overfull \hbox (3.34355pt too wide) in paragraph at lines 7083--7084
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
@@ -2725,11 +2715,6 @@ Overfull \hbox (3.89421pt too wide) in paragraph at lines 7104--7104
  []
 
 [89]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 25 on input line 7133.
-
-
 Overfull \hbox (29.47096pt too wide) in paragraph at lines 7172--7173
 []\T1/phv/m/n/10 (-20) Flamethrowers
  []
@@ -2835,11 +2820,6 @@ Overfull \hbox (8.64307pt too wide) in paragraph at lines 7533--7533
  []
 
 [94]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 29 on input line 7556.
-
-
 Overfull \hbox (4.46991pt too wide) in paragraph at lines 7608--7609
 []\T1/phv/m/n/10 (-20) Vehicular
  []
@@ -2889,12 +2869,7 @@ Overfull \hbox (0.64877pt too wide) in paragraph at lines 7642--7642
 \T1/phv/m/n/10 (-20) Weapon|
  []
 
-[95]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 32 on input line 7723.
-
-[96] [97]
+[95] [96] [97]
 Overfull \hbox (9.247pt too wide) in paragraph at lines 7935--7935
 []|\T1/phv/m/n/10 (-20) 1,700,000\TS1/phv/m/n/10 (-20) \xa5|
  []
@@ -2995,56 +2970,97 @@ Overfull \hbox (1.74127pt too wide) in paragraph at lines 8581--8582
  []
 
 [108] [109] [110] [111]
+Overfull \hbox (41.72298pt too wide) in alignment at lines 8891--8901
+ [] [] []
+ []
+
+
+Overfull \hbox (41.72298pt too wide) in alignment at lines 8901--8903
+ [] [] []
+ []
+
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 50 on input line 8919.
+(longtable)                in table 50 on input line 8916.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 51 on input line 8978.
+(longtable)                in table 51 on input line 8951.
 
 [112]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 53 on input line 9029.
+(longtable)                in table 52 on input line 9010.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 55 on input line 9080.
+(longtable)                in table 54 on input line 9061.
 
 [113]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 57 on input line 9131.
+(longtable)                in table 56 on input line 9112.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 59 on input line 9181.
+(longtable)                in table 58 on input line 9163.
 
 [114]
+Overfull \hbox (39.5316pt too wide) in alignment at lines 9175--9183
+ [] []
+ []
+
+
+Overfull \hbox (39.5316pt too wide) in alignment at lines 9183--9185
+ [] []
+ []
+
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 61 on input line 9231.
+(longtable)                in table 59 on input line 9191.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 63 on input line 9281.
+(longtable)                in table 60 on input line 9213.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 62 on input line 9263.
 
 [115]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 65 on input line 9331.
+(longtable)                in table 64 on input line 9313.
+
+
+Overfull \hbox (1.2017pt too wide) in alignment at lines 9325--9333
+ [] []
+ []
+
+
+Overfull \hbox (1.2017pt too wide) in alignment at lines 9333--9335
+ [] []
+ []
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 67 on input line 9381.
+(longtable)                in table 65 on input line 9341.
 
-[116] [117]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 71 on input line 9548.
+(longtable)                in table 66 on input line 9363.
 
-[118] [119] [120] [121] [122] [123]
+[116]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 68 on input line 9413.
+
+[117] [118]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 72 on input line 9580.
+
+[119] [120] [121] [122] [123] [124]
 
 Package longtable Warning: Table widths have changed. Rerun LaTeX.
 
@@ -3059,13 +3075,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
 Here is how much of TeX's memory you used:
- 36807 strings out of 476182
- 761491 string characters out of 5795595
- 2156975 words of memory out of 5000000
- 57548 multiletter control sequences out of 15000+600000
+ 36816 strings out of 476182
+ 761650 string characters out of 5795595
+ 2157975 words of memory out of 5000000
+ 57554 multiletter control sequences out of 15000+600000
  612344 words of font info for 369 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 117i,13n,121p,1227b,1543s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,13n,121p,1227b,1549s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{bookmark=id.kkav13e62x7p} has been referenced but d
 oes not exist, replaced by a fixed one
@@ -3079,10 +3095,10 @@ oes not exist, replaced by a fixed one
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "Fan made Shadowrun 7th Edition rules.pdf" (123 pages, 732489
+Output written on "Fan made Shadowrun 7th Edition rules.pdf" (124 pages, 742559
  bytes).
 PDF statistics:
- 879 PDF objects out of 1000 (max. 8388607)
- 710 compressed objects within 8 object streams
- 266 named destinations out of 1000 (max. 500000)
+ 885 PDF objects out of 1000 (max. 8388607)
+ 715 compressed objects within 8 object streams
+ 269 named destinations out of 1000 (max. 500000)
  26981 words of extra memory for PDF output out of 29859 (max. 10000000)
