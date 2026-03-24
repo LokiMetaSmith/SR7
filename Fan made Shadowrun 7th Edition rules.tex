@@ -959,7 +959,7 @@ Initiation and Submersion for characters costs 10 + (Initiation Grade x
 
 \textbf{Magic \& The Astral:}
 
-\textbf{Spellcasting:} Casting a spell is a \textbf{Major Action}.
+\textbf{Spellcasting:} Casting a spell requires \textbf{1 Action}.
 Declare the spell and at what Force it is cast (up to your MAG rating).
 Roll \texttt{MAG\ +\ Spellcasting} opposed by: - \texttt{BOD\ +\ WIL}
 for Direct Physical Spells - \texttt{WIL\ +\ INT} for Direct Mana Spells
@@ -971,8 +971,7 @@ resisted with \texttt{ESS\ +\ WIL}. Indirect spells are resisted with
 to its Force. After casting a spell, the caster resists drain with
 \texttt{WIL\ +\ tradition’s\ attribute} (usually LOG or CHA).
 
-\textbf{Reckless Spellcasting:} Casting a spell becomes a \textbf{Minor
-Action}, but the Drain Value is increased by \textbf{+3}.
+\textbf{Reckless Spellcasting:} Casting a spell can be done as a Free Action (costing 0 Actions), referred to as \textbf{Reckless Spellcasting}, but the Drain Value is increased by \textbf{+3}.
 
 \textbf{Background Count \& Wild Dice:} The standard Background Count
 (BC) of Seattle ranges from 1-6; if a BC is needed, the GM rolls 1D6 for
@@ -1381,7 +1380,7 @@ device from minimal materials, at GM's discretion.
 Receive +1 dice pool modifier to all auditory Perception Tests.
 
 \textbf{Lightning Reflexes} - 15 Karma (Initiative Quality) Gain one
-additional Initiative Die and two Minor Actions. Incompatible with
+additional Initiative Die and two additional Actions. Incompatible with
 Reaction enhancing 'ware.
 
 \textbf{Linguist} - 6 Karma (Knowledge, Meta, Skill Quality) Characters
@@ -2427,14 +2426,7 @@ other tails.
 \textbf{Actions:}
 
 During your \textbf{Turn} of a Combat Round everything you attempt to do
-requires taking an \textbf{Action}. Actions are typically categorized as
-\textbf{Major Actions}, \textbf{Minor Actions}, or \textbf{Mental
-Actions}. By default all characters have 2 Major Actions available per
-Combat Round; additionally gaining 1 Minor Action per Initiative Die
-held at the start of their Turn. Characters with a speed boost (whether
-augmented, magical, or otherwise) may gain additional Minor Actions or
-Mental Actions that can be performed using just their minds. No
-character may have more than 6 total Actions at the start of their Turn.
+requires taking an \textbf{Action}. By default all characters have 2 Actions available per Combat Round; additionally gaining 1 Action per Initiative Die held at the start of their Turn. Characters with a speed boost (whether augmented, magical, or otherwise) may gain additional Actions that can be performed using just their minds. No character may have more than 6 total Actions at the start of their Turn.
 Some Actions may require spending more than 1 of a character's available
 Actions to represent their increased complexity and time requirements,
 or the Action may only be taken once per Round. Other Actions may
@@ -2477,7 +2469,7 @@ the empty clip when the last round is fired.
 
 \textbf{Fire Weapon} (1 Action) - A simple trigger pull to attack with a
 ranged weapon; applies to single shot, semi-automatic, and burst fire
-weapons. If dual wielding firearms this Minor Action can be used to fire
+weapons. If dual wielding firearms this Action can be used to fire
 both weapons at once. This action also applies to letting loose an arrow
 from a bow or a bolt from a crossbow.
 
@@ -2491,7 +2483,7 @@ change simple functions of any device on your person or within reach.
 This is a catch all Action to cover any simple interactions not covered
 by Skills or more complex Actions, \emph{e.g.; Changing the firing mode
 of your assault rifle from burst fire to full auto could be accomplished
-via this Minor Action to flip the giggle switch}.
+via this Action to flip the giggle switch}.
 
 \textbf{Load} (1 or 2 or 3 Actions) - This Action is used for three
 purposes: to load individual rounds of ammunition into an ammunition
@@ -2885,8 +2877,9 @@ If you're stuck in the OKC-Metro grid without a piece, just fire up your localiz
 
 \end{multicols}
 \begin{longtblr}{
+  rowhead = 1,
   colspec = {X[1.5,l] *{10}{X[c]}},
-  row{1} = {bg=srdark, fg=white, font=\bfseries},
+  row{1} = {bg=black, fg=white, font=\bfseries},
   row{even} = {bg=gray!10},
   hlines, vlines
 }
@@ -3010,8 +3003,9 @@ but suprising stopping power.
 
 \end{multicols}
 \begin{longtblr}{
+  rowhead = 1,
   colspec = {X[1.5,l] *{10}{X[c]}},
-  row{1} = {bg=srdark, fg=white, font=\bfseries},
+  row{1} = {bg=black, fg=white, font=\bfseries},
   row{even} = {bg=gray!10},
   hlines, vlines
 }
@@ -8414,7 +8408,7 @@ Military-grade. Interfaces directly with gaiasphere anomalies. \\
 \paragraph{Cyberdeck Programs}\label{cyberdeck-programs}}
 
 Active programs take up a program slot on a cyberdeck. Swapping a
-program is a Minor Action. Programs act as localized rules-overrides or
+program is a Free Action. Programs act as localized rules-overrides or
 dice pool modifiers for your \gameterm{DNI} connection.
 
 \end{multicols}
@@ -8482,7 +8476,7 @@ the target per Tether. \\
 Data Spike & LOG + Cybercombat vs.~INT + Firewall & None & Deals (Attack
 Rtg + Net Hits + 2 per Tether) Matrix Damage. \\
 Neural Purge (Digital) & WIL + BOD & 1 & The Antibody floods a Tethered target with raw gaiasphere noise. Damage is 8 Stun (Biofeedback). \\
-Control Device & LOG + Electronic Warfare vs. WIL + Firewall & 1 to 3 & Take control of a device/drone. Requires 1 Tether for Free actions, 2 for Simple, 3 for Major. \\
+Control Device & LOG + Electronic Warfare vs. WIL + Firewall & 1 to 3 & Take control of a device/drone. Requires 1 Tether for simple device interactions, 2 for standard actions, 3 for complex tasks requiring multiple Actions. \\
 Crack File & LOG + Hacking vs. INT + Firewall & 1 & Remove encryption from a file. \\
 Disarm Data Bomb & LOG + Software vs. Device Rating x 2 & 1 & Disarm a Data Bomb. If you fail, it detonates. \\
 Edit File & LOG + Computer vs. INT + Firewall & 1 & Create, change, copy, or delete a file. \\
@@ -9915,7 +9909,7 @@ World}\label{gm-advice-running-combat-in-the-6th-world}}
   \textbf{Make them choose their ammo:} If the runners are fighting
   Wuxing, standard APDS ammo is best. But if a G.O.D Antibody spawns or
   a Fuchsia Dragon attacks, they will desperately wish they had loaded
-  expensive Nanite-Buster rounds. Let them use a Minor Action to swap
+  expensive Nanite-Buster rounds. Let them use 1 Action to swap
   magazines if they thought ahead!
 \item
   \textbf{The Horror of the Abominations:} Describe the Fuchsia Dragons

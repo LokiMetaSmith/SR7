@@ -69,9 +69,66 @@ All characters build and advance using **Karma**.
 *(Note: Magic and Resonance both start at 0. You must buy one of these qualities at character generation to unlock the stat, which starts at Rating 1).*
 
 
-1. [Dice & Tests](#bookmark=id.x87h504b24hr)  
-2. [Character Creation & Advancement](#bookmark=id.kkav13e62x7p)  
-3. 
+## Table of Contents
+
+* [Shadowrun 7th Edition Homebrew: The Merged World](#shadowrun-7th-edition-homebrew-the-merged-world)
+  * [I. Core Mechanics: Dice & Tests](#i-core-mechanics-dice--tests)
+  * [II. The Matrix & The Gaiasphere](#ii-the-matrix--the-gaiasphere)
+    * [Updated Matrix Actions: Tethers & G.O.D.](#updated-matrix-actions-tethers--god)
+  * [III. Magic, Resonance, and the Soul](#iii-magic-resonance-and-the-soul)
+  * [IV. Spirits, Sprites, and Hybrid Entities](#iv-spirits-sprites-and-hybrid-entities)
+  * [V. Character Creation Summary](#v-character-creation-summary)
+  * [I. MAGIC: The Awakened Gaiasphere](#i-magic-the-awakened-gaiasphere)
+    * [1. Spellcasting & Drain Calculations](#1-spellcasting--drain-calculations)
+    * [2. Adept Powers & Metamagic](#2-adept-powers--metamagic)
+    * [3. Ritual Spellcasting](#3-ritual-spellcasting)
+  * [II. MATRIX: The Nanite Grid](#ii-matrix-the-nanite-grid)
+    * [1. Cyberdecks & Commlinks](#1-cyberdecks--commlinks)
+    * [2. Matrix Actions & Tethers in Combat](#2-matrix-actions--tethers-in-combat)
+    * [3. Hosts & IC (Immune Responses)](#3-hosts--ic-immune-responses)
+  * [III. RIGGING & VEHICLES: The Ghost in the Shell](#iii-rigging--vehicles-the-ghost-in-the-shell)
+    * [1. Drone & Vehicle Stats](#1-drone--vehicle-stats)
+    * [2. Jumped-In Mechanics & Chase Combat](#2-jumped-in-mechanics--chase-combat)
+  * [IV. GENERAL EQUIPMENT & LIFESTYLE](#iv-general-equipment--lifestyle)
+    * [1. Augmentations (Cyberware & Bioware)](#1-augmentations-cyberware--bioware)
+    * [2. Armor & Weapons](#2-armor--weapons)
+    * [3. Lifestyles (Monthly Upkeep)](#3-lifestyles-monthly-upkeep)
+  * [V. THE "WEIRD AF" WORLD: BTLs & Manifestations](#v-the-weird-af-world-btls--manifestations)
+    * [1. "Manifestation" BTL Chips (The Fuchsia Dragon)](#1-manifestation-btl-chips-the-fuchsia-dragon)
+    * [2. Specialized Entities & NPCs](#2-specialized-entities--npcs)
+  * [VI. LIFE PATH CHARACTER CREATION (Optional)](#vi-life-path-character-creation-optional)
+  * [VII. COMBAT & WEAPONRY (D6 System Integration)](#vii-combat--weaponry-d6-system-integration)
+    * [1. Ranged Weapons](#1-ranged-weapons)
+    * [2. Ammo Types & Modifications](#2-ammo-types--modifications)
+  * [VIII. HEALING & DOWNTIME](#viii-healing--downtime)
+  * [IX. STEALTH IN THE PANOPTICON: Hiding from the Goo](#ix-stealth-in-the-panopticon-hiding-from-the-goo)
+    * [1. Signature Spoofing (Matrix Stealth)](#1-signature-spoofing-matrix-stealth)
+  * [X. TECHNOMANCERS: Kings of the Weird](#x-technomancers-kings-of-the-weird)
+    * [1. Fading (Technomancer Drain)](#1-fading-technomancer-drain)
+    * [2. Complex Forms (Nanite Shaping)](#2-complex-forms-nanite-shaping)
+    * [3. Compiling Sprites (Physical Manifestation)](#3-compiling-sprites-physical-manifestation)
+  * [XI. HOPEPUNK & EDGE MECHANICS](#xi-hopepunk--edge-mechanics)
+    * [1. Using Edge](#1-using-edge)
+    * [2. Regaining Edge (The Hopepunk Triggers)](#2-regaining-edge-the-hopepunk-triggers)
+  * [XII. DESTABILIZATION (The "Spark+" Problem)](#xii-destabilization-the-spark-problem)
+  * [XIII. SOCIAL RULES: Street Cred & Comms](#xiii-social-rules-street-cred--comms)
+  * [XIV. BESTIARY & ADVERSARIES](#xiv-bestiary--adversaries)
+    * [1. Wuxing "Null-Sec" Strike Teams](#1-wuxing-null-sec-strike-teams)
+    * [2. Feral "Fuchsia Dragon" Abominations](#2-feral-fuchsia-dragon-abominations)
+    * [3. G.O.D. "Antibodies" (Grid Immune Responses)](#3-god-antibodies-grid-immune-responses)
+    * [GM Advice: Running Combat in the 6th World](#gm-advice-running-combat-in-the-6th-world)
+  * [XV. THE SHADOW ECONOMY: Trading in the Panopticon](#xv-the-shadow-economy-trading-in-the-panopticon)
+    * [1. Currency & "Goo-Scrubbing"](#1-currency--goo-scrubbing)
+    * [2. The New Gold Standard: Barter](#2-the-new-gold-standard-barter)
+    * [3. Smuggling & "Null-Bags"](#3-smuggling--null-bags)
+  * [XVI. CONTACTS & LEGWORK: Silence Speaks Volumes](#xvi-contacts--legwork-silence-speaks-volumes)
+    * [1. Communication Protocols](#1-communication-protocols)
+    * [2. The Hopepunk Social Modifier](#2-the-hopepunk-social-modifier)
+  * [XVII. KEY NPC PROFILES: The Movers and Shakers](#xvii-key-npc-profiles-the-movers-and-shakers)
+  * [Summary of the "Weird AF" Vibe Check for the GM](#summary-of-the-weird-af-vibe-check-for-the-gm)
+  * [Balancing Baseline Formulas](#balancing-baseline-formulas)
+    * [Metatype Karma Cost Formula](#metatype-karma-cost-formula)
+    * [Weapon Nuyen Cost Formula](#weapon-nuyen-cost-formula)
 
 **Dice & Tests**
 
@@ -281,7 +338,7 @@ Initiation and Submersion for characters costs 10 + (Initiation Grade x 5) Karma
 **Magic & The Astral:**
 
 **Spellcasting:**
-Casting a spell is a **Major Action**. Declare the spell and at what Force it is cast (up to your MAG rating). Roll `MAG + Spellcasting` opposed by:
+Casting a spell requires **1 Action**. Declare the spell and at what Force it is cast (up to your MAG rating). Roll `MAG + Spellcasting` opposed by:
 - `BOD + WIL` for Direct Physical Spells
 - `WIL + INT` for Direct Mana Spells
 - `REA + INT` for Indirect Spells
@@ -290,7 +347,7 @@ Damage for all spells is **Force + net hits**. Direct spells are resisted with `
 After casting a spell, the caster resists drain with `WIL + tradition’s attribute` (usually LOG or CHA).
 
 **Reckless Spellcasting:**
-Casting a spell becomes a **Minor Action**, but the Drain Value is increased by **+3**.
+Casting a spell can be done as a Free Action (costing 0 Actions), referred to as **Reckless Spellcasting**, but the Drain Value is increased by **+3**.
 
 **Background Count & Wild Dice:**
 The standard Background Count (BC) of Seattle ranges from 1-6; if a BC is needed, the GM rolls 1D6 for the current level.
@@ -534,7 +591,7 @@ Gain +2 dice pool modifier when attempting to temporarily repair or jury rig a d
 Receive +1 dice pool modifier to all auditory Perception Tests.
 
 **Lightning Reflexes** - 15 Karma (Initiative Quality)
-Gain one additional Initiative Die and two Minor Actions.  Incompatible with Reaction enhancing ‘ware.
+Gain one additional Initiative Die and two additional Actions.  Incompatible with Reaction enhancing ‘ware.
 
 **Linguist** - 6 Karma (Knowledge, Meta, Skill Quality)
 Characters with *Linguist* learn new Language Skills in half the normal time and pay 1x new rating Karma to learn them.  When taken at character creation, this quality provides 5x LOG + INT free Karma to purchase Language Skills.  Any unspent Karma is lost.
@@ -621,7 +678,7 @@ For 5 Karma, gain +1 dice pool modifier on all Perception Tests, including astra
 Substitute Perception Skill rating for WIL on Full Defense.
 
 **Perfect Time** - 5 Karma (Meta Quality)
-Your character knows the current time to the minute unless extenuating circumstances disrupt this ability, at GM’s discretion.  *Perfect Time* also provides a +1 dice pool modifier to all tests involving timing or rhythm and 1 extra minor action every combat turn.
+Your character knows the current time to the minute unless extenuating circumstances disrupt this ability, at GM’s discretion.  *Perfect Time* also provides a +1 dice pool modifier to all tests involving timing or rhythm and 1 extra Action every combat turn.
 
 **Photographic Memory** - 5 Karma (Mental Quality)
 Receive +4 dice pool modifier on Memory Tests.
@@ -1124,7 +1181,7 @@ If Initiative Scores between any characters are ever tied, the tie breaker is de
 
 **Actions:**
 
-During your **Turn** of a Combat Round everything you attempt to do requires taking an **Action**.  Actions are typically categorized as **Major Actions**, **Minor Actions**, or **Mental Actions**. By default all characters have 2 Major Actions available per Combat Round; additionally gaining 1 Minor Action per Initiative Die held at the start of their Turn. Characters with a speed boost (whether augmented, magical, or otherwise) may gain additional Minor Actions or Mental Actions that can be performed using just their minds. No character may have more than 6 total Actions at the start of their Turn.  Some Actions may require spending more than 1 of a character’s available Actions to represent their increased complexity and time requirements, or the Action may only be taken once per Round.  Other Actions may require that they be the only Action attempted on a character’s Turn, or even require multiple Rounds to complete.
+During your **Turn** of a Combat Round everything you attempt to do requires taking an **Action**.  By default all characters have 2 Actions available per Combat Round; additionally gaining 1 Action per Initiative Die held at the start of their Turn. Characters with a speed boost (whether augmented, magical, or otherwise) may gain additional Actions that can be performed using just their minds. No character may have more than 6 total Actions at the start of their Turn.  Some Actions may require spending more than 1 of a character’s available Actions to represent their increased complexity and time requirements, or the Action may only be taken once per Round.  Other Actions may require that they be the only Action attempted on a character’s Turn, or even require multiple Rounds to complete.
 Actions may be taken in any order you desire and you must use all available Actions on your Turn, unless saving Actions for the use of **Reactions** later in the Combat Round.  At the end of a Round any unspent Actions are lost.  You may NOT save Actions to increase your total Actions on the following Combat Round; use them or lose them.
 To use a Reaction, a character must have the required Actions available, either by saving those Actions if they acted previously in the Combat Round, or by preemptively using them to react if they have not acted yet, *e.g.; A character takes their Turn with 4 available Actions. They spend 2 Actions on their Turn to attack, saving 2 Actions to use on Reactions later in the Combat Round.*
 
@@ -1140,11 +1197,11 @@ To use a Reaction, a character must have the required Actions available, either 
 
 **Eject** (1 Action) - Remove the detachable magazine (box or drum) from a weapon, use the ejector to empty the entire cylinder of a cased pistol, or open and eject up to two empty cases from a break action weapon.  Note: firearms that are fed by a clip will automatically eject the empty clip when the last round is fired.
 
-**Fire Weapon** (1 Action) - A simple trigger pull to attack with a ranged weapon; applies to single shot, semi-automatic, and burst fire weapons.  If dual wielding firearms this Minor Action can be used to fire both weapons at once.  This action also applies to letting loose an arrow from a bow or a bolt from a crossbow.
+**Fire Weapon** (1 Action) - A simple trigger pull to attack with a ranged weapon; applies to single shot, semi-automatic, and burst fire weapons.  If dual wielding firearms this Action can be used to fire both weapons at once.  This action also applies to letting loose an arrow from a bow or a bolt from a crossbow.
 
 **Gesture** (1 Action) - Gesture with your hand(s), or make any series of hand signals that can be accomplished within 3 seconds.  Other characters who do not know what your gesture means may attempt an Intuition (2) Test to decipher.
 
-**Interact with Device** (1 Action) - Activate, deactivate, or change simple functions of any device on your person or within reach.  This is a catch all Action to cover any simple interactions not covered by Skills or more complex Actions, *e.g.; Changing the firing mode of your assault rifle from burst fire to full auto could be accomplished via this Minor Action to flip the giggle switch*.
+**Interact with Device** (1 Action) - Activate, deactivate, or change simple functions of any device on your person or within reach.  This is a catch all Action to cover any simple interactions not covered by Skills or more complex Actions, *e.g.; Changing the firing mode of your assault rifle from burst fire to full auto could be accomplished via this Action to flip the giggle switch*.
 
 **Load** (1 or 2 or 3 Actions) - This Action is used for three purposes: to load individual rounds of ammunition into an ammunition feeding device with 1 Action, to reload a weapon with more complicated feeding mechanisms or loading requirements by spending 2 Actions, or to reload a cap & ball weapon with 3 Actions.  When loading an ammunition feeding device (or any open break action weapon) a number of rounds equal to the character’s AGI are loaded; this includes: cylinders, detachable magazines, internal magazines, shotgun chutes, stripper clips, or speed loaders.  For belts, clips, or drums a number of rounds equal to the character’s AGI / 2 (rounded up) are loaded.  With a successful AGI (3) Attribute Test, up to 1 extra round of ammo is loaded per net hit.  If this test fails, the character fumbles attempting to reload too quickly and only loads half the number rounds they would normally have, rounded down.  A glitch or a critical glitch is likely to drop the ammunition, jam the feeding device, or worse at GM discretion.  Load may also be used, by spending 2 Actions, to reload a muzzleloading weapon with a single round of ammunition, reload an empty breech loading weapon with a single round of ammunition, or to reload a belt fed weapon with a new belt.  With the use of 3 Actions, Load may be used to reload the powder charge and projectile of a cap & ball weapon with a ramrod.
 
@@ -3012,7 +3069,7 @@ Tethers replace Marks. They are two-way sympathetic soul-links.
 | Establish Tether (Hack on the Fly) | LOG + Hacking vs. WIL + Firewall | None | Creates 1 Tether. You gain +1 Die on all future actions against the target per Tether. |
 | Data Spike | LOG + Cybercombat vs. INT + Firewall | None | Deals (Attack Rtg + Net Hits + 2 per Tether) Matrix Damage. |
 | Neural Purge (Digital) | WIL + BOD | 1 | The Antibody floods a Tethered target with raw gaiasphere noise. Damage is 8 Stun (Biofeedback). |
-| Control Device | LOG + Electronic Warfare vs. WIL + Firewall | 1 to 3 | Take control of a device/drone. Requires 1 Tether for Free actions, 2 for Simple, 3 for Major. |
+| Control Device | LOG + Electronic Warfare vs. WIL + Firewall | 1 to 3 | Take control of a device/drone. Requires 1 Tether for simple device interactions, 2 for standard actions, 3 for complex tasks requiring multiple Actions. |
 | Crack File | LOG + Hacking vs. INT + Firewall | 1 | Remove encryption from a file. |
 | Disarm Data Bomb | LOG + Software vs. Device Rating x 2 | 1 | Disarm a Data Bomb. If you fail, it detonates. |
 | Edit File | LOG + Computer vs. INT + Firewall | 1 | Create, change, copy, or delete a file. |
@@ -3561,7 +3618,7 @@ Grid Overwatch Division is no longer a room of corporate deckers. It is an auton
 *   **Dissipation:** The Antibody is a temporary immune response. It dissolves back into inert dust and grey goo if its Physical Condition Monitor is filled, OR if the Hacker successfully jacks out (taking Dump Shock) and drops off the grid.
 
 #### GM Advice: Running Combat in the 6th World
-*   **Make them choose their ammo:** If the runners are fighting Wuxing, standard APDS ammo is best. But if a G.O.D Antibody spawns or a Fuchsia Dragon attacks, they will desperately wish they had loaded expensive Nanite-Buster rounds. Let them use a Minor Action to swap magazines if they thought ahead!
+*   **Make them choose their ammo:** If the runners are fighting Wuxing, standard APDS ammo is best. But if a G.O.D Antibody spawns or a Fuchsia Dragon attacks, they will desperately wish they had loaded expensive Nanite-Buster rounds. Let them use 1 Action to swap magazines if they thought ahead!
 *   **The Horror of the Abominations:** Describe the Fuchsia Dragons tragically. Underneath the glowing scales and feral roars, there is still a metahuman weeping. This plays into your "Hopepunk" theme—killing them should feel like a tragic necessity, and trying to subdue them non-lethally (Stun damage) should be rewarded with Edge.
 *   **Antibodies are forces of nature:** Do not treat a G.O.D Antibody as a normal enemy. It is a natural disaster. When it drops, the objective of the encounter immediately shifts from "Win the fight" to "Survive and Escape."
 
