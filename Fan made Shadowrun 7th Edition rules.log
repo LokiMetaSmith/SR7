@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  24 MAR 2026 18:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.25)  25 MAR 2026 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2969,102 +2969,12 @@ Overfull \hbox (1.74127pt too wide) in paragraph at lines 8581--8582
 []\T1/phv/m/n/10 (-20) Hand/Speed
  []
 
-[108] [109] [110] [111]
-Overfull \hbox (41.72298pt too wide) in alignment at lines 8891--8901
- [] [] []
- []
+
+Overfull \vbox (4.9177pt too high) has occurred while \output is active []
 
 
-Overfull \hbox (41.72298pt too wide) in alignment at lines 8901--8903
- [] [] []
- []
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 50 on input line 8916.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 51 on input line 8951.
-
-[112]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 52 on input line 9010.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 54 on input line 9061.
-
-[113]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 56 on input line 9112.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 58 on input line 9163.
-
-[114]
-Overfull \hbox (39.5316pt too wide) in alignment at lines 9175--9183
- [] []
- []
-
-
-Overfull \hbox (39.5316pt too wide) in alignment at lines 9183--9185
- [] []
- []
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 59 on input line 9191.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 60 on input line 9213.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 62 on input line 9263.
-
-[115]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 64 on input line 9313.
-
-
-Overfull \hbox (1.2017pt too wide) in alignment at lines 9325--9333
- [] []
- []
-
-
-Overfull \hbox (1.2017pt too wide) in alignment at lines 9333--9335
- [] []
- []
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 65 on input line 9341.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 66 on input line 9363.
-
-[116]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 68 on input line 9413.
-
-[117] [118]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 72 on input line 9580.
-
-[119] [120] [121] [122] [123] [124]
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
-(./Fan made Shadowrun 7th Edition rules.aux)
+[108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119]
+[120] [121] [122] [123] [124] (./Fan made Shadowrun 7th Edition rules.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -3075,10 +2985,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
 Here is how much of TeX's memory you used:
- 36816 strings out of 476182
- 761650 string characters out of 5795595
- 2157975 words of memory out of 5000000
- 57554 multiletter control sequences out of 15000+600000
+ 36817 strings out of 476182
+ 761678 string characters out of 5795595
+ 2155975 words of memory out of 5000000
+ 57555 multiletter control sequences out of 15000+600000
  612344 words of font info for 369 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  117i,13n,121p,1227b,1549s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3095,7 +3005,7 @@ oes not exist, replaced by a fixed one
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "Fan made Shadowrun 7th Edition rules.pdf" (124 pages, 742559
+Output written on "Fan made Shadowrun 7th Edition rules.pdf" (124 pages, 723632
  bytes).
 PDF statistics:
  885 PDF objects out of 1000 (max. 8388607)

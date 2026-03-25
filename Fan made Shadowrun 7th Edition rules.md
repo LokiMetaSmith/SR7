@@ -3103,12 +3103,26 @@ Vehicles and drones are saturated with grey goo. Rigging is a deep, instinctual 
 | GMC Banshee | T-Bird / LAV | 5 / 8 | 4 | 16 | 18 | 5 | 250,000 |
 
 #### 2. Jumped-In Mechanics & Chase Combat
-| Mechanic | Rule / Application |
-| :--- | :--- |
-| Control Rig Integration | Rating 1-3. Jumping in acts as DNI Hot-Sim. The Rigger adds their Control Rig rating to all vehicle action Dice Pools and reduces all Thresholds by the Rig rating (minimum 1). |
-| Bio-Feedback | Because the vehicle is nanite-infused, it has a pseudo-Essence. If the vehicle takes physical damage, the rigger must resist half that damage (rounded down) as Stun Biofeedback (Resist with WIL + BOD). |
-| Chase Combat | Opposed Pilot + Reaction tests. Net hits determine range bands (Close, Short, Medium, Long, Extreme). Drivers can spend Complex actions to attempt maneuvers (Cut Off, Ram, Evade). |
 
+**Jumping In (Control Rig Integration)**
+A Rigger with a Control Rig (Rating 1-3) can "jump into" a nanite-infused vehicle equipped with a Rigger Interface. This acts as a DNI Hot-Sim connection, merging the Rigger’s consciousness with the vehicle’s pseudo-Essence.
+*   **Dice Pool Bonus:** The Rigger adds their Control Rig rating to all Vehicle skill checks (Piloting, Gunnery, Sensors).
+*   **Threshold Reduction:** The Threshold for any Vehicle test is reduced by the Control Rig rating (to a minimum of 1).
+*   **Initiative:** While jumped in, the Rigger uses Matrix Initiative (Data Processing + Intuition) and gains +1 Initiative Die per level of their Control Rig.
+
+**Bio-Feedback & Destabilization**
+Because the vehicle is saturated with grey goo, it possesses a pseudo-Essence that the Rigger connects to on a spiritual level.
+*   If the vehicle takes Physical damage, the Rigger must resist half of that damage (rounded down) as Stun Biofeedback. This is resisted with `WIL + BOD`.
+*   If the vehicle's Condition Monitor is filled and it is destroyed while the Rigger is jumped in, the Rigger suffers severe Dumpshock, immediately taking 6 unresistable Stun damage and suffering a -2 Dice Pool modifier to all actions for (12 - WIL) minutes.
+
+**Chase Combat**
+Chases are high-stakes affairs that abstract exact speeds into Range Bands: Close, Short, Medium, Long, and Extreme.
+*   **The Chase Turn:** At the start of a Combat Round where a chase is occurring, all participating drivers make an Opposed `Pilot + Reaction` test. The net hits determine if a vehicle moves up or down a Range Band relative to their target.
+*   **Chase Maneuvers:** Drivers can spend their Complex actions during their Initiative pass to attempt specific maneuvers:
+    *   *Catch Up / Break Away:* An opposed Pilot test to force a shift in Range Band.
+    *   *Evade:* The driver adds their Vehicle's Handling rating to their Defense Pool against incoming attacks for the round.
+    *   *Ram:* An opposed Pilot test. If successful, both vehicles take Physical damage based on the ramming vehicle's Body + Speed, resisted by Body + Armor.
+    *   *Cut Off:* Attempted at Close or Short range. An opposed Pilot test to force the target vehicle to make a Crash Test.
 #### 3. Vehicle Modifications
 | Modification | Slots | Cost (¥) | Description |
 | :--- | :--- | :--- | :--- |

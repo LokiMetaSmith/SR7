@@ -14,8 +14,8 @@ Based on the recent systems review, here is a prioritized to-do list for making 
     *   [ ] *Follow-up required (Rigging/Vehicles):* Need design docs for:
         *   [ ] Drone stats
         *   [x] Vehicle modifications
-        *   [ ] Chase combat
-        *   [ ] Jumped-in mechanics
+        *   [x] Chase combat
+        *   [x] Jumped-in mechanics
     *   *Follow-up required (General Equipment):* Need lists and costs for Armor, Cyberware/Bioware, Commlinks, and Lifestyle.
 *   [x] **Define the Baseline Mechanics:** Clarify how "Wild Dice" and "Digital Essence" interact with standard gameplay loops.
 
