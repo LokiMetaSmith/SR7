@@ -3097,9 +3097,19 @@ Vehicles and drones are saturated with grey goo. Rigging is a deep, instinctual 
 #### 1. Drone & Vehicle Stats
 | Vehicle/Drone | Type | Hand/Speed | Accel | BOD | ARM | SENS | Cost (¥) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Horizon Flying Eye | Micro-Drone | 4 / 3 | 2 | 1 | 0 | 3 | 2,000 |
 | MCT Fly-Spy | Micro-Drone | 4 / 3 | 2 | 1 | 0 | 3 | 2,000 |
+| Aztechnology Crawler | Mini-Drone | 4 / 3 | 1 | 2 | 2 | 3 | 4,000 |
+| Lockheed Optic-X2 | Small Drone | 4 / 4 | 2 | 2 | 2 | 4 | 21,000 |
+| MCT Nissan Doberman | Medium Drone | 5 / 3 | 1 | 4 | 4 | 3 | 5,000 |
 | Ares Duelist | Combat Drone | 3 / 3 | 2 | 4 | 4 | 3 | 4,500 |
+| Steel Lynx Combat Drone | Heavy Drone | 5 / 4 | 2 | 6 | 12 | 3 | 25,000 |
+| Dodge Scoot | Scooter | 4 / 3 | 1 | 4 | 2 | 1 | 3,000 |
+| Yamaha Growler | Off-Road Bike | 5 / 4 | 2 | 5 | 4 | 1 | 5,000 |
+| Suzuki Mirage | Racing Bike | 5 / 6 | 3 | 5 | 4 | 2 | 8,500 |
 | Ford Americar | Sedan | 4 / 4 | 2 | 11 | 6 | 2 | 16,000 |
+| Toyota Gopher | Pickup Truck | 5 / 4 | 2 | 14 | 8 | 2 | 25,000 |
+| Ares Roadmaster | Armored Transport | 3 / 3 | 1 | 18 | 18 | 3 | 52,000 |
 | GMC Banshee | T-Bird / LAV | 5 / 8 | 4 | 16 | 18 | 5 | 250,000 |
 
 #### 2. Jumped-In Mechanics & Chase Combat
