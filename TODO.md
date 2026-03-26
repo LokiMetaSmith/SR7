@@ -12,7 +12,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
     *   [x] *Follow-up required (Magic):* Need design docs for Spell lists, Adept powers, Drain calculations, Rituals, and Metamagic.
     *   [x] *Follow-up required (Matrix):* Need design docs for Programs, Cyberdecks/Commlinks, IC, Host architecture, and Matrix actions (how do "Tethers" work in combat?).
     *   [ ] *Follow-up required (Rigging/Vehicles):* Need design docs for:
-        *   [ ] Drone stats
+        *   [x] Drone stats
         *   [x] Vehicle modifications
         *   [x] Chase combat
         *   [x] Jumped-in mechanics
