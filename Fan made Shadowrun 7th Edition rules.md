@@ -3025,6 +3025,8 @@ Adept powers are fueled by the adept's Magic Rating and Power Points (PP). Adept
 | Natural Weapon | Creature | N/A | Physical attack like claws or bite (DV varies, typically STR+1 or STR+2). |
 | Shift | Creature | N/A | Transforms into an animal form (e.g., Jaguar). |
 | Essence Drain | Creature | N/A | Drains Essence from a victim to heal or empower the creature. |
+| Infection (HMHVV) | Creature | N/A | Transfers the HMHVV virus through essence drain or physical contact. |
+| Dual Natured | Creature | N/A | Exists in both physical and astral planes simultaneously. |
 | Mist Form | Creature | N/A | Transforms into an invulnerable, gaseous mist. |
 | Regeneration | Creature | N/A | Rapidly heals physical damage every combat round. |
 | Immunity to Normal Weapons | Spirit | N/A | Heavy armor against non-magical attacks, reducing incoming damage significantly. |
@@ -3177,6 +3179,7 @@ Losing >2 Essence risks the "Augmentation Addict" Negative Quality.
 | Actioneer Business Clothes | Armor | 8 | 5 | 1,500 | Discreet, stylish armored suit. |
 | Armor Clothing | Armor | 6 | 4 | 450 | Normal-looking clothes with basic ballistic weave. |
 | Lined Coat | Armor | 9 | 8 | 900 | Classic shadowrunner trench coat. Conceals weapons well. |
+| Custom Fit | Armor Mod | - | - | 500 | Tailored specifically to the wearer. Adds +1 Concealability to hidden weapons. |
 | Synthleather Jacket | Armor | 8 | 6 | 200 | Common, cheap protection. |
 | Ares Predator V | Heavy Pistol | Dam: 8P, AP: -1 | — | 725 | Includes built-in Smartlink (requires DNI to use). |
 | Defiance T-250 | Shotgun | Dam: 10P, AP: -1 | — | 450 | Devastating in close quarters. |
