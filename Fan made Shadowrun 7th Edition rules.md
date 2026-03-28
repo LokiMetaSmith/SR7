@@ -3736,6 +3736,15 @@ When running this merged ruleset, keep the following in mind:
 ### Balancing Baseline Formulas
 To ensure consistency and allow automated tools (like `balance_generator.py`) to function properly, the following mathematical formulas serve as the baseline for calculating costs in this ruleset.
 
+#### Master Templates for Parsing Tools
+Automated scripts (`balance_generator.py`, `xml_generator.py`) rely on specific table structures to parse data correctly. When adding new items, adhere to the following templates:
+
+* **Qualities:** Must be formatted as bolded text followed by an escaped dash and Karma cost:
+  `**Quality Name** \- [Cost] Karma (Optional Tags)`
+* **Weapons Table:** Tables must include the following exact headers (case-sensitive) to be parsed for XML generation and balancing:
+  `| Weapon Name | ACC | DV | AP | MODE | RC | AMMO | AVAIL | COST |`
+
+
 #### Metatype Karma Cost Formula
 *   **Base Cost calculation:** Calculate the sum of the maximum limits for all 9 core Attributes (BOD, AGI, REA, STR, WIL, LOG, INT, CHA, EDG).
 *   Subtract 56 from this total.
