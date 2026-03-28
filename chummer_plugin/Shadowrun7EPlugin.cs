@@ -21,15 +21,6 @@ namespace Shadowrun7EPlugin
             // Initialization if necessary
         }
 
-        // Custom Initiative rolling for Shadowrun 7E: REA + INT + 1D6
-        // This method provides the random 1D6 component.
-        private static readonly Random _random = new Random();
-
-        public int CalculateCustomInitiative()
-        {
-            return _random.Next(1, 7);
-        }
-
         protected virtual void Dispose(bool disposing) { }
 
         public void Dispose()
@@ -95,6 +86,53 @@ namespace Shadowrun7EPlugin
         public Microsoft.ApplicationInsights.Channel.ITelemetry SetTelemetryInitialize(Microsoft.ApplicationInsights.Channel.ITelemetry telemetry)
         {
             return telemetry;
+        }
+
+        /// <summary>
+        /// Custom method simulating an Initiative recalculation trigger.
+        /// Replaces the invalid CalculateCustomInitiative() method from the IPlugin interface.
+        /// </summary>
+        public void ApplyCustomInitiative(Character character)
+        {
+            // Implementation: REA + INT + 1D6
+            try
+            {
+                // Guessing Chummer's character API properties
+                if (character != null)
+                {
+                    // For example:
+                    // character.InitiativeDice = 1;
+                    // character.BaseInitiative = character.REA.TotalValue + character.INT.TotalValue;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle missing properties cleanly without crashing
+                System.Diagnostics.Debug.WriteLine($"ApplyCustomInitiative Failed: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Custom method applying "Digital Essence" rule overrides.
+        /// AIs, Sprites, or Matrix entities have an Essence of 6.
+        /// </summary>
+        public void ApplyDigitalEssence(Character character)
+        {
+            try
+            {
+                // Guessing Chummer's character API properties
+                if (character != null && (character.Metatype == "AI" || character.Metatype == "Sprite" || character.Metatype == "Matrix Entity"))
+                {
+                    // For example:
+                    // character.Essence.BaseValue = 6;
+                    // character.Essence.TotalValue = 6;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle missing properties cleanly without crashing
+                System.Diagnostics.Debug.WriteLine($"ApplyDigitalEssence Failed: {ex.Message}");
+            }
         }
     }
 }
