@@ -3098,6 +3098,12 @@ Tethers replace Marks. They are two-way sympathetic soul-links.
 ### III. RIGGING & VEHICLES: The Ghost in the Shell
 Vehicles and drones are saturated with grey goo. Rigging is a deep, instinctual merge with the machine's pseudo-Essence.
 
+**Design Doc: Rigging in the 6th World**
+In the Merged World, vehicles are no longer purely mechanical constructs; the pervasive nanites have woven a localized pseudo-Essence into their chassis. To pilot these machines optimally, a Rigger doesn't just connect via standard AR or VR—they immerse themselves entirely, their own biological Essence tangling with the digital ghost inhabiting the machine.
+
+*   **Drone Command & Tethers:** Because the Matrix is permanently merged with the Gaiasphere, commanding drones remotely requires establishing a Tether to the drone's localized network. Issuing commands is a Simple Action, but doing so while dealing with high background counts or Noise (such as in areas saturated with anomalous goo) may require substituting standard dice with Wild Dice.
+*   **The Pseudo-Essence Cost:** Machines lack true souls, but their nanite saturation mimics one. Riggers connecting via DNI Hot-Sim (Jumping In) share a neural and spiritual link with this pseudo-Essence. This grants unparalleled control, bypassing mechanical latency, but any physical trauma inflicted upon the vehicle violently resonates back to the rigger as Stun Biofeedback.
+
 #### 1. Drone & Vehicle Stats
 | Vehicle/Drone | Type | Hand/Speed | Accel | BOD | ARM | SENS | Cost (¥) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
