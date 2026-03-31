@@ -45,10 +45,19 @@ This tool runs the mechanical combat simulation from `combat_simulator.py` headl
 python scripts/combat_analyzer.py npc_templates/Cryptolock.chum5 npc_templates/god_antibody.chum5 --iterations 100
 ```
 
-### 3. Balance Generator (`balance_generator.py`)
+### 3. NPC Tournament (`tournament.py`)
+This tool reads all `.chum5` character files from the `npc_templates/` directory and simulates a full round-robin combat tournament. It pits every character against every other character for 100 iterations and computes a final leaderboard based on wins, draws, and losses.
+
+**Usage:**
+```bash
+# Run the tournament and generate tournament_results.md
+python scripts/tournament.py
+```
+
+### 4. Balance Generator (`balance_generator.py`)
 Rewrites markdown tables in-place to calculate balanced Nuyen/Karma costs using explicit constants reflecting the 'Balancing Baseline Formulas'.
 
-### 4. XML Generator (`xml_generator.py`)
+### 5. XML Generator (`xml_generator.py`)
 Extracts game objects (weapons, qualities) from the Markdown rules and merges them into existing Chummer-compatible XML files within the `chummer_plugin/` directory.
 
 ---
