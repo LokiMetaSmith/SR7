@@ -9,31 +9,35 @@ def parse_markdown(text):
 def extract_tables(tokens):
     tables = []
     in_table = False
+    in_th_td = False
     headers = []
     current_table_rows = []
     current_row = []
+    cell_content = []
 
     for token in tokens:
         if token.type == "table_open":
             in_table = True
             current_table_rows = []
             headers = []
-        elif token.type == "th_open" or token.type == "td_open":
-            current_cell = ""
-        elif token.type == "inline" and in_table:
-            current_cell = token.content
-        elif token.type == "th_close":
-            headers.append(current_cell)
-        elif token.type == "td_close":
-            current_row.append(current_cell)
-        elif token.type == "tr_close":
-            if current_row:
-                current_table_rows.append(current_row)
-                current_row = []
         elif token.type == "table_close":
             in_table = False
             tables.append((headers, current_table_rows))
-
+        elif in_table and token.type == "tr_open":
+            current_row = []
+        elif in_table and token.type in ["th_open", "td_open"]:
+            in_th_td = True
+            cell_content = []
+        elif in_table and in_th_td and token.type == "inline":
+            cell_content.append(token.content)
+        elif in_table and token.type in ["th_close", "td_close"]:
+            in_th_td = False
+            current_row.append("".join(cell_content))
+        elif in_table and token.type == "tr_close":
+            if not headers:
+                headers = [h.replace("**", "").strip() for h in current_row]
+            else:
+                current_table_rows.append(current_row)
     return tables
 
 def escape_latex(text):

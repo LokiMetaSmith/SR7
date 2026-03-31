@@ -62,9 +62,11 @@ def analyze_qualities(tokens):
 def extract_tables(tokens):
     tables = []
     in_table = False
+    in_th_td = False
     headers = []
     current_table_rows = []
     current_row = []
+    cell_content = []
 
     for token in tokens:
         if token.type == "table_open":
@@ -76,8 +78,14 @@ def extract_tables(tokens):
             tables.append((headers, current_table_rows))
         elif in_table and token.type == "tr_open":
             current_row = []
-        elif in_table and token.type == "inline":
-            current_row.append(token.content)
+        elif in_table and token.type in ["th_open", "td_open"]:
+            in_th_td = True
+            cell_content = []
+        elif in_table and in_th_td and token.type == "inline":
+            cell_content.append(token.content)
+        elif in_table and token.type in ["th_close", "td_close"]:
+            in_th_td = False
+            current_row.append("".join(cell_content))
         elif in_table and token.type == "tr_close":
             if not headers:
                 headers = [h.replace("**", "").strip() for h in current_row]
