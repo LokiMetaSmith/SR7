@@ -75,7 +75,7 @@ def main():
 
     # Format for markdown saving
     output = "# Shadowrun 7E NPC Tournament Leaderboard\n\n"
-    output += "| Rank | Name | Points | W-D-L |\n"
+    output += "| Rank | Name | Points | Win/Draw/Loss |\n"
     output += "|---|---|---|---|\n"
 
     for rank, (name, stats) in enumerate(sorted_standings, 1):
