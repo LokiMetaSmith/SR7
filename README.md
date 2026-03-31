@@ -18,28 +18,37 @@ This tool runs a fully autonomous, turn-based combat simulation between two enti
 
 ```bash
 # Basic usage with two Chummer XML files
-python combat_simulator.py npc_templates/Cryptolock.chum5 npc_templates/god_antibody.chum5
+python scripts/combat_simulator.py npc_templates/Cryptolock.chum5 npc_templates/god_antibody.chum5
 
 # Usage with a specific NPC from a Markdown file
-python combat_simulator.py "GM Notes/GM_Campaign_Guide.md:Sargent Igneous" npc_templates/feral_fuchsia_dragon_abomination.chum5
+python scripts/combat_simulator.py "GM Notes/GM_Campaign_Guide.md:Sargent Igneous" npc_templates/feral_fuchsia_dragon_abomination.chum5
 
 # Load a specific scenario for the LLM to use (e.g., Tar Creek Ambush)
-python combat_simulator.py npc_templates/Kyber.chum5 npc_templates/wuxing_null_sec_strike_team.chum5 --scenario tar_creek_ambush.json
+python scripts/combat_simulator.py npc_templates/Kyber.chum5 npc_templates/wuxing_null_sec_strike_team.chum5 --scenario tar_creek_ambush.json
 
 # Test mechanical output without calling an LLM (uses generic default actions)
-python combat_simulator.py npc_templates/Cryptolock.chum5 npc_templates/god_antibody.chum5 --dry-run
+python scripts/combat_simulator.py npc_templates/Cryptolock.chum5 npc_templates/god_antibody.chum5 --dry-run
 ```
 
 **LLM Configuration:**
 By default, the script points to a locally hosted endpoint at `http://localhost:8000/v1`. You can override this using CLI arguments:
 ```bash
-python combat_simulator.py <c1> <c2> --llm-url "https://api.openai.com/v1" --llm-model "gpt-4o"
+python scripts/combat_simulator.py <c1> <c2> --llm-url "https://api.openai.com/v1" --llm-model "gpt-4o"
 ```
 
-### 2. Balance Generator (`balance_generator.py`)
+### 2. Combat Analyzer (`combat_analyzer.py`)
+This tool runs the mechanical combat simulation from `combat_simulator.py` headless and repeatedly to gather statistics. It utilizes a `DummyAgent` for decision-making so it is purely mechanical, extremely fast, and completely free to run. Use this tool to balance weapons, test character builds, and verify stat differences.
+
+**Usage:**
+```bash
+# Run 100 iterations between two combatants
+python scripts/combat_analyzer.py npc_templates/Cryptolock.chum5 npc_templates/god_antibody.chum5 --iterations 100
+```
+
+### 3. Balance Generator (`balance_generator.py`)
 Rewrites markdown tables in-place to calculate balanced Nuyen/Karma costs using explicit constants reflecting the 'Balancing Baseline Formulas'.
 
-### 3. XML Generator (`xml_generator.py`)
+### 4. XML Generator (`xml_generator.py`)
 Extracts game objects (weapons, qualities) from the Markdown rules and merges them into existing Chummer-compatible XML files within the `chummer_plugin/` directory.
 
 ---
