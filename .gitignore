@@ -10,3 +10,5 @@
 *.aux
 *.log
 scenario.json
+__pycache__/
+*.pyc
