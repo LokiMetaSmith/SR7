@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<characters>
 <character>
   <id>7bed496a43365b356f630a26c00a92cd</id>
   <name>Kestrel</name>
+  <background>A high-level broker who secured Kyber's team the Undercity/Lazarus schematics. She is currently ghosted in 'Deep Null' to avoid grey-goo tracking and must be located via physical Tracking.</background>
   <notes>Generated Template</notes>
 </character>
+
+</characters>

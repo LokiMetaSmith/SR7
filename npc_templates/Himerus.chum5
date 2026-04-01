@@ -3,6 +3,7 @@
   <character>
     <name>Himerus</name>
     <metatype>Vampire</metatype>
+    <background>Scholar and Sage Works in the White Tower and knows a little too much. Likely an ancient vampire</background>
     <attributes>
       <attribute>
         <name>BOD</name>

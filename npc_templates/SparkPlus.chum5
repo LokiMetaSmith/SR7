@@ -3,6 +3,7 @@
   <character>
     <name>Spark+</name>
     <metatype>Entity</metatype>
+    <background>The Architect. Project Chimera: Vessel Designation 'Spark'. Driven by necessity, combining human consciousness with the alien Wisp and Logi Prime.</background>
     <attributes>
       <attribute>
         <name>BOD</name>

@@ -2,31 +2,34 @@
 
 | Rank | Name | Points | Win/Draw/Loss |
 |---|---|---|---|
-| 1 | Feral "Fuchsia Dragon" Abomination | 81 | 27-0-0 |
-| 2 | G.O.D. "Antibody" | 78 | 26-0-1 |
-| 3 | Wuxing "Null-Sec" Strike Team | 75 | 25-0-2 |
-| 4 | Himerus | 72 | 24-0-3 |
-| 5 | Tom | 69 | 23-0-4 |
-| 6 | Shrimpy | 66 | 22-0-5 |
-| 7 | Kyber | 60 | 20-0-7 |
-| 8 | Pat O'Mara | 60 | 20-0-7 |
-| 9 | Cleo | 57 | 19-0-8 |
-| 10 | Spark+ | 57 | 19-0-8 |
-| 11 | Sister Sinalma | 51 | 17-0-10 |
-| 12 | Sargent Igneous | 48 | 16-0-11 |
-| 13 | The Dog | 45 | 15-0-12 |
-| 14 | More Nada'ira | 42 | 14-0-13 |
-| 15 | Captain Lazlow | 37 | 12-1-14 |
-| 16 | Bear | 37 | 12-1-14 |
-| 17 | Logi_v2.1 | 31 | 10-1-16 |
-| 18 | Asa | 30 | 10-0-17 |
-| 19 | Logi Prime | 26 | 8-2-17 |
-| 20 | Francky | 25 | 8-1-18 |
-| 21 | Squid | 21 | 7-0-20 |
-| 22 | Cryptolock | 18 | 6-0-21 |
-| 23 | Jensen | 15 | 5-0-22 |
-| 24 | Spark | 12 | 4-0-23 |
-| 25 | Miss Pixel | 9 | 3-0-24 |
-| 26 | Johnny the Johnson | 6 | 2-0-25 |
-| 27 | Kane | 3 | 1-0-26 |
-| 28 | Darri | 0 | 0-0-27 |
+| 1 | Feral "Fuchsia Dragon" Abomination | 90 | 30-0-0 |
+| 2 | G.O.D. "Antibody" | 87 | 29-0-1 |
+| 3 | Wuxing "Null-Sec" Strike Team | 82 | 27-1-2 |
+| 4 | Himerus | 82 | 27-1-2 |
+| 5 | Tom | 78 | 26-0-4 |
+| 6 | Shrimpy | 75 | 25-0-5 |
+| 7 | Pat O'Mara | 72 | 24-0-6 |
+| 8 | Spark+ | 69 | 23-0-7 |
+| 9 | Kyber | 66 | 22-0-8 |
+| 10 | Cleo | 61 | 20-1-9 |
+| 11 | Sister Sinalma | 59 | 19-2-9 |
+| 12 | The Dog | 55 | 18-1-11 |
+| 13 | More Nada'ira | 55 | 18-1-11 |
+| 14 | Sargent Igneous | 52 | 17-1-12 |
+| 15 | Captain Lazlow | 46 | 15-1-14 |
+| 16 | Bear | 46 | 15-1-14 |
+| 17 | Jensen | 36 | 12-0-18 |
+| 18 | Francky | 34 | 11-1-18 |
+| 19 | Logi_v2.1 | 34 | 11-1-18 |
+| 20 | Logi Prime | 34 | 11-1-18 |
+| 21 | Cryptolock | 33 | 11-0-19 |
+| 22 | Asa | 30 | 10-0-20 |
+| 23 | Squid | 28 | 9-1-20 |
+| 24 | Spark | 19 | 6-1-23 |
+| 25 | Miss Pixel | 19 | 6-1-23 |
+| 26 | Johnny the Johnson | 15 | 5-0-25 |
+| 27 | Kane | 12 | 4-0-26 |
+| 28 | Kestrel | 7 | 2-1-27 |
+| 29 | Darri | 4 | 1-1-28 |
+| 30 | Ennis | 3 | 1-0-29 |
+| 31 | Sam | 3 | 1-0-29 |

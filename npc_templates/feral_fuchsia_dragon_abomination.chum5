@@ -3,6 +3,7 @@
   <character>
     <name>Feral "Fuchsia Dragon" Abomination</name>
     <metatype>Unknown</metatype>
+    <background>Feral 'Fuchsia Dragon' Abominations are twisted, dual-natured shock troops formed from BTL use and rogue Matrix Sprites. Oath breakers of the Fuchsia Dragons.</background>
     <attributes>
       <attribute>
         <name>BOD</name>

@@ -3,6 +3,7 @@
   <character>
     <name>Wuxing "Null-Sec" Strike Team</name>
     <metatype>Human</metatype>
+    <background>Wuxing 'Null-Sec' Strike Teams deploy in Null-Suits to scrub AR signatures. Insulated against dead zones, heavily armed and armored elite troops.</background>
     <attributes>
       <attribute>
         <name>BOD</name>
