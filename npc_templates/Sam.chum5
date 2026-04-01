@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<characters>
 <character>
   <id>ba0e0cde1bf72c28d435c89a66afc61a</id>
   <name>Sam</name>
+  <background>An Ascended AI Patron who acts like a game show host, employs an 'Overkill Mechanic', and pays runners in Nuyen plus highly experimental 'Toys'.</background>
   <notes>Generated Template</notes>
 </character>
+
+</characters>

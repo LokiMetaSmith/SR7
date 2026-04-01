@@ -3,6 +3,7 @@
   <character>
     <name>Spark</name>
     <metatype>Human</metatype>
+    <background>A child with an alien Wisp, protected by Cryptolock. Interacts with the nanite-infused Matrix to weave Complex Forms and manifest physical Sprites.</background>
     <attributes>
       <attribute>
         <name>BOD</name>

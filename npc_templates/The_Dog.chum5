@@ -3,6 +3,7 @@
   <character>
     <name>The Dog</name>
     <metatype>Hound</metatype>
+    <background>Awakened shadowhound, possessed by some benevolent possession-tradition spirit, preferably associated with voodoo.  Has an impeccable moral compass, will growl and bark at "bad" people and protect "good" people, whatever that would mean to a smart dog.  Follows the players around until it decides to do something else.  Use to drop hints as needed.</background>
     <attributes>
       <attribute>
         <name>BOD</name>

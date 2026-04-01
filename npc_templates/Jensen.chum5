@@ -3,6 +3,7 @@
   <character>
     <name>Jensen</name>
     <metatype>Human</metatype>
+    <background>Urban hedge shaman, practices chaos magic and is a trickster</background>
     <attributes>
       <attribute>
         <name>BOD</name>

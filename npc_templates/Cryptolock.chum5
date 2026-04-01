@@ -3,6 +3,7 @@
   <character>
     <name>Cryptolock</name>
     <metatype>Ghoul</metatype>
+    <background>Ghoul rocker from the crispier side of Crispyocolypse. Semi-famous for his edgy lyrics and apocalyptic heavy metal rock. Diehard Zkazena resident</background>
     <attributes>
       <attribute>
         <name>BOD</name>

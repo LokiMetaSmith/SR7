@@ -3,6 +3,7 @@
   <character>
     <name>Pat O'Mara</name>
     <metatype>Human</metatype>
+    <background>Knife adept, counter intelligence, Works for White Tower</background>
     <attributes>
       <attribute>
         <name>BOD</name>
