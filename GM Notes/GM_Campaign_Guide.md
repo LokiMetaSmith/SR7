@@ -262,7 +262,7 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Armor:** 12 (Armor Jacket)
 *   **Skills:** Automatics 6, Unarmed Combat 5, Sneaking 5, Perception 5, Intimidation 4.
 *   **Qualities:** CFD (Observer, Enforcer, Negotiator), Toughness.
-*   **Weapons:** Ares Alpha (Assault Rifle, 15P, -10 AP, SA/BF/FA), Unarmed Strike (6P, Close).
+*   **Weapons:** Ares Alpha (Assault Rifle, 11P, -2 AP, SA/BF/FA), Unarmed Strike (6P, Close).
 *   **Augmentations:** Wired Reflexes 2, Muscle Replacement 2, Smartlink, Cybereyes (Rating 2).
 
 **Logi Prime (Deceased Technomancer Ghost)**
@@ -327,7 +327,7 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Armor:** 16 (Heavy Mil-Spec Armor)
 *   **Skills:** Automatics 6, Heavy Weapons 5, Unarmed Combat 5.
 *   **Qualities:** Rememberance, High Pain Tolerance 2.
-*   **Weapons:** Ares Alpha (15P, -10 AP, SA/BF/FA), Combat Knife (10P, -2 AP).
+*   **Weapons:** Ares Alpha (11P, -2 AP, SA/BF/FA), Combat Knife (10P, -2 AP).
 *   **Augmentations:** Wired Reflexes 2, Muscle Replacement 2.
 
 **Johnny the Johnson (Personafix Construct)**
@@ -351,7 +351,7 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Armor:** 12 (Chameleon Suit)
 *   **Skills:** Longarms (Sniper Rifles) 6, Pistols 5, Sneaking 6, Gymnastics 5.
 *   **Qualities:** Rememberance, Catlike, Hawk Eye.
-*   **Weapons:** Ranger Arms SM-5 (Sniper Rifle, 30P, -15 AP), Silenced Pistol (6P, -2 AP).
+*   **Weapons:** Ranger Arms SM-5 (Sniper Rifle, 14P, -4 AP), Silenced Pistol (6P, -2 AP).
 *   **Augmentations:** Wired Reflexes 2, Cybereyes (Rating 3 with Vision Mag).
 
 **Pat O’Mara (Knife Adept / Counter Intel)**

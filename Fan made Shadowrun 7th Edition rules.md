@@ -1464,6 +1464,7 @@ To use a Reaction, a character must have the required Actions available, either 
 
 | Light Pistols | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
 |---|---|---|---|---|---|---|---|---|---|---|
+| Shiawase Arms Hearth Protector | 5 | 5P | 0 | SA | 1 | Near | 12(c) | 4(R) | 1.00 | 400¥ |
 | Ares Light Fire 70 | 6(7) | 5P | -1 | SA | 0 | Near | 16(dm) | 3(R) | 0.50 | 350¥ |
 | Ares Light Fire 75 | 6(8) | 5P | -1 | SA | 0 | Near | 16(dm) | 6(F) | 0.50 | 350¥ |
 | Barrens Special | 2 | 3P | 0 | SS | 0 | Close | 5(cy) | 2(R) | 1.00 | 150¥ |
@@ -2744,12 +2745,15 @@ bipod or tripod mount system is easily adjustable to change the angle of fire, a
 
 **Monofilament Whip**: A deadly, nearly invisible monofilament line stored in a weighted tip. The weapon easily slices through most armor. It's notoriously difficult to master, and a critical glitch might result in self-amputation.
 
-| Melee Weapons | ACC | DV | AP | REACH | AVAIL | WEIGHT | COST |
-|---|---|---|---|---|---|---|---|
-| Monofilament Whip | 5 | 12P | -8 | 2 | 12(F) | 0.5 | 3,000¥ |
-| Stun Baton | - | 9S(e) | -2 | 1 | - | - | - |
-| Nanite Claws / Bite | - | 8P | -2 | - | - | - | - |
-| Bio-Luminescent Whip | - | 10P | -4 | 2 | - | - | - |
+| Weapon Name | ACC | DV | AP | MODE | RC | RANGE | AMMO | AVAIL | WEIGHT | COST |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Monofilament Whip | 5 | 12P | -8 | – | – | Reach 2 | – | 12(F) | 0.50 | 3,000¥ |
+| Stun Baton | 4 | 9S(e) | -2 | – | – | Reach 1 | – | 4(R) | 1.00 | 750¥ |
+| Nanite Claws / Bite | 5 | 8P | -2 | – | – | Reach 0 | – | – | – | – |
+| Bio-Luminescent Whip | 5 | 10P | -4 | – | – | Reach 2 | – | – | – | – |
+| Combat Knife | 6 | (STR+2)P | -2 | – | – | Reach 0 | – | 4 | 0.50 | 300¥ |
+| Monofilament Knife | 5 | 7P | -8 | – | – | Reach 0 | – | 10(F) | 0.50 | 1,500¥ |
+| Throwing Knives | 5 | (STR+1)P | -1 | – | – | Near | 2 | 2 | 0.10 | 50¥ |
 
 **Vehicular Weaponry** - Heavy weapon systems designed specifically for mounting on vehicles, drones, or fixed emplacements. They are typically too heavy or require too much power to be man-portable.
 
