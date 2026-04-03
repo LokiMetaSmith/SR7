@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.31)  31 MAR 2026 01:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.3)  3 APR 2026 01:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1394,54 +1394,49 @@ Overfull \hbox (6.69374pt too wide) in paragraph at lines 2870--2870
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (3.29277pt too wide) in paragraph at lines 3020--3020
+Overfull \hbox (3.29277pt too wide) in paragraph at lines 3021--3021
  []\T1/phv/b/n/10 (-20) RANGE
  []
 
 
-Overfull \hbox (7.10484pt too wide) in paragraph at lines 3020--3020
+Overfull \hbox (7.10484pt too wide) in paragraph at lines 3021--3021
  []\T1/phv/b/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (30.66423pt too wide) in paragraph at lines 3020--3020
+Overfull \hbox (30.66423pt too wide) in paragraph at lines 3021--3021
  []\T1/phv/m/n/10 (-20) 10/15(dm)7(R)
  []
 
 
-Overfull \hbox (5.45703pt too wide) in paragraph at lines 3020--3020
+Overfull \hbox (5.45703pt too wide) in paragraph at lines 3021--3021
  []\T1/phv/m/n/10 (-20) 10(ml)x4
  []
 
 > Step: build the whole table.
 
-Overfull \hbox (3.29277pt too wide) in paragraph at lines 3020--3020
+Overfull \hbox (3.29277pt too wide) in paragraph at lines 3021--3021
  []\T1/phv/b/n/10 (-20) RANGE
  []
 
 
-Overfull \hbox (7.10484pt too wide) in paragraph at lines 3020--3020
+Overfull \hbox (7.10484pt too wide) in paragraph at lines 3021--3021
  []\T1/phv/b/n/10 (-20) WEIGHT
  []
 
 [31] [32] [33]
-Overfull \hbox (30.66423pt too wide) in paragraph at lines 3020--3020
+Overfull \hbox (30.66423pt too wide) in paragraph at lines 3021--3021
  []\T1/phv/m/n/10 (-20) 10/15(dm)7(R)
  []
 
 
-Overfull \hbox (5.45703pt too wide) in paragraph at lines 3020--3020
+Overfull \hbox (5.45703pt too wide) in paragraph at lines 3021--3021
  []\T1/phv/m/n/10 (-20) 10(ml)x4
  []
 
 [34] [35] [36] [37]
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 3478--3479
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 3479--3480
 []\T1/phv/m/n/10 (-20) WEIGHT
- []
-
-
-Overfull \hbox (5.61996pt too wide) in paragraph at lines 3498--3498
-[]|\T1/phv/m/n/10 (-20) Browning
  []
 
 
@@ -1460,38 +1455,38 @@ Overfull \hbox (5.61996pt too wide) in paragraph at lines 3501--3501
  []
 
 
-Overfull \hbox (28.61343pt too wide) in paragraph at lines 3504--3504
+Overfull \hbox (5.61996pt too wide) in paragraph at lines 3502--3502
+[]|\T1/phv/m/n/10 (-20) Browning
+ []
+
+
+Overfull \hbox (28.61343pt too wide) in paragraph at lines 3505--3505
 []|\T1/phv/m/n/10 (-20) 6(cy)/6(m)5(R)|
  []
 
 
-Overfull \hbox (9.27258pt too wide) in paragraph at lines 3516--3516
+Overfull \hbox (9.27258pt too wide) in paragraph at lines 3517--3517
 \T1/phv/m/n/10 (-20) Swarovski
  []
 
 
-Overfull \hbox (6.98805pt too wide) in paragraph at lines 3517--3517
+Overfull \hbox (6.98805pt too wide) in paragraph at lines 3518--3518
 []|\T1/phv/m/n/10 (-20) Hammerli
  []
 
 
-Overfull \hbox (0.86017pt too wide) in paragraph at lines 3517--3517
+Overfull \hbox (0.86017pt too wide) in paragraph at lines 3518--3518
 []|\T1/phv/m/n/10 (-20) 8(dm)x2|
  []
 
 
-Overfull \hbox (1.42839pt too wide) in paragraph at lines 3528--3528
+Overfull \hbox (1.42839pt too wide) in paragraph at lines 3529--3529
 []|\T1/phv/m/n/10 (-20) Shotgun|
  []
 
 
-Overfull \hbox (2.09691pt too wide) in paragraph at lines 3530--3530
+Overfull \hbox (2.09691pt too wide) in paragraph at lines 3531--3531
 []|\T1/phv/m/n/10 (-20) Makarov
- []
-
-
-Overfull \hbox (7.08693pt too wide) in paragraph at lines 3532--3532
-[]|\T1/phv/m/n/10 (-20) Morrissey
  []
 
 
@@ -1500,8 +1495,8 @@ Overfull \hbox (7.08693pt too wide) in paragraph at lines 3533--3533
  []
 
 
-Overfull \hbox (3.03587pt too wide) in paragraph at lines 3534--3534
-[]|\T1/phv/m/n/10 (-20) Nemesis
+Overfull \hbox (7.08693pt too wide) in paragraph at lines 3534--3534
+[]|\T1/phv/m/n/10 (-20) Morrissey
  []
 
 
@@ -1510,58 +1505,58 @@ Overfull \hbox (3.03587pt too wide) in paragraph at lines 3535--3535
  []
 
 
-Overfull \hbox (8.57161pt too wide) in paragraph at lines 3539--3539
+Overfull \hbox (3.03587pt too wide) in paragraph at lines 3536--3536
+[]|\T1/phv/m/n/10 (-20) Nemesis
+ []
+
+
+Overfull \hbox (8.57161pt too wide) in paragraph at lines 3540--3540
 \T1/phv/m/n/10 (-20) Vagabond|
  []
 
 
-Overfull \hbox (12.30637pt too wide) in paragraph at lines 3542--3542
+Overfull \hbox (12.30637pt too wide) in paragraph at lines 3543--3543
 []|\T1/phv/m/n/10 (-20) Remington
  []
 
 
-Overfull \hbox (1.55783pt too wide) in paragraph at lines 3542--3542
+Overfull \hbox (1.55783pt too wide) in paragraph at lines 3543--3543
 \T1/phv/m/n/10 (-20) sweeper|
  []
 
 
-Overfull \hbox (4.6903pt too wide) in paragraph at lines 3544--3544
+Overfull \hbox (4.6903pt too wide) in paragraph at lines 3545--3545
 \T1/phv/m/n/10 (-20) Warhawk|
  []
 
 
-Overfull \hbox (5.32956pt too wide) in paragraph at lines 3546--3546
+Overfull \hbox (5.32956pt too wide) in paragraph at lines 3547--3547
 []|\T1/phv/m/n/10 (-20) Savalette
  []
 
 
-Overfull \hbox (5.23079pt too wide) in paragraph at lines 3546--3546
+Overfull \hbox (5.23079pt too wide) in paragraph at lines 3547--3547
 \T1/phv/m/n/10 (-20) Guardian|
  []
 
 
-Overfull \hbox (7.05666pt too wide) in paragraph at lines 3547--3547
+Overfull \hbox (7.05666pt too wide) in paragraph at lines 3548--3548
 []|\T1/phv/m/n/10 (-20) Shiawase
  []
 
 
-Overfull \hbox (6.01877pt too wide) in paragraph at lines 3554--3554
+Overfull \hbox (6.01877pt too wide) in paragraph at lines 3555--3555
 []|\T1/phv/m/n/10 (-20) Weapons
  []
 
 [38] [39] [40] [41] [42]
-Overfull \hbox (1.95776pt too wide) in paragraph at lines 3747--3748
+Overfull \hbox (1.95776pt too wide) in paragraph at lines 3748--3749
 []\T1/phv/m/n/10 (-20) Machine
  []
 
 
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 3765--3766
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 3766--3767
 []\T1/phv/m/n/10 (-20) WEIGHT
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 3775--3775
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
@@ -1575,7 +1570,7 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 3777--3777
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 3781--3781
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 3778--3778
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
@@ -1590,27 +1585,27 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 3783--3783
  []
 
 
-Overfull \hbox (4.96997pt too wide) in paragraph at lines 3784--3784
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 3784--3784
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
+
+Overfull \hbox (4.96997pt too wide) in paragraph at lines 3785--3785
 []|\T1/phv/m/n/10 (-20) SABF/FA|
  []
 
 
-Overfull \hbox (12.30637pt too wide) in paragraph at lines 3791--3791
+Overfull \hbox (12.30637pt too wide) in paragraph at lines 3792--3792
 []|\T1/phv/m/n/10 (-20) Remington
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 3792--3792
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 3793--3793
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 3794--3794
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 3796--3796
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 3795--3795
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
@@ -1619,34 +1614,34 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 3797--3797
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
+
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 3798--3798
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
 [43] [44] [45] [46] [47]
-Overfull \hbox (19.39175pt too wide) in paragraph at lines 4136--4137
+Overfull \hbox (19.39175pt too wide) in paragraph at lines 4137--4138
 []\T1/phv/m/n/10 (-20) Submachine
  []
 
 
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 4154--4155
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 4155--4156
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4162--4162
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4163--4163
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4168--4168
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4169--4169
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (2.18683pt too wide) in paragraph at lines 4170--4170
+Overfull \hbox (2.18683pt too wide) in paragraph at lines 4171--4171
 \T1/phv/m/n/10 (-20) Tsunami|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4171--4171
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
@@ -1715,78 +1710,78 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 4184--4184
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 4185--4185
-[]|\T1/phv/m/n/10 (-20) Grenade
- []
-
-
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 4185--4185
-\T1/phv/m/n/10 (-20) Launcher|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4187--4187
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4185--4185
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (6.53731pt too wide) in paragraph at lines 4189--4189
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 4186--4186
+[]|\T1/phv/m/n/10 (-20) Grenade
+ []
+
+
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 4186--4186
+\T1/phv/m/n/10 (-20) Launcher|
+ []
+
+
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4188--4188
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
+
+Overfull \hbox (6.53731pt too wide) in paragraph at lines 4190--4190
 \T1/phv/m/n/10 (-20) Aphrodite|
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 4190--4190
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 4191--4191
 []|\T1/phv/m/n/10 (-20) Grenade
  []
 
 
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 4190--4190
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 4191--4191
 \T1/phv/m/n/10 (-20) Launcher|
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 4192--4192
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 4193--4193
 []|\T1/phv/m/n/10 (-20) Grenade
  []
 
 
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 4192--4192
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 4193--4193
 \T1/phv/m/n/10 (-20) Launcher|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4201--4201
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4202--4202
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (8.28197pt too wide) in paragraph at lines 4202--4202
+Overfull \hbox (8.28197pt too wide) in paragraph at lines 4203--4203
 []|\T1/phv/m/n/10 (-20) Terracotta
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4203--4203
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4204--4204
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4206--4206
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4207--4207
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 [48] [49] [50] [51] [52]
-Overfull \hbox (6.32838pt too wide) in paragraph at lines 4529--4530
+Overfull \hbox (6.32838pt too wide) in paragraph at lines 4530--4531
 []\T1/phv/m/n/10 (-20) Shotguns
  []
 
 
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 4547--4548
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 4548--4549
 []\T1/phv/m/n/10 (-20) WEIGHT
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4558--4558
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
@@ -1795,33 +1790,33 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 4559--4559
  []
 
 
-Overfull \hbox (19.19179pt too wide) in paragraph at lines 4561--4561
-[]|\T1/phv/m/n/10 (-20) Blunderbuss|
- []
-
-
-Overfull \hbox (3.5846pt too wide) in paragraph at lines 4562--4562
-\T1/phv/m/n/10 (-20) Richards
- []
-
-
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 4565--4565
-[]|\T1/phv/m/n/10 (-20) Grenade
- []
-
-
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 4565--4565
-\T1/phv/m/n/10 (-20) Launcher|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4566--4566
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4560--4560
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (3.5944pt too wide) in paragraph at lines 4567--4567
-[]|\T1/phv/m/n/10 (-20) Defiance
+Overfull \hbox (19.19179pt too wide) in paragraph at lines 4562--4562
+[]|\T1/phv/m/n/10 (-20) Blunderbuss|
+ []
+
+
+Overfull \hbox (3.5846pt too wide) in paragraph at lines 4563--4563
+\T1/phv/m/n/10 (-20) Richards
+ []
+
+
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 4566--4566
+[]|\T1/phv/m/n/10 (-20) Grenade
+ []
+
+
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 4566--4566
+\T1/phv/m/n/10 (-20) Launcher|
+ []
+
+
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4567--4567
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
@@ -1840,8 +1835,8 @@ Overfull \hbox (3.5944pt too wide) in paragraph at lines 4570--4570
  []
 
 
-Overfull \hbox (9.04294pt too wide) in paragraph at lines 4572--4572
-[]|\T1/phv/m/n/10 (-20) SS/SA/BF|
+Overfull \hbox (3.5944pt too wide) in paragraph at lines 4571--4571
+[]|\T1/phv/m/n/10 (-20) Defiance
  []
 
 
@@ -1850,43 +1845,43 @@ Overfull \hbox (9.04294pt too wide) in paragraph at lines 4573--4573
  []
 
 
-Overfull \hbox (21.01837pt too wide) in paragraph at lines 4574--4574
+Overfull \hbox (9.04294pt too wide) in paragraph at lines 4574--4574
+[]|\T1/phv/m/n/10 (-20) SS/SA/BF|
+ []
+
+
+Overfull \hbox (21.01837pt too wide) in paragraph at lines 4575--4575
 []|\T1/phv/m/n/10 (-20) SS/SA/BF(2)|
  []
 
 
-Overfull \hbox (1.42839pt too wide) in paragraph at lines 4579--4579
+Overfull \hbox (1.42839pt too wide) in paragraph at lines 4580--4580
 []|\T1/phv/m/n/10 (-20) Shotgun|
  []
 
 
-Overfull \hbox (5.42934pt too wide) in paragraph at lines 4583--4583
+Overfull \hbox (5.42934pt too wide) in paragraph at lines 4584--4584
 \T1/phv/m/n/10 (-20) Whammy
  []
 
 
-Overfull \hbox (5.43985pt too wide) in paragraph at lines 4583--4583
+Overfull \hbox (5.43985pt too wide) in paragraph at lines 4584--4584
 \T1/phv/m/n/10 (-20) (Ranged)|
  []
 
 
-Overfull \hbox (7.94554pt too wide) in paragraph at lines 4584--4584
+Overfull \hbox (7.94554pt too wide) in paragraph at lines 4585--4585
 []|\T1/phv/m/n/10 (-20) Mossberg
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4584--4584
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4585--4585
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (5.4954pt too wide) in paragraph at lines 4589--4589
+Overfull \hbox (5.4954pt too wide) in paragraph at lines 4590--4590
 []|\T1/phv/m/n/10 (-20) 2(b)+1(b)|
- []
-
-
-Overfull \hbox (1.42839pt too wide) in paragraph at lines 4590--4590
-[]|\T1/phv/m/n/10 (-20) Shotgun
  []
 
 
@@ -1900,28 +1895,28 @@ Overfull \hbox (1.42839pt too wide) in paragraph at lines 4592--4592
  []
 
 
-Overfull \hbox (0.53983pt too wide) in paragraph at lines 4593--4593
+Overfull \hbox (1.42839pt too wide) in paragraph at lines 4593--4593
+[]|\T1/phv/m/n/10 (-20) Shotgun
+ []
+
+
+Overfull \hbox (0.53983pt too wide) in paragraph at lines 4594--4594
 \T1/phv/m/n/10 (-20) (6.5x55)|
  []
 
 
-Overfull \hbox (7.6154pt too wide) in paragraph at lines 4597--4597
+Overfull \hbox (7.6154pt too wide) in paragraph at lines 4598--4598
 \T1/phv/m/n/10 (-20) (9.3x74R)|
  []
 
 
-Overfull \hbox (12.30637pt too wide) in paragraph at lines 4598--4598
+Overfull \hbox (12.30637pt too wide) in paragraph at lines 4599--4599
 []|\T1/phv/m/n/10 (-20) Remington
  []
 
 
-Overfull \hbox (12.30637pt too wide) in paragraph at lines 4600--4600
+Overfull \hbox (12.30637pt too wide) in paragraph at lines 4601--4601
 []|\T1/phv/m/n/10 (-20) Remington
- []
-
-
-Overfull \hbox (7.05666pt too wide) in paragraph at lines 4601--4601
-[]|\T1/phv/m/n/10 (-20) Shiawase
  []
 
 
@@ -1935,18 +1930,18 @@ Overfull \hbox (7.05666pt too wide) in paragraph at lines 4603--4603
  []
 
 
-Overfull \hbox (2.18683pt too wide) in paragraph at lines 4603--4603
+Overfull \hbox (7.05666pt too wide) in paragraph at lines 4604--4604
+[]|\T1/phv/m/n/10 (-20) Shiawase
+ []
+
+
+Overfull \hbox (2.18683pt too wide) in paragraph at lines 4604--4604
 \T1/phv/m/n/10 (-20) Tsunami|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 4604--4604
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 4605--4605
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
- []
-
-
-Overfull \hbox (13.76318pt too wide) in paragraph at lines 4605--4605
-[]|\T1/phv/m/n/10 (-20) Winchester
  []
 
 
@@ -1959,50 +1954,50 @@ Overfull \hbox (13.76318pt too wide) in paragraph at lines 4607--4607
 []|\T1/phv/m/n/10 (-20) Winchester
  []
 
+
+Overfull \hbox (13.76318pt too wide) in paragraph at lines 4608--4608
+[]|\T1/phv/m/n/10 (-20) Winchester
+ []
+
 [53] [54] [55] [56] [57] [58]
-Overfull \hbox (1.81848pt too wide) in paragraph at lines 4973--4974
+Overfull \hbox (1.81848pt too wide) in paragraph at lines 4974--4975
 []\T1/phv/m/n/10 (-20) Sporting
  []
 
 
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 4991--4992
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 4992--4993
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (6.3089pt too wide) in paragraph at lines 5007--5007
+Overfull \hbox (6.3089pt too wide) in paragraph at lines 5008--5008
 []|\T1/phv/m/n/10 (-20) 12(dm)x2|
  []
 
 
-Overfull \hbox (12.67542pt too wide) in paragraph at lines 5009--5009
+Overfull \hbox (12.67542pt too wide) in paragraph at lines 5010--5010
 []|\T1/phv/m/n/10 (-20) Mannlicher
  []
 
 Missing character: There is no ^^B in font nullfont!
 
-Overfull \hbox (1.42839pt too wide) in paragraph at lines 5010--5010
+Overfull \hbox (1.42839pt too wide) in paragraph at lines 5011--5011
 []|\T1/phv/m/n/10 (-20) Shotgun
  []
 
 
-Overfull \hbox (7.6154pt too wide) in paragraph at lines 5011--5011
+Overfull \hbox (7.6154pt too wide) in paragraph at lines 5012--5012
 \T1/phv/m/n/10 (-20) (9.3x74R)|
  []
 
 
-Overfull \hbox (12.67542pt too wide) in paragraph at lines 5013--5013
+Overfull \hbox (12.67542pt too wide) in paragraph at lines 5014--5014
 []|\T1/phv/m/n/10 (-20) Mannlicher
  []
 
 
-Overfull \hbox (8.21004pt too wide) in paragraph at lines 5013--5013
+Overfull \hbox (8.21004pt too wide) in paragraph at lines 5014--5014
 []|\T1/phv/m/n/10 (-20) 2(b)+6(m)|
- []
-
-
-Overfull \hbox (1.42839pt too wide) in paragraph at lines 5014--5014
-[]|\T1/phv/m/n/10 (-20) Shotgun
  []
 
 
@@ -2011,18 +2006,18 @@ Overfull \hbox (1.42839pt too wide) in paragraph at lines 5015--5015
  []
 
 
-Overfull \hbox (7.6154pt too wide) in paragraph at lines 5018--5018
+Overfull \hbox (1.42839pt too wide) in paragraph at lines 5016--5016
+[]|\T1/phv/m/n/10 (-20) Shotgun
+ []
+
+
+Overfull \hbox (7.6154pt too wide) in paragraph at lines 5019--5019
 \T1/phv/m/n/10 (-20) (9.3x74R)|
  []
 
 
-Overfull \hbox (12.67542pt too wide) in paragraph at lines 5019--5019
+Overfull \hbox (12.67542pt too wide) in paragraph at lines 5020--5020
 []|\T1/phv/m/n/10 (-20) Mannlicher
- []
-
-
-Overfull \hbox (12.30637pt too wide) in paragraph at lines 5036--5036
-[]|\T1/phv/m/n/10 (-20) Remington
  []
 
 
@@ -2031,13 +2026,13 @@ Overfull \hbox (12.30637pt too wide) in paragraph at lines 5037--5037
  []
 
 
-Overfull \hbox (7.05666pt too wide) in paragraph at lines 5040--5040
-[]|\T1/phv/m/n/10 (-20) Shiawase
+Overfull \hbox (12.30637pt too wide) in paragraph at lines 5038--5038
+[]|\T1/phv/m/n/10 (-20) Remington
  []
 
 
-Overfull \hbox (11.36847pt too wide) in paragraph at lines 5043--5043
-[]|\T1/phv/m/n/10 (-20) Springfield
+Overfull \hbox (7.05666pt too wide) in paragraph at lines 5041--5041
+[]|\T1/phv/m/n/10 (-20) Shiawase
  []
 
 
@@ -2056,8 +2051,8 @@ Overfull \hbox (11.36847pt too wide) in paragraph at lines 5046--5046
  []
 
 
-Overfull \hbox (8.28197pt too wide) in paragraph at lines 5048--5048
-[]|\T1/phv/m/n/10 (-20) Terracotta
+Overfull \hbox (11.36847pt too wide) in paragraph at lines 5047--5047
+[]|\T1/phv/m/n/10 (-20) Springfield
  []
 
 
@@ -2066,8 +2061,8 @@ Overfull \hbox (8.28197pt too wide) in paragraph at lines 5049--5049
  []
 
 
-Overfull \hbox (13.76318pt too wide) in paragraph at lines 5051--5051
-[]|\T1/phv/m/n/10 (-20) Winchester
+Overfull \hbox (8.28197pt too wide) in paragraph at lines 5050--5050
+[]|\T1/phv/m/n/10 (-20) Terracotta
  []
 
 
@@ -2095,14 +2090,14 @@ Overfull \hbox (13.76318pt too wide) in paragraph at lines 5056--5056
 []|\T1/phv/m/n/10 (-20) Winchester
  []
 
-[59] [60] [61] [62] [63] [64] [65] [66] [67]
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 5621--5622
-[]\T1/phv/m/n/10 (-20) WEIGHT
+
+Overfull \hbox (13.76318pt too wide) in paragraph at lines 5057--5057
+[]|\T1/phv/m/n/10 (-20) Winchester
  []
 
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5629--5629
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+[59] [60] [61] [62] [63] [64] [65] [66] [67]
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 5622--5623
+[]\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
@@ -2121,18 +2116,18 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 5632--5632
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 5633--5633
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5633--5633
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
+
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 5634--5634
 []|\T1/phv/m/n/10 (-20) Grenade
  []
 
 
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 5633--5633
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 5634--5634
 \T1/phv/m/n/10 (-20) Launcher|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5635--5635
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
@@ -2151,33 +2146,33 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 5638--5638
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 5639--5639
-[]|\T1/phv/m/n/10 (-20) Grenade
- []
-
-
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 5639--5639
-\T1/phv/m/n/10 (-20) Launcher|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5640--5640
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5639--5639
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 5641--5641
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 5640--5640
 []|\T1/phv/m/n/10 (-20) Grenade
  []
 
 
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 5641--5641
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 5640--5640
 \T1/phv/m/n/10 (-20) Launcher|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5642--5642
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5641--5641
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
+
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 5642--5642
+[]|\T1/phv/m/n/10 (-20) Grenade
+ []
+
+
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 5642--5642
+\T1/phv/m/n/10 (-20) Launcher|
  []
 
 
@@ -2185,38 +2180,38 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 5643--5643
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
+
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5644--5644
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
 Missing character: There is no ^^B in font nullfont!
 Missing character: There is no ^^B in font nullfont!
 Missing character: There is no ^^B in font nullfont!
 Missing character: There is no ^^B in font nullfont!
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5646--5646
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5647--5647
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 5650--5650
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 5651--5651
 []|\T1/phv/m/n/10 (-20) Grenade
  []
 
 
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 5650--5650
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 5651--5651
 \T1/phv/m/n/10 (-20) Launcher|
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 5652--5652
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 5653--5653
 []|\T1/phv/m/n/10 (-20) Grenade
  []
 
 
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 5652--5652
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 5653--5653
 \T1/phv/m/n/10 (-20) Launcher|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5653--5653
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
@@ -2250,33 +2245,33 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 5659--5659
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5662--5662
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5660--5660
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5669--5669
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5663--5663
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (1.42839pt too wide) in paragraph at lines 5670--5670
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5670--5670
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
+
+Overfull \hbox (1.42839pt too wide) in paragraph at lines 5671--5671
 []|\T1/phv/m/n/10 (-20) Shotgun|
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 5671--5671
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 5672--5672
 []|\T1/phv/m/n/10 (-20) Grenade
  []
 
 
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 5671--5671
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 5672--5672
 \T1/phv/m/n/10 (-20) Launcher|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5672--5672
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
@@ -2290,43 +2285,43 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 5674--5674
  []
 
 
-Overfull \hbox (6.3089pt too wide) in paragraph at lines 5675--5675
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5675--5675
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
+
+Overfull \hbox (6.3089pt too wide) in paragraph at lines 5676--5676
 []|\T1/phv/m/n/10 (-20) 25(dm)x2|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5676--5676
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5677--5677
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 5677--5677
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 5678--5678
 []|\T1/phv/m/n/10 (-20) Grenade
  []
 
 
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 5677--5677
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 5678--5678
 \T1/phv/m/n/10 (-20) Launcher|
  []
 
 
-Overfull \hbox (3.59413pt too wide) in paragraph at lines 5678--5678
+Overfull \hbox (3.59413pt too wide) in paragraph at lines 5679--5679
 []|\T1/phv/m/n/10 (-20) 100(belt)|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5680--5680
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5681--5681
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (1.42839pt too wide) in paragraph at lines 5681--5681
+Overfull \hbox (1.42839pt too wide) in paragraph at lines 5682--5682
 []|\T1/phv/m/n/10 (-20) Shotgun|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5682--5682
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
@@ -2340,18 +2335,18 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 5684--5684
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5687--5687
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5685--5685
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (3.49431pt too wide) in paragraph at lines 5691--5691
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5688--5688
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
+
+Overfull \hbox (3.49431pt too wide) in paragraph at lines 5692--5692
 \T1/phv/m/n/10 (-20) Sweeper|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5691--5691
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
@@ -2360,43 +2355,43 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 5692--5692
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5694--5694
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5693--5693
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (6.3089pt too wide) in paragraph at lines 5694--5694
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5695--5695
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
+
+Overfull \hbox (6.3089pt too wide) in paragraph at lines 5695--5695
 []|\T1/phv/m/n/10 (-20) 30(dm)x2|
  []
 
 
-Overfull \hbox (1.42839pt too wide) in paragraph at lines 5695--5695
+Overfull \hbox (1.42839pt too wide) in paragraph at lines 5696--5696
 []|\T1/phv/m/n/10 (-20) Shotgun|
  []
 
 
-Overfull \hbox (4.393pt too wide) in paragraph at lines 5696--5696
+Overfull \hbox (4.393pt too wide) in paragraph at lines 5697--5697
 []|\T1/phv/m/n/10 (-20) Sernopal
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5696--5696
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5697--5697
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (7.05666pt too wide) in paragraph at lines 5697--5697
+Overfull \hbox (7.05666pt too wide) in paragraph at lines 5698--5698
 []|\T1/phv/m/n/10 (-20) Shiawase
  []
 
 
-Overfull \hbox (3.03574pt too wide) in paragraph at lines 5697--5697
+Overfull \hbox (3.03574pt too wide) in paragraph at lines 5698--5698
 []|\T1/phv/m/n/10 (-20) 20(ml)x6|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5698--5698
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
@@ -2405,13 +2400,13 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 5699--5699
  []
 
 
-Overfull \hbox (9.5916pt too wide) in paragraph at lines 5701--5701
-[]|\T1/phv/m/n/10 (-20) Steinhardt
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5700--5700
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5702--5702
-[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+Overfull \hbox (9.5916pt too wide) in paragraph at lines 5702--5702
+[]|\T1/phv/m/n/10 (-20) Steinhardt
  []
 
 
@@ -2430,48 +2425,48 @@ Overfull \hbox (7.69426pt too wide) in paragraph at lines 5705--5705
  []
 
 
-Overfull \hbox (3.59413pt too wide) in paragraph at lines 5705--5705
-[]|\T1/phv/m/n/10 (-20) 100(belt)|
- []
-
-
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5710--5710
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5706--5706
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (1.42839pt too wide) in paragraph at lines 5716--5716
+Overfull \hbox (3.59413pt too wide) in paragraph at lines 5706--5706
+[]|\T1/phv/m/n/10 (-20) 100(belt)|
+ []
+
+
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5711--5711
+[]|\T1/phv/m/n/10 (-20) SA/BF/FA|
+ []
+
+
+Overfull \hbox (1.42839pt too wide) in paragraph at lines 5717--5717
 []|\T1/phv/m/n/10 (-20) Shotgun|
  []
 
 
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 5717--5717
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 5718--5718
 []|\T1/phv/m/n/10 (-20) Grenade
  []
 
 
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 5717--5717
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 5718--5718
 \T1/phv/m/n/10 (-20) Launcher|
  []
 
 [68] [69] [70] [71] [72]
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 5858--5859
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 5859--5860
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (3.59413pt too wide) in paragraph at lines 5868--5868
+Overfull \hbox (3.59413pt too wide) in paragraph at lines 5869--5869
 []|\T1/phv/m/n/10 (-20) 200(belt)|
  []
 
 
-Overfull \hbox (4.69188pt too wide) in paragraph at lines 5873--5873
+Overfull \hbox (4.69188pt too wide) in paragraph at lines 5874--5874
 \T1/phv/m/n/10 (-20) Nanogun|
- []
-
-
-Overfull \hbox (3.59413pt too wide) in paragraph at lines 5873--5873
-[]|\T1/phv/m/n/10 (-20) 100(belt)|
  []
 
 
@@ -2485,68 +2480,68 @@ Overfull \hbox (3.59413pt too wide) in paragraph at lines 5875--5875
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 5877--5877
+Overfull \hbox (3.59413pt too wide) in paragraph at lines 5876--5876
+[]|\T1/phv/m/n/10 (-20) 100(belt)|
+ []
+
+
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 5878--5878
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 [73]
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 5956--5957
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 5957--5958
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (12.54654pt too wide) in paragraph at lines 5965--5965
+Overfull \hbox (12.54654pt too wide) in paragraph at lines 5966--5966
 []|\T1/phv/m/n/10 (-20) Ruhrmetall
  []
 
 
-Overfull \hbox (1.7245pt too wide) in paragraph at lines 5968--5968
+Overfull \hbox (1.7245pt too wide) in paragraph at lines 5969--5969
 []|\T1/phv/m/n/10 (-20) Whitney-
  []
 
 
-Overfull \hbox (3.59413pt too wide) in paragraph at lines 5968--5968
+Overfull \hbox (3.59413pt too wide) in paragraph at lines 5969--5969
 []|\T1/phv/m/n/10 (-20) 100(belt)|
  []
 
 [74]
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 6062--6063
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 6063--6064
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (12.54654pt too wide) in paragraph at lines 6072--6072
+Overfull \hbox (12.54654pt too wide) in paragraph at lines 6073--6073
 []|\T1/phv/m/n/10 (-20) Ruhrmetall
  []
 
-[75]
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 6182--6183
+[75] [76]
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 6183--6184
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (12.54654pt too wide) in paragraph at lines 6198--6198
+Overfull \hbox (12.54654pt too wide) in paragraph at lines 6199--6199
 []|\T1/phv/m/n/10 (-20) Ruhrmetall
  []
 
-[76]
-Overfull \hbox (3.05522pt too wide) in paragraph at lines 6287--6288
+[77]
+Overfull \hbox (3.05522pt too wide) in paragraph at lines 6288--6289
 []\T1/phv/m/n/10 (-20) Grenade
  []
 
 
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 6305--6306
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 6306--6307
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 6313--6313
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 6314--6314
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
- []
-
-
-Overfull \hbox (3.72244pt too wide) in paragraph at lines 6316--6316
-[]|\T1/phv/m/n/10 (-20) ArmTech
  []
 
 
@@ -2565,33 +2560,33 @@ Overfull \hbox (3.72244pt too wide) in paragraph at lines 6319--6319
  []
 
 
-Overfull \hbox (8.28197pt too wide) in paragraph at lines 6322--6322
+Overfull \hbox (3.72244pt too wide) in paragraph at lines 6320--6320
+[]|\T1/phv/m/n/10 (-20) ArmTech
+ []
+
+
+Overfull \hbox (8.28197pt too wide) in paragraph at lines 6323--6323
 []|\T1/phv/m/n/10 (-20) Terracotta
  []
 
-[77] [78]
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 6435--6436
+[78]
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 6436--6437
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (1.11852pt too wide) in paragraph at lines 6443--6443
+Overfull \hbox (1.11852pt too wide) in paragraph at lines 6444--6444
 \T1/phv/m/n/10 (-20) Portable
  []
 
-
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 6524--6525
+[79]
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 6525--6526
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (0.86984pt too wide) in paragraph at lines 6532--6532
+Overfull \hbox (0.86984pt too wide) in paragraph at lines 6533--6533
 []|\T1/phv/m/n/10 (-20) Arbalest
- []
-
-
-Overfull \hbox (23.50267pt too wide) in paragraph at lines 6533--6533
-[]|\T1/phv/m/n/10 (-20) Aztechnology
  []
 
 
@@ -2600,58 +2595,58 @@ Overfull \hbox (23.50267pt too wide) in paragraph at lines 6534--6534
  []
 
 
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 6535--6535
-\T1/phv/m/n/10 (-20) Launcher|
- []
-
-
-Overfull \hbox (8.48445pt too wide) in paragraph at lines 6537--6537
-[]|\T1/phv/m/n/10 (-20) Mitsubishi
- []
-
-
-Overfull \hbox (0.86017pt too wide) in paragraph at lines 6537--6537
-[]|\T1/phv/m/n/10 (-20) 4(dm)x2|
- []
-
-
-Overfull \hbox (12.54654pt too wide) in paragraph at lines 6538--6538
-[]|\T1/phv/m/n/10 (-20) Ruhrmetall
- []
-
-
-Overfull \hbox (5.77965pt too wide) in paragraph at lines 6539--6539
-\T1/phv/m/n/10 (-20) Launcher|
- []
-
-[79] [80]
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 6662--6663
-[]\T1/phv/m/n/10 (-20) WEIGHT
- []
-
-
-Overfull \hbox (3.89421pt too wide) in paragraph at lines 6678--6678
-[]|\T1/phv/m/n/10 (-20) Scorpion|
- []
-
-[81]
-Overfull \hbox (29.47096pt too wide) in paragraph at lines 6746--6747
-[]\T1/phv/m/n/10 (-20) Flamethrowers
- []
-
-
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 6764--6765
-[]\T1/phv/m/n/10 (-20) WEIGHT
- []
-
-
-Overfull \hbox (23.50267pt too wide) in paragraph at lines 6772--6772
+Overfull \hbox (23.50267pt too wide) in paragraph at lines 6535--6535
 []|\T1/phv/m/n/10 (-20) Aztechnology
  []
 
 
-Overfull \hbox (7.05666pt too wide) in paragraph at lines 6773--6773
-[]|\T1/phv/m/n/10 (-20) Shiawase
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 6536--6536
+\T1/phv/m/n/10 (-20) Launcher|
+ []
+
+
+Overfull \hbox (8.48445pt too wide) in paragraph at lines 6538--6538
+[]|\T1/phv/m/n/10 (-20) Mitsubishi
+ []
+
+
+Overfull \hbox (0.86017pt too wide) in paragraph at lines 6538--6538
+[]|\T1/phv/m/n/10 (-20) 4(dm)x2|
+ []
+
+
+Overfull \hbox (12.54654pt too wide) in paragraph at lines 6539--6539
+[]|\T1/phv/m/n/10 (-20) Ruhrmetall
+ []
+
+
+Overfull \hbox (5.77965pt too wide) in paragraph at lines 6540--6540
+\T1/phv/m/n/10 (-20) Launcher|
+ []
+
+[80]
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 6663--6664
+[]\T1/phv/m/n/10 (-20) WEIGHT
+ []
+
+
+Overfull \hbox (3.89421pt too wide) in paragraph at lines 6679--6679
+[]|\T1/phv/m/n/10 (-20) Scorpion|
+ []
+
+[81]
+Overfull \hbox (29.47096pt too wide) in paragraph at lines 6747--6748
+[]\T1/phv/m/n/10 (-20) Flamethrowers
+ []
+
+
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 6765--6766
+[]\T1/phv/m/n/10 (-20) WEIGHT
+ []
+
+
+Overfull \hbox (23.50267pt too wide) in paragraph at lines 6773--6773
+[]|\T1/phv/m/n/10 (-20) Aztechnology
  []
 
 
@@ -2660,64 +2655,63 @@ Overfull \hbox (7.05666pt too wide) in paragraph at lines 6774--6774
  []
 
 
-Overfull \hbox (5.54877pt too wide) in paragraph at lines 6853--6854
+Overfull \hbox (7.05666pt too wide) in paragraph at lines 6775--6775
+[]|\T1/phv/m/n/10 (-20) Shiawase
+ []
+
+[82]
+Overfull \hbox (5.54877pt too wide) in paragraph at lines 6854--6855
 \T1/phv/m/n/10 (-20) Weapons
  []
 
 
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 6871--6872
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 6872--6873
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (6.3089pt too wide) in paragraph at lines 6880--6880
+Overfull \hbox (6.3089pt too wide) in paragraph at lines 6881--6881
 []|\T1/phv/m/n/10 (-20) 10(dm)x2|
  []
 
 
-Overfull \hbox (6.3089pt too wide) in paragraph at lines 6884--6884
+Overfull \hbox (6.3089pt too wide) in paragraph at lines 6885--6885
 []|\T1/phv/m/n/10 (-20) 10(dm)x2|
  []
 
 
-Overfull \hbox (6.3089pt too wide) in paragraph at lines 6887--6887
+Overfull \hbox (6.3089pt too wide) in paragraph at lines 6888--6888
 []|\T1/phv/m/n/10 (-20) 10(dm)x2|
  []
 
-[82] [83] [84]
-Overfull \hbox (5.54877pt too wide) in paragraph at lines 7047--7048
+[83] [84]
+Overfull \hbox (5.54877pt too wide) in paragraph at lines 7048--7049
 \T1/phv/m/n/10 (-20) Weapons
  []
 
 
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 7065--7066
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 7066--7067
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (1.4089pt too wide) in paragraph at lines 7073--7073
+Overfull \hbox (1.4089pt too wide) in paragraph at lines 7074--7074
 []|\T1/phv/m/n/10 (-20) 100(dm)|
  []
 
 
-Overfull \hbox (7.69426pt too wide) in paragraph at lines 7076--7076
+Overfull \hbox (7.69426pt too wide) in paragraph at lines 7077--7077
 []|\T1/phv/m/n/10 (-20) SA/BF/FA|
  []
 
 
-Overfull \hbox (7.70642pt too wide) in paragraph at lines 7081--7081
+Overfull \hbox (7.70642pt too wide) in paragraph at lines 7082--7082
 []|\T1/phv/m/n/10 (-20) Harpoons|
  []
 
 
-Overfull \hbox (10.4198pt too wide) in paragraph at lines 7082--7082
+Overfull \hbox (10.4198pt too wide) in paragraph at lines 7083--7083
 \T1/phv/m/n/10 (-20) Icethrower|
- []
-
-Missing character: There is no ^^B in font nullfont!
-
-Overfull \hbox (6.30888pt too wide) in paragraph at lines 7083--7083
-[]|\T1/phv/m/n/10 (-20) Narcoject
  []
 
 Missing character: There is no ^^B in font nullfont!
@@ -2726,175 +2720,187 @@ Overfull \hbox (6.30888pt too wide) in paragraph at lines 7084--7084
 []|\T1/phv/m/n/10 (-20) Narcoject
  []
 
+Missing character: There is no ^^B in font nullfont!
 
 Overfull \hbox (6.30888pt too wide) in paragraph at lines 7085--7085
 []|\T1/phv/m/n/10 (-20) Narcoject
  []
 
 
-Overfull \hbox (3.60396pt too wide) in paragraph at lines 7089--7089
+Overfull \hbox (6.30888pt too wide) in paragraph at lines 7086--7086
+[]|\T1/phv/m/n/10 (-20) Narcoject
+ []
+
+
+Overfull \hbox (3.60396pt too wide) in paragraph at lines 7090--7090
 []|\T1/phv/m/n/10 (-20) Splatgun|
  []
 
 
-Overfull \hbox (8.64307pt too wide) in paragraph at lines 7090--7090
+Overfull \hbox (8.64307pt too wide) in paragraph at lines 7091--7091
 []|\T1/phv/m/n/10 (-20) Spraytank|
  []
 
 [85]
-Overfull \hbox (4.46991pt too wide) in paragraph at lines 7165--7166
+Overfull \hbox (3.23634pt too wide) in alignment at lines 7109--7117
+ [] [] [] [] [] [] [] [] [] [] []
+ []
+
+[86]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 29 on input line 7117.
+
+
+Overfull \hbox (4.46991pt too wide) in paragraph at lines 7169--7170
 []\T1/phv/m/n/10 (-20) Vehicular
  []
 
 
-Overfull \hbox (8.86205pt too wide) in paragraph at lines 7165--7166
+Overfull \hbox (8.86205pt too wide) in paragraph at lines 7169--7170
 \T1/phv/m/n/10 (-20) Weaponry
  []
 
 
-Overfull \hbox (3.34355pt too wide) in paragraph at lines 7183--7184
+Overfull \hbox (3.34355pt too wide) in paragraph at lines 7187--7188
 []\T1/phv/m/n/10 (-20) WEIGHT
  []
 
 
-Overfull \hbox (4.10007pt too wide) in paragraph at lines 7191--7191
+Overfull \hbox (4.10007pt too wide) in paragraph at lines 7195--7195
 []|\T1/phv/m/n/10 (-20) AN/EDQ-
  []
 
 
-Overfull \hbox (1.39928pt too wide) in paragraph at lines 7191--7191
+Overfull \hbox (1.39928pt too wide) in paragraph at lines 7195--7195
 \T1/phv/m/n/10 (-20) NDEWS|
  []
 
 
-Overfull \hbox (12.54654pt too wide) in paragraph at lines 7194--7194
+Overfull \hbox (12.54654pt too wide) in paragraph at lines 7198--7198
 []|\T1/phv/m/n/10 (-20) Ruhrmetall
  []
 
 
-Overfull \hbox (3.59413pt too wide) in paragraph at lines 7194--7194
+Overfull \hbox (3.59413pt too wide) in paragraph at lines 7198--7198
 []|\T1/phv/m/n/10 (-20) 100(belt)|
  []
 
 
-Overfull \hbox (0.64877pt too wide) in paragraph at lines 7195--7195
+Overfull \hbox (0.64877pt too wide) in paragraph at lines 7199--7199
 \T1/phv/m/n/10 (-20) Weapon|
  []
 
-[86] [87] [88]
-Overfull \hbox (9.247pt too wide) in paragraph at lines 7487--7487
+[87] [88] [89]
+Overfull \hbox (9.247pt too wide) in paragraph at lines 7491--7491
 []|\T1/phv/m/n/10 (-20) 1,700,000\TS1/phv/m/n/10 (-20) \xa5|
  []
 
 
-Overfull \hbox (5.38216pt too wide) in paragraph at lines 7489--7489
+Overfull \hbox (5.38216pt too wide) in paragraph at lines 7493--7493
 \T1/phv/m/n/10 (-20) Sniper/Re-
  []
 
 
-Overfull \hbox (35.09134pt too wide) in paragraph at lines 7491--7491
+Overfull \hbox (35.09134pt too wide) in paragraph at lines 7495--7495
 \T1/phv/m/n/10 (-20) Springer/Khrizan-
  []
 
 
-Overfull \hbox (0.50563pt too wide) in paragraph at lines 7492--7492
+Overfull \hbox (0.50563pt too wide) in paragraph at lines 7496--7496
 \T1/phv/m/n/10 (-20) lion/Vikhr|
  []
 
 
-Overfull \hbox (22.83838pt too wide) in paragraph at lines 7493--7493
+Overfull \hbox (22.83838pt too wide) in paragraph at lines 7497--7497
 []|\T1/phv/m/n/10 (-20) Fragmentation|
  []
 
 
-Overfull \hbox (15.60551pt too wide) in paragraph at lines 7494--7494
+Overfull \hbox (15.60551pt too wide) in paragraph at lines 7498--7498
 []|\T1/phv/m/n/10 (-20) Thermobaric|
  []
 
 
-Overfull \hbox (4.46774pt too wide) in paragraph at lines 7496--7496
+Overfull \hbox (4.46774pt too wide) in paragraph at lines 7500--7500
 []|\T1/phv/m/n/10 (-20) Brimstone|
  []
 
 
-Overfull \hbox (1.07397pt too wide) in paragraph at lines 7499--7499
+Overfull \hbox (1.07397pt too wide) in paragraph at lines 7503--7503
 []|\T1/phv/m/n/10 (-20) 425,000\TS1/phv/m/n/10 (-20) \xa5|
  []
 
 
-Overfull \hbox (1.07397pt too wide) in paragraph at lines 7501--7501
+Overfull \hbox (1.07397pt too wide) in paragraph at lines 7505--7505
 []|\T1/phv/m/n/10 (-20) 875,000\TS1/phv/m/n/10 (-20) \xa5|
  []
 
 
-Overfull \hbox (1.07397pt too wide) in paragraph at lines 7503--7503
+Overfull \hbox (1.07397pt too wide) in paragraph at lines 7507--7507
 []|\T1/phv/m/n/10 (-20) 600,000\TS1/phv/m/n/10 (-20) \xa5|
  []
 
 
-Overfull \hbox (9.247pt too wide) in paragraph at lines 7504--7504
+Overfull \hbox (9.247pt too wide) in paragraph at lines 7508--7508
 []|\T1/phv/m/n/10 (-20) 1,350,000\TS1/phv/m/n/10 (-20) \xa5|
  []
 
 
-Overfull \hbox (1.07397pt too wide) in paragraph at lines 7505--7505
+Overfull \hbox (1.07397pt too wide) in paragraph at lines 7509--7509
 []|\T1/phv/m/n/10 (-20) 430,000\TS1/phv/m/n/10 (-20) \xa5|
  []
 
 
-Overfull \hbox (1.07397pt too wide) in paragraph at lines 7506--7506
+Overfull \hbox (1.07397pt too wide) in paragraph at lines 7510--7510
 []|\T1/phv/m/n/10 (-20) 750,000\TS1/phv/m/n/10 (-20) \xa5|
  []
 
-[89]
-Overfull \hbox (1.07397pt too wide) in paragraph at lines 7567--7568
+[90]
+Overfull \hbox (1.07397pt too wide) in paragraph at lines 7571--7572
 []|\T1/phv/m/n/10 (-20) 350,000\TS1/phv/m/n/10 (-20) \xa5|
  []
 
 
-Overfull \hbox (1.07397pt too wide) in paragraph at lines 7568--7568
+Overfull \hbox (1.07397pt too wide) in paragraph at lines 7572--7572
 []|\T1/phv/m/n/10 (-20) 450,000\TS1/phv/m/n/10 (-20) \xa5|
  []
 
-[90] [91] [92]
-Overfull \hbox (0.1257pt too wide) in alignment at lines 7734--7752
+[91] [92]
+Overfull \hbox (0.1257pt too wide) in alignment at lines 7738--7756
  [] [] [] [] [] [] []
  []
 
 
-Overfull \hbox (0.1257pt too wide) in alignment at lines 7752--7754
+Overfull \hbox (0.1257pt too wide) in alignment at lines 7756--7758
  [] [] [] [] [] [] []
  []
 
 
-Overfull \hbox (0.1257pt too wide) in alignment at lines 7754--7771
+Overfull \hbox (0.1257pt too wide) in alignment at lines 7758--7775
  [] [] [] [] [] [] []
  []
 
-[93] [94] [95] [96] [97] [98]
-Overfull \hbox (7.67708pt too wide) in paragraph at lines 8071--8072
+[93] [94] [95] [96] [97] [98] [99]
+Overfull \hbox (7.67708pt too wide) in paragraph at lines 8075--8076
 []\T1/phv/m/n/10 (-20) Vehicle/Drone
  []
 
 
-Overfull \hbox (1.74127pt too wide) in paragraph at lines 8075--8076
+Overfull \hbox (1.74127pt too wide) in paragraph at lines 8079--8080
 []\T1/phv/m/n/10 (-20) Hand/Speed
  []
 
 
-Overfull \hbox (5.84251pt too wide) in paragraph at lines 8093--8093
+Overfull \hbox (5.84251pt too wide) in paragraph at lines 8097--8097
 []|\T1/phv/m/n/10 (-20) Aztechnology
  []
 
-[99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
-[112] [113]
-Overfull \vbox (6.94643pt too high) has occurred while \output is active []
+[100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
+[112] [113] [114] [115] [116] [117] [118] [119] [120]
 
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
 
-Overfull \vbox (4.92052pt too high) has occurred while \output is active []
-
-
-[114] [115] [116] [117] [118] [119] [120]
 (./Fan made Shadowrun 7th Edition rules.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -2906,13 +2912,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
 Here is how much of TeX's memory you used:
- 36801 strings out of 476182
- 761424 string characters out of 5795595
+ 36838 strings out of 476182
+ 762809 string characters out of 5795596
  2156975 words of memory out of 5000000
- 57541 multiletter control sequences out of 15000+600000
- 612344 words of font info for 369 fonts, out of 8000000 for 9000
+ 57578 multiletter control sequences out of 15000+600000
+ 612507 words of font info for 369 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 117i,13n,121p,1227b,1549s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,13n,121p,1227b,1563s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{bookmark=id.kkav13e62x7p} has been referenced but d
 oes not exist, replaced by a fixed one
@@ -2926,7 +2932,7 @@ oes not exist, replaced by a fixed one
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "Fan made Shadowrun 7th Edition rules.pdf" (120 pages, 720254
+Output written on "Fan made Shadowrun 7th Edition rules.pdf" (120 pages, 721641
  bytes).
 PDF statistics:
  870 PDF objects out of 1000 (max. 8388607)
