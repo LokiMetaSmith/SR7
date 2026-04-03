@@ -2976,6 +2976,7 @@ but suprising stopping power.
 }
 Light Pistols & ACC & DV & AP & MODE & RC & RANGE & AMMO & AVAIL & WEIGHT & COST \\
 Ares Light Fire 70 & 6(7) & 5P & -1 & SA & 0 & Near & 16(dm) & 3(R) & 0.50 & 350\textyen \\
+Shiawase Arms Hearth Protector & 5 & 5P & 0 & SA & 1 & Near & 12(c) & 4(R) & 1.00 & 400\textyen \\
 Ares Light Fire 75 & 6(8) & 5P & -1 & SA & 0 & Near & 16(dm) & 6(F) & 0.50 & 350\textyen \\
 Barrens Special & 2 & 3P & 0 & SS & 0 & Close & 5(cy) & 2(R) & 1.00 & 150\textyen \\
 Beretta 101T & 7 & 4P & -1 & SA & 0 & Near & 12(dm) & 2(R) & 1.00 & 300\textyen \\
@@ -7099,17 +7100,20 @@ It's notoriously difficult to master, and a critical glitch might result
 in self-amputation.
 
 \end{multicols}
-\begin{longtable}[]{@{}llllllll@{}}
+\begin{longtable}[]{@{}lllllllllll@{}}
 \toprule\noalign{}
-Melee Weapons & ACC & DV & AP & REACH & AVAIL & WEIGHT & COST \\
+Weapon Name & ACC & DV & AP & MODE & RC & RANGE & AMMO & AVAIL & WEIGHT & COST \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Monofilament Whip & 5 & 12P & -8 & 2 & 12(F) & 0.5 & 3,000¥ \\
-Stun Baton & - & 9S(e) & -2 & 1 & - & - & - \\
-Nanite Claws / Bite & - & 8P & -2 & - & - & - & - \\
-Bio-Luminescent Whip & - & 10P & -4 & 2 & - & - & - \\
+Monofilament Whip & 5 & 12P & -8 & -- & -- & Reach 2 & -- & 12(F) & 0.50 & 3,000\textyen \\
+Stun Baton & 4 & 9S(e) & -2 & -- & -- & Reach 1 & -- & 4(R) & 1.00 & 750\textyen \\
+Nanite Claws / Bite & 5 & 8P & -2 & -- & -- & Reach 0 & -- & -- & -- & -- \\
+Bio-Luminescent Whip & 5 & 10P & -4 & -- & -- & Reach 2 & -- & -- & -- & -- \\
+Combat Knife & 6 & (STR+2)P & -2 & -- & -- & Reach 0 & -- & 4 & 0.50 & 300\textyen \\
+Monofilament Knife & 5 & 7P & -8 & -- & -- & Reach 0 & -- & 10(F) & 0.50 & 1,500\textyen \\
+Throwing Knives & 5 & (STR+1)P & -1 & -- & -- & Near & 2 & 2 & 0.10 & 50\textyen \\
 \end{longtable}
 \begin{multicols}{2}
 
@@ -8268,7 +8272,7 @@ Orthoskin (Rtg 1-4) & Bio & 0.25 / Lvl & 6,000 / Lvl & Energy-absorbent weave un
 Symbiotes (Rtg 1-4) & Bio & 0.2 / Lvl & 4,000 / Lvl & Genetically tailored micro-organisms. +1 to downtime healing tests per level. \\
 Synthacardium (Rtg 1-3) & Bio & 0.1 / Lvl & 4,000 / Lvl & Enhanced heart. +1 to Athletics tests per level. \\
 Cerebral Booster (Rtg 1-3) & Bio & 0.2 / Lvl & 31,500 / Lvl & Neural enhancements. +1 Logic per rating level. \\
-Cerebellum Booster (Rtg 1-2)& Bio & 0.2 / Lvl & 50,000 / Lvl & +1 Intuition per rating level. \\
+Cerebellum Booster (Rtg 1-2) & Bio & 0.2 / Lvl & 50,000 / Lvl & +1 Intuition per rating level. \\
 Sleep Regulator & Bio & 0.1 & 12,000 & Requires only 3 hours of sleep for a full rest. \\
 Toxin Extractor (Rtg 1-6) & Bio & 0.2 / Lvl & 4,800 / Lvl & +1 to toxin resistance per rating level. \\
 Tracheal Filter (Rtg 1-6) & Bio & 0.1 / Lvl & 4,500 / Lvl & +1 to inhalation toxin resistance per rating level. \\
@@ -8277,9 +8281,9 @@ Bone Density Augmentation (Rtg 1-4) & Bio & 0.3 / Lvl & 5,000 / Lvl & +1 Body fo
 Cyber-Gills & Bio & 0.3 & 12,000 & Allows breathing underwater by extracting oxygen from H2O. \\
 Pain Editor & Bio & 0.3 & 60,000 & Ignore wound modifiers to dice pools, cannot feel pain or tell when taking damage. \\
 Leónization & Genetic & 0.0 & 2,500,000 & Anti-aging treatment. Resets physical age to prime, but introduces long-term spontaneous cellular degeneration risks. \\
-Nanite Hunters (Rtg 1-3) & Nanoware& 0.1 & 10,000 / Lvl & Specialized nanites that hunt foreign hostile nanites, infections, and grey goo in the bloodstream. +2 resistance per level against nanite/goo attacks. \\
+Nanite Hunters (Rtg 1-3) & Nanoware & 0.1 & 10,000 / Lvl & Specialized nanites that hunt foreign hostile nanites, infections, and grey goo in the bloodstream. +2 resistance per level against nanite/goo attacks. \\
 Internal Nanite Hive & Cyber & 0.5 / Lvl & 15,000 / Lvl & Internal cyber-factory that breeds specialized nanites (healing, sensory, etc). Slowly regenerates nanoware without external refills. \\
-Living Crystal Plating & Grey Goo& 0.5 / Lvl & 25,000 / Lvl & Highly illegal plating formed from controlled grey goo crystallization. +2 Armor and +1 to resist magic per level, but vulnerable to resonance strikes. \\
+Living Crystal Plating & Grey Goo & 0.5 / Lvl & 25,000 / Lvl & Highly illegal plating formed from controlled grey goo crystallization. +2 Armor and +1 to resist magic per level, but vulnerable to resonance strikes. \\
 \end{longtable}
 \begin{multicols}{2}
 

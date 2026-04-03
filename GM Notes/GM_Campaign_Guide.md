@@ -196,7 +196,7 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Armor:** 9 (Lined Coat with Custom Fit)
 *   **Skills:** Con 6 (Fast Talk +2), Negotiation 5, Spellcasting 6 (Illusion +2), Pistols 3.
 *   **Spells:** Trid Phantasm, Improved Invisibility, Confusion, Mass Confusion, Heal.
-*   **Weapons:** Shiawase Arms Hearth Protector (Light Pistol, 5 DV, SA).
+*   **Weapons:** Shiawase Arms Hearth Protector (Light Pistol, 5P, 0 AP, SA).
 *   **Augmentations:** Tailored Pheromones 2, Datajack.
 
 **Hollows (Imperfect Resurrections / Meat Shields)**
@@ -214,7 +214,7 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Armor:** 14 (Ares Sleeping Tiger)
 *   **Skills:** Spellcasting 7 (Combat +2), Counterspelling 6, Exotic Melee Weapon (Monofilament Whip) 6, Gymnastics 5.
 *   **Spells:** Powerbolt, Manabolt, Armor, Barrier, Physical Barrier, Levitate.
-*   **Weapons:** Monofilament Whip (12P, -8 AP, Reach 2).
+*   **Weapons:** Monofilament Whip (12P, -8 AP).
 *   **Augmentations:** Muscle Toner 2, Muscle Augmentation 2, Bone Lacing (Aluminum), Synaptic Booster 2.
 
 **Captain Lazlow (Spirit-Possessed Heavy Mercenary)**
@@ -327,7 +327,7 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Armor:** 16 (Heavy Mil-Spec Armor)
 *   **Skills:** Automatics 6, Heavy Weapons 5, Unarmed Combat 5.
 *   **Qualities:** Rememberance, High Pain Tolerance 2.
-*   **Weapons:** Ares Alpha (11P, -2 AP, SA/BF/FA), Combat Knife (10P, -2 AP).
+*   **Weapons:** Ares Alpha (11P, -2 AP, SA/BF/FA), Combat Knife ((STR+2)P, -2 AP).
 *   **Augmentations:** Wired Reflexes 2, Muscle Replacement 2.
 
 **Johnny the Johnson (Personafix Construct)**
@@ -361,7 +361,7 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Skills:** Blades (Knives) 7, Sneaking 6, Throwing Weapons 5, Perception 5, Intimidation 4.
 *   **Qualities:** Adept, Danger Sense.
 *   **Powers:** Improved Reflexes 2, Critical Strike (Blades), Improved Ability (Blades) 2.
-*   **Weapons:** Monofilament Knife (7P, -8 AP), Throwing Knives (6P, -1 AP).
+*   **Weapons:** Monofilament Knife (7P, -8 AP), Throwing Knives ((STR+1)P, -1 AP).
 
 **Bear (Awakened Talis Cat)**
 *   **BOD** 2, **AGI** 5, **REA** 5, **STR** 1, **WIL** 5, **LOG** 3, **INT** 5, **CHA** 4, **EDG** 3, **ESS** 6.0, **MAG** 4
