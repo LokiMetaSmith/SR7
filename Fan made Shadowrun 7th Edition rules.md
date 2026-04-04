@@ -3072,6 +3072,25 @@ Cold sim is dead. AR is limited. All real hacking is DNI Hot-Sim, putting your b
 | Bio-Deck | Renraku "Shinobi" | 3 | 5 / 4 / 3 / 2 | 45,000 | Entry-level hot-sim deck. Configurable Array. |
 | Bio-Deck | Fairlight Paladin | 6 | 8 / 7 / 6 / 6 | 150,000 | Military-grade. Interfaces directly with gaiasphere anomalies. |
 
+#### Cyberdeck Programs
+Active programs take up a program slot on a cyberdeck. Swapping a program is a Free Action. Programs act as localized rules-overrides or dice pool modifiers for your DNI connection.
+
+| Program | Type | Effect |
+| :--- | :--- | :--- |
+| **Browse** | Common | Cuts Matrix Search time in half. |
+| **Edit** | Common | +2 Dice to Edit File actions. |
+| **Encryption** | Common | +1 to Firewall. |
+| **Signal Scrub** | Common | Reduces Background Noise penalties by 2. |
+| **Toolbox** | Common | +1 to Data Processing. |
+| **Virtual Machine** | Common | Adds 2 additional program slots, but you take 1 unresisted Matrix damage whenever you take Matrix damage. |
+| **Armor** | Hacking | +2 to resist Matrix damage. |
+| **Biofeedback** | Hacking | Your Matrix attacks deal Biofeedback damage (Stun or Physical depending on target's sim module). |
+| **Blackout** | Hacking | Similar to Biofeedback, but only deals Stun damage. |
+| **Decryption** | Hacking | +1 to Attack rating. |
+| **Defuse** | Hacking | +4 Dice to resist Data Bomb damage. |
+| **Exploit** | Hacking | +2 to Sleaze rating. |
+| **Stealth** | Hacking | +1 to Sleaze rating. |
+
 #### 2. Matrix Actions & Tethers in Combat
 Tethers replace Marks. They are two-way sympathetic soul-links.
 
