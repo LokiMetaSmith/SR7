@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.3)  3 APR 2026 01:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.3)  3 APR 2026 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2742,16 +2742,21 @@ Overfull \hbox (8.64307pt too wide) in paragraph at lines 7091--7091
  []
 
 [85]
+Overfull \hbox (3.23634pt too wide) in alignment at lines 7103--7107
+ [] [] [] [] [] [] [] [] [] [] []
+ []
+
+
+Overfull \hbox (3.23634pt too wide) in alignment at lines 7107--7109
+ [] [] [] [] [] [] [] [] [] [] []
+ []
+
+
 Overfull \hbox (3.23634pt too wide) in alignment at lines 7109--7117
  [] [] [] [] [] [] [] [] [] [] []
  []
 
 [86]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 29 on input line 7117.
-
-
 Overfull \hbox (4.46991pt too wide) in paragraph at lines 7169--7170
 []\T1/phv/m/n/10 (-20) Vehicular
  []
@@ -2882,25 +2887,22 @@ Overfull \hbox (0.1257pt too wide) in alignment at lines 7758--7775
  []
 
 [93] [94] [95] [96] [97] [98] [99]
-Overfull \hbox (7.67708pt too wide) in paragraph at lines 8075--8076
+Overfull \hbox (7.67708pt too wide) in paragraph at lines 8100--8101
 []\T1/phv/m/n/10 (-20) Vehicle/Drone
  []
 
 
-Overfull \hbox (1.74127pt too wide) in paragraph at lines 8079--8080
+Overfull \hbox (1.74127pt too wide) in paragraph at lines 8104--8105
 []\T1/phv/m/n/10 (-20) Hand/Speed
  []
 
 
-Overfull \hbox (5.84251pt too wide) in paragraph at lines 8097--8097
+Overfull \hbox (5.84251pt too wide) in paragraph at lines 8122--8122
 []|\T1/phv/m/n/10 (-20) Aztechnology
  []
 
 [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
-[112] [113] [114] [115] [116] [117] [118] [119] [120]
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
+[112] [113] [114] [115] [116] [117] [118] [119] [120] [121]
 (./Fan made Shadowrun 7th Edition rules.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -2912,10 +2914,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
 Here is how much of TeX's memory you used:
- 36838 strings out of 476182
- 762809 string characters out of 5795596
+ 36844 strings out of 476182
+ 762929 string characters out of 5795596
  2156975 words of memory out of 5000000
- 57578 multiletter control sequences out of 15000+600000
+ 57583 multiletter control sequences out of 15000+600000
  612507 words of font info for 369 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  117i,13n,121p,1227b,1563s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2932,10 +2934,10 @@ oes not exist, replaced by a fixed one
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "Fan made Shadowrun 7th Edition rules.pdf" (120 pages, 721641
+Output written on "Fan made Shadowrun 7th Edition rules.pdf" (121 pages, 725143
  bytes).
 PDF statistics:
- 870 PDF objects out of 1000 (max. 8388607)
- 704 compressed objects within 8 object streams
- 267 named destinations out of 1000 (max. 500000)
+ 875 PDF objects out of 1000 (max. 8388607)
+ 708 compressed objects within 8 object streams
+ 268 named destinations out of 1000 (max. 500000)
  26981 words of extra memory for PDF output out of 29859 (max. 10000000)

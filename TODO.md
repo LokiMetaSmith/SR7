@@ -10,7 +10,11 @@ Based on the recent systems review, here is a prioritized to-do list for making 
     *   [x] *Follow-up required:* Establish a master template for Weapon and Quality tables so that parsing tools know exactly what to look for.
 *   [x] **Draft Missing Core Sections:** Write the rules text for the fundamentally missing pillars of the game:
     *   [x] *Follow-up required (Magic):* Need design docs for Spell lists, Adept powers, Drain calculations, Rituals, and Metamagic.
-    *   [x] *Follow-up required (Matrix):* Need design docs for Programs, Cyberdecks/Commlinks, IC, Host architecture, and Matrix actions (how do "Tethers" work in combat?).
+    *   [ ] *Follow-up required (Matrix):* Need design docs for Matrix elements:
+        *   [ ] Programs
+        *   [ ] Cyberdecks/Commlinks
+        *   [x] Host architecture & IC
+        *   [ ] Matrix actions (how do "Tethers" work in combat?)
     *   [x] *Follow-up required (Rigging/Vehicles):* Need design docs for:
         *   [x] Drone stats
         *   [x] Vehicle modifications
