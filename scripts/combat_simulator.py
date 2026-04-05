@@ -35,6 +35,7 @@ class Combatant:
     initiative_score: int = 0
     special_rules: List[str] = field(default_factory=list)
     is_alive: bool = True
+    team: int = 0
 
     def roll_initiative(self) -> int:
         base = self.attributes.get('REA', 3) + self.attributes.get('INT', 3)
@@ -256,8 +257,8 @@ def save_state(combatant: Combatant, scratchpad_dir: str):
 
 def main():
     parser = argparse.ArgumentParser(description="Autonomous Combat Simulator for Shadowrun 7E")
-    parser.add_argument("combatant1", help="Path to Chummer or Markdown file for combatant 1")
-    parser.add_argument("combatant2", help="Path to Chummer or Markdown file for combatant 2")
+    parser.add_argument("--team1", nargs='+', required=True, help="List of paths to Chummer or Markdown files for Team 1")
+    parser.add_argument("--team2", nargs='+', required=True, help="List of paths to Chummer or Markdown files for Team 2")
     parser.add_argument("--scenario", help="Path to scenario JSON or Markdown", default="scenario.json")
     parser.add_argument("--llm-url", help="URL of the OpenAI-compatible endpoint", default="http://localhost:8000/v1")
     parser.add_argument("--llm-model", help="Name of the model to use", default="local-model")
@@ -273,9 +274,15 @@ def main():
     env = parse_scenario(args.scenario)
     state = SimulationState(environment=env)
 
-    c1 = load_combatant(args.combatant1)
-    c2 = load_combatant(args.combatant2)
-    state.combatants = [c1, c2]
+    state.combatants = []
+    for path in args.team1:
+        c = load_combatant(path)
+        c.team = 1
+        state.combatants.append(c)
+    for path in args.team2:
+        c = load_combatant(path)
+        c.team = 2
+        state.combatants.append(c)
 
     # Initialize dummy LLM Agent if dry-run
     if args.dry_run:
@@ -290,25 +297,34 @@ def main():
 
     state.log(f"=== Beginning Shadowrun 7E Combat Simulation ===")
     state.log(f"Scenario: {env.description}")
-    state.log(f"Combatants: {c1.name} vs {c2.name}")
+
+    team1_names = [c.name for c in state.combatants if c.team == 1]
+    team2_names = [c.name for c in state.combatants if c.team == 2]
+    state.log(f"Combatants: Team 1 ({', '.join(team1_names)}) vs Team 2 ({', '.join(team2_names)})")
 
     # Roll Initiative
-    c1.roll_initiative()
-    c2.roll_initiative()
-    state.log(f"Initiative: {c1.name} ({c1.initiative_score}) | {c2.name} ({c2.initiative_score})")
+    for c in state.combatants:
+        c.roll_initiative()
+    init_log = " | ".join(f"{c.name} ({c.initiative_score})" for c in state.combatants)
+    state.log(f"Initiative: {init_log}")
 
     # Sort by initiative descending
     state.combatants.sort(key=lambda c: c.initiative_score, reverse=True)
 
     # Main combat loop
-    while all(c.is_alive for c in state.combatants) and state.turn < 20:
+    while any(c.is_alive for c in state.combatants if c.team == 1) and any(c.is_alive for c in state.combatants if c.team == 2) and state.turn < 20:
         state.log(f"\n--- Turn {state.turn} ---")
 
         for active in state.combatants:
             if not active.is_alive:
                 continue
 
-            target = next(c for c in state.combatants if c != active and c.is_alive)
+            # Need to check if there are still valid targets before acting
+            valid_targets = [c for c in state.combatants if c.team != active.team and c.is_alive]
+            if not valid_targets:
+                break
+
+            target = random.choice(valid_targets)
 
             # Use LLM to decide tactical action
             action_decision = llm.ask_action(active, state)
@@ -364,25 +380,31 @@ def main():
             narration = llm.narrate_action(active, action_text, result_text)
             state.log(narration)
 
-            if not target.is_alive:
-                break
-
         state.turn += 1
 
     # Summary
     state.log("\n=== Combat Summary ===")
-    winner = next((c for c in state.combatants if c.is_alive), None)
-    if winner:
-        state.log(f"Winner: {winner.name} wins in {state.turn - 1} turns!")
+
+    t1_alive = any(c.is_alive for c in state.combatants if c.team == 1)
+    t2_alive = any(c.is_alive for c in state.combatants if c.team == 2)
+    if t1_alive and not t2_alive:
+        winning_team = 1
+    elif t2_alive and not t1_alive:
+        winning_team = 2
+    else:
+        winning_team = None
+
+    if winning_team:
+        state.log(f"Winner: Team {winning_team} wins in {state.turn - 1} turns!")
     else:
         state.log("Mutual destruction or timeout.")
 
     for c in state.combatants:
         status = "Alive" if c.is_alive else "Incapacitated"
-        state.log(f"{c.name}: {status} | Physical Damage: {c.physical_damage}/{c.physical_track} | Stun Damage: {c.stun_damage}/{c.stun_track}")
+        state.log(f"Team {c.team} - {c.name}: {status} | Physical Damage: {c.physical_damage}/{c.physical_track} | Stun Damage: {c.stun_damage}/{c.stun_track}")
 
     # Generate Loot Summary
-    if winner:
+    if winning_team:
         losers = [c for c in state.combatants if not c.is_alive]
         if losers:
             loot_table = [
@@ -393,9 +415,9 @@ def main():
                 "A scrubbed, high-capacity credstick holding 5,000¥.",
                 "A pristine piece of 'Dead Tech'."
             ]
-            import random
+            # using global random module
             loot_item = random.choice(loot_table)
-            state.log(f"\nLoot Acquired by {winner.name}: {loot_item}")
+            state.log(f"\nLoot Acquired by Team {winning_team}: {loot_item}")
 
     # Save State
     state.log("\nSaving scratchpad states...")

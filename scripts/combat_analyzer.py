@@ -24,7 +24,9 @@ class DummyAgent:
 
 def run_simulation(c1_base: Combatant, c2_base: Combatant, env) -> dict:
     c1 = copy.deepcopy(c1_base)
+    c1.team = 1
     c2 = copy.deepcopy(c2_base)
+    c2.team = 2
 
     state = SimulationState(environment=env)
     state.combatants = [c1, c2]
@@ -38,12 +40,12 @@ def run_simulation(c1_base: Combatant, c2_base: Combatant, env) -> dict:
 
     llm = DummyAgent()
 
-    while all(c.is_alive for c in state.combatants) and state.turn < 20:
+    while any(c.is_alive for c in state.combatants if c.team == 1) and any(c.is_alive for c in state.combatants if c.team == 2) and state.turn < 20:
         for active in state.combatants:
             if not active.is_alive:
                 continue
 
-            target = next(c for c in state.combatants if c != active and c.is_alive)
+            target = next(c for c in state.combatants if c.team != active.team and c.is_alive)
 
             action_decision = llm.ask_action(active, state)
 
