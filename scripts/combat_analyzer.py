@@ -18,6 +18,14 @@ from combat_simulator import (
 
 class DummyAgent:
     def ask_action(self, combatant, state):
+        if combatant.spells and combatant.attributes.get('MAG', 0) > 0:
+            return f"cast {combatant.spells[0].name}"
+        elif combatant.matrix.attack > 3:
+            import random
+            if random.random() > 0.5:
+                return "data spike"
+            else:
+                return "establish tether"
         return f"attack with {combatant.weapons[0].name}" if combatant.weapons else "attack with Unarmed Strike"
     def narrate_action(self, combatant, action, result):
         return ""
@@ -45,56 +53,134 @@ def run_simulation(c1_base: Combatant, c2_base: Combatant, env) -> dict:
             if not active.is_alive:
                 continue
 
-            target = next(c for c in state.combatants if c.team != active.team and c.is_alive)
+            valid_targets = [c for c in state.combatants if c.team != active.team and c.is_alive]
+            if not valid_targets:
+                break
+            target = valid_targets[0]
 
             action_decision = llm.ask_action(active, state)
+            action_lower = action_decision.lower()
 
-            chosen_weapon_name = ""
-            for w in active.weapons:
-                if w.name.lower() in action_decision.lower():
-                    chosen_weapon_name = w.name
-                    break
+            is_spell = "cast" in action_lower or any(s.name.lower() in action_lower for s in active.spells)
+            is_data_spike = "data spike" in action_lower
+            is_tether = "tether" in action_lower
 
-            if chosen_weapon_name:
-                weapon = next((w for w in active.weapons if w.name == chosen_weapon_name), active.weapons[0])
-            else:
-                weapon = active.weapons[0] if active.weapons else Weapon("Unarmed Strike", 4, "S", 0)
+            if is_spell and active.spells:
+                spell = next((s for s in active.spells if s.name.lower() in action_lower), active.spells[0])
+                mag = active.attributes.get('MAG', 1)
+                spell_skill = active.skills.get('Spellcasting', 5)
 
-            # Attack Roll
-            skill_val = 5 # Default if unknown
-            if weapon.damage_type == 'P' and "Unarmed" not in weapon.name and "Sword" not in weapon.name and "Knife" not in weapon.name and "Claw" not in weapon.name and "Bite" not in weapon.name:
-                skill_val = active.skills.get('Firearms', active.skills.get('Heavy Weapons', 5))
-            else:
-                skill_val = active.skills.get('Close Combat', active.skills.get('Unarmed Combat', 5))
+                attack_pool = mag + spell_skill
+                attack_hits = RulesEngine.roll_dice(attack_pool)
 
-            attack_pool = active.attributes.get('AGI', 3) + skill_val
-            attack_hits = RulesEngine.roll_dice(attack_pool)
-
-            # Defense Roll
-            def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
-            def_hits = RulesEngine.roll_dice(def_pool)
-
-            net_hits = attack_hits - def_hits
-
-            if net_hits > 0:
-                modified_damage = weapon.damage + net_hits
-                modified_ap = weapon.ap
-
-                soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor + modified_ap)
-                soak_hits = RulesEngine.roll_dice(soak_pool)
-
-                final_damage = max(0, modified_damage - soak_hits)
-
-                if weapon.damage_type == 'P':
-                    target.physical_damage += final_damage
+                if spell.type == "M":
+                    def_pool = target.attributes.get('ESS', 6) + target.attributes.get('WIL', 3)
                 else:
-                    target.stun_damage += final_damage
+                    def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
+
+                def_hits = RulesEngine.roll_dice(def_pool)
+                net_hits = attack_hits - def_hits
+
+                if net_hits > 0:
+                    modified_damage = mag + net_hits
+                    if spell.type == "M":
+                        soak_pool = 0
+                    else:
+                        soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor - mag)
+
+                    soak_hits = RulesEngine.roll_dice(soak_pool)
+                    final_damage = max(0, modified_damage - soak_hits)
+                    target.physical_damage += final_damage
+
+                drain_value = max(2, mag - 2)
+                drain_resist_pool = active.attributes.get('WIL', 3) + active.attributes.get('LOG', 3)
+                drain_hits = RulesEngine.roll_dice(drain_resist_pool)
+                drain_taken = max(0, drain_value - drain_hits)
+                active.stun_damage += drain_taken
 
                 if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
                     target.is_alive = False
+                if active.physical_damage >= active.physical_track or active.stun_damage >= active.stun_track:
+                    active.is_alive = False
 
-            if not target.is_alive:
-                break
+            elif is_data_spike:
+                log = active.attributes.get('LOG', 3)
+                cyber_skill = active.skills.get('Cybercombat', 5)
+                attack_pool = log + cyber_skill
+                attack_hits = RulesEngine.roll_dice(attack_pool)
+
+                def_pool = target.attributes.get('INT', 3) + target.matrix.firewall
+                def_hits = RulesEngine.roll_dice(def_pool)
+                net_hits = attack_hits - def_hits
+
+                if net_hits > 0:
+                    tethers = active.tethers.get(target.name, 0)
+                    modified_damage = active.matrix.attack + net_hits + (tethers * 2)
+
+                    soak_pool = target.matrix.data_processing + target.matrix.firewall
+                    soak_hits = RulesEngine.roll_dice(soak_pool)
+                    final_damage = max(0, modified_damage - soak_hits)
+                    target.stun_damage += final_damage
+
+                    if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
+                        target.is_alive = False
+
+            elif is_tether:
+                log = active.attributes.get('LOG', 3)
+                hack_skill = active.skills.get('Hacking', 5)
+                attack_pool = log + hack_skill
+                attack_hits = RulesEngine.roll_dice(attack_pool)
+
+                def_pool = target.attributes.get('WIL', 3) + target.matrix.firewall
+                def_hits = RulesEngine.roll_dice(def_pool)
+                net_hits = attack_hits - def_hits
+
+                if net_hits > 0:
+                    current_tethers = active.tethers.get(target.name, 0)
+                    active.tethers[target.name] = current_tethers + 1
+
+            else:
+                chosen_weapon_name = ""
+                for w in active.weapons:
+                    if w.name.lower() in action_lower:
+                        chosen_weapon_name = w.name
+                        break
+
+                if chosen_weapon_name:
+                    weapon = next((w for w in active.weapons if w.name == chosen_weapon_name), active.weapons[0])
+                else:
+                    weapon = active.weapons[0] if active.weapons else Weapon("Unarmed Strike", 4, "S", 0)
+
+                skill_val = 5
+                if weapon.damage_type == 'P' and "Unarmed" not in weapon.name and "Sword" not in weapon.name and "Knife" not in weapon.name and "Claw" not in weapon.name and "Bite" not in weapon.name:
+                    skill_val = active.skills.get('Firearms', active.skills.get('Heavy Weapons', 5))
+                else:
+                    skill_val = active.skills.get('Close Combat', active.skills.get('Unarmed Combat', 5))
+
+                attack_pool = active.attributes.get('AGI', 3) + skill_val
+                attack_hits = RulesEngine.roll_dice(attack_pool)
+
+                def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
+                def_hits = RulesEngine.roll_dice(def_pool)
+
+                net_hits = attack_hits - def_hits
+
+                if net_hits > 0:
+                    modified_damage = weapon.damage + net_hits
+                    modified_ap = weapon.ap
+
+                    soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor + modified_ap)
+                    soak_hits = RulesEngine.roll_dice(soak_pool)
+
+                    final_damage = max(0, modified_damage - soak_hits)
+
+                    if weapon.damage_type == 'P':
+                        target.physical_damage += final_damage
+                    else:
+                        target.stun_damage += final_damage
+
+                    if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
+                        target.is_alive = False
 
         state.turn += 1
 

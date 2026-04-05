@@ -20,12 +20,29 @@ class Weapon:
     mode: str = "SA"
 
 @dataclass
+class Spell:
+    name: str
+    type: str # M or P
+    damage_formula: str # e.g. "F-2"
+    drain_formula: str # e.g. "F-4"
+
+@dataclass
+class MatrixAttributes:
+    attack: int = 0
+    sleaze: int = 0
+    data_processing: int = 1
+    firewall: int = 1
+
+@dataclass
 class Combatant:
     name: str
     source_file: str
     attributes: Dict[str, int] = field(default_factory=dict)
     skills: Dict[str, int] = field(default_factory=dict)
     weapons: List[Weapon] = field(default_factory=list)
+    spells: List[Spell] = field(default_factory=list)
+    matrix: MatrixAttributes = field(default_factory=MatrixAttributes)
+    tethers: Dict[str, int] = field(default_factory=dict) # target_name -> tether_count
     armor: int = 0
     physical_track: int = 10
     stun_track: int = 10
@@ -80,7 +97,9 @@ class LLM_Agent:
         # Prompt construction to instruct LLM to choose an action
         prompt = f"You are playing as {combatant.name} in Shadowrun 7E combat.\n"
         prompt += f"Environment: {state.environment.description}\n"
-        prompt += f"Your Stats: HP ({combatant.physical_track-combatant.physical_damage}/{combatant.physical_track}), Weapons: {[w.name for w in combatant.weapons]}\n"
+        prompt += f"Your Stats: HP ({combatant.physical_track-combatant.physical_damage}/{combatant.physical_track}), Weapons: {[w.name for w in combatant.weapons]}, Spells: {[s.name for s in combatant.spells]}\n"
+        prompt += f"Matrix Attributes: Attack {combatant.matrix.attack}, Sleaze {combatant.matrix.sleaze}, DP {combatant.matrix.data_processing}, Firewall {combatant.matrix.firewall}\n"
+        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, or Data Spike.\n"
         # etc.
         try:
             response = self.client.chat.completions.create(
@@ -130,6 +149,28 @@ def parse_chummer(file_path: str) -> Combatant:
             skills[n] = v
 
     c = Combatant(name=name, source_file=file_path, attributes=attributes, skills=skills)
+
+    spells_node = char.find('spells')
+    if spells_node is not None:
+        for spell in spells_node.findall('spell'):
+            sn = spell.find('name').text
+            # Basic parsing of spell tags if present, default to generic "Mana" / "F-2" otherwise
+            st = "M"
+            sd = "F"
+            sdr = "F-2"
+
+            c.spells.append(Spell(name=sn, type=st, damage_formula=sd, drain_formula=sdr))
+
+    # Try mapping matrix stats
+    if "Technomancer" in " ".join([q.text for q in char.findall('.//qualities/quality/name') if q.find('name') is not None]) or "RES" in attributes:
+        res = attributes.get('RES', 3)
+        c.matrix = MatrixAttributes(attack=res, sleaze=res, data_processing=res, firewall=res)
+    else:
+        deck = char.find('.//gear/item[category="Cyberdeck"]')
+        if deck is not None:
+            c.matrix = MatrixAttributes(attack=5, sleaze=5, data_processing=5, firewall=5)
+        else:
+            c.matrix = MatrixAttributes(attack=0, sleaze=0, data_processing=3, firewall=3)
 
     gear_node = char.find('gear')
     if gear_node is not None:
@@ -207,6 +248,36 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
         typ = wm[2]
         ap = int(wm[3])
         c.weapons.append(Weapon(name=w_name, damage=dmg, damage_type=typ, ap=ap))
+
+    # Spells
+    spell_matches = re.findall(r'\*\*Spells:\*\*(.*?)(?=\n\n|\n\*\*|\Z)', content, re.DOTALL)
+    if spell_matches:
+        spells_text = spell_matches[0]
+        # Basic split by comma. We assume generic M and F/F-2.
+        for sp in spells_text.split(','):
+            sp = sp.strip()
+            if sp:
+                c.spells.append(Spell(name=sp, type="M", damage_formula="F", drain_formula="F-2"))
+
+    # Matrix Attributes
+    # Typically found in commlink/deck gear or special attributes
+    matrix_match = re.search(r'\*\*Matrix Attributes:\*\*\s*Attack\s*(\d+),\s*Sleaze\s*(\d+),\s*Data Processing\s*(\d+),\s*Firewall\s*(\d+)', content)
+    if matrix_match:
+        c.matrix = MatrixAttributes(
+            attack=int(matrix_match.group(1)),
+            sleaze=int(matrix_match.group(2)),
+            data_processing=int(matrix_match.group(3)),
+            firewall=int(matrix_match.group(4))
+        )
+    elif "RES" in attributes:
+        res = attributes.get('RES', 3)
+        c.matrix = MatrixAttributes(attack=res, sleaze=res, data_processing=res, firewall=res)
+    else:
+        # check if it mentions a commlink/deck
+        if re.search(r'deck|commlink', content, re.IGNORECASE):
+             c.matrix = MatrixAttributes(attack=0, sleaze=0, data_processing=4, firewall=4)
+        else:
+             c.matrix = MatrixAttributes(attack=0, sleaze=0, data_processing=1, firewall=1)
 
     # Add dummy weapon if empty
     if not c.weapons:
@@ -288,9 +359,16 @@ def main():
     if args.dry_run:
         class DummyAgent:
             def ask_action(self, combatant, state):
+                if combatant.spells and combatant.attributes.get('MAG', 0) > 0:
+                    return f"cast {combatant.spells[0].name}"
+                elif combatant.matrix.attack > 3:
+                    if random.random() > 0.5:
+                        return "data spike"
+                    else:
+                        return "establish tether"
                 return f"attack with {combatant.weapons[0].name}" if combatant.weapons else "attack with Unarmed Strike"
             def narrate_action(self, combatant, action, result):
-                return f"{combatant.name} fiercely attacks, resulting in: {result}"
+                return f"{combatant.name} takes action, resulting in: {result}"
         llm = DummyAgent()
     else:
         llm = LLM_Agent(endpoint_url=args.llm_url, model_name=args.llm_model)
@@ -330,51 +408,158 @@ def main():
             action_decision = llm.ask_action(active, state)
             state.log(f"[{active.name} Tactical Decision]: {action_decision.strip()}")
 
-            # Simple heuristic to parse the LLM action choice
-            chosen_weapon_name = ""
-            for w in active.weapons:
-                if w.name.lower() in action_decision.lower():
-                    chosen_weapon_name = w.name
-                    break
+            action_lower = action_decision.lower()
+            action_text = ""
+            result_text = ""
 
-            if chosen_weapon_name:
-                weapon = next((w for w in active.weapons if w.name == chosen_weapon_name), active.weapons[0])
-            else:
-                weapon = active.weapons[0] if active.weapons else Weapon("Unarmed Strike", 4, "S", 0)
+            is_spell = "cast" in action_lower or any(s.name.lower() in action_lower for s in active.spells)
+            is_data_spike = "data spike" in action_lower
+            is_tether = "tether" in action_lower
 
+            if is_spell and active.spells:
+                spell = next((s for s in active.spells if s.name.lower() in action_lower), active.spells[0])
+                mag = active.attributes.get('MAG', 1)
+                spell_skill = active.skills.get('Spellcasting', 5)
 
-            # Attack Roll: Agility + Skill (assuming Firearms/Close Combat ~ 5 if unknown)
-            attack_pool = active.attributes.get('AGI', 3) + 5
-            attack_hits = RulesEngine.roll_dice(attack_pool)
+                attack_pool = mag + spell_skill
+                attack_hits = RulesEngine.roll_dice(attack_pool)
 
-            # Defense Roll: Reaction + Intuition
-            def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
-            def_hits = RulesEngine.roll_dice(def_pool)
+                # Defense
+                if spell.type == "M":
+                    def_pool = target.attributes.get('ESS', 6) + target.attributes.get('WIL', 3)
+                else:
+                    def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
 
-            net_hits = attack_hits - def_hits
-            action_text = f"attacks {target.name} with {weapon.name} ({attack_hits} hits vs {def_hits} defense hits)"
+                def_hits = RulesEngine.roll_dice(def_pool)
+                net_hits = attack_hits - def_hits
 
-            if net_hits > 0:
-                modified_damage = weapon.damage + net_hits
-                modified_ap = weapon.ap
+                action_text = f"casts {spell.name} at {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
 
-                # Soak Roll: Body + Armor + AP
-                soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor + modified_ap)
-                soak_hits = RulesEngine.roll_dice(soak_pool)
+                if net_hits > 0:
+                    base_damage = mag # Assume Force = MAG
+                    modified_damage = base_damage + net_hits
 
-                final_damage = max(0, modified_damage - soak_hits)
-                result_text = f"Attack succeeds! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} {weapon.damage_type} damage."
+                    if spell.type == "M":
+                        soak_pool = 0 # Mana spells ignore armor
+                    else:
+                        soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor - mag)
 
-                if weapon.damage_type == 'P':
+                    soak_hits = RulesEngine.roll_dice(soak_pool)
+                    final_damage = max(0, modified_damage - soak_hits)
+
+                    result_text = f"Spell hits! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} P damage."
                     target.physical_damage += final_damage
                 else:
-                    target.stun_damage += final_damage
+                    result_text = f"Spell misses or is resisted by {target.name}."
+
+                # Drain
+                drain_value = max(2, mag - 2) # Assume F-2
+                drain_resist_pool = active.attributes.get('WIL', 3) + active.attributes.get('LOG', 3)
+                drain_hits = RulesEngine.roll_dice(drain_resist_pool)
+                drain_taken = max(0, drain_value - drain_hits)
+                result_text += f" {active.name} rolls {drain_resist_pool} to resist drain, taking {drain_taken} Stun damage."
+                active.stun_damage += drain_taken
 
                 if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
                     target.is_alive = False
                     result_text += f" {target.name} is incapacitated!"
+                if active.physical_damage >= active.physical_track or active.stun_damage >= active.stun_track:
+                    active.is_alive = False
+                    result_text += f" {active.name} is incapacitated from Drain!"
+
+            elif is_data_spike:
+                log = active.attributes.get('LOG', 3)
+                cyber_skill = active.skills.get('Cybercombat', 5)
+                attack_pool = log + cyber_skill
+                attack_hits = RulesEngine.roll_dice(attack_pool)
+
+                def_pool = target.attributes.get('INT', 3) + target.matrix.firewall
+                def_hits = RulesEngine.roll_dice(def_pool)
+                net_hits = attack_hits - def_hits
+
+                action_text = f"launches a Data Spike at {target.name}'s persona ({attack_hits} hits vs {def_hits} defense hits)"
+
+                if net_hits > 0:
+                    tethers = active.tethers.get(target.name, 0)
+                    modified_damage = active.matrix.attack + net_hits + (tethers * 2)
+
+                    soak_pool = target.matrix.data_processing + target.matrix.firewall
+                    soak_hits = RulesEngine.roll_dice(soak_pool)
+                    final_damage = max(0, modified_damage - soak_hits)
+
+                    result_text = f"Data Spike connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Stun (Biofeedback) damage."
+                    target.stun_damage += final_damage
+
+                    if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
+                        target.is_alive = False
+                        result_text += f" {target.name} is incapacitated!"
+                else:
+                    result_text = f"Data Spike is deflected by {target.name}'s firewall."
+
+            elif is_tether:
+                log = active.attributes.get('LOG', 3)
+                hack_skill = active.skills.get('Hacking', 5)
+                attack_pool = log + hack_skill
+                attack_hits = RulesEngine.roll_dice(attack_pool)
+
+                def_pool = target.attributes.get('WIL', 3) + target.matrix.firewall
+                def_hits = RulesEngine.roll_dice(def_pool)
+                net_hits = attack_hits - def_hits
+
+                action_text = f"attempts to establish a Tether on {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+                if net_hits > 0:
+                    current_tethers = active.tethers.get(target.name, 0)
+                    active.tethers[target.name] = current_tethers + 1
+                    result_text = f"Tether established! {active.name} now has {active.tethers[target.name]} Tether(s) on {target.name}."
+                else:
+                    result_text = f"Tether attempt blocked by {target.name}'s firewall."
+
             else:
-                result_text = f"Attack misses! {target.name} dodges the attack."
+                # Weapon Attack
+                chosen_weapon_name = ""
+                for w in active.weapons:
+                    if w.name.lower() in action_lower:
+                        chosen_weapon_name = w.name
+                        break
+
+                if chosen_weapon_name:
+                    weapon = next((w for w in active.weapons if w.name == chosen_weapon_name), active.weapons[0])
+                else:
+                    weapon = active.weapons[0] if active.weapons else Weapon("Unarmed Strike", 4, "S", 0)
+
+                # Attack Roll: Agility + Skill (assuming Firearms/Close Combat ~ 5 if unknown)
+                attack_pool = active.attributes.get('AGI', 3) + 5
+                attack_hits = RulesEngine.roll_dice(attack_pool)
+
+                # Defense Roll: Reaction + Intuition
+                def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
+                def_hits = RulesEngine.roll_dice(def_pool)
+
+                net_hits = attack_hits - def_hits
+                action_text = f"attacks {target.name} with {weapon.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+                if net_hits > 0:
+                    modified_damage = weapon.damage + net_hits
+                    modified_ap = weapon.ap
+
+                    # Soak Roll: Body + Armor + AP
+                    soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor + modified_ap)
+                    soak_hits = RulesEngine.roll_dice(soak_pool)
+
+                    final_damage = max(0, modified_damage - soak_hits)
+                    result_text = f"Attack succeeds! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} {weapon.damage_type} damage."
+
+                    if weapon.damage_type == 'P':
+                        target.physical_damage += final_damage
+                    else:
+                        target.stun_damage += final_damage
+
+                    if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
+                        target.is_alive = False
+                        result_text += f" {target.name} is incapacitated!"
+                else:
+                    result_text = f"Attack misses! {target.name} dodges the attack."
 
             # Narration
             narration = llm.narrate_action(active, action_text, result_text)
