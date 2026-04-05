@@ -34,6 +34,20 @@ class MatrixAttributes:
     firewall: int = 1
 
 @dataclass
+class Vehicle:
+    name: str
+    handling: int = 4
+    speed: int = 3
+    accel: int = 2
+    body: int = 4
+    armor: int = 4
+    sensor: int = 3
+    physical_track: int = 10
+    physical_damage: int = 0
+    is_destroyed: bool = False
+    weapons: List[Weapon] = field(default_factory=list)
+
+@dataclass
 class Combatant:
     name: str
     source_file: str
@@ -54,11 +68,20 @@ class Combatant:
     is_alive: bool = True
     team: int = 0
 
+    control_rig: int = 0
+    jumped_in_vehicle: Optional[Vehicle] = None
+
     def roll_initiative(self) -> int:
-        base = self.attributes.get('REA', 3) + self.attributes.get('INT', 3)
-        dice = 1
-        if "Wired Reflexes" in " ".join(self.special_rules):
-            dice += 1
+        if self.jumped_in_vehicle:
+            # Matrix Initiative (Data Processing + Intuition) + 1 Initiative Die per Rig level
+            base = self.matrix.data_processing + self.attributes.get('INT', 3)
+            dice = 1 + self.control_rig
+        else:
+            base = self.attributes.get('REA', 3) + self.attributes.get('INT', 3)
+            dice = 1
+            if "Wired Reflexes" in " ".join(self.special_rules):
+                dice += 1
+
         roll = sum(random.randint(1, 6) for _ in range(dice))
         self.initiative_score = base + roll
         return self.initiative_score
@@ -97,6 +120,12 @@ class LLM_Agent:
         # Prompt construction to instruct LLM to choose an action
         prompt = f"You are playing as {combatant.name} in Shadowrun 7E combat.\n"
         prompt += f"Environment: {state.environment.description}\n"
+
+        if combatant.jumped_in_vehicle:
+            prompt += f"You are Jumped Into a {combatant.jumped_in_vehicle.name}.\n"
+            prompt += f"Vehicle Stats: BOD {combatant.jumped_in_vehicle.body}, ARM {combatant.jumped_in_vehicle.armor}, HP ({combatant.jumped_in_vehicle.physical_track-combatant.jumped_in_vehicle.physical_damage}/{combatant.jumped_in_vehicle.physical_track})\n"
+            prompt += f"Vehicle Weapons: {[w.name for w in combatant.jumped_in_vehicle.weapons]}\n"
+
         prompt += f"Your Stats: HP ({combatant.physical_track-combatant.physical_damage}/{combatant.physical_track}), Weapons: {[w.name for w in combatant.weapons]}, Spells: {[s.name for s in combatant.spells]}\n"
         prompt += f"Matrix Attributes: Attack {combatant.matrix.attack}, Sleaze {combatant.matrix.sleaze}, DP {combatant.matrix.data_processing}, Firewall {combatant.matrix.firewall}\n"
         prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, or Data Spike.\n"
@@ -171,6 +200,41 @@ def parse_chummer(file_path: str) -> Combatant:
             c.matrix = MatrixAttributes(attack=5, sleaze=5, data_processing=5, firewall=5)
         else:
             c.matrix = MatrixAttributes(attack=0, sleaze=0, data_processing=3, firewall=3)
+
+    cyberware_node = char.find('cyberwares')
+    if cyberware_node is not None:
+        for ware in cyberware_node.findall('cyberware'):
+            n = ware.find('name').text if ware.find('name') is not None else ""
+            if "Control Rig" in n:
+                rtg_match = re.search(r'Rating (\d+)', n, re.IGNORECASE)
+                if rtg_match:
+                    c.control_rig = int(rtg_match.group(1))
+                else:
+                    c.control_rig = 1
+
+    vehicles_node = char.find('vehicles')
+    if vehicles_node is not None:
+        for v_node in vehicles_node.findall('vehicle'):
+            vn = v_node.find('name').text if v_node.find('name') is not None else "Drone"
+            v_arm = int(v_node.find('armor').text) if v_node.find('armor') is not None else 4
+            v_bod = int(v_node.find('body').text) if v_node.find('body') is not None else 4
+
+            veh = Vehicle(name=vn, armor=v_arm, body=v_bod)
+            veh.physical_track = 8 + (v_bod // 2)
+
+            # Simple weapon parsing for drones
+            v_weaps = v_node.find('weapons')
+            if v_weaps is not None:
+                for w in v_weaps.findall('weapon'):
+                    wn = w.find('name').text if w.find('name') is not None else "Mounted Weapon"
+                    wd = int(w.find('damage').text.replace('P','').replace('S','')) if w.find('damage') is not None and w.find('damage').text else 8
+                    veh.weapons.append(Weapon(name=wn, damage=wd, damage_type="P", ap=-1))
+
+            if not veh.weapons:
+                 veh.weapons.append(Weapon(name="Mounted Turret", damage=8, damage_type="P", ap=-1))
+
+            c.jumped_in_vehicle = veh
+            break # Just take the first one for the sim
 
     gear_node = char.find('gear')
     if gear_node is not None:
@@ -279,6 +343,20 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
         else:
              c.matrix = MatrixAttributes(attack=0, sleaze=0, data_processing=1, firewall=1)
 
+    cr_match = re.search(r'Control Rig(?:\s*\(?Rating\s*)?(\d+)?', content, re.IGNORECASE)
+    if cr_match:
+        c.control_rig = int(cr_match.group(1)) if cr_match.group(1) else 1
+
+    veh_match = re.search(r'\*\*Vehicle/Drone:\*\*\s*(.*?)\s*\(.*?\s*BOD\s*(\d+).*?ARM\s*(\d+)', content, re.IGNORECASE)
+    if veh_match:
+        vn = veh_match.group(1).strip()
+        v_bod = int(veh_match.group(2))
+        v_arm = int(veh_match.group(3))
+        veh = Vehicle(name=vn, armor=v_arm, body=v_bod)
+        veh.physical_track = 8 + (v_bod // 2)
+        veh.weapons.append(Weapon(name=f"{vn} Mount", damage=8, damage_type="P", ap=-1))
+        c.jumped_in_vehicle = veh
+
     # Add dummy weapon if empty
     if not c.weapons:
         c.weapons.append(Weapon(name="Unarmed Strike", damage=int(attributes.get('STR', 3) / 2), damage_type="S", ap=0))
@@ -359,6 +437,8 @@ def main():
     if args.dry_run:
         class DummyAgent:
             def ask_action(self, combatant, state):
+                if combatant.jumped_in_vehicle and combatant.jumped_in_vehicle.weapons:
+                    return f"attack with {combatant.jumped_in_vehicle.weapons[0].name}"
                 if combatant.spells and combatant.attributes.get('MAG', 0) > 0:
                     return f"cast {combatant.spells[0].name}"
                 elif combatant.matrix.attack > 3:
@@ -376,8 +456,8 @@ def main():
     state.log(f"=== Beginning Shadowrun 7E Combat Simulation ===")
     state.log(f"Scenario: {env.description}")
 
-    team1_names = [c.name for c in state.combatants if c.team == 1]
-    team2_names = [c.name for c in state.combatants if c.team == 2]
+    team1_names = [f"{c.name} (in {c.jumped_in_vehicle.name})" if c.jumped_in_vehicle else c.name for c in state.combatants if c.team == 1]
+    team2_names = [f"{c.name} (in {c.jumped_in_vehicle.name})" if c.jumped_in_vehicle else c.name for c in state.combatants if c.team == 2]
     state.log(f"Combatants: Team 1 ({', '.join(team1_names)}) vs Team 2 ({', '.join(team2_names)})")
 
     # Roll Initiative
@@ -518,22 +598,32 @@ def main():
             else:
                 # Weapon Attack
                 chosen_weapon_name = ""
-                for w in active.weapons:
+                available_weapons = active.jumped_in_vehicle.weapons if active.jumped_in_vehicle else active.weapons
+                for w in available_weapons:
                     if w.name.lower() in action_lower:
                         chosen_weapon_name = w.name
                         break
 
                 if chosen_weapon_name:
-                    weapon = next((w for w in active.weapons if w.name == chosen_weapon_name), active.weapons[0])
+                    weapon = next((w for w in available_weapons if w.name == chosen_weapon_name), available_weapons[0])
                 else:
-                    weapon = active.weapons[0] if active.weapons else Weapon("Unarmed Strike", 4, "S", 0)
+                    weapon = available_weapons[0] if available_weapons else Weapon("Unarmed Strike", 4, "S", 0)
 
-                # Attack Roll: Agility + Skill (assuming Firearms/Close Combat ~ 5 if unknown)
-                attack_pool = active.attributes.get('AGI', 3) + 5
+                # Attack Roll: Agility + Skill
+                if active.jumped_in_vehicle:
+                    # Gunnery + Agility + Control Rig
+                    attack_pool = active.attributes.get('AGI', 3) + active.skills.get('Gunnery', 5) + active.control_rig
+                else:
+                    attack_pool = active.attributes.get('AGI', 3) + 5
+
                 attack_hits = RulesEngine.roll_dice(attack_pool)
 
                 # Defense Roll: Reaction + Intuition
-                def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
+                if target.jumped_in_vehicle:
+                     def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3) + target.jumped_in_vehicle.handling
+                else:
+                     def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
+
                 def_hits = RulesEngine.roll_dice(def_pool)
 
                 net_hits = attack_hits - def_hits
@@ -544,16 +634,40 @@ def main():
                     modified_ap = weapon.ap
 
                     # Soak Roll: Body + Armor + AP
-                    soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor + modified_ap)
+                    if target.jumped_in_vehicle:
+                         soak_pool = max(0, target.jumped_in_vehicle.body + target.jumped_in_vehicle.armor + modified_ap)
+                    else:
+                         soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor + modified_ap)
+
                     soak_hits = RulesEngine.roll_dice(soak_pool)
 
                     final_damage = max(0, modified_damage - soak_hits)
                     result_text = f"Attack succeeds! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} {weapon.damage_type} damage."
 
-                    if weapon.damage_type == 'P':
-                        target.physical_damage += final_damage
+                    if target.jumped_in_vehicle:
+                        # Physical damage goes to vehicle, Rigger takes half as Stun Biofeedback
+                        if weapon.damage_type == 'P':
+                            target.jumped_in_vehicle.physical_damage += final_damage
+                            biofeedback = final_damage // 2
+                            if biofeedback > 0:
+                                bio_resist = target.attributes.get('WIL', 3) + target.attributes.get('BOD', 3)
+                                bio_hits = RulesEngine.roll_dice(bio_resist)
+                                net_bio = max(0, biofeedback - bio_hits)
+                                target.stun_damage += net_bio
+                                result_text += f" Vehicle takes the damage! {target.name} rolls {bio_resist} dice to resist Stun Biofeedback, taking {net_bio} Stun damage."
+
+                            if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
+                                target.jumped_in_vehicle.is_destroyed = True
+                                target.stun_damage += 6
+                                target.jumped_in_vehicle = None # Dumped
+                                result_text += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
+                        else:
+                            target.stun_damage += final_damage
                     else:
-                        target.stun_damage += final_damage
+                        if weapon.damage_type == 'P':
+                            target.physical_damage += final_damage
+                        else:
+                            target.stun_damage += final_damage
 
                     if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
                         target.is_alive = False

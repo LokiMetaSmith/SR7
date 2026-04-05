@@ -18,6 +18,8 @@ from combat_simulator import (
 
 class DummyAgent:
     def ask_action(self, combatant, state):
+        if combatant.jumped_in_vehicle and combatant.jumped_in_vehicle.weapons:
+            return f"attack with {combatant.jumped_in_vehicle.weapons[0].name}"
         if combatant.spells and combatant.attributes.get('MAG', 0) > 0:
             return f"cast {combatant.spells[0].name}"
         elif combatant.matrix.attack > 3:
@@ -141,26 +143,33 @@ def run_simulation(c1_base: Combatant, c2_base: Combatant, env) -> dict:
 
             else:
                 chosen_weapon_name = ""
-                for w in active.weapons:
+                available_weapons = active.jumped_in_vehicle.weapons if active.jumped_in_vehicle else active.weapons
+                for w in available_weapons:
                     if w.name.lower() in action_lower:
                         chosen_weapon_name = w.name
                         break
 
                 if chosen_weapon_name:
-                    weapon = next((w for w in active.weapons if w.name == chosen_weapon_name), active.weapons[0])
+                    weapon = next((w for w in available_weapons if w.name == chosen_weapon_name), available_weapons[0])
                 else:
-                    weapon = active.weapons[0] if active.weapons else Weapon("Unarmed Strike", 4, "S", 0)
+                    weapon = available_weapons[0] if available_weapons else Weapon("Unarmed Strike", 4, "S", 0)
 
-                skill_val = 5
-                if weapon.damage_type == 'P' and "Unarmed" not in weapon.name and "Sword" not in weapon.name and "Knife" not in weapon.name and "Claw" not in weapon.name and "Bite" not in weapon.name:
-                    skill_val = active.skills.get('Firearms', active.skills.get('Heavy Weapons', 5))
+                if active.jumped_in_vehicle:
+                    attack_pool = active.attributes.get('AGI', 3) + active.skills.get('Gunnery', 5) + active.control_rig
                 else:
-                    skill_val = active.skills.get('Close Combat', active.skills.get('Unarmed Combat', 5))
+                    skill_val = 5
+                    if weapon.damage_type == 'P' and "Unarmed" not in weapon.name and "Sword" not in weapon.name and "Knife" not in weapon.name and "Claw" not in weapon.name and "Bite" not in weapon.name:
+                        skill_val = active.skills.get('Firearms', active.skills.get('Heavy Weapons', 5))
+                    else:
+                        skill_val = active.skills.get('Close Combat', active.skills.get('Unarmed Combat', 5))
+                    attack_pool = active.attributes.get('AGI', 3) + skill_val
 
-                attack_pool = active.attributes.get('AGI', 3) + skill_val
                 attack_hits = RulesEngine.roll_dice(attack_pool)
 
-                def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
+                if target.jumped_in_vehicle:
+                     def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3) + target.jumped_in_vehicle.handling
+                else:
+                     def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
                 def_hits = RulesEngine.roll_dice(def_pool)
 
                 net_hits = attack_hits - def_hits
@@ -169,15 +178,35 @@ def run_simulation(c1_base: Combatant, c2_base: Combatant, env) -> dict:
                     modified_damage = weapon.damage + net_hits
                     modified_ap = weapon.ap
 
-                    soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor + modified_ap)
+                    if target.jumped_in_vehicle:
+                         soak_pool = max(0, target.jumped_in_vehicle.body + target.jumped_in_vehicle.armor + modified_ap)
+                    else:
+                         soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor + modified_ap)
+
                     soak_hits = RulesEngine.roll_dice(soak_pool)
 
                     final_damage = max(0, modified_damage - soak_hits)
 
-                    if weapon.damage_type == 'P':
-                        target.physical_damage += final_damage
+                    if target.jumped_in_vehicle:
+                        if weapon.damage_type == 'P':
+                            target.jumped_in_vehicle.physical_damage += final_damage
+                            biofeedback = final_damage // 2
+                            if biofeedback > 0:
+                                bio_resist = target.attributes.get('WIL', 3) + target.attributes.get('BOD', 3)
+                                bio_hits = RulesEngine.roll_dice(bio_resist)
+                                net_bio = max(0, biofeedback - bio_hits)
+                                target.stun_damage += net_bio
+                            if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
+                                target.jumped_in_vehicle.is_destroyed = True
+                                target.stun_damage += 6
+                                target.jumped_in_vehicle = None
+                        else:
+                            target.stun_damage += final_damage
                     else:
-                        target.stun_damage += final_damage
+                        if weapon.damage_type == 'P':
+                            target.physical_damage += final_damage
+                        else:
+                            target.stun_damage += final_damage
 
                     if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
                         target.is_alive = False
