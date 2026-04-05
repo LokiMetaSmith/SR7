@@ -58,3 +58,14 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Draft 'Stopgap' GM Advice:** Add a note to the `Hollow_Resonance_Worldbuilding.md` advising GMs to run the campaign using standard Shadowrun 5E rules until the 7E homebrew is actually finished, using the homebrew concepts strictly for narrative flavor.
 *   [x] **Sync GM Notes with Core Rules:** Extracted missing weapons (`Shiawase Arms Hearth Protector`, `Combat Knife`, `Throwing Knives`, `Monofilament Knife`, `Monofilament Whip`) from `GM Notes/GM_Campaign_Guide.md` and added them to the main weapon tables in `Fan made Shadowrun 7th Edition rules.md` and `Fan made Shadowrun 7th Edition rules.tex`. Corrected weapon stats inside the GM Notes to match the balanced rules format.
 - [x] **Implement Squad Combat:** Updated the autonomous combat simulator to support multi-character squad combat.
+
+---
+
+## Priority 5: Advanced Combat Simulator Mechanics
+
+**Goal:** Expand the Python combat simulator to fully encompass the breadth of the Shadowrun 7E House Rules.
+
+*   [ ] **Rigging & Drone Combat:** Implement drone swarms, jumping-in mechanics (with Control Rigs), Matrix Initiative for Riggers, and chase combat rules.
+*   [ ] **Environmental Modifiers & Background Count:** Make the simulator read `scenario.json` and apply lighting penalties, AR noise interference, or Matrix Ley Lines (forcing the use of Wild Dice).
+*   [ ] **Advanced Armor & AP Mechanics:** Expand defense rolls to handle specialized armor like Null-Suits (reducing Matrix targeting) or affliction mechanics like N.I.C.A. (Scrap-Sickness) for prolonged exposure to grey goo.
+*   [ ] **Edge / Hopepunk Mechanics:** Allow the simulator AI to actively spend the `Edge` attribute during critical failures to re-roll misses or push the limit on wild dice.
