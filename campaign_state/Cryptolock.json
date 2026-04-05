@@ -1,7 +1,7 @@
 {
     "name": "Cryptolock",
-    "physical_damage": 8,
-    "stun_damage": 14,
+    "physical_damage": 18,
+    "stun_damage": 0,
     "edge": 1,
     "is_alive": false
 }
