@@ -3880,3 +3880,24 @@ Automated scripts (`balance_generator.py`, `xml_generator.py`) rely on specific 
     *   Values > 1,000¥ are rounded to the nearest 100
     *   Values > 100¥ are rounded to the nearest 50
     *   Values <= 100¥ are rounded to the nearest 10
+
+### XV. ADVANCED TACTICAL COMBAT
+The 6th World is a brutal, unforgiving place. Combat in confined spaces or challenging environments relies on a mix of classic, deadly physics and modern AR interference.
+
+#### 1. The "Chunky Salsa" Effect (Explosives in Confined Spaces)
+Explosions in enclosed environments are significantly deadlier due to shockwave reflection off hard surfaces.
+*   **The Rule:** When a grenade or explosive device detonates in an enclosed area (such as a small room, a corridor, or behind **Heavy Cover**), the blast wave rebounds. To simulate this efficiently without calculating exact geometric angles, the explosive's Base Damage is **multiplied by 2** against all targets in that specific confined zone before applying blast drop-off modifiers.
+*   **Collateral:** The structure itself takes this doubled damage, potentially destroying the cover entirely and exposing the targets for the next Combat Turn.
+
+#### 2. Cover Modifiers
+Cover physically stops bullets and disrupts AR targeting algorithms.
+*   **Light Cover:** (e.g., foliage, chain-link fences, thin drywall). Grants +1 to the Defense Pool.
+*   **Medium Cover:** (e.g., ruined cars, thick wooden doors, chat piles). Grants +2 to the Defense Pool.
+*   **Heavy Cover:** (e.g., reinforced concrete, plasteel barriers, banking counters). Grants +4 to the Defense Pool. If an explosive detonates on the *same side* as the combatant, the Chunky Salsa effect applies.
+
+#### 3. Environmental & Initiative Modifiers
+The battlefield itself is a weapon.
+*   **Lighting & Visibility:** Dim light, smoke, or heavy rain imposes a flat -1 to -3 penalty to all Attack and Perception dice pools.
+*   **Background Count / Noise:** Dense AR noise or magical voids impose a flat penalty to Matrix/Magic actions (e.g., -1 to -4) and force the use of **Wild Dice** for those tests.
+*   **Superior Positioning:** Taking the "High Ground" or flanking an opponent grants a flat **+1 Initiative Die** for the duration of the encounter, reflecting the tactical advantage.
+*   **Surprise:** If a combatant successfully ambushes a target, they receive a **+2 bonus to their Base Initiative Score** for the first Combat Turn.

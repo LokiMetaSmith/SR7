@@ -48,6 +48,12 @@ class Vehicle:
     weapons: List[Weapon] = field(default_factory=list)
 
 @dataclass
+class Zone:
+    name: str
+    cover: str = "None"
+    description: str = ""
+
+@dataclass
 class Combatant:
     name: str
     source_file: str
@@ -67,6 +73,7 @@ class Combatant:
     special_rules: List[str] = field(default_factory=list)
     is_alive: bool = True
     team: int = 0
+    zone: Optional[Zone] = None
 
     control_rig: int = 0
     jumped_in_vehicle: Optional[Vehicle] = None
@@ -87,9 +94,10 @@ class Combatant:
         return self.initiative_score
 
 class GameEnvironment:
-    def __init__(self, description: str, modifiers: Dict[str, int]):
+    def __init__(self, description: str, modifiers: Dict[str, int], zones: List[Zone] = None):
         self.description = description
         self.modifiers = modifiers
+        self.zones = zones if zones else []
 
 class RulesEngine:
     @staticmethod
@@ -126,6 +134,8 @@ class LLM_Agent:
             prompt += f"Vehicle Stats: BOD {combatant.jumped_in_vehicle.body}, ARM {combatant.jumped_in_vehicle.armor}, HP ({combatant.jumped_in_vehicle.physical_track-combatant.jumped_in_vehicle.physical_damage}/{combatant.jumped_in_vehicle.physical_track})\n"
             prompt += f"Vehicle Weapons: {[w.name for w in combatant.jumped_in_vehicle.weapons]}\n"
 
+        if combatant.zone:
+            prompt += f"Your Location: {combatant.zone.name} (Cover: {combatant.zone.cover})\n"
         prompt += f"Your Stats: HP ({combatant.physical_track-combatant.physical_damage}/{combatant.physical_track}), Weapons: {[w.name for w in combatant.weapons]}, Spells: {[s.name for s in combatant.spells]}\n"
         prompt += f"Matrix Attributes: Attack {combatant.matrix.attack}, Sleaze {combatant.matrix.sleaze}, DP {combatant.matrix.data_processing}, Firewall {combatant.matrix.firewall}\n"
         prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, or Data Spike.\n"
@@ -367,7 +377,11 @@ def parse_scenario(file_path: str) -> GameEnvironment:
     if file_path.endswith('.json'):
         with open(file_path, 'r') as f:
             data = json.load(f)
-            return GameEnvironment(description=data.get('description', 'A dark alleyway.'), modifiers=data.get('modifiers', {}))
+            zones = []
+            if 'map' in data and 'zones' in data['map']:
+                for z in data['map']['zones']:
+                    zones.append(Zone(name=z.get('name', 'Unknown Zone'), cover=z.get('cover', 'None'), description=z.get('description', '')))
+            return GameEnvironment(description=data.get('description', 'A dark alleyway.'), modifiers=data.get('modifiers', {}), zones=zones)
     elif file_path.endswith('.md'):
         with open(file_path, 'r') as f:
             content = f.read()
@@ -412,6 +426,7 @@ def main():
     parser.add_argument("--llm-url", help="URL of the OpenAI-compatible endpoint", default="http://localhost:8000/v1")
     parser.add_argument("--llm-model", help="Name of the model to use", default="local-model")
     parser.add_argument("--dry-run", action="store_true", help="Run without connecting to an actual LLM")
+    parser.add_argument("--interactive", action="store_true", help="Pause to allow user to input actions manually")
 
     args = parser.parse_args()
 
@@ -460,9 +475,21 @@ def main():
     team2_names = [f"{c.name} (in {c.jumped_in_vehicle.name})" if c.jumped_in_vehicle else c.name for c in state.combatants if c.team == 2]
     state.log(f"Combatants: Team 1 ({', '.join(team1_names)}) vs Team 2 ({', '.join(team2_names)})")
 
+    # Assign zones
+    if env.zones:
+        for c in state.combatants:
+            if c.team == 1:
+                c.zone = env.zones[0]
+            else:
+                c.zone = env.zones[-1]
+
     # Roll Initiative
     for c in state.combatants:
         c.roll_initiative()
+        # Apply high ground / surprise initiative modifiers
+        if c.zone and ("High Ground" in c.zone.name or "High Ground" in c.zone.description):
+            extra = RulesEngine.roll_dice(1) # 1 extra die
+            c.initiative_score += extra
     init_log = " | ".join(f"{c.name} ({c.initiative_score})" for c in state.combatants)
     state.log(f"Initiative: {init_log}")
 
@@ -484,8 +511,16 @@ def main():
 
             target = random.choice(valid_targets)
 
-            # Use LLM to decide tactical action
-            action_decision = llm.ask_action(active, state)
+            if args.interactive:
+                user_input = input(f"Enter action for {active.name} (or press Enter to let AI decide): ")
+                if user_input.strip():
+                    action_decision = user_input
+                else:
+                    action_decision = llm.ask_action(active, state)
+            else:
+                # Use LLM to decide tactical action
+                action_decision = llm.ask_action(active, state)
+
             state.log(f"[{active.name} Tactical Decision]: {action_decision.strip()}")
 
             action_lower = action_decision.lower()
@@ -609,28 +644,49 @@ def main():
                 else:
                     weapon = available_weapons[0] if available_weapons else Weapon("Unarmed Strike", 4, "S", 0)
 
+                # Scenario Modifiers
+                lighting_mod = state.environment.modifiers.get("lighting", 0)
+
                 # Attack Roll: Agility + Skill
                 if active.jumped_in_vehicle:
                     # Gunnery + Agility + Control Rig
-                    attack_pool = active.attributes.get('AGI', 3) + active.skills.get('Gunnery', 5) + active.control_rig
+                    attack_pool = active.attributes.get('AGI', 3) + active.skills.get('Gunnery', 5) + active.control_rig + lighting_mod
                 else:
-                    attack_pool = active.attributes.get('AGI', 3) + 5
+                    attack_pool = active.attributes.get('AGI', 3) + 5 + lighting_mod
 
-                attack_hits = RulesEngine.roll_dice(attack_pool)
+                attack_hits = RulesEngine.roll_dice(max(1, attack_pool))
 
-                # Defense Roll: Reaction + Intuition
+                # Defense Roll: Reaction + Intuition + Cover
                 if target.jumped_in_vehicle:
                      def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3) + target.jumped_in_vehicle.handling
                 else:
                      def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
+
+                # Apply Cover
+                if target.zone:
+                    if target.zone.cover.lower() == "light":
+                        def_pool += 1
+                    elif target.zone.cover.lower() == "medium":
+                        def_pool += 2
+                    elif target.zone.cover.lower() == "heavy":
+                        def_pool += 4
 
                 def_hits = RulesEngine.roll_dice(def_pool)
 
                 net_hits = attack_hits - def_hits
                 action_text = f"attacks {target.name} with {weapon.name} ({attack_hits} hits vs {def_hits} defense hits)"
 
-                if net_hits > 0:
-                    modified_damage = weapon.damage + net_hits
+                is_explosive = "grenade" in weapon.name.lower() or "missile" in weapon.name.lower() or "rocket" in weapon.name.lower()
+
+                if net_hits > 0 or is_explosive:
+                    base_dmg = weapon.damage
+                    if is_explosive and target.zone and (target.zone.cover.lower() == "heavy" or "enclosed" in target.zone.description.lower() or "enclosed" in target.zone.name.lower()):
+                        base_dmg *= 2
+                        action_text += " [CHUNKY SALSA EFFECT!]"
+                        # Grenades can still deviate on a miss, but for sim purposes we assume it lands in the zone if attack fired
+                        net_hits = max(0, net_hits) # Just use 0 net hits if it missed but landed in the room
+
+                    modified_damage = base_dmg + net_hits
                     modified_ap = weapon.ap
 
                     # Soak Roll: Body + Armor + AP
