@@ -101,12 +101,17 @@ class GameEnvironment:
 
 class RulesEngine:
     @staticmethod
-    def roll_dice(pool: int) -> int:
+    def roll_dice(pool: int) -> tuple[int, bool]:
         hits = 0
+        ones_twos = 0
         for _ in range(max(1, pool)):
-            if random.randint(1, 6) >= 5:
+            roll = random.randint(1, 6)
+            if roll >= 5:
                 hits += 1
-        return hits
+            elif roll in [1, 2]:
+                ones_twos += 1
+        glitched = ones_twos >= (max(1, pool) / 2.0)
+        return hits, glitched
 
 class SimulationState:
     def __init__(self, environment: GameEnvironment):
@@ -371,6 +376,12 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
     if not c.weapons:
         c.weapons.append(Weapon(name="Unarmed Strike", damage=int(attributes.get('STR', 3) / 2), damage_type="S", ap=0))
 
+    # Special Rules
+    if re.search(r'Null-Suit', content, re.IGNORECASE):
+        c.special_rules.append("Null-Suit")
+    if re.search(r'N\.I\.C\.A\.|Scrap-Sickness', content, re.IGNORECASE):
+        c.special_rules.append("N.I.C.A.")
+
     return c
 
 def parse_scenario(file_path: str) -> GameEnvironment:
@@ -488,7 +499,7 @@ def main():
         c.roll_initiative()
         # Apply high ground / surprise initiative modifiers
         if c.zone and ("High Ground" in c.zone.name or "High Ground" in c.zone.description):
-            extra = RulesEngine.roll_dice(1) # 1 extra die
+            extra, extra_glitched = RulesEngine.roll_dice(1) # 1 extra die
             c.initiative_score += extra
     init_log = " | ".join(f"{c.name} ({c.initiative_score})" for c in state.combatants)
     state.log(f"Initiative: {init_log}")
@@ -526,6 +537,12 @@ def main():
             action_lower = action_decision.lower()
             action_text = ""
             result_text = ""
+            edge_spent = False
+            attack_hits_glitched = False
+            def_hits_glitched = False
+            soak_hits_glitched = False
+            drain_hits_glitched = False
+            bio_hits_glitched = False
 
             is_spell = "cast" in action_lower or any(s.name.lower() in action_lower for s in active.spells)
             is_data_spike = "data spike" in action_lower
@@ -537,7 +554,14 @@ def main():
                 spell_skill = active.skills.get('Spellcasting', 5)
 
                 attack_pool = mag + spell_skill
-                attack_hits = RulesEngine.roll_dice(attack_pool)
+                attack_hits, attack_hits_glitched = RulesEngine.roll_dice(attack_pool)
+                edge_spent = False
+                if attack_hits == 0 and active.edge > 0:
+                    active.edge -= 1
+                    reroll_hits, reroll_glitched = RulesEngine.roll_dice(attack_pool)
+                    attack_hits += reroll_hits
+                    attack_hits_glitched = reroll_glitched
+                    edge_spent = True
 
                 # Defense
                 if spell.type == "M":
@@ -545,7 +569,7 @@ def main():
                 else:
                     def_pool = target.attributes.get('REA', 3) + target.attributes.get('INT', 3)
 
-                def_hits = RulesEngine.roll_dice(def_pool)
+                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
                 net_hits = attack_hits - def_hits
 
                 action_text = f"casts {spell.name} at {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
@@ -559,7 +583,7 @@ def main():
                     else:
                         soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor - mag)
 
-                    soak_hits = RulesEngine.roll_dice(soak_pool)
+                    soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
                     final_damage = max(0, modified_damage - soak_hits)
 
                     result_text = f"Spell hits! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} P damage."
@@ -570,7 +594,7 @@ def main():
                 # Drain
                 drain_value = max(2, mag - 2) # Assume F-2
                 drain_resist_pool = active.attributes.get('WIL', 3) + active.attributes.get('LOG', 3)
-                drain_hits = RulesEngine.roll_dice(drain_resist_pool)
+                drain_hits, drain_hits_glitched = RulesEngine.roll_dice(drain_resist_pool)
                 drain_taken = max(0, drain_value - drain_hits)
                 result_text += f" {active.name} rolls {drain_resist_pool} to resist drain, taking {drain_taken} Stun damage."
                 active.stun_damage += drain_taken
@@ -583,13 +607,26 @@ def main():
                     result_text += f" {active.name} is incapacitated from Drain!"
 
             elif is_data_spike:
+                if "Null-Suit" in target.special_rules:
+                    action_text = f"attempts a Matrix action on {target.name}"
+                    result_text = f"Action fails: {target.name} is wearing a Null-Suit and is immune to Matrix targeting."
+                    narration = llm.narrate_action(active, action_text, result_text)
+                    state.log(narration)
+                    continue
                 log = active.attributes.get('LOG', 3)
                 cyber_skill = active.skills.get('Cybercombat', 5)
                 attack_pool = log + cyber_skill
-                attack_hits = RulesEngine.roll_dice(attack_pool)
+                attack_hits, attack_hits_glitched = RulesEngine.roll_dice(attack_pool)
+                edge_spent = False
+                if attack_hits == 0 and active.edge > 0:
+                    active.edge -= 1
+                    reroll_hits, reroll_glitched = RulesEngine.roll_dice(attack_pool)
+                    attack_hits += reroll_hits
+                    attack_hits_glitched = reroll_glitched
+                    edge_spent = True
 
                 def_pool = target.attributes.get('INT', 3) + target.matrix.firewall
-                def_hits = RulesEngine.roll_dice(def_pool)
+                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
                 net_hits = attack_hits - def_hits
 
                 action_text = f"launches a Data Spike at {target.name}'s persona ({attack_hits} hits vs {def_hits} defense hits)"
@@ -599,7 +636,7 @@ def main():
                     modified_damage = active.matrix.attack + net_hits + (tethers * 2)
 
                     soak_pool = target.matrix.data_processing + target.matrix.firewall
-                    soak_hits = RulesEngine.roll_dice(soak_pool)
+                    soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
                     final_damage = max(0, modified_damage - soak_hits)
 
                     result_text = f"Data Spike connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Stun (Biofeedback) damage."
@@ -612,13 +649,26 @@ def main():
                     result_text = f"Data Spike is deflected by {target.name}'s firewall."
 
             elif is_tether:
+                if "Null-Suit" in target.special_rules:
+                    action_text = f"attempts a Matrix action on {target.name}"
+                    result_text = f"Action fails: {target.name} is wearing a Null-Suit and is immune to Matrix targeting."
+                    narration = llm.narrate_action(active, action_text, result_text)
+                    state.log(narration)
+                    continue
                 log = active.attributes.get('LOG', 3)
                 hack_skill = active.skills.get('Hacking', 5)
                 attack_pool = log + hack_skill
-                attack_hits = RulesEngine.roll_dice(attack_pool)
+                attack_hits, attack_hits_glitched = RulesEngine.roll_dice(attack_pool)
+                edge_spent = False
+                if attack_hits == 0 and active.edge > 0:
+                    active.edge -= 1
+                    reroll_hits, reroll_glitched = RulesEngine.roll_dice(attack_pool)
+                    attack_hits += reroll_hits
+                    attack_hits_glitched = reroll_glitched
+                    edge_spent = True
 
                 def_pool = target.attributes.get('WIL', 3) + target.matrix.firewall
-                def_hits = RulesEngine.roll_dice(def_pool)
+                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
                 net_hits = attack_hits - def_hits
 
                 action_text = f"attempts to establish a Tether on {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
@@ -654,7 +704,14 @@ def main():
                 else:
                     attack_pool = active.attributes.get('AGI', 3) + 5 + lighting_mod
 
-                attack_hits = RulesEngine.roll_dice(max(1, attack_pool))
+                attack_hits, attack_hits_glitched = RulesEngine.roll_dice(max(1, attack_pool))
+                edge_spent = False
+                if attack_hits == 0 and active.edge > 0:
+                    active.edge -= 1
+                    reroll_hits, reroll_glitched = RulesEngine.roll_dice(max(1, attack_pool))
+                    attack_hits += reroll_hits
+                    attack_hits_glitched = reroll_glitched
+                    edge_spent = True
 
                 # Defense Roll: Reaction + Intuition + Cover
                 if target.jumped_in_vehicle:
@@ -671,7 +728,7 @@ def main():
                     elif target.zone.cover.lower() == "heavy":
                         def_pool += 4
 
-                def_hits = RulesEngine.roll_dice(def_pool)
+                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
 
                 net_hits = attack_hits - def_hits
                 action_text = f"attacks {target.name} with {weapon.name} ({attack_hits} hits vs {def_hits} defense hits)"
@@ -695,7 +752,7 @@ def main():
                     else:
                          soak_pool = max(0, target.attributes.get('BOD', 3) + target.armor + modified_ap)
 
-                    soak_hits = RulesEngine.roll_dice(soak_pool)
+                    soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
 
                     final_damage = max(0, modified_damage - soak_hits)
                     result_text = f"Attack succeeds! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} {weapon.damage_type} damage."
@@ -707,7 +764,7 @@ def main():
                             biofeedback = final_damage // 2
                             if biofeedback > 0:
                                 bio_resist = target.attributes.get('WIL', 3) + target.attributes.get('BOD', 3)
-                                bio_hits = RulesEngine.roll_dice(bio_resist)
+                                bio_hits, bio_hits_glitched = RulesEngine.roll_dice(bio_resist)
                                 net_bio = max(0, biofeedback - bio_hits)
                                 target.stun_damage += net_bio
                                 result_text += f" Vehicle takes the damage! {target.name} rolls {bio_resist} dice to resist Stun Biofeedback, taking {net_bio} Stun damage."
@@ -732,6 +789,32 @@ def main():
                     result_text = f"Attack misses! {target.name} dodges the attack."
 
             # Narration
+            if locals().get('edge_spent'):
+                action_text += " [Spent Edge to re-roll misses!]"
+
+            if "N.I.C.A." in active.special_rules:
+                if (locals().get('attack_hits_glitched') or locals().get('drain_hits_glitched')):
+                    effect = random.choice(["Takes 1 P damage (short-circuit)", "Takes 1 S damage (painful feedback)", "Drops weapon (erratic servos)"])
+                    action_text += f" [N.I.C.A. Glitch! Rogue 'ware sparks! {effect}]"
+                    if "1 P damage" in effect: active.physical_damage += 1
+                    elif "1 S damage" in effect: active.stun_damage += 1
+                    elif "Drops weapon" in effect and active.weapons: active.weapons.pop(0)
+
+            if "N.I.C.A." in target.special_rules:
+                if (locals().get('def_hits_glitched') or locals().get('soak_hits_glitched') or locals().get('bio_hits_glitched')):
+                    effect = random.choice(["Takes 1 P damage (short-circuit)", "Takes 1 S damage (painful feedback)", "Drops weapon (erratic servos)"])
+                    result_text += f" [N.I.C.A. Glitch! Target's rogue 'ware sparks! {effect}]"
+                    if "1 P damage" in effect: target.physical_damage += 1
+                    elif "1 S damage" in effect: target.stun_damage += 1
+                    elif "Drops weapon" in effect and target.weapons: target.weapons.pop(0)
+
+            if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
+                target.is_alive = False
+                result_text += f" {target.name} is incapacitated!"
+            if active.physical_damage >= active.physical_track or active.stun_damage >= active.stun_track:
+                active.is_alive = False
+                action_text += f" {active.name} is incapacitated!"
+
             narration = llm.narrate_action(active, action_text, result_text)
             state.log(narration)
 
