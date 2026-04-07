@@ -63,6 +63,9 @@ class Combatant:
     spells: List[Spell] = field(default_factory=list)
     matrix: MatrixAttributes = field(default_factory=MatrixAttributes)
     tethers: Dict[str, int] = field(default_factory=dict) # target_name -> tether_count
+    influence: Dict[str, int] = field(default_factory=dict) # target_name -> influence_points
+    resolve: Dict[str, int] = field(default_factory=dict) # target_name -> resolve_points
+    has_yielded: bool = False
     armor: int = 0
     physical_track: int = 10
     stun_track: int = 10
@@ -142,8 +145,16 @@ class LLM_Agent:
         if combatant.zone:
             prompt += f"Your Location: {combatant.zone.name} (Cover: {combatant.zone.cover})\n"
         prompt += f"Your Stats: HP ({combatant.physical_track-combatant.physical_damage}/{combatant.physical_track}), Weapons: {[w.name for w in combatant.weapons]}, Spells: {[s.name for s in combatant.spells]}\n"
+
+        social_skills = {k: v for k, v in combatant.skills.items() if k in ["Con", "Negotiation", "Intimidation", "Leadership", "Etiquette"]}
+        if social_skills:
+            prompt += f"Social Skills: {social_skills}\n"
+
+        if combatant.influence or combatant.resolve:
+            prompt += f"Social State: Influence over others: {combatant.influence}, Resolve against others: {combatant.resolve}\n"
+
         prompt += f"Matrix Attributes: Attack {combatant.matrix.attack}, Sleaze {combatant.matrix.sleaze}, DP {combatant.matrix.data_processing}, Firewall {combatant.matrix.firewall}\n"
-        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, or Data Spike.\n"
+        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Data Spike, or Social Influence (Negotiate/Intimidate/Con).\n"
         # etc.
         try:
             response = self.client.chat.completions.create(
@@ -508,15 +519,15 @@ def main():
     state.combatants.sort(key=lambda c: c.initiative_score, reverse=True)
 
     # Main combat loop
-    while any(c.is_alive for c in state.combatants if c.team == 1) and any(c.is_alive for c in state.combatants if c.team == 2) and state.turn < 20:
+    while any(c.is_alive and not getattr(c, 'has_yielded', False) for c in state.combatants if c.team == 1) and any(c.is_alive and not getattr(c, 'has_yielded', False) for c in state.combatants if c.team == 2) and state.turn < 20:
         state.log(f"\n--- Turn {state.turn} ---")
 
         for active in state.combatants:
-            if not active.is_alive:
+            if not active.is_alive or getattr(active, 'has_yielded', False):
                 continue
 
             # Need to check if there are still valid targets before acting
-            valid_targets = [c for c in state.combatants if c.team != active.team and c.is_alive]
+            valid_targets = [c for c in state.combatants if c.team != active.team and c.is_alive and not getattr(c, 'has_yielded', False)]
             if not valid_targets:
                 break
 
@@ -547,8 +558,58 @@ def main():
             is_spell = "cast" in action_lower or any(s.name.lower() in action_lower for s in active.spells)
             is_data_spike = "data spike" in action_lower
             is_tether = "tether" in action_lower
+            is_social = any(kw in action_lower for kw in ["social", "negotiate", "negotiation", "intimidate", "intimidation", "con ", "influence"])
 
-            if is_spell and active.spells:
+            if is_social:
+                # Find the highest social skill
+                social_skills = {k: v for k, v in active.skills.items() if k in ["Con", "Negotiation", "Intimidation", "Leadership", "Etiquette"]}
+                skill_name = max(social_skills, key=social_skills.get) if social_skills else "Con"
+                skill_rating = active.skills.get(skill_name, 0)
+                cha = active.attributes.get('CHA', 3)
+
+                attack_pool = cha + skill_rating
+                attack_hits, attack_hits_glitched = RulesEngine.roll_dice(attack_pool)
+
+                if attack_hits == 0 and active.edge > 0:
+                    active.edge -= 1
+                    reroll_hits, reroll_glitched = RulesEngine.roll_dice(attack_pool)
+                    attack_hits += reroll_hits
+                    attack_hits_glitched = reroll_glitched
+                    edge_spent = True
+
+                target_wil = target.attributes.get('WIL', 3)
+                # Resisting attribute logic
+                if skill_name == "Intimidation":
+                    target_resist = target.attributes.get('STR', 3)
+                elif skill_name in ["Negotiation", "Leadership"]:
+                    target_resist = target.attributes.get('LOG', 3)
+                else:
+                    target_resist = target.attributes.get('CHA', 3)
+
+                def_pool = target_wil + target_resist
+                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+
+                action_text = f"attempts to {skill_name} {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+                if attack_hits >= def_hits:
+                    net_hits = attack_hits - def_hits
+                    influence_gain = 1 + net_hits
+                    current_influence = active.influence.get(target.name, 0)
+                    active.influence[target.name] = current_influence + influence_gain
+                    result_text = f"Social attack succeeds! {active.name} gains {influence_gain} Influence over {target.name}. (Total: {active.influence[target.name]}/{target_wil} needed to yield)."
+
+                    if active.influence[target.name] >= target_wil:
+                        target.has_yielded = True
+                        result_text += f" {target.name}'s resolve breaks! They agree to the terms, yield, or surrender!"
+                else:
+                    net_hits = def_hits - attack_hits
+                    resolve_gain = 1 + net_hits
+                    current_resolve = target.resolve.get(active.name, 0)
+                    target.resolve[active.name] = current_resolve + resolve_gain
+                    active_wil = active.attributes.get('WIL', 3)
+                    result_text = f"Social attack fails! {target.name} gains {resolve_gain} Resolve against {active.name}. (Total: {target.resolve[active.name]}/{active_wil} needed to become intractable)."
+
+            elif is_spell and active.spells:
                 spell = next((s for s in active.spells if s.name.lower() in action_lower), active.spells[0])
                 mag = active.attributes.get('MAG', 1)
                 spell_skill = active.skills.get('Spellcasting', 5)
