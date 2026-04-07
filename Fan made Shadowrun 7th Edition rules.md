@@ -3702,8 +3702,39 @@ Entities relying on nanites for physical form have a Destabilization Track.
 ### XIII. SOCIAL RULES: Street Cred & Comms
 You can't just text your Fixer on an open commlink anymore. The silence is speaking volumes.
 
+#### 1. Secure Comms & Street Cred
 *   **Secure Comms:** Standard commlinks are assumed to be monitored by the gaiasphere. To arrange a secure meet, runners must use pre-arranged physical dead-drops or encrypted pulses (like Kyber's three short, pause, two long).
 *   **Street Cred & AIs:** Your Street Cred (Karma earned divided by 10) directly impacts how AIs and Spirits view you. When rolling Etiquette or Negotiation with an Awakened or Matrix entity, you may add your Street Cred to your Dice Pool if you are known to treat non-humans well. If you have Notoriety for betraying AIs, that number is subtracted from your pool.
+
+#### 2. Influence Resolution (Advanced Social Conflict)
+Not every conflict is a firefight. Sometimes you need to talk your way out of a Knight Errant frisk or negotiate a better deal with an angry ganger. When a social encounter involves opposed objectives, it becomes an advanced social conflict.
+
+**The Basics:**
+*   **PCs use Influence**, measuring their sway over the target.
+*   **NPCs use Resolve**, measuring their resistance to the PC's influence.
+*   The conflict ends when either **Influence equals the NPC's Willpower** (the NPC agrees, yields, or believes the lie) or **Resolve equals the PC's Willpower** (the NPC becomes intractable and no further social attempts will work).
+
+**Charisma-Related Tests:**
+Players make an opposed Charisma-related test (e.g., Con, Negotiation, Intimidation) vs the NPC's resisting attribute.
+*   *Resisting Social/Manipulation:* Willpower + Charisma
+*   *Resisting Logic/Evidence:* Willpower + Logic
+*   *Resisting Intimidation/Force:* Willpower + Strength
+
+If the PC wins, they gain **1 Influence + 1 per net hit**.
+If the NPC wins, they gain **1 Resolve + 1 per net hit**.
+*Note: A tie is a success with no net hits, granting 1 point to the winner.*
+
+**Social Modifiers:**
+*   **Attitude:** Ranges from +3 (Friendly/Aligned Objectives) to -3 (Hostile/Opposed Objectives). This modifies the PC's dice pool only.
+*   **Leverage:** Ranges from +1 (Slight Advantage) to +3 (Serious Advantage, like hard evidence or a gun to their head). This modifies either party's dice pool, depending on who holds the leverage.
+*   **Hopepunk / Notoriety:** Against digital or awakened entities, a character's Street Cred (Hopepunk) or Notoriety may act as permanent Leverage (+/-).
+
+**Using Edge in Social Conflict:**
+Just like physical combat, Edge is vital in social conflicts.
+*   **Push the Limit:** Spend 1 Edge to add Edge rating to the roll and apply the Rule of 6 (explosive 6s).
+*   **Second Chance:** Spend 1 Edge to reroll all non-hits (especially useful for saving a critical argument).
+*   **Seize the Initiative (Get Revenge):** An NPC may spend Edge to immediately take a free Charisma-related test against a character who just tested them, simulating a counteroffer, counterthreat, or red herring.
+*   **Assist (Push Forward):** A character who fails a test may spend 1 Edge to convert any hits they did get into a Teamwork bonus for an ally's immediate subsequent test (the classic "Good Cop/Bad Cop" routine).
 
 ### XIV. BESTIARY & ADVERSARIES
 
