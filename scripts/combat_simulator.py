@@ -46,6 +46,7 @@ class Vehicle:
     physical_damage: int = 0
     is_destroyed: bool = False
     weapons: List[Weapon] = field(default_factory=list)
+    swarm_count: int = 1
 
 @dataclass
 class Zone:
@@ -97,10 +98,11 @@ class Combatant:
         return self.initiative_score
 
 class GameEnvironment:
-    def __init__(self, description: str, modifiers: Dict[str, int], zones: List[Zone] = None):
+    def __init__(self, description: str, modifiers: Dict[str, int], zones: List[Zone] = None, is_chase_combat: bool = False):
         self.description = description
         self.modifiers = modifiers
         self.zones = zones if zones else []
+        self.is_chase_combat = is_chase_combat
 
 class RulesEngine:
     @staticmethod
@@ -139,11 +141,13 @@ class LLM_Agent:
 
         if combatant.jumped_in_vehicle:
             prompt += f"You are Jumped Into a {combatant.jumped_in_vehicle.name}.\n"
-            prompt += f"Vehicle Stats: BOD {combatant.jumped_in_vehicle.body}, ARM {combatant.jumped_in_vehicle.armor}, HP ({combatant.jumped_in_vehicle.physical_track-combatant.jumped_in_vehicle.physical_damage}/{combatant.jumped_in_vehicle.physical_track})\n"
+            prompt += f"Vehicle Stats: BOD {combatant.jumped_in_vehicle.body}, ARM {combatant.jumped_in_vehicle.armor}, HP ({combatant.jumped_in_vehicle.physical_track-combatant.jumped_in_vehicle.physical_damage}/{combatant.jumped_in_vehicle.physical_track}), Swarm Count: {combatant.jumped_in_vehicle.swarm_count}\n"
             prompt += f"Vehicle Weapons: {[w.name for w in combatant.jumped_in_vehicle.weapons]}\n"
 
         if combatant.zone:
             prompt += f"Your Location: {combatant.zone.name} (Cover: {combatant.zone.cover})\n"
+        if state.environment.is_chase_combat:
+            prompt += f"Special Rule: You are currently engaged in a Chase Combat scenario.\n"
         prompt += f"Your Stats: HP ({combatant.physical_track-combatant.physical_damage}/{combatant.physical_track}), Weapons: {[w.name for w in combatant.weapons]}, Spells: {[s.name for s in combatant.spells]}\n"
 
         social_skills = {k: v for k, v in combatant.skills.items() if k in ["Con", "Negotiation", "Intimidation", "Leadership", "Etiquette"]}
@@ -381,6 +385,8 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
         veh = Vehicle(name=vn, armor=v_arm, body=v_bod)
         veh.physical_track = 8 + (v_bod // 2)
         veh.weapons.append(Weapon(name=f"{vn} Mount", damage=8, damage_type="P", ap=-1))
+        if "Swarm" in vn or re.search(r'Swarm', content, re.IGNORECASE):
+            veh.swarm_count = 3 # default swarm size
         c.jumped_in_vehicle = veh
 
     # Add dummy weapon if empty
@@ -403,12 +409,13 @@ def parse_scenario(file_path: str) -> GameEnvironment:
             if 'map' in data and 'zones' in data['map']:
                 for z in data['map']['zones']:
                     zones.append(Zone(name=z.get('name', 'Unknown Zone'), cover=z.get('cover', 'None'), description=z.get('description', '')))
-            return GameEnvironment(description=data.get('description', 'A dark alleyway.'), modifiers=data.get('modifiers', {}), zones=zones)
+            is_chase = data.get('is_chase_combat', False)
+            return GameEnvironment(description=data.get('description', 'A dark alleyway.'), modifiers=data.get('modifiers', {}), zones=zones, is_chase_combat=is_chase)
     elif file_path.endswith('.md'):
         with open(file_path, 'r') as f:
             content = f.read()
-            return GameEnvironment(description=content, modifiers={})
-    return GameEnvironment("An empty arena.", {})
+            return GameEnvironment(description=content, modifiers={}, is_chase_combat=False)
+    return GameEnvironment("An empty arena.", {}, None, False)
 
 def load_combatant(path: str) -> Combatant:
     # Handle passing an NPC name along with the file, like "GM Notes/GM_Campaign_Guide.md:Sargent Igneous"
@@ -709,6 +716,32 @@ def main():
                 else:
                     result_text = f"Data Spike is deflected by {target.name}'s firewall."
 
+            elif "chase" in action_lower or "pilot" in action_lower or "drive" in action_lower:
+                attack_pool = active.attributes.get('REA', 3) + active.skills.get('Piloting', 4)
+                if active.jumped_in_vehicle:
+                    attack_pool += active.jumped_in_vehicle.handling + active.control_rig
+                attack_hits, attack_hits_glitched = RulesEngine.roll_dice(max(1, attack_pool))
+                edge_spent = False
+                if attack_hits == 0 and active.edge > 0:
+                    active.edge -= 1
+                    reroll_hits, reroll_glitched = RulesEngine.roll_dice(max(1, attack_pool))
+                    attack_hits += reroll_hits
+                    attack_hits_glitched = reroll_glitched
+                    edge_spent = True
+
+                def_pool = target.attributes.get('REA', 3) + target.skills.get('Piloting', 4)
+                if target.jumped_in_vehicle:
+                    def_pool += target.jumped_in_vehicle.handling + target.control_rig
+                def_hits, def_hits_glitched = RulesEngine.roll_dice(max(1, def_pool))
+
+                net_hits = attack_hits - def_hits
+                action_text = f"attempts a chase maneuver against {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+                if net_hits > 0:
+                    result_text = f"Chase maneuver successful! {active.name} gains the upper hand and shifts the Range Band."
+                else:
+                    result_text = f"Chase maneuver fails! {target.name} outmaneuvers {active.name}."
+
             elif is_tether:
                 if "Null-Suit" in target.special_rules:
                     action_text = f"attempts a Matrix action on {target.name}"
@@ -762,6 +795,8 @@ def main():
                 if active.jumped_in_vehicle:
                     # Gunnery + Agility + Control Rig
                     attack_pool = active.attributes.get('AGI', 3) + active.skills.get('Gunnery', 5) + active.control_rig + lighting_mod
+                    if active.jumped_in_vehicle.swarm_count > 1:
+                        attack_pool += (active.jumped_in_vehicle.swarm_count - 1)
                 else:
                     attack_pool = active.attributes.get('AGI', 3) + 5 + lighting_mod
 
@@ -831,10 +866,15 @@ def main():
                                 result_text += f" Vehicle takes the damage! {target.name} rolls {bio_resist} dice to resist Stun Biofeedback, taking {net_bio} Stun damage."
 
                             if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
-                                target.jumped_in_vehicle.is_destroyed = True
-                                target.stun_damage += 6
-                                target.jumped_in_vehicle = None # Dumped
-                                result_text += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
+                                target.jumped_in_vehicle.swarm_count -= 1
+                                if target.jumped_in_vehicle.swarm_count <= 0:
+                                    target.jumped_in_vehicle.is_destroyed = True
+                                    target.stun_damage += 6
+                                    target.jumped_in_vehicle = None # Dumped
+                                    result_text += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
+                                else:
+                                    target.jumped_in_vehicle.physical_damage = 0
+                                    result_text += f" A drone in the swarm is destroyed! Swarm size reduced to {target.jumped_in_vehicle.swarm_count}."
                         else:
                             target.stun_damage += final_damage
                     else:

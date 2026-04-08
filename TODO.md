@@ -65,7 +65,11 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 **Goal:** Expand the Python combat simulator to fully encompass the breadth of the Shadowrun 7E House Rules.
 
-*   [x] **Rigging & Drone Combat:** Implement drone swarms, jumping-in mechanics (with Control Rigs), Matrix Initiative for Riggers, and chase combat rules.
+*   [x] **Rigging & Drone Combat:** Implement remaining rigging features.
+    *   [x] Jumping-in mechanics (with Control Rigs)
+    *   [x] Matrix Initiative for Riggers
+    *   [x] Implement drone swarms
+    *   [x] Implement chase combat rules
 *   [x] **Environmental Modifiers & Background Count:** Make the simulator read `scenario.json` and apply lighting penalties, AR noise interference, or Matrix Ley Lines (forcing the use of Wild Dice).
 *   [x] **Advanced Armor & AP Mechanics:** Expand defense rolls to handle specialized armor like Null-Suits (reducing Matrix targeting) or affliction mechanics like N.I.C.A. (Scrap-Sickness) for prolonged exposure to grey goo.
 *   [x] **Edge / Hopepunk Mechanics:** Allow the simulator AI to actively spend the `Edge` attribute during critical failures to re-roll misses or push the limit on wild dice.
