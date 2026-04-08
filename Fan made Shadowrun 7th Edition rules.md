@@ -48,9 +48,17 @@ With the veil parted, digital and astral entities interact in entirely new ways.
 
 * **Manifesting Sprites:** Sprites can physically manifest by swarming nanites into a dense ball, literally munching ambient physical matter to build a temporary shell. The smarter the Sprite, the harder it is for a Technomancer to control.
 * **Crystalline Spirits:** These ancient spirits of order transmute matter into "living crystal." They act as a magical "bootloader," allowing AIs to manifest a physical presence and an astral aura.
-* **Possession vs. Inhabitation:**
-* *Possession (The Joyride):* A spirit/entity takes temporary control of a host. The host’s original stats (including RES) are suppressed but not destroyed.
-* *Inhabitation (The Merger):* A permanent, violent merging creating a dual-natured hybrid. If a spirit Inhabits a Technomancer, the host’s Resonance stat is permanently destroyed (reduced to 0 due to the Oil and Water rule), though the spirit retains the host's physical skills.
+#### 1. Unified Control & Possession Rules
+
+The mechanics of taking control of another form—whether through a spiritual *Possession*, a rigger *Jumping-In* to a drone, an AI *Inhabiting* a vehicle, or a user suffering a *BTL Override* (like the Fuchsia Dragon)—follow a unified ruleset:
+
+*   **Control Override:** The host's original stats are suppressed but not destroyed. The possessing entity uses its own mental attributes (LOG, INT, WIL, CHA). Physical attributes (BOD, AGI, REA, STR) are typically the host's (with any specific modifiers, such as +3 STR/BOD from a Fuchsia Dragon Sprite or a vehicle's frame).
+*   **Biofeedback / Damage Sharing:** Because the host (whether meat, drone, or vehicle) is saturated with grey goo or mana, the possessing entity connects to it on a spiritual or deep digital level. If the host takes Physical damage, the possessing entity must resist half of that damage (rounded down) as Stun Biofeedback. This is resisted with `WIL + BOD`.
+*   **Destabilization / Destruction Risk (Dumpshock / Extrusion):** If the host's Condition Monitor is filled and it is destroyed while possessed, the possessing entity suffers severe trauma and is violently ejected. They immediately take 6 unresistable Stun damage and suffer a -2 Dice Pool modifier to all actions for (12 - WIL) minutes.
+*   **Initiative Adjustment:** The possessing entity rolls Matrix/Astral Initiative (e.g., Data Processing + Intuition, or REA + INT) and gains +1 Initiative Die per level of their connection strength (e.g., Control Rig rating for riggers, or Force/Magic rating for spirits/sprites).
+*   **Inhabitation (The Merger):** A temporary possession can violently escalate into a permanent, physical merging creating a dual-natured hybrid.
+    *   *For Spirits:* If a spirit permanently Inhabits a host, the host’s personality is destroyed but their physical skills are retained. If the host is a Technomancer, their Resonance stat is permanently destroyed (reduced to 0 due to the Oil and Water rule).
+    *   *For BTLs:* For users of Physical Override chips (like the Fuchsia Dragon), if the user takes Physical damage exceeding their Willpower while transformed, the temporary Sprite possession becomes permanent Inhabitation, permanently overwriting the user's mind and turning them into a feral, dual-natured NPC.
 
 ---
 
