@@ -893,21 +893,32 @@ def main():
             if locals().get('edge_spent'):
                 action_text += " [Spent Edge to re-roll misses!]"
 
+            def apply_nica_glitch(character: Combatant) -> str:
+                glitch_table = [
+                    "Takes 1 P damage (short-circuit)",
+                    "Takes 1 S damage (painful feedback)",
+                    "Drops weapon (erratic servos)",
+                    "Loses 1 Initiative (micro-seizure)",
+                    "Spasms wildly (No action next turn)"
+                ]
+                effect = random.choice(glitch_table)
+                if "1 P damage" in effect: character.physical_damage += 1
+                elif "1 S damage" in effect: character.stun_damage += 1
+                elif "Drops weapon" in effect and character.weapons: character.weapons.pop(0)
+                elif "Loses 1 Initiative" in effect: character.initiative = max(0, character.initiative - 1)
+                elif "Spasms wildly" in effect: character.has_yielded = True # treated as yielding for a turn/giving up
+
+                return effect
+
             if "N.I.C.A." in active.special_rules:
                 if (locals().get('attack_hits_glitched') or locals().get('drain_hits_glitched')):
-                    effect = random.choice(["Takes 1 P damage (short-circuit)", "Takes 1 S damage (painful feedback)", "Drops weapon (erratic servos)"])
+                    effect = apply_nica_glitch(active)
                     action_text += f" [N.I.C.A. Glitch! Rogue 'ware sparks! {effect}]"
-                    if "1 P damage" in effect: active.physical_damage += 1
-                    elif "1 S damage" in effect: active.stun_damage += 1
-                    elif "Drops weapon" in effect and active.weapons: active.weapons.pop(0)
 
             if "N.I.C.A." in target.special_rules:
                 if (locals().get('def_hits_glitched') or locals().get('soak_hits_glitched') or locals().get('bio_hits_glitched')):
-                    effect = random.choice(["Takes 1 P damage (short-circuit)", "Takes 1 S damage (painful feedback)", "Drops weapon (erratic servos)"])
+                    effect = apply_nica_glitch(target)
                     result_text += f" [N.I.C.A. Glitch! Target's rogue 'ware sparks! {effect}]"
-                    if "1 P damage" in effect: target.physical_damage += 1
-                    elif "1 S damage" in effect: target.stun_damage += 1
-                    elif "Drops weapon" in effect and target.weapons: target.weapons.pop(0)
 
             if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
                 target.is_alive = False

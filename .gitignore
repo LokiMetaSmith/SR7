@@ -12,3 +12,4 @@
 scenario.json
 __pycache__/
 *.pyc
+campaign_state/
