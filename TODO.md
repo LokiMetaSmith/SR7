@@ -75,3 +75,4 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Edge / Hopepunk Mechanics:** Allow the simulator AI to actively spend the `Edge` attribute during critical failures to re-roll misses or push the limit on wild dice.
 *   [x] **Unify Possession Rules:** Centralize and standardize mechanics for BTL possession, Rigger jump-ins, AI inhabitation, and spiritual possession.
 *   [x] **N.I.C.A. Glitch Table:** Implement a 'glitch table' for N.I.C.A. (Scrap-Sickness) glitches in the combat simulator to apply varied narrative and mechanical effects.
+*   [x] **Sync Combat Analyzer:** Sync `combat_analyzer.py` with all the new mechanics added to `combat_simulator.py` (Squad Combat, Edge spending, Social mechanics, Chunky Salsa, N.I.C.A).
