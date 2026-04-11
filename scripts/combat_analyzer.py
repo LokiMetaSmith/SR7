@@ -28,7 +28,8 @@ class DummyAgent:
                 return "data spike"
             else:
                 return "establish tether"
-        return f"attack with {combatant.weapons[0].name}" if combatant.weapons else "attack with Unarmed Strike"
+        import random
+        return "sprint to cover" if random.random() > 0.8 else f"attack with {combatant.weapons[0].name}" if combatant.weapons else "attack with Unarmed Strike"
     def narrate_action(self, combatant, action, result):
         return ""
 
@@ -186,6 +187,9 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
 
                     if target.physical_damage >= target.physical_track or target.stun_damage >= target.stun_track:
                         target.is_alive = False
+
+            elif "sprint" in action_lower or "move" in action_lower:
+                pass # Abstract repositioning, no opposed roll needed
 
             elif is_tether:
                 log = active.attributes.get('LOG', 3)
