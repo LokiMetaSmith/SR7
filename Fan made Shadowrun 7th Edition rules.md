@@ -3799,6 +3799,27 @@ Grid Overwatch Division is no longer a room of corporate deckers. It is an auton
 *   **The Bootloader:** It physically spawns within 5 meters of the offending Hacker's meat-body. It will attempt to destroy the Hacker's physical brain, or fry their deck, whichever is faster.
 *   **Dissipation:** The Antibody is a temporary immune response. It dissolves back into inert dust and grey goo if its Physical Condition Monitor is filled, OR if the Hacker successfully jacks out (taking Dump Shock) and drops off the grid.
 
+
+#### 4. HMHVV Infected (Ghouls & Vampires)
+The Human-Metahuman Vampiric Virus (HMHVV) radically alters the physiology and psychology of its victims. In the modern Panopticon, these creatures face both the threat of grid immune responses and natural bigotry.
+
+**General Infected Rules:**
+*   **Essence Drain:** All HMHVV infected must consume Essence to survive. Failure to consume at least 1 Essence per month results in physical degradation, leading to death or becoming mindless ferals.
+*   **Dual Natured:** All Infected are active on both the physical and astral planes simultaneously.
+*   **Infection Transfer:** Biting, clawing, or Essence Drain transfers the HMHVV virus. Victims must resist with Body + Willpower.
+
+**The Zkazena Ghoul (Strain III)**
+In the toxic, magic-heavy environment of Zkazena (like Crispyopolis), ghouls are highly adapted to scavenging and surviving where ambient nanites and toxic spirits roam.
+*   **Attributes:** BOD +2 | STR +1 | REA +1 | WIL +1 | CHA -2 | INT -1
+*   **Qualities:** Natural Weapon (Claws/Bite: DV 4P, AP -1), Dietary Requirement (Metahuman Flesh), Reduced Sense (Blindness), Enhanced Senses (Smell, Hearing).
+*   **Zkazena Adaptation:** "Containment Surge Frenzy" - When ambient magic spikes, these ghouls enter a frenzied state, gaining +1 Die on physical actions and ignoring the first box of damage on any track.
+
+**The Ancient Vampire (Strain I)**
+Unlike feral ghouls, Strain I vampires retain their intellect and magical aptitude. They are apex predators who often manipulate society from the shadows.
+*   **Attributes:** BOD +1 | AGI +1 | STR +2 | WIL +2 | LOG +1 | CHA +2
+*   **Qualities:** Essence Drain, Regeneration (Heals 1 physical damage per turn, disabled by sunlight or wood), Severe Allergy (Sunlight).
+*   **Magic:** Many vampires are Awakened, retaining or gaining Magician status upon infection.
+
 #### GM Advice: Running Combat in the 6th World
 *   **Make them choose their ammo:** If the runners are fighting Wuxing, standard APDS ammo is best. But if a G.O.D Antibody spawns or a Fuchsia Dragon attacks, they will desperately wish they had loaded expensive Nanite-Buster rounds. Let them use 1 Action to swap magazines if they thought ahead!
 *   **The Horror of the Abominations:** Describe the Fuchsia Dragons tragically. Underneath the glowing scales and feral roars, there is still a metahuman weeping. This plays into your "Hopepunk" theme—killing them should feel like a tragic necessity, and trying to subdue them non-lethally (Stun damage) should be rewarded with Edge.

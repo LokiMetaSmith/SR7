@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.7)  8 APR 2026 05:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.12)  12 APR 2026 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2905,7 +2905,7 @@ Overfull \hbox (5.84251pt too wide) in paragraph at lines 8156--8156
 
 [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
 [114] [115] [116] [117] [118]
-Underfull \hbox (badness 10000) in paragraph at lines 9436--9438
+Underfull \hbox (badness 10000) in paragraph at lines 9438--9440
 []\T1/phv/m/sl/10 (+20) Resisting So-cial/-Ma-nip-u-la-tion: \T1/phv/m/n/10 (+2
 0) Willpower +
  []
@@ -2922,9 +2922,9 @@ LaTeX Warning: There were multiply-defined labels.
  )
 Here is how much of TeX's memory you used:
  36867 strings out of 476182
- 763488 string characters out of 5795596
- 2155975 words of memory out of 5000000
- 57601 multiletter control sequences out of 15000+600000
+ 763507 string characters out of 5795595
+ 2156975 words of memory out of 5000000
+ 57600 multiletter control sequences out of 15000+600000
  612507 words of font info for 369 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  117i,13n,121p,1227b,1563s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2941,10 +2941,10 @@ oes not exist, replaced by a fixed one
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "Fan made Shadowrun 7th Edition rules.pdf" (123 pages, 736258
+Output written on "Fan made Shadowrun 7th Edition rules.pdf" (123 pages, 738540
  bytes).
 PDF statistics:
- 893 PDF objects out of 1000 (max. 8388607)
- 724 compressed objects within 8 object streams
- 273 named destinations out of 1000 (max. 500000)
+ 894 PDF objects out of 1000 (max. 8388607)
+ 725 compressed objects within 8 object streams
+ 274 named destinations out of 1000 (max. 500000)
  26997 words of extra memory for PDF output out of 29859 (max. 10000000)
