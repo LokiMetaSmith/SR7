@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>Zkazena Ghoul</name>
+    <metatype>Unknown</metatype>
+    <background>In the toxic, magic-heavy environment of Zkazena (like Crispyopolis), ghouls are highly adapted to scavenging and surviving where ambient nanites and toxic spirits roam.</background>
+    <attributes>
+      <attribute>
+        <name>BOD</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>AGI</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>REA</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>STR</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>WIL</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>LOG</name>
+        <value>2</value>
+      </attribute>
+      <attribute>
+        <name>INT</name>
+        <value>2</value>
+      </attribute>
+      <attribute>
+        <name>CHA</name>
+        <value>1</value>
+      </attribute>
+      <attribute>
+        <name>EDG</name>
+        <value>2</value>
+      </attribute>
+      <attribute>
+        <name>ESS</name>
+        <value>1</value>
+      </attribute>
+    </attributes>
+    <skills>
+      <skill>
+        <name>Close Combat</name>
+        <value>6</value>
+      </skill>
+      <skill>
+        <name>Running</name>
+        <value>4</value>
+      </skill>
+      <skill>
+        <name>Perception</name>
+        <value>5</value>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <value>4</value>
+      </skill>
+      <skill>
+        <name>Sneaking</name>
+        <value>5</value>
+      </skill>
+    </skills>
+    <qualities>
+      <quality>
+        <name>Infection (HMHVV)</name>
+      </quality>
+      <quality>
+        <name>Dual Natured</name>
+      </quality>
+    </qualities>
+    <gear>
+      <item>Tattered Clothing (Armor 2)</item>
+      <item>Claws/Bite</item>
+    </gear>
+  </character>
+</characters>

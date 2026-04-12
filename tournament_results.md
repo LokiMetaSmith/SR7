@@ -2,34 +2,36 @@
 
 | Rank | Name | Points | Win/Draw/Loss |
 |---|---|---|---|
-| 1 | Feral "Fuchsia Dragon" Abomination | 90 | 30-0-0 |
-| 2 | G.O.D. "Antibody" | 87 | 29-0-1 |
-| 3 | Wuxing "Null-Sec" Strike Team | 82 | 27-1-2 |
-| 4 | Himerus | 82 | 27-1-2 |
-| 5 | Tom | 78 | 26-0-4 |
-| 6 | Shrimpy | 75 | 25-0-5 |
-| 7 | Pat O'Mara | 72 | 24-0-6 |
-| 8 | Spark+ | 69 | 23-0-7 |
-| 9 | Kyber | 66 | 22-0-8 |
-| 10 | Cleo | 61 | 20-1-9 |
-| 11 | Sister Sinalma | 59 | 19-2-9 |
-| 12 | The Dog | 55 | 18-1-11 |
-| 13 | More Nada'ira | 55 | 18-1-11 |
-| 14 | Sargent Igneous | 52 | 17-1-12 |
-| 15 | Captain Lazlow | 46 | 15-1-14 |
-| 16 | Bear | 46 | 15-1-14 |
-| 17 | Jensen | 36 | 12-0-18 |
-| 18 | Francky | 34 | 11-1-18 |
-| 19 | Logi_v2.1 | 34 | 11-1-18 |
-| 20 | Logi Prime | 34 | 11-1-18 |
-| 21 | Cryptolock | 33 | 11-0-19 |
-| 22 | Asa | 30 | 10-0-20 |
-| 23 | Squid | 28 | 9-1-20 |
-| 24 | Spark | 19 | 6-1-23 |
-| 25 | Miss Pixel | 19 | 6-1-23 |
-| 26 | Johnny the Johnson | 15 | 5-0-25 |
-| 27 | Kane | 12 | 4-0-26 |
-| 28 | Kestrel | 7 | 2-1-27 |
-| 29 | Darri | 4 | 1-1-28 |
-| 30 | Ennis | 3 | 1-0-29 |
-| 31 | Sam | 3 | 1-0-29 |
+| 1 | Ancient Vampire | 96 | 32-0-0 |
+| 2 | Feral "Fuchsia Dragon" Abomination | 93 | 31-0-1 |
+| 3 | G.O.D. "Antibody" | 90 | 30-0-2 |
+| 4 | Wuxing "Null-Sec" Strike Team | 87 | 29-0-3 |
+| 5 | Himerus | 82 | 27-1-4 |
+| 6 | Tom | 82 | 27-1-4 |
+| 7 | Shrimpy | 78 | 26-0-6 |
+| 8 | Pat O'Mara | 75 | 25-0-7 |
+| 9 | Spark+ | 72 | 24-0-8 |
+| 10 | Kyber | 69 | 23-0-9 |
+| 11 | Cleo | 66 | 22-0-10 |
+| 12 | Sister Sinalma | 63 | 21-0-11 |
+| 13 | Sargent Igneous | 60 | 20-0-12 |
+| 14 | The Dog | 57 | 19-0-13 |
+| 15 | Zkazena Ghoul | 54 | 18-0-14 |
+| 16 | More Nada'ira | 51 | 17-0-15 |
+| 17 | Captain Lazlow | 48 | 16-0-16 |
+| 18 | Bear | 45 | 15-0-17 |
+| 19 | Logi Prime | 42 | 14-0-18 |
+| 20 | Logi_v2.1 | 36 | 12-0-20 |
+| 21 | Francky | 33 | 11-0-21 |
+| 22 | Cryptolock | 33 | 11-0-21 |
+| 23 | Squid | 30 | 10-0-22 |
+| 24 | Asa | 30 | 10-0-22 |
+| 25 | Jensen | 27 | 9-0-23 |
+| 26 | Miss Pixel | 21 | 7-0-25 |
+| 27 | Johnny the Johnson | 18 | 6-0-26 |
+| 28 | Spark | 15 | 5-0-27 |
+| 29 | Kane | 12 | 4-0-28 |
+| 30 | Ennis | 9 | 3-0-29 |
+| 31 | Kestrel | 3 | 1-0-31 |
+| 32 | Darri | 3 | 1-0-31 |
+| 33 | Sam | 3 | 1-0-31 |

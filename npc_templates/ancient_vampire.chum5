@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>Ancient Vampire</name>
+    <metatype>Unknown</metatype>
+    <background>Unlike feral ghouls, Strain I vampires retain their intellect and magical aptitude. They are apex predators who often manipulate society from the shadows.</background>
+    <attributes>
+      <attribute>
+        <name>BOD</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>AGI</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>REA</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>STR</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>WIL</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>LOG</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>INT</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>CHA</name>
+        <value>7</value>
+      </attribute>
+      <attribute>
+        <name>EDG</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>ESS</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>MAG</name>
+        <value>6</value>
+      </attribute>
+    </attributes>
+    <skills>
+      <skill>
+        <name>Close Combat</name>
+        <value>7</value>
+      </skill>
+      <skill>
+        <name>Con</name>
+        <value>8</value>
+      </skill>
+      <skill>
+        <name>Negotiation</name>
+        <value>7</value>
+      </skill>
+      <skill>
+        <name>Perception</name>
+        <value>6</value>
+      </skill>
+      <skill>
+        <name>Spellcasting</name>
+        <value>7</value>
+      </skill>
+      <skill>
+        <name>Sneaking</name>
+        <value>8</value>
+      </skill>
+    </skills>
+    <qualities>
+      <quality>
+        <name>Infection (HMHVV)</name>
+      </quality>
+      <quality>
+        <name>Dual Natured</name>
+      </quality>
+      <quality>
+        <name>Magician</name>
+      </quality>
+    </qualities>
+    <spells>
+      <spell>
+        <name>Control Thoughts</name>
+      </spell>
+      <spell>
+        <name>Trid Phantasm</name>
+      </spell>
+      <spell>
+        <name>Levitate</name>
+      </spell>
+    </spells>
+    <gear>
+      <item>High Fashion Suit (Armor 6)</item>
+      <item>Monofilament Sword</item>
+    </gear>
+  </character>
+</characters>

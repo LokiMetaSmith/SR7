@@ -48,10 +48,10 @@ def main():
             draws = 0
 
             for _ in range(iterations_per_match):
-                res = run_simulation(c1_base, c2_base, env)
-                if res["winner"] == c1_base.name:
+                res = run_simulation([c1_base], [c2_base], env)
+                if res["winning_team"] == 1:
                     c1_wins += 1
-                elif res["winner"] == c2_base.name:
+                elif res["winning_team"] == 2:
                     c2_wins += 1
                 else:
                     draws += 1
