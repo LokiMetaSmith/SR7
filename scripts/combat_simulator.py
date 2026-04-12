@@ -158,7 +158,7 @@ class LLM_Agent:
             prompt += f"Social State: Influence over others: {combatant.influence}, Resolve against others: {combatant.resolve}\n"
 
         prompt += f"Matrix Attributes: Attack {combatant.matrix.attack}, Sleaze {combatant.matrix.sleaze}, DP {combatant.matrix.data_processing}, Firewall {combatant.matrix.firewall}\n"
-        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Data Spike, or Social Influence (Negotiate/Intimidate/Con).\n"
+        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Data Spike, Social Influence (Negotiate/Intimidate/Con), or Sprint (move to better cover).\n"
         # etc.
         try:
             response = self.client.chat.completions.create(
@@ -490,7 +490,7 @@ def main():
                         return "data spike"
                     else:
                         return "establish tether"
-                return f"attack with {combatant.weapons[0].name}" if combatant.weapons else "attack with Unarmed Strike"
+                return "sprint to cover" if random.random() > 0.8 else f"attack with {combatant.weapons[0].name}" if combatant.weapons else "attack with Unarmed Strike"
             def narrate_action(self, combatant, action, result):
                 return f"{combatant.name} takes action, resulting in: {result}"
         llm = DummyAgent()
@@ -715,6 +715,17 @@ def main():
                         result_text += f" {target.name} is incapacitated!"
                 else:
                     result_text = f"Data Spike is deflected by {target.name}'s firewall."
+
+
+            elif "sprint" in action_lower or "move" in action_lower:
+                action_text = f"sprints and repositions"
+                result_text = f"{active.name} moves 16m (Complex Action), shifting Range Bands or securing better cover."
+                if active.zone and active.zone.cover == "None":
+                    result_text += " They scramble towards whatever light cover they can find."
+                elif getattr(target, 'zone', None) and target.zone != active.zone:
+                    result_text += f" They close the distance towards {target.name}'s zone."
+
+
 
             elif "chase" in action_lower or "pilot" in action_lower or "drive" in action_lower:
                 attack_pool = active.attributes.get('REA', 3) + active.skills.get('Piloting', 4)

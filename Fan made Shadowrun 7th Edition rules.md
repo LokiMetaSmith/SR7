@@ -3192,7 +3192,7 @@ Chases are high-stakes affairs that abstract exact speeds into Range Bands: Clos
 *   **Chase Maneuvers:** Drivers can spend their Complex actions during their Initiative pass to attempt specific maneuvers:
     *   *Catch Up / Break Away:* An opposed Pilot test to force a shift in Range Band.
     *   *Evade:* The driver adds their Vehicle's Handling rating to their Defense Pool against incoming attacks for the round.
-    *   *Ram:* An opposed Pilot test. If successful, both vehicles take Physical damage based on the ramming vehicle's Body + Speed, resisted by Body + Armor.
+    *   *Ram:* An opposed Pilot test. If successful, both vehicles take Physical damage based on the ramming vehicle's Body + Speed. However, the vehicle with the higher Body + Armor resists the damage with double their dice pool, and halves the final damage taken (ensuring heavier vehicles win crashes).
     *   *Cut Off:* Attempted at Close or Short range. An opposed Pilot test to force the target vehicle to make a Crash Test.
 #### 3. Vehicle Modifications
 | Modification | Slots | Cost (¥) | Description |
@@ -3209,6 +3209,8 @@ Tech is advanced, but biological purity (Essence) is heavily commodified.
 
 #### 1. Augmentations (Cyberware & Bioware)
 Losing >2 Essence risks the "Augmentation Addict" Negative Quality.
+
+*Upgrading 'Ware/Decks:* Players may upgrade their existing cyberware, bioware, or cyberdecks by simply paying the difference in Nuyen/Essence cost, representing modular swapping rather than selling at a total loss.
 
 | Augmentation | Type | Essence | Cost (¥) | Effect |
 | :--- | :--- | :--- | :--- | :--- |
@@ -3842,6 +3844,7 @@ How you treat the weird children of the Matrix matters. Your Street Cred (Total 
 
 *   **The Empathy Bonus:** When rolling Negotiation or Etiquette with an AI, Sprite, or Spirit, add your Street Cred to your Dice Pool if you are known to treat non-humans as people.
 *   **The Tool Penalty:** If you have Notoriety for betraying AIs, enslaving Sprites, or acting like a corporate sociopath, your Notoriety is subtracted from all social pools with Awakened/Digital entities.
+*   **Buying Contacts:** During downtime, players may spend Karma to purchase important NPCs they've helped as Contacts. The Karma cost is equal to the desired Connection Rating x 3.
 
 ### XVII. KEY NPC PROFILES: The Movers and Shakers
 Here is how to run the specific contacts mentioned in your Necessity Knows No Law adventure lore.
