@@ -98,6 +98,7 @@ All characters build and advance using **Karma**.
     * [1. Drone & Vehicle Stats](#1-drone--vehicle-stats)
     * [2. Jumped-In Mechanics & Chase Combat](#2-jumped-in-mechanics--chase-combat)
     * [3. Vehicle Modifications](#3-vehicle-modifications)
+    * [4. Drone Swarms](#4-drone-swarms)
   * [IV. GENERAL EQUIPMENT & LIFESTYLE](#iv-general-equipment--lifestyle)
     * [1. Augmentations (Cyberware & Bioware)](#1-augmentations-cyberware--bioware)
     * [2. Armor & Weapons](#2-armor--weapons)
@@ -3203,6 +3204,14 @@ Chases are high-stakes affairs that abstract exact speeds into Range Bands: Clos
 | Weapon Mount (Heavy) | 4 | 5,000 | Mounts heavy weapons (LMG, HMG, Assault Cannon). Requires Gunnery skill. |
 | Smuggling Compartment | 1 | 1,500 | A hidden compartment. Imposes a -4 penalty on Perception checks to find it. |
 | Spoofing Emitters | 2 | 4,000 | Emits false sensor data. Grants a +2 bonus to tests to resist being locked onto. |
+
+
+#### 4. Drone Swarms
+Rather than controlling dozens of drones individually, a rigger or decker can slave multiple identical drones into a **Swarm**. The swarm acts as a single entity in combat, distributing processing power and sensor data to act with lethal synchronization.
+
+*   **Swarm Count:** A swarm tracks its size via a `swarm_count` integer (representing the number of active drones in the formation).
+*   **Attack Bonus:** A swarm gains an attack pool bonus equal to `(+ swarm_count - 1)`. A swarm of 5 drones gains a +4 bonus to Gunnery or Melee attack rolls.
+*   **Damage Soaking:** Instead of tracking damage for each individual drone, the swarm soaks physical damage collectively. If the swarm takes physical damage that fills its Physical Track, it is not destroyed. Instead, the `swarm_count` is reduced by 1 (representing a destroyed drone), and the Physical Track is instantly cleared.
 
 ### IV. GENERAL EQUIPMENT & LIFESTYLE
 Tech is advanced, but biological purity (Essence) is heavily commodified.
