@@ -8260,6 +8260,16 @@ Spoofing Emitters & 2 & 4,000 & Emits false sensor data. Grants a +2 bonus to te
 \end{longtable}
 \begin{multicols}{2}
 
+\paragraph{4. Drone Swarms}
+Rather than controlling dozens of drones individually, a rigger or decker can slave multiple identical drones into a \textbf{Swarm}. The swarm acts as a single entity in combat, distributing processing power and sensor data to act with lethal synchronization.
+
+\begin{itemize}[nosep]
+\item \textbf{Swarm Count:} A swarm tracks its size via a \texttt{swarm\_count} integer (representing the number of active drones in the formation).
+\item \textbf{Attack Bonus:} A swarm gains an attack pool bonus equal to \texttt{(+ swarm\_count - 1)}. A swarm of 5 drones gains a +4 bonus to Gunnery or Melee attack rolls.
+\item \textbf{Damage Soaking:} Instead of tracking damage for each individual drone, the swarm soaks physical damage collectively. If the swarm takes physical damage that fills its Physical Track, it is not destroyed. Instead, the \texttt{swarm\_count} is reduced by 1 (representing a destroyed drone), and the Physical Track is instantly cleared.
+\end{itemize}
+
+
 \hypertarget{iv.-general-equipment-lifestyle}{%
 \subsubsection{IV. GENERAL EQUIPMENT \&
 LIFESTYLE}\label{iv.-general-equipment-lifestyle}}
