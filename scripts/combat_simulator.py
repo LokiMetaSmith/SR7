@@ -456,6 +456,7 @@ def main():
     parser.add_argument("--llm-model", help="Name of the model to use", default="local-model")
     parser.add_argument("--dry-run", action="store_true", help="Run without connecting to an actual LLM")
     parser.add_argument("--interactive", action="store_true", help="Pause to allow user to input actions manually")
+    parser.add_argument("--ui", action="store_true", help="Launch the Pygame visual interface")
 
     args = parser.parse_args()
 
@@ -497,6 +498,10 @@ def main():
     else:
         llm = LLM_Agent(endpoint_url=args.llm_url, model_name=args.llm_model)
 
+    app = None
+    if args.ui:
+        from ui.app import App
+        app = App()
     state.log(f"=== Beginning Shadowrun 7E Combat Simulation ===")
     state.log(f"Scenario: {env.description}")
 
@@ -527,6 +532,9 @@ def main():
 
     # Main combat loop
     while any(c.is_alive and not getattr(c, 'has_yielded', False) for c in state.combatants if c.team == 1) and any(c.is_alive and not getattr(c, 'has_yielded', False) for c in state.combatants if c.team == 2) and state.turn < 20:
+        if app:
+            app.update_state(state.combatants)
+            app.tick()
         state.log(f"\n--- Turn {state.turn} ---")
 
         for active in state.combatants:

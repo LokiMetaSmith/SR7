@@ -5,7 +5,8 @@ from ui.components import PlayerCard, GMCard
 
 class App:
     def __init__(self, width: int = 1000, height: int = 700):
-        pygame.init()
+        if not pygame.get_init():
+            pygame.init()
         self.width = width
         self.height = height
         self.screen = pygame.display.set_mode((self.width, self.height))
@@ -13,7 +14,7 @@ class App:
         self.clock = pygame.time.Clock()
         self.running = False
 
-        # Create dummy data
+        # Create dummy data initially
         player_combatant = Combatant(
             name="Kyber",
             source_file="",
@@ -48,12 +49,26 @@ class App:
         self.player_card = PlayerCard(player_combatant, width=350, height=500)
         self.gm_card = GMCard(gm_combatant, width=350, height=500)
 
+    def update_state(self, combatants: list[Combatant]):
+        """Updates the internal UI cards with live data from the simulation."""
+        t1 = [c for c in combatants if c.team == 1]
+        t2 = [c for c in combatants if c.team == 2]
+        if t1:
+            self.player_card.combatant = t1[0]
+        if t2:
+            self.gm_card.combatant = t2[0]
+
+    def tick(self):
+        """Processes one frame of the UI, suitable for a host event loop."""
+        self.handle_events()
+        self.draw()
+        self.clock.tick(60)
+
     def run(self):
+        """Legacy blocking loop for standalone testing."""
         self.running = True
         while self.running:
-            self.handle_events()
-            self.draw()
-            self.clock.tick(60)
+            self.tick()
         pygame.quit()
         sys.exit()
 
