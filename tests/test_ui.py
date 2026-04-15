@@ -3,8 +3,10 @@ import pygame
 from scripts.combat_simulator import Combatant, MatrixAttributes
 from ui.components import PlayerCard, GMCard
 
+import os
 @pytest.fixture(scope="module", autouse=True)
 def setup_pygame():
+    os.environ["SDL_VIDEODRIVER"] = "dummy"
     # Initialize pygame for headless testing
     pygame.init()
     # Need to set a video mode for some font rendering or surface creation
