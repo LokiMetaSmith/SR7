@@ -65,5 +65,32 @@ Rewrites markdown tables in-place to calculate balanced Nuyen/Karma costs using 
 ### 5. XML Generator (`xml_generator.py`)
 Extracts game objects (weapons, qualities) from the Markdown rules and merges them into existing Chummer-compatible XML files within the `chummer_plugin/` directory.
 
+## Setup and Installation
+
+It is highly recommended to use a Python virtual environment to manage dependencies and avoid version conflicts (such as issues with the `openai` and `httpx` packages).
+
+**Automated Setup:**
+You can run the included setup script to automatically create a virtual environment and install all requirements:
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+**Manual Setup:**
+```bash
+# 1. Create a virtual environment named 'venv'
+python3 -m venv venv
+
+# 2. Activate the virtual environment
+# On Linux/macOS:
+source venv/bin/activate
+# On Windows (Command Prompt):
+venv\Scripts\activate.bat
+# On Windows (PowerShell):
+venv\Scripts\Activate.ps1
+
+# 3. Install the required dependencies
+pip install -r requirements.txt
+```
+
 ---
-*Note: Make sure to install the required Python packages via `pip install -r requirements.txt` before running these tools.*
