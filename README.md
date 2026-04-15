@@ -5,7 +5,7 @@ This repository contains fan-made rules, tools, and campaign notes for a custom 
 ## Tools Included
 
 ### 1. Autonomous Combat Simulator (`combat_simulator.py`)
-This tool runs a fully autonomous, turn-based combat simulation between two entities. It utilizes the custom D6 ruleset and interfaces with a local OpenAI-compatible LLM to roleplay the encounter, make tactical weapon choices, and narrate gritty Shadowrun combat flavor text.
+This tool runs a fully autonomous, turn-based combat simulation between two teams/squads. It utilizes the custom D6 ruleset and interfaces with a local OpenAI-compatible LLM to roleplay the encounter, make tactical weapon choices, and narrate gritty Shadowrun combat flavor text.
 
 **Features:**
 * Parses character sheets from `.chum5` XML files.
@@ -13,27 +13,32 @@ This tool runs a fully autonomous, turn-based combat simulation between two enti
 * Ingests JSON scenario files for environmental context and map data.
 * Outputs a turn-by-turn narrative log, final health summary, and randomized loot drops.
 * Saves updated character states (Damage, Edge, Life Status) to a JSON scratchpad in the `campaign_state/` directory, making it easy to track character progression with Git.
+* Supports a visual Pygame interface (`--ui`) with dynamic combatant tracking cards.
+* Supports an interactive mode (`--interactive`) that pauses for manual input and UI clicks (attacks, spells, data spikes, etc.).
 
 **Usage:**
 
 ```bash
 # Basic usage with two Chummer XML files
-python scripts/combat_simulator.py npc_templates/Cryptolock.chum5 npc_templates/god_antibody.chum5
+python scripts/combat_simulator.py --team1 npc_templates/Cryptolock.chum5 --team2 npc_templates/god_antibody.chum5
 
 # Usage with a specific NPC from a Markdown file
-python scripts/combat_simulator.py "GM Notes/GM_Campaign_Guide.md:Sargent Igneous" npc_templates/feral_fuchsia_dragon_abomination.chum5
+python scripts/combat_simulator.py --team1 "GM Notes/GM_Campaign_Guide.md:Sargent Igneous" --team2 npc_templates/feral_fuchsia_dragon_abomination.chum5
 
 # Load a specific scenario for the LLM to use (e.g., Tar Creek Ambush)
-python scripts/combat_simulator.py npc_templates/Kyber.chum5 npc_templates/wuxing_null_sec_strike_team.chum5 --scenario tar_creek_ambush.json
+python scripts/combat_simulator.py --team1 npc_templates/Kyber.chum5 --team2 npc_templates/wuxing_null_sec_strike_team.chum5 --scenario tar_creek_ambush.json
 
 # Test mechanical output without calling an LLM (uses generic default actions)
-python scripts/combat_simulator.py npc_templates/Cryptolock.chum5 npc_templates/god_antibody.chum5 --dry-run
+python scripts/combat_simulator.py --team1 npc_templates/Cryptolock.chum5 --team2 npc_templates/god_antibody.chum5 --dry-run
+
+# Squad combat with visual UI and manual inputs
+python scripts/combat_simulator.py --team1 npc_templates/Cryptolock.chum5 npc_templates/Kyber.chum5 --team2 npc_templates/god_antibody.chum5 npc_templates/wuxing_null_sec_strike_team.chum5 --ui --interactive
 ```
 
 **LLM Configuration:**
 By default, the script points to a locally hosted endpoint at `http://localhost:8000/v1`. You can override this using CLI arguments:
 ```bash
-python scripts/combat_simulator.py <c1> <c2> --llm-url "https://api.openai.com/v1" --llm-model "gpt-4o"
+python scripts/combat_simulator.py --team1 <paths> --team2 <paths> --llm-url "https://api.openai.com/v1" --llm-model "gpt-4o"
 ```
 
 ### 2. Combat Analyzer (`combat_analyzer.py`)
@@ -42,7 +47,7 @@ This tool runs the mechanical combat simulation from `combat_simulator.py` headl
 **Usage:**
 ```bash
 # Run 100 iterations between two combatants
-python scripts/combat_analyzer.py npc_templates/Cryptolock.chum5 npc_templates/god_antibody.chum5 --iterations 100
+python scripts/combat_analyzer.py --team1 npc_templates/Cryptolock.chum5 --team2 npc_templates/god_antibody.chum5 --iterations 100
 ```
 
 ### 3. NPC Tournament (`tournament.py`)
