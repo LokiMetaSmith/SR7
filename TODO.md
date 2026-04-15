@@ -82,3 +82,12 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 ## Recently Completed:
 *   [x] **Astral Plane & Spirits:** Added details on the Astral Plane and Canonical Spirits (Elementals, Spirits of Man, Insect Spirits), including new narrative mechanics to fit the Merged World setting.
 *   [x] **Spirit Bestiary:** Added full stat blocks for Canonical Spirits to the Bestiary section.
+---
+
+## Priority 6: Visual Interface (Pygame)
+
+**Goal:** Build an interactive visual layer for the simulator using Pygame.
+
+*   [x] **Implement UI Components:** Create a 3-panel UI design for Player and GM cards using `pygame` mapping to the backend `Combatant` attributes.
+*   [ ] **Integrate Full Gamestate:** Connect the interactive cards fully to the live combat loop instead of just rendering dummy data.
+*   [ ] **Expand Interactions:** Add click events to trigger specific combat actions directly from the UI cards.
