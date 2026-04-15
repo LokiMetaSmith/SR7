@@ -13,6 +13,7 @@ class App:
         pygame.display.set_caption("Shadowrun 7E - Interactive Cards")
         self.clock = pygame.time.Clock()
         self.running = False
+        self.pending_action = None
 
         # Create dummy data initially
         player_combatant = Combatant(
@@ -46,8 +47,11 @@ class App:
             team=1
         )
 
-        self.player_card = PlayerCard(player_combatant, width=350, height=500)
-        self.gm_card = GMCard(gm_combatant, width=350, height=500)
+        self.player_card = PlayerCard(player_combatant, width=350, height=500, on_action=self.set_pending_action)
+        self.gm_card = GMCard(gm_combatant, width=350, height=500, on_action=self.set_pending_action)
+
+    def set_pending_action(self, action: str):
+        self.pending_action = action
 
     def update_state(self, combatants: list[Combatant]):
         """Updates the internal UI cards with live data from the simulation."""
