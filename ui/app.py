@@ -12,7 +12,7 @@ class App:
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.set_caption("Shadowrun 7E - Interactive Cards")
         self.clock = pygame.time.Clock()
-        self.running = False
+        self.running = True
         self.pending_action = None
 
         # Create dummy data initially
@@ -47,20 +47,37 @@ class App:
             team=1
         )
 
-        self.player_card = PlayerCard(player_combatant, width=350, height=500, on_action=self.set_pending_action)
-        self.gm_card = GMCard(gm_combatant, width=350, height=500, on_action=self.set_pending_action)
+        self.player_cards = []
+        self.gm_cards = []
+        self.state = None
+        self.running = True
 
     def set_pending_action(self, action: str):
         self.pending_action = action
 
-    def update_state(self, combatants: list[Combatant]):
+    def update_state(self, state):
         """Updates the internal UI cards with live data from the simulation."""
-        t1 = [c for c in combatants if c.team == 1]
-        t2 = [c for c in combatants if c.team == 2]
-        if t1:
-            self.player_card.combatant = t1[0]
-        if t2:
-            self.gm_card.combatant = t2[0]
+        self.state = state
+
+        t1 = [c for c in state.combatants if c.team == 1]
+        t2 = [c for c in state.combatants if c.team == 2]
+
+        # Match lengths or update existing to preserve state
+        while len(self.player_cards) < len(t1):
+            self.player_cards.append(PlayerCard(t1[len(self.player_cards)], width=350, height=500, on_action=self.set_pending_action))
+        while len(self.player_cards) > len(t1):
+            self.player_cards.pop()
+
+        for i, c in enumerate(t1):
+            self.player_cards[i].combatant = c
+
+        while len(self.gm_cards) < len(t2):
+            self.gm_cards.append(GMCard(t2[len(self.gm_cards)], width=350, height=500, on_action=self.set_pending_action))
+        while len(self.gm_cards) > len(t2):
+            self.gm_cards.pop()
+
+        for i, c in enumerate(t2):
+            self.gm_cards[i].combatant = c
 
     def tick(self):
         """Processes one frame of the UI, suitable for a host event loop."""
@@ -77,19 +94,47 @@ class App:
         sys.exit()
 
     def handle_events(self):
+        # Ensure rects are up-to-date before clicks
+        x_offset = 50
+        for card in self.player_cards:
+            card.rect.topleft = (x_offset, 100)
+            card.update_rects()
+            x_offset += 370
+
+        x_offset = max(x_offset, 550)
+        for card in self.gm_cards:
+            card.rect.topleft = (x_offset, 100)
+            card.update_rects()
+            x_offset += 370
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
 
             # Pass events to components
-            self.player_card.handle_event(event)
-            self.gm_card.handle_event(event)
+            for card in self.player_cards:
+                card.handle_event(event)
+            for card in self.gm_cards:
+                card.handle_event(event)
 
     def draw(self):
         self.screen.fill((20, 20, 20)) # Dark background
 
+        font = pygame.font.SysFont("monospace", 16, bold=True)
+        if self.state:
+            turn_text = f"Turn: {self.state.turn}"
+            turn_surf = font.render(turn_text, True, (220, 220, 220))
+            self.screen.blit(turn_surf, (100, 20))
+
         # Draw cards side by side
-        self.player_card.draw(self.screen, 100, 100)
-        self.gm_card.draw(self.screen, 550, 100)
+        x_offset = 50
+        for card in self.player_cards:
+            card.draw(self.screen, x_offset, 100)
+            x_offset += 370
+
+        x_offset = max(x_offset, 550)
+        for card in self.gm_cards:
+            card.draw(self.screen, x_offset, 100)
+            x_offset += 370
 
         pygame.display.flip()

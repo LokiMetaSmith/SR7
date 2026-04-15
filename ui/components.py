@@ -124,6 +124,55 @@ class BaseCard:
         surf_status = self.font_title.render(status_text, True, status_color)
         surface.blit(surf_status, (panel_rect.right - surf_status.get_width() - 10, panel_rect.y + 10))
 
+    def update_rects(self):
+        self.action_rects.clear()
+        if not self.expanded:
+            return
+
+        panel_rect = pygame.Rect(self.rect.x + 5, self.rect.y + 195, self.rect.width - 10, self.rect.height - 200)
+        y_offset = panel_rect.y + 10
+        y_offset += 20
+
+        for w in self.combatant.weapons[:3]:
+            wpn_text = f"- {w.name} (DV:{w.damage} AP:{w.ap})"
+            rendered_text = self.font_small.render(wpn_text, True, COLORS["text"])
+            btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 10, 16)
+            self.action_rects.append((btn_rect, f"attack with {w.name}"))
+            y_offset += 18
+
+        y_offset += 10
+        if self.combatant.spells:
+            y_offset += 20
+            for s in self.combatant.spells[:2]:
+                spl_text = f"- {s.name}"
+                rendered_text = self.font_small.render(spl_text, True, COLORS["text"])
+                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 10, 16)
+                self.action_rects.append((btn_rect, f"cast {s.name}"))
+                y_offset += 18
+
+        y_offset += 10
+        y_offset += 20
+        if self.combatant.matrix.attack > 0:
+            ds_text = "- Data Spike"
+            ds_render = self.font_small.render(ds_text, True, COLORS["text"])
+            btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, ds_render.get_width() + 10, 16)
+            self.action_rects.append((btn_rect, "data spike"))
+            y_offset += 18
+
+        if self.combatant.tethers:
+            y_offset += 18
+        if self.combatant.influence or self.combatant.resolve:
+            y_offset += 18
+
+        y_offset += 10
+        y_offset += 20
+
+        for action_name, action_cmd in [("Sprint", "sprint"), ("Take Cover", "take cover"), ("Yield", "yield")]:
+            act_render = self.font_small.render(f"- {action_name}", True, COLORS["text"])
+            btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, act_render.get_width() + 10, 16)
+            self.action_rects.append((btn_rect, action_cmd))
+            y_offset += 18
+
     def _draw_panel_3_mechanics(self, surface: pygame.Surface):
         self.action_rects.clear()
 
@@ -188,6 +237,19 @@ class BaseCard:
             if self.combatant.influence or self.combatant.resolve:
                 soc_text = f"Social: Inf({len(self.combatant.influence)}) Res({len(self.combatant.resolve)})"
                 surface.blit(self.font_small.render(soc_text, True, COLORS["border_gm"]), (panel_rect.x + 20, y_offset))
+                y_offset += 18
+
+            y_offset += 10
+            actions_header = self.font_body.render("General Actions:", True, COLORS["text"])
+            surface.blit(actions_header, (panel_rect.x + 10, y_offset))
+            y_offset += 20
+
+            for action_name, action_cmd in [("Sprint", "sprint"), ("Take Cover", "take cover"), ("Yield", "yield")]:
+                act_render = self.font_small.render(f"- {action_name}", True, COLORS["text"])
+                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, act_render.get_width() + 10, 16)
+                pygame.draw.rect(surface, COLORS["highlight"], btn_rect, border_radius=2)
+                self.action_rects.append((btn_rect, action_cmd))
+                surface.blit(act_render, (panel_rect.x + 20, y_offset))
                 y_offset += 18
 
 class PlayerCard(BaseCard):
