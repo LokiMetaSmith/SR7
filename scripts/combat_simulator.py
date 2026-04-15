@@ -549,11 +549,23 @@ def main():
             target = random.choice(valid_targets)
 
             if args.interactive:
-                user_input = input(f"Enter action for {active.name} (or press Enter to let AI decide): ")
-                if user_input.strip():
-                    action_decision = user_input
+                if app:
+                    import pygame
+                    app.pending_action = None
+                    print(f"Waiting for UI action for {active.name}...")
+                    while app.pending_action is None:
+                        app.tick()
+                        # If user closes window during wait, fallback
+                        if not app.running:
+                            app.pending_action = llm.ask_action(active, state)
+                            break
+                    action_decision = app.pending_action
                 else:
-                    action_decision = llm.ask_action(active, state)
+                    user_input = input(f"Enter action for {active.name} (or press Enter to let AI decide): ")
+                    if user_input.strip():
+                        action_decision = user_input
+                    else:
+                        action_decision = llm.ask_action(active, state)
             else:
                 # Use LLM to decide tactical action
                 action_decision = llm.ask_action(active, state)

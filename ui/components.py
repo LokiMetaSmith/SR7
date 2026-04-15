@@ -17,7 +17,7 @@ COLORS = {
 }
 
 class BaseCard:
-    def __init__(self, combatant: Combatant, width: int = 350, height: int = 500):
+    def __init__(self, combatant: Combatant, width: int = 350, height: int = 500, on_action=None):
         self.combatant = combatant
         self.width = width
         self.height = height
@@ -27,11 +27,21 @@ class BaseCard:
         self.font_small = pygame.font.SysFont("sans", 12)
         self.is_gm = False
         self.expanded = False
+        self.on_action = on_action
+        self.action_rects = [] # List of tuples: (pygame.Rect, action_string)
 
     def handle_event(self, event: pygame.event.Event):
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1:
-                # Left click on card expands/collapses
+                # Check action buttons first if expanded
+                if self.expanded:
+                    for r, action_str in self.action_rects:
+                        if r.collidepoint(event.pos):
+                            if self.on_action:
+                                self.on_action(action_str)
+                            return True
+
+                # Otherwise, left click on card expands/collapses
                 if self.rect.collidepoint(event.pos):
                     self.expanded = not self.expanded
                     return True
@@ -115,6 +125,8 @@ class BaseCard:
         surface.blit(surf_status, (panel_rect.right - surf_status.get_width() - 10, panel_rect.y + 10))
 
     def _draw_panel_3_mechanics(self, surface: pygame.Surface):
+        self.action_rects.clear()
+
         # Panel 3: Mechanics (Bottom)
         panel_rect = pygame.Rect(self.rect.x + 5, self.rect.y + 195, self.rect.width - 10, self.rect.height - 200)
         pygame.draw.rect(surface, COLORS["panel_bg"], panel_rect, border_radius=3)
@@ -127,8 +139,15 @@ class BaseCard:
         y_offset += 20
         for w in self.combatant.weapons[:3]: # Show up to 3
             wpn_text = f"- {w.name} (DV:{w.damage} AP:{w.ap})"
-            surface.blit(self.font_small.render(wpn_text, True, COLORS["text_dark"]), (panel_rect.x + 20, y_offset))
-            y_offset += 15
+            rendered_text = self.font_small.render(wpn_text, True, COLORS["text"])
+
+            if self.expanded:
+                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 10, 16)
+                pygame.draw.rect(surface, COLORS["highlight"], btn_rect, border_radius=2)
+                self.action_rects.append((btn_rect, f"attack with {w.name}"))
+
+            surface.blit(rendered_text, (panel_rect.x + 20, y_offset))
+            y_offset += 18
 
         # Matrix/Spells/Tethers if expanded or relevant
         if self.expanded:
@@ -139,30 +158,44 @@ class BaseCard:
                 y_offset += 20
                 for s in self.combatant.spells[:2]:
                     spl_text = f"- {s.name}"
-                    surface.blit(self.font_small.render(spl_text, True, COLORS["text_dark"]), (panel_rect.x + 20, y_offset))
-                    y_offset += 15
+                    rendered_text = self.font_small.render(spl_text, True, COLORS["text"])
+                    btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 10, 16)
+                    pygame.draw.rect(surface, COLORS["highlight"], btn_rect, border_radius=2)
+                    self.action_rects.append((btn_rect, f"cast {s.name}"))
+
+                    surface.blit(rendered_text, (panel_rect.x + 20, y_offset))
+                    y_offset += 18
 
             y_offset += 10
             mat_header = self.font_body.render(f"Matrix (A:{self.combatant.matrix.attack} S:{self.combatant.matrix.sleaze} D:{self.combatant.matrix.data_processing} F:{self.combatant.matrix.firewall})", True, COLORS["text"])
             surface.blit(mat_header, (panel_rect.x + 10, y_offset))
             y_offset += 20
 
+            if self.combatant.matrix.attack > 0:
+                ds_text = "- Data Spike"
+                ds_render = self.font_small.render(ds_text, True, COLORS["text"])
+                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, ds_render.get_width() + 10, 16)
+                pygame.draw.rect(surface, COLORS["highlight"], btn_rect, border_radius=2)
+                self.action_rects.append((btn_rect, "data spike"))
+                surface.blit(ds_render, (panel_rect.x + 20, y_offset))
+                y_offset += 18
+
             if self.combatant.tethers:
                 teth_text = f"Tethers: {len(self.combatant.tethers)}"
                 surface.blit(self.font_small.render(teth_text, True, COLORS["border"]), (panel_rect.x + 20, y_offset))
-                y_offset += 15
+                y_offset += 18
 
             if self.combatant.influence or self.combatant.resolve:
                 soc_text = f"Social: Inf({len(self.combatant.influence)}) Res({len(self.combatant.resolve)})"
                 surface.blit(self.font_small.render(soc_text, True, COLORS["border_gm"]), (panel_rect.x + 20, y_offset))
-                y_offset += 15
+                y_offset += 18
 
 class PlayerCard(BaseCard):
-    def __init__(self, combatant: Combatant, width: int = 350, height: int = 500):
-        super().__init__(combatant, width, height)
+    def __init__(self, combatant: Combatant, width: int = 350, height: int = 500, on_action=None):
+        super().__init__(combatant, width, height, on_action)
         self.is_gm = False
 
 class GMCard(BaseCard):
-    def __init__(self, combatant: Combatant, width: int = 350, height: int = 500):
-        super().__init__(combatant, width, height)
+    def __init__(self, combatant: Combatant, width: int = 350, height: int = 500, on_action=None):
+        super().__init__(combatant, width, height, on_action)
         self.is_gm = True
