@@ -89,5 +89,5 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 **Goal:** Build an interactive visual layer for the simulator using Pygame.
 
 *   [x] **Implement UI Components:** Create a 3-panel UI design for Player and GM cards using `pygame` mapping to the backend `Combatant` attributes.
-*   [ ] **Integrate Full Gamestate:** Connect the interactive cards fully to the live combat loop instead of just rendering dummy data.
-*   [ ] **Expand Interactions:** Add click events to trigger specific combat actions directly from the UI cards.
+*   [x] **Integrate Full Gamestate:** Connect the interactive cards fully to the live combat loop instead of just rendering dummy data.
+*   [x] **Expand Interactions:** Add click events to trigger specific combat actions directly from the UI cards.

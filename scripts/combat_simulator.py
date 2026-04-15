@@ -533,7 +533,7 @@ def main():
     # Main combat loop
     while any(c.is_alive and not getattr(c, 'has_yielded', False) for c in state.combatants if c.team == 1) and any(c.is_alive and not getattr(c, 'has_yielded', False) for c in state.combatants if c.team == 2) and state.turn < 20:
         if app:
-            app.update_state(state.combatants)
+            app.update_state(state)
             app.tick()
         state.log(f"\n--- Turn {state.turn} ---")
 
@@ -548,7 +548,7 @@ def main():
 
             target = random.choice(valid_targets)
 
-            if args.interactive:
+            if app or args.interactive:
                 if app:
                     import pygame
                     app.pending_action = None
@@ -586,8 +586,23 @@ def main():
             is_data_spike = "data spike" in action_lower
             is_tether = "tether" in action_lower
             is_social = any(kw in action_lower for kw in ["social", "negotiate", "negotiation", "intimidate", "intimidation", "con ", "influence"])
+            is_sprint = "sprint" in action_lower
+            is_cover = "take cover" in action_lower
+            is_yield = "yield" in action_lower
 
-            if is_social:
+            if is_yield:
+                active.has_yielded = True
+                action_text = f"{active.name} yields and surrenders!"
+                result_text = f"{active.name} drops their weapons and stops fighting."
+            elif is_sprint:
+                action_text = f"{active.name} uses a Complex Action to Sprint!"
+                result_text = f"{active.name} sprints to a new position, covering 16m."
+            elif is_cover:
+                action_text = f"{active.name} dives for cover!"
+                result_text = f"{active.name} secures Medium cover, granting a +2 defense bonus."
+                if active.zone:
+                    active.zone.cover = "Medium"
+            elif is_social:
                 # Find the highest social skill
                 social_skills = {k: v for k, v in active.skills.items() if k in ["Con", "Negotiation", "Intimidation", "Leadership", "Etiquette"]}
                 skill_name = max(social_skills, key=social_skills.get) if social_skills else "Con"
