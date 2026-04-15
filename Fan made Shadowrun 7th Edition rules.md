@@ -60,6 +60,23 @@ The mechanics of taking control of another form—whether through a spiritual *P
     *   *For Spirits:* If a spirit permanently Inhabits a host, the host’s personality is destroyed but their physical skills are retained. If the host is a Technomancer, their Resonance stat is permanently destroyed (reduced to 0 due to the Oil and Water rule).
     *   *For BTLs:* For users of Physical Override chips (like the Fuchsia Dragon), if the user takes Physical damage exceeding their Willpower while transformed, the temporary Sprite possession becomes permanent Inhabitation, permanently overwriting the user's mind and turning them into a feral, dual-natured NPC.
 
+#### 2. The Astral Plane & Canonical Spirits
+
+The Astral Plane is a parallel dimension of pure mana, emotion, and life force. In the Merged World, the Gaiasphere (the sum total of Earth's mana) and the Matrix (the ubiquitous nanite grid) have violently collided.
+
+*   **The Astral Landscape:** The Astral Plane is a dark, vibrant reflection of the physical world. Living things shine with an aura, while dead matter is grey and muted. However, due to the merger, areas of high Matrix density (like corporate hosts or dense AR zones) cast a "digital shadow" into the Astral, appearing as rigid, crystalline structures or blinding, static-filled storms.
+*   **Dual-Natured Entities:** Beings like Ghouls, Vampires, and manifested Spirits exist in both the physical and astral realms simultaneously. They can be attacked by physical weapons and astral combat alike.
+*   **Astral Signatures:** Every magical act leaves a temporary fingerprint called an astral signature. Assensing (Magical Perception) can read these signatures to track the caster or determine the nature of the magic.
+
+**Canonical Spirits:**
+While the new Crystalline Spirits act as bootloaders for AIs, traditional Shadowrun spirits still thrive, though their manifestations are often tainted by the omnipresent nanites.
+
+*   **Elemental Spirits (Fire, Water, Air, Earth):** These spirits embody the primal forces of nature. When summoned in the modern panopticon, their materialized forms often incorporate the environment. A Fire Elemental might pull in burning toxic waste, while an Earth Elemental might manifest from the crumbling concrete and rebar of the sprawl.
+*   **Spirits of Man:** Born from the collective unconscious and metahuman emotion, Spirits of Man are tied to the concept of civilization. They often manifest resembling urban legends, wearing trash or using digital AR noise to form their ethereal bodies. They have the unique ability to cast a spell known to their summoner.
+*   **Insect Spirits (The Bugs):** An invasive, alien threat from the deep metaplanes. Insect Spirits seek to conquer the physical world by inhabiting metahuman hosts, warping their flesh into terrifying, chitinous hybrids (Flesh Forms). In the Merged World, some tech-adapted strains (like the "Cyber-Mantises") have learned to inhabit large drones or localized server nodes instead of metahumans.
+
+---
+
 ---
 
 ### V. Character Creation Summary
@@ -85,6 +102,8 @@ All characters build and advance using **Karma**.
     * [Updated Matrix Actions: Tethers & G.O.D.](#updated-matrix-actions-tethers--god)
   * [III. Magic, Resonance, and the Soul](#iii-magic-resonance-and-the-soul)
   * [IV. Spirits, Sprites, and Hybrid Entities](#iv-spirits-sprites-and-hybrid-entities)
+    * [1. Unified Control & Possession Rules](#1-unified-control--possession-rules)
+    * [2. The Astral Plane & Canonical Spirits](#2-the-astral-plane--canonical-spirits)
   * [V. Character Creation Summary](#v-character-creation-summary)
   * [I. MAGIC: The Awakened Gaiasphere](#i-magic-the-awakened-gaiasphere)
     * [1. Spellcasting & Drain Calculations](#1-spellcasting--drain-calculations)
@@ -128,6 +147,8 @@ All characters build and advance using **Karma**.
     * [1. Wuxing "Null-Sec" Strike Teams](#1-wuxing-null-sec-strike-teams)
     * [2. Feral "Fuchsia Dragon" Abominations](#2-feral-fuchsia-dragon-abominations)
     * [3. G.O.D. "Antibodies" (Grid Immune Responses)](#3-god-antibodies-grid-immune-responses)
+    * [4. HMHVV Infected (Ghouls & Vampires)](#4-hmhvv-infected-ghouls--vampires)
+    * [5. Canonical Spirits (Elementals, Spirits of Man, Insect Spirits)](#5-canonical-spirits-elementals-spirits-of-man-insect-spirits)
     * [GM Advice: Running Combat in the 6th World](#gm-advice-running-combat-in-the-6th-world)
   * [XV. THE SHADOW ECONOMY: Trading in the Panopticon](#xv-the-shadow-economy-trading-in-the-panopticon)
     * [1. Currency & "Goo-Scrubbing"](#1-currency--goo-scrubbing)
@@ -3828,6 +3849,48 @@ Unlike feral ghouls, Strain I vampires retain their intellect and magical aptitu
 *   **Attributes:** BOD +1 | AGI +1 | STR +2 | WIL +2 | LOG +1 | CHA +2
 *   **Qualities:** Essence Drain, Regeneration (Heals 1 physical damage per turn, disabled by sunlight or wood), Severe Allergy (Sunlight).
 *   **Magic:** Many vampires are Awakened, retaining or gaining Magician status upon infection.
+
+#### 5. Canonical Spirits (Elementals, Spirits of Man, Insect Spirits)
+
+Traditional spirits summoned by Hermetic Mages and Shamans still patrol the concrete jungles, their forms often adapting to the toxic or technological nature of the Merged World.
+
+**Force 5 Fire Elemental**
+Summoned from the raging heat of a sprawl fire, these entities look like pillars of roiling flame and ash.
+*   **Attributes:** BOD 6 | AGI 7 | REA 6 | STR 4 | WIL 5 | LOG 5 | INT 5 | CHA 5 | ESS 5
+*   **Initiative:** 11 + 2D6
+*   **Condition Monitor:** Physical 11 / Stun 11
+*   **Armor:** 10 (Materialization / Hardened Armor)
+*   **Skills:** Assensing 5, Astral Combat 5, Close Combat 5, Perception 5, Ranged Combat (Exotic) 5.
+*   **Weapons:**
+    *   **Elemental Attack (Fire)**: (Damage 10P | AP -5). Range: Magic x 2 meters. Sets flammable materials alight.
+*   **Special Rules:**
+    *   **Dual-Natured & Materialization:** Can shift between the Astral and Physical planes. When materialized, gains Immunity to Normal Weapons (represented as Hardened Armor equal to Force x 2).
+    *   **Energy Aura:** Anyone successfully attacking the spirit in melee takes 5P (AP -5) Fire damage.
+
+**Force 5 Spirit of Man**
+A spirit of the city itself, often appearing as a hooded figure made of discarded tech, trash, and flickering AR advertisements.
+*   **Attributes:** BOD 5 | AGI 5 | REA 5 | STR 5 | WIL 5 | LOG 5 | INT 5 | CHA 5 | ESS 5
+*   **Initiative:** 10 + 2D6
+*   **Condition Monitor:** Physical 11 / Stun 11
+*   **Armor:** 10 (Materialization / Hardened Armor)
+*   **Skills:** Assensing 5, Astral Combat 5, Close Combat 5, Perception 5, Spellcasting 5.
+*   **Special Rules:**
+    *   **Innate Spell:** When summoned, the summoner can bestow one spell they know upon the spirit. The Spirit of Man can cast this spell using its own Force and Spellcasting skill.
+    *   **Concealment:** Can hide targets from physical and digital senses, subtracting its Force (5) from all Perception tests to spot the concealed subject.
+
+**Flesh-Form Insect Spirit (Mantis Strain)**
+A terrifying hybrid created when an Insect Spirit permanently inhabits a metahuman host. The host's flesh is warped into a hard, chitinous exoskeleton, and its limbs become scythe-like blades.
+*   **Attributes:** BOD 7 | AGI 6 | REA 6 | STR 7 | WIL 5 | LOG 3 | INT 5 | CHA 2 | ESS 6
+*   **Initiative:** 11 + 2D6
+*   **Condition Monitor:** Physical 12 / Stun 11
+*   **Armor:** 12 (Hardened Chitin)
+*   **Skills:** Close Combat 8, Sneaking 7, Perception 6, Gymnastics 6.
+*   **Weapons:**
+    *   **Scythe Limbs**: (Damage 9P | AP -3).
+*   **Special Rules:**
+    *   **Flesh Form:** Unlike true materialized spirits, Flesh Forms are completely physical and cannot return to the Astral Plane. They do not have Immunity to Normal Weapons in the traditional sense, but their chitin acts as Heavy Armor.
+    *   **Apex Predator:** Mantis spirits actively hunt other spirits. Their Scythe Limbs bypass the Hardened Armor (Immunity to Normal Weapons) of materialized spirits.
+
 
 #### GM Advice: Running Combat in the 6th World
 *   **Make them choose their ammo:** If the runners are fighting Wuxing, standard APDS ammo is best. But if a G.O.D Antibody spawns or a Fuchsia Dragon attacks, they will desperately wish they had loaded expensive Nanite-Buster rounds. Let them use 1 Action to swap magazines if they thought ahead!
