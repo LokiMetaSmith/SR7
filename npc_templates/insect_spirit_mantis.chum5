@@ -1,0 +1,39 @@
+<characters>
+  <character>
+    <name>Flesh-Form Insect Spirit (Mantis)</name>
+    <metatype>Hybrid</metatype>
+    <attributes>
+      <BOD>7</BOD>
+      <AGI>6</AGI>
+      <REA>6</REA>
+      <STR>7</STR>
+      <CHA>2</CHA>
+      <INT>5</INT>
+      <LOG>3</LOG>
+      <WIL>5</WIL>
+      <EDG>0</EDG>
+      <MAG>6</MAG>
+      <RES>0</RES>
+      <ESS>6</ESS>
+    </attributes>
+    <skills>
+      <skill><name>Close Combat</name><rating>8</rating></skill>
+      <skill><name>Sneaking</name><rating>7</rating></skill>
+      <skill><name>Perception</name><rating>6</rating></skill>
+      <skill><name>Gymnastics</name><rating>6</rating></skill>
+    </skills>
+    <weapons>
+      <weapon>
+        <name>Scythe Limbs</name>
+        <type>Melee</type>
+        <damage>9</damage>
+        <damage_type>P</damage_type>
+        <ap>-3</ap>
+      </weapon>
+    </weapons>
+    <armor>
+      <name>Hardened Chitin</name>
+      <value>12</value>
+    </armor>
+  </character>
+</characters>

@@ -1,0 +1,42 @@
+<characters>
+  <character>
+    <name>Force 5 Spirit of Man</name>
+    <metatype>Spirit</metatype>
+    <attributes>
+      <BOD>5</BOD>
+      <AGI>5</AGI>
+      <REA>5</REA>
+      <STR>5</STR>
+      <CHA>5</CHA>
+      <INT>5</INT>
+      <LOG>5</LOG>
+      <WIL>5</WIL>
+      <EDG>0</EDG>
+      <MAG>5</MAG>
+      <RES>0</RES>
+      <ESS>5</ESS>
+    </attributes>
+    <skills>
+      <skill><name>Assensing</name><rating>5</rating></skill>
+      <skill><name>Astral Combat</name><rating>5</rating></skill>
+      <skill><name>Close Combat</name><rating>5</rating></skill>
+      <skill><name>Perception</name><rating>5</rating></skill>
+      <skill><name>Spellcasting</name><rating>5</rating></skill>
+    </skills>
+    <spells>
+      <spell>
+        <name>Innate Spell (e.g. Manabolt)</name>
+        <category>Combat</category>
+        <type>M</type>
+        <range>LOS</range>
+        <damage>P</damage>
+        <duration>I</duration>
+        <drain>F-3</drain>
+      </spell>
+    </spells>
+    <armor>
+      <name>Materialization</name>
+      <value>10</value>
+    </armor>
+  </character>
+</characters>

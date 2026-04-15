@@ -1,0 +1,43 @@
+<characters>
+  <character>
+    <name>Force 5 Fire Elemental</name>
+    <metatype>Spirit</metatype>
+    <attributes>
+      <BOD>6</BOD>
+      <AGI>7</AGI>
+      <REA>6</REA>
+      <STR>4</STR>
+      <CHA>5</CHA>
+      <INT>5</INT>
+      <LOG>5</LOG>
+      <WIL>5</WIL>
+      <EDG>0</EDG>
+      <MAG>5</MAG>
+      <RES>0</RES>
+      <ESS>5</ESS>
+    </attributes>
+    <skills>
+      <skill><name>Assensing</name><rating>5</rating></skill>
+      <skill><name>Astral Combat</name><rating>5</rating></skill>
+      <skill><name>Close Combat</name><rating>5</rating></skill>
+      <skill><name>Perception</name><rating>5</rating></skill>
+      <skill><name>Exotic Ranged Weapon</name><rating>5</rating></skill>
+    </skills>
+    <weapons>
+      <weapon>
+        <name>Elemental Attack (Fire)</name>
+        <type>Ranged</type>
+        <damage>10</damage>
+        <damage_type>P</damage_type>
+        <ap>-5</ap>
+        <mode>SS</mode>
+        <rc>0</rc>
+        <ammo>0</ammo>
+      </weapon>
+    </weapons>
+    <armor>
+      <name>Materialization</name>
+      <value>10</value>
+    </armor>
+  </character>
+</characters>
