@@ -1,6 +1,10 @@
 import argparse
 import json
 import os
+import sys
+
+# Ensure we can import modules from the project root
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import re
 import xml.etree.ElementTree as ET
 import random
