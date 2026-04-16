@@ -1,7 +1,6 @@
 import argparse
 import re
 import hashlib
-import html
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from markdown_it import MarkdownIt
@@ -10,13 +9,6 @@ def parse_markdown(text):
     md = MarkdownIt("commonmark").enable("table")
     return md.parse(text)
 
-def escape_xml(text):
-    if text is None:
-        return ""
-    # We can use html.escape but we need to ensure it handles everything correctly
-    # xml.etree handles escaping automatically for element text and attributes.
-    # We'll just build the ET tree and write it, and it will escape correctly.
-    return str(text).strip()
 
 def extract_qualities(tokens):
     qualities = []

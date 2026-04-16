@@ -2,16 +2,18 @@ import argparse
 import re
 from markdown_it import MarkdownIt
 
+
 def parse_int_or_float(val_str):
     try:
-        val_str = val_str.replace('¥', '').replace(',', '').strip()
-        if '(' in val_str:
-            val_str = val_str.split('(')[0].strip()
-        if '/' in val_str:
-            val_str = val_str.split('/')[0].strip()
+        val_str = val_str.replace("¥", "").replace(",", "").strip()
+        if "(" in val_str:
+            val_str = val_str.split("(")[0].strip()
+        if "/" in val_str:
+            val_str = val_str.split("/")[0].strip()
         return float(val_str)
-    except:
+    except Exception:
         return 0.0
+
 
 def get_tables_with_positions(text):
     md = MarkdownIt("commonmark").enable("table")
@@ -37,12 +39,14 @@ def get_tables_with_positions(text):
                 end_line = token.map[1]
         elif token.type == "table_close":
             in_table = False
-            tables.append({
-                "start": start_line,
-                "end": end_line,
-                "headers": headers,
-                "rows": current_table_rows
-            })
+            tables.append(
+                {
+                    "start": start_line,
+                    "end": end_line,
+                    "headers": headers,
+                    "rows": current_table_rows,
+                }
+            )
         elif in_table and token.type == "tr_open":
             current_row = []
         elif in_table and token.type in ["th_open", "td_open"]:
@@ -60,6 +64,7 @@ def get_tables_with_positions(text):
                 current_table_rows.append(current_row)
 
     return tables
+
 
 # --- Balancing Constants (referencing rules.md) ---
 METATYPE_BASE_STATS = 56
@@ -82,13 +87,18 @@ WEAPON_MULT_PISTOL = 0.8
 WEAPON_MULT_HEAVY = 1.5
 # ------------------------------------------------
 
+
 def balance_metatypes(text):
     print("Balancing Metatypes...")
     tables = get_tables_with_positions(text)
     lines = text.split("\n")
 
     for t in tables:
-        if "Race" in t["headers"] and "BOD" in t["headers"] and "Karma Cost" in t["headers"]:
+        if (
+            "Race" in t["headers"]
+            and "BOD" in t["headers"]
+            and "Karma Cost" in t["headers"]
+        ):
             start_line = t["start"]
             end_line = t["end"]
 
@@ -99,23 +109,23 @@ def balance_metatypes(text):
                     new_table_lines.append(lines[i])
                     continue
                 line = lines[i]
-                if '---' in line or 'Race |' in line:
+                if "---" in line or "Race |" in line:
                     new_table_lines.append(line)
                     continue
 
-                parts = [p.strip() for p in line.split('|') if p.strip()]
+                parts = [p.strip() for p in line.split("|") if p.strip()]
                 if len(parts) >= 10:
-                    name = parts[0].replace('**', '').strip()
-                    if 'Human' == name:
+                    name = parts[0].replace("**", "").strip()
+                    if "Human" == name:
                         new_table_lines.append(line)
                         continue
 
                     stats = []
                     for j in range(1, 10):
                         try:
-                            stat_max = int(parts[j].split('/')[1].strip())
+                            stat_max = int(parts[j].split("/")[1].strip())
                             stats.append(stat_max)
-                        except:
+                        except Exception:
                             stats.append(6)
 
                     traits_col = parts[11] if len(parts) > 11 else ""
@@ -124,16 +134,24 @@ def balance_metatypes(text):
                     diff = total_max - METATYPE_BASE_STATS
                     calculated_cost = max(0, diff * METATYPE_KARMA_PER_POINT)
 
-                    if 'Thermographic Vision' in traits_col: calculated_cost += TRAIT_COST_THERMO
-                    if 'Low-Light Vision' in traits_col: calculated_cost += TRAIT_COST_LOW_LIGHT
-                    if 'Built Tough' in traits_col:
-                        bt_match = re.search(r'Built Tough \((\d+)\)', traits_col)
+                    if "Thermographic Vision" in traits_col:
+                        calculated_cost += TRAIT_COST_THERMO
+                    if "Low-Light Vision" in traits_col:
+                        calculated_cost += TRAIT_COST_LOW_LIGHT
+                    if "Built Tough" in traits_col:
+                        bt_match = re.search(r"Built Tough \((\d+)\)", traits_col)
                         if bt_match:
-                            calculated_cost += TRAIT_COST_BUILT_TOUGH * int(bt_match.group(1))
-                    if 'Reach (+1)' in traits_col: calculated_cost += TRAIT_COST_REACH
-                    if 'Reach (+2)' in traits_col: calculated_cost += TRAIT_COST_REACH * 2
-                    if 'Reach (+3)' in traits_col: calculated_cost += TRAIT_COST_REACH * 3
-                    if 'Allergy' in traits_col: calculated_cost += TRAIT_COST_ALLERGY
+                            calculated_cost += TRAIT_COST_BUILT_TOUGH * int(
+                                bt_match.group(1)
+                            )
+                    if "Reach (+1)" in traits_col:
+                        calculated_cost += TRAIT_COST_REACH
+                    if "Reach (+2)" in traits_col:
+                        calculated_cost += TRAIT_COST_REACH * 2
+                    if "Reach (+3)" in traits_col:
+                        calculated_cost += TRAIT_COST_REACH * 3
+                    if "Allergy" in traits_col:
+                        calculated_cost += TRAIT_COST_ALLERGY
 
                     calculated_cost = round(calculated_cost / 5) * 5
                     parts[10] = str(calculated_cost)
@@ -148,12 +166,12 @@ def balance_metatypes(text):
     print("Metatype table not found!")
     return text
 
+
 def balance_weapons(text):
     print("Balancing Weapons...")
     tables = get_tables_with_positions(text)
     lines = text.split("\n")
 
-    offset = 0
     # Process from bottom to top so offsets don't invalidate line numbers
     for t in reversed(tables):
         if "ACC" in t["headers"] and "DV" in t["headers"] and "COST" in t["headers"]:
@@ -174,15 +192,15 @@ def balance_weapons(text):
                     new_table_lines.append(lines[i])
                     continue
                 line = lines[i]
-                if not line.strip() or '|' not in line:
+                if not line.strip() or "|" not in line:
                     new_table_lines.append(line)
                     continue
 
-                if '---' in line:
+                if "---" in line:
                     new_table_lines.append(line)
                     continue
 
-                col_parts = [p.strip() for p in line.split('|')][1:-1]
+                col_parts = [p.strip() for p in line.split("|")][1:-1]
 
                 if len(col_parts) >= 9:
                     dv_str = col_parts[2]
@@ -191,36 +209,40 @@ def balance_weapons(text):
                     rc_str = col_parts[5]
                     ammo_str = col_parts[7]
 
-                    dv_match = re.search(r'(\d+)', dv_str)
+                    dv_match = re.search(r"(\d+)", dv_str)
                     dv = int(dv_match.group(1)) if dv_match else 0
 
-                    ap_match = re.search(r'(-?\d+)', ap_str)
+                    ap_match = re.search(r"(-?\d+)", ap_str)
                     ap = int(ap_match.group(1)) if ap_match else 0
 
-                    ammo_match = re.search(r'(\d+)', ammo_str)
+                    ammo_match = re.search(r"(\d+)", ammo_str)
                     ammo = int(ammo_match.group(1)) if ammo_match else 0
 
                     calculated_cost = WEAPON_BASE_COST
-                    calculated_cost += (dv ** 2) * WEAPON_DV_MULTIPLIER
+                    calculated_cost += (dv**2) * WEAPON_DV_MULTIPLIER
                     if ap < 0:
                         calculated_cost += abs(ap) * WEAPON_AP_COST
 
-                    if 'FA' in mode_str:
+                    if "FA" in mode_str:
                         calculated_cost += WEAPON_MODE_FA
-                    elif 'BF' in mode_str:
+                    elif "BF" in mode_str:
                         calculated_cost += WEAPON_MODE_BF
-                    elif 'SA' in mode_str:
+                    elif "SA" in mode_str:
                         calculated_cost += WEAPON_MODE_SA
 
-                    rc_match = re.search(r'(\d+)', rc_str)
+                    rc_match = re.search(r"(\d+)", rc_str)
                     rc = int(rc_match.group(1)) if rc_match else 0
                     calculated_cost += rc * WEAPON_RC_COST
 
                     calculated_cost += ammo * WEAPON_AMMO_COST
 
-                    if 'Pistol' in category or 'Hold-Out' in category:
+                    if "Pistol" in category or "Hold-Out" in category:
                         calculated_cost *= WEAPON_MULT_PISTOL
-                    elif 'Sniper' in category or 'Cannon' in category or 'Machine Gun' in category:
+                    elif (
+                        "Sniper" in category
+                        or "Cannon" in category
+                        or "Machine Gun" in category
+                    ):
                         calculated_cost *= WEAPON_MULT_HEAVY
 
                     if calculated_cost > 10000:
@@ -234,8 +256,12 @@ def balance_weapons(text):
 
                     if len(col_parts) > 0:
                         original_cost_str = col_parts[-1]
-                        new_cost_str = f"{int(calculated_cost)}¥" if '¥' in original_cost_str or original_cost_str.isdigit() else str(int(calculated_cost))
-                        if original_cost_str != '-' and original_cost_str != '':
+                        new_cost_str = (
+                            f"{int(calculated_cost)}¥"
+                            if "¥" in original_cost_str or original_cost_str.isdigit()
+                            else str(int(calculated_cost))
+                        )
+                        if original_cost_str != "-" and original_cost_str != "":
                             col_parts[-1] = new_cost_str
 
                     new_line = "| " + " | ".join(col_parts) + " |"
@@ -247,23 +273,26 @@ def balance_weapons(text):
 
     return "\n".join(lines)
 
+
 def main():
-    parser = argparse.ArgumentParser(description="Balance Metatypes and Weapons in Shadowrun 7E Homebrew rules markdown.")
+    parser = argparse.ArgumentParser(
+        description="Balance Metatypes and Weapons in Shadowrun 7E Homebrew rules markdown."
+    )
     parser.add_argument(
         "file",
         nargs="?",
         default="Fan made Shadowrun 7th Edition rules.md",
-        help="Path to the markdown file to balance (default: 'Fan made Shadowrun 7th Edition rules.md')"
+        help="Path to the markdown file to balance (default: 'Fan made Shadowrun 7th Edition rules.md')",
     )
     parser.add_argument(
         "--output",
         "-o",
-        help="Path to save the balanced markdown file. If not provided, overwrites the input file."
+        help="Path to save the balanced markdown file. If not provided, overwrites the input file.",
     )
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help="Print the balancing operations without saving changes to any file."
+        help="Print the balancing operations without saving changes to any file.",
     )
     args = parser.parse_args()
 
@@ -271,7 +300,7 @@ def main():
     output_filepath = args.output if args.output else input_filepath
 
     try:
-        with open(input_filepath, 'r') as f:
+        with open(input_filepath, "r") as f:
             text = f.read()
     except FileNotFoundError:
         print(f"Error: File '{input_filepath}' not found.")
@@ -289,11 +318,14 @@ def main():
         return
 
     try:
-        with open(output_filepath, 'w') as f:
+        with open(output_filepath, "w") as f:
             f.write(text)
-        print(f"Balancing complete! The markdown file '{output_filepath}' has been updated.")
+        print(
+            f"Balancing complete! The markdown file '{output_filepath}' has been updated."
+        )
     except Exception as e:
         print(f"Error writing to file '{output_filepath}': {e}")
+
 
 if __name__ == "__main__":
     main()
