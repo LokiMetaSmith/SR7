@@ -1,6 +1,6 @@
 import pygame
 import sys
-from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon
+from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
 from ui.components import PlayerCard, GMCard
 
 class App:
@@ -16,36 +16,10 @@ class App:
         self.pending_action = None
 
         # Create dummy data initially
-        player_combatant = Combatant(
-            name="Kyber",
-            source_file="",
-            attributes={"BOD": 5, "AGI": 6, "REA": 5, "STR": 4, "WIL": 4, "LOG": 5, "INT": 4, "CHA": 2},
-            weapons=[Weapon(name="Ares Predator V", damage=8, damage_type="P", ap=-1, ammo=15, mode="SA")],
-            matrix=MatrixAttributes(attack=0, sleaze=0, data_processing=4, firewall=5),
-            armor=12,
-            physical_track=11,
-            stun_track=10,
-            physical_damage=3,
-            stun_damage=0,
-            edge=3,
-            initiative_score=9
-        )
+        player_combatant = load_combatant("npc_templates/Kyber.chum5")
 
-        gm_combatant = Combatant(
-            name="Lone Star Enforcer",
-            source_file="",
-            attributes={"BOD": 4, "AGI": 4, "REA": 4, "STR": 4, "WIL": 3, "LOG": 3, "INT": 3, "CHA": 3},
-            weapons=[Weapon(name="Defiance T-250", damage=10, damage_type="P", ap=-1, ammo=5, mode="SS/SA")],
-            matrix=MatrixAttributes(attack=0, sleaze=0, data_processing=3, firewall=3),
-            armor=9,
-            physical_track=10,
-            stun_track=10,
-            physical_damage=0,
-            stun_damage=0,
-            edge=1,
-            initiative_score=7,
-            team=1
-        )
+        gm_combatant = load_combatant("npc_templates/Sargent_Igneous.chum5")
+        gm_combatant.team = 1
 
         self.player_cards = []
         self.gm_cards = []

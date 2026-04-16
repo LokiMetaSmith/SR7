@@ -1,6 +1,6 @@
 import pytest
 import pygame
-from scripts.combat_simulator import Combatant, MatrixAttributes
+from scripts.combat_simulator import Combatant, MatrixAttributes, load_combatant
 from ui.components import PlayerCard, GMCard
 
 import os
@@ -15,37 +15,22 @@ def setup_pygame():
     pygame.quit()
 
 def test_player_card_initialization():
-    combatant = Combatant(
-        name="Test Player",
-        source_file="",
-        attributes={"BOD": 3},
-        matrix=MatrixAttributes()
-    )
+    combatant = load_combatant("npc_templates/Kyber.chum5")
     card = PlayerCard(combatant)
     assert not card.is_gm
-    assert card.combatant.name == "Test Player"
+    assert card.combatant.name == "Kyber"
     assert not card.expanded
 
 def test_gm_card_initialization():
-    combatant = Combatant(
-        name="Test GM",
-        source_file="",
-        attributes={"BOD": 4},
-        matrix=MatrixAttributes(),
-        team=1
-    )
+    combatant = load_combatant("npc_templates/Sargent_Igneous.chum5")
+    combatant.team = 1
     card = GMCard(combatant)
     assert card.is_gm
-    assert card.combatant.name == "Test GM"
+    assert card.combatant.name == "Sargent Igneous"
     assert not card.expanded
 
 def test_card_draw_headless():
-    combatant = Combatant(
-        name="Test Character",
-        source_file="",
-        attributes={"BOD": 3},
-        matrix=MatrixAttributes()
-    )
+    combatant = load_combatant("npc_templates/Kyber.chum5")
     card = PlayerCard(combatant)
 
     # Create an invisible surface
@@ -56,12 +41,7 @@ def test_card_draw_headless():
     assert card.rect.topleft == (50, 50)
 
 def test_card_click_expansion():
-    combatant = Combatant(
-        name="Test Character",
-        source_file="",
-        attributes={"BOD": 3},
-        matrix=MatrixAttributes()
-    )
+    combatant = load_combatant("npc_templates/Kyber.chum5")
     card = PlayerCard(combatant)
 
     # Simulate drawing to set the rect position
