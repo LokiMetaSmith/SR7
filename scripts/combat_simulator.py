@@ -29,6 +29,8 @@ class Weapon:
 class Spell:
     name: str
     type: str  # M or P
+    damage_formula: str  # e.g. "F-2"
+    drain_formula: str  # e.g. "F-4"
 
 
 @dataclass
@@ -43,10 +45,14 @@ class MatrixAttributes:
 class Vehicle:
     name: str
     handling: int = 4
+    speed: int = 3
+    accel: int = 2
     body: int = 4
     armor: int = 4
+    sensor: int = 3
     physical_track: int = 10
     physical_damage: int = 0
+    is_destroyed: bool = False
     weapons: List[Weapon] = field(default_factory=list)
     swarm_count: int = 1
 
@@ -253,8 +259,10 @@ def parse_chummer(file_path: str) -> Combatant:
             sn = spell.find("name").text
             # Basic parsing of spell tags if present, default to generic "Mana" / "F-2" otherwise
             st = "M"
+            sd = "F"
+            sdr = "F-2"
 
-            c.spells.append(Spell(name=sn, type=st))
+            c.spells.append(Spell(name=sn, type=st, damage_formula=sd, drain_formula=sdr))
 
     # Try mapping matrix stats
     if (
@@ -447,7 +455,7 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
         for sp in spells_text.split(","):
             sp = sp.strip()
             if sp:
-                c.spells.append(Spell(name=sp, type="M"))
+                c.spells.append(Spell(name=sp, type="M", damage_formula="F", drain_formula="F-2"))
 
     # Matrix Attributes
     # Typically found in commlink/deck gear or special attributes
@@ -1209,7 +1217,7 @@ def main():
                             ):
                                 target.jumped_in_vehicle.swarm_count -= 1
                                 if target.jumped_in_vehicle.swarm_count <= 0:
-                                    pass
+                                    target.jumped_in_vehicle.is_destroyed = True
                                     target.stun_damage += 6
                                     target.jumped_in_vehicle = None  # Dumped
                                     result_text += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
