@@ -135,7 +135,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
             if is_social:
                 cha = active.attributes.get("CHA", 3)
                 attack_pool = cha + 5
-                attack_hits, attack_hits_glitched, _ = RulesEngine.roll_attack_with_edge(attack_pool, active)
+                attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
 
                 target_wil = target.attributes.get("WIL", 3)
                 target_resist = target_wil + target.attributes.get("CHA", 3)
@@ -163,7 +163,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                 spell_skill = active.skills.get("Spellcasting", 5)
 
                 attack_pool = mag + spell_skill
-                attack_hits, attack_hits_glitched, _ = RulesEngine.roll_attack_with_edge(attack_pool, active)
+                attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
 
                 if spell.type == "M":
                     def_pool = target.attributes.get("ESS", 6) + target.attributes.get(
@@ -215,7 +215,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                 log = active.attributes.get("LOG", 3)
                 cyber_skill = active.skills.get("Cybercombat", 5)
                 attack_pool = log + cyber_skill
-                attack_hits, attack_hits_glitched, _ = RulesEngine.roll_attack_with_edge(attack_pool, active)
+                attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
 
                 def_pool = target.attributes.get("INT", 3) + target.matrix.firewall
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
@@ -243,7 +243,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                 log = active.attributes.get("LOG", 3)
                 hack_skill = active.skills.get("Hacking", 5)
                 attack_pool = log + hack_skill
-                attack_hits, attack_hits_glitched, _ = RulesEngine.roll_attack_with_edge(attack_pool, active)
+                attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
 
                 def_pool = target.attributes.get("WIL", 3) + target.matrix.firewall
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
@@ -302,7 +302,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                         )
                     attack_pool = active.attributes.get("AGI", 3) + skill_val
 
-                attack_hits, attack_hits_glitched, _ = RulesEngine.roll_attack_with_edge(attack_pool, active)
+                attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
 
                 if target.jumped_in_vehicle:
                     def_pool = (

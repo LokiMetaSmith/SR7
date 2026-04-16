@@ -43,8 +43,8 @@ def main():
 
     for i in range(len(combatants)):
         for j in range(i + 1, len(combatants)):
-            c1_base, _ = combatants[i]
-            c2_base, _ = combatants[j]
+            c1_base, _file1 = combatants[i]
+            c2_base, _file2 = combatants[j]
 
             # print(f"Match: {c1_base.name} vs {c2_base.name}...")
             c1_wins = 0
