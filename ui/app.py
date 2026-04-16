@@ -9,7 +9,7 @@ class App:
             pygame.init()
         self.width = width
         self.height = height
-        self.screen = pygame.display.set_mode((self.width, self.height))
+        self.screen = pygame.display.set_mode((self.width, self.height), pygame.RESIZABLE)
         pygame.display.set_caption("Shadowrun 7E - Interactive Cards")
         self.clock = pygame.time.Clock()
         self.running = True
@@ -79,6 +79,11 @@ class App:
         for i, c in enumerate(t2):
             self.gm_cards[i].combatant = c
 
+        req_width = max(1000, int(50 + len(self.player_cards) * 370 + max(0, 550 - 50 - len(self.player_cards)*370) + len(self.gm_cards) * 370 + 50))
+        if req_width > self.width:
+            self.width = req_width
+            self.screen = pygame.display.set_mode((self.width, self.height), pygame.RESIZABLE)
+
     def tick(self):
         """Processes one frame of the UI, suitable for a host event loop."""
         self.handle_events()
@@ -116,6 +121,27 @@ class App:
                 card.handle_event(event)
             for card in self.gm_cards:
                 card.handle_event(event)
+
+        mouse_pos = pygame.mouse.get_pos()
+        hovered = False
+        for card in self.player_cards + self.gm_cards:
+            if not card.expanded and card.rect.collidepoint(mouse_pos):
+                hovered = True
+                break
+            if card.expanded and any(r.collidepoint(mouse_pos) for r, _ in card.action_rects):
+                hovered = True
+                break
+
+        if hovered:
+            try:
+                pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
+            except pygame.error:
+                pass # Dummy driver issues
+        else:
+            try:
+                pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_ARROW)
+            except pygame.error:
+                pass # Dummy driver issues
 
     def draw(self):
         self.screen.fill((20, 20, 20)) # Dark background

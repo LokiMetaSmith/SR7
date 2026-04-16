@@ -87,6 +87,19 @@ class BaseCard:
         edge_surf = self.font_body.render(edge_text, True, COLORS["border"])
         surface.blit(edge_surf, (panel_rect.right - edge_surf.get_width() - 10, panel_rect.y + 10))
 
+    def _draw_action_button(self, surface: pygame.Surface, rect: pygame.Rect, text_render: pygame.Surface):
+        mouse_pos = pygame.mouse.get_pos()
+        is_hovered = rect.collidepoint(mouse_pos)
+
+        bg_color = COLORS["highlight"] if is_hovered else (60, 60, 60)
+
+        pygame.draw.rect(surface, bg_color, rect, border_radius=4)
+
+        # Center the text vertically and pad horizontally
+        text_x = rect.x + 8
+        text_y = rect.y + (rect.height - text_render.get_height()) // 2
+        surface.blit(text_render, (text_x, text_y))
+
     def _draw_panel_2_status(self, surface: pygame.Surface):
         # Panel 2: Status (Middle)
         panel_rect = pygame.Rect(self.rect.x + 5, self.rect.y + 90, self.rect.width - 10, 100)
@@ -134,30 +147,30 @@ class BaseCard:
         y_offset += 20
 
         for w in self.combatant.weapons[:3]:
-            wpn_text = f"- {w.name} (DV:{w.damage} AP:{w.ap})"
+            wpn_text = f"{w.name} (DV:{w.damage} AP:{w.ap})"
             rendered_text = self.font_small.render(wpn_text, True, COLORS["text"])
-            btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 10, 16)
+            btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 16, 24)
             self.action_rects.append((btn_rect, f"attack with {w.name}"))
-            y_offset += 18
+            y_offset += 26
 
         y_offset += 10
         if self.combatant.spells:
             y_offset += 20
             for s in self.combatant.spells[:2]:
-                spl_text = f"- {s.name}"
+                spl_text = f"{s.name}"
                 rendered_text = self.font_small.render(spl_text, True, COLORS["text"])
-                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 10, 16)
+                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 16, 24)
                 self.action_rects.append((btn_rect, f"cast {s.name}"))
-                y_offset += 18
+                y_offset += 26
 
         y_offset += 10
         y_offset += 20
         if self.combatant.matrix.attack > 0:
-            ds_text = "- Data Spike"
+            ds_text = "Data Spike"
             ds_render = self.font_small.render(ds_text, True, COLORS["text"])
-            btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, ds_render.get_width() + 10, 16)
+            btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, ds_render.get_width() + 16, 24)
             self.action_rects.append((btn_rect, "data spike"))
-            y_offset += 18
+            y_offset += 26
 
         if self.combatant.tethers:
             y_offset += 18
@@ -168,10 +181,10 @@ class BaseCard:
         y_offset += 20
 
         for action_name, action_cmd in [("Sprint", "sprint"), ("Take Cover", "take cover"), ("Yield", "yield")]:
-            act_render = self.font_small.render(f"- {action_name}", True, COLORS["text"])
-            btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, act_render.get_width() + 10, 16)
+            act_render = self.font_small.render(f"{action_name}", True, COLORS["text"])
+            btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, act_render.get_width() + 16, 24)
             self.action_rects.append((btn_rect, action_cmd))
-            y_offset += 18
+            y_offset += 26
 
     def _draw_panel_3_mechanics(self, surface: pygame.Surface):
         self.action_rects.clear()
@@ -187,16 +200,17 @@ class BaseCard:
         surface.blit(wpn_header, (panel_rect.x + 10, y_offset))
         y_offset += 20
         for w in self.combatant.weapons[:3]: # Show up to 3
-            wpn_text = f"- {w.name} (DV:{w.damage} AP:{w.ap})"
+            wpn_text = f"{w.name} (DV:{w.damage} AP:{w.ap})"
             rendered_text = self.font_small.render(wpn_text, True, COLORS["text"])
 
             if self.expanded:
-                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 10, 16)
-                pygame.draw.rect(surface, COLORS["highlight"], btn_rect, border_radius=2)
+                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 16, 24)
+                self._draw_action_button(surface, btn_rect, rendered_text)
                 self.action_rects.append((btn_rect, f"attack with {w.name}"))
-
-            surface.blit(rendered_text, (panel_rect.x + 20, y_offset))
-            y_offset += 18
+                y_offset += 26
+            else:
+                surface.blit(rendered_text, (panel_rect.x + 20, y_offset))
+                y_offset += 18
 
         # Matrix/Spells/Tethers if expanded or relevant
         if self.expanded:
@@ -206,14 +220,12 @@ class BaseCard:
                 surface.blit(spl_header, (panel_rect.x + 10, y_offset))
                 y_offset += 20
                 for s in self.combatant.spells[:2]:
-                    spl_text = f"- {s.name}"
+                    spl_text = f"{s.name}"
                     rendered_text = self.font_small.render(spl_text, True, COLORS["text"])
-                    btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 10, 16)
-                    pygame.draw.rect(surface, COLORS["highlight"], btn_rect, border_radius=2)
+                    btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 16, 24)
+                    self._draw_action_button(surface, btn_rect, rendered_text)
                     self.action_rects.append((btn_rect, f"cast {s.name}"))
-
-                    surface.blit(rendered_text, (panel_rect.x + 20, y_offset))
-                    y_offset += 18
+                    y_offset += 26
 
             y_offset += 10
             mat_header = self.font_body.render(f"Matrix (A:{self.combatant.matrix.attack} S:{self.combatant.matrix.sleaze} D:{self.combatant.matrix.data_processing} F:{self.combatant.matrix.firewall})", True, COLORS["text"])
@@ -221,13 +233,12 @@ class BaseCard:
             y_offset += 20
 
             if self.combatant.matrix.attack > 0:
-                ds_text = "- Data Spike"
+                ds_text = "Data Spike"
                 ds_render = self.font_small.render(ds_text, True, COLORS["text"])
-                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, ds_render.get_width() + 10, 16)
-                pygame.draw.rect(surface, COLORS["highlight"], btn_rect, border_radius=2)
+                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, ds_render.get_width() + 16, 24)
+                self._draw_action_button(surface, btn_rect, ds_render)
                 self.action_rects.append((btn_rect, "data spike"))
-                surface.blit(ds_render, (panel_rect.x + 20, y_offset))
-                y_offset += 18
+                y_offset += 26
 
             if self.combatant.tethers:
                 teth_text = f"Tethers: {len(self.combatant.tethers)}"
@@ -245,12 +256,11 @@ class BaseCard:
             y_offset += 20
 
             for action_name, action_cmd in [("Sprint", "sprint"), ("Take Cover", "take cover"), ("Yield", "yield")]:
-                act_render = self.font_small.render(f"- {action_name}", True, COLORS["text"])
-                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, act_render.get_width() + 10, 16)
-                pygame.draw.rect(surface, COLORS["highlight"], btn_rect, border_radius=2)
+                act_render = self.font_small.render(f"{action_name}", True, COLORS["text"])
+                btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, act_render.get_width() + 16, 24)
+                self._draw_action_button(surface, btn_rect, act_render)
                 self.action_rects.append((btn_rect, action_cmd))
-                surface.blit(act_render, (panel_rect.x + 20, y_offset))
-                y_offset += 18
+                y_offset += 26
 
 class PlayerCard(BaseCard):
     def __init__(self, combatant: Combatant, width: int = 350, height: int = 500, on_action=None):
