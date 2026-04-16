@@ -1,5 +1,6 @@
 import pygame
 import sys
+from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
 from ui.components import PlayerCard, GMCard
 
 
@@ -16,7 +17,10 @@ class App:
         self.pending_action = None
 
         # Create dummy data initially
+        player_combatant = load_combatant("npc_templates/Kyber.chum5")
 
+        gm_combatant = load_combatant("npc_templates/Sargent_Igneous.chum5")
+        gm_combatant.team = 1
 
         self.player_cards = []
         self.gm_cards = []

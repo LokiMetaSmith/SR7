@@ -108,6 +108,19 @@ class BaseCard:
         text_y = rect.y + (rect.height - text_render.get_height()) // 2
         surface.blit(text_render, (text_x, text_y))
 
+    def _draw_action_button(self, surface: pygame.Surface, rect: pygame.Rect, text_render: pygame.Surface):
+        mouse_pos = pygame.mouse.get_pos()
+        is_hovered = rect.collidepoint(mouse_pos)
+
+        bg_color = COLORS["highlight"] if is_hovered else (60, 60, 60)
+
+        pygame.draw.rect(surface, bg_color, rect, border_radius=4)
+
+        # Center the text vertically and pad horizontally
+        text_x = rect.x + 8
+        text_y = rect.y + (rect.height - text_render.get_height()) // 2
+        surface.blit(text_render, (text_x, text_y))
+
     def _draw_panel_2_status(self, surface: pygame.Surface):
         # Panel 2: Status (Middle)
         panel_rect = pygame.Rect(

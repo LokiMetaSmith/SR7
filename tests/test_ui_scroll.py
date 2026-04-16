@@ -26,6 +26,7 @@ def test_app_scroll_limits():
     for i in range(5):
         combatants.append(Combatant(
             name=f"Player {i}",
+            source_file="",
             attributes={"BOD": 3},
             matrix=MatrixAttributes(),
             team=1
@@ -33,6 +34,7 @@ def test_app_scroll_limits():
     for i in range(5):
         combatants.append(Combatant(
             name=f"GM {i}",
+            source_file="",
             attributes={"BOD": 3},
             matrix=MatrixAttributes(),
             team=2
