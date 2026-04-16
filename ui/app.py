@@ -51,6 +51,8 @@ class App:
         self.gm_cards = []
         self.state = None
         self.running = True
+        self.scroll_x = 0
+        self.scroll_y = 0
 
     def set_pending_action(self, action: str):
         self.pending_action = action
@@ -79,11 +81,6 @@ class App:
         for i, c in enumerate(t2):
             self.gm_cards[i].combatant = c
 
-        req_width = max(1000, int(50 + len(self.player_cards) * 370 + max(0, 550 - 50 - len(self.player_cards)*370) + len(self.gm_cards) * 370 + 50))
-        if req_width > self.width:
-            self.width = req_width
-            self.screen = pygame.display.set_mode((self.width, self.height), pygame.RESIZABLE)
-
     def tick(self):
         """Processes one frame of the UI, suitable for a host event loop."""
         self.handle_events()
@@ -100,21 +97,44 @@ class App:
 
     def handle_events(self):
         # Ensure rects are up-to-date before clicks
-        x_offset = 50
+        x_offset = 50 + self.scroll_x
         for card in self.player_cards:
-            card.rect.topleft = (x_offset, 100)
+            card.rect.topleft = (x_offset, 100 + self.scroll_y)
             card.update_rects()
             x_offset += 370
 
-        x_offset = max(x_offset, 550)
+        x_offset = max(x_offset, 550 + self.scroll_x)
         for card in self.gm_cards:
-            card.rect.topleft = (x_offset, 100)
+            card.rect.topleft = (x_offset, 100 + self.scroll_y)
             card.update_rects()
             x_offset += 370
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
+            elif event.type == pygame.VIDEORESIZE:
+                self.width, self.height = event.w, event.h
+                self.screen = pygame.display.set_mode((self.width, self.height), pygame.RESIZABLE)
+            elif event.type == pygame.MOUSEWHEEL:
+                # Use shift+scroll or regular scroll to move horizontally
+                mods = pygame.key.get_mods()
+                if mods & pygame.KMOD_SHIFT:
+                    self.scroll_x += event.y * 30
+                else:
+                    self.scroll_x += event.x * 30
+                    self.scroll_y += event.y * 30
+
+                # Limit scrolling
+                total_width = 50 + len(self.player_cards) * 370
+                total_width = max(total_width, 550)
+                total_width += len(self.gm_cards) * 370 + 50
+
+                min_scroll_x = min(0, self.width - total_width)
+                self.scroll_x = max(min_scroll_x, min(0, self.scroll_x))
+
+                # Assume a fixed max height for cards for now
+                min_scroll_y = min(0, self.height - 650)
+                self.scroll_y = max(min_scroll_y, min(0, self.scroll_y))
 
             # Pass events to components
             for card in self.player_cards:
@@ -153,14 +173,14 @@ class App:
             self.screen.blit(turn_surf, (100, 20))
 
         # Draw cards side by side
-        x_offset = 50
+        x_offset = 50 + self.scroll_x
         for card in self.player_cards:
-            card.draw(self.screen, x_offset, 100)
+            card.draw(self.screen, x_offset, 100 + self.scroll_y)
             x_offset += 370
 
-        x_offset = max(x_offset, 550)
+        x_offset = max(x_offset, 550 + self.scroll_x)
         for card in self.gm_cards:
-            card.draw(self.screen, x_offset, 100)
+            card.draw(self.screen, x_offset, 100 + self.scroll_y)
             x_offset += 370
 
         pygame.display.flip()
