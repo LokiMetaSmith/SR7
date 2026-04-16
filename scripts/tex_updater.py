@@ -28,8 +28,16 @@ for headers, rows in tables:
                 cost = row[cost_idx].strip() if cost_idx != -1 else ""
 
                 md_weapons[name] = {
-                    "ACC": acc, "DV": dv, "AP": ap, "MODE": mode, "RC": rc,
-                    "RANGE": range_, "AMMO": ammo, "AVAIL": avail, "WEIGHT": weight, "COST": cost
+                    "ACC": acc,
+                    "DV": dv,
+                    "AP": ap,
+                    "MODE": mode,
+                    "RC": rc,
+                    "RANGE": range_,
+                    "AMMO": ammo,
+                    "AVAIL": avail,
+                    "WEIGHT": weight,
+                    "COST": cost,
                 }
 
 with open("Fan made Shadowrun 7th Edition rules.tex", "r") as f:
@@ -48,33 +56,50 @@ for line in tex_lines:
         parts = line.split("&")
         if len(parts) >= 6:
             tex_name = parts[0].strip()
-            clean_name = re.sub(r'\\textbf{([^}]+)}', r'\1', tex_name)
-            clean_name = re.sub(r'\\gameterm{([^}]+)}', r'\1', clean_name)
+            clean_name = re.sub(r"\\textbf{([^}]+)}", r"\1", tex_name)
+            clean_name = re.sub(r"\\gameterm{([^}]+)}", r"\1", clean_name)
             clean_name = clean_name.strip()
 
-            if clean_name in md_weapons and "ACC" not in parts[1] and "DV" not in parts[2]:
+            if (
+                clean_name in md_weapons
+                and "ACC" not in parts[1]
+                and "DV" not in parts[2]
+            ):
                 w = md_weapons[clean_name]
 
                 parts[1] = " " + w["ACC"] + " "
                 parts[2] = " " + w["DV"] + " "
                 parts[3] = " " + w["AP"] + " "
-                if len(parts) > 4: parts[4] = " " + w["MODE"] + " "
-                if len(parts) > 5: parts[5] = " " + w["RC"] + " "
-                if len(parts) > 6 and "RANGE" in w: parts[6] = " " + w["RANGE"] + " "
-                if len(parts) > 7 and "AMMO" in w: parts[7] = " " + w["AMMO"] + " "
-                if len(parts) > 8 and "AVAIL" in w: parts[8] = " " + w["AVAIL"] + " "
-                if len(parts) > 9 and "WEIGHT" in w: parts[9] = " " + w["WEIGHT"] + " "
+                if len(parts) > 4:
+                    parts[4] = " " + w["MODE"] + " "
+                if len(parts) > 5:
+                    parts[5] = " " + w["RC"] + " "
+                if len(parts) > 6 and "RANGE" in w:
+                    parts[6] = " " + w["RANGE"] + " "
+                if len(parts) > 7 and "AMMO" in w:
+                    parts[7] = " " + w["AMMO"] + " "
+                if len(parts) > 8 and "AVAIL" in w:
+                    parts[8] = " " + w["AVAIL"] + " "
+                if len(parts) > 9 and "WEIGHT" in w:
+                    parts[9] = " " + w["WEIGHT"] + " "
 
                 if len(parts) >= 11 and w["COST"]:
                     end_part = parts[-1]
                     cost_str = w["COST"]
-                    if cost_str and not cost_str.endswith("¥") and cost_str != "–" and cost_str != "TBD":
+                    if (
+                        cost_str
+                        and not cost_str.endswith("¥")
+                        and cost_str != "–"
+                        and cost_str != "TBD"
+                    ):
                         cost_str += "\\textyen "
                     elif cost_str.endswith("¥"):
                         cost_str = cost_str[:-1] + "\\textyen "
 
                     if "\\\\" in end_part:
-                        parts[-1] = " " + cost_str + "\\\\" + end_part.split("\\\\", 1)[1]
+                        parts[-1] = (
+                            " " + cost_str + "\\\\" + end_part.split("\\\\", 1)[1]
+                        )
                     else:
                         parts[-1] = " " + cost_str + " "
 

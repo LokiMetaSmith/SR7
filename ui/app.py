@@ -3,6 +3,7 @@ import sys
 from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
 from ui.components import PlayerCard, GMCard
 
+
 class App:
     def __init__(self, width: int = 1000, height: int = 700):
         if not pygame.get_init():
@@ -40,7 +41,14 @@ class App:
 
         # Match lengths or update existing to preserve state
         while len(self.player_cards) < len(t1):
-            self.player_cards.append(PlayerCard(t1[len(self.player_cards)], width=350, height=500, on_action=self.set_pending_action))
+            self.player_cards.append(
+                PlayerCard(
+                    t1[len(self.player_cards)],
+                    width=350,
+                    height=500,
+                    on_action=self.set_pending_action,
+                )
+            )
         while len(self.player_cards) > len(t1):
             self.player_cards.pop()
 
@@ -48,7 +56,14 @@ class App:
             self.player_cards[i].combatant = c
 
         while len(self.gm_cards) < len(t2):
-            self.gm_cards.append(GMCard(t2[len(self.gm_cards)], width=350, height=500, on_action=self.set_pending_action))
+            self.gm_cards.append(
+                GMCard(
+                    t2[len(self.gm_cards)],
+                    width=350,
+                    height=500,
+                    on_action=self.set_pending_action,
+                )
+            )
         while len(self.gm_cards) > len(t2):
             self.gm_cards.pop()
 
@@ -138,7 +153,7 @@ class App:
                 pass # Dummy driver issues
 
     def draw(self):
-        self.screen.fill((20, 20, 20)) # Dark background
+        self.screen.fill((20, 20, 20))  # Dark background
 
         font = pygame.font.SysFont("monospace", 16, bold=True)
         if self.state:

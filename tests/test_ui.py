@@ -4,6 +4,8 @@ from scripts.combat_simulator import Combatant, MatrixAttributes, load_combatant
 from ui.components import PlayerCard, GMCard
 
 import os
+
+
 @pytest.fixture(scope="module", autouse=True)
 def setup_pygame():
     os.environ["SDL_VIDEODRIVER"] = "dummy"
@@ -14,12 +16,14 @@ def setup_pygame():
     yield
     pygame.quit()
 
+
 def test_player_card_initialization():
     combatant = load_combatant("npc_templates/Kyber.chum5")
     card = PlayerCard(combatant)
     assert not card.is_gm
     assert card.combatant.name == "Kyber"
     assert not card.expanded
+
 
 def test_gm_card_initialization():
     combatant = load_combatant("npc_templates/Sargent_Igneous.chum5")
@@ -28,6 +32,7 @@ def test_gm_card_initialization():
     assert card.is_gm
     assert card.combatant.name == "Sargent Igneous"
     assert not card.expanded
+
 
 def test_card_draw_headless():
     combatant = load_combatant("npc_templates/Kyber.chum5")
@@ -40,6 +45,7 @@ def test_card_draw_headless():
     card.draw(surface, 50, 50)
     assert card.rect.topleft == (50, 50)
 
+
 def test_card_click_expansion():
     combatant = load_combatant("npc_templates/Kyber.chum5")
     card = PlayerCard(combatant)
@@ -51,7 +57,9 @@ def test_card_click_expansion():
     assert not card.expanded
 
     # Simulate a mouse click within the card's rect
-    click_event = pygame.event.Event(pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": (10, 10)})
+    click_event = pygame.event.Event(
+        pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": (10, 10)}
+    )
     handled = card.handle_event(click_event)
 
     assert handled

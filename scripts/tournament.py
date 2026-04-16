@@ -9,6 +9,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from combat_simulator import load_combatant, parse_scenario
 from combat_analyzer import run_simulation
 
+
 def main():
     npc_files = glob.glob("npc_templates/*.chum5")
     if not npc_files:
@@ -25,6 +26,7 @@ def main():
 
     if not os.path.exists("scenario.json"):
         import json
+
         with open("scenario.json", "w") as f:
             json.dump({"description": "Empty Arena", "modifiers": {}}, f)
     env = parse_scenario("scenario.json")
@@ -35,12 +37,14 @@ def main():
     print("-" * 40)
 
     # Dictionary to track points: Win = 3, Draw = 1, Loss = 0
-    standings = {c[0].name: {"wins": 0, "draws": 0, "losses": 0, "points": 0} for c in combatants}
+    standings = {
+        c[0].name: {"wins": 0, "draws": 0, "losses": 0, "points": 0} for c in combatants
+    }
 
     for i in range(len(combatants)):
         for j in range(i + 1, len(combatants)):
-            c1_base, file1 = combatants[i]
-            c2_base, file2 = combatants[j]
+            c1_base, _file1 = combatants[i]
+            c2_base, _file2 = combatants[j]
 
             # print(f"Match: {c1_base.name} vs {c2_base.name}...")
             c1_wins = 0
@@ -71,7 +75,9 @@ def main():
                 standings[c2_base.name]["points"] += 1
 
     print("\n=== TOURNAMENT LEADERBOARD ===")
-    sorted_standings = sorted(standings.items(), key=lambda item: item[1]["points"], reverse=True)
+    sorted_standings = sorted(
+        standings.items(), key=lambda item: item[1]["points"], reverse=True
+    )
 
     # Format for markdown saving
     output = "# Shadowrun 7E NPC Tournament Leaderboard\n\n"
@@ -86,6 +92,7 @@ def main():
     with open("tournament_results.md", "w") as f:
         f.write(output)
     print("\nResults saved to tournament_results.md")
+
 
 if __name__ == "__main__":
     main()

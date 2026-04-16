@@ -3,8 +3,11 @@ import sys
 import os
 
 # Add scripts directory to path to import balance_generator
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../scripts')))
+sys.path.insert(
+    0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../scripts"))
+)
 import balance_generator
+
 
 class TestBalanceGenerator(unittest.TestCase):
 
@@ -34,10 +37,16 @@ class TestBalanceGenerator(unittest.TestCase):
         balanced_text = balance_generator.balance_metatypes(md_text)
 
         # Human should remain unchanged
-        self.assertIn("| **Human** | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 2/7 | 0 | +1 Edge |", balanced_text)
+        self.assertIn(
+            "| **Human** | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 2/7 | 0 | +1 Edge |",
+            balanced_text,
+        )
 
         # Elf should be updated to 20
-        self.assertIn("| **Elf** | 1/6 | 2/7 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 3/8 | 1/6 | 20 | Low-Light Vision |", balanced_text)
+        self.assertIn(
+            "| **Elf** | 1/6 | 2/7 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 3/8 | 1/6 | 20 | Low-Light Vision |",
+            balanced_text,
+        )
 
     def test_balance_weapons(self):
         md_text = """
@@ -67,7 +76,10 @@ class TestBalanceGenerator(unittest.TestCase):
         # Rounding: >100 -> nearest 50. 398.4 / 50 = 7.968 -> 8. 8 * 50 = 400
         # Update: In python, 398.4 / 50 = 7.968, round(7.968) = 8, 8 * 50 = 400.
 
-        self.assertIn("| Fichetti Security 600 | 6(7) | 7P | 0 | SA | 1 | Close | 30(c) | 6R | 1.5 | 400¥ |", balanced_text)
+        self.assertIn(
+            "| Fichetti Security 600 | 6(7) | 7P | 0 | SA | 1 | Close | 30(c) | 6R | 1.5 | 400¥ |",
+            balanced_text,
+        )
 
         # Ares Desert Strike
         # DV: 13 -> 169 * 2 = 338
@@ -78,7 +90,11 @@ class TestBalanceGenerator(unittest.TestCase):
         # Total: 100 + 338 + 200 + 50 + 100 + 70 = 858
         # Category: Sniper -> 858 * 1.5 = 1287
         # Rounding: >1000 -> nearest 100. 1287 / 100 = 12.87 -> 13. 13 * 100 = 1300
-        self.assertIn("| Ares Desert Strike | 7 | 13P | -4 | SA | 1(2) | Far | 14(c) | 10F | 4.0 | 1300¥ |", balanced_text)
+        self.assertIn(
+            "| Ares Desert Strike | 7 | 13P | -4 | SA | 1(2) | Far | 14(c) | 10F | 4.0 | 1300¥ |",
+            balanced_text,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
