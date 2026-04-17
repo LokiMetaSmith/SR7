@@ -347,3 +347,94 @@ class GMCard(BaseCard):
     ):
         super().__init__(combatant, width, height, on_action)
         self.is_gm = True
+
+
+
+class ChatWindow:
+    def __init__(self, rect: pygame.Rect, on_submit=None):
+        self.rect = pygame.Rect(rect)
+        self.messages = []
+        self.input_text = ""
+        self.active = False
+        self.font = pygame.font.SysFont("monospace", 14)
+        self.on_submit = on_submit
+        self.scroll_y = 0
+
+    def add_message(self, role: str, text: str):
+        self.messages.append({"role": role, "text": text})
+        self.scroll_y = -999999  # scroll to bottom flag
+
+    def handle_event(self, event: pygame.event.Event):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if self.rect.collidepoint(event.pos):
+                self.active = True
+            else:
+                self.active = False
+        elif event.type == pygame.KEYDOWN and self.active:
+            if event.key == pygame.K_RETURN:
+                if self.input_text.strip() and self.on_submit:
+                    self.on_submit(self.input_text.strip())
+                    self.add_message("User", self.input_text.strip())
+                self.input_text = ""
+            elif event.key == pygame.K_BACKSPACE:
+                self.input_text = self.input_text[:-1]
+            else:
+                self.input_text += event.unicode
+        elif event.type == pygame.MOUSEWHEEL:
+            if self.rect.collidepoint(pygame.mouse.get_pos()):
+                self.scroll_y += event.y * 20
+
+    def draw(self, surface: pygame.Surface):
+        pygame.draw.rect(surface, (30, 30, 30), self.rect)
+        pygame.draw.rect(surface, COLORS.get("border", (100, 100, 100)), self.rect, 2)
+
+        input_height = 30
+        input_rect = pygame.Rect(self.rect.x + 5, self.rect.bottom - input_height - 5, self.rect.width - 10, input_height)
+
+        msg_area_rect = pygame.Rect(self.rect.x + 5, self.rect.y + 5, self.rect.width - 10, self.rect.height - input_height - 15)
+
+        old_clip = surface.get_clip()
+        surface.set_clip(msg_area_rect)
+
+        lines_to_draw = []
+        for msg in self.messages:
+            role_color = (150, 200, 255) if msg["role"] == "User" else (200, 150, 255)
+            words = f"{msg['role']}: {msg['text']}".split(' ')
+            line = ""
+            for word in words:
+                if self.font.size(line + word)[0] < msg_area_rect.width - 10:
+                    line += word + " "
+                else:
+                    lines_to_draw.append((line, role_color))
+                    line = word + " "
+            if line:
+                lines_to_draw.append((line, role_color))
+
+        total_height = len(lines_to_draw) * 18
+
+        max_scroll = 0
+        min_scroll = min(0, msg_area_rect.height - total_height)
+
+        if self.scroll_y == -999999:
+            self.scroll_y = min_scroll
+        else:
+            self.scroll_y = max(min_scroll, min(max_scroll, self.scroll_y))
+
+        y_offset = msg_area_rect.y + self.scroll_y
+        for text, color in lines_to_draw:
+            if msg_area_rect.y - 18 <= y_offset <= msg_area_rect.bottom:
+                surf = self.font.render(text, True, color)
+                surface.blit(surf, (msg_area_rect.x + 5, y_offset))
+            y_offset += 18
+
+        surface.set_clip(old_clip)
+
+        pygame.draw.rect(surface, (50, 50, 50) if self.active else (40, 40, 40), input_rect)
+        pygame.draw.rect(surface, COLORS.get("border", (100, 100, 100)), input_rect, 1)
+
+        input_display = self.input_text
+        while self.font.size(input_display)[0] > input_rect.width - 10:
+            input_display = input_display[1:]
+
+        input_surf = self.font.render(input_display, True, (255, 255, 255))
+        surface.blit(input_surf, (input_rect.x + 5, input_rect.y + 7))
