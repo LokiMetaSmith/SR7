@@ -1,7 +1,7 @@
 import pygame
 import sys
 from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
-from ui.components import PlayerCard, GMCard
+from ui.components import PlayerCard, GMCard, ChatWindow
 
 
 class App:
@@ -14,23 +14,45 @@ class App:
         pygame.display.set_caption("Shadowrun 7E - Interactive Cards")
         self.clock = pygame.time.Clock()
         self.running = True
+
         self.pending_action = None
+        self.pending_chat = None
 
         # Create dummy data initially
+
         player_combatant = load_combatant("npc_templates/Kyber.chum5")
 
         gm_combatant = load_combatant("npc_templates/Sargent_Igneous.chum5")
         gm_combatant.team = 1
 
+
         self.player_cards = []
         self.gm_cards = []
+
+
+        chat_width = 300
+        chat_rect = pygame.Rect(self.width - chat_width - 20, 20, chat_width, self.height - 40)
+        self.chat_window = ChatWindow(chat_rect, on_submit=self.set_pending_chat)
+
+
         self.state = None
+
         self.running = True
         self.scroll_x = 0
         self.scroll_y = 0
 
+
     def set_pending_action(self, action: str):
         self.pending_action = action
+
+
+    def set_pending_chat(self, chat_message: str):
+        self.pending_chat = chat_message
+
+    def display_chat_message(self, role: str, message: str):
+        self.chat_window.add_message(role, message)
+
+
 
     def update_state(self, state):
         """Updates the internal UI cards with live data from the simulation."""
@@ -101,9 +123,13 @@ class App:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
+
             elif event.type == pygame.VIDEORESIZE:
                 self.width, self.height = event.w, event.h
                 self.screen = pygame.display.set_mode((self.width, self.height), pygame.RESIZABLE)
+                chat_width = 300
+                self.chat_window.rect = pygame.Rect(self.width - chat_width - 20, 20, chat_width, self.height - 40)
+
             elif event.type == pygame.MOUSEWHEEL:
                 # Use shift+scroll or regular scroll to move horizontally
                 mods = pygame.key.get_mods()
@@ -113,20 +139,25 @@ class App:
                     self.scroll_x += event.x * 30
                     self.scroll_y += event.y * 30
 
+
                 # Limit scrolling
                 total_width = 50 + len(self.player_cards) * 370
                 total_width = max(total_width, 550)
-                total_width += len(self.gm_cards) * 370 + 50
+                total_width += len(self.gm_cards) * 370 + 50 + 320 # +320 to account for chat window
 
                 min_scroll_x = min(0, self.width - total_width)
                 self.scroll_x = max(min_scroll_x, min(0, self.scroll_x))
+
 
                 # Assume a fixed max height for cards for now
                 min_scroll_y = min(0, self.height - 650)
                 self.scroll_y = max(min_scroll_y, min(0, self.scroll_y))
 
+
             # Pass events to components
+            self.chat_window.handle_event(event)
             for card in self.player_cards:
+
                 card.handle_event(event)
             for card in self.gm_cards:
                 card.handle_event(event)
@@ -167,9 +198,12 @@ class App:
             card.draw(self.screen, x_offset, 100 + self.scroll_y)
             x_offset += 370
 
+
         x_offset = max(x_offset, 550 + self.scroll_x)
         for card in self.gm_cards:
             card.draw(self.screen, x_offset, 100 + self.scroll_y)
             x_offset += 370
+
+        self.chat_window.draw(self.screen)
 
         pygame.display.flip()

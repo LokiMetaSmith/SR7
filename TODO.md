@@ -91,3 +91,5 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Implement UI Components:** Create a 3-panel UI design for Player and GM cards using `pygame` mapping to the backend `Combatant` attributes.
 *   [x] **Integrate Full Gamestate:** Connect the interactive cards fully to the live combat loop instead of just rendering dummy data.
 *   [x] **Expand Interactions:** Add click events to trigger specific combat actions directly from the UI cards.
+*   [x] **Chat Window:** Implement a Chat Window for LLM interaction.
+*   [x] **Window Resizing:** Update UI to adapt and resize properly.
