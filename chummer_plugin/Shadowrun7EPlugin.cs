@@ -100,9 +100,8 @@ namespace Shadowrun7EPlugin
                 // Guessing Chummer's character API properties
                 if (character != null)
                 {
-                    // For example:
-                    // character.InitiativeDice = 1;
-                    // character.BaseInitiative = character.REA.TotalValue + character.INT.TotalValue;
+                    character.InitiativeDice = 1;
+                    character.BaseInitiative = character.REA.TotalValue + character.INT.TotalValue;
                 }
             }
             catch (Exception ex)
@@ -123,9 +122,8 @@ namespace Shadowrun7EPlugin
                 // Guessing Chummer's character API properties
                 if (character != null && (character.Metatype == "AI" || character.Metatype == "Sprite" || character.Metatype == "Matrix Entity"))
                 {
-                    // For example:
-                    // character.Essence.BaseValue = 6;
-                    // character.Essence.TotalValue = 6;
+                    character.Essence.BaseValue = 6;
+                    character.Essence.TotalValue = 6;
                 }
             }
             catch (Exception ex)
