@@ -14,6 +14,8 @@ COLORS = {
     "health_warn": (200, 200, 50),
     "health_crit": (200, 50, 50),
     "highlight": (80, 80, 80),
+    "panel_bg_gm": (60, 20, 20),
+    "panel_bg_player": (20, 60, 60),
 }
 
 
@@ -70,7 +72,8 @@ class BaseCard:
         panel_rect = pygame.Rect(
             self.rect.x + 5, self.rect.y + 5, self.rect.width - 10, 80
         )
-        pygame.draw.rect(surface, COLORS["panel_bg"], panel_rect, border_radius=3)
+        bg_color = COLORS["panel_bg_gm"] if self.is_gm else COLORS["panel_bg_player"]
+        pygame.draw.rect(surface, bg_color, panel_rect, border_radius=3)
 
         # Name
         title_surf = self.font_title.render(self.combatant.name, True, COLORS["text"])
@@ -148,14 +151,31 @@ class BaseCard:
             else (COLORS["health_warn"] if s_dmg < s_track else COLORS["health_crit"])
         )
 
-        surface.blit(
-            self.font_body.render(phys_text, True, p_color),
-            (panel_rect.x + 10, panel_rect.y + 10),
-        )
-        surface.blit(
-            self.font_body.render(stun_text, True, s_color),
-            (panel_rect.x + 10, panel_rect.y + 30),
-        )
+        # Draw health bars
+        bar_width = 150
+        bar_height = 14
+
+        p_ratio = max(0, min(1, (p_track - p_dmg) / max(1, p_track)))
+        s_ratio = max(0, min(1, (s_track - s_dmg) / max(1, s_track)))
+
+        p_bg_rect = pygame.Rect(panel_rect.x + 10, panel_rect.y + 10, bar_width, bar_height)
+        p_fill_rect = pygame.Rect(panel_rect.x + 10, panel_rect.y + 10, int(bar_width * p_ratio), bar_height)
+
+        s_bg_rect = pygame.Rect(panel_rect.x + 10, panel_rect.y + 30, bar_width, bar_height)
+        s_fill_rect = pygame.Rect(panel_rect.x + 10, panel_rect.y + 30, int(bar_width * s_ratio), bar_height)
+
+        pygame.draw.rect(surface, (60, 60, 60), p_bg_rect, border_radius=2)
+        pygame.draw.rect(surface, p_color, p_fill_rect, border_radius=2)
+
+        pygame.draw.rect(surface, (60, 60, 60), s_bg_rect, border_radius=2)
+        pygame.draw.rect(surface, s_color, s_fill_rect, border_radius=2)
+
+        # Draw text over bars, using white/light text for contrast or shadow
+        phys_render = self.font_body.render(phys_text, True, (255, 255, 255))
+        surface.blit(phys_render, (panel_rect.x + 15, panel_rect.y + 9))
+
+        stun_render = self.font_body.render(stun_text, True, (255, 255, 255))
+        surface.blit(stun_render, (panel_rect.x + 15, panel_rect.y + 29))
 
         # Armor & Initiative
         armor_text = f"Armor: {self.combatant.armor}"

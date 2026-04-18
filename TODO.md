@@ -94,3 +94,4 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Expand Interactions:** Add click events to trigger specific combat actions directly from the UI cards.
 *   [x] **Chat Window:** Implement a Chat Window for LLM interaction.
 *   [x] **Window Resizing:** Update UI to adapt and resize properly.
+*   [x] **Improve UI/UX**: Enhanced Player and GM card visuals with team-colored headers and graphical health bars.
