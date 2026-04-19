@@ -202,7 +202,7 @@ class LLM_Agent:
             prompt += f"Social State: Influence over others: {combatant.influence}, Resolve against others: {combatant.resolve}\n"
 
         prompt += f"Matrix Attributes: Attack {combatant.matrix.attack}, Sleaze {combatant.matrix.sleaze}, DP {combatant.matrix.data_processing}, Firewall {combatant.matrix.firewall}\n"
-        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Data Spike, Social Influence (Negotiate/Intimidate/Con), or Sprint (move to better cover).\n"
+        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Data Spike, Social Influence (Negotiate/Intimidate/Con), Sprint (move to better cover), Take Cover, Yield, or Pass Turn.\n"
         # etc.
         try:
             response = self.client.chat.completions.create(
@@ -823,8 +823,12 @@ def main():
             is_sprint = "sprint" in action_lower
             is_cover = "take cover" in action_lower
             is_yield = "yield" in action_lower
+            is_pass = "pass turn" in action_lower or "pass" == action_lower.strip()
 
-            if is_yield:
+            if is_pass:
+                action_text = f"{active.name} passes their turn."
+                result_text = "No action taken."
+            elif is_yield:
                 active.has_yielded = True
                 action_text = f"{active.name} yields and surrenders!"
                 result_text = f"{active.name} drops their weapons and stops fighting."

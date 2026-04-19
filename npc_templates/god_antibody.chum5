@@ -69,5 +69,14 @@
       <item>Bio-Luminescent Whip</item>
       <item>Neural Purge</item>
     </gear>
+    <weapons>
+    <weapon>
+      <name>Ares Predator V</name>
+      <damage>8</damage>
+      <damage_type>P</damage_type>
+      <ap>-1</ap>
+      <mode>SA/BF/FA</mode>
+    </weapon>
+  </weapons>
   </character>
 </characters>

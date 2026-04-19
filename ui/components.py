@@ -49,6 +49,7 @@ class BaseCard:
                 # Otherwise, left click on card expands/collapses
                 if self.rect.collidepoint(event.pos):
                     self.expanded = not self.expanded
+                    self.update_rects()
                     return True
         return False
 
@@ -223,6 +224,7 @@ class BaseCard:
             wpn_text = f"{w.name} (DV:{w.damage} AP:{w.ap})"
             rendered_text = self.font_small.render(wpn_text, True, COLORS["text"])
             btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 16, 24)
+            self._draw_action_button(surface, btn_rect, rendered_text)
             self.action_rects.append((btn_rect, f"attack with {w.name}"))
             y_offset += 26
 
@@ -233,6 +235,7 @@ class BaseCard:
                 spl_text = f"{s.name}"
                 rendered_text = self.font_small.render(spl_text, True, COLORS["text"])
                 btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, rendered_text.get_width() + 16, 24)
+                self._draw_action_button(surface, btn_rect, rendered_text)
                 self.action_rects.append((btn_rect, f"cast {s.name}"))
                 y_offset += 26
 
@@ -242,6 +245,7 @@ class BaseCard:
             ds_text = "Data Spike"
             ds_render = self.font_small.render(ds_text, True, COLORS["text"])
             btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, ds_render.get_width() + 16, 24)
+            self._draw_action_button(surface, btn_rect, ds_render)
             self.action_rects.append((btn_rect, "data spike"))
             y_offset += 26
 
@@ -253,7 +257,7 @@ class BaseCard:
         y_offset += 10
         y_offset += 20
 
-        for action_name, action_cmd in [("Sprint", "sprint"), ("Take Cover", "take cover"), ("Yield", "yield")]:
+        for action_name, action_cmd in [("Sprint", "sprint"), ("Take Cover", "take cover"), ("Yield", "yield"), ("Pass Turn", "pass")]:
             act_render = self.font_small.render(f"{action_name}", True, COLORS["text"])
             btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, act_render.get_width() + 16, 24)
             self.action_rects.append((btn_rect, action_cmd))
@@ -345,7 +349,7 @@ class BaseCard:
             surface.blit(actions_header, (panel_rect.x + 10, y_offset))
             y_offset += 20
 
-            for action_name, action_cmd in [("Sprint", "sprint"), ("Take Cover", "take cover"), ("Yield", "yield")]:
+            for action_name, action_cmd in [("Sprint", "sprint"), ("Take Cover", "take cover"), ("Yield", "yield"), ("Pass Turn", "pass")]:
                 act_render = self.font_small.render(f"{action_name}", True, COLORS["text"])
                 btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, act_render.get_width() + 16, 24)
                 self._draw_action_button(surface, btn_rect, act_render)
