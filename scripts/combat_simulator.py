@@ -88,6 +88,9 @@ class Combatant:
     edge: int = 1
     initiative_score: int = 0
     special_rules: List[str] = field(default_factory=list)
+    street_cred: int = 0
+    notoriety: int = 0
+    null_bags: int = 0
     is_alive: bool = True
     team: int = 0
     zone: Optional[Zone] = None
@@ -200,6 +203,11 @@ class LLM_Agent:
 
         if combatant.influence or combatant.resolve:
             prompt += f"Social State: Influence over others: {combatant.influence}, Resolve against others: {combatant.resolve}\n"
+
+        if combatant.null_bags > 0:
+            prompt += f"You possess a Rating {combatant.null_bags} Null-bag, which reduces Matrix visibility.\n"
+
+        prompt += f"Social Rep: Street Cred {combatant.street_cred}, Notoriety {combatant.notoriety}\n"
 
         prompt += f"Matrix Attributes: Attack {combatant.matrix.attack}, Sleaze {combatant.matrix.sleaze}, DP {combatant.matrix.data_processing}, Firewall {combatant.matrix.firewall}\n"
         prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Data Spike, Social Influence (Negotiate/Intimidate/Con), Sprint (move to better cover), Take Cover, Yield, or Pass Turn.\n"
@@ -417,6 +425,18 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
                 skills[m.group(1).strip()] = int(m.group(2))
 
     c = Combatant(name=name, attributes=attributes, skills=skills)
+
+    sc_match = re.search(r"Street Cred:?\s*(\d+)", content, re.IGNORECASE)
+    if sc_match:
+        c.street_cred = int(sc_match.group(1))
+
+    not_match = re.search(r"Notoriety:?\s*(\d+)", content, re.IGNORECASE)
+    if not_match:
+        c.notoriety = int(not_match.group(1))
+
+    null_match = re.search(r"Null-Bag\s*\(Rating\s*(\d+)\)", content, re.IGNORECASE)
+    if null_match:
+        c.null_bags = int(null_match.group(1))
 
     # Try finding Armor
     armor_match = re.search(r"Armor.*?(?:(\d+))", content, re.IGNORECASE)
@@ -858,7 +878,7 @@ def main():
                 skill_rating = active.skills.get(skill_name, 0)
                 cha = active.attributes.get("CHA", 3)
 
-                attack_pool = cha + skill_rating
+                attack_pool = cha + skill_rating + active.street_cred - active.notoriety
                 attack_hits, attack_hits_glitched, edge_spent = (
                     RulesEngine.roll_attack_with_edge(attack_pool, active)
                 )
@@ -982,6 +1002,8 @@ def main():
                 )
 
                 def_pool = target.attributes.get("INT", 3) + target.matrix.firewall
+                if target.null_bags > 0:
+                    def_pool += target.null_bags
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
                 net_hits = attack_hits - def_hits
 
@@ -1067,6 +1089,8 @@ def main():
                 )
 
                 def_pool = target.attributes.get("WIL", 3) + target.matrix.firewall
+                if target.null_bags > 0:
+                    def_pool += target.null_bags
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
                 net_hits = attack_hits - def_hits
 
@@ -1233,6 +1257,9 @@ def main():
                     else:
                         if weapon.damage_type == "P":
                             target.physical_damage += final_damage
+                            if target.null_bags > 0:
+                                target.null_bags = 0
+                                result_text += " Their Null-bag is punctured and their AR signature lights up!"
                         else:
                             target.stun_damage += final_damage
 
