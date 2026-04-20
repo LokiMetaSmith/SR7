@@ -95,3 +95,14 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Chat Window:** Implement a Chat Window for LLM interaction.
 *   [x] **Window Resizing:** Update UI to adapt and resize properly.
 *   [x] **Improve UI/UX**: Enhanced Player and GM card visuals with team-colored headers and graphical health bars.
+
+---
+
+## Priority 7: Implement Economy and Contacts Mechanics
+
+**Goal:** Integrate the Shadow Economy, Barter, Smuggling, and Social Contacts rules from the Markdown documentation into the simulation environment.
+
+*   [ ] **Economy Implementation:** Implement mechanics for "Digital Nuyen" vs "Clean Nuyen/Barter" (affecting availability or AR tracking).
+    *   [x] Implemented Smuggling items (Null-bags affecting Matrix targeting/Concealability) in the simulator.
+*   [ ] **Social Combat/Contacts:** Implement Contact Connection/Loyalty integration in simulation stat blocks or pre-combat modifiers, and Communication Protocols (The Dead Drop, Encrypted Pulses) within the `combat_simulator.py`.
+    *   [x] Implemented the Hopepunk Social Modifier.
