@@ -58,6 +58,12 @@ class Vehicle:
 
 
 @dataclass
+class Contact:
+    name: str
+    connection: int
+    loyalty: int
+
+@dataclass
 class Zone:
     name: str
     cover: str = "None"
@@ -97,6 +103,10 @@ class Combatant:
 
     control_rig: int = 0
     jumped_in_vehicle: Optional[Vehicle] = None
+    digital_nuyen: int = 0
+    clean_nuyen: int = 0
+    hot_nuyen: int = 0
+    contacts: List[Contact] = field(default_factory=list)
 
     def roll_initiative(self) -> int:
         if self.jumped_in_vehicle:
@@ -210,7 +220,7 @@ class LLM_Agent:
         prompt += f"Social Rep: Street Cred {combatant.street_cred}, Notoriety {combatant.notoriety}\n"
 
         prompt += f"Matrix Attributes: Attack {combatant.matrix.attack}, Sleaze {combatant.matrix.sleaze}, DP {combatant.matrix.data_processing}, Firewall {combatant.matrix.firewall}\n"
-        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Data Spike, Social Influence (Negotiate/Intimidate/Con), Sprint (move to better cover), Take Cover, Yield, or Pass Turn.\n"
+        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Data Spike, Social Influence (Negotiate/Intimidate/Con), Encrypted Pulse, Dead Drop, Sprint (move to better cover), Take Cover, Yield, or Pass Turn.\n"
         # etc.
         try:
             response = self.client.chat.completions.create(
@@ -260,6 +270,30 @@ def parse_chummer(file_path: str) -> Combatant:
             skills[n] = v
 
     c = Combatant(name=name, attributes=attributes, skills=skills)
+
+    nuyen_node = char.find("nuyen")
+    if nuyen_node is not None and nuyen_node.text:
+        try:
+            c.digital_nuyen = int(nuyen_node.text)
+        except ValueError:
+            pass
+
+    contacts_node = char.find("contacts")
+    if contacts_node is not None:
+        for contact in contacts_node.findall("contact"):
+            cn_node = contact.find("name")
+            cn = cn_node.text if cn_node is not None and cn_node.text else "Unknown Contact"
+            cc_node = contact.find("connection")
+            cl_node = contact.find("loyalty")
+            try:
+                cc = int(cc_node.text) if cc_node is not None and cc_node.text else 1
+            except ValueError:
+                cc = 1
+            try:
+                cl = int(cl_node.text) if cl_node is not None and cl_node.text else 1
+            except ValueError:
+                cl = 1
+            c.contacts.append(Contact(name=cn, connection=cc, loyalty=cl))
 
     spells_node = char.find("spells")
     if spells_node is not None:
@@ -425,6 +459,27 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
                 skills[m.group(1).strip()] = int(m.group(2))
 
     c = Combatant(name=name, attributes=attributes, skills=skills)
+
+    def extract_nuyen(pattern):
+        m = re.search(pattern, content, re.IGNORECASE)
+        return int(m.group(1).replace(',', '')) if m else 0
+
+    c.digital_nuyen = extract_nuyen(r"Digital Nuyen:\s*([\d,]+)")
+    c.clean_nuyen = extract_nuyen(r"Clean Nuyen:\s*([\d,]+)")
+    c.hot_nuyen = extract_nuyen(r"Hot Nuyen:\s*([\d,]+)")
+
+    contact_matches = re.findall(r"\*\*Contacts:\*\*(.*?)(?=\n\n|\n\*\*|\Z)", content, re.DOTALL)
+    if contact_matches:
+        contacts_text = contact_matches[0]
+        # split by commas outside of parentheses
+        parts = re.split(r',\s*(?![^()]*\))', contacts_text)
+        for part in parts:
+            part = part.strip()
+            if part:
+                # Match Name (Connection X, Loyalty Y)
+                m = re.search(r"^(.*?)\s*\([^)]*(?:Connection|Conn|C)\s*(\d+)[^)]*(?:Loyalty|Loy|L)\s*(\d+)[^)]*\)", part, re.IGNORECASE)
+                if m:
+                    c.contacts.append(Contact(name=m.group(1).strip(), connection=int(m.group(2)), loyalty=int(m.group(3))))
 
     sc_match = re.search(r"Street Cred:?\s*(\d+)", content, re.IGNORECASE)
     if sc_match:
@@ -736,6 +791,18 @@ def main():
             else:
                 c.zone = env.zones[-1]
 
+    # Apply pre-combat economy & contact modifiers
+    for c in state.combatants:
+        if c.hot_nuyen >= 1000:
+            god_tethers = c.hot_nuyen // 1000
+            c.tethers["Grid Overwatch Division"] = god_tethers
+            state.log(f"{c.name}'s Hot Nuyen triggered {god_tethers} automatic Tether(s) from Grid Overwatch Division!")
+
+        for contact in c.contacts:
+            if contact.connection >= 4 and contact.loyalty >= 4:
+                c.edge += 1
+                state.log(f"{c.name}'s high-level contact ({contact.name}) provided intel, granting +1 Edge!")
+
     # Roll Initiative
     for c in state.combatants:
         c.roll_initiative()
@@ -840,6 +907,7 @@ def main():
                     "influence",
                 ]
             )
+            is_comm = "encrypted pulse" in action_lower or "dead drop" in action_lower
             is_sprint = "sprint" in action_lower
             is_cover = "take cover" in action_lower
             is_yield = "yield" in action_lower
@@ -852,6 +920,36 @@ def main():
                 active.has_yielded = True
                 action_text = f"{active.name} yields and surrenders!"
                 result_text = f"{active.name} drops their weapons and stops fighting."
+            elif is_comm:
+                # Secure communication
+                sneak_pool = active.skills.get("Sneaking", 0) + active.attributes.get("AGI", 3)
+                sneak_hits, sneak_glitched, edge_spent = RulesEngine.roll_attack_with_edge(sneak_pool, active)
+                attack_hits_glitched = sneak_glitched
+
+                # Opposed by highest perception among enemies
+                highest_perc_hits = 0
+                for enemy in state.combatants:
+                    if enemy.team != active.team and enemy.is_alive and not enemy.has_yielded:
+                        perc_pool = enemy.skills.get("Perception", 0) + enemy.attributes.get("INT", 3)
+                        perc_hits, _ = RulesEngine.roll_dice(perc_pool)
+                        if perc_hits > highest_perc_hits:
+                            highest_perc_hits = perc_hits
+
+                action_text = f"{active.name} attempts to use a secure communication protocol (Encrypted Pulse/Dead Drop)."
+                if sneak_hits >= highest_perc_hits:
+                    result_text = "Transmission successful and undetected! +1 Team Advantage."
+                    allies = [a for a in state.combatants if a.team == active.team and a.is_alive and not a.has_yielded and a != active]
+                    if allies:
+                        ally = random.choice(allies)
+                        ally.edge += 1
+                        result_text += f" {ally.name} gains +1 Edge."
+                else:
+                    result_text = "Transmission intercepted! The enemy gains an advantage."
+                    enemies = [e for e in state.combatants if e.team != active.team and e.is_alive and not e.has_yielded]
+                    if enemies:
+                        enemy = random.choice(enemies)
+                        enemy.edge += 1
+                        result_text += f" {enemy.name} gains +1 Edge."
             elif is_sprint:
                 action_text = f"{active.name} uses a Complex Action to Sprint!"
                 result_text = f"{active.name} sprints to a new position, covering 16m."

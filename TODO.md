@@ -102,7 +102,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 **Goal:** Integrate the Shadow Economy, Barter, Smuggling, and Social Contacts rules from the Markdown documentation into the simulation environment.
 
-*   [ ] **Economy Implementation:** Implement mechanics for "Digital Nuyen" vs "Clean Nuyen/Barter" (affecting availability or AR tracking).
+*   [x] **Economy Implementation:** Implement mechanics for "Digital Nuyen" vs "Clean Nuyen/Barter" (affecting availability or AR tracking).
     *   [x] Implemented Smuggling items (Null-bags affecting Matrix targeting/Concealability) in the simulator.
-*   [ ] **Social Combat/Contacts:** Implement Contact Connection/Loyalty integration in simulation stat blocks or pre-combat modifiers, and Communication Protocols (The Dead Drop, Encrypted Pulses) within the `combat_simulator.py`.
+*   [x] **Social Combat/Contacts:** Implement Contact Connection/Loyalty integration in simulation stat blocks or pre-combat modifiers, and Communication Protocols (The Dead Drop, Encrypted Pulses) within the `combat_simulator.py`.
     *   [x] Implemented the Hopepunk Social Modifier.
