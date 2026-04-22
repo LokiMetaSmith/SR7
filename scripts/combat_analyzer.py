@@ -67,6 +67,16 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
 
     llm = DummyAgent()
 
+    # Apply pre-combat economy & contact modifiers
+    for c in state.combatants:
+        if getattr(c, 'hot_nuyen', 0) >= 1000:
+            god_tethers = c.hot_nuyen // 1000
+            c.tethers["Grid Overwatch Division"] = god_tethers
+
+        for contact in getattr(c, 'contacts', []):
+            if contact.connection >= 4 and contact.loyalty >= 4:
+                c.edge += 1
+
     for c in state.combatants:
         c.initiative_score = c.roll_initiative()
         # Apply high ground / surprise initiative modifiers
