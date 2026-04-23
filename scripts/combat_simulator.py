@@ -665,6 +665,59 @@ def save_state(combatant: Combatant, scratchpad_dir: str):
     print(f"Saved state for {combatant.name} to {filepath}")
 
 
+
+def simulate_trade(combatant: Combatant, item_name: str, item_value: int, fixer_difficulty: int):
+    print(f"\n=== Trade Simulation ===")
+    print(f"Buyer: {combatant.name}")
+    print(f"Item: {item_name} (Base Value: {item_value}¥)")
+
+    # Calculate Buyer Pool
+    buyer_cha = combatant.attributes.get("CHA", 3)
+    buyer_nego = combatant.skills.get("Negotiation", 0)
+    buyer_pool = buyer_cha + buyer_nego + combatant.street_cred
+
+    print(f"Buyer Pool: {buyer_pool} (CHA {buyer_cha} + Negotiation {buyer_nego} + Street Cred {combatant.street_cred})")
+
+    # Calculate Fixer Pool
+    # Default Fixer stats: WIL 3, LOG 3, Negotiation 4
+    fixer_wil = 3
+    fixer_nego = 4
+    fixer_pool = fixer_wil + fixer_nego + max(0, fixer_difficulty)
+
+    print(f"Fixer Pool: {fixer_pool} (WIL {fixer_wil} + Negotiation {fixer_nego} + Difficulty Mod {max(0, fixer_difficulty)})")
+
+    buyer_hits, buyer_glitch = RulesEngine.roll_dice(buyer_pool)
+    fixer_hits, fixer_glitch = RulesEngine.roll_dice(fixer_pool)
+
+    print(f"Buyer rolled {buyer_hits} hits" + (" (GLITCH!)" if buyer_glitch else ""))
+    print(f"Fixer rolled {fixer_hits} hits" + (" (GLITCH!)" if fixer_glitch else ""))
+
+    net_hits = buyer_hits - fixer_hits
+
+    final_price = item_value
+
+    if net_hits > 0:
+        # Buyer won, discount applied! Let's say 5% discount per net hit, max 30%
+        discount = min(30, net_hits * 5)
+        final_price = int(item_value * (1 - (discount / 100.0)))
+        print(f"\nResult: Success! {combatant.name} haggled a {discount}% discount.")
+    elif net_hits < 0:
+        # Fixer won, markup applied! Let's say 5% markup per net hit, max 50%
+        markup = min(50, abs(net_hits) * 5)
+        final_price = int(item_value * (1 + (markup / 100.0)))
+        print(f"\nResult: Failure! The fixer talked circles around {combatant.name}. {markup}% markup applied.")
+    else:
+        # Tie
+        print(f"\nResult: Tie. The price remains at market value.")
+
+    if buyer_glitch and net_hits <= 0:
+         print(f"Critical Failure: {combatant.name} offended the fixer. The fixer refuses to sell the {item_name}!")
+         final_price = -1
+
+    if final_price != -1:
+         print(f"Final Price for {item_name}: {final_price}¥")
+    print("========================\n")
+
 def main():
     parser = argparse.ArgumentParser(
         description="Autonomous Combat Simulator for Shadowrun 7E"
@@ -672,13 +725,13 @@ def main():
     parser.add_argument(
         "--team1",
         nargs="+",
-        required=True,
+        required=False,
         help="List of paths to Chummer or Markdown files for Team 1",
     )
     parser.add_argument(
         "--team2",
         nargs="+",
-        required=True,
+        required=False,
         help="List of paths to Chummer or Markdown files for Team 2",
     )
     parser.add_argument(
@@ -704,7 +757,33 @@ def main():
         "--ui", action="store_true", help="Launch the Pygame visual interface"
     )
 
+
+    parser.add_argument(
+        "--trade-simulator",
+        help="Run the trading simulator. Format: Combatant_Path:Item_Name:Base_Value:Fixer_Difficulty (e.g., 'npc_templates/Kyber.chum5:Ares Predator:350:1')",
+    )
+
     args = parser.parse_args()
+
+    if args.trade_simulator:
+        parts = args.trade_simulator.split(":")
+        if len(parts) == 4:
+            combatant_path = parts[0]
+            item_name = parts[1]
+            try:
+                item_value = int(parts[2])
+                fixer_diff = int(parts[3])
+                combatant = load_combatant(combatant_path)
+                simulate_trade(combatant, item_name, item_value, fixer_diff)
+            except ValueError:
+                print("Error: Base_Value and Fixer_Difficulty must be integers.")
+        else:
+            print("Error: Invalid format for --trade-simulator. Expected Combatant_Path:Item_Name:Base_Value:Fixer_Difficulty")
+        return
+
+
+    if not args.trade_simulator and (not args.team1 or not args.team2):
+        parser.error("the following arguments are required when not using --trade-simulator: --team1, --team2")
 
     # Create dummy scenario if missing
     if not os.path.exists(args.scenario):

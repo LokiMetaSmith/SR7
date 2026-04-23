@@ -106,3 +106,4 @@ Based on the recent systems review, here is a prioritized to-do list for making 
     *   [x] Implemented Smuggling items (Null-bags affecting Matrix targeting/Concealability) in the simulator.
 *   [x] **Social Combat/Contacts:** Implement Contact Connection/Loyalty integration in simulation stat blocks or pre-combat modifiers, and Communication Protocols (The Dead Drop, Encrypted Pulses) within the `combat_simulator.py`.
     *   [x] Implemented the Hopepunk Social Modifier.
+*   [x] **Trading Simulator:** Add functionality to simulate haggling or buying equipment, computing prices based on Fixer/NPC difficulty meter.
