@@ -1476,5 +1476,35 @@
       <name>Weak Immune System</name>
       <bp>8</bp>
     </quality>
+    <quality>
+      <id>CUSTOM_QUAL_f00100b5310b5575e527a082e2a8e279</id>
+      <name>Personafix</name>
+      <bp>10</bp>
+      <tags>Mental Quality</tags>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_f5f87f5b5fef115434df62f752e72467</id>
+      <name>Remembrance</name>
+      <bp>5</bp>
+      <tags>Mental Quality</tags>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_b933ad23f2b09982420e5f0b131b5927</id>
+      <name>Trouble Magnet</name>
+      <bp>10</bp>
+      <tags>Social, Mental Quality</tags>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_70487bca414765e103a43f789edef27e</id>
+      <name>Reality Warper</name>
+      <bp>20</bp>
+      <tags>Magic, Technomancer Quality</tags>
+    </quality>
+    <quality>
+      <id>CUSTOM_QUAL_b282a902e3a54511fb0f0129de05ffc6</id>
+      <name>Delusion</name>
+      <bp>5</bp>
+      <tags>Mental Quality</tags>
+    </quality>
   </qualities>
 </chummer>

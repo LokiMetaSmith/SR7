@@ -413,6 +413,10 @@ Qualities have a collection of tags associated with them based upon their purpos
 
 **Positive Qualities:**
 
+**Reality Warper** - 20 Karma (Magic, Technomancer Quality)
+A character with *Reality Warper* blurs the lines between Resonance and Mana, allowing them to affect the physical world with matrix actions or vice-versa under certain conditions (GM discretion).
+
+
 **Acrobatic Defender** - 4 Karma (Defensive Quality)
 Substitute Gymnastics Skill rating for WIL on Full Defense.
 
@@ -834,6 +838,22 @@ Each level of *Will to Live* gives 1 extra Damage Overflow Box.
 Mage or Mystic Adept quality only.  Gain 2 Damage and 2 Drain on all Direct Combat Spells.
 
 **Negative Qualities:**
+
+**Delusion** - 5 Karma (Mental Quality)
+The character believes something fundamentally untrue, acting upon this belief even when faced with contradictory evidence.
+
+
+**Personafix** - 10 Karma (Mental Quality)
+The character's personality is actually a highly sophisticated BTL program or artificial construct. They suffer a -2 penalty to social tests when their pre-programmed responses do not fit the situation.
+
+
+**Remembrance** - 5 Karma (Mental Quality)
+The character is haunted by memories of someone else or a past life, suffering distractions in combat or social situations when triggered by specific stimuli (-2 dice pool penalty).
+
+
+**Trouble Magnet** - 10 Karma (Social, Mental Quality)
+The character has incredibly bad luck. The GM may spend a point of GM Edge to force a glitch or create an unfortunate encounter for the character once per session.
+
 
 **Accident Prone** - 4 Karma
 Receive a -2 dice pool modifier when piloting any vehicle.

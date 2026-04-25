@@ -3301,9 +3301,9 @@
       <cost>3,000¥</cost>
       <accuracy>5</accuracy>
       <ap>-8</ap>
-      <mode/>
-      <rc/>
-      <ammo/>
+      <mode>–</mode>
+      <rc>–</rc>
+      <ammo>–</ammo>
       <avail>12(F)</avail>
     </weapon>
     <weapon>
@@ -4385,14 +4385,14 @@
     <weapon>
       <id>CUSTOM_WEAP_fbaf2439bd39501b1d774391e0d95cd7</id>
       <name>Stun Baton</name>
-      <accuracy>-</accuracy>
+      <accuracy>4</accuracy>
       <damage>9S(e)</damage>
       <ap>-2</ap>
-      <mode/>
-      <rc/>
-      <ammo/>
-      <avail>-</avail>
-      <cost>-</cost>
+      <mode>–</mode>
+      <rc>–</rc>
+      <ammo>–</ammo>
+      <avail>4(R)</avail>
+      <cost>750¥</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_98968456094c32f977608ef4eedada04</id>
@@ -4669,6 +4669,54 @@
       <ammo>10(m)</ammo>
       <avail>–</avail>
       <cost>200</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_169cd2b9da536379f4de4cb81938b349</id>
+      <name>Shiawase Arms Hearth Protector</name>
+      <accuracy>5</accuracy>
+      <damage>5P</damage>
+      <ap>0</ap>
+      <mode>SA</mode>
+      <rc>1</rc>
+      <ammo>12(c)</ammo>
+      <avail>4(R)</avail>
+      <cost>400¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_a7a7bb11172ab561fc244d4a47c84008</id>
+      <name>Combat Knife</name>
+      <accuracy>6</accuracy>
+      <damage>(STR+2)P</damage>
+      <ap>-2</ap>
+      <mode>–</mode>
+      <rc>–</rc>
+      <ammo>–</ammo>
+      <avail>4</avail>
+      <cost>300¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_9a2e308d1926fa27da11ff22cd788f04</id>
+      <name>Monofilament Knife</name>
+      <accuracy>5</accuracy>
+      <damage>7P</damage>
+      <ap>-8</ap>
+      <mode>–</mode>
+      <rc>–</rc>
+      <ammo>–</ammo>
+      <avail>10(F)</avail>
+      <cost>1,500¥</cost>
+    </weapon>
+    <weapon>
+      <id>CUSTOM_WEAP_1a5a1d2cd61e8b8e982c1972ad95266c</id>
+      <name>Throwing Knives</name>
+      <accuracy>5</accuracy>
+      <damage>(STR+1)P</damage>
+      <ap>-1</ap>
+      <mode>–</mode>
+      <rc>–</rc>
+      <ammo>2</ammo>
+      <avail>2</avail>
+      <cost>50¥</cost>
     </weapon>
   </weapons>
 </chummer>
