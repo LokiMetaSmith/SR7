@@ -476,9 +476,9 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
         m = re.search(pattern, content, re.IGNORECASE)
         return int(m.group(1).replace(',', '')) if m else 0
 
-    c.digital_nuyen = extract_nuyen(r"Digital Nuyen:\s*([\d,]+)")
-    c.clean_nuyen = extract_nuyen(r"Clean Nuyen:\s*([\d,]+)")
-    c.hot_nuyen = extract_nuyen(r"Hot Nuyen:\s*([\d,]+)")
+    c.digital_nuyen = extract_nuyen(r"\*?\*?Digital Nuyen:\*?\*?\s*([\d,]+)")
+    c.clean_nuyen = extract_nuyen(r"\*?\*?Clean Nuyen:\*?\*?\s*([\d,]+)")
+    c.hot_nuyen = extract_nuyen(r"\*?\*?Hot Nuyen:\*?\*?\s*([\d,]+)")
 
     contact_matches = re.findall(r"\*\*Contacts:\*\*(.*?)(?=\n\n|\n\*\*|\Z)", content, re.DOTALL)
     if contact_matches:
