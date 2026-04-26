@@ -127,15 +127,19 @@ class Combatant:
 class GameEnvironment:
     def __init__(
         self,
+        name: str,
         description: str,
         modifiers: Dict[str, int],
         zones: List[Zone] = None,
         is_chase_combat: bool = False,
+        scenario_rules: str = "",
     ):
+        self.name = name
         self.description = description
         self.modifiers = modifiers
         self.zones = zones if zones else []
         self.is_chase_combat = is_chase_combat
+        self.scenario_rules = scenario_rules
 
 
 class RulesEngine:
@@ -188,6 +192,10 @@ class LLM_Agent:
     def ask_action(self, combatant: Combatant, state: SimulationState) -> str:
         # Prompt construction to instruct LLM to choose an action
         prompt = f"You are playing as {combatant.name} in Shadowrun 7E combat.\n"
+
+        if state.environment.scenario_rules:
+            prompt += f"Scenario Rule: {state.environment.scenario_rules}\n"
+
         prompt += f"Environment: {state.environment.description}\n"
 
         if combatant.jumped_in_vehicle:
@@ -232,8 +240,12 @@ class LLM_Agent:
         except Exception as e:
             return f"Error connecting to LLM: {e}"
 
-    def narrate_action(self, combatant: Combatant, action: str, result: str) -> str:
+    def narrate_action(self, combatant: Combatant, action: str, result: str, state: SimulationState = None) -> str:
         prompt = f"Write 2-3 sentences of gritty Shadowrun combat flavor text describing {combatant.name} doing the following: {action}. The result is: {result}."
+
+        if state and state.environment.scenario_rules:
+            prompt += f" Keep in mind the scenario rules: {state.environment.scenario_rules}"
+
         try:
             response = self.client.chat.completions.create(
                 model=self.model,
@@ -619,10 +631,12 @@ def parse_scenario(file_path: str) -> GameEnvironment:
                     )
             is_chase = data.get("is_chase_combat", False)
             return GameEnvironment(
+                name=data.get("name", "Unknown Scenario"),
                 description=data.get("description", "A dark alleyway."),
                 modifiers=data.get("modifiers", {}),
                 zones=zones,
                 is_chase_combat=is_chase,
+                scenario_rules=data.get("scenario_rules", ""),
             )
     elif file_path.endswith(".md"):
         with open(file_path, "r") as f:
@@ -833,7 +847,7 @@ def main():
                     )
                 )
 
-            def narrate_action(self, combatant, action, result):
+            def narrate_action(self, combatant, action, result, state=None):
                 return f"{combatant.name} takes action, resulting in: {result}"
 
         llm = DummyAgent()
@@ -1168,7 +1182,7 @@ def main():
                 if "Null-Suit" in target.special_rules:
                     action_text = f"attempts a Matrix action on {target.name}"
                     result_text = f"Action fails: {target.name} is wearing a Null-Suit and is immune to Matrix targeting."
-                    narration = llm.narrate_action(active, action_text, result_text)
+                    narration = llm.narrate_action(active, action_text, result_text, state=state)
                     state.log(narration)
                     continue
                 log = active.attributes.get("LOG", 3)
@@ -1255,7 +1269,7 @@ def main():
                 if "Null-Suit" in target.special_rules:
                     action_text = f"attempts a Matrix action on {target.name}"
                     result_text = f"Action fails: {target.name} is wearing a Null-Suit and is immune to Matrix targeting."
-                    narration = llm.narrate_action(active, action_text, result_text)
+                    narration = llm.narrate_action(active, action_text, result_text, state=state)
                     state.log(narration)
                     continue
                 log = active.attributes.get("LOG", 3)
@@ -1484,7 +1498,7 @@ def main():
                 active.is_alive = False
                 action_text += f" {active.name} is incapacitated!"
 
-            narration = llm.narrate_action(active, action_text, result_text)
+            narration = llm.narrate_action(active, action_text, result_text, state=state)
             state.log(narration)
 
         state.turn += 1
