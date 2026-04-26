@@ -1,0 +1,16 @@
+{
+    "name": "Hollow Resonance: The Hit",
+    "description": "The opening arc of the campaign. The runners are hired to assassinate a target and ensure specific polymarket betting criteria are met to pay out their Fixer.",
+    "stages": [
+        {
+            "name": "The Setup",
+            "scenario_file": "social_scenario.json",
+            "team2": ["npc_templates/Fixer_Contact.md:Jax"]
+        },
+        {
+            "name": "The Strike",
+            "scenario_file": "polymarket_scenario.json",
+            "team2": ["npc_templates/wuxing_null_sec_strike_team.chum5"]
+        }
+    ]
+}

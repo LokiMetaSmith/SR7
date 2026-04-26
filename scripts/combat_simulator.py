@@ -127,9 +127,9 @@ class Combatant:
 class GameEnvironment:
     def __init__(
         self,
-        name: str,
         description: str,
         modifiers: Dict[str, int],
+        name: str = "Unknown Scenario",
         zones: List[Zone] = None,
         is_chase_combat: bool = False,
         scenario_rules: str = "",
@@ -631,9 +631,9 @@ def parse_scenario(file_path: str) -> GameEnvironment:
                     )
             is_chase = data.get("is_chase_combat", False)
             return GameEnvironment(
-                name=data.get("name", "Unknown Scenario"),
                 description=data.get("description", "A dark alleyway."),
                 modifiers=data.get("modifiers", {}),
+                name=data.get("name", "Unknown Scenario"),
                 zones=zones,
                 is_chase_combat=is_chase,
                 scenario_rules=data.get("scenario_rules", ""),
