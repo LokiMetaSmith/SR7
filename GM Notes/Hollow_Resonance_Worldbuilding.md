@@ -119,8 +119,10 @@ Ghouls make up a significant portion of Zkazena's population, forced to the marg
 - **Before the Garden:** They inhabit the Old Mines and the deep ruins, acting as scavengers or exploited laborers for Wuxing's Leónization core.
 - **The Magical Surge:** When the Containment Zone expands (the "Sky Bleeds" event), the massive influx of raw magic drives the ghouls into a frenzied madness, turning them into a ravenous horde. However, as the mana stabilizes, strong-willed ghouls have the potential to revert to "perfect forms"—monstrous yet powerful reflections of their true selves, losing the constant, gnawing hunger.
 
-### The Necropolis Vampires
-Unlike traditional feral vampires, the inhabitants of the Necropolis are ancient, resplendent, and deeply entrenched in the city's power structure. They spent millennia in stasis waiting for ambient magic levels to rise. They possess intense political acumen and work directly with the White Tower's leadership, trading ancient secrets for influence.
+### The Necropolis Vampires (The Children of Strife)
+Unlike traditional feral vampires, the inhabitants of the Necropolis are ancient, resplendent, and entirely removed from their human roots. Known to themselves as the "Children of Strife," they survived the cataclysmic low-mana cycles by retreating out of normal time and space, building a subterranean capsule of highly advanced magic and technology.
+
+Their core philosophy is rooted in spite, jealousy, hatred, and ego. They view Darwinian evolution not merely as survival of the fittest, but as a mechanism that demands blood and subjugation. They are perfect apex predators—not just physically, but psychologically. They possess intense political acumen and work directly with the White Tower's leadership. Using their mastery of gaslighting and manipulation, they wring their victims dry while making them believe it was their own choice, leaving them satisfied with their hollowed-out lot as the vampires continue to climb upward. Even the Crystalline Forest's warped flora above them reflects this reality; the beautiful, glowing trees of their domain literally require a blood sacrifice to entertain them and continue blooming.
 
 ### Obsidimen
 Massive, rock-based humanoids composed of living stone. They are incredibly long-lived and fundamentally tied to a "Liferock" (the core of the primary ley line node). They operate on geological timescales, viewing the haste of metahumanity with confusion. If their Liferock or community is threatened, they become fearsome, unstoppable forces of nature.
