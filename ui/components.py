@@ -3,19 +3,23 @@ from dataclasses import dataclass
 from scripts.combat_simulator import Combatant
 
 # Define some useful colors
+# Define cyberpunk/Shadowrun themed colors
 COLORS = {
-    "bg": (30, 30, 30),
-    "border": (0, 204, 255),  # matrixblue
-    "border_gm": (230, 57, 70),  # sraccent (reddish)
-    "text": (220, 220, 220),
-    "text_dark": (150, 150, 150),
-    "panel_bg": (45, 45, 45),
-    "health_ok": (50, 200, 50),
-    "health_warn": (200, 200, 50),
-    "health_crit": (200, 50, 50),
-    "highlight": (80, 80, 80),
-    "panel_bg_gm": (60, 20, 20),
-    "panel_bg_player": (20, 60, 60),
+    "bg": (15, 15, 18),               # Deep dark background
+    "border": (0, 255, 204),          # Neon cyan for players
+    "border_gm": (255, 50, 80),       # Neon pink/red for GM
+    "text": (230, 230, 235),          # Off-white text
+    "text_dark": (140, 150, 160),     # Muted text
+    "panel_bg": (25, 25, 30),         # Slightly lighter dark
+    "health_ok": (46, 204, 113),      # Emerald green
+    "health_warn": (241, 196, 15),    # Warning yellow
+    "health_crit": (231, 76, 60),     # Danger red
+    "highlight": (0, 204, 255, 60),   # Highlight with alpha
+    "panel_bg_gm": (50, 10, 20),      # Dark red tint
+    "panel_bg_player": (10, 30, 40),  # Dark blue/cyan tint
+    "button_bg": (40, 45, 55),        # Button idle
+    "button_hover": (60, 120, 150),   # Button hover (player)
+    "button_hover_gm": (150, 60, 80), # Button hover (GM)
 }
 
 
@@ -103,9 +107,17 @@ class BaseCard:
         mouse_pos = pygame.mouse.get_pos()
         is_hovered = rect.collidepoint(mouse_pos)
 
-        bg_color = COLORS["highlight"] if is_hovered else (60, 60, 60)
+        if is_hovered:
+            bg_color = COLORS["button_hover_gm"] if self.is_gm else COLORS["button_hover"]
+        else:
+            bg_color = COLORS["button_bg"]
 
         pygame.draw.rect(surface, bg_color, rect, border_radius=4)
+
+        # Draw a thin border when hovered
+        if is_hovered:
+            border_c = COLORS["border_gm"] if self.is_gm else COLORS["border"]
+            pygame.draw.rect(surface, border_c, rect, 1, border_radius=4)
 
         # Center the text vertically and pad horizontally
         text_x = rect.x + 8
@@ -116,9 +128,17 @@ class BaseCard:
         mouse_pos = pygame.mouse.get_pos()
         is_hovered = rect.collidepoint(mouse_pos)
 
-        bg_color = COLORS["highlight"] if is_hovered else (60, 60, 60)
+        if is_hovered:
+            bg_color = COLORS["button_hover_gm"] if self.is_gm else COLORS["button_hover"]
+        else:
+            bg_color = COLORS["button_bg"]
 
         pygame.draw.rect(surface, bg_color, rect, border_radius=4)
+
+        # Draw a thin border when hovered
+        if is_hovered:
+            border_c = COLORS["border_gm"] if self.is_gm else COLORS["border"]
+            pygame.draw.rect(surface, border_c, rect, 1, border_radius=4)
 
         # Center the text vertically and pad horizontally
         text_x = rect.x + 8
@@ -152,9 +172,9 @@ class BaseCard:
             else (COLORS["health_warn"] if s_dmg < s_track else COLORS["health_crit"])
         )
 
-        # Draw health bars
-        bar_width = 150
-        bar_height = 14
+        # Draw segmented health bars
+        bar_width = 160
+        bar_height = 16
 
         p_ratio = max(0, min(1, (p_track - p_dmg) / max(1, p_track)))
         s_ratio = max(0, min(1, (s_track - s_dmg) / max(1, s_track)))
@@ -165,17 +185,35 @@ class BaseCard:
         s_bg_rect = pygame.Rect(panel_rect.x + 10, panel_rect.y + 30, bar_width, bar_height)
         s_fill_rect = pygame.Rect(panel_rect.x + 10, panel_rect.y + 30, int(bar_width * s_ratio), bar_height)
 
-        pygame.draw.rect(surface, (60, 60, 60), p_bg_rect, border_radius=2)
+        pygame.draw.rect(surface, (40, 20, 20), p_bg_rect, border_radius=2)
         pygame.draw.rect(surface, p_color, p_fill_rect, border_radius=2)
 
-        pygame.draw.rect(surface, (60, 60, 60), s_bg_rect, border_radius=2)
+        # Physical segments
+        if p_track > 0:
+            seg_w = bar_width / p_track
+            for i in range(1, p_track):
+                pygame.draw.line(surface, COLORS["panel_bg"], (p_bg_rect.x + int(i * seg_w), p_bg_rect.y), (p_bg_rect.x + int(i * seg_w), p_bg_rect.bottom - 1), 2)
+        pygame.draw.rect(surface, (100, 100, 100), p_bg_rect, 1, border_radius=2)
+
+        pygame.draw.rect(surface, (20, 20, 40), s_bg_rect, border_radius=2)
         pygame.draw.rect(surface, s_color, s_fill_rect, border_radius=2)
 
-        # Draw text over bars, using white/light text for contrast or shadow
+        # Stun segments
+        if s_track > 0:
+            seg_w = bar_width / s_track
+            for i in range(1, s_track):
+                pygame.draw.line(surface, COLORS["panel_bg"], (s_bg_rect.x + int(i * seg_w), s_bg_rect.y), (s_bg_rect.x + int(i * seg_w), s_bg_rect.bottom - 1), 2)
+        pygame.draw.rect(surface, (100, 100, 100), s_bg_rect, 1, border_radius=2)
+
+        # Draw text over bars with slight shadow
+        phys_render_shadow = self.font_body.render(phys_text, True, (0, 0, 0))
         phys_render = self.font_body.render(phys_text, True, (255, 255, 255))
+        surface.blit(phys_render_shadow, (panel_rect.x + 16, panel_rect.y + 10))
         surface.blit(phys_render, (panel_rect.x + 15, panel_rect.y + 9))
 
+        stun_render_shadow = self.font_body.render(stun_text, True, (0, 0, 0))
         stun_render = self.font_body.render(stun_text, True, (255, 255, 255))
+        surface.blit(stun_render_shadow, (panel_rect.x + 16, panel_rect.y + 30))
         surface.blit(stun_render, (panel_rect.x + 15, panel_rect.y + 29))
 
         # Armor & Initiative
@@ -409,13 +447,20 @@ class ChatWindow:
                 self.scroll_y += event.y * 20
 
     def draw(self, surface: pygame.Surface):
-        pygame.draw.rect(surface, (30, 30, 30), self.rect)
-        pygame.draw.rect(surface, COLORS.get("border", (100, 100, 100)), self.rect, 2)
+        pygame.draw.rect(surface, COLORS.get("panel_bg", (30, 30, 30)), self.rect)
+        pygame.draw.rect(surface, COLORS.get("border", (100, 100, 100)), self.rect, 2, border_radius=4)
+
+        # Draw a header for chat
+        header_rect = pygame.Rect(self.rect.x, self.rect.y, self.rect.width, 25)
+        pygame.draw.rect(surface, (20, 25, 30), header_rect, border_top_left_radius=4, border_top_right_radius=4)
+        pygame.draw.line(surface, COLORS.get("border", (100, 100, 100)), (self.rect.x, self.rect.y + 25), (self.rect.right, self.rect.y + 25))
+        title = self.font.render("COMMLINK LINK", True, COLORS.get("border", (100, 100, 100)))
+        surface.blit(title, (self.rect.x + 10, self.rect.y + 5))
 
         input_height = 30
         input_rect = pygame.Rect(self.rect.x + 5, self.rect.bottom - input_height - 5, self.rect.width - 10, input_height)
 
-        msg_area_rect = pygame.Rect(self.rect.x + 5, self.rect.y + 5, self.rect.width - 10, self.rect.height - input_height - 15)
+        msg_area_rect = pygame.Rect(self.rect.x + 5, self.rect.y + 30, self.rect.width - 10, self.rect.height - input_height - 40)
 
         old_clip = surface.get_clip()
         surface.set_clip(msg_area_rect)

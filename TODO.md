@@ -95,6 +95,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Chat Window:** Implement a Chat Window for LLM interaction.
 *   [x] **Window Resizing:** Update UI to adapt and resize properly.
 *   [x] **Improve UI/UX**: Enhanced Player and GM card visuals with team-colored headers and graphical health bars.
+    *   [x] Implemented Cyberpunk TTRPG UI Best Practices: Overhauled colors, added hover highlights, segmented health bars, styled Chat Window, and gridded background.
 
 ---
 
