@@ -38,6 +38,7 @@ In a broken world grappling with environmental devastation, unchecked corporate 
 *   **Sister Sinalma (Bio-Arcane Division):** A rogue Wuxing researcher obsessed with using the Zone's power (via Spark+) to transcend metahumanity, viewing the disaster as an evolutionary chrysalis.
 *   **Fuchsia Dragons:** A heavily armed mercenary company possessed by centipede insect spirits. They arrive under the guise of saving the city but actually intend to occupy it and control the Zone's power.
 *   **The Local Ghouls (led by scav-kings like Ratchet):** The downtrodden majority. When the Zone surges, they are driven into a magically-amplified frenzy, becoming a massive horde.
+*   **The Children of Strife (Necropolis Vampires):** Ancient, apex-predator Nosferatu who survived low-mana cycles in a techno-magical capsule. They gaslight and manipulate Zkazena's population to feed their Darwinian society fueled by spite and ego.
 
 ### Key NPCs
 *   **Kyber:** A jaded operative with CFD (multiple personality disorder: Observer, Enforcer, Negotiator). The reluctant guardian of Spark.
@@ -305,7 +306,8 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Qualities:** Infection (HMHVV III), Dual Natured, Fame (Local), First Impression.
 *   **Weapons:** Unarmed Strike (Claws) (5P, -1 AP, Close).
 
-**Himerus (Scholar / Ancient Vampire)**
+**Himerus (Scholar / Child of Strife)**
+Himerus holds court in a White Tower office that smells faintly of old paper, expensive tea, and copper. He speaks in hushed, conspiratorial tones, making his "guests" lean in close. By the time a meeting ends, the guest invariably offers their neck—or the neck of a subordinate—convinced it is a genius strategic maneuver that they themselves just invented. He leaves them feeling powerful, completely oblivious to the fact that they've been methodically drained of both blood and agency.
 *   **BOD** 6, **AGI** 6, **REA** 6(8), **STR** 6, **WIL** 7, **LOG** 7, **INT** 6, **CHA** 8, **EDG** 5, **ESS** 6.0, **MAG** 8
 *   **Condition Monitor:** 11/12
 *   **Armor:** 10 (Armored Suit)
