@@ -307,7 +307,7 @@ These characters can be encountered depending on player choices or used to flesh
 *   **Weapons:** Unarmed Strike (Claws) (5P, -1 AP, Close).
 
 **Himerus (Scholar / Child of Strife)**
-Himerus is a master of the gaslight. To speak with him is to be convinced that offering him your lifeblood is the most logical, beneficial, and entirely self-directed choice you could make. He embodies the Children of Strife's philosophy: wringing metahumanity dry while leaving them satisfied with their lot.
+Himerus holds court in a White Tower office that smells faintly of old paper, expensive tea, and copper. He speaks in hushed, conspiratorial tones, making his "guests" lean in close. By the time a meeting ends, the guest invariably offers their neck—or the neck of a subordinate—convinced it is a genius strategic maneuver that they themselves just invented. He leaves them feeling powerful, completely oblivious to the fact that they've been methodically drained of both blood and agency.
 *   **BOD** 6, **AGI** 6, **REA** 6(8), **STR** 6, **WIL** 7, **LOG** 7, **INT** 6, **CHA** 8, **EDG** 5, **ESS** 6.0, **MAG** 8
 *   **Condition Monitor:** 11/12
 *   **Armor:** 10 (Armored Suit)
