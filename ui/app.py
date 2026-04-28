@@ -184,13 +184,22 @@ class App:
                 pass # Dummy driver issues
 
     def draw(self):
-        self.screen.fill((20, 20, 20))  # Dark background
+        # Draw a dark grid background
+        self.screen.fill((10, 12, 15))
+        for x in range(0, self.width, 40):
+            pygame.draw.line(self.screen, (20, 24, 30), (x, 0), (x, self.height))
+        for y in range(0, self.height, 40):
+            pygame.draw.line(self.screen, (20, 24, 30), (0, y), (self.width, y))
 
-        font = pygame.font.SysFont("monospace", 16, bold=True)
+        font = pygame.font.SysFont("monospace", 18, bold=True)
+        # Title text
+        title_surf = font.render("SHADOWRUN 7E TACTICAL SIMULATOR", True, (0, 255, 204))
+        self.screen.blit(title_surf, (50, 20))
+
         if self.state:
             turn_text = f"Turn: {self.state.turn}"
             turn_surf = font.render(turn_text, True, (220, 220, 220))
-            self.screen.blit(turn_surf, (100, 20))
+            self.screen.blit(turn_surf, (50, 50))
 
         # Draw cards side by side
         x_offset = 50 + self.scroll_x
