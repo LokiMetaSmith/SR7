@@ -1,7 +1,7 @@
 import pygame
 import sys
 from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
-from ui.components import PlayerCard, GMCard, ChatWindow
+from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid
 
 
 class App:
@@ -36,6 +36,7 @@ class App:
 
 
         self.state = None
+        self.map_grid = None
 
         self.running = True
         self.scroll_x = 0
@@ -57,6 +58,14 @@ class App:
     def update_state(self, state):
         """Updates the internal UI cards with live data from the simulation."""
         self.state = state
+
+        # Check for map data
+        if getattr(self.state, "environment", None) and hasattr(self.state.environment, "scenario_data"):
+            map_data = self.state.environment.scenario_data.get("map", None)
+            if map_data and not self.map_grid:
+                layout = map_data.get("layout_ascii", [])
+                legend = map_data.get("legend", {})
+                self.map_grid = MapGrid(layout, legend)
 
         t1 = [c for c in state.combatants if c.team == 1]
         t2 = [c for c in state.combatants if c.team == 2]
@@ -108,15 +117,19 @@ class App:
 
     def handle_events(self):
         # Ensure rects are up-to-date before clicks
+        start_y = 100 + self.scroll_y
+        if self.map_grid:
+            start_y += self.map_grid.rect.height + 20
+
         x_offset = 50 + self.scroll_x
         for card in self.player_cards:
-            card.rect.topleft = (x_offset, 100 + self.scroll_y)
+            card.rect.topleft = (x_offset, start_y)
             card.update_rects()
             x_offset += 370
 
         x_offset = max(x_offset, 550 + self.scroll_x)
         for card in self.gm_cards:
-            card.rect.topleft = (x_offset, 100 + self.scroll_y)
+            card.rect.topleft = (x_offset, start_y)
             card.update_rects()
             x_offset += 370
 
@@ -201,16 +214,22 @@ class App:
             turn_surf = font.render(turn_text, True, (220, 220, 220))
             self.screen.blit(turn_surf, (50, 50))
 
+        start_y = 100 + self.scroll_y
+
+        if self.map_grid:
+            self.map_grid.draw(self.screen, 50, 100 + self.scroll_y)
+            start_y += self.map_grid.rect.height + 20
+
         # Draw cards side by side
         x_offset = 50 + self.scroll_x
         for card in self.player_cards:
-            card.draw(self.screen, x_offset, 100 + self.scroll_y)
+            card.draw(self.screen, x_offset, start_y)
             x_offset += 370
 
 
         x_offset = max(x_offset, 550 + self.scroll_x)
         for card in self.gm_cards:
-            card.draw(self.screen, x_offset, 100 + self.scroll_y)
+            card.draw(self.screen, x_offset, start_y)
             x_offset += 370
 
         self.chat_window.draw(self.screen)

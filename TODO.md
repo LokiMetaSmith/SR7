@@ -96,6 +96,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Window Resizing:** Update UI to adapt and resize properly.
 *   [x] **Improve UI/UX**: Enhanced Player and GM card visuals with team-colored headers and graphical health bars.
     *   [x] Implemented Cyberpunk TTRPG UI Best Practices: Overhauled colors, added hover highlights, segmented health bars, styled Chat Window, and gridded background.
+    *   [x] Created a visual MapGrid UI component to render map scenarios using a Cartesian grid.
 
 ---
 

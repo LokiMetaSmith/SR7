@@ -507,3 +507,98 @@ class ChatWindow:
 
         input_surf = self.font.render(input_display, True, (255, 255, 255))
         surface.blit(input_surf, (input_rect.x + 5, input_rect.y + 7))
+
+
+
+class MapGrid:
+    def __init__(self, layout_ascii, legend):
+        self.layout_ascii = layout_ascii
+        self.legend = legend
+        self.cell_size = 30
+        self.margin = 10
+        self.font = pygame.font.SysFont("monospace", 14)
+
+        self.colors = {
+            ".": (40, 40, 40), # Default ground
+            " ": (0, 0, 0, 0)  # Transparent/Empty
+        }
+
+        # Auto-assign colors for legend keys
+        palette = [
+            (100, 50, 50), (50, 100, 50), (50, 50, 100),
+            (100, 100, 50), (100, 50, 100), (50, 100, 100),
+            (150, 80, 20), (20, 150, 80)
+        ]
+        color_idx = 0
+        for key in legend:
+            if key not in self.colors:
+                self.colors[key] = palette[color_idx % len(palette)]
+                color_idx += 1
+
+        # Parse layout grid dimensions
+        self.rows = len(layout_ascii)
+        self.cols = max((len(row) for row in layout_ascii)) if self.rows > 0 else 0
+
+        # Calculate width/height
+        self.grid_width = self.cols * self.cell_size
+        self.grid_height = self.rows * self.cell_size
+
+        self.rect = pygame.Rect(0, 0, self.grid_width + 300, max(self.grid_height, len(self.legend) * 20) + 40)
+
+    def draw(self, surface: pygame.Surface, x: int, y: int):
+        self.rect.topleft = (x, y)
+
+        # Draw background panel
+        pygame.draw.rect(surface, COLORS.get("panel_bg", (30, 30, 30)), self.rect, border_radius=4)
+        pygame.draw.rect(surface, COLORS.get("border", (100, 100, 100)), self.rect, 2, border_radius=4)
+
+        # Draw Map title
+        title_surf = self.font.render("TACTICAL MAP", True, (200, 200, 200))
+        surface.blit(title_surf, (x + 10, y + 10))
+
+        grid_x = x + 10
+        grid_y = y + 30
+
+        # Draw the grid cells
+        for r, row_str in enumerate(self.layout_ascii):
+            for c, char in enumerate(row_str):
+                cell_rect = pygame.Rect(grid_x + c * self.cell_size, grid_y + r * self.cell_size, self.cell_size, self.cell_size)
+
+                # Fill color
+                color = self.colors.get(char, self.colors.get(".", (40, 40, 40)))
+                if char != " ":
+                    pygame.draw.rect(surface, color, cell_rect)
+
+                # Outline
+                pygame.draw.rect(surface, (80, 80, 80), cell_rect, 1)
+
+                # Text char
+                if char.strip() and char != ".":
+                    char_surf = self.font.render(char, True, (255, 255, 255))
+                    char_rect = char_surf.get_rect(center=cell_rect.center)
+                    surface.blit(char_surf, char_rect)
+
+        # Draw the legend to the right of the grid
+        legend_x = grid_x + self.grid_width + 20
+        legend_y = grid_y
+
+        legend_title = self.font.render("LEGEND:", True, (200, 200, 200))
+        surface.blit(legend_title, (legend_x, legend_y))
+        legend_y += 20
+
+        for key, desc in self.legend.items():
+            color = self.colors.get(key, (100, 100, 100))
+            # Draw color box
+            box_rect = pygame.Rect(legend_x, legend_y + 2, 12, 12)
+            pygame.draw.rect(surface, color, box_rect)
+            pygame.draw.rect(surface, (200, 200, 200), box_rect, 1)
+
+            # Draw text
+            # Truncate text if it's too long
+            desc_str = f"{key} - {desc}"
+            if len(desc_str) > 30:
+                desc_str = desc_str[:27] + "..."
+
+            text_surf = self.font.render(desc_str, True, (180, 180, 180))
+            surface.blit(text_surf, (legend_x + 20, legend_y))
+            legend_y += 18
