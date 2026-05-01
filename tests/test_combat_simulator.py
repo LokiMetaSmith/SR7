@@ -108,3 +108,43 @@ def test_aoe_explosive_logic():
     env = GameEnvironment("Test", {})
     # Mocking the combat loop logic
     assert env is not None
+
+def test_possession_overrides_and_inhabitation():
+    from scripts.combat_simulator import Combatant, PossessingEntity, MatrixAttributes
+
+    # Create the possessing entity (e.g., Fuchsia Dragon BTL Sprite)
+    sprite = PossessingEntity(
+        name="Fuchsia Dragon",
+        mental_attributes={"LOG": 1, "INT": 5, "WIL": 6, "CHA": 1},
+        physical_modifiers={"STR": 3, "BOD": 3}
+    )
+
+    # Create the host
+    c = Combatant(
+        name="Mercenary",
+        attributes={"LOG": 3, "INT": 3, "WIL": 2, "CHA": 2, "STR": 3, "BOD": 3},
+        matrix=MatrixAttributes(),
+        team=1,
+        possessed_by=sprite
+    )
+
+    # Test Control Override
+    assert c.get_attribute("WIL") == 6  # Replaced by Sprite
+    assert c.get_attribute("STR") == 6  # Host (3) + Modifier (3)
+
+    # Test Biofeedback / Damage Sharing (Stun)
+    # The host takes 4 stun damage
+    result_text = c.take_damage(4, "S")
+    assert c.stun_damage == 4
+    assert sprite.stun_damage == 2  # Takes half as biofeedback
+    assert "shares the trauma" in result_text
+
+    # Test Inhabitation (The Merger)
+    # The host takes physical damage exceeding their host WIL? Wait, get_attribute returns the Sprite's WIL.
+    # The rule implemented uses `c.get_attribute("WIL")`, which is now 6.
+    # So if they take 7 physical damage, inhabitation should trigger.
+    assert not sprite.is_inhabitation
+    result_text = c.take_damage(7, "P")
+    assert c.physical_damage == 7
+    assert sprite.is_inhabitation
+    assert "The Merger!" in result_text

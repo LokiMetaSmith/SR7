@@ -76,7 +76,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Environmental Modifiers & Background Count:** Make the simulator read `scenario.json` and apply lighting penalties, AR noise interference, or Matrix Ley Lines (forcing the use of Wild Dice).
 *   [x] **Advanced Armor & AP Mechanics:** Expand defense rolls to handle specialized armor like Null-Suits (reducing Matrix targeting) or affliction mechanics like N.I.C.A. (Scrap-Sickness) for prolonged exposure to grey goo.
 *   [x] **Edge / Hopepunk Mechanics:** Allow the simulator AI to actively spend the `Edge` attribute during critical failures to re-roll misses or push the limit on wild dice.
-*   [x] **Unify Possession Rules:** Centralize and standardize mechanics for BTL possession, Rigger jump-ins, AI inhabitation, and spiritual possession.
+*   [x] **Unify Possession Rules:** Centralize and standardize mechanics for BTL possession, Rigger jump-ins, AI inhabitation, and spiritual possession. (COMPLETED: Added `PossessingEntity` to Combatant along with `take_damage` overrides for Biofeedback and Inhabitation rules in `combat_simulator.py`).
 *   [x] **N.I.C.A. Glitch Table:** Implement a 'glitch table' for N.I.C.A. (Scrap-Sickness) glitches in the combat simulator to apply varied narrative and mechanical effects.
 *   [x] **Sync Combat Analyzer:** Sync `combat_analyzer.py` with all the new mechanics added to `combat_simulator.py` (Squad Combat, Edge spending, Social mechanics, Chunky Salsa, N.I.C.A).
 

@@ -25,7 +25,7 @@ class DummyAgent:
     def ask_action(self, combatant, state):
         if combatant.jumped_in_vehicle and combatant.jumped_in_vehicle.weapons:
             return f"attack with {combatant.jumped_in_vehicle.weapons[0].name}"
-        if combatant.spells and combatant.attributes.get("MAG", 0) > 0:
+        if combatant.spells and combatant.get_attribute("MAG", 0) > 0:
             return f"cast {combatant.spells[0].name}"
         elif combatant.matrix.attack > 3:
             import random
@@ -143,12 +143,12 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
             is_tether = "tether" in action_lower
 
             if is_social:
-                cha = active.attributes.get("CHA", 3)
+                cha = active.get_attribute("CHA", 3)
                 attack_pool = cha + 5
                 attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
 
-                target_wil = target.attributes.get("WIL", 3)
-                target_resist = target_wil + target.attributes.get("CHA", 3)
+                target_wil = target.get_attribute("WIL", 3)
+                target_resist = target_wil + target.get_attribute("CHA", 3)
 
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(target_resist)
                 net_hits = attack_hits - def_hits
@@ -169,18 +169,18 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                     (s for s in active.spells if s.name.lower() in action_lower),
                     active.spells[0],
                 )
-                mag = active.attributes.get("MAG", 1)
+                mag = active.get_attribute("MAG", 1)
                 spell_skill = active.skills.get("Spellcasting", 5)
 
                 attack_pool = mag + spell_skill
                 attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
 
                 if spell.type == "M":
-                    def_pool = target.attributes.get("ESS", 6) + target.attributes.get(
+                    def_pool = target.get_attribute("ESS", 6) + target.get_attribute(
                         "WIL", 3
                     )
                 else:
-                    def_pool = target.attributes.get("REA", 3) + target.attributes.get(
+                    def_pool = target.get_attribute("REA", 3) + target.get_attribute(
                         "INT", 3
                     )
 
@@ -193,17 +193,17 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                         soak_pool = 0
                     else:
                         soak_pool = max(
-                            0, target.attributes.get("BOD", 3) + target.armor - mag
+                            0, target.get_attribute("BOD", 3) + target.armor - mag
                         )
 
                     soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
                     final_damage = max(0, modified_damage - soak_hits)
-                    target.physical_damage += final_damage
+                    target.take_damage(final_damage, "P")
 
                 drain_value = max(2, mag - 2)
-                drain_resist_pool = active.attributes.get(
+                drain_resist_pool = active.get_attribute(
                     "WIL", 3
-                ) + active.attributes.get("LOG", 3)
+                ) + active.get_attribute("LOG", 3)
                 drain_hits, drain_hits_glitched = RulesEngine.roll_dice(
                     drain_resist_pool
                 )
@@ -222,12 +222,12 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                     active.is_alive = False
 
             elif is_data_spike:
-                log = active.attributes.get("LOG", 3)
+                log = active.get_attribute("LOG", 3)
                 cyber_skill = active.skills.get("Cybercombat", 5)
                 attack_pool = log + cyber_skill
                 attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
 
-                def_pool = target.attributes.get("INT", 3) + target.matrix.firewall
+                def_pool = target.get_attribute("INT", 3) + target.matrix.firewall
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
                 net_hits = attack_hits - def_hits
 
@@ -250,12 +250,12 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                 pass  # Abstract repositioning, no opposed roll needed
 
             elif is_tether:
-                log = active.attributes.get("LOG", 3)
+                log = active.get_attribute("LOG", 3)
                 hack_skill = active.skills.get("Hacking", 5)
                 attack_pool = log + hack_skill
                 attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
 
-                def_pool = target.attributes.get("WIL", 3) + target.matrix.firewall
+                def_pool = target.get_attribute("WIL", 3) + target.matrix.firewall
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
                 net_hits = attack_hits - def_hits
 
@@ -289,7 +289,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
 
                 if active.jumped_in_vehicle:
                     attack_pool = (
-                        active.attributes.get("AGI", 3)
+                        active.get_attribute("AGI", 3)
                         + active.skills.get("Gunnery", 5)
                         + active.control_rig
                     )
@@ -310,18 +310,18 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                         skill_val = active.skills.get(
                             "Close Combat", active.skills.get("Unarmed Combat", 5)
                         )
-                    attack_pool = active.attributes.get("AGI", 3) + skill_val
+                    attack_pool = active.get_attribute("AGI", 3) + skill_val
 
                 attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
 
                 if target.jumped_in_vehicle:
                     def_pool = (
-                        target.attributes.get("REA", 3)
-                        + target.attributes.get("INT", 3)
+                        target.get_attribute("REA", 3)
+                        + target.get_attribute("INT", 3)
                         + target.jumped_in_vehicle.handling
                     )
                 else:
-                    def_pool = target.attributes.get("REA", 3) + target.attributes.get(
+                    def_pool = target.get_attribute("REA", 3) + target.get_attribute(
                         "INT", 3
                     )
 
@@ -375,7 +375,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                     else:
                         soak_pool = max(
                             0,
-                            target.attributes.get("BOD", 3)
+                            target.get_attribute("BOD", 3)
                             + target.armor
                             + modified_ap,
                         )
@@ -384,33 +384,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
 
                     final_damage = max(0, modified_damage - soak_hits)
 
-                    if target.jumped_in_vehicle:
-                        if weapon.damage_type == "P":
-                            target.jumped_in_vehicle.physical_damage += final_damage
-                            biofeedback = final_damage // 2
-                            if biofeedback > 0:
-                                bio_resist = target.attributes.get(
-                                    "WIL", 3
-                                ) + target.attributes.get("BOD", 3)
-                                bio_hits, bio_hits_glitched = RulesEngine.roll_dice(
-                                    bio_resist
-                                )
-                                net_bio = max(0, biofeedback - bio_hits)
-                                target.stun_damage += net_bio
-                            if (
-                                target.jumped_in_vehicle.physical_damage
-                                >= target.jumped_in_vehicle.physical_track
-                            ):
-                                target.jumped_in_vehicle.is_destroyed = True
-                                target.stun_damage += 6
-                                target.jumped_in_vehicle = None
-                        else:
-                            target.stun_damage += final_damage
-                    else:
-                        if weapon.damage_type == "P":
-                            target.physical_damage += final_damage
-                        else:
-                            target.stun_damage += final_damage
+                    target.take_damage(final_damage, weapon.damage_type)
 
                     if (
                         target.physical_damage >= target.physical_track
