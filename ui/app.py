@@ -61,11 +61,15 @@ class App:
 
         # Check for map data
         if getattr(self.state, "environment", None) and hasattr(self.state.environment, "scenario_data"):
-            map_data = self.state.environment.scenario_data.get("map", None)
-            if map_data and not self.map_grid:
-                layout = map_data.get("layout_ascii", [])
-                legend = map_data.get("legend", {})
-                self.map_grid = MapGrid(layout, legend)
+            if self.state.environment.scenario_data:
+                map_data = self.state.environment.scenario_data.get("map", None)
+                if map_data and not self.map_grid:
+                    layout = map_data.get("layout_ascii", [])
+                    legend = map_data.get("legend", {})
+                    self.map_grid = MapGrid(layout, legend)
+
+        if self.map_grid and getattr(self.state, "environment", None):
+            self.map_grid.blast_zones = getattr(self.state.environment, "recent_blasts", [])
 
         t1 = [c for c in state.combatants if c.team == 1]
         t2 = [c for c in state.combatants if c.team == 2]

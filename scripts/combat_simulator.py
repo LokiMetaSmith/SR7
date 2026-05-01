@@ -140,6 +140,7 @@ class GameEnvironment:
         self.zones = zones if zones else []
         self.is_chase_combat = is_chase_combat
         self.scenario_rules = scenario_rules
+        self.recent_blasts = []
 
 
 class RulesEngine:
@@ -931,6 +932,9 @@ def main():
         state.log(f"\n--- Turn {state.turn} ---")
 
         for active in state.combatants:
+            # Clear previous blasts before next action
+            state.environment.recent_blasts.clear()
+
             if not active.is_alive or getattr(active, "has_yielded", False):
                 continue
 
@@ -1372,24 +1376,78 @@ def main():
                     or "rocket" in weapon.name.lower()
                 )
 
-                if net_hits > 0 or is_explosive:
+                if is_explosive:
+                    # Grenades can deviate, but for sim we hit the target zone
+                    net_hits = max(0, net_hits)
                     base_dmg = weapon.damage
-                    if (
-                        is_explosive
-                        and target.zone
-                        and (
-                            target.zone.cover.lower() == "heavy"
-                            or "enclosed" in target.zone.description.lower()
-                            or "enclosed" in target.zone.name.lower()
-                        )
-                    ):
+
+                    is_chunky = target.zone and (
+                        target.zone.cover.lower() == "heavy"
+                        or "enclosed" in target.zone.description.lower()
+                        or "enclosed" in target.zone.name.lower()
+                    )
+
+                    if is_chunky:
                         base_dmg *= 2
                         action_text += " [CHUNKY SALSA EFFECT!]"
-                        # Grenades can still deviate on a miss, but for sim purposes we assume it lands in the zone if attack fired
-                        net_hits = max(
-                            0, net_hits
-                        )  # Just use 0 net hits if it missed but landed in the room
 
+                    modified_damage = base_dmg + net_hits
+                    modified_ap = weapon.ap
+
+                    # Gather targets in the AoE blast radius (same zone, or just the target if no zone)
+                    aoe_targets = []
+
+                    if target.zone:
+                        state.environment.recent_blasts.append(target.zone.name)
+
+                    for c in state.combatants:
+                        if c.is_alive and not c.has_yielded:
+                            if target.zone and c.zone == target.zone:
+                                aoe_targets.append(c)
+                            elif not target.zone and c.name == target.name:
+                                aoe_targets.append(c)
+
+                    result_text = f"Explosive detonates! Hitting {len(aoe_targets)} target(s) in zone."
+
+                    for c_target in aoe_targets:
+                        # Dropoff can be abstracted or just full damage for everyone in the zone
+                        if c_target.jumped_in_vehicle:
+                            soak_pool = max(0, c_target.jumped_in_vehicle.body + c_target.jumped_in_vehicle.armor + modified_ap)
+                        else:
+                            soak_pool = max(0, c_target.attributes.get("BOD", 3) + c_target.armor + modified_ap)
+
+                        soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+                        final_damage = max(0, modified_damage - soak_hits)
+
+                        result_text += f"\n- {c_target.name} soaks {soak_hits} hits, taking {final_damage} {weapon.damage_type} damage."
+
+                        if c_target.jumped_in_vehicle:
+                            if weapon.damage_type == "P":
+                                c_target.jumped_in_vehicle.physical_damage += final_damage
+                                biofeedback = final_damage // 2
+                                if biofeedback > 0:
+                                    bio_resist = c_target.attributes.get("WIL", 3) + c_target.attributes.get("BOD", 3)
+                                    bio_hits, bio_hits_glitched = RulesEngine.roll_dice(bio_resist)
+                                    bio_dmg = max(0, biofeedback - bio_hits)
+                                    c_target.stun_damage += bio_dmg
+                                    result_text += f" (Rigger takes {bio_dmg} Biofeedback)"
+                                if c_target.jumped_in_vehicle.swarm_count > 1 and c_target.jumped_in_vehicle.physical_damage >= c_target.jumped_in_vehicle.physical_track:
+                                    c_target.jumped_in_vehicle.swarm_count -= 1
+                                    if c_target.jumped_in_vehicle.swarm_count <= 0:
+                                        c_target.jumped_in_vehicle.physical_damage = c_target.jumped_in_vehicle.physical_track
+                                    else:
+                                        c_target.jumped_in_vehicle.physical_damage = 0
+                                        result_text += f" Swarm reduced to {c_target.jumped_in_vehicle.swarm_count}."
+                            else:
+                                c_target.jumped_in_vehicle.stun_damage += final_damage
+                        else:
+                            if weapon.damage_type == "P":
+                                c_target.physical_damage += final_damage
+                            else:
+                                c_target.stun_damage += final_damage
+
+                elif net_hits > 0:
+                    base_dmg = weapon.damage
                     modified_damage = base_dmg + net_hits
                     modified_ap = weapon.ap
 
@@ -1498,6 +1556,8 @@ def main():
                 active.is_alive = False
                 action_text += f" {active.name} is incapacitated!"
 
+            if is_explosive:
+                state.log(f"--- AoE Mechanics ---\n{result_text}\n---------------------")
             narration = llm.narrate_action(active, action_text, result_text, state=state)
             state.log(narration)
 
