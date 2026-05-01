@@ -518,6 +518,8 @@ class MapGrid:
         self.margin = 10
         self.font = pygame.font.SysFont("monospace", 14)
 
+        self.blast_zones = [] # Store zones to highlight for AoE explosions
+
         self.colors = {
             ".": (40, 40, 40), # Default ground
             " ": (0, 0, 0, 0)  # Transparent/Empty
@@ -566,11 +568,31 @@ class MapGrid:
 
                 # Fill color
                 color = self.colors.get(char, self.colors.get(".", (40, 40, 40)))
+
+                # Highlight if in a blast zone (we can match by legend key if the zone name matches the legend description roughly)
+                # But since the MapGrid just draws characters, we'll highlight cells that belong to the blasted zones.
+                # A simple way: if `desc` in legend matches any `zone_name` in `self.blast_zones`.
+                is_blasted = False
+                if char in self.legend:
+                    desc = self.legend[char].lower()
+                    for bz in self.blast_zones:
+                        if bz.lower() in desc or desc in bz.lower():
+                            is_blasted = True
+
+                if is_blasted:
+                    color = (200, 50, 50) # Orange-red blast hue
+
                 if char != " ":
                     pygame.draw.rect(surface, color, cell_rect)
 
                 # Outline
                 pygame.draw.rect(surface, (80, 80, 80), cell_rect, 1)
+
+                # Draw blast effect over it
+                if is_blasted:
+                    s = pygame.Surface((self.cell_size, self.cell_size), pygame.SRCALPHA)
+                    s.fill((255, 100, 0, 80)) # Semi transparent orange
+                    surface.blit(s, cell_rect.topleft)
 
                 # Text char
                 if char.strip() and char != ".":

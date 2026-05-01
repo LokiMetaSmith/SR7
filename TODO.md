@@ -109,3 +109,13 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Social Combat/Contacts:** Implement Contact Connection/Loyalty integration in simulation stat blocks or pre-combat modifiers, and Communication Protocols (The Dead Drop, Encrypted Pulses) within the `combat_simulator.py`.
     *   [x] Implemented the Hopepunk Social Modifier.
 *   [x] **Trading Simulator:** Add functionality to simulate haggling or buying equipment, computing prices based on Fixer/NPC difficulty meter.
+
+---
+
+## Priority 8: Code Quality & Testing
+
+**Goal:** Ensure the backend combat simulator mechanics function correctly and are immune to regressions.
+
+*   [x] **Comprehensive Combat Simulator Tests:** Implement unit tests for core combat mechanics in `scripts/combat_simulator.py` (e.g., Chunky Salsa, N.I.C.A., Hopepunk Modifier, Tethers).
+*   [x] **Combat Analyzer Tests:** Create tests for the statistical analyzer to ensure math formulas and simulated outputs are accurate over iterations.
+*   [x] **Grenades & AoE Logic:** Properly implement scatter and blast profiles for grenades/AoE attacks within the MapGrid UI and combat simulation.
