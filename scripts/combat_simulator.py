@@ -63,6 +63,17 @@ class Contact:
     connection: int
     loyalty: int
 
+
+@dataclass
+class PossessingEntity:
+    name: str
+    mental_attributes: Dict[str, int] = field(default_factory=dict)
+    physical_modifiers: Dict[str, int] = field(default_factory=dict)
+    is_inhabitation: bool = False
+    stun_damage: int = 0
+    physical_damage: int = 0
+    is_remote: bool = False
+
 @dataclass
 class Zone:
     name: str
@@ -107,14 +118,88 @@ class Combatant:
     clean_nuyen: int = 0
     hot_nuyen: int = 0
     contacts: List[Contact] = field(default_factory=list)
+    possessed_by: Optional[PossessingEntity] = None
+
+    def get_attribute(self, attr: str, default: int = 3) -> int:
+        base = self.attributes.get(attr, default)
+        if self.possessed_by and attr in ["BOD", "AGI", "REA", "STR"]:
+            base += self.possessed_by.physical_modifiers.get(attr, 0)
+        if self.possessed_by and attr in ["LOG", "INT", "WIL", "CHA"]:
+            return self.possessed_by.mental_attributes.get(attr, base)
+        return base
+
+    def take_damage(self, amount: int, damage_type: str) -> str:
+        result_text = ""
+
+        # 1. Rigger Jumped-In Override
+        if self.jumped_in_vehicle:
+            if damage_type == "P":
+                self.jumped_in_vehicle.physical_damage += amount
+
+                # Rigger Biofeedback
+                biofeedback = amount // 2
+                if biofeedback > 0:
+                    bio_resist = self.get_attribute("WIL", 3) + self.get_attribute("BOD", 3)
+                    bio_hits, _ = RulesEngine.roll_dice(bio_resist)
+                    net_bio = max(0, biofeedback - bio_hits)
+                    self.stun_damage += net_bio
+                    result_text += f" Vehicle takes the damage! {self.name} rolls {bio_resist} dice to resist Stun Biofeedback, taking {net_bio} Stun damage."
+
+                if self.jumped_in_vehicle.physical_damage >= self.jumped_in_vehicle.physical_track:
+                    self.jumped_in_vehicle.swarm_count -= 1
+                    if self.jumped_in_vehicle.swarm_count <= 0:
+                        self.jumped_in_vehicle.is_destroyed = True
+                        self.stun_damage += 6
+                        self.jumped_in_vehicle = None
+                        result_text += f" The vehicle is DESTROYED! {self.name} takes 6 Stun dumpshock damage!"
+                    else:
+                        self.jumped_in_vehicle.physical_damage = 0
+                        result_text += f" A drone in the swarm is destroyed! Swarm size reduced to {self.jumped_in_vehicle.swarm_count}."
+            else:
+                self.stun_damage += amount
+            return result_text
+
+        # 2. Normal Combatant / Possessed Host
+        if damage_type == "P":
+            self.physical_damage += amount
+            if self.null_bags > 0:
+                self.null_bags = 0
+                result_text += " Their Null-bag is punctured and their AR signature lights up!"
+
+            # Possession Inhabitation Trigger & Biofeedback
+            if self.possessed_by:
+                if amount > self.get_attribute("WIL", 3) and not self.possessed_by.is_inhabitation:
+                    self.possessed_by.is_inhabitation = True
+                    result_text += f" [The Merger! {self.name} took massive physical trauma, and the possessing entity {self.possessed_by.name} has permanently taken over!]"
+
+                # Damage Sharing / Destabilization
+                biofeedback = amount // 2
+                if biofeedback > 0:
+                    self.possessed_by.stun_damage += biofeedback
+                    result_text += f" [{self.possessed_by.name} shares the trauma, taking {biofeedback} Stun biofeedback!]"
+
+                # Dumpshock / Banishment if destroyed
+                if self.physical_damage >= self.physical_track:
+                    dumpshock = 6
+                    self.possessed_by.stun_damage += dumpshock
+                    result_text += f" [Host body destroyed! {self.possessed_by.name} suffers {dumpshock} Stun dumpshock/destabilization!]"
+
+        else:
+            self.stun_damage += amount
+            if self.possessed_by:
+                biofeedback = amount // 2
+                if biofeedback > 0:
+                    self.possessed_by.stun_damage += biofeedback
+                    result_text += f" [{self.possessed_by.name} shares the trauma, taking {biofeedback} Stun biofeedback!]"
+        return result_text
 
     def roll_initiative(self) -> int:
         if self.jumped_in_vehicle:
             # Matrix Initiative (Data Processing + Intuition) + 1 Initiative Die per Rig level
-            base = self.matrix.data_processing + self.attributes.get("INT", 3)
+            base = self.matrix.data_processing + self.get_attribute("INT", 3)
             dice = 1 + self.control_rig
         else:
-            base = self.attributes.get("REA", 3) + self.attributes.get("INT", 3)
+            base = self.get_attribute("REA", 3) + self.get_attribute("INT", 3)
             dice = 1
             if "Wired Reflexes" in " ".join(self.special_rules):
                 dice += 1
@@ -687,7 +772,7 @@ def simulate_trade(combatant: Combatant, item_name: str, item_value: int, fixer_
     print(f"Item: {item_name} (Base Value: {item_value}¥)")
 
     # Calculate Buyer Pool
-    buyer_cha = combatant.attributes.get("CHA", 3)
+    buyer_cha = combatant.get_attribute("CHA", 3)
     buyer_nego = combatant.skills.get("Negotiation", 0)
     buyer_pool = buyer_cha + buyer_nego + combatant.street_cred
 
@@ -831,7 +916,7 @@ def main():
             def ask_action(self, combatant, state):
                 if combatant.jumped_in_vehicle and combatant.jumped_in_vehicle.weapons:
                     return f"attack with {combatant.jumped_in_vehicle.weapons[0].name}"
-                if combatant.spells and combatant.attributes.get("MAG", 0) > 0:
+                if combatant.spells and combatant.get_attribute("MAG", 0) > 0:
                     return f"cast {combatant.spells[0].name}"
                 elif combatant.matrix.attack > 3:
                     if random.random() > 0.5:
@@ -1019,7 +1104,7 @@ def main():
                 result_text = f"{active.name} drops their weapons and stops fighting."
             elif is_comm:
                 # Secure communication
-                sneak_pool = active.skills.get("Sneaking", 0) + active.attributes.get("AGI", 3)
+                sneak_pool = active.skills.get("Sneaking", 0) + active.get_attribute("AGI", 3)
                 sneak_hits, sneak_glitched, edge_spent = RulesEngine.roll_attack_with_edge(sneak_pool, active)
                 attack_hits_glitched = sneak_glitched
 
@@ -1027,7 +1112,7 @@ def main():
                 highest_perc_hits = 0
                 for enemy in state.combatants:
                     if enemy.team != active.team and enemy.is_alive and not enemy.has_yielded:
-                        perc_pool = enemy.skills.get("Perception", 0) + enemy.attributes.get("INT", 3)
+                        perc_pool = enemy.skills.get("Perception", 0) + enemy.get_attribute("INT", 3)
                         perc_hits, _ = RulesEngine.roll_dice(perc_pool)
                         if perc_hits > highest_perc_hits:
                             highest_perc_hits = perc_hits
@@ -1071,21 +1156,21 @@ def main():
                     else "Con"
                 )
                 skill_rating = active.skills.get(skill_name, 0)
-                cha = active.attributes.get("CHA", 3)
+                cha = active.get_attribute("CHA", 3)
 
                 attack_pool = cha + skill_rating + active.street_cred - active.notoriety
                 attack_hits, attack_hits_glitched, edge_spent = (
                     RulesEngine.roll_attack_with_edge(attack_pool, active)
                 )
 
-                target_wil = target.attributes.get("WIL", 3)
+                target_wil = target.get_attribute("WIL", 3)
                 # Resisting attribute logic
                 if skill_name == "Intimidation":
-                    target_resist = target.attributes.get("STR", 3)
+                    target_resist = target.get_attribute("STR", 3)
                 elif skill_name in ["Negotiation", "Leadership"]:
-                    target_resist = target.attributes.get("LOG", 3)
+                    target_resist = target.get_attribute("LOG", 3)
                 else:
-                    target_resist = target.attributes.get("CHA", 3)
+                    target_resist = target.get_attribute("CHA", 3)
 
                 def_pool = target_wil + target_resist
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
@@ -1107,7 +1192,7 @@ def main():
                     resolve_gain = 1 + net_hits
                     current_resolve = target.resolve.get(active.name, 0)
                     target.resolve[active.name] = current_resolve + resolve_gain
-                    active_wil = active.attributes.get("WIL", 3)
+                    active_wil = active.get_attribute("WIL", 3)
                     result_text = f"Social attack fails! {target.name} gains {resolve_gain} Resolve against {active.name}. (Total: {target.resolve[active.name]}/{active_wil} needed to become intractable)."
 
             elif is_spell and active.spells:
@@ -1115,7 +1200,7 @@ def main():
                     (s for s in active.spells if s.name.lower() in action_lower),
                     active.spells[0],
                 )
-                mag = active.attributes.get("MAG", 1)
+                mag = active.get_attribute("MAG", 1)
                 spell_skill = active.skills.get("Spellcasting", 5)
 
                 attack_pool = mag + spell_skill
@@ -1125,11 +1210,11 @@ def main():
 
                 # Defense
                 if spell.type == "M":
-                    def_pool = target.attributes.get("ESS", 6) + target.attributes.get(
+                    def_pool = target.get_attribute("ESS", 6) + target.get_attribute(
                         "WIL", 3
                     )
                 else:
-                    def_pool = target.attributes.get("REA", 3) + target.attributes.get(
+                    def_pool = target.get_attribute("REA", 3) + target.get_attribute(
                         "INT", 3
                     )
 
@@ -1146,22 +1231,22 @@ def main():
                         soak_pool = 0  # Mana spells ignore armor
                     else:
                         soak_pool = max(
-                            0, target.attributes.get("BOD", 3) + target.armor - mag
+                            0, target.get_attribute("BOD", 3) + target.armor - mag
                         )
 
                     soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
                     final_damage = max(0, modified_damage - soak_hits)
 
                     result_text = f"Spell hits! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} P damage."
-                    target.physical_damage += final_damage
+                    result_text += target.take_damage(final_damage, 'P')
                 else:
                     result_text = f"Spell misses or is resisted by {target.name}."
 
                 # Drain
                 drain_value = max(2, mag - 2)  # Assume F-2
-                drain_resist_pool = active.attributes.get(
+                drain_resist_pool = active.get_attribute(
                     "WIL", 3
-                ) + active.attributes.get("LOG", 3)
+                ) + active.get_attribute("LOG", 3)
                 drain_hits, drain_hits_glitched = RulesEngine.roll_dice(
                     drain_resist_pool
                 )
@@ -1189,14 +1274,14 @@ def main():
                     narration = llm.narrate_action(active, action_text, result_text, state=state)
                     state.log(narration)
                     continue
-                log = active.attributes.get("LOG", 3)
+                log = active.get_attribute("LOG", 3)
                 cyber_skill = active.skills.get("Cybercombat", 5)
                 attack_pool = log + cyber_skill
                 attack_hits, attack_hits_glitched, edge_spent = (
                     RulesEngine.roll_attack_with_edge(attack_pool, active)
                 )
 
-                def_pool = target.attributes.get("INT", 3) + target.matrix.firewall
+                def_pool = target.get_attribute("INT", 3) + target.matrix.firewall
                 if target.null_bags > 0:
                     def_pool += target.null_bags
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
@@ -1243,7 +1328,7 @@ def main():
                 or "pilot" in action_lower
                 or "drive" in action_lower
             ):
-                attack_pool = active.attributes.get("REA", 3) + active.skills.get(
+                attack_pool = active.get_attribute("REA", 3) + active.skills.get(
                     "Piloting", 4
                 )
                 if active.jumped_in_vehicle:
@@ -1254,7 +1339,7 @@ def main():
                     RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
                 )
 
-                def_pool = target.attributes.get("REA", 3) + target.skills.get(
+                def_pool = target.get_attribute("REA", 3) + target.skills.get(
                     "Piloting", 4
                 )
                 if target.jumped_in_vehicle:
@@ -1276,14 +1361,14 @@ def main():
                     narration = llm.narrate_action(active, action_text, result_text, state=state)
                     state.log(narration)
                     continue
-                log = active.attributes.get("LOG", 3)
+                log = active.get_attribute("LOG", 3)
                 hack_skill = active.skills.get("Hacking", 5)
                 attack_pool = log + hack_skill
                 attack_hits, attack_hits_glitched, edge_spent = (
                     RulesEngine.roll_attack_with_edge(attack_pool, active)
                 )
 
-                def_pool = target.attributes.get("WIL", 3) + target.matrix.firewall
+                def_pool = target.get_attribute("WIL", 3) + target.matrix.firewall
                 if target.null_bags > 0:
                     def_pool += target.null_bags
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
@@ -1330,7 +1415,7 @@ def main():
                 if active.jumped_in_vehicle:
                     # Gunnery + Agility + Control Rig
                     attack_pool = (
-                        active.attributes.get("AGI", 3)
+                        active.get_attribute("AGI", 3)
                         + active.skills.get("Gunnery", 5)
                         + active.control_rig
                         + lighting_mod
@@ -1338,7 +1423,7 @@ def main():
                     if active.jumped_in_vehicle.swarm_count > 1:
                         attack_pool += active.jumped_in_vehicle.swarm_count - 1
                 else:
-                    attack_pool = active.attributes.get("AGI", 3) + 5 + lighting_mod
+                    attack_pool = active.get_attribute("AGI", 3) + 5 + lighting_mod
 
                 attack_hits, attack_hits_glitched, edge_spent = (
                     RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
@@ -1347,12 +1432,12 @@ def main():
                 # Defense Roll: Reaction + Intuition + Cover
                 if target.jumped_in_vehicle:
                     def_pool = (
-                        target.attributes.get("REA", 3)
-                        + target.attributes.get("INT", 3)
+                        target.get_attribute("REA", 3)
+                        + target.get_attribute("INT", 3)
                         + target.jumped_in_vehicle.handling
                     )
                 else:
-                    def_pool = target.attributes.get("REA", 3) + target.attributes.get(
+                    def_pool = target.get_attribute("REA", 3) + target.get_attribute(
                         "INT", 3
                     )
 
@@ -1414,37 +1499,14 @@ def main():
                         if c_target.jumped_in_vehicle:
                             soak_pool = max(0, c_target.jumped_in_vehicle.body + c_target.jumped_in_vehicle.armor + modified_ap)
                         else:
-                            soak_pool = max(0, c_target.attributes.get("BOD", 3) + c_target.armor + modified_ap)
+                            soak_pool = max(0, c_target.get_attribute("BOD", 3) + c_target.armor + modified_ap)
 
                         soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
                         final_damage = max(0, modified_damage - soak_hits)
 
                         result_text += f"\n- {c_target.name} soaks {soak_hits} hits, taking {final_damage} {weapon.damage_type} damage."
 
-                        if c_target.jumped_in_vehicle:
-                            if weapon.damage_type == "P":
-                                c_target.jumped_in_vehicle.physical_damage += final_damage
-                                biofeedback = final_damage // 2
-                                if biofeedback > 0:
-                                    bio_resist = c_target.attributes.get("WIL", 3) + c_target.attributes.get("BOD", 3)
-                                    bio_hits, bio_hits_glitched = RulesEngine.roll_dice(bio_resist)
-                                    bio_dmg = max(0, biofeedback - bio_hits)
-                                    c_target.stun_damage += bio_dmg
-                                    result_text += f" (Rigger takes {bio_dmg} Biofeedback)"
-                                if c_target.jumped_in_vehicle.swarm_count > 1 and c_target.jumped_in_vehicle.physical_damage >= c_target.jumped_in_vehicle.physical_track:
-                                    c_target.jumped_in_vehicle.swarm_count -= 1
-                                    if c_target.jumped_in_vehicle.swarm_count <= 0:
-                                        c_target.jumped_in_vehicle.physical_damage = c_target.jumped_in_vehicle.physical_track
-                                    else:
-                                        c_target.jumped_in_vehicle.physical_damage = 0
-                                        result_text += f" Swarm reduced to {c_target.jumped_in_vehicle.swarm_count}."
-                            else:
-                                c_target.jumped_in_vehicle.stun_damage += final_damage
-                        else:
-                            if weapon.damage_type == "P":
-                                c_target.physical_damage += final_damage
-                            else:
-                                c_target.stun_damage += final_damage
+                        result_text += c_target.take_damage(final_damage, weapon.damage_type)
 
                 elif net_hits > 0:
                     base_dmg = weapon.damage
@@ -1462,7 +1524,7 @@ def main():
                     else:
                         soak_pool = max(
                             0,
-                            target.attributes.get("BOD", 3)
+                            target.get_attribute("BOD", 3)
                             + target.armor
                             + modified_ap,
                         )
@@ -1472,45 +1534,7 @@ def main():
                     final_damage = max(0, modified_damage - soak_hits)
                     result_text = f"Attack succeeds! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} {weapon.damage_type} damage."
 
-                    if target.jumped_in_vehicle:
-                        # Physical damage goes to vehicle, Rigger takes half as Stun Biofeedback
-                        if weapon.damage_type == "P":
-                            target.jumped_in_vehicle.physical_damage += final_damage
-                            biofeedback = final_damage // 2
-                            if biofeedback > 0:
-                                bio_resist = target.attributes.get(
-                                    "WIL", 3
-                                ) + target.attributes.get("BOD", 3)
-                                bio_hits, bio_hits_glitched = RulesEngine.roll_dice(
-                                    bio_resist
-                                )
-                                net_bio = max(0, biofeedback - bio_hits)
-                                target.stun_damage += net_bio
-                                result_text += f" Vehicle takes the damage! {target.name} rolls {bio_resist} dice to resist Stun Biofeedback, taking {net_bio} Stun damage."
-
-                            if (
-                                target.jumped_in_vehicle.physical_damage
-                                >= target.jumped_in_vehicle.physical_track
-                            ):
-                                target.jumped_in_vehicle.swarm_count -= 1
-                                if target.jumped_in_vehicle.swarm_count <= 0:
-                                    target.jumped_in_vehicle.is_destroyed = True
-                                    target.stun_damage += 6
-                                    target.jumped_in_vehicle = None  # Dumped
-                                    result_text += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
-                                else:
-                                    target.jumped_in_vehicle.physical_damage = 0
-                                    result_text += f" A drone in the swarm is destroyed! Swarm size reduced to {target.jumped_in_vehicle.swarm_count}."
-                        else:
-                            target.stun_damage += final_damage
-                    else:
-                        if weapon.damage_type == "P":
-                            target.physical_damage += final_damage
-                            if target.null_bags > 0:
-                                target.null_bags = 0
-                                result_text += " Their Null-bag is punctured and their AR signature lights up!"
-                        else:
-                            target.stun_damage += final_damage
+                    result_text += target.take_damage(final_damage, weapon.damage_type)
 
                     if (
                         target.physical_damage >= target.physical_track
