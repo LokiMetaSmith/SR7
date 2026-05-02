@@ -1094,14 +1094,81 @@ def main():
             is_cover = "take cover" in action_lower
             is_yield = "yield" in action_lower
             is_pass = "pass turn" in action_lower or "pass" == action_lower.strip()
+            is_explosive = False
+
+
+            is_summon = "summon" in action_lower or "conjure" in action_lower
 
             if is_pass:
+
                 action_text = f"{active.name} passes their turn."
                 result_text = "No action taken."
             elif is_yield:
                 active.has_yielded = True
                 action_text = f"{active.name} yields and surrenders!"
                 result_text = f"{active.name} drops their weapons and stops fighting."
+
+            elif is_summon:
+                # Find spirit name and force in action or pick random
+                spirit_force = 5
+                try:
+                    import re
+                    match = re.search(r'force\s*(\d+)', action_lower)
+                    if match:
+                        spirit_force = int(match.group(1))
+                except:
+                    pass
+
+                conjuring_pool = active.skills.get("Conjuring", 0) + active.get_attribute("MAG", 3)
+                conjuring_hits, conjuring_glitched, edge_spent = RulesEngine.roll_attack_with_edge(conjuring_pool, active)
+
+                spirit_hits, spirit_glitched = RulesEngine.roll_dice(spirit_force)
+
+                net_hits = conjuring_hits - spirit_hits
+
+                # Drain
+                drain_value = spirit_hits * 2
+                drain_resist_pool = active.get_attribute("WIL", 3) + active.get_attribute("LOG", 3)
+                drain_resist_hits, drain_glitched = RulesEngine.roll_dice(drain_resist_pool)
+                drain_damage = max(0, drain_value - drain_resist_hits)
+                drain_type = "P" if spirit_force > active.get_attribute("MAG", 3) else "S"
+
+                action_text = f"{active.name} attempts to summon a Force {spirit_force} spirit (Conjuring Pool: {conjuring_pool})."
+                if net_hits > 0:
+                    result_text = f"{active.name} successfully summons a spirit with {net_hits} services. "
+                    import glob
+
+                    templates = glob.glob("npc_templates/*spirit*.chum5")
+                    if templates:
+                        spirit_path = random.choice(templates)
+                        try:
+                            spirit = load_combatant(spirit_path)
+                            spirit.name = f"{active.name}'s {spirit.name} (Force {spirit_force})"
+                            spirit.team = active.team
+
+                            # Adjust stats based on force loosely
+                            spirit.attributes['BOD'] = spirit_force
+                            spirit.attributes['AGI'] = spirit_force + 1
+                            spirit.attributes['REA'] = spirit_force
+                            spirit.attributes['STR'] = spirit_force
+                            spirit.attributes['WIL'] = spirit_force
+                            spirit.attributes['LOG'] = spirit_force
+                            spirit.attributes['INT'] = spirit_force
+                            spirit.attributes['CHA'] = spirit_force
+
+                            state.combatants.append(spirit)
+                            result_text += f"The {spirit.name} materializes and joins the fight! "
+                        except:
+                            pass
+                else:
+                    result_text = f"{active.name} fails to summon the spirit. "
+
+                if drain_damage > 0:
+                    status = active.take_damage(drain_damage, drain_type)
+                    result_text += f"{active.name} takes {drain_damage}{drain_type} Summoning Drain. {status}"
+                else:
+                    result_text += f"{active.name} resists all Summoning Drain."
+
             elif is_comm:
                 # Secure communication
                 sneak_pool = active.skills.get("Sneaking", 0) + active.get_attribute("AGI", 3)

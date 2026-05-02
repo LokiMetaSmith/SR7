@@ -17,11 +17,11 @@
       <ESS>5</ESS>
     </attributes>
     <skills>
-      <skill><name>Assensing</name><rating>5</rating></skill>
-      <skill><name>Astral Combat</name><rating>5</rating></skill>
-      <skill><name>Close Combat</name><rating>5</rating></skill>
-      <skill><name>Perception</name><rating>5</rating></skill>
-      <skill><name>Exotic Ranged Weapon</name><rating>5</rating></skill>
+      <skill><name>Assensing</name><rating>5</rating><value>5</value></skill>
+      <skill><name>Astral Combat</name><rating>5</rating><value>5</value></skill>
+      <skill><name>Close Combat</name><rating>5</rating><value>5</value></skill>
+      <skill><name>Perception</name><rating>5</rating><value>5</value></skill>
+      <skill><name>Exotic Ranged Weapon</name><rating>5</rating><value>5</value></skill>
     </skills>
     <weapons>
       <weapon>
