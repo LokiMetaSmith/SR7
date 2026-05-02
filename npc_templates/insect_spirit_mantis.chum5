@@ -17,10 +17,10 @@
       <ESS>6</ESS>
     </attributes>
     <skills>
-      <skill><name>Close Combat</name><rating>8</rating></skill>
-      <skill><name>Sneaking</name><rating>7</rating></skill>
-      <skill><name>Perception</name><rating>6</rating></skill>
-      <skill><name>Gymnastics</name><rating>6</rating></skill>
+      <skill><name>Close Combat</name><rating>8</rating><value>8</value></skill>
+      <skill><name>Sneaking</name><rating>7</rating><value>7</value></skill>
+      <skill><name>Perception</name><rating>6</rating><value>6</value></skill>
+      <skill><name>Gymnastics</name><rating>6</rating><value>6</value></skill>
     </skills>
     <weapons>
       <weapon>
