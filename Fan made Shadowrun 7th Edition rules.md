@@ -3710,6 +3710,22 @@ Due to the pervasive nature of grey goo and ambient nanites in the 6th World, in
 | Natural Recovery (Physical) | Roll Body x 2. 1 Hit = 1 Box healed. | 1 Day interval. (Double time if living on Street lifestyle). |
 | Essence Therapy | Roll Charisma + Psychology (Threshold 4). Success restores 0.1 lost Essence (from trauma, not cyberware). | 1 Month interval. Costs 5,000¥ in therapy/retreat fees. |
 
+#### 3. Resurrection Mechanics (Echoes of Death)
+Death in the Panopticon is rarely clean. The merger of the Gaiasphere and the Matrix means that when a metahuman soul departs, the ambient nanite grid and astral background react violently. Resurrection is possible, but it always leaves a scar on the soul and the world.
+
+*   **Burning Edge (The Classic Survival):** The most common method of cheating death. When a character's Physical Condition Monitor overflows beyond their Body rating, they may permanently burn 1 point of Edge to survive.
+    *   *Mechanics:* The character falls into a comatose state (0 boxes remaining on the Physical track) but stabilizes. They require immediate medical evacuation.
+    *   *Character Development:* They permanently lose 1 maximum Edge. Players are encouraged to describe a lasting physical or psychological trauma resulting from the near-death experience (e.g., severe cyberware damage, phantom pain, a new phobia).
+
+*   **The Lazarus Protocol (Nanite Reconstruction):** A forbidden, experimental procedure utilized by high-end corp black clinics and desperate shadow-docs. If a body is recovered within 1 hour of death, a concentrated slurry of medical-grade grey goo can be used to violently rebuild the damaged organs.
+    *   *Mechanics:* Costs 250,000¥ and requires a Biotech + Logic [10] Extended Test (1 Hour interval).
+    *   *Character Development:* The process consumes a massive amount of the soul's essence, costing a permanent **-1.0 Essence**. Additionally, the character immediately acquires the *Scrap-Sickness (N.I.C.A.)* negative quality and the *Digital Ghost* quality, as their body is now saturated with semi-feral nanites.
+    *   *Storyline Implications (Show, Don't Tell):* Surviving the Lazarus Protocol paints a target on the runner. G.O.D. Antibodies view the reconstructed runner as an anomaly—a walking glitch. The character might find their AR feeds occasionally bleeding with raw machine code, or notice Matrix entities pausing to stare at them with empty, glowing eyes. Spirits may recoil from them, their aura now tasting of ozone and burnt silicon.
+
+*   **Digital Ascension (The Ghost in the Machine):** If a character is killed specifically by biofeedback while connected via Hot-Sim or while jumped into a vehicle/drone, their physical brain boils, but their consciousness can be "uploaded" into the Gaiasphere.
+    *   *Mechanics:* The physical body dies permanently. The character is instantly converted into an AI/Digital Entity. They lose all physical attributes (Strength, Agility, Body) but retain mental attributes. Their Essence becomes fixed at 6 (Digital).
+    *   *Storyline Implications (Show, Don't Tell):* They are now a ghost. The world is a stream of cold data. The character can only interact with the physical world by inhabiting drones or paying other runners to carry them on secure commlinks. Their old friends speak to them through screens, their voices filtered and distant, a constant reminder of the flesh they left behind.
+
 ### IX. STEALTH IN THE PANOPTICON: Hiding from the Goo
 If the air you breathe and the water you drink are crawling with nanites, how do you sneak into a Wuxing black site? You don't just hide your body; you have to hide your data-shadow.
 
