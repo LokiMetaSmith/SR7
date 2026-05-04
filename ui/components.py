@@ -1,5 +1,9 @@
 import pygame
+import os
 from dataclasses import dataclass
+
+_IMAGE_CACHE = {}
+
 from scripts.combat_simulator import Combatant
 
 # Define some useful colors
@@ -95,13 +99,41 @@ class BaseCard:
         surface.blit(attr_surf, (panel_rect.x + 10, panel_rect.y + 35))
         surface.blit(attr_surf2, (panel_rect.x + 10, panel_rect.y + 50))
 
+        # Portrait
+        portrait_width = 0
+        if getattr(self.combatant, "portrait", None):
+            portrait_path = self.combatant.portrait
+            if portrait_path not in _IMAGE_CACHE:
+                actual_path = None
+                if os.path.exists(portrait_path):
+                    actual_path = portrait_path
+                else:
+                    filename = os.path.basename(portrait_path)
+                    if os.path.exists(os.path.join("npc_templates", filename)):
+                        actual_path = os.path.join("npc_templates", filename)
+
+                if actual_path:
+                    try:
+                        img = pygame.image.load(actual_path).convert_alpha()
+                        img = pygame.transform.smoothscale(img, (60, 60))
+                        _IMAGE_CACHE[portrait_path] = img
+                    except Exception:
+                        _IMAGE_CACHE[portrait_path] = None
+                else:
+                    _IMAGE_CACHE[portrait_path] = None
+
+            cached_img = _IMAGE_CACHE.get(portrait_path)
+            if cached_img:
+                portrait_width = 60
+                surface.blit(cached_img, (panel_rect.right - portrait_width - 10, panel_rect.y + 10))
+
         # Edge
         edge_text = f"Edge: {self.combatant.edge}"
         edge_surf = self.font_body.render(edge_text, True, COLORS["border"])
-        surface.blit(
-            edge_surf,
-            (panel_rect.right - edge_surf.get_width() - 10, panel_rect.y + 10),
-        )
+        edge_x = panel_rect.right - edge_surf.get_width() - 10
+        if portrait_width > 0:
+            edge_x -= (portrait_width + 10)
+        surface.blit(edge_surf, (edge_x, panel_rect.y + 10))
 
     def _draw_action_button(self, surface: pygame.Surface, rect: pygame.Rect, text_render: pygame.Surface):
         mouse_pos = pygame.mouse.get_pos()

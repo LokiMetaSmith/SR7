@@ -119,6 +119,7 @@ class Combatant:
     hot_nuyen: int = 0
     contacts: List[Contact] = field(default_factory=list)
     possessed_by: Optional[PossessingEntity] = None
+    portrait: Optional[str] = None
 
     def get_attribute(self, attr: str, default: int = 3) -> int:
         base = self.attributes.get(attr, default)
@@ -351,6 +352,11 @@ def parse_chummer(file_path: str) -> Combatant:
         raise ValueError("Invalid Chummer XML")
     name = char.find("name").text if char.find("name") is not None else "Unknown"
 
+    portrait = None
+    portrait_node = char.find("portrait")
+    if portrait_node is not None and portrait_node.text:
+        portrait = portrait_node.text
+
     attributes = {}
     attr_node = char.find("attributes")
     if attr_node is not None:
@@ -367,7 +373,7 @@ def parse_chummer(file_path: str) -> Combatant:
             v = int(skill.find("value").text)
             skills[n] = v
 
-    c = Combatant(name=name, attributes=attributes, skills=skills)
+    c = Combatant(name=name, attributes=attributes, skills=skills, portrait=portrait)
 
     nuyen_node = char.find("nuyen")
     if nuyen_node is not None and nuyen_node.text:
