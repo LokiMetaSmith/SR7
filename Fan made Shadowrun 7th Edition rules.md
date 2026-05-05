@@ -3726,6 +3726,18 @@ Death in the Panopticon is rarely clean. The merger of the Gaiasphere and the Ma
     *   *Mechanics:* The physical body dies permanently. The character is instantly converted into an AI/Digital Entity. They lose all physical attributes (Strength, Agility, Body) but retain mental attributes. Their Essence becomes fixed at 6 (Digital).
     *   *Storyline Implications (Show, Don't Tell):* They are now a ghost. The world is a stream of cold data. The character can only interact with the physical world by inhabiting drones or paying other runners to carry them on secure commlinks. Their old friends speak to them through screens, their voices filtered and distant, a constant reminder of the flesh they left behind.
 
+*   **Cold Storage (The Arcade Revival):** A bizarre, metareal phenomenon where the Gaiasphere attempts to "re-spool" a violently deleted consciousness from latent data and ambient nanites, dumping them into a surrogate body constructed from grey goo.
+    *   *Narrative Trigger:* When a character is killed or incapacitated beyond recovery, their consciousness awakes in a surreal, dream-like construct: an empty neon-lit arcade. "You walk up to an arcade game and there are two quarters on the console. The arcade is titled 'ShadowRun'. Turning around there is an exit sign and a bright white door stiletto. Putting in a quarter lets you revive your character."
+    *   *Mechanics:* The character is revived, and all physical damage is repaired with gamma-level cyberware. They regain three-fourths (3/4) of their physical and stun damage tracks. However, **all equipment, weapons, and armor on their person at the time of death are permanently consumed** by the nanite swarm used to rebuild them.
+    *   *The Cost:* The character immediately ascends to **Level Three on the Headcase Quintet Scale**.
+
+#### The Headcase Quintet Levels
+The Headcase Quintet represents a unique form of Cognitive Fragmentation Disorder (CFD) where nanite infection links multiple minds into a localized, hive-mind-like network. Levels can go up or down based on RP and events. If a character overuses a power, the level goes up; if they, as a group, choose to go down a level, it decreases. The Quintet can be forcibly broken apart, but it will cause physical and essence damage. It is always a personal choice.
+
+*   **Level One (Initial Infection):** The infection vector was usually through a simsense rig (e.g., viewing corrupted, anomalous video feeds). The character receives involuntary Matrix Perception, un-natural physical regeneration, and access to basic CFD powers.
+*   **Level Two (The Cohort):** The character gains total, unbidden awareness of other Quintet members—their location, thoughts, presence, and abilities. They possess permanent Matrix perception and the complete set of CFD powers. They become, essentially, a Sense8 cohort.
+*   **Level Three (A Bridge Too Far):** The characters begin experiencing active personality damage, bleeding, and merging. This level is usually only reached if a member leaves, becomes incapacitated, dies, or is resurrected via *Cold Storage*. Characters at this level receive roleplaying bonuses for voluntarily picking flaws and negative attributes to compensate for their deteriorating, shared mental condition.
+
 ### IX. STEALTH IN THE PANOPTICON: Hiding from the Goo
 If the air you breathe and the water you drink are crawling with nanites, how do you sneak into a Wuxing black site? You don't just hide your body; you have to hide your data-shadow.
 
