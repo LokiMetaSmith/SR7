@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.2)  2 MAY 2026 20:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.5)  5 MAY 2026 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1107,12 +1107,6 @@ LaTeX Font Info:    Trying to load font information for T1+phv on input line 18
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 (./Fan made Shadowrun 7th Edition rules.aux
-
-LaTeX Warning: Label `conjuring-summoning-spirits' multiply defined.
-
-
-LaTeX Warning: Label `conjuring-summoning-spirits' multiply defined.
-
 
 LaTeX Warning: Label `host-architecture-ic' multiply defined.
 
@@ -2935,13 +2929,13 @@ Overfull \hbox (5.84251pt too wide) in paragraph at lines 8193--8193
  []
 
 [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
-[114] [115] [116] [117] [118] [119]
-Underfull \hbox (badness 10000) in paragraph at lines 9485--9487
+[114] [115] [116] [117] [118] [119] [120]
+Underfull \hbox (badness 10000) in paragraph at lines 9550--9552
 []\T1/phv/m/sl/10 (+20) Resisting So-cial/-Ma-nip-u-la-tion: \T1/phv/m/n/10 (+2
 0) Willpower +
  []
 
-[120] [121] [122] [123] [124] (./Fan made Shadowrun 7th Edition rules.aux)
+[121] [122] [123] [124] [125] (./Fan made Shadowrun 7th Edition rules.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2952,10 +2946,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  )
 Here is how much of TeX's memory you used:
- 36877 strings out of 476182
- 763679 string characters out of 5795596
+ 36886 strings out of 476182
+ 763911 string characters out of 5795596
  2156975 words of memory out of 5000000
- 57608 multiletter control sequences out of 15000+600000
+ 57614 multiletter control sequences out of 15000+600000
  612507 words of font info for 369 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  117i,13n,121p,1227b,1563s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2972,10 +2966,10 @@ oes not exist, replaced by a fixed one
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "Fan made Shadowrun 7th Edition rules.pdf" (124 pages, 745455
+Output written on "Fan made Shadowrun 7th Edition rules.pdf" (125 pages, 752314
  bytes).
 PDF statistics:
- 908 PDF objects out of 1000 (max. 8388607)
- 738 compressed objects within 8 object streams
- 276 named destinations out of 1000 (max. 500000)
+ 915 PDF objects out of 1000 (max. 8388607)
+ 744 compressed objects within 8 object streams
+ 279 named destinations out of 1000 (max. 500000)
  27021 words of extra memory for PDF output out of 29859 (max. 10000000)
