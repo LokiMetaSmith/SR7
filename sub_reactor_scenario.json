@@ -1,0 +1,46 @@
+{
+  "name": "Research Sub 10 Reactor Heist",
+  "description": "The tight, utilitarian corridors of Research Sub 10. The air is claustrophobic and hums with the thrum of the nearby nuclear reactor. Terminals and piping line the walls, making for intense close-quarters combat.",
+  "is_chase_combat": false,
+  "modifiers": {
+    "lighting": -1,
+    "background_count": 0
+  },
+  "map": {
+    "layout_ascii": [
+      " W W W R W W W ",
+      " W . . . . . W ",
+      " W C . T . C W ",
+      " W . . . . . W ",
+      " W W W D W W W "
+    ],
+    "legend": {
+      "W": "Submarine Wall (Impassable)",
+      "R": "Reactor Core (Heavy Cover, Interactable)",
+      "T": "Control Terminal (Medium Cover, Interactable)",
+      "C": "Coolant Pipes (Light Cover, Hazard)",
+      "D": "Airlock Door (Start)",
+      ".": "Metal Deck (Open)"
+    },
+    "zones": [
+      {
+        "name": "Airlock Entrance",
+        "type": "Start Zone",
+        "cover": "None",
+        "description": "The narrow entry point into the reactor bay."
+      },
+      {
+        "name": "Control Terminals",
+        "type": "Cover",
+        "cover": "Medium",
+        "description": "Banks of instruments offering medium cover."
+      },
+      {
+        "name": "Reactor Core",
+        "type": "Objective",
+        "cover": "Heavy",
+        "description": "The massive nuclear assembly, providing heavy cover."
+      }
+    ]
+  }
+}

@@ -56,7 +56,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 **Goal:** Ensure the story mechanically aligns with the custom ruleset.
 
-*   [ ] **Create Cold Storage Adventure Module:** Distill the "Cold Storage" resurrection story (the Neon-lit Arcade) into a playable JSON gameplay module.
+*   [x] **Create Cold Storage Adventure Module:** Distill the "Cold Storage" resurrection story (the Neon-lit Arcade) into a playable JSON gameplay module.
 *   [x] **Audit NPC Stat Blocks:** Review `GM_Campaign_Guide.md` (Sister Sinalma, Captain Lazlow, Spark+, etc.).
     *   [x] *Follow-up required:* Every Spell, Adept Power, Cyberware, Quality, and Weapon referenced in these stat blocks must be added to the `Fan made Shadowrun 7th Edition rules.md` document (and eventually the Chummer XML). If the rule doesn't exist, the stat block is unplayable. (COMPLETED: Added missing qualities like Reality Warper, Delusion, Personafix, Trouble Magnet, Remembrance).
     *   [x] *Follow-up required:* Update `Fan made Shadowrun 7th Edition rules.tex` to include the `Custom Fit`, `Infection (HMHVV)`, and `Dual Natured` rules added to the markdown.

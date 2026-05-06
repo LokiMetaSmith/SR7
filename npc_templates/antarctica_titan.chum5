@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>The Titan</name>
+    <metatype>Colossal Entity</metatype>
+    <background>A colossal entity defending the physical link in Antarctica. Forged of corrupted nanites and ice, it boasts massive resistance to the extreme elements and unimaginable destructive power.</background>
+    <attributes>
+      <attribute>
+        <name>BOD</name>
+        <value>14</value>
+      </attribute>
+      <attribute>
+        <name>AGI</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>REA</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>STR</name>
+        <value>16</value>
+      </attribute>
+      <attribute>
+        <name>WIL</name>
+        <value>10</value>
+      </attribute>
+      <attribute>
+        <name>LOG</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>INT</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>CHA</name>
+        <value>2</value>
+      </attribute>
+      <attribute>
+        <name>EDG</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>ESS</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>MAG</name>
+        <value>12</value>
+      </attribute>
+    </attributes>
+    <skills>
+      <skill>
+        <name>Close Combat</name>
+        <value>8</value>
+      </skill>
+      <skill>
+        <name>Heavy Weapons</name>
+        <value>6</value>
+      </skill>
+      <skill>
+        <name>Perception</name>
+        <value>5</value>
+      </skill>
+    </skills>
+    <gear>
+      <item>Glacial Plating (Armor 24)</item>
+    </gear>
+    <qualities>
+      <quality>Cold Resistance</quality>
+      <quality>Ice Resistance</quality>
+    </qualities>
+    <weapons>
+      <weapon>
+        <name>Colossal Smash</name>
+        <damage>16</damage>
+        <damage_type>P</damage_type>
+        <ap>-4</ap>
+        <mode>SS</mode>
+      </weapon>
+      <weapon>
+        <name>Anti-Air Lasers</name>
+        <damage>12</damage>
+        <damage_type>P</damage_type>
+        <ap>-6</ap>
+        <mode>FA</mode>
+      </weapon>
+    </weapons>
+  </character>
+</characters>
