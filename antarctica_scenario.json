@@ -1,0 +1,46 @@
+{
+  "name": "The Wall of Ice and Goo",
+  "description": "A desolate expanse of Antarctic ice, howling with a blinding snowstorm. Massive ley lines flare in a 16-line pattern of black and azure fire. The ground is a mix of jagged ice and pools of black nanite goo.",
+  "is_chase_combat": false,
+  "modifiers": {
+    "lighting": -3,
+    "footing": -2,
+    "background_count": 5
+  },
+  "map": {
+    "layout_ascii": [
+      " . . I I I . . ",
+      " . G G T G G . ",
+      " . . . . . . . ",
+      " I . . . . . I ",
+      " . P P P P P . "
+    ],
+    "legend": {
+      "P": "Player Start (Open Ice)",
+      "I": "Jagged Ice Spire (Heavy Cover)",
+      "G": "Black Goo Pool (Hazard, Slow Movement)",
+      "T": "The Titan's Breach (Objective / Enemy Start)",
+      ".": "Snowfield (Poor Footing, No Cover)"
+    },
+    "zones": [
+      {
+        "name": "The Snowfield",
+        "type": "Start Zone",
+        "cover": "None",
+        "description": "Wide-open ice field with zero cover and blinding wind."
+      },
+      {
+        "name": "Ice Spires",
+        "type": "Cover",
+        "cover": "Heavy",
+        "description": "Massive chunks of ice jutting from the ground."
+      },
+      {
+        "name": "The Breach",
+        "type": "Hazard",
+        "cover": "None",
+        "description": "The nexus of the ley lines, surrounded by hazardous black goo."
+      }
+    ]
+  }
+}

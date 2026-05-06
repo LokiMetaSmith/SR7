@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>Glitched IC</name>
+    <metatype>Matrix Entity</metatype>
+    <background>A violent subroutine spawned by the fragmented subconscious of the Neon Arcade. It manifests in a blur of corrupted neon green data.</background>
+    <attributes>
+      <attribute>
+        <name>BOD</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>AGI</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>REA</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>STR</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>WIL</name>
+        <value>7</value>
+      </attribute>
+      <attribute>
+        <name>LOG</name>
+        <value>7</value>
+      </attribute>
+      <attribute>
+        <name>INT</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>CHA</name>
+        <value>1</value>
+      </attribute>
+      <attribute>
+        <name>EDG</name>
+        <value>2</value>
+      </attribute>
+      <attribute>
+        <name>ESS</name>
+        <value>6</value>
+      </attribute>
+    </attributes>
+    <skills>
+      <skill>
+        <name>Cybercombat</name>
+        <value>8</value>
+      </skill>
+      <skill>
+        <name>Hacking</name>
+        <value>6</value>
+      </skill>
+      <skill>
+        <name>Close Combat</name>
+        <value>6</value>
+      </skill>
+    </skills>
+    <gear>
+      <item>Neon Blur (Armor 10)</item>
+    </gear>
+    <weapons>
+      <weapon>
+        <name>Data Spike (Matrix)</name>
+        <damage>8</damage>
+        <damage_type>S</damage_type>
+        <ap>-2</ap>
+        <mode>SS</mode>
+      </weapon>
+      <weapon>
+        <name>Corrupted Touch</name>
+        <damage>6</damage>
+        <damage_type>P</damage_type>
+        <ap>0</ap>
+        <mode>SS</mode>
+      </weapon>
+    </weapons>
+  </character>
+</characters>
