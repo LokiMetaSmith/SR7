@@ -1,5 +1,46 @@
 # Cold Storage: The Arcade Revival
 
+## Prologue
+
+The rain in Seattle doesn’t just fall; it dissolves. It’s a gray, acidic mist that chews at the neon signs of the Redmond Barrens and turns the street-sludge into a conductive soup.
+Inside the matte-black GMC Bulldog, the air smelled of stale energy drinks and the ozone-sweet tang of cooling server racks. This was the "quiet" part of the run. The part where the professional mask is still tight.
+"Sixty seconds to the drop," Logi’s voice hummed through their internal comms, sounding more like a data-stream than a person. Logi was currently "jacked in," their consciousness stretched across the building’s security grid like a digital ghost. "I’ve looped the exterior cameras. Security is on a twelve-minute patrol rotation. We have a window, but it’s narrow."
+Red checked the edge of her monofilament sword. The wire was invisible to the naked eye, a lethal strand of hyper-compressed carbon that could slice through a cyber-limb like a hot wire through soy-butter. Her chrome-plated nerves were humming. "I’m in first. Chow, you’re my shield. Loaf, you’re the symphony."
+"I like symphonies," Loaf grinned, slapping a fresh drum of explosive-tipped rounds into his Ares Alpha. "Especially the ones with a lot of percussion."
+Chow didn't say anything. He just adjusted his ballistic shield, his massive frame taking up nearly a third of the van’s interior. He was a wall of muscle and Kevlar, the anchor of the team.
+"Go," Logi whispered.
+The side door hissed open.
+They hit the NeoNET research tier with the precision of a surgical strike. Red was a blur of silver and black, a shadow that moved between the strobe-lights of the security sweeps. She didn't kill—not yet. She just disabled, a palm-strike to a nerve cluster here, a silent takedown there.
+Chow followed, his heavy boots making surprisingly little noise as he moved to cover the hallway intersections. Loaf brought up the rear, his eyes scanning the ceilings for automated turrets.
+They reached the Vault—the "Cold Storage." This was where NeoNET kept the things too dangerous for the public Matrix.
+"Door’s a bitch," Logi’s voice crackled. "It’s a fractal lock. I need thirty seconds to crunch the permutations."
+"Make it twenty," Red said, her eyes fixed on the elevator at the end of the hall. "I can hear the HTR (High Threat Response) team’s turbine engines. They’re coming in fast from the roof."
+In the Matrix, Logi was fighting a losing battle. The ICE (Intrusion Countermeasures Electronics) wasn't just code anymore; it was shifting. It looked like a black leech, peeling itself off the virtual walls. Logi felt a sharp metallic tang on their tongue—the first sign of the bleed-over.
+“Push,” a voice whispered in Logi’s ear. It wasn't Red. It wasn't the team. It sounded like a thousand household appliances humming in unison.
+Logi pushed. The fractal lock didn't just break; it shattered.
+The vault door groaned open, revealing a single, gleaming sim-rig sitting on a pedestal. It was the prototype. The "Heritage" project.
+"Got it," Red said, grabbing the rig.
+Then the world turned red.
+The HTR team didn't use the elevator. They blew the ceiling. Four armored figures in full-seal tactical gear rappelled down on fast-ropes, their assault rifles already spitting lead.
+"Chow, front!" Loaf roared, his Ares Alpha opening up with a rhythmic thud-thud-thud that filled the room with the smell of cordite.
+Chow stepped forward, his shield taking the brunt of the fire. But something was different. Usually, the impact of high-velocity rounds rattled his teeth. Now, as the bullets hit, he felt a cooling sensation. A silver-black sheen began to marble the surface of his skin beneath his armor. The pain didn't just stop; it turned into data.
+"I'm... I'm okay," Chow grunted, his voice sounding deeper, more resonant. "Keep moving!"
+Red moved to intercept an HTR scout, but her blade felt too light. Her vision flickered—a barcode flashed across her retinas. She didn't just see the scout; she saw his trajectory. She saw the weak point in his neck seal before he even landed. She struck, and the man was dead before he hit the floor.
+"Logi, the van!" Loaf yelled over the noise of the gunfight.
+Logi didn't answer. In the driver's seat of the Bulldog, Logi’s eyes were rolled back, glowing with an unnatural, luminescent green. The van’s engine wasn't just idling; it was screaming. The nanites in Logi’s blood were interfacing directly with the vehicle’s CPU, bypassing the hardware entirely.
+"The van is... me," Logi whispered.
+They scrambled back to the Bulldog, diving through the door as Logi floored it. The tires didn't just chirp; they tore chunks out of the asphalt.
+As they sped away into the Seattle rain, the silence in the back of the van was heavy.
+Red looked at her hand. The barcode tattoo was starting to form, sliding up under her cuff.
+Chow was staring at his palm, where a small patch of gray metallic fungus was already starting to sprout.
+Loaf was laughing, but it was a mathematical, rhythmic sound that lacked any real mirth.
+They had the prototype. They had the payout. But as the four of them looked at each other, they realized they weren't four anymore. The walls between their minds were thinning, melting into a shared, static-filled headspace.
+They were the Quintet. And the "simple job" had just rewritten their DNA.
+That’s when the white limousine pulled out from a side street, its headlights cutting through the gray rain like twin suns.
+"Excellent work, everyone," a voice spoke, not from the radio, but from inside all four of their skulls at once. "Gotta love it when a run goes together."
+
+
+
 ## Chapter 1: Schrödinger's In Neon Green
 
 The limousine's tires crunched on the gravel, stopping under the flickering glow of a broken streetlamp. The door swung open, and a man stepped out into the night. His suit was impossibly white, edged in an unnatural, luminescent glow that seemed to mute the gritty reality of the alley. The air around him carried the distinct scent of expensive leather and tangy Old England aftershave.
