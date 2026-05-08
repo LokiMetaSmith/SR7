@@ -56,7 +56,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 **Goal:** Ensure the story mechanically aligns with the custom ruleset.
 
-*   [ ] **Expand Cold Storage Novella:** Fill in the missing chapters in the Cold Storage novella based on the condensed story notes.
+*   [x] **Expand Cold Storage Novella:** Fill in the missing chapters in the Cold Storage novella based on the condensed story notes.
 
 *   [x] **Create Cold Storage Novella:** Write a novella format story detailing the events of Operation Cold Storage.
 

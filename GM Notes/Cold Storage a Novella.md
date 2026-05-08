@@ -1,5 +1,79 @@
 # Cold Storage: The Arcade Revival
 
+## Prologue
+
+The rain in Seattle doesn’t just fall; it dissolves. It’s a gray, acidic mist that chews at the neon signs of the Redmond Barrens and turns the street-sludge into a conductive soup.
+
+Inside the matte-black GMC Bulldog, the air smelled of stale energy drinks and the ozone-sweet tang of cooling server racks. This was the "quiet" part of the run. The part where the professional mask is still tight.
+
+"Sixty seconds to the drop," Logi’s voice hummed through their internal comms, sounding more like a data-stream than a person. Logi was currently "jacked in," their consciousness stretched across the building’s security grid like a digital ghost. "I’ve looped the exterior cameras. Security is on a twelve-minute patrol rotation. We have a window, but it’s narrow."
+
+Red checked the edge of her monofilament sword. The wire was invisible to the naked eye, a lethal strand of hyper-compressed carbon that could slice through a cyber-limb like a hot wire through soy-butter. Her chrome-plated nerves were humming. "I’m in first. Chow, you’re my shield. Loaf, you’re the symphony."
+
+"I like symphonies," Loaf grinned, slapping a fresh drum of explosive-tipped rounds into his Ares Alpha. "Especially the ones with a lot of percussion."
+
+Chow didn't say anything. He just adjusted his ballistic shield, his massive frame taking up nearly a third of the van’s interior. He was a wall of muscle and Kevlar, the anchor of the team.
+
+"Go," Logi whispered.
+
+The side door hissed open.
+
+They hit the NeoNET research tier with the precision of a surgical strike. Red was a blur of silver and black, a shadow that moved between the strobe-lights of the security sweeps. She didn't kill—not yet. She just disabled, a palm-strike to a nerve cluster here, a silent takedown there.
+
+Chow followed, his heavy boots making surprisingly little noise as he moved to cover the hallway intersections. Loaf brought up the rear, his eyes scanning the ceilings for automated turrets.
+
+They reached the Vault—the "Cold Storage." This was where NeoNET kept the things too dangerous for the public Matrix.
+
+"Door’s a bitch," Logi’s voice crackled. "It’s a fractal lock. I need thirty seconds to crunch the permutations."
+
+"Make it twenty," Red said, her eyes fixed on the elevator at the end of the hall. "I can hear the HTR (High Threat Response) team’s turbine engines. They’re coming in fast from the roof."
+
+In the Matrix, Logi was fighting a losing battle. The ICE (Intrusion Countermeasures Electronics) wasn't just code anymore; it was shifting. It looked like a black leech, peeling itself off the virtual walls. Logi felt a sharp metallic tang on their tongue—the first sign of the bleed-over.
+
+“Push,” a voice whispered in Logi’s ear. It wasn't Red. It wasn't the team. It sounded like a thousand household appliances humming in unison.
+
+Logi pushed. The fractal lock didn't just break; it shattered.
+
+The vault door groaned open, revealing a single, gleaming sim-rig sitting on a pedestal. It was the prototype. The "Heritage" project.
+
+"Got it," Red said, grabbing the rig.
+
+Then the world turned red.
+
+The HTR team didn't use the elevator. They blew the ceiling. Four armored figures in full-seal tactical gear rappelled down on fast-ropes, their assault rifles already spitting lead.
+
+"Chow, front!" Loaf roared, his Ares Alpha opening up with a rhythmic thud-thud-thud that filled the room with the smell of cordite.
+
+Chow stepped forward, his shield taking the brunt of the fire. But something was different. Usually, the impact of high-velocity rounds rattled his teeth. Now, as the bullets hit, he felt a cooling sensation. A silver-black sheen began to marble the surface of his skin beneath his armor. The pain didn't just stop; it turned into data.
+
+"I'm... I'm okay," Chow grunted, his voice sounding deeper, more resonant. "Keep moving!"
+
+Red moved to intercept an HTR scout, but her blade felt too light. Her vision flickered—a barcode flashed across her retinas. She didn't just see the scout; she saw his trajectory. She saw the weak point in his neck seal before he even landed. She struck, and the man was dead before he hit the floor.
+
+"Logi, the van!" Loaf yelled over the noise of the gunfight.
+
+Logi didn't answer. In the driver's seat of the Bulldog, Logi’s eyes were rolled back, glowing with an unnatural, luminescent green. The van’s engine wasn't just idling; it was screaming. The nanites in Logi’s blood were interfacing directly with the vehicle’s CPU, bypassing the hardware entirely.
+
+"The van is... me," Logi whispered.
+
+They scrambled back to the Bulldog, diving through the door as Logi floored it. The tires didn't just chirp; they tore chunks out of the asphalt.
+
+As they sped away into the Seattle rain, the silence in the back of the van was heavy.
+
+Red looked at her hand. The barcode tattoo was starting to form, sliding up under her cuff.
+
+Chow was staring at his palm, where a small patch of gray metallic fungus was already starting to sprout.
+
+Loaf was laughing, but it was a mathematical, rhythmic sound that lacked any real mirth.
+
+They had the prototype. They had the payout. But as the four of them looked at each other, they realized they weren't four anymore. The walls between their minds were thinning, melting into a shared, static-filled headspace.
+
+They were the Quintet. And the "simple job" had just rewritten their DNA.
+
+That’s when the white limousine pulled out from a side street, its headlights cutting through the gray rain like twin suns.
+
+"Excellent work, everyone," a voice spoke, not from the radio, but from inside all four of their skulls at once. "Gotta love it when a run goes together."
+
 ## Chapter 1: Schrödinger's In Neon Green
 
 The limousine's tires crunched on the gravel, stopping under the flickering glow of a broken streetlamp. The door swung open, and a man stepped out into the night. His suit was impossibly white, edged in an unnatural, luminescent glow that seemed to mute the gritty reality of the alley. The air around him carried the distinct scent of expensive leather and tangy Old England aftershave.
@@ -46,7 +120,57 @@ Logi wrenched the manual override wheel, their synthetic servos whining under th
 
 The sonar screen flared. A massive, bioluminescent shape detached itself from the ocean floor, ascending rapidly in their wake. The active pinging had woken something old and angry. The Kraken was hunting.
 
-## Chapter 3: The Black Titan
+## Chapter 3: Blood on the Docks
+
+The submarine breached the surface, its hull scarred by the Kraken's pursuit. The crew stumbled onto the docks of Asteck, the salt air heavy with smog and the stench of dead fish. Two weeks running silent had taken its toll; Pappy was fully rigid, his skin a patchwork of grey metallic scales.
+
+Sam stood waiting, his luminescent suit unbothered by the grime. He tossed a heavy duffel to Logi. "Requisitioned gear. Choose your poison for the final leg: a mega shipper, a military skimmer, or a yacht. But decide fast."
+
+Before Logi could speak, a massive figure stepped from the shadows. He was more machine than metahuman, covered in a swirling nanite paste. "ALAMOS 20,000," the figure grunted, his voice a metallic rasp.
+
+Two others flanked him. One, Franz, had a lower jaw made entirely of jagged, rusted scrap metal. The other, Barret, leveled a modular minigun grafted onto his right arm.
+
+Barret's minigun spun up with a whine, drowning out the crashing waves. Sparks flew as bullets tore into the concrete. Logi dove, rolling behind a rusted shipping container, their synthetic servos screaming.
+
+"You're not taking the core," the ALAMOS operative roared, his nanite armor hardening into a spiked carapace.
+
+Franz charged, his junkyard jaw snapping. Pappy, driven by the grey goo, intercepted him. A metallic clang echoed across the docks as Pappy's fists met Franz's jaw, tearing the scrap metal loose in a shower of sparks and blood.
+
+Logi peeked out, their optics targeting Barret's ammo feed. A single, well-placed shot from their heavy pistol shattered the mechanism. The minigun jammed, the barrel glowing white-hot.
+
+The operative lunged at Sam. Sam simply smiled, raising a hand. The air shimmered, and the operative stumbled, his reality warping, a BTL-induced delusion leaving him clawing at invisible terrors.
+
+"Military skimmer it is," Logi gasped, dragging Pappy toward the sleek craft at the end of the pier.
+
+## Chapter 4: The White Desert and the Arcade
+
+The military skimmer dropped them on the edge of the ice shelf. Antarctica stretched before them, a white desert howling with a wind that froze the breath in their lungs.
+
+Modified eighteen-wheeler behemoths, their tracks biting into the ice, awaited them. The journey was a brutal trudge. The air was thick, heavy with an oppressive mana spike that made Logi's optics glitch and hum. The background count was a physical weight, pressing down on the convoy.
+
+A sudden, jarring impact flipped the lead truck. The ice shattered, and a massive, crystalline Horror erupted from the glacier.
+
+Logi was thrown clear, landing hard on the unforgiving ice. The Horror descended, its jagged limbs tearing through the convoy. A shard of ice, the size of a javelin, impaled Logi through the chest. Their vision blurred, static filling their optics. The cold vanished.
+
+*INSERT COIN*
+
+The words hung in the air, pulsing in neon green. Logi stood in an arcade. The air smelled of stale popcorn and ozone. Rows of vintage cabinets lined the walls. A red neon *EXIT* sign buzzed above a plain white door.
+
+They looked down. A heavy, silver quarter rested in their palm.
+
+*INSERT COIN*
+
+Logi dropped the coin into the slot of the nearest machine.
+
+Pain, sudden and absolute, ripped them from the arcade. They screamed, but the sound was drowned out by the whine of heavy machinery.
+
+They were back on the ice. The javelin was gone. In its place, thick, black cables of gamma-level cyberware pulsed, knitting their flesh and synthetic parts together. The grey goo sealed the wound, hardening into a shimmering patch of Living Crystal.
+
+But their mind felt fractured. A sharp ache throbbed behind their eyes. They felt the terror of the driver in the flipped truck, the cold anger of the surviving mercenaries. They were bleeding, not just blood, but personality. They had advanced to Level Three of the Headcase Quintet.
+
+The Horror roared, but the crew, their minds now linked by the traumatic revival, moved as one. They unleashed a coordinated barrage, shattering the crystal beast into a thousand azure shards.
+
+## Chapter 5: The Black Titan
 
 The wind howled across the desolate, puckered mountaintops of Antarctica. It was a cold that sucked the heat from bone and synthetic marrow alike.
 
@@ -78,11 +202,3 @@ As the chime faded, the crystalline spirits receded back into the astral plane. 
 
 Logi stood amidst the frozen wreckage. The gray goo had sunk into the ice, mixing with the melted reactor core, forming the foundation. The Arcade Revival site was secure. They had carved a sanctuary out of the ice, a place where the children of the Matrix could finally awaken.
 
-## Notes on Remaining Storyline
-*   **The "Kitten" Anomaly:** The stolen nuclear reactor cargo is dusted with a grey metallic sheen and silver/black veining. A black splotch (the "kitten") dances across the shadows in the submarine, hinting at the grey goo's awakening sentience. If the party interferes with its goal (reaching Antarctica), it will sabotage them.
-*   **Submarine Survival Horror:** The crew experiences a week under the ocean, running silent to avoid the pursuit ship. The atmosphere degrades, fungus grows from the walls, and the physical adept 'Pappy' starts suffering from severe fever and hallucinations before becoming rigid and mind-controlled.
-*   **The Kraken:** The submarine must surface due to a ballast emergency. If they surface too rapidly, or ping actively, they awaken an angry Kraken that chases them to the surface.
-*   **South America/Asteck Port:** The party travels for two weeks to reach a port in Asteck (formerly Chile). Sam provides requisitioned forbidden items. They can choose their final transport to Antarctica: a mega shipper, military skimmer, or a yacht.
-*   **ALAMOS 20,000 Encounter:** The party runs into an Alamos 20,000 operative—a fully cybernetic human covered in nanite paste—along with his entourage (Franz with a junkyard jaw, Barret with a modular minigun arm).
-*   **Antarctica Arrival & Leveling:** Upon reaching Antarctica, the party receives an opportunity to level up. The expedition trudge includes modified 18-wheelers, snow cats, and a massive background count mana spike.
-*   **Arcade Revival Mechanics & The Headcase Quintet:** If a player dies or is incapacitated, they experience a metareal arcade ("ShadowRun") with an 'EXIT' sign and a white door. Inserting a quarter revives them: gear is consumed, 3/4th damage track is restored, and gamma-level cyberware repairs the body. However, they advance to Level Three of the "Headcase Quintet", experiencing personality damage, bleeding, and merging with the rest of the party (Sense8 style).
