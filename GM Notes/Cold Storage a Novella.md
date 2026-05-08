@@ -98,7 +98,39 @@ Ennis pushed a shiny black cylinder across the table. It had a heavy screw top a
 
 "CFD is coming," Ennis rasped, not looking up from his commlink. "Not all of the Matrix is on board. We need to change the rules of the game. We need a base of operations. That cylinder... it holds hope. Your job is to steal a nuclear reactor and ship it to the Antarctic. Combine the reactor with the cylinder, let it melt down to the bottom of the ice."
 
-## Chapter 2: The Deep Dark
+## Chapter 2: The Botched Heist
+
+The gravel pit surrounding the toxic dump was unnervingly quiet. Logi’s optics scanned the perimeter, highlighting the jagged edges of a heavily warded fence. The air tasted of ozone and rot.
+
+"Chest of goodies," Logi murmured, unstrapping a heavy duffel. "Bringing everything but the kitchen sink."
+
+Before them stood the Colombia-class nuclear submarine, resting in a massive, polluted drydock. Its warhead silos had been hollowed out, repurposed for cargo. A moon pool gaped in its belly, and a separate mini-sub was docked alongside.
+
+"Defense drones," Red hissed, pointing. Two massive, mecha-style sentinels patrolled the deck, their heavy rotary cannons gleaming under the toxic haze.
+
+"Distraction," Chow grunted. He leveled his launcher at a nearby fuelcell depot. The impact was deafening. The chemical energy ignited, not in a fireball, but in a rapid, unnatural conversion. The fuel cells warped into black fuligin seed pods, erupting like a geyser. They sprayed the deck, spitting out black, tarry balls of cutter and infiltration nanites that began chewing through the mecha-drones' armor.
+
+The ground shuddered. The gravel pit itself seemed to rise. Iggy, the igneous earth elemental, pulled himself from the rocks, a hulking golem of jagged stone and magma veins. Above him, the toxic spirit of the dump shrieked, a swirling mass of corrosive smog.
+
+"Move!" Logi yelled, sprinting for the sub's gangway.
+
+A straggling mercenary from the previous encounter, too slow to follow, tripped. The black nanite spray washed over him. He screamed, clutching his head as the grey goo consumed him, a brutal head-snack that left only a metallic, rigid husk.
+
+Logi hit the deck, rolling past the melting drones. They were met by a massive, bearded, muscle-bound physical adept. "Bluto," the man grunted, cracking his knuckles. He was the captain.
+
+Behind him stood a lanky, sharp-featured woman in a lab coat. "Dr. Olive Oyl," she snapped, adjusting her glasses. Her charisma was palpable, a sharp negotiator who had already secured their passage.
+
+Next to her, the ship hand and navigator, Popeye, offered a gruff nod. He was Mer folk; his webbed hands and low-light eyes hinted at a life beneath the waves, a physical adept who carried the quiet confidence of a man who had once fought a Kraken.
+
+"Get in," Bluto barked. "Before Iggy decides he wants to play catch with the mini-sub."
+
+They scrambled down the hatch into Research Sub 10. The air inside was tense. The crew of eight, two security officers, two mages, and the prisoners in the holding cells watched them warily.
+
+As the hatch sealed, Logi noticed something wrong. The grey goo from the dock hadn't just stayed outside. It was inside the ship, a shiny black patch spreading across the bulkhead. It pulsed, not like a machine, but like a heartbeat. The ship was being eaten, and the goo was starting to think.
+
+Sam's voice crackled over the internal comms. "Well. It seems we need to nip this in the bud. I suggest joining forces with the crew before this boat becomes a very fast, very deep coffin."
+
+## Chapter 3: The Deep Dark
 
 The rusted hull of Research Sub 10 groaned under the immense pressure. Three hundred meters down, two hundred miles from the coast, the ocean was a crushing weight.
 
@@ -120,7 +152,7 @@ Logi wrenched the manual override wheel, their synthetic servos whining under th
 
 The sonar screen flared. A massive, bioluminescent shape detached itself from the ocean floor, ascending rapidly in their wake. The active pinging had woken something old and angry. The Kraken was hunting.
 
-## Chapter 3: Blood on the Docks
+## Chapter 4: Blood on the Docks
 
 The submarine breached the surface, its hull scarred by the Kraken's pursuit. The crew stumbled onto the docks of Asteck, the salt air heavy with smog and the stench of dead fish. Two weeks running silent had taken its toll; Pappy was fully rigid, his skin a patchwork of grey metallic scales.
 
@@ -142,7 +174,7 @@ The operative lunged at Sam. Sam simply smiled, raising a hand. The air shimmere
 
 "Military skimmer it is," Logi gasped, dragging Pappy toward the sleek craft at the end of the pier.
 
-## Chapter 4: The White Desert and the Arcade
+## Chapter 5: The White Desert and the Arcade
 
 The military skimmer dropped them on the edge of the ice shelf. Antarctica stretched before them, a white desert howling with a wind that froze the breath in their lungs.
 
@@ -170,7 +202,7 @@ But their mind felt fractured. A sharp ache throbbed behind their eyes. They fel
 
 The Horror roared, but the crew, their minds now linked by the traumatic revival, moved as one. They unleashed a coordinated barrage, shattering the crystal beast into a thousand azure shards.
 
-## Chapter 5: The Black Titan
+## Chapter 6: The Black Titan
 
 The wind howled across the desolate, puckered mountaintops of Antarctica. It was a cold that sucked the heat from bone and synthetic marrow alike.
 
