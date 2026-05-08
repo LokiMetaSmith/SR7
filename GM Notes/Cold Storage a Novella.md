@@ -154,25 +154,31 @@ The sonar screen flared. A massive, bioluminescent shape detached itself from th
 
 ## Chapter 4: Blood on the Docks
 
-The submarine breached the surface, its hull scarred by the Kraken's pursuit. The crew stumbled onto the docks of Asteck, the salt air heavy with smog and the stench of dead fish. Two weeks running silent had taken its toll; Pappy was fully rigid, his skin a patchwork of grey metallic scales.
+The sea voyage from the Kraken's territory took two weeks. The rhythm of the deep ocean allowed for a brief respite. Logi spent hours in the sub's cramped machine shop, fusing new crystal plating to their synthetic limbs and running diagnostics on their freshly installed cyberware. The others trained, meditating and honing their skills under the oppressive hum of the reactor.
 
-Sam stood waiting, his luminescent suit unbothered by the grime. He tossed a heavy duffel to Logi. "Requisitioned gear. Choose your poison for the final leg: a mega shipper, a military skimmer, or a yacht. But decide fast."
+They surfaced off the coast of Asteck, the region formerly known as Chile. The salt air was heavy with smog and the scent of roasting meat from street vendors.
 
-Before Logi could speak, a massive figure stepped from the shadows. He was more machine than metahuman, covered in a swirling nanite paste. "ALAMOS 20,000," the figure grunted, his voice a metallic rasp.
+They gathered in a dimly lit establishment that felt less like a bar and more like a bunker. It was a "typical tavern" for the sprawl—smelling of spilled synth-beer, ozone, and desperation. In the corner, nursing a lukewarm glass of sludge, sat a suspicious-looking figure. He was a 3rd-generation German orc, his tusks capped in rusted chrome, eyes darting nervously around the room.
 
-Two others flanked him. One, Franz, had a lower jaw made entirely of jagged, rusted scrap metal. The other, Barret, leveled a modular minigun grafted onto his right arm.
+Sam slid into the booth beside Logi, his luminescent suit unbothered by the grime. He tossed a heavy, encrypted commlink onto the table. "Requisitioned gear," he said, tapping a perfectly manicured nail on the screen. "You have access up to twenty-six forbidden. Choose your final transport to the ice: a mega shipper, a military skimmer, or a yacht. Decide fast."
 
-Barret's minigun spun up with a whine, drowning out the crashing waves. Sparks flew as bullets tore into the concrete. Logi dove, rolling behind a rusted shipping container, their synthetic servos screaming.
+Before Logi could answer, the tavern's heavy iron door was kicked off its hinges.
 
-"You're not taking the core," the ALAMOS operative roared, his nanite armor hardening into a spiked carapace.
+A figure stepped through the smoke and dust. He appeared entirely human, but his movements were too smooth, too heavy. His skin rippled—a full cybernetic body coated in a thick layer of swirling nanite paste that mimicked flesh.
 
-Franz charged, his junkyard jaw snapping. Pappy, driven by the grey goo, intercepted him. A metallic clang echoed across the docks as Pappy's fists met Franz's jaw, tearing the scrap metal loose in a shower of sparks and blood.
+"ALAMOS 20,000," the operative stated, his voice a flat, metallic rasp.
+
+Two others flanked him, stepping over the ruined door. One was Franz. He flashed a grotesque smile; his lower jaw was a crude, jagged assembly of rusted scrap metal and exposed servos. The other, Barret, didn't bother smiling. He simply leveled his right arm, which ended not in a hand, but in a heavy, modular minigun.
+
+Barret's minigun spun up with a whine, drowning out the ambient noise of the tavern. Sparks flew as bullets tore through the booth, shattering synth-wood and glass. Logi dove, rolling behind a reinforced pillar.
+
+The operative lunged at Sam, his nanite flesh hardening into a spiked carapace mid-stride. Sam simply smiled, raising a hand. The air shimmered, and the operative stumbled, his reality warping as a BTL-induced delusion left him clawing at invisible terrors.
+
+Franz charged, his junkyard jaw snapping. Pappy intercepted him. A metallic clang echoed across the room as Pappy's fists met Franz's jaw, tearing the scrap metal loose in a shower of sparks and synthetic blood.
 
 Logi peeked out, their optics targeting Barret's ammo feed. A single, well-placed shot from their heavy pistol shattered the mechanism. The minigun jammed, the barrel glowing white-hot.
 
-The operative lunged at Sam. Sam simply smiled, raising a hand. The air shimmered, and the operative stumbled, his reality warping, a BTL-induced delusion leaving him clawing at invisible terrors.
-
-"Military skimmer it is," Logi gasped, dragging Pappy toward the sleek craft at the end of the pier.
+"Military skimmer it is," Logi gasped, dragging Pappy toward the back exit.
 
 ## Chapter 5: The White Desert and the Arcade
 
