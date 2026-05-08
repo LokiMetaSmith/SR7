@@ -180,17 +180,27 @@ Logi peeked out, their optics targeting Barret's ammo feed. A single, well-place
 
 "Military skimmer it is," Logi gasped, dragging Pappy toward the back exit.
 
-## Chapter 5: The White Desert and the Arcade
+## Chapter 5: The White Desert
 
 The military skimmer dropped them on the edge of the ice shelf. Antarctica stretched before them, a white desert howling with a wind that froze the breath in their lungs. The snow crunched beneath Chow’s heavy boots, each step sending a shudder of cold through his insulated armor.
 
+## Chapter 6: The Frozen Outpost
+
 Ahead, the shattered remnants of an old research outpost clawed at the gray sky. Rusting satellite dishes and half-buried hab-modules formed a grim labyrinth. They found the treasure hunters there, frozen solid in their thermal suits, faces twisted in silent screams. A mad recluse, wrapped in tattered synth-furs, babbled from the doorway of an abandoned hut, clutching a shard of glowing blue ice. He didn't speak words, just hissed a chaotic rhythm that made Red’s cybernetics twitch.
+
+## Chapter 7: The Mage Prison
 
 Past the outpost lay the ruins of the Mage prison. The containment cells were ruptured, the heavy durasteel doors blown outward from the inside. Frost coated the inhibitor collars discarded in the snow.
 
+## Chapter 8: The Convoy
+
 The extraction point was marked by the hum of heavy engines. Hanz, a dwarven rigger smelling of motor oil and cheap cigars, leaned against the side of a modified, armored truck. Beside him stood Barret, a towering ork mercenary who simply nodded, resting a massive machine gun on his shoulder. Five rugged, track-fitted cars idled nearby, manned by twenty heavily armed mercenaries. The five players of the team fell in behind Chow.
 
+## Chapter 9: The Hunt Begins
+
 The convoy’s journey was a brutal trudge into the white void. The hunt for the crystalline entities had begun. The air was thick, heavy with an oppressive mana spike that made Logi's optics glitch and hum. The background count was a physical weight, pressing down on the convoy. In the back of the truck, suspended in cryogenic gel-pods, floated three unconscious mages, their minds serving as bait for the crystalline entities.
+
+## Chapter 10: The Arcade
 
 A sudden, jarring impact flipped the lead truck. The ice shattered, and a massive, crystalline Horror erupted from the glacier.
 
@@ -214,7 +224,7 @@ But their mind felt fractured. A sharp ache throbbed behind their eyes. They fel
 
 The Horror roared, but the crew, their minds now linked by the traumatic revival, moved as one. They unleashed a coordinated barrage, shattering the crystal beast into a thousand azure shards.
 
-## Chapter 6: The Black Titan
+## Chapter 11: The Black Titan
 
 The wind howled across the desolate, puckered mountaintops of Antarctica. It was a cold that sucked the heat from bone and synthetic marrow alike.
 
