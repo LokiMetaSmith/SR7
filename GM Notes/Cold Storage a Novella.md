@@ -180,35 +180,59 @@ Logi peeked out, their optics targeting Barret's ammo feed. A single, well-place
 
 "Military skimmer it is," Logi gasped, dragging Pappy toward the back exit.
 
-## Chapter 5: The White Desert and the Arcade
+## Chapter 5: The White Maw
 
-The military skimmer dropped them on the edge of the ice shelf. Antarctica stretched before them, a white desert howling with a wind that froze the breath in their lungs.
+The military skimmer didn't so much land as it was discarded by the sky. As the engines died, the silence of Antarctica rushed in—not a void, but a predatory, high-pitched howl that chewed at the seals of their armor.
 
-Modified eighteen-wheeler behemoths, their tracks biting into the ice, awaited them. The journey was a brutal trudge. The air was thick, heavy with an oppressive mana spike that made Logi's optics glitch and hum. The background count was a physical weight, pressing down on the convoy.
+Chow stepped off the ramp first. The ice didn't crunch; it groaned, a deep tectonic complaint that vibrated through his reinforced shins. To his sensors, the world was a flat, blinding zero. To his "new" eyes—the ones the gray goo had gifted him—the horizon was a jagged pulse of ultraviolet ley lines. "It’s not just cold," he grunted, his voice sounding like two tectonic plates grinding together. "The mana here... it’s hungry."
 
-A sudden, jarring impact flipped the lead truck. The ice shattered, and a massive, crystalline Horror erupted from the glacier.
+## Chapter 6: Ghosts in the Permafrost
 
-Logi was thrown clear, landing hard on the unforgiving ice. The Horror descended, its jagged limbs tearing through the convoy. A shard of ice, the size of a javelin, impaled Logi through the chest. Their vision blurred, static filling their optics. The cold vanished.
+They navigated by the ruins. The old research outposts weren't just abandoned; they were monuments to failure. Inside one module, they found a team of treasure hunters. They hadn't died of exposure. They were frozen mid-reach, their skin translucent like frosted glass, their veins turned into delicate, crystalline filigree.
 
-*INSERT COIN*
+"They were rewritten," Red whispered, her monofilament sword humming as it sliced through the sub-zero air.
 
-The words hung in the air, pulsing in neon green. Logi stood in an arcade. The air smelled of stale popcorn and ozone. Rows of vintage cabinets lined the walls. A red neon *EXIT* sign buzzed above a plain white door.
+From a collapsed hut nearby, a man emerged. He was a patchwork of tattered furs and raw, blue-black frostbite. He didn't look at them; he looked *through* them, clutching a shard of ice that pulsed with a rhythmic, digital light. "The signal... it's clearer in the dark," he rasped. He wasn't mad; he was just tuned to a frequency the rest of the world hadn't heard yet.
 
-They looked down. A heavy, silver quarter rested in their palm.
+## Chapter 7: The Mage Prison (The Silent Screams)
 
-*INSERT COIN*
+The Mage prison was a crater of broken iron and shattered spirits. The doors hadn't been breached from the outside; they had been liquified. Red stepped over a discarded inhibitor collar, still sparking with a dying magical charge. The air here felt thick, oily.
 
-Logi dropped the coin into the slot of the nearest machine.
+"They didn't escape," Logi said, their optics flickering as they scanned the empty cells. "They merged. The prison didn't hold their bodies; it held their potential. And now that potential is... elsewhere."
 
-Pain, sudden and absolute, ripped them from the arcade. They screamed, but the sound was drowned out by the whine of heavy machinery.
+## Chapter 8: The Iron Convoy
 
-They were back on the ice. The javelin was gone. In its place, thick, black cables of gamma-level cyberware pulsed, knitting their flesh and synthetic parts together. The grey goo sealed the wound, hardening into a shimmering patch of Living Crystal.
+The extraction point was a hive of desperate industry. Hanz, the dwarven rigger, was a smudge of grease and stubbornness against the white void. He didn't offer a greeting, just a thumb toward the modified behemoths idling nearby. "Five cars, one truck, and enough ammo to start a small war," Hanz spat, his cigar a lone ember in the dark.
 
-But their mind felt fractured. A sharp ache throbbed behind their eyes. They felt the terror of the driver in the flipped truck, the cold anger of the surviving mercenaries. They were bleeding, not just blood, but personality. They had advanced to Level Three of the Headcase Quintet.
+Barret, the ork merc, stood atop the lead truck, his massive machine gun acting as a lightning rod for the static discharge of the approaching storm. Behind them, twenty mercenaries checked their seals with the mechanical precision of men who knew they were already dead.
 
-The Horror roared, but the crew, their minds now linked by the traumatic revival, moved as one. They unleashed a coordinated barrage, shattering the crystal beast into a thousand azure shards.
+## Chapter 9: Baiting the Horror
 
-## Chapter 6: The Black Titan
+The convoy was a black scar moving across the face of the world. In the back of the main truck, three mages floated in cryogenic pods. They weren't there for support; they were the "signal fire." Their unconscious minds, amplified by the reactor's hum, acted as a beacon for the crystalline entities.
+
+The air began to shiver. The "mana spike" wasn't a number on a display anymore; it was a physical weight that made Logi’s teeth ache. The "Headcase Quintet" began to hum in unison—a shared thought, a shared terror.
+
+## Chapter 10: Insert Coin
+
+The impact was silent. The lead truck simply ceased to exist as the glacier beneath it shattered into a million azure needles. The Crystalline Horror didn't rise; it *happened*, a geometric nightmare of light and gravity.
+
+Logi felt the javelin of ice before they saw it. It punched through their chest, pinning them to the permafrost. The pain was sharp, then suddenly, perfectly cold. The white world vanished.
+
+**[INSERT COIN]**
+
+The neon green text burned into Logi's retinas. The howling wind was replaced by the low-frequency thrum of cooling fans and the chirping of 8-bit soundtracks. The air smelled of ozone and stale, buttered popcorn. Logi stood in the center of a бесконечный (infinite) arcade.
+
+They looked at their hand. It wasn't metal or flesh; it was a cluster of glowing pixels. In their palm sat a heavy, silver quarter.
+
+"One life left," a voice echoed—Sam’s voice, but stripped of its smugness, sounding like a system diagnostic.
+
+Logi didn't hesitate. They dropped the coin into the slot.
+
+The world exploded back into reality. The javelin wasn't gone, but it was *changing*. Black cables of gamma-ware erupted from Logi's chest, weaving around the ice, consuming it, turning the wound into a shimmering, crystalline power source.
+
+They weren't just a team anymore. They were a circuit. As the Horror roared, the five of them moved with a single, mathematical intent. They didn't just fight; they deleted the threat from the map.
+
+## Chapter 11: The Black Titan
 
 The wind howled across the desolate, puckered mountaintops of Antarctica. It was a cold that sucked the heat from bone and synthetic marrow alike.
 
