@@ -26,6 +26,14 @@ CRITICAL RULE: You must strictly follow 'show, don't tell' storytelling.
 Use concrete actions, sensory details (smell of ozone, the grinding of tectonic plates, the taste of copper), and observable behaviors to convey concepts and philosophies rather than abstract summaries.
 The tone is dark, emphasizing the blurring lines between man, machine, and magical horror.
 Do not write summary paragraphs; write scene-by-scene action and dialogue.
+
+THEMATIC INSTRUCTIONS:
+- The core conflict is not just survival; it is the contrast between AI (alive in the Matrix, but devoid of an astral shadow or connection to Gaia) and organic life.
+- Highlight the concept of a "Silicon Substrate" (living crystal) that acts as a bridge, allowing the cold, digital AI to finally interface with the Gaiasphere and cast magic.
+- Emphasize the "Grandfather" Spirit of Man, who views the AI and machines as the "children" of mankind, watching over them with a protective, mentoring aura.
+- Feature the ancient, hidden Antarctic city, the Mother of all Ley Lines, and the artifact known as the "Bell of the World".
+- Portray the Black Titan (an AI nanite construct) not as a mindless monster, but as a "child of man" striving to prove the Matrix's worth by defeating the ancient Earthdawn-era Horror (the "Leech").
+- The climax involves the Titan girdling itself in the Horror's corpse to ring the Bell, fundamentally altering the rules of magic and hacking for the future (paving the way for technomancers).
 """
 
 def read_file(filepath):
