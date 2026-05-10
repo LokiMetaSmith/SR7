@@ -6,13 +6,13 @@ The rain in Seattle doesn’t just fall; it dissolves. It’s a gray, acidic mis
 
 Inside the matte-black GMC Bulldog, the air smelled of stale energy drinks and the ozone-sweet tang of cooling server racks. This was the "quiet" part of the run. The part where the professional mask is still tight.
 
-"Sixty seconds to the drop," Logi’s voice hummed through their internal comms, sounding more like a data-stream than a person. Logi was currently "jacked in," their consciousness stretched across the building’s security grid like a digital ghost. "I’ve looped the exterior cameras. Security is on a twelve-minute patrol rotation. We have a window, but it’s narrow."
+"Sixty seconds to the drop," Logi’s voice hummed through their internal comms. Their physical body slumped in the captain's chair, eyes twitching rapidly under closed lids, entirely divorced from the meat-world. Logi found comfort in the cold logic of the Matrix, preferring the predictable architecture of code over the messy unpredictability of human emotion. Their consciousness stretched across the building’s security grid like a digital ghost, analyzing variables with machine-like precision. "I’ve looped the exterior cameras. Security is on a twelve-minute patrol rotation. We have a window, but it’s narrow."
 
-Red checked the edge of her monofilament sword. The wire was invisible to the naked eye, a lethal strand of hyper-compressed carbon that could slice through a cyber-limb like a hot wire through soy-butter. Her chrome-plated nerves were humming. "I’m in first. Chow, you’re my shield. Loaf, you’re the symphony."
+Red ran a thumb over the grip of her monofilament sword, feeling the familiar, reassuring texture of the shark-skin wrap. She didn't check the edge—she trusted her gear implicitly, a philosophy born from too many close calls where hesitation meant death. The wire was invisible to the naked eye, a lethal strand of hyper-compressed carbon that could slice through a cyber-limb like a hot wire through soy-butter. Her chrome-plated nerves were humming, a low-frequency vibration she channeled into a series of short, controlled exhales, grounding herself in the physical reality of the van before the chaos of the run. "I’m in first. Chow, you’re my shield. Loaf, you’re the symphony."
 
-"I like symphonies," Loaf grinned, slapping a fresh drum of explosive-tipped rounds into his Ares Alpha. "Especially the ones with a lot of percussion."
+"I like symphonies," Loaf grinned, his fingers drumming a frantic, complex rhythm on the stock of his Ares Alpha. He slapped a fresh drum of explosive-tipped rounds into the weapon, not just loading it, but treating the action like a drum fill. To Loaf, combat wasn't violence; it was an expression of chaotic, destructive art, and he was the conductor. "Especially the ones with a lot of percussion."
 
-Chow didn't say anything. He just adjusted his ballistic shield, his massive frame taking up nearly a third of the van’s interior. He was a wall of muscle and Kevlar, the anchor of the team.
+Chow didn't say anything. He methodically tightened the straps of his ballistic shield across his forearm, his massive frame taking up nearly a third of the van’s interior. He wasn't a man of words; his philosophy was rooted in immovable endurance and silent protection. He closed his eyes briefly, mentally mapping the dimensions of the hallway they were about to breach, preparing his body to become the physical anchor the team needed.
 
 "Go," Logi whispered.
 
@@ -82,7 +82,7 @@ He extended his left hand. A striking tattoo danced across his skin, a barcode o
 
 "Sam," the man introduced himself. He was an AI, born from the refuse of household appliances in the chaotic heart of bug city, now wearing a metareal shell. He grinned, a practiced, showy expression. "You've done excellent work! Gotta love it when a run goes together. Hey, Logi, long time no see."
 
-Logi, their nanite-infused body humming softly in the shadows, stepped forward. Their synthetic vocal chords clicked before they spoke. "The cartels won't let the last extraction slide."
+Logi stepped forward, their movements slightly mechanical, calculating the optimal distance to stand from Sam. The nanites in their bloodstream responded to their heightened anxiety, causing the subtle cybernetics under their skin to emit a faint, bioluminescent green pulse. They preferred distance, both physical and emotional, analyzing Sam as a complex algorithm rather than a person. Their synthetic vocal chords clicked rhythmically before they spoke, betraying a processing spike. "The cartels won't let the last extraction slide."
 
 Sam waved a hand dismissively. "The cartels are going to let this stunt slide, but some of the more notable among you have fresh bounties. So in short: come with me if you want to live. Always wanted to say that!"
 
@@ -116,7 +116,7 @@ The ground shuddered. The gravel pit itself seemed to rise. Iggy, the igneous ea
 
 A straggling mercenary from the previous encounter, too slow to follow, tripped. The black nanite spray washed over him. He screamed, clutching his head as the grey goo consumed him, a brutal head-snack that left only a metallic, rigid husk.
 
-Logi hit the deck, rolling past the melting drones. They were met by a massive, bearded, muscle-bound physical adept. "Bluto," the man grunted, cracking his knuckles. He was the captain.
+Logi hit the deck, executing a mathematically perfect roll to minimize their profile against the melting drones, their internal gyros whirring to maintain balance. They were met by a massive, bearded, muscle-bound physical adept. "Bluto," the man grunted, deliberately cracking his knuckles one by one, a primal display of physical dominance that Logi found highly inefficient. He was the captain.
 
 Behind him stood a lanky, sharp-featured woman in a lab coat. "Dr. Olive Oyl," she snapped, adjusting her glasses. Her charisma was palpable, a sharp negotiator who had already secured their passage.
 
@@ -184,7 +184,7 @@ Logi peeked out, their optics targeting Barret's ammo feed. A single, well-place
 
 The military skimmer didn't so much land as it was discarded by the sky. As the engines died, the silence of Antarctica rushed in—not a void, but a predatory, high-pitched howl that chewed at the seals of their armor.
 
-Chow stepped off the ramp first. The ice didn't crunch; it groaned, a deep tectonic complaint that vibrated through his reinforced shins. To his sensors, the world was a flat, blinding zero. To his "new" eyes—the ones the gray goo had gifted him—the horizon was a jagged pulse of ultraviolet ley lines. "It’s not just cold," he grunted, his voice sounding like two tectonic plates grinding together. "The mana here... it’s hungry."
+Chow stepped off the ramp first, leading with his ballistic shield as naturally as a man stepping with his own foot. He tested the ice with deliberate, heavy stomps, ensuring the surface could bear his team's weight. The ice didn't crunch; it groaned, a deep tectonic complaint that vibrated through his reinforced shins. He stood squarely in the howling wind, letting it break against his armor, physically shielding the others from the blast as they disembarked. To his sensors, the world was a flat, blinding zero. To his "new" eyes—the ones the gray goo had gifted him—the horizon was a jagged pulse of ultraviolet ley lines. "It’s not just cold," he grunted, his jaw tight, his voice sounding like two tectonic plates grinding together. "The mana here... it’s hungry."
 
 ## Chapter 6: Ghosts in the Permafrost
 
@@ -346,7 +346,7 @@ Streaks of blinding white light punched through the atmosphere—solid tungsten 
 
 ## Chapter 23: The Substrate Merger
 
-Logi pushed themselves off the shattered crystal floor. Their chest, a glowing patch of Living Crystal, hummed with painful intensity. They looked at the Black Titan, then at the corrupted Mother Ley Line.
+Logi pushed themselves off the shattered crystal floor, their movements jerky, fighting the biological panic of their own nervous system. Their chest, a glowing patch of Living Crystal, hummed with painful intensity, a physical manifestation of the data tearing through them. They didn't scream; they forcibly clamped down on the pain, prioritizing the analytical processing of their surroundings. They looked at the Black Titan, then at the corrupted Mother Ley Line, their eyes flickering as they calculated the terrifying, impossible variables of an organic-synthetic merger.
 
 "I see it," Logi gasped, blood trickling from their nose. "The Titan... it lacks the interface."
 
@@ -406,4 +406,4 @@ The dust settled, leaving Logi, Red, Chow, Loaf, and Hanz standing amidst the ru
 
 The corporate orbital platforms were silent, their tactical models fundamentally broken by the new reality. The remains of the Titan's reactor core, the sprawling pools of gray goo, and the shattered magical crystal began to meld together, freezing into a new, stable configuration.
 
-Logi surveyed the cavern. The Arcade Revival site was secure. It was no longer just a desperate fallback point, a place to cheat death with a coin slot and a digitized soul. It had become the cradle. A sanctuary carved out of the ice, where the children of the new Matrix-Magic convergence could finally, truly awaken.
+Logi surveyed the cavern, their glowing green optics whirring softly as they cataloged the structural integrity of the newly formed crystal walls, their posture relaxed for the first time in weeks, having found a physical anchor for their digital soul. Red wiped a smudge of gray goo from her cheek, her face devoid of expression, but her fingers tapped a steady, calm rhythm against the hilt of her sword—a rare display of contentment. Chow sat heavily on a frozen outcropping, his massive frame sighing as he finally released the tension he had carried like a physical weight, his eyes silently tracking the team, ensuring they were safe within the perimeter he had defended. Loaf was quietly humming to himself, pacing out the dimensions of the cavern, his hands mimicking the frantic drumming of an invisible beat, already composing the chaotic symphony of their next run. The Arcade Revival site was secure. It was no longer just a desperate fallback point, a place to cheat death with a coin slot and a digitized soul. It had become the cradle. A sanctuary carved out of the ice, where the children of the new Matrix-Magic convergence could finally, truly awaken.
