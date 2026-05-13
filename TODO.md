@@ -56,7 +56,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 **Goal:** Ensure the story mechanically aligns with the custom ruleset.
 
-*   [x] **Expand Cold Storage Novella:** Fill in the missing chapters in the Cold Storage novella based on the condensed story notes.
+*   [x] **Expand Cold Storage Novella:** (Chapters 11-15 expanded) Fill in the missing chapters in the Cold Storage novella based on the condensed story notes.
     *   [x] *Follow-up required:* Inject character development into the story, adhering to the show, don't tell principle with concrete actions, sensory details, and observable behaviors to convey the internal state and philosophies of Logi, Red, Chow, and Loaf.
 
 *   [x] **Create Cold Storage Novella:** Write a novella format story detailing the events of Operation Cold Storage.
