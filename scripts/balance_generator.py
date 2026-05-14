@@ -104,31 +104,26 @@ def balance_metatypes(text):
 
             new_table_lines = []
 
-            for i in range(start_line, end_line):
-                if i == start_line or i == start_line + 1:
-                    new_table_lines.append(lines[i])
-                    continue
-                line = lines[i]
-                if "---" in line or "Race |" in line:
-                    new_table_lines.append(line)
-                    continue
+            # Reconstruct the header and separator
+            new_table_lines.append("| " + " | ".join(t["headers"]) + " |")
+            new_table_lines.append("|" + "|".join([" :--- " for _ in t["headers"]]) + "|")
 
-                parts = [p.strip() for p in line.split("|") if p.strip()]
-                if len(parts) >= 10:
-                    name = parts[0].replace("**", "").strip()
+            for row in t["rows"]:
+                if len(row) >= 10:
+                    name = row[0].replace("**", "").strip()
                     if "Human" == name:
-                        new_table_lines.append(line)
+                        new_table_lines.append("| " + " | ".join(row) + " |")
                         continue
 
                     stats = []
                     for j in range(1, 10):
                         try:
-                            stat_max = int(parts[j].split("/")[1].strip())
+                            stat_max = int(row[j].split("/")[1].strip())
                             stats.append(stat_max)
                         except Exception:
                             stats.append(6)
 
-                    traits_col = parts[11] if len(parts) > 11 else ""
+                    traits_col = row[11] if len(row) > 11 else ""
 
                     total_max = sum(stats)
                     diff = total_max - METATYPE_BASE_STATS
@@ -154,11 +149,14 @@ def balance_metatypes(text):
                         calculated_cost += TRAIT_COST_ALLERGY
 
                     calculated_cost = round(calculated_cost / 5) * 5
-                    parts[10] = str(calculated_cost)
-                    new_line = "| " + " | ".join(parts) + " |"
-                    new_table_lines.append(new_line)
+
+                    # Update cost column
+                    cost_idx = t["headers"].index("Karma Cost")
+                    row[cost_idx] = str(calculated_cost)
+
+                    new_table_lines.append("| " + " | ".join(row) + " |")
                 else:
-                    new_table_lines.append(line)
+                    new_table_lines.append("| " + " | ".join(row) + " |")
 
             lines[start_line:end_line] = new_table_lines
             return "\n".join(lines)
@@ -186,28 +184,16 @@ def balance_weapons(text):
                     break
 
             new_table_lines = []
+            new_table_lines.append("| " + " | ".join(t["headers"]) + " |")
+            new_table_lines.append("|" + "|".join([" :--- " for _ in t["headers"]]) + "|")
 
-            for i in range(start_line, end_line):
-                if i == start_line or i == start_line + 1:
-                    new_table_lines.append(lines[i])
-                    continue
-                line = lines[i]
-                if not line.strip() or "|" not in line:
-                    new_table_lines.append(line)
-                    continue
-
-                if "---" in line:
-                    new_table_lines.append(line)
-                    continue
-
-                col_parts = [p.strip() for p in line.split("|")][1:-1]
-
-                if len(col_parts) >= 9:
-                    dv_str = col_parts[2]
-                    ap_str = col_parts[3]
-                    mode_str = col_parts[4]
-                    rc_str = col_parts[5]
-                    ammo_str = col_parts[7]
+            for row in t["rows"]:
+                if len(row) >= 9:
+                    dv_str = row[t["headers"].index("DV")] if "DV" in t["headers"] else ""
+                    ap_str = row[t["headers"].index("AP")] if "AP" in t["headers"] else ""
+                    mode_str = row[t["headers"].index("MODE")] if "MODE" in t["headers"] else ""
+                    rc_str = row[t["headers"].index("RC")] if "RC" in t["headers"] else ""
+                    ammo_str = row[t["headers"].index("AMMO")] if "AMMO" in t["headers"] else ""
 
                     dv_match = re.search(r"(\d+)", dv_str)
                     dv = int(dv_match.group(1)) if dv_match else 0
@@ -254,20 +240,20 @@ def balance_weapons(text):
                     else:
                         calculated_cost = round(calculated_cost / 10) * 10
 
-                    if len(col_parts) > 0:
-                        original_cost_str = col_parts[-1]
+                    if "COST" in t["headers"]:
+                        cost_idx = t["headers"].index("COST")
+                        original_cost_str = row[cost_idx]
                         new_cost_str = (
                             f"{int(calculated_cost)}¥"
                             if "¥" in original_cost_str or original_cost_str.isdigit()
                             else str(int(calculated_cost))
                         )
                         if original_cost_str != "-" and original_cost_str != "":
-                            col_parts[-1] = new_cost_str
+                            row[cost_idx] = new_cost_str
 
-                    new_line = "| " + " | ".join(col_parts) + " |"
-                    new_table_lines.append(new_line)
+                    new_table_lines.append("| " + " | ".join(row) + " |")
                 else:
-                    new_table_lines.append(line)
+                    new_table_lines.append("| " + " | ".join(row) + " |")
 
             lines[start_line:end_line] = new_table_lines
 
