@@ -128,3 +128,9 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Comprehensive Combat Simulator Tests:** Implement unit tests for core combat mechanics in `scripts/combat_simulator.py` (e.g., Chunky Salsa, N.I.C.A., Hopepunk Modifier, Tethers).
 *   [x] **Combat Analyzer Tests:** Create tests for the statistical analyzer to ensure math formulas and simulated outputs are accurate over iterations.
 *   [x] **Grenades & AoE Logic:** Properly implement scatter and blast profiles for grenades/AoE attacks within the MapGrid UI and combat simulation.
+
+*   [x] **Introduce Ignatius:** Add the hermetic mage antagonist working for Celedyr.
+*   [x] **Add Intro Vignette:** Insert Chapter 2 to introduce Ignatius tracking the AI/Spirit.
+*   [x] **Update Reactor Heist:** Show Ignatius arriving at the drydock and establishing a trace.
+*   [x] **Confrontation in Argentina:** Update the dock scene to feature Ignatius ambushing the team in Buenos Aires.
+*   [x] **Final Showdown in Antarctica:** Add 'The Ice Cold Equation' chapter for the final battle with Ignatius.
