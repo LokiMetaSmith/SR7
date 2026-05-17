@@ -22,6 +22,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
         *   [x] Jumped-in mechanics
     *   [x] *Follow-up required (General Equipment):* Need lists and costs for Armor, Cyberware/Bioware, Commlinks, and Lifestyle.
     *   [x] **Implement Spirit Summoning:** Add mechanics for conjuring spirits and calculating summoning drain.
+*   [x] **Implement Adept Powers & Metamagic:** Expanded design docs for Adept Powers and Metamagic in the core rules.
 *   [x] **Define the Baseline Mechanics:** Clarify how "Wild Dice" and "Digital Essence" interact with standard gameplay loops.
     *   [x] Implement rules for HMHVV Infected (Ghouls & Vampires) under Bestiary.
 
