@@ -123,6 +123,14 @@ class Combatant:
 
     def get_attribute(self, attr: str, default: int = 3) -> int:
         base = self.attributes.get(attr, default)
+
+        # Adept Power: Attribute Boost
+        # In a full simulation, this would be an active effect, but for simplicity,
+        # we can provide a small passive boost if they have it as a placeholder,
+        # or just parse it into base.
+        if "Attribute Boost" in " ".join(self.special_rules):
+            pass # Usually temporary, leaving as is unless specifically tracked
+
         if self.possessed_by and attr in ["BOD", "AGI", "REA", "STR"]:
             base += self.possessed_by.physical_modifiers.get(attr, 0)
         if self.possessed_by and attr in ["LOG", "INT", "WIL", "CHA"]:
@@ -1304,7 +1312,7 @@ def main():
                         soak_pool = 0  # Mana spells ignore armor
                     else:
                         soak_pool = max(
-                            0, target.get_attribute("BOD", 3) + target.armor - mag
+                            0, target.get_attribute("BOD", 3) + target.total_armor - mag
                         )
 
                     soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
@@ -1320,6 +1328,13 @@ def main():
                 drain_resist_pool = active.get_attribute(
                     "WIL", 3
                 ) + active.get_attribute("LOG", 3)
+                # Shielding Metamagic
+                for rule in active.special_rules:
+                    if rule.lower().startswith("shielding"):
+                        m = re.search(r"shielding (\d+)", rule, re.IGNORECASE)
+                        drain_resist_pool += int(m.group(1)) if m else 1
+                        break
+
                 drain_hits, drain_hits_glitched = RulesEngine.roll_dice(
                     drain_resist_pool
                 )
@@ -1572,7 +1587,7 @@ def main():
                         if c_target.jumped_in_vehicle:
                             soak_pool = max(0, c_target.jumped_in_vehicle.body + c_target.jumped_in_vehicle.armor + modified_ap)
                         else:
-                            soak_pool = max(0, c_target.get_attribute("BOD", 3) + c_target.armor + modified_ap)
+                            soak_pool = max(0, c_target.get_attribute("BOD", 3) + c_target.total_armor + modified_ap)
 
                         soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
                         final_damage = max(0, modified_damage - soak_hits)
