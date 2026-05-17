@@ -2,6 +2,18 @@
 
 This repository contains fan-made rules, tools, and campaign notes for a custom Shadowrun 7th Edition ruleset centered around the "Hollow Resonance" campaign setting in Zkazena.
 
+## Features
+
+* **Custom Shadowrun 7th Edition Ruleset:** Comprehensive fan-made rules including custom weapons, qualities, magic, Matrix, and rigging rules.
+* **Autonomous LLM Combat Simulation:** A fully-featured Python combat simulator that runs turn-based combat using an OpenAI-compatible LLM to make tactical decisions and generate gritty flavor text.
+* **Pygame Visual UI:** A dynamic graphical interface for the combat simulator, rendering ASCII map grids, blast zones, and character cards with health bars and portraits.
+* **Chummer Integration:** Tools to automatically generate and merge custom Chummer 5e XML files from Markdown rules, and native support for parsing `.chum5` character files into the combat simulator.
+* **Automated Game Balancing:** Scripts to automatically calculate Nuyen/Karma costs for weapons and qualities using mathematical baseline formulas, directly editing Markdown tables in-place.
+* **LaTeX Rulebook Generation:** Tools to compile the Markdown rules into a formatted LaTeX document and PDF.
+* **Narrative & Novella Generation:** AI-assisted scripts to draft chapter-by-chapter novellas based on GM outlines and campaign lore.
+* **Narrative Module System:** Execute multi-stage campaign scenarios chaining multiple combat simulations together.
+* **Trade Simulator:** Haggling mechanics simulation for buying/selling gear using social dice pools.
+
 ## Tools Included
 
 ### 1. Autonomous Combat Simulator (`combat_simulator.py`)
@@ -64,6 +76,40 @@ Rewrites markdown tables in-place to calculate balanced Nuyen/Karma costs using 
 
 ### 5. XML Generator (`xml_generator.py`)
 Extracts game objects (weapons, qualities) from the Markdown rules and merges them into existing Chummer-compatible XML files within the `chummer_plugin/` directory.
+
+
+### 6. Module Runner (`run_module.py`)
+This tool executes multi-scenario narrative modules, chaining together sequential stages of combat simulation. It reads module definitions from JSON files and automatically progresses through different scenarios, supporting distinct environments and enemy team loadouts per stage.
+
+**Usage:**
+```bash
+# Run a campaign module with your player characters
+python scripts/run_module.py --module modules/hollow_resonance_part1.json --team1 npc_templates/Cryptolock.chum5 npc_templates/Kyber.chum5 --ui --interactive
+```
+
+### 7. Rules Analyzer (`analyze_rules.py`)
+This tool parses the `Fan made Shadowrun 7th Edition rules.md` file using a Markdown parser to analyze and extract structured data, such as custom Qualities and Markdown table stats. It is primarily used internally by other pipeline scripts (like the XML or balance generators).
+
+**Usage:**
+```bash
+python scripts/analyze_rules.py
+```
+
+### 8. Novella Generator (`generate_novella.py`)
+This script uses an LLM to automatically generate narrative prose (like novellas or campaign background) based on a provided outline markdown file (`GM Notes/novella_outline.md`). It adheres to specific thematic instructions and 'show, don't tell' styling, generating gritty cyberpunk-horror text.
+
+**Usage:**
+```bash
+python scripts/generate_novella.py
+```
+
+### 9. LaTeX Updater (`update_latex_from_md.py`)
+This script extracts tables and formatted content directly from the Markdown rules (`Fan made Shadowrun 7th Edition rules.md`) and updates the corresponding LaTeX `.tex` file. This ensures the PDF rulebook always stays perfectly synchronized with any stat changes made in the markdown file without manual transcription.
+
+**Usage:**
+```bash
+python scripts/update_latex_from_md.py
+```
 
 ## Setup and Installation
 
