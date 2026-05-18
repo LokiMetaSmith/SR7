@@ -3084,6 +3084,10 @@ Adept powers are fueled by the adept's Magic Rating and Power Points (PP). Adept
 | Critical Strike | Adept | 0.5 PP | +1 Damage to melee attacks. |
 | Improved Ability | Adept | 0.5 PP / Lvl | +1 Die to a specific physical or combat skill. |
 | Enhanced Senses | Adept / Spirit | 0.25 PP | Gains low-light, thermographic, improved hearing, etc. |
+| Mystic Armor | Adept | 0.5 PP / Lvl | Grants +1 Magical Armor per level that stacks with physical armor. |
+| Astral Perception | Adept | 1.0 PP | Allows the adept to perceive the astral plane. |
+| Attribute Boost | Adept | 0.25 PP / Lvl | +1 to a specific physical attribute temporarily. |
+| Combat Sense | Adept | 0.5 PP / Lvl | +1 Die to Defense tests against all attacks. |
 | Danger Sense | Adept | 0.25 PP / Lvl | +1 Die to Surprise tests and avoiding ambushes. |
 | Concealment | Spirit | N/A | Conceals target from sight and sensors. |
 | Animal Control | Spirit | N/A | Controls animal behavior. |
@@ -3101,6 +3105,8 @@ Adept powers are fueled by the adept's Magic Rating and Power Points (PP). Adept
 | Wild Channeling | Metamagic | Initiation | Allows the adept to voluntarily turn up to their Initiate Grade of dice into Wild Dice on combat tests. |
 | Masking | Metamagic | Initiation | Hide your true Magic rating and aura from Assensing tests. |
 | Shielding | Metamagic | Initiation | Add your Initiate Grade to Counterspelling dice pools. |
+| Adept Centering | Metamagic | Initiation | Use a physical action (chanting, kata) to reduce penalties to physical and combat skills by Initiate Grade. |
+| Infusion | Metamagic | Initiation | Temporarily boost physical attributes beyond their natural limit using Power Points. |
 
 **Initiation & Submersion:**
 Initiation and Submersion for characters costs 10 + (Initiation Grade x 5) Karma and 10 + (Submersion Level x 5) Karma respectively. A character may choose to undergo an ordeal to reduce this cost by 10% to 20%.
