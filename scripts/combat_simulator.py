@@ -128,8 +128,10 @@ class Combatant:
         # In a full simulation, this would be an active effect, but for simplicity,
         # we can provide a small passive boost if they have it as a placeholder,
         # or just parse it into base.
-        if "Attribute Boost" in " ".join(self.special_rules):
-            pass # Usually temporary, leaving as is unless specifically tracked
+        for rule in self.special_rules:
+            if rule.startswith(f"Attribute Boost ({attr})"):
+                base += 1
+                break
 
         if self.possessed_by and attr in ["BOD", "AGI", "REA", "STR"]:
             base += self.possessed_by.physical_modifiers.get(attr, 0)
@@ -417,6 +419,29 @@ def parse_chummer(file_path: str) -> Combatant:
             sdr = "F-2"
 
             c.spells.append(Spell(name=sn, type=st, damage_formula=sd, drain_formula=sdr))
+
+    powers_node = char.find("powers")
+    if powers_node is not None:
+        for power in powers_node.findall("power"):
+            pn_node = power.find("name")
+            if pn_node is not None and pn_node.text:
+                pn = pn_node.text
+                if pn.startswith("Attribute Boost"):
+                    # Extract attribute like AGI, STR, etc.
+                    attr_match = re.search(r"\((.*?)\)", pn)
+                    target_attr = attr_match.group(1).upper() if attr_match else "UNKNOWN"
+
+                    pr_node = power.find("rating")
+                    rating = 1
+                    if pr_node is not None and pr_node.text:
+                        try:
+                            rating = int(pr_node.text)
+                        except ValueError:
+                            pass
+
+                    c.special_rules.append(f"Attribute Boost ({target_attr}) [Rating {rating}]")
+                else:
+                    c.special_rules.append(pn)
 
     # Try mapping matrix stats
     if (
