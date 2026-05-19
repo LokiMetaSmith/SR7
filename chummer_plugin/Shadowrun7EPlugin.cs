@@ -100,7 +100,7 @@ namespace Shadowrun7EPlugin
                 // Guessing Chummer's character API properties
                 if (character != null)
                 {
-                    character.InitiativeDice = 0;
+                    character.InitiativeDice = 1;
                     character.BaseInitiative = character.REA.TotalValue + character.INT.TotalValue;
                 }
             }
