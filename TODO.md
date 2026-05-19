@@ -7,20 +7,20 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 **Goal:** Establish a complete, structurally sound foundation before building tools around it.
 
 *   [x] **Standardize Document Formatting:** Go through `Fan made Shadowrun 7th Edition rules.md` and convert all tables (currently a mix of tabs and spaces) into standard Markdown pipe (`|`) syntax.
-    *   [x] *Follow-up required:* Establish a master template for Weapon and Quality tables so that parsing tools know exactly what to look for.
+    *   [ ] *Follow-up required:* Establish a master template for Weapon and Quality tables so that parsing tools know exactly what to look for.
 *   [x] **Draft Missing Core Sections:** Write the rules text for the fundamentally missing pillars of the game:
-    *   [x] *Follow-up required (Magic):* Need design docs for Spell lists, Adept powers, Drain calculations, Rituals, and Metamagic.
-    *   [x] *Follow-up required (Matrix):* Need design docs for Matrix elements:
-        *   [x] Programs
-        *   [x] Cyberdecks/Commlinks
-        *   [x] Host architecture & IC
-        *   [x] Matrix actions (how do "Tethers" work in combat?)
-    *   [x] *Follow-up required (Rigging/Vehicles):* Need design docs for:
-        *   [x] Drone stats
-        *   [x] Vehicle modifications
-        *   [x] Chase combat
-        *   [x] Jumped-in mechanics
-    *   [x] *Follow-up required (General Equipment):* Need lists and costs for Armor, Cyberware/Bioware, Commlinks, and Lifestyle.
+    *   [ ] *Follow-up required (Magic):* Need design docs for Spell lists, Adept powers, Drain calculations, Rituals, and Metamagic.
+    *   [ ] *Follow-up required (Matrix):* Need design docs for Matrix elements:
+        *   [ ] Programs
+        *   [ ] Cyberdecks/Commlinks
+        *   [ ] Host architecture & IC
+        *   [ ] Matrix actions (how do "Tethers" work in combat?)
+    *   [ ] *Follow-up required (Rigging/Vehicles):* Need design docs for:
+        *   [ ] Drone stats
+        *   [ ] Vehicle modifications
+        *   [ ] Chase combat
+        *   [ ] Jumped-in mechanics
+    *   [ ] *Follow-up required (General Equipment):* Need lists and costs for Armor, Cyberware/Bioware, Commlinks, and Lifestyle.
     *   [x] **Implement Spirit Summoning:** Add mechanics for conjuring spirits and calculating summoning drain.
 *   [x] **Implement Adept Powers & Metamagic:** Expanded design docs for Adept Powers and Metamagic in the core rules.
 *   [x] **Define the Baseline Mechanics:** Clarify how "Wild Dice" and "Digital Essence" interact with standard gameplay loops.
@@ -48,8 +48,8 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 *   [x] **Remove CalculateCustomInitiative:** Removed the invalid stub `CalculateCustomInitiative()` as it is not part of the Chummer5a `IPlugin` interface.
 *   [x] **Implement Core Overrides:**
-    *   [x] *Follow-up required:* Wait for the "Digital Essence" and "Initiative" rules to be finalized in the Markdown doc, then code those specific overrides into the C# `IPlugin` interface.
-        *   [x] Fill in empty C# plugin placeholders for Initiative and Digital Essence.
+    *   [ ] *Follow-up required:* Wait for the "Digital Essence" and "Initiative" rules to be finalized in the Markdown doc, then code those specific overrides into the C# `IPlugin` interface.
+        *   [ ] Fill in empty C# plugin placeholders for Initiative and Digital Essence.
 
 ---
 
@@ -58,7 +58,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 **Goal:** Ensure the story mechanically aligns with the custom ruleset.
 
 *   [x] **Expand Cold Storage Novella:** (Chapters 11-15 expanded) Fill in the missing chapters in the Cold Storage novella based on the condensed story notes.
-    *   [x] *Follow-up required:* Inject character development into the story, adhering to the show, don't tell principle with concrete actions, sensory details, and observable behaviors to convey the internal state and philosophies of Logi, Red, Chow, and Loaf.
+    *   [ ] *Follow-up required:* Inject character development into the story, adhering to the show, don't tell principle with concrete actions, sensory details, and observable behaviors to convey the internal state and philosophies of Logi, Red, Chow, and Loaf.
 
 *   [x] **Create Cold Storage Novella:** Write a novella format story detailing the events of Operation Cold Storage.
 
