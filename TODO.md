@@ -48,8 +48,8 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 *   [x] **Remove CalculateCustomInitiative:** Removed the invalid stub `CalculateCustomInitiative()` as it is not part of the Chummer5a `IPlugin` interface.
 *   [x] **Implement Core Overrides:**
-    *   [ ] *Follow-up required:* Wait for the "Digital Essence" and "Initiative" rules to be finalized in the Markdown doc, then code those specific overrides into the C# `IPlugin` interface.
-        *   [ ] Fill in empty C# plugin placeholders for Initiative and Digital Essence.
+    *   [x] *Follow-up required:* Wait for the "Digital Essence" and "Initiative" rules to be finalized in the Markdown doc, then code those specific overrides into the C# `IPlugin` interface.
+        *   [x] Fill in empty C# plugin placeholders for Initiative and Digital Essence.
 
 ---
 

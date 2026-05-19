@@ -94,13 +94,13 @@ namespace Shadowrun7EPlugin
         /// </summary>
         public void ApplyCustomInitiative(Character character)
         {
-            // Implementation: REA + INT + 1D6
+            // Implementation: REA + INT
             try
             {
                 // Guessing Chummer's character API properties
                 if (character != null)
                 {
-                    character.InitiativeDice = 1;
+                    character.InitiativeDice = 0;
                     character.BaseInitiative = character.REA.TotalValue + character.INT.TotalValue;
                 }
             }
@@ -120,7 +120,7 @@ namespace Shadowrun7EPlugin
             try
             {
                 // Guessing Chummer's character API properties
-                if (character != null && (character.Metatype == "AI" || character.Metatype == "Sprite" || character.Metatype == "Matrix Entity"))
+                if (character != null && (character.Metatype == "AI" || character.Metatype == "Sprite" || character.Metatype == "Matrix Entity" || character.Metatype == "Turing 1" || character.Metatype == "Searle 0"))
                 {
                     character.Essence.BaseValue = 6;
                     character.Essence.TotalValue = 6;
