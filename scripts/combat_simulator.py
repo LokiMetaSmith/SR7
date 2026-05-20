@@ -241,28 +241,55 @@ class GameEnvironment:
 
 class RulesEngine:
     @staticmethod
-    def roll_dice(pool: int) -> tuple[int, bool]:
+    def roll_dice(pool: int, wild_dice_count: int = 0) -> tuple[int, bool]:
         hits = 0
         ones_twos = 0
-        for _ in range(max(1, pool)):
+        normal_fives = 0
+        wild_ones = 0
+
+        actual_pool = max(1, pool)
+        wild_dice = min(actual_pool, max(0, wild_dice_count))
+        standard_dice = actual_pool - wild_dice
+
+        for _ in range(standard_dice):
             roll = random.randint(1, 6)
-            if roll >= 5:
+            if roll == 5:
+                normal_fives += 1
+                hits += 1
+            elif roll == 6:
                 hits += 1
             elif roll in [1, 2]:
                 ones_twos += 1
-        glitched = ones_twos >= (max(1, pool) / 2.0)
+
+        for _ in range(wild_dice):
+            roll = random.randint(1, 6)
+            if roll == 6:
+                hits += 3
+            elif roll == 5:
+                hits += 1
+            elif roll == 1:
+                wild_ones += 1
+                ones_twos += 1
+            elif roll == 2:
+                ones_twos += 1
+
+        # Wild Dice 1s cancel all standard 5s
+        if wild_ones > 0:
+            hits -= normal_fives
+
+        glitched = ones_twos >= (actual_pool / 2.0)
         return hits, glitched
 
     @staticmethod
     def roll_attack_with_edge(
-        pool: int, combatant: "Combatant"
+        pool: int, combatant: "Combatant", wild_dice_count: int = 0
     ) -> tuple[int, bool, bool]:
         """Rolls an attack and automatically spends Edge to reroll if 0 hits are rolled."""
-        hits, glitched = RulesEngine.roll_dice(pool)
+        hits, glitched = RulesEngine.roll_dice(pool, wild_dice_count)
         edge_spent = False
         if hits == 0 and combatant.edge > 0:
             combatant.edge -= 1
-            reroll_hits, reroll_glitched = RulesEngine.roll_dice(pool)
+            reroll_hits, reroll_glitched = RulesEngine.roll_dice(pool, wild_dice_count)
             hits += reroll_hits
             glitched = reroll_glitched
             edge_spent = True
@@ -1538,8 +1565,16 @@ def main():
                 else:
                     attack_pool = active.get_attribute("AGI", 3) + 5 + lighting_mod
 
+                wild_dice_count = 0
+                bg_count = state.environment.modifiers.get("background_count", 0)
+                if bg_count > 0:
+                    wild_dice_count += bg_count
+
+                if "Sam" in active.name or "Ascended AI" in active.name:
+                    wild_dice_count = attack_pool  # Overkill Protocol
+
                 attack_hits, attack_hits_glitched, edge_spent = (
-                    RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
+                    RulesEngine.roll_attack_with_edge(max(1, attack_pool), active, wild_dice_count=wild_dice_count)
                 )
 
                 # Defense Roll: Reaction + Intuition + Cover
