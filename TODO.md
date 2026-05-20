@@ -7,20 +7,20 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 **Goal:** Establish a complete, structurally sound foundation before building tools around it.
 
 *   [x] **Standardize Document Formatting:** Go through `Fan made Shadowrun 7th Edition rules.md` and convert all tables (currently a mix of tabs and spaces) into standard Markdown pipe (`|`) syntax.
-    *   [ ] *Follow-up required:* Establish a master template for Weapon and Quality tables so that parsing tools know exactly what to look for.
+    *   [x] *Follow-up required:* Establish a master template for Weapon and Quality tables so that parsing tools know exactly what to look for.
 *   [x] **Draft Missing Core Sections:** Write the rules text for the fundamentally missing pillars of the game:
-    *   [ ] *Follow-up required (Magic):* Need design docs for Spell lists, Adept powers, Drain calculations, Rituals, and Metamagic.
-    *   [ ] *Follow-up required (Matrix):* Need design docs for Matrix elements:
-        *   [ ] Programs
-        *   [ ] Cyberdecks/Commlinks
-        *   [ ] Host architecture & IC
-        *   [ ] Matrix actions (how do "Tethers" work in combat?)
-    *   [ ] *Follow-up required (Rigging/Vehicles):* Need design docs for:
-        *   [ ] Drone stats
-        *   [ ] Vehicle modifications
-        *   [ ] Chase combat
-        *   [ ] Jumped-in mechanics
-    *   [ ] *Follow-up required (General Equipment):* Need lists and costs for Armor, Cyberware/Bioware, Commlinks, and Lifestyle.
+    *   [x] *Follow-up required (Magic):* Need design docs for Spell lists, Adept powers, Drain calculations, Rituals, and Metamagic.
+    *   [x] *Follow-up required (Matrix):* Need design docs for Matrix elements:
+        *   [x] Programs
+        *   [x] Cyberdecks/Commlinks
+        *   [x] Host architecture & IC
+        *   [x] Matrix actions (how do "Tethers" work in combat?)
+    *   [x] *Follow-up required (Rigging/Vehicles):* Need design docs for:
+        *   [x] Drone stats
+        *   [x] Vehicle modifications
+        *   [x] Chase combat
+        *   [x] Jumped-in mechanics
+    *   [x] *Follow-up required (General Equipment):* Need lists and costs for Armor, Cyberware/Bioware, Commlinks, and Lifestyle.
     *   [x] **Implement Spirit Summoning:** Add mechanics for conjuring spirits and calculating summoning drain.
 *   [x] **Implement Adept Powers & Metamagic:** Expanded design docs for Adept Powers and Metamagic in the core rules.
 *   [x] **Define the Baseline Mechanics:** Clarify how "Wild Dice" and "Digital Essence" interact with standard gameplay loops.
