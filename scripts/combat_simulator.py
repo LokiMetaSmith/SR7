@@ -1391,8 +1391,18 @@ def main():
                     drain_resist_pool
                 )
                 drain_taken = max(0, drain_value - drain_hits)
-                result_text += f" {active.name} rolls {drain_resist_pool} to resist drain, taking {drain_taken} Stun damage."
-                active.stun_damage += drain_taken
+
+                # Check for physical drain due to Matrix noise in merged world
+                drain_type = "Stun"
+                if self.state.environment.modifiers.get("background_count", 0) > 2 or drain_value > mag:
+                    drain_type = "Physical"
+
+                result_text += f" {active.name} rolls {drain_resist_pool} to resist drain, taking {drain_taken} {drain_type} damage."
+
+                if drain_type == "Physical":
+                    active.take_damage(drain_taken, "P")
+                else:
+                    active.take_damage(drain_taken, "S")
 
                 if (
                     target.physical_damage >= target.physical_track
