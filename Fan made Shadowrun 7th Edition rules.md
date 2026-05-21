@@ -3257,44 +3257,46 @@ In the Merged World, vehicles are no longer purely mechanical constructs; the pe
 *   **The Pseudo-Essence Cost:** Machines lack true souls, but their nanite saturation mimics one. Riggers connecting via DNI Hot-Sim (Jumping In) share a neural and spiritual link with this pseudo-Essence. This grants unparalleled control, bypassing mechanical latency, but any physical trauma inflicted upon the vehicle violently resonates back to the rigger as Stun Biofeedback.
 
 #### 1. Drone & Vehicle Stats
-| Vehicle/Drone | Type | Hand/Speed | Accel | BOD | ARM | SENS | Cost (¥) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Horizon Flying Eye | Micro-Drone | 4 / 3 | 2 | 1 | 0 | 3 | 2,000 |
-| MCT Fly-Spy | Micro-Drone | 4 / 3 | 2 | 1 | 0 | 3 | 2,000 |
-| Aztechnology Crawler | Mini-Drone | 4 / 3 | 1 | 2 | 2 | 3 | 4,000 |
-| Lockheed Optic-X2 | Small Drone | 4 / 4 | 2 | 2 | 2 | 4 | 21,000 |
-| MCT Nissan Doberman | Medium Drone | 5 / 3 | 1 | 4 | 4 | 3 | 5,000 |
-| Ares Duelist | Combat Drone | 3 / 3 | 2 | 4 | 4 | 3 | 4,500 |
-| Steel Lynx Combat Drone | Heavy Drone | 5 / 4 | 2 | 6 | 12 | 3 | 25,000 |
-| Dodge Scoot | Scooter | 4 / 3 | 1 | 4 | 2 | 1 | 3,000 |
-| Yamaha Growler | Off-Road Bike | 5 / 4 | 2 | 5 | 4 | 1 | 5,000 |
-| Suzuki Mirage | Racing Bike | 5 / 6 | 3 | 5 | 4 | 2 | 8,500 |
-| Ford Americar | Sedan | 4 / 4 | 2 | 11 | 6 | 2 | 16,000 |
-| Toyota Gopher | Pickup Truck | 5 / 4 | 2 | 14 | 8 | 2 | 25,000 |
-| Ares Roadmaster | Armored Transport | 3 / 3 | 1 | 18 | 18 | 3 | 52,000 |
-| GMC Banshee | T-Bird / LAV | 5 / 8 | 4 | 16 | 18 | 5 | 250,000 |
+| Name | Type | HAND | SPEED | ACCEL | BOD | ARM | PILOT | SENS | AVAIL | COST |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Horizon Flying Eye | Micro-Drone | 4 | 3 | 2 | 1 | 0 | 3 | 3 | 4 | 2,000 |
+| MCT Fly-Spy | Micro-Drone | 4 | 3 | 2 | 1 | 0 | 3 | 3 | 4 | 2,000 |
+| Aztechnology Crawler | Mini-Drone | 4 | 3 | 1 | 2 | 2 | 3 | 3 | 4 | 4,000 |
+| Lockheed Optic-X2 | Small Drone | 4 | 4 | 2 | 2 | 2 | 3 | 4 | 4 | 21,000 |
+| MCT Nissan Doberman | Medium Drone | 5 | 3 | 1 | 4 | 4 | 3 | 3 | 4 | 5,000 |
+| Ares Duelist | Combat Drone | 3 | 3 | 2 | 4 | 4 | 3 | 3 | 4 | 4,500 |
+| Steel Lynx Combat Drone | Heavy Drone | 5 | 4 | 2 | 6 | 12 | 3 | 3 | 8R | 25,000 |
+| Dodge Scoot | Scooter | 4 | 3 | 1 | 4 | 2 | 1 | 1 | 2 | 3,000 |
+| Yamaha Growler | Off-Road Bike | 5 | 4 | 2 | 5 | 4 | 1 | 1 | 4 | 5,000 |
+| Suzuki Mirage | Racing Bike | 5 | 6 | 3 | 5 | 4 | 1 | 2 | 6 | 8,500 |
+| Ford Americar | Sedan | 4 | 4 | 2 | 11 | 6 | 1 | 2 | 4 | 16,000 |
+| Toyota Gopher | Pickup Truck | 5 | 4 | 2 | 14 | 8 | 1 | 2 | 4 | 25,000 |
+| Ares Roadmaster | Armored Transport | 3 | 3 | 1 | 18 | 18 | 2 | 3 | 8R | 52,000 |
+| GMC Banshee | T-Bird / LAV | 5 | 8 | 4 | 16 | 18 | 3 | 5 | 16F | 250,000 |
 
 #### 2. Jumped-In Mechanics & Chase Combat
 
 **Jumping In (Control Rig Integration)**
-A Rigger with a Control Rig (Rating 1-3) can "jump into" a nanite-infused vehicle equipped with a Rigger Interface. This acts as a DNI Hot-Sim connection, merging the Rigger’s consciousness with the vehicle’s pseudo-Essence.
+A Rigger with a Control Rig (Rating 1-3) can "jump into" a nanite-infused vehicle equipped with a Rigger Interface. This acts as a DNI Hot-Sim connection, merging the Rigger’s consciousness with the vehicle’s pseudo-Essence. This functions mechanically identically to the Possession rules for Spirits and Sprites:
+*   **Control Override:** The Rigger suppresses the vehicle's base pilot program.
 *   **Dice Pool Bonus:** The Rigger adds their Control Rig rating to all Vehicle skill checks (Piloting, Gunnery, Sensors).
 *   **Threshold Reduction:** The Threshold for any Vehicle test is reduced by the Control Rig rating (to a minimum of 1).
 *   **Initiative:** While jumped in, the Rigger uses Matrix Initiative (Data Processing + Intuition) and gains +1 Initiative Die per level of their Control Rig.
 
 **Bio-Feedback & Destabilization**
-Because the vehicle is saturated with grey goo, it possesses a pseudo-Essence that the Rigger connects to on a spiritual level.
-*   If the vehicle takes Physical damage, the Rigger must resist half of that damage (rounded down) as Stun Biofeedback. This is resisted with `WIL + BOD`.
-*   If the vehicle's Condition Monitor is filled and it is destroyed while the Rigger is jumped in, the Rigger suffers severe Dumpshock, immediately taking 6 unresistable Stun damage and suffering a -2 Dice Pool modifier to all actions for (12 - WIL) minutes.
+Because the vehicle is saturated with grey goo, it possesses a pseudo-Essence that the Rigger connects to on a spiritual level. Just like the Possession rules:
+*   **Damage Sharing:** If the vehicle takes Physical damage, the Rigger must resist half of that damage (rounded down) as Stun Biofeedback. This is resisted with `WIL + BOD`.
+*   **Destabilization Risk (Dumpshock):** If the vehicle's Condition Monitor is filled and it is destroyed while the Rigger is jumped in, the Rigger suffers violent extrusion and Dumpshock, immediately taking 6 unresistable Stun damage and suffering a -2 Dice Pool modifier to all actions for (12 - WIL) minutes.
 
 **Chase Combat**
-Chases are high-stakes affairs that abstract exact speeds into Range Bands: Close, Short, Medium, Long, and Extreme.
+Chases are high-speed engagements where kinetic energy limits the standard rules of physics. It can represent vehicular chases or warp-speed maneuvers in the Astral/Matrix. Abstract exact speeds into Range Bands: Close, Short, Medium, Long, and Extreme.
 *   **The Chase Turn:** At the start of a Combat Round where a chase is occurring, all participating drivers make an Opposed `Pilot + Reaction` test. The net hits determine if a vehicle moves up or down a Range Band relative to their target.
 *   **Chase Maneuvers:** Drivers can spend their Complex actions during their Initiative pass to attempt specific maneuvers:
     *   *Catch Up / Break Away:* An opposed Pilot test to force a shift in Range Band.
-    *   *Evade:* The driver adds their Vehicle's Handling rating to their Defense Pool against incoming attacks for the round.
-    *   *Ram:* An opposed Pilot test. If successful, both vehicles take Physical damage based on the ramming vehicle's Body + Speed. However, the vehicle with the higher Body + Armor resists the damage with double their dice pool, and halves the final damage taken (ensuring heavier vehicles win crashes).
-    *   *Cut Off:* Attempted at Close or Short range. An opposed Pilot test to force the target vehicle to make a Crash Test.
+    *   *Evade:* The driver focuses entirely on defense, adding their Vehicle's Handling rating to their Defense Pool against incoming attacks for the round.
+    *   *Ram:* An opposed Pilot test. If successful, both vehicles take Physical damage equal to the ramming vehicle's Body + Speed. However, the vehicle with the higher (Body + Armor) resists the damage with double their dice pool, and halves the final damage taken (ensuring heavier vehicles win crashes).
+    *   *Cut Off:* Attempted at Close or Short range. An opposed Pilot test to aggressively position in front of the target, forcing them to make an immediate Crash Test.
+
 #### 3. Vehicle Modifications
 | Modification | Slots | Cost (¥) | Description |
 | :--- | :--- | :--- | :--- |
@@ -4088,6 +4090,8 @@ Automated scripts (`balance_generator.py`, `xml_generator.py`) rely on specific 
   `**Quality Name** \- [Cost] Karma (Optional Tags)`
 * **Weapons Table:** Tables must include the following exact headers (case-sensitive) to be parsed for XML generation and balancing:
   `| Weapon Name | ACC | DV | AP | MODE | RC | AMMO | AVAIL | COST |`
+* **Vehicles/Drones Table:** Tables must include the following exact headers (case-sensitive) to be parsed properly:
+  `| Name | Type | HAND | SPEED | ACCEL | BOD | ARM | PILOT | SENS | AVAIL | COST |`
 
 
 #### Metatype Karma Cost Formula

@@ -1506,18 +1506,20 @@ def main():
                         f" They close the distance towards {target.name}'s zone."
                     )
 
-            elif (
-                "chase" in action_lower
-                or "pilot" in action_lower
-                or "drive" in action_lower
-            ):
+            elif "ram" in action_lower:
                 attack_pool = active.get_attribute("REA", 3) + active.skills.get(
                     "Piloting", 4
                 )
                 if active.jumped_in_vehicle:
                     attack_pool += (
-                        active.jumped_in_vehicle.handling + active.control_rig
+                        active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
                     )
+
+                    # Target threshold reduced by Control Rig rating
+                    threshold_reduction = getattr(active, 'control_rig', 0)
+                else:
+                    threshold_reduction = 0
+
                 attack_hits, attack_hits_glitched, edge_spent = (
                     RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
                 )
@@ -1525,11 +1527,205 @@ def main():
                 def_pool = target.get_attribute("REA", 3) + target.skills.get(
                     "Piloting", 4
                 )
+
+                # Evade bonus
+                evade_mod = 0
+                for rule in target.special_rules:
+                    if rule.startswith("Evade"):
+                        try:
+                            evade_mod += int(rule.split("(+")[1].split(")")[0])
+                        except:
+                            pass
+
+                def_pool += evade_mod
+
                 if target.jumped_in_vehicle:
-                    def_pool += target.jumped_in_vehicle.handling + target.control_rig
+                    def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
                 def_hits, def_hits_glitched = RulesEngine.roll_dice(max(1, def_pool))
 
-                net_hits = attack_hits - def_hits
+                # Apply Threshold reduction logic here.
+                # Threshold effectively subtracts from def_hits to calculate net_hits
+                net_hits = attack_hits - max(0, def_hits - threshold_reduction)
+
+                action_text = f"attempts to RAM {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+                if net_hits > 0:
+                    active_veh = active.jumped_in_vehicle
+                    target_veh = target.jumped_in_vehicle
+
+                    if active_veh and target_veh:
+                        base_ram_dmg = active_veh.body + active_veh.speed
+                        active_resist_pool = (active_veh.body + active_veh.armor) * 2 if (active_veh.body + active_veh.armor) > (target_veh.body + target_veh.armor) else (active_veh.body + active_veh.armor)
+                        target_resist_pool = (target_veh.body + target_veh.armor) * 2 if (target_veh.body + target_veh.armor) > (active_veh.body + active_veh.armor) else (target_veh.body + target_veh.armor)
+
+                        active_resist_hits, _ = RulesEngine.roll_dice(active_resist_pool)
+                        target_resist_hits, _ = RulesEngine.roll_dice(target_resist_pool)
+
+                        active_dmg_taken = max(0, base_ram_dmg - active_resist_hits)
+                        target_dmg_taken = max(0, base_ram_dmg - target_resist_hits)
+
+                        if (active_veh.body + active_veh.armor) > (target_veh.body + target_veh.armor):
+                            active_dmg_taken = active_dmg_taken // 2
+                        elif (target_veh.body + target_veh.armor) > (active_veh.body + active_veh.armor):
+                            target_dmg_taken = target_dmg_taken // 2
+
+                        if active.jumped_in_vehicle:
+                            # Route physical damage to vehicle, triggering possession logic
+                            active.jumped_in_vehicle.physical_damage += active_dmg_taken
+                            active_bio = active_dmg_taken // 2
+                            active_bio_resist = active.get_attribute("WIL", 3) + active.get_attribute("BOD", 3)
+                            active_bio_hits, _ = RulesEngine.roll_dice(active_bio_resist)
+                            active_net_bio = max(0, active_bio - active_bio_hits)
+                            active.stun_damage += active_net_bio
+
+                            res1 = f" {active.name}'s vehicle takes {active_dmg_taken} damage! {active.name} resists biofeedback with {active_bio_resist} dice, taking {active_net_bio} Stun biofeedback!"
+                            if active.jumped_in_vehicle.physical_damage >= active.jumped_in_vehicle.physical_track:
+                                active.jumped_in_vehicle.is_destroyed = True
+                                active.stun_damage += 6
+                                active.jumped_in_vehicle = None
+                                res1 += f" The vehicle is DESTROYED! {active.name} takes 6 Stun dumpshock damage!"
+                        else:
+                            res1 = active.take_damage(active_dmg_taken, 'P')
+
+                        if target.jumped_in_vehicle:
+                            target.jumped_in_vehicle.physical_damage += target_dmg_taken
+                            target_bio = target_dmg_taken // 2
+                            target_bio_resist = target.get_attribute("WIL", 3) + target.get_attribute("BOD", 3)
+                            target_bio_hits, _ = RulesEngine.roll_dice(target_bio_resist)
+                            target_net_bio = max(0, target_bio - target_bio_hits)
+                            target.stun_damage += target_net_bio
+
+                            res2 = f" {target.name}'s vehicle takes {target_dmg_taken} damage! {target.name} resists biofeedback with {target_bio_resist} dice, taking {target_net_bio} Stun biofeedback!"
+                            if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
+                                target.jumped_in_vehicle.is_destroyed = True
+                                target.stun_damage += 6
+                                target.jumped_in_vehicle = None
+                                res2 += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
+                        else:
+                            res2 = target.take_damage(target_dmg_taken, 'P')
+
+                        result_text = f"Ram successful! Both vehicles crash.{res1}{res2}"
+                    else:
+                        base_ram_dmg = active.get_attribute("BOD", 3)
+                        if active.jumped_in_vehicle:
+                            base_ram_dmg = active.jumped_in_vehicle.body + active.jumped_in_vehicle.speed
+                        result_text = f"Ram successful! "
+
+                        if target.jumped_in_vehicle:
+                            target.jumped_in_vehicle.physical_damage += base_ram_dmg
+                            target_bio = base_ram_dmg // 2
+                            target_bio_resist = target.get_attribute("WIL", 3) + target.get_attribute("BOD", 3)
+                            target_bio_hits, _ = RulesEngine.roll_dice(target_bio_resist)
+                            target_net_bio = max(0, target_bio - target_bio_hits)
+                            target.stun_damage += target_net_bio
+
+                            result_text += f"{target.name}'s vehicle takes {base_ram_dmg} damage! {target.name} resists biofeedback with {target_bio_resist} dice, taking {target_net_bio} Stun biofeedback!"
+                            if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
+                                target.jumped_in_vehicle.is_destroyed = True
+                                target.stun_damage += 6
+                                target.jumped_in_vehicle = None
+                                result_text += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
+                        else:
+                            result_text += target.take_damage(base_ram_dmg, 'P')
+                else:
+                    result_text = f"Ram maneuver fails! {target.name} swerves out of the way."
+
+            elif "cut off" in action_lower:
+                attack_pool = active.get_attribute("REA", 3) + active.skills.get(
+                    "Piloting", 4
+                )
+                if active.jumped_in_vehicle:
+                    attack_pool += (
+                        active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+                    )
+                    threshold_reduction = getattr(active, 'control_rig', 0)
+                else:
+                    threshold_reduction = 0
+
+                attack_hits, attack_hits_glitched, edge_spent = (
+                    RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
+                )
+
+                def_pool = target.get_attribute("REA", 3) + target.skills.get(
+                    "Piloting", 4
+                )
+
+                # Evade bonus
+                evade_mod = 0
+                for rule in target.special_rules:
+                    if rule.startswith("Evade"):
+                        try:
+                            evade_mod += int(rule.split("(+")[1].split(")")[0])
+                        except:
+                            pass
+
+                def_pool += evade_mod
+
+                if target.jumped_in_vehicle:
+                    def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
+                def_hits, def_hits_glitched = RulesEngine.roll_dice(max(1, def_pool))
+
+                net_hits = attack_hits - max(0, def_hits - threshold_reduction)
+                action_text = f"attempts to CUT OFF {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+                if net_hits > 0:
+                    result_text = f"Cut Off successful! {target.name} is forced to make a Crash Test."
+                else:
+                    result_text = f"Cut Off fails! {target.name} avoids the block."
+
+            elif "evade" in action_lower:
+                action_text = f"attempts to Evade"
+                if active.jumped_in_vehicle:
+                    evade_bonus = active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+                    active.special_rules.append(f"Evade (+{evade_bonus})")
+                    result_text = f"Evade successful! {active.name} gains +{evade_bonus} to defense pool this round."
+                else:
+                    evade_bonus = active.get_attribute("REA", 3) // 2
+                    active.special_rules.append(f"Evade (+{evade_bonus})")
+                    result_text = f"Evade successful! {active.name} focuses on dodging, gaining +{evade_bonus} defense."
+
+            elif (
+                "chase" in action_lower
+                or "pilot" in action_lower
+                or "drive" in action_lower
+                or "catch up" in action_lower
+                or "break away" in action_lower
+            ):
+                attack_pool = active.get_attribute("REA", 3) + active.skills.get(
+                    "Piloting", 4
+                )
+                if active.jumped_in_vehicle:
+                    attack_pool += (
+                        active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+                    )
+                    threshold_reduction = getattr(active, 'control_rig', 0)
+                else:
+                    threshold_reduction = 0
+
+                attack_hits, attack_hits_glitched, edge_spent = (
+                    RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
+                )
+
+                def_pool = target.get_attribute("REA", 3) + target.skills.get(
+                    "Piloting", 4
+                )
+
+                # Evade bonus
+                evade_mod = 0
+                for rule in target.special_rules:
+                    if rule.startswith("Evade"):
+                        try:
+                            evade_mod += int(rule.split("(+")[1].split(")")[0])
+                        except:
+                            pass
+
+                def_pool += evade_mod
+
+                if target.jumped_in_vehicle:
+                    def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
+                def_hits, def_hits_glitched = RulesEngine.roll_dice(max(1, def_pool))
+
+                net_hits = attack_hits - max(0, def_hits - threshold_reduction)
                 action_text = f"attempts a chase maneuver against {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
 
                 if net_hits > 0:
@@ -1623,7 +1819,7 @@ def main():
                     attack_pool = (
                         active.get_attribute("AGI", 3)
                         + active.skills.get("Gunnery", 5)
-                        + active.control_rig
+                        + getattr(active, 'control_rig', 0)
                         + lighting_mod
                     )
                     if active.jumped_in_vehicle.swarm_count > 1:
@@ -1728,12 +1924,22 @@ def main():
                     modified_ap = weapon.ap
 
                     # Soak Roll: Body + Armor + AP
+                    # Evade bonus
+                    evade_mod = 0
+                    for rule in target.special_rules:
+                        if rule.startswith("Evade"):
+                            try:
+                                evade_mod += int(rule.split("(+")[1].split(")")[0])
+                            except:
+                                pass
+
                     if target.jumped_in_vehicle:
                         soak_pool = max(
                             0,
                             target.jumped_in_vehicle.body
                             + target.jumped_in_vehicle.armor
-                            + modified_ap,
+                            + modified_ap
+                            + evade_mod,
                         )
                     else:
                         soak_pool = max(
