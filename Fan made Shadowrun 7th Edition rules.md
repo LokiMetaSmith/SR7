@@ -3036,23 +3036,30 @@ Following is a list of cartridges (some real world, some entirely made up for Sh
 | 8 gauge slug | 21.2x89mm | 1250 | 460 | 0.079 | 8569 |
 
 ### I. MAGIC: The Awakened Gaiasphere
-Magic is volatile, reacting to the background count and the emotional resonance of the world.
+Magic is volatile, reacting to the background count and the emotional resonance of the world. The Sixth World's mana lines have been irrevocably polluted—or evolved—by the omnipresent grey goo and the sprawling AR infrastructure. The shadows of the technosphere are continuously imprinting themselves upon the manosphere. When a mage assenses the astral plane near a major data hub, the chaotic static of the Matrix visibly bleeds into the astral, and digital entities like Sprites seem to flicker on the very edge of manifesting in the manosphere.
+
+To bridge this impossible gap, "Gateway Crystals"—rare, naturally occurring or artificially cultivated living crystals—act as trans-dimensional nodes. These crystals resonate on both magical and resonance frequencies simultaneously, allowing Spirits to manifest directly into the Matrix as powerful, system-shattering anomalies, or permitting Sprites to project into the Astral Plane to wage code-war against astral forms.
 
 #### 1. Spellcasting & Drain Calculations
-Drain is resisted with Willpower + Tradition Attribute (Logic or Charisma).
-If the modified Drain Value exceeds the character's Magic Rating, the Drain is Physical Damage instead of Stun Damage.
+Drain represents the toll channelled mana takes on the spellcaster's mind and body. In the Merged World, Drain is not just spiritual exhaustion, but cognitive dissonance caused by trying to enforce a magical pattern onto a reality densely interwoven with digital logic and ambient nanites.
+
+Drain is resisted with **Willpower + Tradition Attribute** (Logic for Hermetics, Charisma for Shamans).
+If the modified Drain Value exceeds the character's Magic Rating, or if a spell is cast in a zone with heavy, conflicting Matrix Noise where "Gateway Crystals" or heavy nanite clouds enforce digital logic over magical intent, the Drain causes **Physical Damage** instead of Stun Damage, often manifesting as nosebleeds, burst capillaries, or temporary AR-static hallucinations.
 
 **Learning Spells:**
-New Spells cost 5 Karma to learn. Magicians learn spells from formula patterns or mentor spirits. Each downtime period a character may learn 1 new Spell.
+New Spells cost 5 Karma to learn. Magicians learn spells from formula patterns or mentor spirits. Each downtime period a character may learn 1 new Spell. Many modern spells specifically exploit the hybridized nature of the Merged World.
 
 | Spell Category | Example Spell | Type | Range | Duration | Drain Calculation | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Combat | Manabolt | Mana | LOS | Instant | Force - 2 | Direct damage to target's soul. Resisted by ESS + WIL. |
 | Combat | Powerbolt | Physical | LOS | Instant | Force - 1 | Direct physical damage to target's body. Resisted by BOD + Armor. |
 | Combat | Nanite Ball (Fireball) | Physical | LOS | Instant | Force | Ignites ambient grey goo. Resisted by BOD + Armor. AP = Force. |
+| Combat | Static Whip | Physical | LOS | Sustained | Force | A crackling lash of electrified mana that targets digital and physical entities. Deals Stun damage and applies -2 to Matrix actions. |
 | Health | Heal | Mana | Touch | Permanent | Force - 4 | Heals Physical boxes equal to hits. Force must equal or exceed damage. |
+| Health | Purge Code | Mana | Touch | Permanent | Force - 2 | Flushes malignant biofeedback or temporary nanite-induced sickness (N.I.C.A.) from the target's system. |
 | Illusion | Improved Invisibility | Physical | LOS | Sustained | Force - 1 | Bends light and fools nanite-sensors. Resisted by INT + Logic. |
 | Illusion | Trid Phantasm | Physical | LOS | Sustained | Force | Creates multi-sensory illusions that affect machines and living beings. |
+| Illusion | Digital Mirage | Physical | LOS(A) | Sustained | Force | Creates false AR tags, spoofing digital overlays over physical targets. Resisted by INT + LOG. |
 | Illusion | Confusion | Mana | LOS | Sustained | Force - 1 | Target suffers negative dice pool modifier to all actions. |
 | Illusion | Mass Confusion | Mana | LOS(A) | Sustained | Force + 1 | AoE version of Confusion. |
 | Illusion | Chaos | Physical | LOS(A) | Sustained | Force + 1 | Creates chaotic physical sensory input, affecting machines and living targets. |
@@ -3062,7 +3069,9 @@ New Spells cost 5 Karma to learn. Magicians learn spells from formula patterns o
 | Manipulation | Barrier | Physical | LOS(A) | Sustained | Force | Creates a physical barrier of magical energy. |
 | Manipulation | Levitate | Physical | LOS | Sustained | Force | Moves target telekinetically. |
 | Manipulation | Petrify | Physical | LOS | Sustained | Force + 2 | Turns living tissue to stone. |
+| Manipulation | Resonance Lock | Physical | LOS | Sustained | Force + 1 | Encases a target device or commlink in solidified mana, halting wireless signals and rendering it offline. Resisted by Device Rating + Firewall. |
 | Detection | Mind Probe | Mana | Touch | Sustained | Force | Reads target's surface thoughts or deep memories. |
+| Detection | Assense Data | Mana | LOS | Sustained | Force - 1 | Allows a mage to intuitively "feel" the presence and emotional resonance of hidden commlinks, dormant code, or digital signatures in a localized area. |
 
 #### 2. Conjuring & Summoning Spirits
 Magicians can summon Canonical Spirits (Elementals, Spirits of Man, etc.) from the Astral Plane to aid them.
@@ -3089,6 +3098,9 @@ Adept powers are fueled by the adept's Magic Rating and Power Points (PP). Adept
 | Attribute Boost | Adept | 0.25 PP / Lvl | +1 to a specific physical attribute temporarily. |
 | Combat Sense | Adept | 0.5 PP / Lvl | +1 Die to Defense tests against all attacks. |
 | Danger Sense | Adept | 0.25 PP / Lvl | +1 Die to Surprise tests and avoiding ambushes. |
+| Living Crystal Nodes | Adept | 0.5 PP | The Adept naturally grows small sub-dermal "Gateway Crystals". Allows physical unarmed attacks to strike purely digital entities in AR overlay with half DV. |
+| EMP Strike | Adept | 1.0 PP | Melee attacks can channel mana to violently scramble digital signals. Target suffers Matrix noise penalties equal to hits for 1 Turn. |
+| Ghost in the Machine | Adept | 1.0 PP | Allows an Adept with Astral Perception to vaguely "assense" the emotional imprint of heavily encrypted files or active commlinks through solid walls. |
 | Concealment | Spirit | N/A | Conceals target from sight and sensors. |
 | Animal Control | Spirit | N/A | Controls animal behavior. |
 | Guard | Spirit | N/A | Protects target from accidents and environmental hazards. |
@@ -3107,17 +3119,19 @@ Adept powers are fueled by the adept's Magic Rating and Power Points (PP). Adept
 | Shielding | Metamagic | Initiation | Add your Initiate Grade to Counterspelling dice pools. |
 | Adept Centering | Metamagic | Initiation | Use a physical action (chanting, kata) to reduce penalties to physical and combat skills by Initiate Grade. |
 | Infusion | Metamagic | Initiation | Temporarily boost physical attributes beyond their natural limit using Power Points. |
+| Digital Apotheosis | Metamagic | Initiation | A specialized ritual utilizing a Gateway Crystal. Allows an Initiate to cast a spell with the target being a persona entirely inside a Matrix Host, provided they have a sympathetic material link. |
+| Resonance Tuning | Metamagic | Initiation | Allows a mage to intentionally suppress their magical aura and emit a localized "White Noise" AR signal, treating their aura as a low-level device to fool Matrix scanners. |
 
 **Initiation & Submersion:**
 Initiation and Submersion for characters costs 10 + (Initiation Grade x 5) Karma and 10 + (Submersion Level x 5) Karma respectively. A character may choose to undergo an ordeal to reduce this cost by 10% to 20%.
 
 #### 4. Ritual Spellcasting
-Rituals rely heavily on sympathetic links and the local Background Count. The process requires a physical space prepared with a Magical Lodge, appropriate to the tradition and force of the spell.
+Rituals rely heavily on sympathetic links and the local Background Count. The process requires a physical space prepared with a Magical Lodge, appropriate to the tradition and force of the spell. In the Sixth World, lodges are often built around server racks or fiber-optic junctions to harness the ambient data-flow, utilizing Gateway Crystals to stabilize the magic.
 
 **The Ritual Process:**
 1. **Choose Leader and Assistants:** A single Leader directs the spell. Other participants act as Assistants.
 2. **Determine Force:** The Force of the ritual must be chosen, limited by the Leader's Magic Rating and the Lodge's Rating.
-3. **Establish Link:** The material link provides the sympathetic connection to the target across distance.
+3. **Establish Link:** The material link provides the sympathetic connection to the target across distance. Traditional links (blood, hair) are still potent, but in the Merged World, a completely unencrypted, highly personal data file (like a core memory engram or an active, un-spoofed biometrics feed) acts as a valid "Digital Link".
 4. **Execution:** The ritual takes (Force) hours to complete. A teamwork test is made, and the total hits dictate the ritual's effectiveness.
 
 | Ritual Element | Rule / Mechanic |
@@ -3125,6 +3139,11 @@ Rituals rely heavily on sympathetic links and the local Background Count. The pr
 | Material Link | A physical piece of the target (blood, hair) or deeply guarded personal data (SIN, true name). Degrades over time (-1 Die per week old). |
 | Teamwork | Leader rolls Ritual Spellcasting + MAG. Assistants add hits to the Leader's pool. |
 | Execution | Takes (Force) Hours. Wild Dice equal to the Background Count must be rolled. A Glitch causes the ritual to backfire, dealing Drain to all participants. |
+
+**Example Rituals in the Merged World:**
+*   **Matrix Ward:** Cast onto a physical space containing a Gateway Crystal. Instead of blocking spirits, this ward blocks digital signals and AR overlays, functioning as an impenetrable, magical Faraday Cage with a Rating equal to the ritual's net hits.
+*   **Digital Curse:** Targets an individual using a Digital Link. The ritual infuses the target's commlink or cyberware with a localized, malevolent spirit that actively disrupts their electronics, permanently adding the "Gremlins" quality to them until dispelled.
+*   **Aura Spoof:** The lodge uses the target's biological sample to imprint their aura onto a massive, dormant digital file. Any assensing attempts on the target within 10 km are drawn to the physical server hosting the file instead of the person.
 
 ### II. MATRIX: The Nanite Grid
 Cold sim is dead. AR is limited. All real hacking is DNI Hot-Sim, putting your brain and soul on the line.
