@@ -3138,6 +3138,13 @@ Cold sim is dead. AR is limited. All real hacking is DNI Hot-Sim, putting your b
 | Bio-Deck | Microtrónica Azteca 200 | 2 | 4 / 3 / 2 / 1 | 25,000 | Budget cyberdeck. Often retrofitted with stolen military parts by gangers. |
 | Bio-Deck | Renraku "Shinobi" | 3 | 5 / 4 / 3 / 2 | 45,000 | Entry-level hot-sim deck. Configurable Array. |
 | Bio-Deck | Fairlight Paladin | 6 | 8 / 7 / 6 / 6 | 150,000 | Military-grade. Interfaces directly with gaiasphere anomalies. |
+| Bio-Deck | MCT "Ghost-Deck" | 5 | 7 / 6 / 5 / 4 | 85,000 | Illegal, unregistered hardware. Cannot run legal software but provides +1 to Sleaze. |
+| Rigger Console | Vulcan Liege-Lord | 5 | 0 / 0 / 5 / 6 | 60,000 | Specialized for drone swarms. Grants +1 Initiative Die while jumped in. |
+
+**Hardware Modifications:**
+*   **Overclocking:** A Decker may spend a Free Action to over-volt their cyberdeck, increasing one Matrix Attribute (Attack, Sleaze, Data Processing, or Firewall) by +2 for the duration of the Combat Turn. At the end of the turn, the deck generates excessive heat, dealing 2 unresisted Physical damage to the Decker.
+*   **Hard-wired Connections:** Bypassing wireless receivers and plugging directly into a Host's physical terminal grants a flat +2 Dice Pool bonus to all Matrix Actions, but the Decker cannot physically move more than 2 meters from the terminal without breaking the connection.
+
 
 #### Cyberdeck Programs
 Active programs take up a program slot on a cyberdeck. Swapping a program is a Free Action. Programs act as localized rules-overrides or dice pool modifiers for your DNI connection.
@@ -3157,6 +3164,9 @@ Active programs take up a program slot on a cyberdeck. Swapping a program is a F
 | **Defuse** | Hacking | +4 Dice to resist Data Bomb damage. |
 | **Exploit** | Hacking | +2 to Sleaze rating. |
 | **Stealth** | Hacking | +1 to Sleaze rating. |
+| **Tar-Baby** | Hacking | If a target successfully defends against your Matrix Action, they suffer an immediate -2 dice pool penalty to their next action as their persona is bogged down in sticky code. |
+| **Agent (Rating 1-6)** | Autonomous | An autonomous program. Requires a Complex Action to deploy. Rolls (Rating x 2) for its own independent Matrix actions on your initiative pass. |
+| **Sprite (Wild)** | Autonomous | Similar to an Agent, but volatile. Rolls (Rating x 2) for actions, but half its dice are always Wild Dice. If a Sprite rolls a 1 on a Wild Die, it goes rogue and targets the nearest entity (including you). |
 
 #### 2. Matrix Actions & Tethers in Combat
 Tethers replace Marks. They are two-way sympathetic soul-links.
@@ -3164,6 +3174,8 @@ Tethers replace Marks. They are two-way sympathetic soul-links.
 | Matrix Action | Opposed Test | Tether Req. | Effect & Combat Mechanics |
 | :--- | :--- | :--- | :--- |
 | Establish Tether (Hack on the Fly) | LOG + Hacking vs. WIL + Firewall | None | Creates 1 Tether. You gain +1 Die on all future actions against the target per Tether. |
+| Erase Tether | LOG + Computer vs. LOG + Hacking | None | A defensive action to purge enemy connections. Success removes 1 Tether the target holds on you (or 2 Tethers on a Critical Success). |
+| Share Tether | LOG + Computer vs. INT + Firewall | 1 | You pass one of your established Tethers to a willing teammate (e.g., handing a hacked drone to a Rigger). Requires a Complex Action. |
 | Data Spike | LOG + Cybercombat vs. INT + Firewall | None | Deals (Attack Rtg + Net Hits + 2 per Tether) Matrix Damage. |
 | Neural Purge (Digital) | WIL + BOD | 1 | The Antibody floods a Tethered target with raw gaiasphere noise. Damage is 8 Stun (Biofeedback). |
 | Control Device | LOG + Electronic Warfare vs. WIL + Firewall | 1 to 3 | Take control of a device/drone. Requires 1 Tether for simple device interactions, 2 for standard actions, 3 for complex tasks requiring multiple Actions. |
@@ -3179,6 +3191,11 @@ Tethers replace Marks. They are two-way sympathetic soul-links.
 | Snoop | LOG + Electronic Warfare vs. LOG + Firewall | 1 | Intercept Matrix traffic to or from the target. |
 | Spoof Command | LOG + Hacking vs. LOG + Firewall | 1 | Send a command to a device pretending to be its legitimate owner. Requires 1 Tether on the owner. |
 | Glitches & Tethers | Passive Consequence | N/A | If you Glitch on any Matrix Action while you hold a Tether on a target, the target gets a free blast of Biofeedback against you (Damage = target's Firewall, resisted by WIL). |
+
+**Tether Edge Cases & Mechanics**
+*   **Tether Decay:** Tethers are sympathetic links, but they require proximity to the local nanite grid. If you break line of sight *and* move more than 1 kilometer away from the target, all Tethers naturally dissolve after 1 minute (10 Combat Turns) unless actively sustained by a Sprite or Agent.
+*   **Feedback Loops (Mutual Tethers):** If two Deckers both establish Tethers on each other, they create a resonant Feedback Loop. Any Matrix damage one Decker inflicts on the other is immediately mirrored back at half strength (rounded down) as unresisted Stun damage to the attacker.
+*   **Jacking Out:** A Decker can use a Simple Action to violently sever their DNI connection ("Jack Out") to clear all Tethers they hold and all Tethers held on them. Doing so causes immediate Dumpshock (6 Stun damage, resisted with WIL + BOD, and a -2 Dice Pool penalty for 10 minutes).
 
 #### 3. Hosts & IC (Immune Responses)
 | Entity | Concept in the 6th World | Mechanics |
@@ -3197,12 +3214,18 @@ The Matrix is merged with the physical environment, meaning "Hosts" are no longe
     *   **High (Rating 7-9):** Black sites, zero-zones. The walls themselves are composed of living crystal and data. The environment is actively hostile to intruders.
     *   **Apex (Rating 10):** God-tier constructs. The Host is indistinguishable from reality, bending physical laws within its perimeter.
 
+**Physical Host Destruction & Interference**
+Because Hosts ("Data-Hives") are physical structures of grey goo and living crystal, they are vulnerable to real-world interference.
+*   **Fire & Explosives:** Dealing massive physical damage to a Data-Hive's central server cluster destabilizes the local nanites, lowering the Host's Rating by 1 for every 20 boxes of physical damage inflicted.
+*   **Toxins & Magic:** Because the nanites are semi-biological, specialized anti-nanite gas or powerful Mana storms (Background Count > 4) disrupt the Host's connection to the Gaiasphere, completely disabling all active IC for (Background Count) turns.
+
 **Intrusion Countermeasures (IC)**
 IC are not just digital avatars; they manifest physically as Dual-Natured entities formed from the ambient nanites. They can attack a hacker's persona via the tether or physically strike their meat-body.
 
 *   **Patrol IC ("Seeker Moths"):** Swarms of luminescent nanite-moths that flutter through the physical space of the Host, scanning for unauthorized tethers. If they spot a hacker, they alert the Host and attempt to attach themselves, placing a Tether on the intruder.
 *   **Killer IC ("Neon Hounds"):** Ferocious, canine-shaped constructs of jagged hard-light and crystal. They hunt down intruders and deal Stun Biofeedback damage.
 *   **Black IC ("Necrophages"):** Horrifying, insectoid monstrosities that latch onto a hacker's physical body or digital persona. They deal Physical damage and attempt to permanently sever the hacker's connection, causing severe Dumpshock and Essence drain.
+*   **Tar-Pit IC ("The Sludge"):** Manifests as a thick, viscous pool of black nanites. If it successfully attacks a hacker, it does no damage but immediately locks all of the hacker's Tethers. The hacker cannot voluntarily Jack Out or Erase Tethers until the Tar-Pit IC is destroyed.
 *   **Data IC ("The Librarians"):** Passive constructs that manage and encrypt the Host's data. If attacked, they deploy localized EMP bursts or attempt to scramble the hacker's cyberdeck.
 
 ### III. RIGGING & VEHICLES: The Ghost in the Shell

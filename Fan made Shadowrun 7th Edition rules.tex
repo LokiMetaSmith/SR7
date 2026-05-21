@@ -7960,6 +7960,8 @@ Commlink & Transys Avalon & 6 & 0 / 0 / 6 / 6 & 5,000 & The pinnacle of consumer
 Bio-Deck & Microtrónica Azteca 200 & 2 & 4 / 3 / 2 / 1 & 25,000 & Budget cyberdeck. Often retrofitted with stolen military parts by gangers. \\
 Bio-Deck & Renraku "Shinobi" & 3 & 5 / 4 / 3 / 2 & 45,000 & Entry-level hot-sim deck. Configurable Array. \\
 Bio-Deck & Fairlight Paladin & 6 & 8 / 7 / 6 / 6 & 150,000 & Military-grade. Interfaces directly with gaiasphere anomalies. \\
+Bio-Deck & MCT "Ghost-Deck" & 5 & 7 / 6 / 5 / 4 & 85,000 & Illegal, unregistered hardware. Cannot run legal software but provides +1 to Sleaze. \\
+Rigger Console & Vulcan Liege-Lord & 5 & 0 / 0 / 5 / 6 & 60,000 & Specialized for drone swarms. Grants +1 Initiative Die while jumped in. \\
 \end{longtable}
 \begin{multicols}{2}
 
@@ -8000,6 +8002,9 @@ Effect
 \textbf{Defuse} & Hacking & +4 Dice to resist Data Bomb damage. \\
 \textbf{Exploit} & Hacking & +2 to Sleaze rating. \\
 \textbf{Stealth} & Hacking & +1 to Sleaze rating. \\
+\textbf{Tar-Baby} & Hacking & If a target successfully defends against your Matrix Action, they suffer an immediate -2 dice pool penalty to their next action as their persona is bogged down in sticky code. \\
+\textbf{Agent (Rating 1-6)} & Autonomous & An autonomous program. Requires a Complex Action to deploy. Rolls (Rating x 2) for its own independent Matrix actions on your initiative pass. \\
+\textbf{Sprite (Wild)} & Autonomous & Similar to an Agent, but volatile. Rolls (Rating x 2) for actions, but half its dice are always Wild Dice. If a Sprite rolls a 1 on a Wild Die, it goes rogue and targets the nearest entity (including you). \\
 \end{longtable}
 \begin{multicols}{2}
 
@@ -8030,6 +8035,8 @@ Effect \& Combat Mechanics
 \bottomrule\noalign{}
 \endlastfoot
 Establish Tether (Hack on the Fly) & LOG + Hacking vs. WIL + Firewall & None & Creates 1 Tether. You gain +1 Die on all future actions against the target per Tether. \\
+Erase Tether & LOG + Computer vs. LOG + Hacking & None & A defensive action to purge enemy connections. Success removes 1 Tether the target holds on you (or 2 Tethers on a Critical Success). \\
+Share Tether & LOG + Computer vs. INT + Firewall & 1 & You pass one of your established Tethers to a willing teammate (e.g., handing a hacked drone to a Rigger). Requires a Complex Action. \\
 Data Spike & LOG + Cybercombat vs. INT + Firewall & None & Deals (Attack Rtg + Net Hits + 2 per Tether) Matrix Damage. \\
 Neural Purge (Digital) & WIL + BOD & 1 & The Antibody floods a Tethered target with raw gaiasphere noise. Damage is 8 Stun (Biofeedback). \\
 Control Device & LOG + Electronic Warfare vs. WIL + Firewall & 1 to 3 & Take control of a device/drone. Requires 1 Tether for simple device interactions, 2 for standard actions, 3 for complex tasks requiring multiple Actions. \\

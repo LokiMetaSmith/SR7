@@ -241,6 +241,28 @@ class GameEnvironment:
 
 class RulesEngine:
     @staticmethod
+    def resolve_erase_tether(active, target) -> str:
+        log = active.get_attribute("LOG", 3)
+        computer_skill = active.skills.get("Computer", 4)
+        attack_pool = log + computer_skill
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        def_pool = target.get_attribute("LOG", 3) + target.skills.get("Hacking", 5)
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+        net_hits = attack_hits - def_hits
+
+        if net_hits > 0:
+            current_tethers = active.tethers.get(target.name, 0)
+            if current_tethers > 0:
+                removed = 2 if net_hits >= 3 else 1
+                active.tethers[target.name] = max(0, current_tethers - removed)
+                return f"Successfully erased {removed} Tether(s)! {target.name} now holds {active.tethers[target.name]} Tether(s) on {active.name}."
+            else:
+                return f"{target.name} holds no Tethers on {active.name} to erase."
+        else:
+            return f"Failed to erase Tether. {target.name}'s connection remains secure."
+
+    @staticmethod
     def roll_dice(pool: int, wild_dice_count: int = 0) -> tuple[int, bool]:
         hits = 0
         ones_twos = 0
@@ -352,7 +374,7 @@ class LLM_Agent:
         prompt += f"Social Rep: Street Cred {combatant.street_cred}, Notoriety {combatant.notoriety}\n"
 
         prompt += f"Matrix Attributes: Attack {combatant.matrix.attack}, Sleaze {combatant.matrix.sleaze}, DP {combatant.matrix.data_processing}, Firewall {combatant.matrix.firewall}\n"
-        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Data Spike, Social Influence (Negotiate/Intimidate/Con), Encrypted Pulse, Dead Drop, Sprint (move to better cover), Take Cover, Yield, or Pass Turn.\n"
+        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Erase Tether, Data Spike, Social Influence (Negotiate/Intimidate/Con), Encrypted Pulse, Dead Drop, Sprint (move to better cover), Take Cover, Yield, or Pass Turn.\n"
         # etc.
         try:
             response = self.client.chat.completions.create(
@@ -1142,7 +1164,8 @@ def main():
                 s.name.lower() in action_lower for s in active.spells
             )
             is_data_spike = "data spike" in action_lower
-            is_tether = "tether" in action_lower
+            is_tether = "establish tether" in action_lower or ("tether" in action_lower and "erase" not in action_lower)
+            is_erase_tether = "erase tether" in action_lower
             is_social = any(
                 kw in action_lower
                 for kw in [
@@ -1440,6 +1463,16 @@ def main():
                     result_text = f"Data Spike connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Stun (Biofeedback) damage."
                     target.stun_damage += final_damage
 
+                    # Check Mutual Tether Feedback Loop
+                    if target.tethers.get(active.name, 0) > 0 and active.tethers.get(target.name, 0) > 0:
+                        feedback_damage = final_damage // 2
+                        if feedback_damage > 0:
+                            active.stun_damage += feedback_damage
+                            result_text += f" Mutual Tethers trigger a Feedback Loop! {active.name} takes {feedback_damage} unresisted Stun feedback."
+                            if active.stun_damage >= active.stun_track:
+                                active.is_alive = False
+                                result_text += f" {active.name} is incapacitated by the feedback!"
+
                     if (
                         target.physical_damage >= target.physical_track
                         or target.stun_damage >= target.stun_track
@@ -1493,6 +1526,29 @@ def main():
                     result_text = f"Chase maneuver successful! {active.name} gains the upper hand and shifts the Range Band."
                 else:
                     result_text = f"Chase maneuver fails! {target.name} outmaneuvers {active.name}."
+
+            elif is_erase_tether:
+                log = active.get_attribute("LOG", 3)
+                computer_skill = active.skills.get("Computer", 4)
+                attack_pool = log + computer_skill
+                attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+                def_pool = target.get_attribute("LOG", 3) + target.skills.get("Hacking", 5)
+                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+                net_hits = attack_hits - def_hits
+
+                action_text = f"attempts to erase Tethers held by {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+                if net_hits > 0:
+                    current_tethers = active.tethers.get(target.name, 0)
+                    if current_tethers > 0:
+                        removed = 2 if net_hits >= 3 else 1
+                        active.tethers[target.name] = max(0, current_tethers - removed)
+                        result_text = f"Successfully erased {removed} Tether(s)! {target.name} now holds {active.tethers[target.name]} Tether(s) on {active.name}."
+                    else:
+                        result_text = f"{target.name} holds no Tethers on {active.name} to erase."
+                else:
+                    result_text = f"Failed to erase Tether. {target.name}'s connection remains secure."
 
             elif is_tether:
                 if "Null-Suit" in target.special_rules:
@@ -1683,6 +1739,16 @@ def main():
                     result_text = f"Attack succeeds! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} {weapon.damage_type} damage."
 
                     result_text += target.take_damage(final_damage, weapon.damage_type)
+
+                    # Check Mutual Tether Feedback Loop
+                    if target.tethers.get(active.name, 0) > 0 and active.tethers.get(target.name, 0) > 0:
+                        feedback_damage = final_damage // 2
+                        if feedback_damage > 0:
+                            active.stun_damage += feedback_damage
+                            result_text += f" Mutual Tethers trigger a Feedback Loop! {active.name} takes {feedback_damage} unresisted Stun feedback."
+                            if active.stun_damage >= active.stun_track:
+                                active.is_alive = False
+                                result_text += f" {active.name} is incapacitated by the feedback!"
 
                     if (
                         target.physical_damage >= target.physical_track
