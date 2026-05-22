@@ -112,8 +112,79 @@ def extract_weapons(tables):
                             "avail": row[avail_idx].strip() if avail_idx != -1 and len(row) > avail_idx else "",
                             "cost": cost
                         }
+                        weapon["cost"] = weapon["cost"].replace("¥", "").replace(",", "").strip()
+
+                        if "FA" in weapon["mode"] or "BF" in weapon["mode"] or "SA" in weapon["mode"] or "SS" in weapon["mode"]:
+                            pass
+                        else:
+                            weapon["mode"] = "-"
+
+                        if not weapon["rc"]: weapon["rc"] = "0"
+
                         weapons.append(weapon)
     return weapons
+
+def extract_augmentations(tables):
+    items = []
+    for headers, rows in tables:
+        if "Augmentation" in headers and "Type" in headers and "Cost (¥)" in headers:
+            for row in rows:
+                if len(row) >= 4:
+                    items.append({
+                        "name": row[headers.index("Augmentation")].replace("**", "").strip(),
+                        "type": row[headers.index("Type")].strip(),
+                        "essence": row[headers.index("Essence")].strip(),
+                        "cost": row[headers.index("Cost (¥)")].replace("¥", "").replace(",", "").strip(),
+                        "effect": row[headers.index("Effect")].strip() if "Effect" in headers else ""
+                    })
+    return items
+
+def extract_armor(tables):
+    items = []
+    for headers, rows in tables:
+        if "Item" in headers and "Rating / Stats" in headers and "Cost (¥)" in headers and "Capacity" in headers:
+            for row in rows:
+                if len(row) >= 5:
+                    item_type = row[headers.index("Type")].strip()
+                    if "Armor" in item_type:
+                        items.append({
+                            "name": row[headers.index("Item")].replace("**", "").strip(),
+                            "type": item_type,
+                            "rating": row[headers.index("Rating / Stats")].strip(),
+                            "capacity": row[headers.index("Capacity")].strip(),
+                            "cost": row[headers.index("Cost (¥)")].replace("¥", "").replace(",", "").strip(),
+                            "description": row[headers.index("Description")].strip() if "Description" in headers else ""
+                        })
+    return items
+
+def extract_devices(tables):
+    items = []
+    for headers, rows in tables:
+        if "Device Type" in headers and "Device Rtg" in headers and "A / S / D / F" in headers and "Base Cost (¥)" in headers:
+            for row in rows:
+                if len(row) >= 5:
+                    items.append({
+                        "name": row[headers.index("Example Model")].replace("**", "").strip(),
+                        "type": row[headers.index("Device Type")].strip(),
+                        "rating": row[headers.index("Device Rtg")].strip(),
+                        "attributes": row[headers.index("A / S / D / F")].strip(),
+                        "cost": row[headers.index("Base Cost (¥)")].replace("¥", "").replace(",", "").strip(),
+                        "description": row[headers.index("Description")].strip() if "Description" in headers else ""
+                    })
+    return items
+
+def extract_lifestyles(tables):
+    items = []
+    for headers, rows in tables:
+        if "Lifestyle" in headers and "Monthly Cost (¥)" in headers and "Description & Mechanics" in headers:
+            for row in rows:
+                if len(row) >= 3:
+                    items.append({
+                        "name": row[headers.index("Lifestyle")].replace("**", "").strip(),
+                        "cost": row[headers.index("Monthly Cost (¥)")].replace("¥", "").replace(",", "").strip(),
+                        "description": row[headers.index("Description & Mechanics")].strip()
+                    })
+    return items
 
 def generate_qualities_xml(qualities, output_path):
     try:
@@ -214,6 +285,62 @@ def generate_weapons_xml(weapons, output_path):
         f.write(xmlstr)
     print(f"Updated {output_path}: {added_count} added, {updated_count} updated (Total from Markdown: {len(weapons)}).")
 
+
+def generate_generic_xml(items, root_tag, item_tag, fields, output_path):
+    try:
+        tree = ET.parse(output_path)
+        root = tree.getroot()
+        list_node = root.find(root_tag)
+        if list_node is None:
+            list_node = ET.SubElement(root, root_tag)
+    except FileNotFoundError:
+        root = ET.Element("chummer")
+        list_node = ET.SubElement(root, root_tag)
+
+    existing_items = {w.find("name").text: w for w in list_node.findall(item_tag) if w.find("name") is not None}
+
+    added_count = 0
+    updated_count = 0
+
+    for i in items:
+        name = i['name']
+        if name in existing_items:
+            i_node = existing_items[name]
+            for field in fields:
+                node = i_node.find(field)
+                if node is not None:
+                    node.text = str(i[field])
+                else:
+                    ET.SubElement(i_node, field).text = str(i[field])
+            updated_count += 1
+        else:
+            i_node = ET.SubElement(list_node, item_tag)
+            hash_id = hashlib.md5(name.encode('utf-8')).hexdigest()
+            ET.SubElement(i_node, "id").text = f"CUSTOM_{item_tag.upper()}_{hash_id}"
+            ET.SubElement(i_node, "name").text = name
+            for field in fields:
+                ET.SubElement(i_node, field).text = str(i[field])
+            added_count += 1
+
+    xmlstr = minidom.parseString(ET.tostring(root)).toprettyxml(indent="  ")
+    xmlstr = '\n'.join([line for line in xmlstr.split('\n') if line.strip()])
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(xmlstr)
+    print(f"Updated {output_path}: {added_count} added, {updated_count} updated (Total from Markdown: {len(items)}).")
+
+def generate_cyberware_xml(items, output_path):
+    generate_generic_xml(items, "cyberwares", "cyberware", ["type", "essence", "cost", "effect"], output_path)
+
+def generate_armor_xml(items, output_path):
+    generate_generic_xml(items, "armors", "armor", ["type", "rating", "capacity", "cost", "description"], output_path)
+
+def generate_gear_xml(items, output_path):
+    generate_generic_xml(items, "gears", "gear", ["type", "rating", "attributes", "cost", "description"], output_path)
+
+def generate_lifestyles_xml(items, output_path):
+    generate_generic_xml(items, "lifestyles", "lifestyle", ["cost", "description"], output_path)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Generate Chummer XML files from Markdown.")
     parser.add_argument("file", nargs="?", default="Fan made Shadowrun 7th Edition rules.md")
@@ -230,6 +357,18 @@ def main():
     tables = extract_tables(tokens)
     weapons = extract_weapons(tables)
     generate_weapons_xml(weapons, "chummer_plugin/custom_sr7e_weapons.xml")
+
+    augmentations = extract_augmentations(tables)
+    generate_cyberware_xml(augmentations, "chummer_plugin/custom_sr7e_cyberware.xml")
+
+    armor = extract_armor(tables)
+    generate_armor_xml(armor, "chummer_plugin/custom_sr7e_armor.xml")
+
+    devices = extract_devices(tables)
+    generate_gear_xml(devices, "chummer_plugin/custom_sr7e_gear.xml")
+
+    lifestyles = extract_lifestyles(tables)
+    generate_lifestyles_xml(lifestyles, "chummer_plugin/custom_sr7e_lifestyles.xml")
 
 if __name__ == "__main__":
     main()

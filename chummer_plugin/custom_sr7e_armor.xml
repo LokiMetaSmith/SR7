@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<chummer>
+  <armors>
+    <armor>
+      <id>CUSTOM_ARMOR_67bcfd855da0ef572df065ca8a533e56</id>
+      <name>Armor Jacket</name>
+      <type>Armor</type>
+      <rating>12</rating>
+      <capacity>10</capacity>
+      <cost>1000</cost>
+      <description>Standard runner gear. Highly customizable.</description>
+    </armor>
+    <armor>
+      <id>CUSTOM_ARMOR_d50d88b254915328b62e3a940e84dd84</id>
+      <name>Ares Sleeping Tiger</name>
+      <type>Armor</type>
+      <rating>14</rating>
+      <capacity>14</capacity>
+      <cost>1350</cost>
+      <description>Extremely high-end, discreet armor.</description>
+    </armor>
+    <armor>
+      <id>CUSTOM_ARMOR_32bbe41afeebc5c52d04620c593e8cde</id>
+      <name>Heavy Mil-Spec Armor</name>
+      <type>Armor</type>
+      <rating>18</rating>
+      <capacity>15</capacity>
+      <cost>2000</cost>
+      <description>Extreme combat armor. Restricted.</description>
+    </armor>
+    <armor>
+      <id>CUSTOM_ARMOR_aed0592d7ac3bd190c0be126789eecfd</id>
+      <name>Chameleon Suit</name>
+      <type>Armor</type>
+      <rating>12</rating>
+      <capacity>8</capacity>
+      <cost>1000</cost>
+      <description>Grants +2 Dice to Stealth tests.</description>
+    </armor>
+    <armor>
+      <id>CUSTOM_ARMOR_0af4def152359ac6e529f094d3ca62e8</id>
+      <name>Actioneer Business Clothes</name>
+      <type>Armor</type>
+      <rating>8</rating>
+      <capacity>5</capacity>
+      <cost>500</cost>
+      <description>Discreet, stylish armored suit.</description>
+    </armor>
+    <armor>
+      <id>CUSTOM_ARMOR_1808cc2ea201d4362a2fcb974b076f73</id>
+      <name>Armor Clothing</name>
+      <type>Armor</type>
+      <rating>6</rating>
+      <capacity>4</capacity>
+      <cost>350</cost>
+      <description>Normal-looking clothes with basic ballistic weave.</description>
+    </armor>
+    <armor>
+      <id>CUSTOM_ARMOR_471550dbb0688751c01121cc7fe9cc68</id>
+      <name>Lined Coat</name>
+      <type>Armor</type>
+      <rating>9</rating>
+      <capacity>8</capacity>
+      <cost>650</cost>
+      <description>Classic shadowrunner trench coat. Conceals weapons well.</description>
+    </armor>
+    <armor>
+      <id>CUSTOM_ARMOR_6897fa0c82b4df9687f07e8a595cabdc</id>
+      <name>Custom Fit</name>
+      <type>Armor Mod</type>
+      <rating>-</rating>
+      <capacity>-</capacity>
+      <cost>100</cost>
+      <description>Tailored specifically to the wearer. Adds +1 Concealability to hidden weapons.</description>
+    </armor>
+    <armor>
+      <id>CUSTOM_ARMOR_c8e12f5447791dc4d9dec0025c12dd96</id>
+      <name>Synthleather Jacket</name>
+      <type>Armor</type>
+      <rating>8</rating>
+      <capacity>6</capacity>
+      <cost>550</cost>
+      <description>Common, cheap protection.</description>
+    </armor>
+  </armors>
+</chummer>

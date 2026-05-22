@@ -6,7 +6,7 @@
       <name>Cavalier SafeGuard</name>
       <category>Dice &amp; Tests</category>
       <damage>4S(e)</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>5(6)</accuracy>
       <ap>+2</ap>
       <mode>SA</mode>
@@ -19,7 +19,7 @@
       <name>Defiance EX Shocker</name>
       <category>Dice &amp; Tests</category>
       <damage>8S(e)</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>4</accuracy>
       <ap>-5</ap>
       <mode>SS</mode>
@@ -32,7 +32,7 @@
       <name>Defiance Super Shock</name>
       <category>Dice &amp; Tests</category>
       <damage>7S(e)</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>8</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -45,7 +45,7 @@
       <name>Krime Tingler</name>
       <category>Dice &amp; Tests</category>
       <damage>10S(e)</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>3</accuracy>
       <ap>-2</ap>
       <mode>SS</mode>
@@ -58,7 +58,7 @@
       <name>Narcoject One</name>
       <category>Dice &amp; Tests</category>
       <damage>6S(e)</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>5</accuracy>
       <ap>-5</ap>
       <mode>SA</mode>
@@ -85,7 +85,7 @@
       <name>S-1130 Assassin</name>
       <category>Dice &amp; Tests</category>
       <damage>6S(e)</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -98,7 +98,7 @@
       <name>Tiffani-Defiance Protector</name>
       <category>Dice &amp; Tests</category>
       <damage>5S(e)</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>5(6)</accuracy>
       <ap>+1</ap>
       <mode>SA</mode>
@@ -111,7 +111,7 @@
       <name>Yamaha Pulsar I/II</name>
       <category>Dice &amp; Tests</category>
       <damage>6S(e)</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>5</accuracy>
       <ap>-5</ap>
       <mode>SA</mode>
@@ -124,7 +124,7 @@
       <name>Jupiter Taser Club</name>
       <category>Dice &amp; Tests</category>
       <damage>6S(e)</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>3</accuracy>
       <ap>-5</ap>
       <mode>SS</mode>
@@ -137,7 +137,7 @@
       <name>Cannon Punch</name>
       <category>Hold-Outs</category>
       <damage>9P(f)</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>2</accuracy>
       <ap>-1</ap>
       <mode>SS</mode>
@@ -150,7 +150,7 @@
       <name>Cavalier Arms Scout</name>
       <category>Hold-Outs</category>
       <damage>2P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>4</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -163,7 +163,7 @@
       <name>Colt New Model Revolver</name>
       <category>Hold-Outs</category>
       <damage>3P</damage>
-      <cost>150¥</cost>
+      <cost>150</cost>
       <accuracy>6</accuracy>
       <ap>0</ap>
       <mode>SS</mode>
@@ -176,7 +176,7 @@
       <name>Colt Secret Agent</name>
       <category>Hold-Outs</category>
       <damage>3P</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>5(6)</accuracy>
       <ap>-1</ap>
       <mode>SS</mode>
@@ -189,7 +189,7 @@
       <name>Enfield M1098</name>
       <category>Hold-Outs</category>
       <damage>5P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -202,7 +202,7 @@
       <name>Fichetti Tiffani Needler</name>
       <category>Hold-Outs</category>
       <damage>6P(fl)</damage>
-      <cost>250¥</cost>
+      <cost>250</cost>
       <accuracy>5</accuracy>
       <ap>+2</ap>
       <mode>SA</mode>
@@ -215,7 +215,7 @@
       <name>Fichetti Tiffani Self-Defender</name>
       <category>Hold-Outs</category>
       <damage>4P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -235,7 +235,7 @@
       <name>Krime Vester</name>
       <category>Hold-Outs</category>
       <damage>8P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>4</accuracy>
       <ap>-4</ap>
       <mode>SS</mode>
@@ -248,7 +248,7 @@
       <name>Morrissey Élan</name>
       <category>Hold-Outs</category>
       <damage>3P</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>5</accuracy>
       <ap>0</ap>
       <mode>SA</mode>
@@ -261,7 +261,7 @@
       <name>Raecor Sting</name>
       <category>Hold-Outs</category>
       <damage>4P(fl)</damage>
-      <cost>150¥</cost>
+      <cost>150</cost>
       <accuracy>3</accuracy>
       <ap>+4</ap>
       <mode>SS</mode>
@@ -274,7 +274,7 @@
       <name>Shiawase Arms Type K2072</name>
       <category>Hold-Outs</category>
       <damage>5P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5</accuracy>
       <ap>-4</ap>
       <mode>SS</mode>
@@ -287,7 +287,7 @@
       <name>SIG Sauer P298</name>
       <category>Hold-Outs</category>
       <damage>4P</damage>
-      <cost>250¥</cost>
+      <cost>250</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -300,7 +300,7 @@
       <name>Stinger Pen Gun</name>
       <category>Hold-Outs</category>
       <damage>2P</damage>
-      <cost>100¥</cost>
+      <cost>100</cost>
       <accuracy>4</accuracy>
       <ap>0</ap>
       <mode>SS</mode>
@@ -313,7 +313,7 @@
       <name>Streetline Special</name>
       <category>Hold-Outs</category>
       <damage>1P</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>4</accuracy>
       <ap>+2</ap>
       <mode>SA</mode>
@@ -326,7 +326,7 @@
       <name>Terracotta Arms Pup</name>
       <category>Hold-Outs</category>
       <damage>4P</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>4(6)</accuracy>
       <ap>0</ap>
       <mode>SA</mode>
@@ -339,7 +339,7 @@
       <name>Walther Palm Pistol</name>
       <category>Hold-Outs</category>
       <damage>7P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>4</accuracy>
       <ap>-1</ap>
       <mode>SS/BF</mode>
@@ -352,7 +352,7 @@
       <name>Walther Secura SK</name>
       <category>Hold-Outs</category>
       <damage>7P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>4</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -365,7 +365,7 @@
       <name>Ares Light Fire 70</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>6(7)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -378,7 +378,7 @@
       <name>Ares Light Fire 75</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>6(8)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -391,7 +391,7 @@
       <name>Barrens Special</name>
       <category>Light Pistols</category>
       <damage>3P</damage>
-      <cost>150¥</cost>
+      <cost>150</cost>
       <accuracy>2</accuracy>
       <ap>0</ap>
       <mode>SS</mode>
@@ -404,7 +404,7 @@
       <name>Beretta 101T</name>
       <category>Light Pistols</category>
       <damage>4P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>7</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -417,7 +417,7 @@
       <name>Beretta 200ST</name>
       <category>Light Pistols</category>
       <damage>4P</damage>
-      <cost>900¥</cost>
+      <cost>900</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA/FA</mode>
@@ -430,7 +430,7 @@
       <name>Beretta 201T</name>
       <category>Light Pistols</category>
       <damage>4P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>6</accuracy>
       <ap>-1</ap>
       <mode>SA/BF</mode>
@@ -443,7 +443,7 @@
       <name>Beretta 92SL</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -456,7 +456,7 @@
       <name>Browning Ghost</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5(8)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -469,7 +469,7 @@
       <name>CA Adder Slivergun</name>
       <category>Light Pistols</category>
       <damage>4P(f)</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5</accuracy>
       <ap>+3</ap>
       <mode>SA</mode>
@@ -482,7 +482,7 @@
       <name>Cavalier Arms Dragoon</name>
       <category>Light Pistols</category>
       <damage>2P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>6</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -495,7 +495,7 @@
       <name>Ceska vz/120</name>
       <category>Light Pistols</category>
       <damage>4P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>6</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -508,7 +508,7 @@
       <name>Colt America L36</name>
       <category>Light Pistols</category>
       <damage>4P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>7</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -521,7 +521,7 @@
       <name>Colt Asp</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>5</accuracy>
       <ap>0</ap>
       <mode>SS</mode>
@@ -534,7 +534,7 @@
       <name>Colt Coral Snake</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>4(5)</accuracy>
       <ap>-1</ap>
       <mode>SS</mode>
@@ -547,7 +547,7 @@
       <name>Colt Special Agent</name>
       <category>Light Pistols</category>
       <damage>7P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -560,7 +560,7 @@
       <name>Fichetti Executive Action</name>
       <category>Light Pistols</category>
       <damage>3P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>SA/BF</mode>
@@ -573,7 +573,7 @@
       <name>Fichetti Security 500</name>
       <category>Light Pistols</category>
       <damage>3P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -586,7 +586,7 @@
       <name>Fichetti Security 500A</name>
       <category>Light Pistols</category>
       <damage>3P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -599,7 +599,7 @@
       <name>Fichetti Security 600</name>
       <category>Light Pistols</category>
       <damage>3P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>6(7)</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -612,7 +612,7 @@
       <name>Fichetti Thunder</name>
       <category>Light Pistols</category>
       <damage>3P</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>BF</mode>
@@ -625,7 +625,7 @@
       <name>Hammerli 610S</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>7(8)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -638,7 +638,7 @@
       <name>Hammerli 620S</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5(7)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -651,7 +651,7 @@
       <name>HK Caveat</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -664,7 +664,7 @@
       <name>HK P50 Tactical</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>6(8)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -677,7 +677,7 @@
       <name>Krime Stopper</name>
       <category>Light Pistols</category>
       <damage>10P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -690,7 +690,7 @@
       <name>Mauser Ladyline</name>
       <category>Light Pistols</category>
       <damage>4P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -703,7 +703,7 @@
       <name>Nitama Sporter</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>6(7)</accuracy>
       <ap>0</ap>
       <mode>SA</mode>
@@ -716,7 +716,7 @@
       <name>Onotari Arms Security Special</name>
       <category>Light Pistols</category>
       <damage>7P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5(7)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -729,7 +729,7 @@
       <name>Ruger Redhawk</name>
       <category>Light Pistols</category>
       <damage>6P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SS/SA</mode>
@@ -742,7 +742,7 @@
       <name>Seco LD-120</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5(6)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -755,7 +755,7 @@
       <name>Shiawase Hearth Protector</name>
       <category>Light Pistols</category>
       <damage>3P</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>5</accuracy>
       <ap>0</ap>
       <mode>SA</mode>
@@ -768,7 +768,7 @@
       <name>Shiawase Arms Light Tactical</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>5(6)</accuracy>
       <ap>-4</ap>
       <mode>SA</mode>
@@ -781,7 +781,7 @@
       <name>Shiawase Arms Puzzler</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>4</accuracy>
       <ap>-4</ap>
       <mode>SA</mode>
@@ -794,7 +794,7 @@
       <name>Taurus Mark XXXI</name>
       <category>Light Pistols</category>
       <damage>1P</damage>
-      <cost>250¥</cost>
+      <cost>250</cost>
       <accuracy>4(5)</accuracy>
       <ap>+3</ap>
       <mode>SS</mode>
@@ -807,7 +807,7 @@
       <name>Taurus Omni-6 (.38)</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>5(6)</accuracy>
       <ap>0</ap>
       <mode>SS</mode>
@@ -820,7 +820,7 @@
       <name>Taurus Omni-6 (.357)</name>
       <category>Light Pistols</category>
       <damage>6P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5(6)</accuracy>
       <ap>-2</ap>
       <mode>SS</mode>
@@ -833,7 +833,7 @@
       <name>Walther P99</name>
       <category>Light Pistols</category>
       <damage>5P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>6</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -853,7 +853,7 @@
       <name>Walther PP110</name>
       <category>Light Pistols</category>
       <damage>4P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>7</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -866,7 +866,7 @@
       <name>Yamaha Sakura Fubuki</name>
       <category>Light Pistols</category>
       <damage>3P</damage>
-      <cost>750¥</cost>
+      <cost>750</cost>
       <accuracy>5</accuracy>
       <ap>0</ap>
       <mode>BF/FA</mode>
@@ -879,7 +879,7 @@
       <name>Yamaha Sakura Fubuki Six</name>
       <category>Light Pistols</category>
       <damage>3P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>6</accuracy>
       <ap>0</ap>
       <mode>SA/BF</mode>
@@ -892,7 +892,7 @@
       <name>Altmayr Black Moon</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>6</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -905,7 +905,7 @@
       <name>Ares Predator I</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -918,7 +918,7 @@
       <name>Ares Predator II</name>
       <category>Heavy Pistols</category>
       <damage>5P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -931,7 +931,7 @@
       <name>Ares Predator III</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -944,7 +944,7 @@
       <name>Ares Predator IV</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -957,7 +957,7 @@
       <name>Ares Predator CW</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -970,7 +970,7 @@
       <name>Ares Predator V</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -983,7 +983,7 @@
       <name>Ares Predator VI</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF</mode>
@@ -996,7 +996,7 @@
       <name>Ares Striker</name>
       <category>Heavy Pistols</category>
       <damage>6P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5(6)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1009,7 +1009,7 @@
       <name>Ares Viper Silvergun</name>
       <category>Heavy Pistols</category>
       <damage>6P(f)</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>4</accuracy>
       <ap>+4</ap>
       <mode>SA/BF</mode>
@@ -1022,7 +1022,7 @@
       <name>Beretta 97</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA/BF</mode>
@@ -1035,7 +1035,7 @@
       <name>Browning Max-Power</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5(6)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1048,7 +1048,7 @@
       <name>Browning Mega-Power</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5(7)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1061,7 +1061,7 @@
       <name>Browning Phantom</name>
       <category>Heavy Pistols</category>
       <damage>6P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>4(7)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1074,7 +1074,7 @@
       <name>Browning Ultra-Power</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5(6)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1087,7 +1087,7 @@
       <name>Cavalier Arms Champion</name>
       <category>Heavy Pistols</category>
       <damage>13P</damage>
-      <cost>650¥</cost>
+      <cost>650</cost>
       <accuracy>6</accuracy>
       <ap>-4</ap>
       <mode>SS</mode>
@@ -1100,7 +1100,7 @@
       <name>Cavalier Arms Deputy</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -1120,7 +1120,7 @@
       <name>Cavalier Arms Sheriff</name>
       <category>Heavy Pistols</category>
       <damage>9P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5(8)</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -1133,7 +1133,7 @@
       <name>Cavalier Arms Thunderstruck</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>900¥</cost>
+      <cost>900</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>BF</mode>
@@ -1146,7 +1146,7 @@
       <name>Colt Future Frontier</name>
       <category>Heavy Pistols</category>
       <damage>10P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5</accuracy>
       <ap>0</ap>
       <mode>SS</mode>
@@ -1159,7 +1159,7 @@
       <name>Colt Government 2066</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>6</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1172,7 +1172,7 @@
       <name>Colt Manhunter</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>6(8)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1185,7 +1185,7 @@
       <name>Colt M1991</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1198,7 +1198,7 @@
       <name>CZ-64</name>
       <category>Heavy Pistols</category>
       <damage>5P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>6(7)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1211,7 +1211,7 @@
       <name>Eichiro Hatamoto II</name>
       <category>Heavy Pistols</category>
       <damage>16P</damage>
-      <cost>750¥</cost>
+      <cost>750</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -1224,7 +1224,7 @@
       <name>Enfield Merlin</name>
       <category>Heavy Pistols</category>
       <damage>12P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SS</mode>
@@ -1237,7 +1237,7 @@
       <name>FN 5-7C</name>
       <category>Heavy Pistols</category>
       <damage>4P</damage>
-      <cost>900¥</cost>
+      <cost>900</cost>
       <accuracy>5</accuracy>
       <ap>-7</ap>
       <mode>SA/BF</mode>
@@ -1250,7 +1250,7 @@
       <name>Glock-Swarovski Eagle Eye</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>6(8)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1263,7 +1263,7 @@
       <name>Hammerli Gemini</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1276,7 +1276,7 @@
       <name>HK Mk31</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5(6)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1289,7 +1289,7 @@
       <name>HK P60 Tactical</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>6(8)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1302,7 +1302,7 @@
       <name>HK Urban Assassin</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>6(9)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1315,7 +1315,7 @@
       <name>HK Urban Fighter</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>6</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1328,7 +1328,7 @@
       <name>Izom HP-49B</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1341,7 +1341,7 @@
       <name>Izom PHP-131</name>
       <category>Heavy Pistols</category>
       <damage>6P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5(6)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1354,7 +1354,7 @@
       <name>Krime Broom</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>850¥</cost>
+      <cost>850</cost>
       <accuracy>4</accuracy>
       <ap>-1</ap>
       <mode>FA</mode>
@@ -1367,7 +1367,7 @@
       <name>Krime Heater</name>
       <category>Heavy Pistols</category>
       <damage>10P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>3</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -1380,7 +1380,7 @@
       <name>Krime Varmint</name>
       <category>Heavy Pistols</category>
       <damage>10P</damage>
-      <cost>650¥</cost>
+      <cost>650</cost>
       <accuracy>3(4)</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -1393,7 +1393,7 @@
       <name>KA Lemat 2072</name>
       <category>Heavy Pistols</category>
       <damage>6P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SS</mode>
@@ -1413,7 +1413,7 @@
       <name>Makarov V.22</name>
       <category>Heavy Pistols</category>
       <damage>1P</damage>
-      <cost>200¥</cost>
+      <cost>200</cost>
       <accuracy>4</accuracy>
       <ap>+3</ap>
       <mode>SA</mode>
@@ -1426,7 +1426,7 @@
       <name>Morrissey Alta</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>6(7)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1439,7 +1439,7 @@
       <name>Morrissey Elite</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5(6)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1452,7 +1452,7 @@
       <name>Nemesis Arms Praetorian</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>4(5)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1465,7 +1465,7 @@
       <name>Nemesis Arms Praetorian II</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5(7)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1478,7 +1478,7 @@
       <name>Nitama NeMax</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1491,7 +1491,7 @@
       <name>Onotari Arms Steadfast</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1504,7 +1504,7 @@
       <name>Onotari Arms Troublemaker</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>650¥</cost>
+      <cost>650</cost>
       <accuracy>5(6)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1517,7 +1517,7 @@
       <name>Onotari Arms Vagabond</name>
       <category>Heavy Pistols</category>
       <damage>6P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1530,7 +1530,7 @@
       <name>Onotari Arms Violator</name>
       <category>Heavy Pistols</category>
       <damage>5P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1543,7 +1543,7 @@
       <name>PSK-3 Collapsible Pistol</name>
       <category>Heavy Pistols</category>
       <damage>5P</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>5</accuracy>
       <ap>-5</ap>
       <mode>SA</mode>
@@ -1556,7 +1556,7 @@
       <name>Remington Roomsweeper</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>4</accuracy>
       <ap>-1</ap>
       <mode>SS</mode>
@@ -1569,7 +1569,7 @@
       <name>Ruger Bloodhawk</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -1582,7 +1582,7 @@
       <name>Ruger Super Warhawk</name>
       <category>Heavy Pistols</category>
       <damage>9P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -1595,7 +1595,7 @@
       <name>Ruger Thunderbolt</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>750¥</cost>
+      <cost>750</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>BF</mode>
@@ -1608,7 +1608,7 @@
       <name>Savalette Guardian</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>700¥</cost>
+      <cost>700</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF</mode>
@@ -1621,7 +1621,7 @@
       <name>Shiawase Arms Copernicus</name>
       <category>Heavy Pistols</category>
       <damage>5P</damage>
-      <cost>300¥</cost>
+      <cost>300</cost>
       <accuracy>5(7)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1634,7 +1634,7 @@
       <name>SA Heavy Tactical</name>
       <category>Heavy Pistols</category>
       <damage>13P</damage>
-      <cost>700¥</cost>
+      <cost>700</cost>
       <accuracy>5(7)</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -1647,7 +1647,7 @@
       <name>Walther P109</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5(6)</accuracy>
       <ap>-1</ap>
       <mode>SA</mode>
@@ -1660,7 +1660,7 @@
       <name>Walther Secura</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1673,7 +1673,7 @@
       <name>Walther Secura Kompakt</name>
       <category>Heavy Pistols</category>
       <damage>7P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1686,7 +1686,7 @@
       <name>Weapons World Infiltrator</name>
       <category>Heavy Pistols</category>
       <damage>8P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1699,7 +1699,7 @@
       <name>Zastava CZ49</name>
       <category>Heavy Pistols</category>
       <damage>4P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>4</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -1712,7 +1712,7 @@
       <name>Ares Crusader</name>
       <category>Machine Pistols</category>
       <damage>5P</damage>
-      <cost>800¥</cost>
+      <cost>800</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA/BF</mode>
@@ -1725,7 +1725,7 @@
       <name>Ares Crusader II</name>
       <category>Machine Pistols</category>
       <damage>5P</damage>
-      <cost>800¥</cost>
+      <cost>800</cost>
       <accuracy>5(7)</accuracy>
       <ap>-1</ap>
       <mode>SA/BF</mode>
@@ -1752,7 +1752,7 @@
       <name>Cavalier Arms Evanator</name>
       <category>Machine Pistols</category>
       <damage>2P</damage>
-      <cost>950¥</cost>
+      <cost>950</cost>
       <accuracy>5(6)</accuracy>
       <ap>-2</ap>
       <mode>BF/FA</mode>
@@ -1765,7 +1765,7 @@
       <name>Cavalier Arms Flash</name>
       <category>Machine Pistols</category>
       <damage>2P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>4(6)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF</mode>
@@ -1778,7 +1778,7 @@
       <name>Ceska Black Scorpion</name>
       <category>Machine Pistols</category>
       <damage>3P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>5</accuracy>
       <ap>0</ap>
       <mode>SA/BF</mode>
@@ -1791,7 +1791,7 @@
       <name>Colt M24</name>
       <category>Machine Pistols</category>
       <damage>7P</damage>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
       <accuracy>4</accuracy>
       <ap>-5</ap>
       <mode>SA/BF/FA</mode>
@@ -1804,7 +1804,7 @@
       <name>Fichetti Military 100</name>
       <category>Machine Pistols</category>
       <damage>3P</damage>
-      <cost>850¥</cost>
+      <cost>850</cost>
       <accuracy>5(7)</accuracy>
       <ap>-3</ap>
       <mode>SA/BF/FA</mode>
@@ -1817,7 +1817,7 @@
       <name>Glock 51</name>
       <category>Machine Pistols</category>
       <damage>5P</damage>
-      <cost>850¥</cost>
+      <cost>850</cost>
       <accuracy>5(6)</accuracy>
       <ap>-1</ap>
       <mode>SA/BF/FA</mode>
@@ -1830,7 +1830,7 @@
       <name>HK Urban Combat</name>
       <category>Machine Pistols</category>
       <damage>7P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SABF/FA</mode>
@@ -1843,7 +1843,7 @@
       <name>Krime Chatter</name>
       <category>Machine Pistols</category>
       <damage>4P</damage>
-      <cost>800¥</cost>
+      <cost>800</cost>
       <accuracy>4</accuracy>
       <ap>-1</ap>
       <mode>FA</mode>
@@ -1856,7 +1856,7 @@
       <name>Izom RP-71</name>
       <category>Machine Pistols</category>
       <damage>1P</damage>
-      <cost>850¥</cost>
+      <cost>850</cost>
       <accuracy>5</accuracy>
       <ap>+2</ap>
       <mode>BF/FA</mode>
@@ -1869,7 +1869,7 @@
       <name>MAC-11</name>
       <category>Machine Pistols</category>
       <damage>4P</damage>
-      <cost>850¥</cost>
+      <cost>850</cost>
       <accuracy>3</accuracy>
       <ap>-1</ap>
       <mode>SA/FA</mode>
@@ -1882,7 +1882,7 @@
       <name>Onotari Arms Equalizer</name>
       <category>Machine Pistols</category>
       <damage>4P</damage>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
       <accuracy>4(5)</accuracy>
       <ap>-6</ap>
       <mode>BF/FA</mode>
@@ -1895,7 +1895,7 @@
       <name>Onotari Arms SIG-6</name>
       <category>Machine Pistols</category>
       <damage>8P</damage>
-      <cost>1200¥</cost>
+      <cost>1200</cost>
       <accuracy>4(6)</accuracy>
       <ap>-3</ap>
       <mode>SA/FA</mode>
@@ -1908,7 +1908,7 @@
       <name>PPSK-4 CMP</name>
       <category>Machine Pistols</category>
       <damage>5P</damage>
-      <cost>850¥</cost>
+      <cost>850</cost>
       <accuracy>5(6)</accuracy>
       <ap>-5</ap>
       <mode>SA/BF</mode>
@@ -1921,7 +1921,7 @@
       <name>Remington Suppressor</name>
       <category>Machine Pistols</category>
       <damage>8P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>6</accuracy>
       <ap>-2</ap>
       <mode>SA/BF</mode>
@@ -1934,7 +1934,7 @@
       <name>Ruger T-983</name>
       <category>Machine Pistols</category>
       <damage>5P</damage>
-      <cost>900¥</cost>
+      <cost>900</cost>
       <accuracy>6</accuracy>
       <ap>-1</ap>
       <mode>SA/BF/FA</mode>
@@ -1947,7 +1947,7 @@
       <name>Steyr TMP</name>
       <category>Machine Pistols</category>
       <damage>5P</damage>
-      <cost>850¥</cost>
+      <cost>850</cost>
       <accuracy>4</accuracy>
       <ap>-1</ap>
       <mode>FA</mode>
@@ -1960,7 +1960,7 @@
       <name>Ultimax 70</name>
       <category>Machine Pistols</category>
       <damage>5P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>5(6)</accuracy>
       <ap>-2</ap>
       <mode>BF/FA</mode>
@@ -1973,7 +1973,7 @@
       <name>Ultimax 71</name>
       <category>Machine Pistols</category>
       <damage>5P</damage>
-      <cost>850¥</cost>
+      <cost>850</cost>
       <accuracy>5(6)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF/FA</mode>
@@ -1986,7 +1986,7 @@
       <name>Walther P118</name>
       <category>Machine Pistols</category>
       <damage>7P</damage>
-      <cost>1200¥</cost>
+      <cost>1200</cost>
       <accuracy>5(8)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF/FA</mode>
@@ -1999,7 +1999,7 @@
       <name>Walther Secura II</name>
       <category>Machine Pistols</category>
       <damage>8P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF</mode>
@@ -2012,7 +2012,7 @@
       <name>Ares Executive Protector</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SA/BF/FA</mode>
@@ -2025,7 +2025,7 @@
       <name>Ares Sigma-3</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>4(6)</accuracy>
       <ap>-3</ap>
       <mode>BF</mode>
@@ -2038,7 +2038,7 @@
       <name>Beretta Model 70</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>4(5)</accuracy>
       <ap>-2</ap>
       <mode>BF/FA</mode>
@@ -2051,7 +2051,7 @@
       <name>Cavalier Arms Gladius</name>
       <category>Submachine Guns</category>
       <damage>4P</damage>
-      <cost>950¥</cost>
+      <cost>950</cost>
       <accuracy>3(4)</accuracy>
       <ap>-1</ap>
       <mode>BF/FA</mode>
@@ -2064,7 +2064,7 @@
       <name>CAPS Emergency Responder</name>
       <category>Submachine Guns</category>
       <damage>3P</damage>
-      <cost>700¥</cost>
+      <cost>700</cost>
       <accuracy>4(6)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF</mode>
@@ -2090,7 +2090,7 @@
       <name>Colt Cobra</name>
       <category>Submachine Guns</category>
       <damage>6P</damage>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
       <accuracy>4(5)</accuracy>
       <ap>-7</ap>
       <mode>SA/BF/FA</mode>
@@ -2103,7 +2103,7 @@
       <name>Colt M24A3 Water Carbine</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>4</accuracy>
       <ap>-6</ap>
       <mode>SA/BF/FA</mode>
@@ -2116,7 +2116,7 @@
       <name>Esprit Tsunami</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
       <accuracy>4(6)</accuracy>
       <ap>-2</ap>
       <mode>BF/FA</mode>
@@ -2129,7 +2129,7 @@
       <name>FN P93 Praetor</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
       <accuracy>6</accuracy>
       <ap>-8</ap>
       <mode>SA/BF/FA</mode>
@@ -2142,7 +2142,7 @@
       <name>FN P90</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
       <accuracy>5</accuracy>
       <ap>-8</ap>
       <mode>SA/BF/FA</mode>
@@ -2155,7 +2155,7 @@
       <name>Glock Custodes MPK</name>
       <category>Submachine Guns</category>
       <damage>7P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SA/BF/FA</mode>
@@ -2168,7 +2168,7 @@
       <name>Glock Custodes MPV</name>
       <category>Submachine Guns</category>
       <damage>7P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>SA/BF/FA</mode>
@@ -2181,7 +2181,7 @@
       <name>HK 223K</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>5</accuracy>
       <ap>-6</ap>
       <mode>SA/BF/FA</mode>
@@ -2194,7 +2194,7 @@
       <name>HK 227</name>
       <category>Submachine Guns</category>
       <damage>7P</damage>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
       <accuracy>5(6)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF/FA</mode>
@@ -2207,7 +2207,7 @@
       <name>HK 227-S</name>
       <category>Submachine Guns</category>
       <damage>7P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>5(6)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF/FA</mode>
@@ -2220,7 +2220,7 @@
       <name>HK 229-X</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF/FA</mode>
@@ -2233,7 +2233,7 @@
       <name>HK 247-Arctic</name>
       <category>Submachine Guns</category>
       <damage>7P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF/FA</mode>
@@ -2246,7 +2246,7 @@
       <name>HK MP5 TX</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>4(5)</accuracy>
       <ap>-9</ap>
       <mode>SA/BF/FA</mode>
@@ -2259,7 +2259,7 @@
       <name>HK MP5SD</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>950¥</cost>
+      <cost>950</cost>
       <accuracy>4</accuracy>
       <ap>-1</ap>
       <mode>SA/BF/FA</mode>
@@ -2272,7 +2272,7 @@
       <name>HK MP7</name>
       <category>Submachine Guns</category>
       <damage>4P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>4</accuracy>
       <ap>-8</ap>
       <mode>SA/BF/FA</mode>
@@ -2285,7 +2285,7 @@
       <name>HK MP75</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>1600¥</cost>
+      <cost>1600</cost>
       <accuracy>6(8)</accuracy>
       <ap>-9</ap>
       <mode>SA/BF/FA</mode>
@@ -2298,7 +2298,7 @@
       <name>HK Urban Enforcer</name>
       <category>Submachine Guns</category>
       <damage>7P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>6(9)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF/FA</mode>
@@ -2318,7 +2318,7 @@
       <name>Ingram Smartgun</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>1200¥</cost>
+      <cost>1200</cost>
       <accuracy>4(6)</accuracy>
       <ap>-3</ap>
       <mode>BF/FA</mode>
@@ -2331,7 +2331,7 @@
       <name>Ingram SuperMach 100</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SA/BF/FA</mode>
@@ -2344,7 +2344,7 @@
       <name>Ingram Warrior 10</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>4</accuracy>
       <ap>-1</ap>
       <mode>SA/BF</mode>
@@ -2357,7 +2357,7 @@
       <name>Izom Aphrodite</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
       <accuracy>4</accuracy>
       <ap>-2</ap>
       <mode>BF/FA</mode>
@@ -2377,7 +2377,7 @@
       <name>Izom Artemis</name>
       <category>Submachine Guns</category>
       <damage>7P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>5(6)</accuracy>
       <ap>-1</ap>
       <mode>BF/FA</mode>
@@ -2397,7 +2397,7 @@
       <name>Krime Spree</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
       <accuracy>4</accuracy>
       <ap>-2</ap>
       <mode>FA</mode>
@@ -2410,7 +2410,7 @@
       <name>Krime Tradition</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1500¥</cost>
+      <cost>1500</cost>
       <accuracy>5</accuracy>
       <ap>-1</ap>
       <mode>SA/FA</mode>
@@ -2423,7 +2423,7 @@
       <name>MAC-10</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>4</accuracy>
       <ap>-1</ap>
       <mode>SA/FA</mode>
@@ -2436,7 +2436,7 @@
       <name>NA Spratley Stalwart</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1200¥</cost>
+      <cost>1200</cost>
       <accuracy>5</accuracy>
       <ap>-2</ap>
       <mode>BF/FA</mode>
@@ -2449,7 +2449,7 @@
       <name>Onotari Arms S-3K</name>
       <category>Submachine Guns</category>
       <damage>7P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>4(6)</accuracy>
       <ap>-2</ap>
       <mode>BF/FA</mode>
@@ -2462,7 +2462,7 @@
       <name>Sandler TMP</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>900¥</cost>
+      <cost>900</cost>
       <accuracy>4(5)</accuracy>
       <ap>-1</ap>
       <mode>BF/FA</mode>
@@ -2475,7 +2475,7 @@
       <name>SCK Model 100</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>800¥</cost>
+      <cost>800</cost>
       <accuracy>5(7)</accuracy>
       <ap>-2</ap>
       <mode>SA/BF</mode>
@@ -2488,7 +2488,7 @@
       <name>SA Tactical Model 71</name>
       <category>Submachine Guns</category>
       <damage>6P</damage>
-      <cost>1200¥</cost>
+      <cost>1200</cost>
       <accuracy>4(6)</accuracy>
       <ap>-7</ap>
       <mode>BF/FA</mode>
@@ -2501,7 +2501,7 @@
       <name>SA Tactical Model 72</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
       <accuracy>5(7)</accuracy>
       <ap>-4</ap>
       <mode>SA/BF/FA</mode>
@@ -2514,7 +2514,7 @@
       <name>Terracotta Arms Mordred</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
       <accuracy>4(6)</accuracy>
       <ap>-2</ap>
       <mode>BF/FA</mode>
@@ -2527,7 +2527,7 @@
       <name>Type 84B</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>950¥</cost>
+      <cost>950</cost>
       <accuracy>4</accuracy>
       <ap>-2</ap>
       <mode>SA/BF/FA</mode>
@@ -2540,7 +2540,7 @@
       <name>Uzi III</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>4(5)</accuracy>
       <ap>-1</ap>
       <mode>BF</mode>
@@ -2553,7 +2553,7 @@
       <name>Uzi IV</name>
       <category>Submachine Guns</category>
       <damage>5P</damage>
-      <cost>900¥</cost>
+      <cost>900</cost>
       <accuracy>5(6)</accuracy>
       <ap>-1</ap>
       <mode>BF/FA</mode>
@@ -2566,7 +2566,7 @@
       <name>Uzi V</name>
       <category>Submachine Guns</category>
       <damage>8P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>4(6)</accuracy>
       <ap>-1</ap>
       <mode>SA/BF/FA</mode>
@@ -2579,7 +2579,7 @@
       <name>Altmayr SP</name>
       <category>Shotguns</category>
       <damage>10P</damage>
-      <cost>500¥</cost>
+      <cost>500</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -2592,7 +2592,7 @@
       <name>Altmayr SPX</name>
       <category>Shotguns</category>
       <damage>10P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -2605,7 +2605,7 @@
       <name>Altmayr SPX2</name>
       <category>Shotguns</category>
       <damage>10P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS/SA</mode>
@@ -2618,7 +2618,7 @@
       <name>Auto-Assault 16</name>
       <category>Shotguns</category>
       <damage>18P</damage>
-      <cost>1700¥</cost>
+      <cost>1700</cost>
       <accuracy>4</accuracy>
       <ap>-4</ap>
       <mode>SA/BF/FA</mode>
@@ -2631,7 +2631,7 @@
       <name>Ranger Arms AA-16</name>
       <category>Shotguns</category>
       <damage>18P</damage>
-      <cost>1700¥</cost>
+      <cost>1700</cost>
       <accuracy>4(6)</accuracy>
       <ap>-4</ap>
       <mode>SA/BF/FA</mode>
@@ -2644,7 +2644,7 @@
       <name>Beretta Northstar</name>
       <category>Shotguns</category>
       <damage>16P</damage>
-      <cost>900¥</cost>
+      <cost>900</cost>
       <accuracy>4(6)</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -2657,7 +2657,7 @@
       <name>Blunderbuss</name>
       <category>Shotguns</category>
       <damage>9P(f)</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>3</accuracy>
       <ap>-1</ap>
       <mode>SS</mode>
@@ -2670,7 +2670,7 @@
       <name>Boyd &amp; Richards Desperado</name>
       <category>Shotguns</category>
       <damage>14P</damage>
-      <cost>750¥</cost>
+      <cost>750</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -2683,7 +2683,7 @@
       <name>Cavalier Arms Falchion</name>
       <category>Shotguns</category>
       <damage>16P</damage>
-      <cost>900¥</cost>
+      <cost>900</cost>
       <accuracy>5(8)</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -2696,7 +2696,7 @@
       <name>Cavalier Arms Lancer</name>
       <category>Shotguns</category>
       <damage>18P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>4</accuracy>
       <ap>-4</ap>
       <mode>SA</mode>
@@ -2722,7 +2722,7 @@
       <name>Colt MS-27</name>
       <category>Shotguns</category>
       <damage>14P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>5</accuracy>
       <ap>-3</ap>
       <mode>SA/BF/FA</mode>
@@ -2735,7 +2735,7 @@
       <name>Defiance T-250</name>
       <category>Shotguns</category>
       <damage>20P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>4</accuracy>
       <ap>-4</ap>
       <mode>SS/SA</mode>
@@ -2748,7 +2748,7 @@
       <name>Defiance T-250 Short</name>
       <category>Shotguns</category>
       <damage>16P</damage>
-      <cost>950¥</cost>
+      <cost>950</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS/SA</mode>
@@ -2761,7 +2761,7 @@
       <name>Defiance T-280</name>
       <category>Shotguns</category>
       <damage>12P</damage>
-      <cost>750¥</cost>
+      <cost>750</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS/SA</mode>
@@ -2774,7 +2774,7 @@
       <name>Defiance T-285</name>
       <category>Shotguns</category>
       <damage>9P</damage>
-      <cost>400¥</cost>
+      <cost>400</cost>
       <accuracy>3</accuracy>
       <ap>-2</ap>
       <mode>SS</mode>
@@ -2787,7 +2787,7 @@
       <name>Enfield AS-7</name>
       <category>Shotguns</category>
       <damage>20P</damage>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
       <accuracy>4(5)</accuracy>
       <ap>-4</ap>
       <mode>SA/BF</mode>
@@ -2800,7 +2800,7 @@
       <name>Franchi SPAS-22</name>
       <category>Shotguns</category>
       <damage>14P</damage>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
       <accuracy>4(6)</accuracy>
       <ap>-3</ap>
       <mode>SS/SA/BF</mode>
@@ -2813,7 +2813,7 @@
       <name>Franchi SPAS-24</name>
       <category>Shotguns</category>
       <damage>14P</damage>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
       <accuracy>4(6)</accuracy>
       <ap>-3</ap>
       <mode>SS/SA/BF</mode>
@@ -2833,7 +2833,7 @@
       <name>Izom CSM-419</name>
       <category>Shotguns</category>
       <damage>14P</damage>
-      <cost>750¥</cost>
+      <cost>750</cost>
       <accuracy>4(6)</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -2846,7 +2846,7 @@
       <name>Izom SS-374</name>
       <category>Shotguns</category>
       <damage>12P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS/SA</mode>
@@ -2859,7 +2859,7 @@
       <name>Krime Boss</name>
       <category>Shotguns</category>
       <damage>18P</damage>
-      <cost>1200¥</cost>
+      <cost>1200</cost>
       <accuracy>3</accuracy>
       <ap>-4</ap>
       <mode>SA</mode>
@@ -2872,7 +2872,7 @@
       <name>Krime Ditch Rifle</name>
       <category>Shotguns</category>
       <damage>14P</damage>
-      <cost>850¥</cost>
+      <cost>850</cost>
       <accuracy>4</accuracy>
       <ap>-5</ap>
       <mode>SS</mode>
@@ -2898,7 +2898,7 @@
       <name>Krime Stopper II</name>
       <category>Shotguns</category>
       <damage>10P</damage>
-      <cost>450¥</cost>
+      <cost>450</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -2911,7 +2911,7 @@
       <name>Krime Stopper II Shopkeeper</name>
       <category>Shotguns</category>
       <damage>10P</damage>
-      <cost>550¥</cost>
+      <cost>550</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -2924,7 +2924,7 @@
       <name>Krime Stopper II Homeguard</name>
       <category>Shotguns</category>
       <damage>13P</damage>
-      <cost>700¥</cost>
+      <cost>700</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -2937,7 +2937,7 @@
       <name>Krime Whammy (Ranged)</name>
       <category>Shotguns</category>
       <damage>25P</damage>
-      <cost>1600¥</cost>
+      <cost>1600</cost>
       <accuracy>1</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -2950,7 +2950,7 @@
       <name>Mossberg AM-CMDT</name>
       <category>Shotguns</category>
       <damage>18P</damage>
-      <cost>1700¥</cost>
+      <cost>1700</cost>
       <accuracy>5(7)</accuracy>
       <ap>-4</ap>
       <mode>SA/BF/FA</mode>
@@ -2963,7 +2963,7 @@
       <name>Onotari Arms Pressure KS-X</name>
       <category>Shotguns</category>
       <damage>10P</damage>
-      <cost>800¥</cost>
+      <cost>800</cost>
       <accuracy>4(5)</accuracy>
       <ap>-3</ap>
       <mode>SA/BF</mode>
@@ -2976,7 +2976,7 @@
       <name>PJSS Model 55</name>
       <category>Shotguns</category>
       <damage>16P</damage>
-      <cost>950¥</cost>
+      <cost>950</cost>
       <accuracy>6</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -2989,7 +2989,7 @@
       <name>PJSS Model 75</name>
       <category>Shotguns</category>
       <damage>4P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>6</accuracy>
       <ap>0</ap>
       <mode>SS</mode>
@@ -3002,7 +3002,7 @@
       <name>PJSS Model 75-III</name>
       <category>Shotguns</category>
       <damage>4P</damage>
-      <cost>350¥</cost>
+      <cost>350</cost>
       <accuracy>6</accuracy>
       <ap>0</ap>
       <mode>SS</mode>
@@ -3119,7 +3119,7 @@
       <name>Remington 900</name>
       <category>Shotguns</category>
       <damage>16P</damage>
-      <cost>900¥</cost>
+      <cost>900</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -3132,7 +3132,7 @@
       <name>Sawed Off Remington 900</name>
       <category>Shotguns</category>
       <damage>12P</damage>
-      <cost>650¥</cost>
+      <cost>650</cost>
       <accuracy>3</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -3145,7 +3145,7 @@
       <name>Remington 990</name>
       <category>Shotguns</category>
       <damage>16P</damage>
-      <cost>950¥</cost>
+      <cost>950</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SA</mode>
@@ -3158,7 +3158,7 @@
       <name>Shiawase Arms Rain</name>
       <category>Shotguns</category>
       <damage>10P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>4</accuracy>
       <ap>-2</ap>
       <mode>SA</mode>
@@ -3171,7 +3171,7 @@
       <name>Shiawase Arms Riot Guard</name>
       <category>Shotguns</category>
       <damage>16P</damage>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SA/BF</mode>
@@ -3184,7 +3184,7 @@
       <name>Shiawase Arms Tsunami</name>
       <category>Shotguns</category>
       <damage>10P</damage>
-      <cost>600¥</cost>
+      <cost>600</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -3197,7 +3197,7 @@
       <name>Winchester Model 201</name>
       <category>Shotguns</category>
       <damage>12P</damage>
-      <cost>650¥</cost>
+      <cost>650</cost>
       <accuracy>8</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -3210,7 +3210,7 @@
       <name>Winchester Model 2054</name>
       <category>Shotguns</category>
       <damage>20P</damage>
-      <cost>1500¥</cost>
+      <cost>1500</cost>
       <accuracy>4(5)</accuracy>
       <ap>-4</ap>
       <mode>SA</mode>
@@ -3223,7 +3223,7 @@
       <name>Winchester Model 2066</name>
       <category>Shotguns</category>
       <damage>15P</damage>
-      <cost>800¥</cost>
+      <cost>800</cost>
       <accuracy>4</accuracy>
       <ap>-3</ap>
       <mode>SS</mode>
@@ -3257,7 +3257,7 @@
       <name>Scorpion</name>
       <category>Missiles</category>
       <damage>4P</damage>
-      <cost>150¥</cost>
+      <cost>150</cost>
       <accuracy>5</accuracy>
       <ap>0</ap>
       <mode>SS</mode>
@@ -3298,10 +3298,10 @@
       <name>Monofilament Whip</name>
       <category>Melee Weapons</category>
       <damage>12P</damage>
-      <cost>3,000¥</cost>
+      <cost>800</cost>
       <accuracy>5</accuracy>
       <ap>-8</ap>
-      <mode>–</mode>
+      <mode>-</mode>
       <rc>–</rc>
       <ammo>–</ammo>
       <avail>12(F)</avail>
@@ -3311,7 +3311,7 @@
       <name>Ares Alpha</name>
       <category>Assault Rifles</category>
       <damage>15P</damage>
-      <cost>2000¥</cost>
+      <cost>2000</cost>
       <accuracy>5(7)</accuracy>
       <ap>-10</ap>
       <mode>SA/BF/FA</mode>
@@ -3336,7 +3336,7 @@
       <rc>0</rc>
       <ammo>6(m)</ammo>
       <avail>10(R)</avail>
-      <cost>300¥</cost>
+      <cost>300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_04db60da77cee4a5b11f3e5fca96b6b1</id>
@@ -3348,7 +3348,7 @@
       <rc>1</rc>
       <ammo>14(dm)</ammo>
       <avail>5(R)</avail>
-      <cost>450¥</cost>
+      <cost>450</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_2d7c21877819dad41f9bcbd1bc6b244c</id>
@@ -3360,7 +3360,7 @@
       <rc>1</rc>
       <ammo>15(dm)</ammo>
       <avail>8(R)</avail>
-      <cost>550¥</cost>
+      <cost>550</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_0a9a152a2184cde8c8a4da08b9ec226c</id>
@@ -3372,7 +3372,7 @@
       <rc>0</rc>
       <ammo>10(dm)</ammo>
       <avail>6(R)</avail>
-      <cost>300¥</cost>
+      <cost>300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_53a2d1d952ebdadd3bcb9cdd65b0ff1c</id>
@@ -3384,7 +3384,7 @@
       <rc>1</rc>
       <ammo>18(dm)</ammo>
       <avail>8(R)</avail>
-      <cost>500¥</cost>
+      <cost>500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_8bf7c5a4e7e36e31125406e26730b870</id>
@@ -3396,7 +3396,7 @@
       <rc>0</rc>
       <ammo>12(dm)</ammo>
       <avail>5(R)</avail>
-      <cost>350¥</cost>
+      <cost>350</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_504085f4eb24c0bc05ea34882b53c661</id>
@@ -3408,7 +3408,7 @@
       <rc>1</rc>
       <ammo>14(dm)</ammo>
       <avail>10(R)</avail>
-      <cost>550¥</cost>
+      <cost>550</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_b51bad7cc6d45ffc765f63ba547d6002</id>
@@ -3420,7 +3420,7 @@
       <rc>1</rc>
       <ammo>30(dm)</ammo>
       <avail>10(F)</avail>
-      <cost>950¥</cost>
+      <cost>950</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_bc282983f43f4bdf1dbf709adc40bd56</id>
@@ -3432,7 +3432,7 @@
       <rc>1(2)</rc>
       <ammo>25(dm)</ammo>
       <avail>12(F)</avail>
-      <cost>1200¥</cost>
+      <cost>1200</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_e80355f9f5c5d918eb304b0afcafcf14</id>
@@ -3444,7 +3444,7 @@
       <rc>1(2)</rc>
       <ammo>25(dm)</ammo>
       <avail>6(F)</avail>
-      <cost>900¥</cost>
+      <cost>900</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_12e71b9df9df8ab304a34237b8e715e1</id>
@@ -3456,7 +3456,7 @@
       <rc>1</rc>
       <ammo>30(dm)</ammo>
       <avail>8(R)</avail>
-      <cost>950¥</cost>
+      <cost>950</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_e88ae460e81488f8c2e1b403ff3faa62</id>
@@ -3468,7 +3468,7 @@
       <rc>0</rc>
       <ammo>8(m)</ammo>
       <avail>6(R)</avail>
-      <cost>600¥</cost>
+      <cost>600</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_30fa262e72011cf7fa342dfed48cb5ff</id>
@@ -3480,7 +3480,7 @@
       <rc>1</rc>
       <ammo>35(dm)</ammo>
       <avail>10(R)</avail>
-      <cost>1100¥</cost>
+      <cost>1100</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_e30ba5c094badbd7737416b720143349</id>
@@ -3492,7 +3492,7 @@
       <rc>(3)</rc>
       <ammo>10(dm)</ammo>
       <avail>18(F)</avail>
-      <cost>3500¥</cost>
+      <cost>3500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_a7b4d28cec0a322db5853574b72137d9</id>
@@ -3504,7 +3504,7 @@
       <rc>1(5)</rc>
       <ammo>14(dm)</ammo>
       <avail>20(F)</avail>
-      <cost>3400¥</cost>
+      <cost>3400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_b8e39e7669bf702c25d56b3ad61c1301</id>
@@ -3516,7 +3516,7 @@
       <rc>1(3)</rc>
       <ammo>5(dm)</ammo>
       <avail>9(R)</avail>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_e3e0068d3302373ead18201d361ecde1</id>
@@ -3528,7 +3528,7 @@
       <rc>(1)</rc>
       <ammo>6(m)</ammo>
       <avail>5(R)</avail>
-      <cost>650¥</cost>
+      <cost>650</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_ab8524fa7880b70591fc2bbec1b977a7</id>
@@ -3540,7 +3540,7 @@
       <rc>(1)</rc>
       <ammo>4(m)</ammo>
       <avail>6(R)</avail>
-      <cost>1600¥</cost>
+      <cost>1600</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_469880801d8c9b13cd1dbe6fe6b5a07d</id>
@@ -3552,7 +3552,7 @@
       <rc>(1)</rc>
       <ammo>10(dm)</ammo>
       <avail>3(R)</avail>
-      <cost>350¥</cost>
+      <cost>350</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_6c08bbcc980b0873ac71e3f4f45917a0</id>
@@ -3564,7 +3564,7 @@
       <rc>(1)</rc>
       <ammo>5(m)</ammo>
       <avail>6(R)</avail>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_d7e5348e5ce94b727a9d3d16c29ebafa</id>
@@ -3576,7 +3576,7 @@
       <rc>(1)</rc>
       <ammo>5(m)</ammo>
       <avail>2(R)</avail>
-      <cost>1700¥</cost>
+      <cost>1700</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_f237a834618173b4d7e66e76a6dcc6f3</id>
@@ -3588,7 +3588,7 @@
       <rc>2(4)</rc>
       <ammo>15(dm)</ammo>
       <avail>12(F)</avail>
-      <cost>1500¥</cost>
+      <cost>1500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_d52697564e8ccf8e700377d50697f957</id>
@@ -3600,7 +3600,7 @@
       <rc>(2)</rc>
       <ammo>15(dm)</ammo>
       <avail>14(F)</avail>
-      <cost>1500¥</cost>
+      <cost>1500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_b42f049d272dc633c375f091b8361db6</id>
@@ -3612,7 +3612,7 @@
       <rc>(2)</rc>
       <ammo>10(dm)</ammo>
       <avail>16(F)</avail>
-      <cost>3000¥</cost>
+      <cost>3000</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_4943a58fc7ae10b6fb9cebf7a267ca02</id>
@@ -3624,7 +3624,7 @@
       <rc>(2)</rc>
       <ammo>15(dm)</ammo>
       <avail>20(F)</avail>
-      <cost>1500¥</cost>
+      <cost>1500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_1f0304f32a9a89701615a930df8f22d6</id>
@@ -3636,7 +3636,7 @@
       <rc>(2)</rc>
       <ammo>5(m)</ammo>
       <avail>4(R)</avail>
-      <cost>850¥</cost>
+      <cost>850</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_932efb131ba526d281d17327538bbcf9</id>
@@ -3648,7 +3648,7 @@
       <rc>(1)</rc>
       <ammo>5(m)</ammo>
       <avail>4(R)</avail>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_b386390819405e03bf93167ab96fceaa</id>
@@ -3660,7 +3660,7 @@
       <rc>(2)</rc>
       <ammo>8(m)</ammo>
       <avail>4(R)</avail>
-      <cost>1200¥</cost>
+      <cost>1200</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_5623298b180a7980e4b8bf5540fd8016</id>
@@ -3672,7 +3672,7 @@
       <rc>(2)</rc>
       <ammo>8(m)</ammo>
       <avail>4(R)</avail>
-      <cost>550¥</cost>
+      <cost>550</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_a9b7132509daf95557936136d69f8178</id>
@@ -3684,7 +3684,7 @@
       <rc>(1)</rc>
       <ammo>20(dm)</ammo>
       <avail>12(F)</avail>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_4127571bed72b3d9ed94f38b582dceab</id>
@@ -3696,7 +3696,7 @@
       <rc>1(4)</rc>
       <ammo>10(dm)</ammo>
       <avail>18(F)</avail>
-      <cost>2700¥</cost>
+      <cost>2700</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_74f269b8b6b0a94ea9450392b8df0fee</id>
@@ -3708,7 +3708,7 @@
       <rc>(1)</rc>
       <ammo>5(m)</ammo>
       <avail>9(R)</avail>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_fd78fe945f98fca0adf220a8f48c03e5</id>
@@ -3720,7 +3720,7 @@
       <rc>(1)</rc>
       <ammo>20(dm)</ammo>
       <avail>6(R)</avail>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_369be49b724fb4d3a685ef27053abfe8</id>
@@ -3732,7 +3732,7 @@
       <rc>(1)</rc>
       <ammo>8(c)</ammo>
       <avail>4(R)</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_6ffdeb57996326143a82291f3f962e5b</id>
@@ -3744,7 +3744,7 @@
       <rc>(1)</rc>
       <ammo>1(cb)</ammo>
       <avail>5(R)</avail>
-      <cost>650¥</cost>
+      <cost>650</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_4bbedd5142f2f70b9557a07c563cb211</id>
@@ -3756,7 +3756,7 @@
       <rc>2(5)</rc>
       <ammo>18(d)</ammo>
       <avail>14(F)</avail>
-      <cost>2300¥</cost>
+      <cost>2300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_0556f2d59c8f38dbbe29aeabc57b3420</id>
@@ -3768,7 +3768,7 @@
       <rc>(2)</rc>
       <ammo>10(dm)</ammo>
       <avail>10(F)</avail>
-      <cost>1600¥</cost>
+      <cost>1600</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_404abe8765af495ea9bed33a46805b81</id>
@@ -3780,7 +3780,7 @@
       <rc>(1)</rc>
       <ammo>7(m)</ammo>
       <avail>4(R)</avail>
-      <cost>1000¥</cost>
+      <cost>1000</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_8845181da9742993f65d109039b97666</id>
@@ -3792,7 +3792,7 @@
       <rc>(1)</rc>
       <ammo>15(m)</ammo>
       <avail>5(R)</avail>
-      <cost>500¥</cost>
+      <cost>500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_db82eb99756c8f10db4f9b7f1aae8004</id>
@@ -3804,7 +3804,7 @@
       <rc>(1)</rc>
       <ammo>14(m)</ammo>
       <avail>5(R)</avail>
-      <cost>650¥</cost>
+      <cost>650</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_fb8cdb45b13216a2cb2af77450876613</id>
@@ -3816,7 +3816,7 @@
       <rc>(1)</rc>
       <ammo>14(m)</ammo>
       <avail>5(R)</avail>
-      <cost>650¥</cost>
+      <cost>650</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_79ebe56282c838d0b6cf3ddd0c056746</id>
@@ -3828,7 +3828,7 @@
       <rc>(1)</rc>
       <ammo>8(m)</ammo>
       <avail>5(R)</avail>
-      <cost>900¥</cost>
+      <cost>900</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_95c12be3d81c6d9f879056aa086afdce</id>
@@ -3840,7 +3840,7 @@
       <rc>(1)</rc>
       <ammo>7(m)</ammo>
       <avail>5(R)</avail>
-      <cost>1200¥</cost>
+      <cost>1200</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_d2ee65ab5d04e88390b145d8ae63439e</id>
@@ -3852,7 +3852,7 @@
       <rc>(1)</rc>
       <ammo>30(dm)</ammo>
       <avail>5(R)</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_2241751ff746dceeab9d82993eba4eb7</id>
@@ -3864,7 +3864,7 @@
       <rc>(1)</rc>
       <ammo>38(dm)</ammo>
       <avail>4(R)</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_c8277ed4cc05872843e43cc5174c36f1</id>
@@ -3876,7 +3876,7 @@
       <rc>(1)</rc>
       <ammo>38(dm)</ammo>
       <avail>4(R)</avail>
-      <cost>1500¥</cost>
+      <cost>1500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_eb1fd46ca7a43ea53fde49295363c802</id>
@@ -3888,7 +3888,7 @@
       <rc>(1)</rc>
       <ammo>38(dm)</ammo>
       <avail>8(F)</avail>
-      <cost>1500¥</cost>
+      <cost>1500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_349131c88bec65486ffdf58246bd891c</id>
@@ -3900,7 +3900,7 @@
       <rc>1(2)</rc>
       <ammo>35(dm)</ammo>
       <avail>5(F)</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_cfd971530c4a20eb6db4d63ce80b75ff</id>
@@ -3912,7 +3912,7 @@
       <rc>1(2)</rc>
       <ammo>30(dm)</ammo>
       <avail>6(R)</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_89135557d80f5fcad838df91a9216219</id>
@@ -3924,7 +3924,7 @@
       <rc>3(4)</rc>
       <ammo>42(dm)</ammo>
       <avail>12(F)</avail>
-      <cost>2100¥</cost>
+      <cost>2100</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_7a57f4206e5fee6e9aa17f20feda41f8</id>
@@ -3936,7 +3936,7 @@
       <rc>3(5)</rc>
       <ammo>50(d)</ammo>
       <avail>11(F)</avail>
-      <cost>2100¥</cost>
+      <cost>2100</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_571050c1b40bdbe3d7ede36128332e6b</id>
@@ -3948,7 +3948,7 @@
       <rc>1(4)</rc>
       <ammo>35(dm)</ammo>
       <avail>11(R)</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_dc54e52ba75fc008511a625f77276f33</id>
@@ -3960,7 +3960,7 @@
       <rc>(1)</rc>
       <ammo>30(dm)</ammo>
       <avail>6(R)</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_de398707aef3bc0d6d78a6059e4da3aa</id>
@@ -3972,7 +3972,7 @@
       <rc>2(3)</rc>
       <ammo>35(dm)</ammo>
       <avail>8(R)</avail>
-      <cost>1500¥</cost>
+      <cost>1500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_81607bcdd37b359668ad346e74a1a703</id>
@@ -3984,7 +3984,7 @@
       <rc>3(4)</rc>
       <ammo>35(dm)</ammo>
       <avail>8(R)</avail>
-      <cost>1600¥</cost>
+      <cost>1600</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_eb788a1febf5282c36815d52f3f8ba76</id>
@@ -3996,7 +3996,7 @@
       <rc>1(2)</rc>
       <ammo>30(dm)</ammo>
       <avail>5(R)</avail>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_f904c58b3cc0011ff2cc14fa222dea4f</id>
@@ -4008,7 +4008,7 @@
       <rc>1(2)</rc>
       <ammo>20(dm)</ammo>
       <avail>7(R)</avail>
-      <cost>1500¥</cost>
+      <cost>1500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_e6a287ffe6f32d34c7ca022e740104fc</id>
@@ -4020,7 +4020,7 @@
       <rc>2(3)</rc>
       <ammo>32(dm)</ammo>
       <avail>9(F)</avail>
-      <cost>1700¥</cost>
+      <cost>1700</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_2dcd71d3ed31b0fcc413859e9534faaf</id>
@@ -4032,7 +4032,7 @@
       <rc>1(3)</rc>
       <ammo>30(dm)</ammo>
       <avail>–</avail>
-      <cost>1300¥</cost>
+      <cost>1300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_295ae6feb502794eb9480b17c7294fb1</id>
@@ -4044,7 +4044,7 @@
       <rc>1(5)</rc>
       <ammo>30(dm)</ammo>
       <avail>–</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_e1f24b311315e7792255ddb5aed784d7</id>
@@ -4068,7 +4068,7 @@
       <rc>1(3)</rc>
       <ammo>25(dm)</ammo>
       <avail>13(F)</avail>
-      <cost>1700¥</cost>
+      <cost>1700</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_97481bfe4774d0e24693f8733f109d49</id>
@@ -4080,7 +4080,7 @@
       <rc>1(3)</rc>
       <ammo>25(d)</ammo>
       <avail>10(F)</avail>
-      <cost>2400¥</cost>
+      <cost>2400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_e2ca63d052137f90e6f9147af4640c6d</id>
@@ -4092,7 +4092,7 @@
       <rc>(1)</rc>
       <ammo>32(dm)</ammo>
       <avail>12(R)</avail>
-      <cost>1800¥</cost>
+      <cost>1800</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_9ecf708451dc3a8fe6d9d351121113e4</id>
@@ -4104,7 +4104,7 @@
       <rc>2(3)</rc>
       <ammo>35(dm)</ammo>
       <avail>8(F)</avail>
-      <cost>1700¥</cost>
+      <cost>1700</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_364302aaf7fcb6dbd5af1c7531722198</id>
@@ -4116,7 +4116,7 @@
       <rc>1(2)</rc>
       <ammo>20(ml)x6</ammo>
       <avail>10(F)</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_5adcb8a93431e400eb37b74f4ca523c5</id>
@@ -4128,7 +4128,7 @@
       <rc>1(3)</rc>
       <ammo>40(dm)</ammo>
       <avail>13(F)</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_2277c28f382a05f1e128fc060c31acc1</id>
@@ -4140,7 +4140,7 @@
       <rc>(1)</rc>
       <ammo>18(dm)</ammo>
       <avail>12(R)</avail>
-      <cost>1200¥</cost>
+      <cost>1200</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_b9827b93c52f0395963b19391a826518</id>
@@ -4152,7 +4152,7 @@
       <rc>2(3)</rc>
       <ammo>50(dm)</ammo>
       <avail>12(F)</avail>
-      <cost>2000¥</cost>
+      <cost>2000</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_28723b74a00a929c9602a274579e0bca</id>
@@ -4164,7 +4164,7 @@
       <rc>0</rc>
       <ammo>200(belt)</ammo>
       <avail>24(F)</avail>
-      <cost>2200¥</cost>
+      <cost>2200</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_ee56681e2e7d979414d34e7a110091b8</id>
@@ -4176,7 +4176,7 @@
       <rc>2(5)</rc>
       <ammo>60(dm)</ammo>
       <avail>10(F)</avail>
-      <cost>1900¥</cost>
+      <cost>1900</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_c0ff3674f1981e00d5cce728fcfae408</id>
@@ -4188,7 +4188,7 @@
       <rc>2(4)</rc>
       <ammo>50(dm)</ammo>
       <avail>12(F)</avail>
-      <cost>1600¥</cost>
+      <cost>1600</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_d13a88947d0d651b9045ad359ef5e9cc</id>
@@ -4200,7 +4200,7 @@
       <rc>(3)</rc>
       <ammo>50(d)</ammo>
       <avail>12(F)</avail>
-      <cost>2200¥</cost>
+      <cost>2200</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_b831a00a22b01d52b7431e7018184d99</id>
@@ -4212,7 +4212,7 @@
       <rc>(3)</rc>
       <ammo>45(dm)</ammo>
       <avail>7(F)</avail>
-      <cost>1700¥</cost>
+      <cost>1700</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_d68991403c98928e462190778f402695</id>
@@ -4224,7 +4224,7 @@
       <rc>2(3)</rc>
       <ammo>60(dm)</ammo>
       <avail>16(F)</avail>
-      <cost>1800¥</cost>
+      <cost>1800</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_793b0b8a2c69cf792db2420af83ef779</id>
@@ -4236,7 +4236,7 @@
       <rc>2(9)</rc>
       <ammo>50(dm)</ammo>
       <avail>18(F)</avail>
-      <cost>2000¥</cost>
+      <cost>2000</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_1680264899687c199b1626812ceefa3f</id>
@@ -4248,7 +4248,7 @@
       <rc>(4)</rc>
       <ammo>40(dm)</ammo>
       <avail>16(F)</avail>
-      <cost>2300¥</cost>
+      <cost>2300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_f40a28f32a227e41888a7b414d5967e0</id>
@@ -4260,7 +4260,7 @@
       <rc>(6)</rc>
       <ammo>50(dm)</ammo>
       <avail>12(F)</avail>
-      <cost>4200¥</cost>
+      <cost>4200</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_431a4809bd6911bcf0ce976cea8b35f2</id>
@@ -4272,7 +4272,7 @@
       <rc>3(10)</rc>
       <ammo>40(dm)</ammo>
       <avail>18(F)</avail>
-      <cost>4600¥</cost>
+      <cost>4600</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_719e0ef265baef7ac667a2f0ac235f1b</id>
@@ -4284,7 +4284,7 @@
       <rc>1(6)</rc>
       <ammo>20(dm)</ammo>
       <avail>16(F)</avail>
-      <cost>3900¥</cost>
+      <cost>3900</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_b2ff715233e25f577589fd2cc8ca96a9</id>
@@ -4296,7 +4296,7 @@
       <rc>3(11)</rc>
       <ammo>20(dm)</ammo>
       <avail>16(F)</avail>
-      <cost>3800¥</cost>
+      <cost>3800</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_a675d1b05eeaa38b51bf9d938055b6c7</id>
@@ -4308,7 +4308,7 @@
       <rc>0</rc>
       <ammo>4(dm)</ammo>
       <avail>16(F)</avail>
-      <cost>300¥</cost>
+      <cost>300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_1bfdd8401798375bf4b5bdfa1380ad3b</id>
@@ -4320,7 +4320,7 @@
       <rc>0</rc>
       <ammo>6(dm)</ammo>
       <avail>16(F)</avail>
-      <cost>600¥</cost>
+      <cost>600</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_4528335b427e0107c7590a013a91ea6a</id>
@@ -4332,7 +4332,7 @@
       <rc>0</rc>
       <ammo>50(dm)</ammo>
       <avail>4(R)</avail>
-      <cost>900¥</cost>
+      <cost>900</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_78093e2b7d4fb0b3ffcfe6115fe4c9f3</id>
@@ -4344,7 +4344,7 @@
       <rc>0</rc>
       <ammo>10(dm)</ammo>
       <avail>8(F)</avail>
-      <cost>600¥</cost>
+      <cost>600</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_da8cc88885b46831299dd28bf0c9dbb3</id>
@@ -4356,7 +4356,7 @@
       <rc>0</rc>
       <ammo>10(dm)</ammo>
       <avail>12(R)</avail>
-      <cost>350¥</cost>
+      <cost>350</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_9585e951627b858d57b70ebb0c35026e</id>
@@ -4368,7 +4368,7 @@
       <rc>0</rc>
       <ammo>10(c)</ammo>
       <avail>40(F)</avail>
-      <cost>4800¥</cost>
+      <cost>4800</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_74ea3e487d568e3df0ac5bb3b52185f4</id>
@@ -4380,7 +4380,7 @@
       <rc>0</rc>
       <ammo>10(c)</ammo>
       <avail>28(F)</avail>
-      <cost>3200¥</cost>
+      <cost>3200</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_fbaf2439bd39501b1d774391e0d95cd7</id>
@@ -4388,35 +4388,35 @@
       <accuracy>4</accuracy>
       <damage>9S(e)</damage>
       <ap>-2</ap>
-      <mode>–</mode>
+      <mode>-</mode>
       <rc>–</rc>
       <ammo>–</ammo>
       <avail>4(R)</avail>
-      <cost>750¥</cost>
+      <cost>350</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_98968456094c32f977608ef4eedada04</id>
       <name>Nanite Claws / Bite</name>
-      <accuracy>-</accuracy>
+      <accuracy>5</accuracy>
       <damage>8P</damage>
       <ap>-2</ap>
-      <mode/>
-      <rc/>
-      <ammo/>
-      <avail>-</avail>
-      <cost>-</cost>
+      <mode>-</mode>
+      <rc>–</rc>
+      <ammo>–</ammo>
+      <avail>–</avail>
+      <cost>350</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_5ea4dcba8d6726571b9736b99ce31b47</id>
       <name>Bio-Luminescent Whip</name>
-      <accuracy>-</accuracy>
+      <accuracy>5</accuracy>
       <damage>10P</damage>
       <ap>-4</ap>
-      <mode/>
-      <rc/>
-      <ammo/>
-      <avail>-</avail>
-      <cost>-</cost>
+      <mode>-</mode>
+      <rc>–</rc>
+      <ammo>–</ammo>
+      <avail>–</avail>
+      <cost>500</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_78aaa390042991f0a141edd8ce02ea94</id>
@@ -4428,7 +4428,7 @@
       <rc>(1)</rc>
       <ammo>\*</ammo>
       <avail>6(R)</avail>
-      <cost>300¥</cost>
+      <cost>300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_93ebd1794708b88b93d3ceba4d8df7e3</id>
@@ -4452,7 +4452,7 @@
       <rc>(2)</rc>
       <ammo>2(b)+6(m)</ammo>
       <avail>5(R)</avail>
-      <cost>400¥</cost>
+      <cost>400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_2c16005dfdf0e4bb447d50abc4d49128</id>
@@ -4524,7 +4524,7 @@
       <rc>(6)</rc>
       <ammo>30(d)</ammo>
       <avail>10(F)</avail>
-      <cost>1400¥</cost>
+      <cost>1400</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_533ad679d3fb583ddd617c3b4827d4fe</id>
@@ -4536,7 +4536,7 @@
       <rc>(1)</rc>
       <ammo>5(dm)</ammo>
       <avail>6(F)</avail>
-      <cost>300¥</cost>
+      <cost>300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_b7a6b6e1b0a08ef0f1b2cacaad89e51f</id>
@@ -4548,7 +4548,7 @@
       <rc>0</rc>
       <ammo>1(m)</ammo>
       <avail>16(F)</avail>
-      <cost>600¥</cost>
+      <cost>600</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_00f981a18ea46d42b8928b7546625924</id>
@@ -4560,7 +4560,7 @@
       <rc>0</rc>
       <ammo>1(ml)</ammo>
       <avail>12(F)</avail>
-      <cost>150¥</cost>
+      <cost>150</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_2439e95be25e74d3d4fc4f78d6daee4c</id>
@@ -4584,7 +4584,7 @@
       <rc>0</rc>
       <ammo>100(dm)</ammo>
       <avail>8(R)</avail>
-      <cost>700¥</cost>
+      <cost>700</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_dd4fe0cc913f704600b97d1f5dd285de</id>
@@ -4620,7 +4620,7 @@
       <rc>0</rc>
       <ammo>20(dm)</ammo>
       <avail>6(R)</avail>
-      <cost>300¥</cost>
+      <cost>300</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_4b13cb2ed6fb596496b996ee93c79f01</id>
@@ -4632,7 +4632,7 @@
       <rc>0</rc>
       <ammo>10(m)</ammo>
       <avail>5(R)</avail>
-      <cost>200¥</cost>
+      <cost>200</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_1c8b681fe1636374a2149e0321bf87e7</id>
@@ -4644,7 +4644,7 @@
       <rc>0</rc>
       <ammo>1(m)</ammo>
       <avail>3</avail>
-      <cost>150¥</cost>
+      <cost>150</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_3681bba9beeaac00953274bbc9408c32</id>
@@ -4656,7 +4656,7 @@
       <rc>0</rc>
       <ammo>1</ammo>
       <avail>28(F)</avail>
-      <cost>150¥</cost>
+      <cost>150</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_853423d18b1cd757275d13b3b10c488e</id>
@@ -4680,7 +4680,7 @@
       <rc>1</rc>
       <ammo>12(c)</ammo>
       <avail>4(R)</avail>
-      <cost>400¥</cost>
+      <cost>350</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_a7a7bb11172ab561fc244d4a47c84008</id>
@@ -4688,11 +4688,11 @@
       <accuracy>6</accuracy>
       <damage>(STR+2)P</damage>
       <ap>-2</ap>
-      <mode>–</mode>
+      <mode>-</mode>
       <rc>–</rc>
       <ammo>–</ammo>
       <avail>4</avail>
-      <cost>300¥</cost>
+      <cost>200</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_9a2e308d1926fa27da11ff22cd788f04</id>
@@ -4700,11 +4700,11 @@
       <accuracy>5</accuracy>
       <damage>7P</damage>
       <ap>-8</ap>
-      <mode>–</mode>
+      <mode>-</mode>
       <rc>–</rc>
       <ammo>–</ammo>
       <avail>10(F)</avail>
-      <cost>1,500¥</cost>
+      <cost>600</cost>
     </weapon>
     <weapon>
       <id>CUSTOM_WEAP_1a5a1d2cd61e8b8e982c1972ad95266c</id>
@@ -4712,11 +4712,11 @@
       <accuracy>5</accuracy>
       <damage>(STR+1)P</damage>
       <ap>-1</ap>
-      <mode>–</mode>
+      <mode>-</mode>
       <rc>–</rc>
       <ammo>2</ammo>
       <avail>2</avail>
-      <cost>50¥</cost>
+      <cost>150</cost>
     </weapon>
   </weapons>
 </chummer>

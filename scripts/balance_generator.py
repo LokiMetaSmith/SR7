@@ -85,6 +85,23 @@ WEAPON_RC_COST = 100
 WEAPON_AMMO_COST = 5
 WEAPON_MULT_PISTOL = 0.8
 WEAPON_MULT_HEAVY = 1.5
+
+AUGMENTATION_BASE_COST = 500
+AUGMENTATION_ESSENCE_PENALTY = 10000
+AUGMENTATION_MULT_CYBER = 1.0
+AUGMENTATION_MULT_BIO = 1.5
+AUGMENTATION_MULT_NANO = 2.0
+
+ARMOR_BASE_COST = 100
+ARMOR_RATING_MULTIPLIER = 5
+ARMOR_CAPACITY_COST = 20
+
+DEVICE_BASE_COST = 100
+DEVICE_RTG_MULTIPLIER = 50
+DEVICE_ATTR_COST = 200
+DEVICE_MULT_COMM = 1.0
+DEVICE_MULT_DECK = 5.0
+DEVICE_MULT_RIG = 3.0
 # ------------------------------------------------
 
 
@@ -260,6 +277,184 @@ def balance_weapons(text):
     return "\n".join(lines)
 
 
+def balance_augmentations(text):
+    print("Balancing Augmentations...")
+    tables = get_tables_with_positions(text)
+    lines = text.split("\n")
+
+    for t in reversed(tables):
+        if "Augmentation" in t["headers"] and "Type" in t["headers"] and "Cost (¥)" in t["headers"]:
+            start_line = t["start"]
+            end_line = t["end"]
+
+            new_table_lines = []
+            new_table_lines.append("| " + " | ".join(t["headers"]) + " |")
+            new_table_lines.append("|" + "|".join([" :--- " for _ in t["headers"]]) + "|")
+
+            for row in t["rows"]:
+                if len(row) >= 4:
+                    aug_type = row[t["headers"].index("Type")] if "Type" in t["headers"] else ""
+                    essence_str = row[t["headers"].index("Essence")] if "Essence" in t["headers"] else ""
+
+                    essence = parse_int_or_float(essence_str)
+
+                    calculated_cost = AUGMENTATION_BASE_COST
+
+                    rating_match = re.search(r"Rtg\s*(\d+)", row[t["headers"].index("Augmentation")])
+                    rating = int(rating_match.group(1)) if rating_match else 1
+
+                    if "Wired Reflexes" in row[t["headers"].index("Augmentation")]:
+                        if "I" in row[t["headers"].index("Augmentation")]: rating = 1
+                        if "II" in row[t["headers"].index("Augmentation")]: rating = 2
+                        if "III" in row[t["headers"].index("Augmentation")]: rating = 3
+
+                    if "Synaptic Booster" in row[t["headers"].index("Augmentation")]:
+                        if "I" in row[t["headers"].index("Augmentation")]: rating = 1
+                        if "II" in row[t["headers"].index("Augmentation")]: rating = 2
+                        if "III" in row[t["headers"].index("Augmentation")]: rating = 3
+
+                    calculated_cost = AUGMENTATION_BASE_COST
+                    calculated_cost += (rating ** 2) * 5000
+
+                    essence_penalty = max(0, essence) * AUGMENTATION_ESSENCE_PENALTY
+                    calculated_cost += essence_penalty
+
+                    if "Bio" in aug_type:
+                        calculated_cost *= AUGMENTATION_MULT_BIO
+                    elif "Nano" in aug_type or "Genetic" in aug_type:
+                        calculated_cost *= AUGMENTATION_MULT_NANO
+                    else:
+                        calculated_cost *= AUGMENTATION_MULT_CYBER
+
+                    calculated_cost = round(calculated_cost / 500) * 500
+
+                    if "Cost (¥)" in t["headers"]:
+                        cost_idx = t["headers"].index("Cost (¥)")
+                        original_cost_str = row[cost_idx]
+                        if original_cost_str.strip() != "" and original_cost_str.strip() != "-":
+                            if "/" in original_cost_str:
+                                new_cost_str = f"{int(calculated_cost):,} / Lvl"
+                            else:
+                                new_cost_str = f"{int(calculated_cost):,}"
+                            row[cost_idx] = new_cost_str
+
+                    new_table_lines.append("| " + " | ".join(row) + " |")
+                else:
+                    new_table_lines.append("| " + " | ".join(row) + " |")
+
+            lines[start_line:end_line] = new_table_lines
+
+    return "\n".join(lines)
+
+
+def balance_armor(text):
+    print("Balancing Armor...")
+    tables = get_tables_with_positions(text)
+    lines = text.split("\n")
+
+    for t in reversed(tables):
+        if "Item" in t["headers"] and "Rating / Stats" in t["headers"] and "Cost (¥)" in t["headers"] and "Capacity" in t["headers"]:
+            start_line = t["start"]
+            end_line = t["end"]
+
+            new_table_lines = []
+            new_table_lines.append("| " + " | ".join(t["headers"]) + " |")
+            new_table_lines.append("|" + "|".join([" :--- " for _ in t["headers"]]) + "|")
+
+            for row in t["rows"]:
+                if len(row) >= 5:
+                    item_type = row[t["headers"].index("Type")] if "Type" in t["headers"] else ""
+                    if "Armor" not in item_type:
+                        new_table_lines.append("| " + " | ".join(row) + " |")
+                        continue
+
+                    rating_str = row[t["headers"].index("Rating / Stats")] if "Rating / Stats" in t["headers"] else ""
+                    capacity_str = row[t["headers"].index("Capacity")] if "Capacity" in t["headers"] else ""
+
+                    rating = parse_int_or_float(rating_str)
+                    capacity = parse_int_or_float(capacity_str)
+
+                    calculated_cost = ARMOR_BASE_COST
+                    calculated_cost += (rating ** 2) * ARMOR_RATING_MULTIPLIER
+                    calculated_cost += capacity * ARMOR_CAPACITY_COST
+
+                    calculated_cost = round(calculated_cost / 50) * 50
+
+                    if "Cost (¥)" in t["headers"]:
+                        cost_idx = t["headers"].index("Cost (¥)")
+                        original_cost_str = row[cost_idx]
+                        if original_cost_str.strip() != "" and original_cost_str.strip() != "-":
+                            row[cost_idx] = f"{int(calculated_cost):,}"
+
+                    new_table_lines.append("| " + " | ".join(row) + " |")
+                else:
+                    new_table_lines.append("| " + " | ".join(row) + " |")
+
+            lines[start_line:end_line] = new_table_lines
+
+    return "\n".join(lines)
+
+
+def balance_devices(text):
+    print("Balancing Devices...")
+    tables = get_tables_with_positions(text)
+    lines = text.split("\n")
+
+    for t in reversed(tables):
+        if "Device Type" in t["headers"] and "Device Rtg" in t["headers"] and "A / S / D / F" in t["headers"] and "Base Cost (¥)" in t["headers"]:
+            start_line = t["start"]
+            end_line = t["end"]
+
+            new_table_lines = []
+            new_table_lines.append("| " + " | ".join(t["headers"]) + " |")
+            new_table_lines.append("|" + "|".join([" :--- " for _ in t["headers"]]) + "|")
+
+            for row in t["rows"]:
+                if len(row) >= 5:
+                    device_type = row[t["headers"].index("Device Type")] if "Device Type" in t["headers"] else ""
+                    rtg_str = row[t["headers"].index("Device Rtg")] if "Device Rtg" in t["headers"] else ""
+                    attrs_str = row[t["headers"].index("A / S / D / F")] if "A / S / D / F" in t["headers"] else ""
+
+                    rtg = parse_int_or_float(rtg_str)
+
+                    attrs_sum = 0
+                    for attr in attrs_str.split("/"):
+                        attrs_sum += parse_int_or_float(attr.strip())
+
+                    calculated_cost = DEVICE_BASE_COST
+                    calculated_cost += (rtg ** 2) * DEVICE_RTG_MULTIPLIER
+                    calculated_cost += attrs_sum * DEVICE_ATTR_COST
+
+                    if "Deck" in device_type:
+                        calculated_cost *= DEVICE_MULT_DECK
+                    elif "Rigger" in device_type:
+                        calculated_cost *= DEVICE_MULT_RIG
+                    else:
+                        calculated_cost *= DEVICE_MULT_COMM
+
+                    calculated_cost = round(calculated_cost / 100) * 100
+
+                    if "Base Cost (¥)" in t["headers"]:
+                        cost_idx = t["headers"].index("Base Cost (¥)")
+                        original_cost_str = row[cost_idx]
+                        if original_cost_str.strip() != "" and original_cost_str.strip() != "-":
+                            row[cost_idx] = f"{int(calculated_cost):,}"
+
+                    new_table_lines.append("| " + " | ".join(row) + " |")
+                else:
+                    new_table_lines.append("| " + " | ".join(row) + " |")
+
+            lines[start_line:end_line] = new_table_lines
+
+    return "\n".join(lines)
+
+
+def balance_lifestyles(text):
+    # Lifestyles don't have a formula to apply, so we'll just return the text
+    # This acts as a hook if we ever want to do something with Lifestyles balancing later
+    return text
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Balance Metatypes and Weapons in Shadowrun 7E Homebrew rules markdown."
@@ -298,6 +493,10 @@ def main():
     print("Starting balancing...")
     text = balance_metatypes(text)
     text = balance_weapons(text)
+    text = balance_augmentations(text)
+    text = balance_armor(text)
+    text = balance_devices(text)
+    text = balance_lifestyles(text)
 
     if args.dry_run:
         print("Dry run complete. No files were modified.")
