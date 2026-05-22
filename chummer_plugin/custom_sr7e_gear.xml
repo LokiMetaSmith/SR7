@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<chummer>
+  <gears>
+    <gear>
+      <id>CUSTOM_GEAR_3f74c6962188f8ab5198989891bf7c5d</id>
+      <name>MetaLink (Burner)</name>
+      <type>Commlink</type>
+      <rating>1</rating>
+      <attributes>0 / 0 / 1 / 1</attributes>
+      <cost>600</cost>
+      <description>Basic AR interface. No DNI capability.</description>
+    </gear>
+    <gear>
+      <id>CUSTOM_GEAR_db062b4b007c2ad88558639f6b1b0361</id>
+      <name>Hermes Ikon</name>
+      <type>Commlink</type>
+      <rating>5</rating>
+      <attributes>0 / 0 / 5 / 5</attributes>
+      <cost>3400</cost>
+      <description>High-end commlink. Can host basic DNI but cannot hack.</description>
+    </gear>
+    <gear>
+      <id>CUSTOM_GEAR_cf68c1872990d4bceedebf97da7a0368</id>
+      <name>Transys Avalon</name>
+      <type>Commlink</type>
+      <rating>6</rating>
+      <attributes>0 / 0 / 6 / 6</attributes>
+      <cost>4300</cost>
+      <description>The pinnacle of consumer electronics, nearly flawless firewall for regular users.</description>
+    </gear>
+    <gear>
+      <id>CUSTOM_GEAR_d0b01a7dc328011d475d233d16ad3ab7</id>
+      <name>Microtrónica Azteca 200</name>
+      <type>Bio-Deck</type>
+      <rating>2</rating>
+      <attributes>4 / 3 / 2 / 1</attributes>
+      <cost>11500</cost>
+      <description>Budget cyberdeck. Often retrofitted with stolen military parts by gangers.</description>
+    </gear>
+    <gear>
+      <id>CUSTOM_GEAR_5de35dc03d7c43c1738d55f1b3f4b593</id>
+      <name>Renraku &quot;Shinobi&quot;</name>
+      <type>Bio-Deck</type>
+      <rating>3</rating>
+      <attributes>5 / 4 / 3 / 2</attributes>
+      <cost>16800</cost>
+      <description>Entry-level hot-sim deck. Configurable Array.</description>
+    </gear>
+    <gear>
+      <id>CUSTOM_GEAR_6d01783991219dac906b0dc7d9a162cd</id>
+      <name>Fairlight Paladin</name>
+      <type>Bio-Deck</type>
+      <rating>6</rating>
+      <attributes>8 / 7 / 6 / 6</attributes>
+      <cost>36500</cost>
+      <description>Military-grade. Interfaces directly with gaiasphere anomalies.</description>
+    </gear>
+    <gear>
+      <id>CUSTOM_GEAR_ea53d803d4fde6d23fd48a8d1c57047d</id>
+      <name>MCT &quot;Ghost-Deck&quot;</name>
+      <type>Bio-Deck</type>
+      <rating>5</rating>
+      <attributes>7 / 6 / 5 / 4</attributes>
+      <cost>28800</cost>
+      <description>Illegal, unregistered hardware. Cannot run legal software but provides +1 to Sleaze.</description>
+    </gear>
+    <gear>
+      <id>CUSTOM_GEAR_5104a0e794c014fa32eb4f96dd70709a</id>
+      <name>Vulcan Liege-Lord</name>
+      <type>Rigger Console</type>
+      <rating>5</rating>
+      <attributes>0 / 0 / 5 / 6</attributes>
+      <cost>10600</cost>
+      <description>Specialized for drone swarms. Grants +1 Initiative Die while jumped in.</description>
+    </gear>
+  </gears>
+</chummer>

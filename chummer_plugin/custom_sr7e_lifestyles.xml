@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<chummer>
+  <lifestyles>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_fa51821dae00ec66369178a312688878</id>
+      <name>Street / Squatter</name>
+      <cost>0 / 500</cost>
+      <description>Sleeping in the gutters or an abandoned, unheated building. Healing times are doubled.</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_28d0edd045e05cf5af64e35ae0c4c6ef</id>
+      <name>Low</name>
+      <cost>2000</cost>
+      <description>Crappy apartment, soy-paste meals. Matrix connection is spotty (frequent Background Noise penalties).</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_b1ca34f82e83c52b010f86955f264e05</id>
+      <name>Middle</name>
+      <cost>5000</cost>
+      <description>Safe, secure, decent food. Standard existence.</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_655d20c1ca69519ca647684edbb2db35</id>
+      <name>High</name>
+      <cost>10000</cost>
+      <description>Luxury condo, real meat, clean air. Gain +1 Die on all downtime healing tests.</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_6f890e3703f983b791d0ef0cc8a8b56f</id>
+      <name>Luxury</name>
+      <cost>100000+</cost>
+      <description>Penthouse suites, clone banks, private arcology wings. Gain +2 Dice on all downtime healing tests, immune to minor lifestyle inconveniences (Matrix outages, traffic).</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_f07e1f2110a849851d0b0bc7b3a0054a</id>
+      <name>Coffin Motel (Temporary)</name>
+      <cost>20 / night</cost>
+      <description>A 2x1x1 meter sleeping tube. Secure enough, but induces claustrophobia.</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_28582a97b2f2e761ccfa375b3e850a50</id>
+      <name>The &quot;Null&quot; Zone (Squatter variant)</name>
+      <cost>1000</cost>
+      <description>A deliberately offline, EMP-shielded bunker space in the Barrens. Immune to casual Matrix scanning, but provides no Grid access.</description>
+    </lifestyle>
+  </lifestyles>
+</chummer>
