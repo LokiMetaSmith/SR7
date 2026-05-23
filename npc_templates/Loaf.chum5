@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>Loaf</name>
+    <metatype>Orc</metatype>
+    <background>Heavy Weapons expert, the symphony. Uses an Ares Alpha with explosive-tipped rounds.</background>
+    <attributes>
+      <attribute>
+        <name>BOD</name>
+        <value>7</value>
+      </attribute>
+      <attribute>
+        <name>AGI</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>REA</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>STR</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>WIL</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>LOG</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>INT</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>CHA</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>EDG</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>ESS</name>
+        <value>4.0</value>
+      </attribute>
+      <attribute>
+        <name>MAG</name>
+        <value>0</value>
+      </attribute>
+    </attributes>
+    <armors>
+      <armor>
+        <name>Armored Jacket</name>
+        <armor>12</armor>
+      </armor>
+    </armors>
+    <weapons>
+      <weapon>
+        <name>Ares Alpha</name>
+        <damage>11</damage>
+        <damage_type>P</damage_type>
+        <ap>-2</ap>
+        <mode>SA/BF/FA</mode>
+      </weapon>
+      <weapon>
+        <name>High Explosive Grenade</name>
+        <damage>16</damage>
+        <damage_type>P</damage_type>
+        <ap>-2</ap>
+        <mode>Thrown</mode>
+      </weapon>
+    </weapons>
+  </character>
+</characters>
