@@ -135,3 +135,5 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Update Reactor Heist:** Show Ignatius arriving at the drydock and establishing a trace.
 *   [x] **Confrontation in Argentina:** Update the dock scene to feature Ignatius ambushing the team in Buenos Aires.
 *   [x] **Final Showdown in Antarctica:** Add 'The Ice Cold Equation' chapter for the final battle with Ignatius.
+
+*   [x] **Pre-Rolled Templates:** Created pre-rolled player templates for the core narrative team (Red, Chow, Loaf) to allow players to jump into the narrative campaigns.

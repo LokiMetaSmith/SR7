@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>Red</name>
+    <metatype>Human</metatype>
+    <background>Street Samurai. Uses a Monofilament Sword. Fast and lethal, taking point in combat.</background>
+    <attributes>
+      <attribute>
+        <name>BOD</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>AGI</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>REA</name>
+        <value>6</value>
+      </attribute>
+      <attribute>
+        <name>STR</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>WIL</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>LOG</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>INT</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>CHA</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>EDG</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>ESS</name>
+        <value>2.0</value>
+      </attribute>
+      <attribute>
+        <name>MAG</name>
+        <value>0</value>
+      </attribute>
+    </attributes>
+    <weapons>
+      <weapon>
+        <name>Monofilament Sword</name>
+        <damage>10</damage>
+        <damage_type>P</damage_type>
+        <ap>-8</ap>
+        <mode>Melee</mode>
+      </weapon>
+    </weapons>
+  </character>
+</characters>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>Chow</name>
+    <metatype>Troll</metatype>
+    <background>Tank/Shield. Massive frame, uses a ballistic shield to take the brunt of fire for the team.</background>
+    <attributes>
+      <attribute>
+        <name>BOD</name>
+        <value>9</value>
+      </attribute>
+      <attribute>
+        <name>AGI</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>REA</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>STR</name>
+        <value>8</value>
+      </attribute>
+      <attribute>
+        <name>WIL</name>
+        <value>5</value>
+      </attribute>
+      <attribute>
+        <name>LOG</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>INT</name>
+        <value>4</value>
+      </attribute>
+      <attribute>
+        <name>CHA</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>EDG</name>
+        <value>3</value>
+      </attribute>
+      <attribute>
+        <name>ESS</name>
+        <value>3.5</value>
+      </attribute>
+      <attribute>
+        <name>MAG</name>
+        <value>0</value>
+      </attribute>
+    </attributes>
+    <armors>
+      <armor>
+        <name>Ballistic Shield</name>
+        <armor>6</armor>
+      </armor>
+      <armor>
+        <name>Heavy Mil-Spec Armor</name>
+        <armor>15</armor>
+      </armor>
+    </armors>
+    <weapons>
+      <weapon>
+        <name>Ares Predator V</name>
+        <damage>8</damage>
+        <damage_type>P</damage_type>
+        <ap>-1</ap>
+        <mode>SA/BF/FA</mode>
+      </weapon>
+    </weapons>
+  </character>
+</characters>
