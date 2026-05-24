@@ -1,7 +1,7 @@
 import pygame
 import sys
 from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
-from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid
+from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap
 
 
 class App:
@@ -14,6 +14,7 @@ class App:
         pygame.display.set_caption("Shadowrun 7E - Interactive Cards")
         self.clock = pygame.time.Clock()
         self.running = True
+        self.in_overworld = True
 
         self.pending_action = None
         self.pending_chat = None
@@ -37,11 +38,16 @@ class App:
 
         self.state = None
         self.map_grid = None
+        self.overworld_map = OverworldMap(pygame.Rect(50, 100, 600, 400), on_node_click=self.load_module)
 
         self.running = True
         self.scroll_x = 0
         self.scroll_y = 0
 
+
+    def load_module(self, module_path: str):
+        print(f"Loading module: {module_path}")
+        self.in_overworld = False
 
     def set_pending_action(self, action: str):
         self.pending_action = action
@@ -121,21 +127,22 @@ class App:
 
     def handle_events(self):
         # Ensure rects are up-to-date before clicks
-        start_y = 100 + self.scroll_y
-        if self.map_grid:
-            start_y += self.map_grid.rect.height + 20
+        if not self.in_overworld:
+            start_y = 100 + self.scroll_y
+            if self.map_grid:
+                start_y += self.map_grid.rect.height + 20
 
-        x_offset = 50 + self.scroll_x
-        for card in self.player_cards:
-            card.rect.topleft = (x_offset, start_y)
-            card.update_rects()
-            x_offset += 370
+            x_offset = 50 + self.scroll_x
+            for card in self.player_cards:
+                card.rect.topleft = (x_offset, start_y)
+                card.update_rects()
+                x_offset += 370
 
-        x_offset = max(x_offset, 550 + self.scroll_x)
-        for card in self.gm_cards:
-            card.rect.topleft = (x_offset, start_y)
-            card.update_rects()
-            x_offset += 370
+            x_offset = max(x_offset, 550 + self.scroll_x)
+            for card in self.gm_cards:
+                card.rect.topleft = (x_offset, start_y)
+                card.update_rects()
+                x_offset += 370
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -172,12 +179,14 @@ class App:
 
 
             # Pass events to components
-            self.chat_window.handle_event(event)
-            for card in self.player_cards:
-
-                card.handle_event(event)
-            for card in self.gm_cards:
-                card.handle_event(event)
+            if self.in_overworld:
+                self.overworld_map.handle_event(event)
+            else:
+                self.chat_window.handle_event(event)
+                for card in self.player_cards:
+                    card.handle_event(event)
+                for card in self.gm_cards:
+                    card.handle_event(event)
 
         mouse_pos = pygame.mouse.get_pos()
         hovered = False
@@ -213,29 +222,32 @@ class App:
         title_surf = font.render("SHADOWRUN 7E TACTICAL SIMULATOR", True, (0, 255, 204))
         self.screen.blit(title_surf, (50, 20))
 
-        if self.state:
-            turn_text = f"Turn: {self.state.turn}"
-            turn_surf = font.render(turn_text, True, (220, 220, 220))
-            self.screen.blit(turn_surf, (50, 50))
+        if self.in_overworld:
+            self.overworld_map.draw(self.screen)
+        else:
+            if self.state:
+                turn_text = f"Turn: {self.state.turn}"
+                turn_surf = font.render(turn_text, True, (220, 220, 220))
+                self.screen.blit(turn_surf, (50, 50))
 
-        start_y = 100 + self.scroll_y
+            start_y = 100 + self.scroll_y
 
-        if self.map_grid:
-            self.map_grid.draw(self.screen, 50, 100 + self.scroll_y)
-            start_y += self.map_grid.rect.height + 20
+            if self.map_grid:
+                self.map_grid.draw(self.screen, 50, 100 + self.scroll_y)
+                start_y += self.map_grid.rect.height + 20
 
-        # Draw cards side by side
-        x_offset = 50 + self.scroll_x
-        for card in self.player_cards:
-            card.draw(self.screen, x_offset, start_y)
-            x_offset += 370
+            # Draw cards side by side
+            x_offset = 50 + self.scroll_x
+            for card in self.player_cards:
+                card.draw(self.screen, x_offset, start_y)
+                x_offset += 370
 
 
-        x_offset = max(x_offset, 550 + self.scroll_x)
-        for card in self.gm_cards:
-            card.draw(self.screen, x_offset, start_y)
-            x_offset += 370
+            x_offset = max(x_offset, 550 + self.scroll_x)
+            for card in self.gm_cards:
+                card.draw(self.screen, x_offset, start_y)
+                x_offset += 370
 
-        self.chat_window.draw(self.screen)
+            self.chat_window.draw(self.screen)
 
         pygame.display.flip()

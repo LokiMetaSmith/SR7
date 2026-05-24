@@ -542,6 +542,49 @@ class ChatWindow:
 
 
 
+class OverworldMap:
+    def __init__(self, rect: pygame.Rect, on_node_click=None):
+        self.rect = pygame.Rect(rect)
+        self.on_node_click = on_node_click
+        self.font = pygame.font.SysFont("monospace", 14, bold=True)
+        self.nodes = [
+            {"name": "The Hit", "x": 100, "y": 100, "module": "modules/hollow_resonance_part1.json", "radius": 15},
+            {"name": "Cold Storage", "x": 300, "y": 200, "module": "modules/cold_storage.json", "radius": 15}
+        ]
+
+    def handle_event(self, event: pygame.event.Event):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            for node in self.nodes:
+                node_x = self.rect.x + node["x"]
+                node_y = self.rect.y + node["y"]
+                distance = ((event.pos[0] - node_x) ** 2 + (event.pos[1] - node_y) ** 2) ** 0.5
+                if distance <= node["radius"]:
+                    if self.on_node_click:
+                        self.on_node_click(node["module"])
+
+    def draw(self, surface: pygame.Surface):
+        pygame.draw.rect(surface, COLORS.get("panel_bg", (30, 30, 30)), self.rect, border_radius=4)
+        pygame.draw.rect(surface, COLORS.get("border", (100, 100, 100)), self.rect, 2, border_radius=4)
+
+        title_surf = self.font.render("OVERWORLD MAP", True, (0, 255, 204))
+        surface.blit(title_surf, (self.rect.x + 20, self.rect.y + 20))
+
+        if len(self.nodes) > 1:
+            for i in range(len(self.nodes) - 1):
+                start = (self.rect.x + self.nodes[i]["x"], self.rect.y + self.nodes[i]["y"])
+                end = (self.rect.x + self.nodes[i+1]["x"], self.rect.y + self.nodes[i+1]["y"])
+                pygame.draw.line(surface, (100, 100, 100), start, end, 2)
+
+        for node in self.nodes:
+            center = (self.rect.x + node["x"], self.rect.y + node["y"])
+            pygame.draw.circle(surface, (255, 0, 128), center, node["radius"])
+            pygame.draw.circle(surface, (255, 255, 255), center, node["radius"], 2)
+
+            name_surf = self.font.render(node["name"], True, (255, 255, 255))
+            name_rect = name_surf.get_rect(center=(center[0], center[1] + 25))
+            surface.blit(name_surf, name_rect)
+
+
 class MapGrid:
     def __init__(self, layout_ascii, legend):
         self.layout_ascii = layout_ascii

@@ -107,6 +107,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Improve UI/UX**: Enhanced Player and GM card visuals with team-colored headers and graphical health bars.
     *   [x] Implemented Cyberpunk TTRPG UI Best Practices: Overhauled colors, added hover highlights, segmented health bars, styled Chat Window, and gridded background.
     *   [x] Created a visual MapGrid UI component to render map scenarios using a Cartesian grid.
+    *   [x] **Implement Overworld Map:** Created an interactive Pygame overworld map to navigate and launch modules.
 
 ---
 
@@ -136,4 +137,4 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Confrontation in Argentina:** Update the dock scene to feature Ignatius ambushing the team in Buenos Aires.
 *   [x] **Final Showdown in Antarctica:** Add 'The Ice Cold Equation' chapter for the final battle with Ignatius.
 
-*   [x] **Pre-Rolled Templates:** Created pre-rolled player templates for the core narrative team (Red, Chow, Loaf) to allow players to jump into the narrative campaigns.
+*   [x] **Pre-Rolled Templates:** Created pre-rolled player templates for the core narrative team (Logi, Red, Chow, Loaf) to allow players to jump into the narrative campaigns.
