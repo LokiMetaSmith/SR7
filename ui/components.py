@@ -543,14 +543,11 @@ class ChatWindow:
 
 
 class OverworldMap:
-    def __init__(self, rect: pygame.Rect, on_node_click=None):
+    def __init__(self, rect: pygame.Rect, on_node_click=None, nodes=None):
         self.rect = pygame.Rect(rect)
         self.on_node_click = on_node_click
         self.font = pygame.font.SysFont("monospace", 14, bold=True)
-        self.nodes = [
-            {"name": "The Hit", "x": 100, "y": 100, "module": "modules/hollow_resonance_part1.json", "radius": 15},
-            {"name": "Cold Storage", "x": 300, "y": 200, "module": "modules/cold_storage.json", "radius": 15}
-        ]
+        self.nodes = nodes if nodes is not None else []
 
     def handle_event(self, event: pygame.event.Event):
         if event.type == pygame.MOUSEBUTTONDOWN:

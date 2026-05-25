@@ -1,0 +1,19 @@
+{
+  "name": "Shadowrun 7E Default Campaign",
+  "nodes": [
+    {
+      "name": "The Hit",
+      "x": 100,
+      "y": 100,
+      "module": "modules/hollow_resonance_part1.json",
+      "radius": 15
+    },
+    {
+      "name": "Cold Storage",
+      "x": 300,
+      "y": 200,
+      "module": "modules/cold_storage.json",
+      "radius": 15
+    }
+  ]
+}
