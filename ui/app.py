@@ -38,7 +38,12 @@ class App:
 
         self.state = None
         self.map_grid = None
-        self.overworld_map = OverworldMap(pygame.Rect(50, 100, 600, 400), on_node_click=self.load_module)
+
+        campaign_nodes = [
+            {"name": "The Hit", "x": 100, "y": 100, "module": "modules/hollow_resonance_part1.json", "radius": 15},
+            {"name": "Cold Storage", "x": 300, "y": 200, "module": "modules/cold_storage.json", "radius": 15}
+        ]
+        self.overworld_map = OverworldMap(pygame.Rect(50, 100, 600, 400), on_node_click=self.load_module, nodes=campaign_nodes)
 
         self.running = True
         self.scroll_x = 0

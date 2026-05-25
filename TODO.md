@@ -108,6 +108,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
     *   [x] Implemented Cyberpunk TTRPG UI Best Practices: Overhauled colors, added hover highlights, segmented health bars, styled Chat Window, and gridded background.
     *   [x] Created a visual MapGrid UI component to render map scenarios using a Cartesian grid.
     *   [x] **Implement Overworld Map:** Created an interactive Pygame overworld map to navigate and launch modules.
+*   [x] **Refactor OverworldMap:** Refactored OverworldMap to be modular and accept campaign nodes dynamically.
 
 ---
 
