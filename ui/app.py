@@ -39,10 +39,20 @@ class App:
         self.state = None
         self.map_grid = None
 
-        campaign_nodes = [
-            {"name": "The Hit", "x": 100, "y": 100, "module": "modules/hollow_resonance_part1.json", "radius": 15},
-            {"name": "Cold Storage", "x": 300, "y": 200, "module": "modules/cold_storage.json", "radius": 15}
-        ]
+        campaign_nodes = []
+        try:
+            import json
+            import os
+            campaign_file = os.path.join(os.path.dirname(__file__), "..", "campaign.json")
+            if os.path.exists(campaign_file):
+                with open(campaign_file, "r") as f:
+                    data = json.load(f)
+                    campaign_nodes = data.get("nodes", [])
+            else:
+                print("Warning: campaign.json not found, loading empty map.")
+        except Exception as e:
+            print(f"Error loading campaign.json: {e}")
+
         self.overworld_map = OverworldMap(pygame.Rect(50, 100, 600, 400), on_node_click=self.load_module, nodes=campaign_nodes)
 
         self.running = True
