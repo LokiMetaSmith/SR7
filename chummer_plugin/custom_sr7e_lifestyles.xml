@@ -43,5 +43,41 @@
       <cost>1000</cost>
       <description>A deliberately offline, EMP-shielded bunker space in the Barrens. Immune to casual Matrix scanning, but provides no Grid access.</description>
     </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_8ab1a1ade168959c497867589397b6a5</id>
+      <name>Family/Dependents (Partner &amp; Kids)</name>
+      <cost>+3000</cost>
+      <description>A spouse and kids to support. Provides a safehouse and +1 to social tests to gather Hopepunk points. Enemies might leverage them as hostages.</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_304e8dce077fcf27ee75bbdcb376b095</id>
+      <name>Adopted Parent / Mentor</name>
+      <cost>+1000</cost>
+      <description>You support an elderly or injured mentor. Provides a free, safe place to crash and access to rare knowledge. High risk of them needing medical extraction.</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_a470c5d28daff5acff95f915337d4ec2</id>
+      <name>Lover / Romantic Connection</name>
+      <cost>+1500</cost>
+      <description>Regular dinners, gifts, and dates. Provides a dedicated safehouse and a strong connection (Loyalty 4). If the relationship sours, they might leak info.</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_9c56f89b4ee16f6fa143ae75f714d4ae</id>
+      <name>Addiction: BTLs (Better-Than-Life)</name>
+      <cost>+2000</cost>
+      <description>Escaping the harsh reality of the 6th World. Failing to pay this lifestyle tax causes a -2 penalty to all Mental attributes due to severe withdrawal.</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_53ed1fb74b87c3a4a0a4e3f7308ee87e</id>
+      <name>Addiction: VR Gaming</name>
+      <cost>+1000</cost>
+      <description>Gacha mechanics and subscription fees drain your cred. Failing to pay causes a -1 penalty to WIL and INT from distraction and tilt.</description>
+    </lifestyle>
+    <lifestyle>
+      <id>CUSTOM_LIFESTYLE_dbbafa41a0cd92df3982d604a75d8aba</id>
+      <name>Addiction: Designer Drugs (Novacoke/Kamikaze)</name>
+      <cost>+2500</cost>
+      <description>Chasing the chemical dragon. Failing to pay forces a physical withdrawal test (BOD 4) or suffer 3 Stun damage each day.</description>
+    </lifestyle>
   </lifestyles>
 </chummer>
