@@ -5,7 +5,7 @@ from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap
 
 
 class App:
-    def __init__(self, width: int = 1000, height: int = 700):
+    def __init__(self, width: int = 1000, height: int = 700, campaign_file: str = "campaign.json"):
         if not pygame.get_init():
             pygame.init()
         self.width = width
@@ -43,15 +43,15 @@ class App:
         try:
             import json
             import os
-            campaign_file = os.path.join(os.path.dirname(__file__), "..", "campaign.json")
-            if os.path.exists(campaign_file):
-                with open(campaign_file, "r") as f:
+            campaign_path = os.path.join(os.path.dirname(__file__), "..", campaign_file)
+            if os.path.exists(campaign_path):
+                with open(campaign_path, "r") as f:
                     data = json.load(f)
                     campaign_nodes = data.get("nodes", [])
             else:
-                print("Warning: campaign.json not found, loading empty map.")
+                print(f"Warning: {campaign_file} not found, loading empty map.")
         except Exception as e:
-            print(f"Error loading campaign.json: {e}")
+            print(f"Error loading {campaign_file}: {e}")
 
         self.overworld_map = OverworldMap(pygame.Rect(50, 100, 600, 400), on_node_click=self.load_module, nodes=campaign_nodes)
 

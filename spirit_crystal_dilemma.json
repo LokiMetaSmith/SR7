@@ -1,0 +1,46 @@
+{
+  "name": "The Crystal Chorus",
+  "description": "Deep within the irradiated and magically warped caverns of Zkazena, shimmering veins of living crystal pulse with a slow, resonant hum. These are not just magical reagents; they are fragments of an ancient, collective spirit consciousness. Mining them is akin to carving flesh.",
+  "is_chase_combat": false,
+  "scenario_rules": "This is a moral dilemma encounter. The 'monsters' (Crystal Spirits/Obsidimen) are not inherently evil, but are defending their living crystal forms and culture from being mined. They will attack defensively. If the players use non-lethal means, attempt to communicate, or use Hopepunk social mechanics (e.g., Empathy, Negotiation, or stopping the mining equipment), they can resolve the encounter peacefully and learn about the crystal culture. Reward peaceful resolution or tragic recognition of their sentience. Emphasize the melancholy of killing them if the players choose violence.",
+  "modifiers": {
+    "lighting": -2,
+    "background_count": 3
+  },
+  "map": {
+    "layout_ascii": [
+      " R R R R R R R ",
+      " R C . . . C R ",
+      " R . M M M . R ",
+      " R C . . . C R ",
+      " R R R E R R R "
+    ],
+    "legend": {
+      "R": "Cavern Rock (Impassable)",
+      "C": "Living Crystal Formations (Heavy Cover, Target)",
+      "M": "Automated Mining Drone (Objective/Hazard)",
+      "E": "Cave Entrance (Start)",
+      ".": "Uneven Cavern Floor (Poor Footing)"
+    },
+    "zones": [
+      {
+        "name": "Cavern Entrance",
+        "type": "Start Zone",
+        "cover": "None",
+        "description": "The entryway into the deep crystal cavern."
+      },
+      {
+        "name": "The Crystal Veins",
+        "type": "Cover",
+        "cover": "Heavy",
+        "description": "Large, shimmering outcroppings of living crystal that seem to hum with a slow, sad song."
+      },
+      {
+        "name": "Mining Equipment",
+        "type": "Hazard",
+        "cover": "Medium",
+        "description": "A cluster of automated mining drills ripping into the crystal."
+      }
+    ]
+  }
+}

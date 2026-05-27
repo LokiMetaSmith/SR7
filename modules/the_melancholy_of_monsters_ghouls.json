@@ -1,0 +1,11 @@
+{
+    "name": "The Melancholy of Monsters: Ghouls",
+    "description": "A side adventure confronting the horrific exploitation of feral ghouls in the Wuxing Leónization facility.",
+    "stages": [
+        {
+            "name": "The Waking Sleepers' Toil",
+            "scenario_file": "ghoul_labor_camp.json",
+            "team2": ["npc_templates/zkazena_ghoul.chum5"]
+        }
+    ]
+}

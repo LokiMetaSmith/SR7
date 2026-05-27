@@ -1,0 +1,46 @@
+{
+  "name": "The Waking Sleepers' Toil",
+  "description": "In the toxic depths of the Undercity, beneath the White Tower, a group of feral ghouls are chained and forced to labor in a highly magically irradiated zone. They process the raw materials for Wuxing's Leónization facility. They are starved, mutated, and driven mad, yet echoes of their former metahumanity remain in their eyes.",
+  "is_chase_combat": false,
+  "scenario_rules": "This is a moral dilemma encounter. The feral ghouls are hostile and will attack due to HMHVV-induced hunger and madness, but they are also enslaved victims forced into horrific labor. Players must choose between putting them out of their misery, defending themselves lethally, or finding a way to break their chains and subdue them non-lethally. Utilizing Hopepunk mechanics (e.g., trying to appeal to their fading metahumanity, disabling their shock-collars, or pacifying them) should be possible. Emphasize the tragedy of their existence and the cruelty of the corporate machinery exploiting them.",
+  "modifiers": {
+    "lighting": -1,
+    "background_count": 4
+  },
+  "map": {
+    "layout_ascii": [
+      " W W W W W W W ",
+      " W V . . . V W ",
+      " W . T T T . W ",
+      " W V . . . V W ",
+      " W W W D W W W "
+    ],
+    "legend": {
+      "W": "Irradiated Facility Wall (Impassable)",
+      "V": "Chemical Vats (Heavy Cover, Hazard)",
+      "T": "Processing Terminals (Medium Cover, Objective)",
+      "D": "Facility Door (Start)",
+      ".": "Toxic Grating (Poor Footing)"
+    },
+    "zones": [
+      {
+        "name": "Facility Entrance",
+        "type": "Start Zone",
+        "cover": "None",
+        "description": "The heavy blast doors leading into the processing floor."
+      },
+      {
+        "name": "The Vats",
+        "type": "Hazard",
+        "cover": "Heavy",
+        "description": "Large vats of toxic, magically active sludge. The ghouls are chained near here."
+      },
+      {
+        "name": "Processing Terminals",
+        "type": "Cover",
+        "cover": "Medium",
+        "description": "The control terminals for the facility and the ghouls' shock restraints."
+      }
+    ]
+  }
+}
