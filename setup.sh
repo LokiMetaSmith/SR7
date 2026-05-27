@@ -31,6 +31,13 @@ else
     exit 1
 fi
 
+echo "Installing system dependencies for PDF generation..."
+if command -v apt-get > /dev/null 2>&1; then
+    sudo apt-get update && sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra || echo "Warning: Failed to install apt dependencies. PDF generation may not work."
+else
+    echo "Warning: apt-get not found. Please manually install Pandoc and TeX Live for PDF generation."
+fi
+
 echo "Installing requirements..."
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
