@@ -3408,6 +3408,12 @@ Losing >2 Essence risks the "Augmentation Addict" Negative Quality.
 | Luxury | 100,000+ | Penthouse suites, clone banks, private arcology wings. Gain +2 Dice on all downtime healing tests, immune to minor lifestyle inconveniences (Matrix outages, traffic). |
 | Coffin Motel (Temporary) | 20 / night | A 2x1x1 meter sleeping tube. Secure enough, but induces claustrophobia. |
 | The "Null" Zone (Squatter variant) | 1,000 | A deliberately offline, EMP-shielded bunker space in the Barrens. Immune to casual Matrix scanning, but provides no Grid access. |
+| Family/Dependents (Partner & Kids) | +3,000 | A spouse and kids to support. Provides a safehouse and +1 to social tests to gather Hopepunk points. Enemies might leverage them as hostages. |
+| Adopted Parent / Mentor | +1,000 | You support an elderly or injured mentor. Provides a free, safe place to crash and access to rare knowledge. High risk of them needing medical extraction. |
+| Lover / Romantic Connection | +1,500 | Regular dinners, gifts, and dates. Provides a dedicated safehouse and a strong connection (Loyalty 4). If the relationship sours, they might leak info. |
+| Addiction: BTLs (Better-Than-Life) | +2,000 | Escaping the harsh reality of the 6th World. Failing to pay this lifestyle tax causes a -2 penalty to all Mental attributes due to severe withdrawal. |
+| Addiction: VR Gaming | +1,000 | Gacha mechanics and subscription fees drain your cred. Failing to pay causes a -1 penalty to WIL and INT from distraction and tilt. |
+| Addiction: Designer Drugs (Novacoke/Kamikaze) | +2,500 | Chasing the chemical dragon. Failing to pay forces a physical withdrawal test (BOD 4) or suffer 3 Stun damage each day. |
 
 ### V. THE "WEIRD AF" WORLD: BTLs & Manifestations
 The grey goo didn't just change the Matrix; it changed how digital information interacts with the physical world. The new street craze isn't just experiencing a BTL (Better-Than-Life) chip in your head—it's letting it out.

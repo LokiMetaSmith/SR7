@@ -89,6 +89,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Sync Combat Analyzer:** Sync `combat_analyzer.py` with all the new mechanics added to `combat_simulator.py` (Squad Combat, Edge spending, Social mechanics, Chunky Salsa, N.I.C.A).
 
 ## Recently Completed:
+*   [x] **Expand Lifestyles Rules:** Added new dramatic lifestyle options like Family, Adopted Parent, Lover, and various Addictions (BTL, Gaming, Drugs).
 *   [x] **Implement Cold Storage Mechanics:** Added rules for the Arcade Revival and Headcase Quintet Levels to the resurrection mechanics.
 *   [x] **Implement Resurrection Mechanics:** Added rules for cheating death, including narrative and character development implications.
 *   [x] **Astral Plane & Spirits:** Added details on the Astral Plane and Canonical Spirits (Elementals, Spirits of Man, Insect Spirits), including new narrative mechanics to fit the Merged World setting.
