@@ -103,13 +103,15 @@ This script uses an LLM to automatically generate narrative prose (like novellas
 python scripts/generate_novella.py
 ```
 
-### 9. LaTeX Updater (`update_latex_from_md.py`)
-This script extracts tables and formatted content directly from the Markdown rules (`Fan made Shadowrun 7th Edition rules.md`) and updates the corresponding LaTeX `.tex` file. This ensures the PDF rulebook always stays perfectly synchronized with any stat changes made in the markdown file without manual transcription.
+### 9. PDF Generation Pipeline (`generate_pdf.sh`)
+This script automatically compiles the Markdown rules (`Fan made Shadowrun 7th Edition rules.md`) into a formatted LaTeX document and PDF using Pandoc. It leverages a custom LaTeX template (`scripts/template.tex`) and a Lua filter (`scripts/multicols.lua`) to ensure the entire rulebook—text, headers, and tables—is correctly styled and structured in a two-column layout.
 
 **Usage:**
 ```bash
-python scripts/update_latex_from_md.py
+./scripts/generate_pdf.sh
 ```
+
+*(Note: The legacy script `scripts/update_latex_from_md.py` is deprecated in favor of this new Pandoc pipeline.)*
 
 ## Setup and Installation
 
