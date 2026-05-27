@@ -1,0 +1,19 @@
+{
+  "name": "Cold Storage Campaign",
+  "nodes": [
+    {
+      "name": "Cold Storage",
+      "x": 300,
+      "y": 200,
+      "module": "modules/cold_storage.json",
+      "radius": 15
+    },
+    {
+      "name": "Crystal Chorus",
+      "x": 500,
+      "y": 300,
+      "module": "modules/the_melancholy_of_monsters_crystals.json",
+      "radius": 15
+    }
+  ]
+}
