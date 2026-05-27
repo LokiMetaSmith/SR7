@@ -906,6 +906,963 @@ def simulate_trade(combatant: Combatant, item_name: str, item_value: int, fixer_
          print(f"Final Price for {item_name}: {final_price}¥")
     print("========================\n")
 
+
+def process_action(active, target, action_decision, state, llm, app=None):
+    from scripts.combat_simulator import RulesEngine, load_combatant, apply_nica_glitch
+    import random
+
+    action_lower = action_decision.lower()
+    action_text = ""
+    result_text = ""
+    edge_spent = False
+    attack_hits_glitched = False
+    def_hits_glitched = False
+    soak_hits_glitched = False
+    drain_hits_glitched = False
+    bio_hits_glitched = False
+
+    is_spell = "cast" in action_lower or any(
+        s.name.lower() in action_lower for s in active.spells
+    )
+    is_data_spike = "data spike" in action_lower
+    is_tether = "establish tether" in action_lower or ("tether" in action_lower and "erase" not in action_lower)
+    is_erase_tether = "erase tether" in action_lower
+    is_social = any(
+        kw in action_lower
+        for kw in [
+            "social",
+            "negotiate",
+            "negotiation",
+            "intimidate",
+            "intimidation",
+            "con ",
+            "influence",
+        ]
+    )
+    is_comm = "encrypted pulse" in action_lower or "dead drop" in action_lower
+    is_sprint = "sprint" in action_lower
+    is_cover = "take cover" in action_lower
+    is_yield = "yield" in action_lower
+    is_pass = "pass turn" in action_lower or "pass" == action_lower.strip()
+    is_explosive = False
+
+    is_compile = "compile" in action_lower or "sprite" in action_lower
+    is_summon = "summon" in action_lower or "conjure" in action_lower
+
+
+    if is_pass:
+
+        action_text = f"{active.name} passes their turn."
+        result_text = "No action taken."
+    elif is_yield:
+        active.has_yielded = True
+        action_text = f"{active.name} yields and surrenders!"
+        result_text = f"{active.name} drops their weapons and stops fighting."
+
+    elif is_compile:
+        sprite_level = 5
+        try:
+            import re
+            match = re.search(r'level\s*(\d+)', action_lower)
+            if match:
+                sprite_level = int(match.group(1))
+        except:
+            pass
+
+        compiling_pool = active.skills.get("Compiling", 0) + active.get_attribute("RES", 3)
+        compiling_hits, compiling_glitched, edge_spent = RulesEngine.roll_attack_with_edge(compiling_pool, active)
+
+        sprite_hits, sprite_glitched = RulesEngine.roll_dice(sprite_level)
+
+        net_hits = compiling_hits - sprite_hits
+
+        # Fading
+        fading_value = sprite_hits * 2
+        fading_resist_pool = active.get_attribute("WIL", 3) + active.get_attribute("RES", 3)
+        fading_resist_hits, fading_glitched = RulesEngine.roll_dice(fading_resist_pool)
+        fading_damage = max(0, fading_value - fading_resist_hits)
+        fading_type = "P" if fading_value > active.get_attribute("RES", 3) else "S"
+
+        action_text = f"{active.name} attempts to compile a Level {sprite_level} sprite (Compiling Pool: {compiling_pool})."
+        if net_hits > 0:
+            result_text = f"{active.name} successfully compiles a sprite with {net_hits} tasks. "
+            import glob
+
+            sprite_path = None
+            templates = glob.glob("npc_templates/*sprite*.chum5")
+            if templates:
+                import random
+                sprite_path = random.choice(templates)
+
+            if sprite_path:
+                try:
+                    sprite = load_combatant(sprite_path)
+                    sprite.name = f"{active.name}'s {sprite.name} (Level {sprite_level})"
+                    sprite.team = active.team
+
+                    # Adjust stats based on level loosely
+                    sprite.attributes['BOD'] = sprite_level
+                    sprite.attributes['AGI'] = sprite_level + 1
+                    sprite.attributes['REA'] = sprite_level
+                    sprite.attributes['STR'] = sprite_level
+                    sprite.attributes['WIL'] = sprite_level
+                    sprite.attributes['LOG'] = sprite_level
+                    sprite.attributes['INT'] = sprite_level
+                    sprite.attributes['CHA'] = sprite_level
+                    if hasattr(sprite, 'special_rules'):
+                        sprite.special_rules.append(f"Armor {sprite_level}")
+
+                    state.combatants.append(sprite)
+                    result_text += f"The {sprite.name} compiles and manifests! "
+                except Exception as e:
+                    pass
+            else:
+                from scripts.combat_simulator import Combatant, MatrixAttributes
+                sprite = Combatant(
+                    name=f"{active.name}'s Compiled Sprite (Level {sprite_level})",
+                    attributes={
+                        'BOD': sprite_level,
+                        'AGI': sprite_level + 1,
+                        'REA': sprite_level,
+                        'STR': sprite_level,
+                        'WIL': sprite_level,
+                        'LOG': sprite_level,
+                        'INT': sprite_level,
+                        'CHA': sprite_level,
+                    },
+                    skills={"Cybercombat": sprite_level, "Hacking": sprite_level},
+                    matrix=MatrixAttributes(),
+                    team=active.team
+                )
+                state.combatants.append(sprite)
+                result_text += f"The {sprite.name} compiles and manifests! "
+
+        else:
+            result_text = f"{active.name} fails to compile the sprite. "
+
+        if fading_damage > 0:
+            status = active.take_damage(fading_damage, fading_type)
+            result_text += f"{active.name} takes {fading_damage}{fading_type} Fading. {status}"
+        else:
+            result_text += f"{active.name} resists all Fading."
+
+    elif is_summon:
+        # Find spirit name and force in action or pick random
+        spirit_force = 5
+        try:
+            import re
+            match = re.search(r'force\s*(\d+)', action_lower)
+            if match:
+                spirit_force = int(match.group(1))
+        except:
+            pass
+
+        conjuring_pool = active.skills.get("Conjuring", 0) + active.get_attribute("MAG", 3)
+        conjuring_hits, conjuring_glitched, edge_spent = RulesEngine.roll_attack_with_edge(conjuring_pool, active)
+
+        spirit_hits, spirit_glitched = RulesEngine.roll_dice(spirit_force)
+
+        net_hits = conjuring_hits - spirit_hits
+
+        # Drain
+        drain_value = spirit_hits * 2
+        drain_resist_pool = active.get_attribute("WIL", 3) + active.get_attribute("LOG", 3)
+        drain_resist_hits, drain_glitched = RulesEngine.roll_dice(drain_resist_pool)
+        drain_damage = max(0, drain_value - drain_resist_hits)
+        drain_type = "P" if spirit_force > active.get_attribute("MAG", 3) else "S"
+
+        action_text = f"{active.name} attempts to summon a Force {spirit_force} spirit (Conjuring Pool: {conjuring_pool})."
+        if net_hits > 0:
+            result_text = f"{active.name} successfully summons a spirit with {net_hits} services. "
+            import glob
+
+            templates = glob.glob("npc_templates/*spirit*.chum5")
+            if templates:
+                spirit_path = random.choice(templates)
+                try:
+                    spirit = load_combatant(spirit_path)
+                    spirit.name = f"{active.name}'s {spirit.name} (Force {spirit_force})"
+                    spirit.team = active.team
+
+                    # Adjust stats based on force loosely
+                    spirit.attributes['BOD'] = spirit_force
+                    spirit.attributes['AGI'] = spirit_force + 1
+                    spirit.attributes['REA'] = spirit_force
+                    spirit.attributes['STR'] = spirit_force
+                    spirit.attributes['WIL'] = spirit_force
+                    spirit.attributes['LOG'] = spirit_force
+                    spirit.attributes['INT'] = spirit_force
+                    spirit.attributes['CHA'] = spirit_force
+
+                    state.combatants.append(spirit)
+                    result_text += f"The {spirit.name} materializes and joins the fight! "
+                except:
+                    pass
+        else:
+            result_text = f"{active.name} fails to summon the spirit. "
+
+        if drain_damage > 0:
+            status = active.take_damage(drain_damage, drain_type)
+            result_text += f"{active.name} takes {drain_damage}{drain_type} Summoning Drain. {status}"
+        else:
+            result_text += f"{active.name} resists all Summoning Drain."
+
+    elif is_comm:
+        # Secure communication
+        sneak_pool = active.skills.get("Sneaking", 0) + active.get_attribute("AGI", 3)
+        sneak_hits, sneak_glitched, edge_spent = RulesEngine.roll_attack_with_edge(sneak_pool, active)
+        attack_hits_glitched = sneak_glitched
+
+        # Opposed by highest perception among enemies
+        highest_perc_hits = 0
+        for enemy in state.combatants:
+            if enemy.team != active.team and enemy.is_alive and not enemy.has_yielded:
+                perc_pool = enemy.skills.get("Perception", 0) + enemy.get_attribute("INT", 3)
+                perc_hits, _ = RulesEngine.roll_dice(perc_pool)
+                if perc_hits > highest_perc_hits:
+                    highest_perc_hits = perc_hits
+
+        action_text = f"{active.name} attempts to use a secure communication protocol (Encrypted Pulse/Dead Drop)."
+        if sneak_hits >= highest_perc_hits:
+            result_text = "Transmission successful and undetected! +1 Team Advantage."
+            allies = [a for a in state.combatants if a.team == active.team and a.is_alive and not a.has_yielded and a != active]
+            if allies:
+                ally = random.choice(allies)
+                ally.edge += 1
+                result_text += f" {ally.name} gains +1 Edge."
+        else:
+            result_text = "Transmission intercepted! The enemy gains an advantage."
+            enemies = [e for e in state.combatants if e.team != active.team and e.is_alive and not e.has_yielded]
+            if enemies:
+                enemy = random.choice(enemies)
+                enemy.edge += 1
+                result_text += f" {enemy.name} gains +1 Edge."
+    elif is_sprint:
+        action_text = f"{active.name} uses a Complex Action to Sprint!"
+        result_text = f"{active.name} sprints to a new position, covering 16m."
+    elif is_cover:
+        action_text = f"{active.name} dives for cover!"
+        result_text = (
+            f"{active.name} secures Medium cover, granting a +2 defense bonus."
+        )
+        if active.zone:
+            active.zone.cover = "Medium"
+    elif is_social:
+        # Find the highest social skill
+        social_skills = {
+            k: v
+            for k, v in active.skills.items()
+            if k
+            in ["Con", "Negotiation", "Intimidation", "Leadership", "Etiquette"]
+        }
+        skill_name = (
+            max(social_skills, key=social_skills.get)
+            if social_skills
+            else "Con"
+        )
+        skill_rating = active.skills.get(skill_name, 0)
+        cha = active.get_attribute("CHA", 3)
+
+        attack_pool = cha + skill_rating + active.street_cred - active.notoriety
+        attack_hits, attack_hits_glitched, edge_spent = (
+            RulesEngine.roll_attack_with_edge(attack_pool, active)
+        )
+
+        target_wil = target.get_attribute("WIL", 3)
+        # Resisting attribute logic
+        if skill_name == "Intimidation":
+            target_resist = target.get_attribute("STR", 3)
+        elif skill_name in ["Negotiation", "Leadership"]:
+            target_resist = target.get_attribute("LOG", 3)
+        else:
+            target_resist = target.get_attribute("CHA", 3)
+
+        def_pool = target_wil + target_resist
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+
+        action_text = f"attempts to {skill_name} {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if attack_hits >= def_hits:
+            net_hits = attack_hits - def_hits
+            influence_gain = 1 + net_hits
+            current_influence = active.influence.get(target.name, 0)
+            active.influence[target.name] = current_influence + influence_gain
+            result_text = f"Social attack succeeds! {active.name} gains {influence_gain} Influence over {target.name}. (Total: {active.influence[target.name]}/{target_wil} needed to yield)."
+
+            if active.influence[target.name] >= target_wil:
+                target.has_yielded = True
+                result_text += f" {target.name}'s resolve breaks! They agree to the terms, yield, or surrender!"
+        else:
+            net_hits = def_hits - attack_hits
+            resolve_gain = 1 + net_hits
+            current_resolve = target.resolve.get(active.name, 0)
+            target.resolve[active.name] = current_resolve + resolve_gain
+            active_wil = active.get_attribute("WIL", 3)
+            result_text = f"Social attack fails! {target.name} gains {resolve_gain} Resolve against {active.name}. (Total: {target.resolve[active.name]}/{active_wil} needed to become intractable)."
+
+    elif is_spell and active.spells:
+        spell = next(
+            (s for s in active.spells if s.name.lower() in action_lower),
+            active.spells[0],
+        )
+        mag = active.get_attribute("MAG", 1)
+        spell_skill = active.skills.get("Spellcasting", 5)
+
+        attack_pool = mag + spell_skill
+        attack_hits, attack_hits_glitched, edge_spent = (
+            RulesEngine.roll_attack_with_edge(attack_pool, active)
+        )
+
+        # Defense
+        if spell.type == "M":
+            def_pool = target.get_attribute("ESS", 6) + target.get_attribute(
+                "WIL", 3
+            )
+        else:
+            def_pool = target.get_attribute("REA", 3) + target.get_attribute(
+                "INT", 3
+            )
+
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+        net_hits = attack_hits - def_hits
+
+        action_text = f"casts {spell.name} at {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            base_damage = mag  # Assume Force = MAG
+            modified_damage = base_damage + net_hits
+
+            if spell.type == "M":
+                soak_pool = 0  # Mana spells ignore armor
+            else:
+                soak_pool = max(
+                    0, target.get_attribute("BOD", 3) + target.total_armor - mag
+                )
+
+            soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+            final_damage = max(0, modified_damage - soak_hits)
+
+            result_text = f"Spell hits! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} P damage."
+            result_text += target.take_damage(final_damage, 'P')
+        else:
+            result_text = f"Spell misses or is resisted by {target.name}."
+
+        # Drain
+        drain_value = max(2, mag - 2)  # Assume F-2
+        drain_resist_pool = active.get_attribute(
+            "WIL", 3
+        ) + active.get_attribute("LOG", 3)
+        # Shielding Metamagic
+        for rule in active.special_rules:
+            if rule.lower().startswith("shielding"):
+                m = re.search(r"shielding (\d+)", rule, re.IGNORECASE)
+                drain_resist_pool += int(m.group(1)) if m else 1
+                break
+
+        drain_hits, drain_hits_glitched = RulesEngine.roll_dice(
+            drain_resist_pool
+        )
+        drain_taken = max(0, drain_value - drain_hits)
+
+        # Check for physical drain due to Matrix noise in merged world
+        drain_type = "Stun"
+        if self.state.environment.modifiers.get("background_count", 0) > 2 or drain_value > mag:
+            drain_type = "Physical"
+
+        result_text += f" {active.name} rolls {drain_resist_pool} to resist drain, taking {drain_taken} {drain_type} damage."
+
+        if drain_type == "Physical":
+            active.take_damage(drain_taken, "P")
+        else:
+            active.take_damage(drain_taken, "S")
+
+        if (
+            target.physical_damage >= target.physical_track
+            or target.stun_damage >= target.stun_track
+        ):
+            target.is_alive = False
+            result_text += f" {target.name} is incapacitated!"
+        if (
+            active.physical_damage >= active.physical_track
+            or active.stun_damage >= active.stun_track
+        ):
+            active.is_alive = False
+            result_text += f" {active.name} is incapacitated from Drain!"
+
+    elif is_data_spike:
+        if "Null-Suit" in target.special_rules:
+            action_text = f"attempts a Matrix action on {target.name}"
+            result_text = f"Action fails: {target.name} is wearing a Null-Suit and is immune to Matrix targeting."
+            narration = llm.narrate_action(active, action_text, result_text, state=state)
+            state.log(narration)
+            return action_text, result_text, edge_spent
+        log = active.get_attribute("LOG", 3)
+        cyber_skill = active.skills.get("Cybercombat", 5)
+        attack_pool = log + cyber_skill
+        attack_hits, attack_hits_glitched, edge_spent = (
+            RulesEngine.roll_attack_with_edge(attack_pool, active)
+        )
+
+        def_pool = target.get_attribute("INT", 3) + target.matrix.firewall
+        if target.null_bags > 0:
+            def_pool += target.null_bags
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+        net_hits = attack_hits - def_hits
+
+        action_text = f"launches a Data Spike at {target.name}'s persona ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            tethers = active.tethers.get(target.name, 0)
+            modified_damage = active.matrix.attack + net_hits + (tethers * 2)
+
+            soak_pool = target.matrix.data_processing + target.matrix.firewall
+            soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+            final_damage = max(0, modified_damage - soak_hits)
+
+            result_text = f"Data Spike connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Stun (Biofeedback) damage."
+            target.stun_damage += final_damage
+
+            # Check Mutual Tether Feedback Loop
+            if target.tethers.get(active.name, 0) > 0 and active.tethers.get(target.name, 0) > 0:
+                feedback_damage = final_damage // 2
+                if feedback_damage > 0:
+                    active.stun_damage += feedback_damage
+                    result_text += f" Mutual Tethers trigger a Feedback Loop! {active.name} takes {feedback_damage} unresisted Stun feedback."
+                    if active.stun_damage >= active.stun_track:
+                        active.is_alive = False
+                        result_text += f" {active.name} is incapacitated by the feedback!"
+
+            if (
+                target.physical_damage >= target.physical_track
+                or target.stun_damage >= target.stun_track
+            ):
+                target.is_alive = False
+                result_text += f" {target.name} is incapacitated!"
+        else:
+            result_text = (
+                f"Data Spike is deflected by {target.name}'s firewall."
+            )
+
+    elif "sprint" in action_lower or "move" in action_lower:
+        action_text = f"sprints and repositions"
+        result_text = f"{active.name} moves 16m (Complex Action), shifting Range Bands or securing better cover."
+        if active.zone and active.zone.cover == "None":
+            result_text += (
+                " They scramble towards whatever light cover they can find."
+            )
+        elif getattr(target, "zone", None) and target.zone != active.zone:
+            result_text += (
+                f" They close the distance towards {target.name}'s zone."
+            )
+
+    elif "ram" in action_lower:
+        attack_pool = active.get_attribute("REA", 3) + active.skills.get(
+            "Piloting", 4
+        )
+        if active.jumped_in_vehicle:
+            attack_pool += (
+                active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+            )
+
+            # Target threshold reduced by Control Rig rating
+            threshold_reduction = getattr(active, 'control_rig', 0)
+        else:
+            threshold_reduction = 0
+
+        attack_hits, attack_hits_glitched, edge_spent = (
+            RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
+        )
+
+        def_pool = target.get_attribute("REA", 3) + target.skills.get(
+            "Piloting", 4
+        )
+
+        # Evade bonus
+        evade_mod = 0
+        for rule in target.special_rules:
+            if rule.startswith("Evade"):
+                try:
+                    evade_mod += int(rule.split("(+")[1].split(")")[0])
+                except:
+                    pass
+
+        def_pool += evade_mod
+
+        if target.jumped_in_vehicle:
+            def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(max(1, def_pool))
+
+        # Apply Threshold reduction logic here.
+        # Threshold effectively subtracts from def_hits to calculate net_hits
+        net_hits = attack_hits - max(0, def_hits - threshold_reduction)
+
+        action_text = f"attempts to RAM {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            active_veh = active.jumped_in_vehicle
+            target_veh = target.jumped_in_vehicle
+
+            if active_veh and target_veh:
+                base_ram_dmg = active_veh.body + active_veh.speed
+                active_resist_pool = (active_veh.body + active_veh.armor) * 2 if (active_veh.body + active_veh.armor) > (target_veh.body + target_veh.armor) else (active_veh.body + active_veh.armor)
+                target_resist_pool = (target_veh.body + target_veh.armor) * 2 if (target_veh.body + target_veh.armor) > (active_veh.body + active_veh.armor) else (target_veh.body + target_veh.armor)
+
+                active_resist_hits, _ = RulesEngine.roll_dice(active_resist_pool)
+                target_resist_hits, _ = RulesEngine.roll_dice(target_resist_pool)
+
+                active_dmg_taken = max(0, base_ram_dmg - active_resist_hits)
+                target_dmg_taken = max(0, base_ram_dmg - target_resist_hits)
+
+                if (active_veh.body + active_veh.armor) > (target_veh.body + target_veh.armor):
+                    active_dmg_taken = active_dmg_taken // 2
+                elif (target_veh.body + target_veh.armor) > (active_veh.body + active_veh.armor):
+                    target_dmg_taken = target_dmg_taken // 2
+
+                if active.jumped_in_vehicle:
+                    # Route physical damage to vehicle, triggering possession logic
+                    active.jumped_in_vehicle.physical_damage += active_dmg_taken
+                    active_bio = active_dmg_taken // 2
+                    active_bio_resist = active.get_attribute("WIL", 3) + active.get_attribute("BOD", 3)
+                    active_bio_hits, _ = RulesEngine.roll_dice(active_bio_resist)
+                    active_net_bio = max(0, active_bio - active_bio_hits)
+                    active.stun_damage += active_net_bio
+
+                    res1 = f" {active.name}'s vehicle takes {active_dmg_taken} damage! {active.name} resists biofeedback with {active_bio_resist} dice, taking {active_net_bio} Stun biofeedback!"
+                    if active.jumped_in_vehicle.physical_damage >= active.jumped_in_vehicle.physical_track:
+                        active.jumped_in_vehicle.is_destroyed = True
+                        active.stun_damage += 6
+                        active.jumped_in_vehicle = None
+                        res1 += f" The vehicle is DESTROYED! {active.name} takes 6 Stun dumpshock damage!"
+                else:
+                    res1 = active.take_damage(active_dmg_taken, 'P')
+
+                if target.jumped_in_vehicle:
+                    target.jumped_in_vehicle.physical_damage += target_dmg_taken
+                    target_bio = target_dmg_taken // 2
+                    target_bio_resist = target.get_attribute("WIL", 3) + target.get_attribute("BOD", 3)
+                    target_bio_hits, _ = RulesEngine.roll_dice(target_bio_resist)
+                    target_net_bio = max(0, target_bio - target_bio_hits)
+                    target.stun_damage += target_net_bio
+
+                    res2 = f" {target.name}'s vehicle takes {target_dmg_taken} damage! {target.name} resists biofeedback with {target_bio_resist} dice, taking {target_net_bio} Stun biofeedback!"
+                    if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
+                        target.jumped_in_vehicle.is_destroyed = True
+                        target.stun_damage += 6
+                        target.jumped_in_vehicle = None
+                        res2 += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
+                else:
+                    res2 = target.take_damage(target_dmg_taken, 'P')
+
+                result_text = f"Ram successful! Both vehicles crash.{res1}{res2}"
+            else:
+                base_ram_dmg = active.get_attribute("BOD", 3)
+                if active.jumped_in_vehicle:
+                    base_ram_dmg = active.jumped_in_vehicle.body + active.jumped_in_vehicle.speed
+                result_text = f"Ram successful! "
+
+                if target.jumped_in_vehicle:
+                    target.jumped_in_vehicle.physical_damage += base_ram_dmg
+                    target_bio = base_ram_dmg // 2
+                    target_bio_resist = target.get_attribute("WIL", 3) + target.get_attribute("BOD", 3)
+                    target_bio_hits, _ = RulesEngine.roll_dice(target_bio_resist)
+                    target_net_bio = max(0, target_bio - target_bio_hits)
+                    target.stun_damage += target_net_bio
+
+                    result_text += f"{target.name}'s vehicle takes {base_ram_dmg} damage! {target.name} resists biofeedback with {target_bio_resist} dice, taking {target_net_bio} Stun biofeedback!"
+                    if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
+                        target.jumped_in_vehicle.is_destroyed = True
+                        target.stun_damage += 6
+                        target.jumped_in_vehicle = None
+                        result_text += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
+                else:
+                    result_text += target.take_damage(base_ram_dmg, 'P')
+        else:
+            result_text = f"Ram maneuver fails! {target.name} swerves out of the way."
+
+    elif "cut off" in action_lower:
+        attack_pool = active.get_attribute("REA", 3) + active.skills.get(
+            "Piloting", 4
+        )
+        if active.jumped_in_vehicle:
+            attack_pool += (
+                active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+            )
+            threshold_reduction = getattr(active, 'control_rig', 0)
+        else:
+            threshold_reduction = 0
+
+        attack_hits, attack_hits_glitched, edge_spent = (
+            RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
+        )
+
+        def_pool = target.get_attribute("REA", 3) + target.skills.get(
+            "Piloting", 4
+        )
+
+        # Evade bonus
+        evade_mod = 0
+        for rule in target.special_rules:
+            if rule.startswith("Evade"):
+                try:
+                    evade_mod += int(rule.split("(+")[1].split(")")[0])
+                except:
+                    pass
+
+        def_pool += evade_mod
+
+        if target.jumped_in_vehicle:
+            def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(max(1, def_pool))
+
+        net_hits = attack_hits - max(0, def_hits - threshold_reduction)
+        action_text = f"attempts to CUT OFF {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            result_text = f"Cut Off successful! {target.name} is forced to make a Crash Test."
+        else:
+            result_text = f"Cut Off fails! {target.name} avoids the block."
+
+    elif "evade" in action_lower:
+        action_text = f"attempts to Evade"
+        if active.jumped_in_vehicle:
+            evade_bonus = active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+            active.special_rules.append(f"Evade (+{evade_bonus})")
+            result_text = f"Evade successful! {active.name} gains +{evade_bonus} to defense pool this round."
+        else:
+            evade_bonus = active.get_attribute("REA", 3) // 2
+            active.special_rules.append(f"Evade (+{evade_bonus})")
+            result_text = f"Evade successful! {active.name} focuses on dodging, gaining +{evade_bonus} defense."
+
+    elif (
+        "chase" in action_lower
+        or "pilot" in action_lower
+        or "drive" in action_lower
+        or "catch up" in action_lower
+        or "break away" in action_lower
+    ):
+        attack_pool = active.get_attribute("REA", 3) + active.skills.get(
+            "Piloting", 4
+        )
+        if active.jumped_in_vehicle:
+            attack_pool += (
+                active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+            )
+            threshold_reduction = getattr(active, 'control_rig', 0)
+        else:
+            threshold_reduction = 0
+
+        attack_hits, attack_hits_glitched, edge_spent = (
+            RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
+        )
+
+        def_pool = target.get_attribute("REA", 3) + target.skills.get(
+            "Piloting", 4
+        )
+
+        # Evade bonus
+        evade_mod = 0
+        for rule in target.special_rules:
+            if rule.startswith("Evade"):
+                try:
+                    evade_mod += int(rule.split("(+")[1].split(")")[0])
+                except:
+                    pass
+
+        def_pool += evade_mod
+
+        if target.jumped_in_vehicle:
+            def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(max(1, def_pool))
+
+        net_hits = attack_hits - max(0, def_hits - threshold_reduction)
+        action_text = f"attempts a chase maneuver against {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            result_text = f"Chase maneuver successful! {active.name} gains the upper hand and shifts the Range Band."
+        else:
+            result_text = f"Chase maneuver fails! {target.name} outmaneuvers {active.name}."
+
+    elif is_erase_tether:
+        log = active.get_attribute("LOG", 3)
+        computer_skill = active.skills.get("Computer", 4)
+        attack_pool = log + computer_skill
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        def_pool = target.get_attribute("LOG", 3) + target.skills.get("Hacking", 5)
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+        net_hits = attack_hits - def_hits
+
+        action_text = f"attempts to erase Tethers held by {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            current_tethers = active.tethers.get(target.name, 0)
+            if current_tethers > 0:
+                removed = 2 if net_hits >= 3 else 1
+                active.tethers[target.name] = max(0, current_tethers - removed)
+                result_text = f"Successfully erased {removed} Tether(s)! {target.name} now holds {active.tethers[target.name]} Tether(s) on {active.name}."
+            else:
+                result_text = f"{target.name} holds no Tethers on {active.name} to erase."
+        else:
+            result_text = f"Failed to erase Tether. {target.name}'s connection remains secure."
+
+    elif is_tether:
+        if "Null-Suit" in target.special_rules:
+            action_text = f"attempts a Matrix action on {target.name}"
+            result_text = f"Action fails: {target.name} is wearing a Null-Suit and is immune to Matrix targeting."
+            narration = llm.narrate_action(active, action_text, result_text, state=state)
+            state.log(narration)
+            return action_text, result_text, edge_spent
+        log = active.get_attribute("LOG", 3)
+        hack_skill = active.skills.get("Hacking", 5)
+        attack_pool = log + hack_skill
+        attack_hits, attack_hits_glitched, edge_spent = (
+            RulesEngine.roll_attack_with_edge(attack_pool, active)
+        )
+
+        def_pool = target.get_attribute("WIL", 3) + target.matrix.firewall
+        if target.null_bags > 0:
+            def_pool += target.null_bags
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+        net_hits = attack_hits - def_hits
+
+        action_text = f"attempts to establish a Tether on {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            current_tethers = active.tethers.get(target.name, 0)
+            active.tethers[target.name] = current_tethers + 1
+            result_text = f"Tether established! {active.name} now has {active.tethers[target.name]} Tether(s) on {target.name}."
+        else:
+            result_text = f"Tether attempt blocked by {target.name}'s firewall."
+
+    else:
+        # Weapon Attack
+        chosen_weapon_name = ""
+        available_weapons = (
+            active.jumped_in_vehicle.weapons
+            if active.jumped_in_vehicle
+            else active.weapons
+        )
+        for w in available_weapons:
+            if w.name.lower() in action_lower:
+                chosen_weapon_name = w.name
+                break
+
+        if chosen_weapon_name:
+            weapon = next(
+                (w for w in available_weapons if w.name == chosen_weapon_name),
+                available_weapons[0],
+            )
+        else:
+            weapon = (
+                available_weapons[0]
+                if available_weapons
+                else Weapon("Unarmed Strike", 4, "S", 0)
+            )
+
+        # Scenario Modifiers
+        lighting_mod = state.environment.modifiers.get("lighting", 0)
+
+        # Attack Roll: Agility + Skill
+        if active.jumped_in_vehicle:
+            # Gunnery + Agility + Control Rig
+            attack_pool = (
+                active.get_attribute("AGI", 3)
+                + active.skills.get("Gunnery", 5)
+                + getattr(active, 'control_rig', 0)
+                + lighting_mod
+            )
+            if active.jumped_in_vehicle.swarm_count > 1:
+                attack_pool += active.jumped_in_vehicle.swarm_count - 1
+        else:
+            attack_pool = active.get_attribute("AGI", 3) + 5 + lighting_mod
+
+        wild_dice_count = 0
+        bg_count = state.environment.modifiers.get("background_count", 0)
+        if bg_count > 0:
+            wild_dice_count += bg_count
+
+        if "Sam" in active.name or "Ascended AI" in active.name:
+            wild_dice_count = attack_pool  # Overkill Protocol
+
+        attack_hits, attack_hits_glitched, edge_spent = (
+            RulesEngine.roll_attack_with_edge(max(1, attack_pool), active, wild_dice_count=wild_dice_count)
+        )
+
+        # Defense Roll: Reaction + Intuition + Cover
+        if target.jumped_in_vehicle:
+            def_pool = (
+                target.get_attribute("REA", 3)
+                + target.get_attribute("INT", 3)
+                + target.jumped_in_vehicle.handling
+            )
+        else:
+            def_pool = target.get_attribute("REA", 3) + target.get_attribute(
+                "INT", 3
+            )
+
+        # Apply Cover
+        if target.zone:
+            if target.zone.cover.lower() == "light":
+                def_pool += 1
+            elif target.zone.cover.lower() == "medium":
+                def_pool += 2
+            elif target.zone.cover.lower() == "heavy":
+                def_pool += 4
+
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+
+        net_hits = attack_hits - def_hits
+        action_text = f"attacks {target.name} with {weapon.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        is_explosive = (
+            "grenade" in weapon.name.lower()
+            or "missile" in weapon.name.lower()
+            or "rocket" in weapon.name.lower()
+        )
+
+        if is_explosive:
+            # Grenades can deviate, but for sim we hit the target zone
+            net_hits = max(0, net_hits)
+            base_dmg = weapon.damage
+
+            is_chunky = target.zone and (
+                target.zone.cover.lower() == "heavy"
+                or "enclosed" in target.zone.description.lower()
+                or "enclosed" in target.zone.name.lower()
+            )
+
+            if is_chunky:
+                base_dmg *= 2
+                action_text += " [CHUNKY SALSA EFFECT!]"
+
+            modified_damage = base_dmg + net_hits
+            modified_ap = weapon.ap
+
+            # Gather targets in the AoE blast radius (same zone, or just the target if no zone)
+            aoe_targets = []
+
+            if target.zone:
+                state.environment.recent_blasts.append(target.zone.name)
+
+            for c in state.combatants:
+                if c.is_alive and not c.has_yielded:
+                    if target.zone and c.zone == target.zone:
+                        aoe_targets.append(c)
+                    elif not target.zone and c.name == target.name:
+                        aoe_targets.append(c)
+
+            result_text = f"Explosive detonates! Hitting {len(aoe_targets)} target(s) in zone."
+
+            for c_target in aoe_targets:
+                # Dropoff can be abstracted or just full damage for everyone in the zone
+                if c_target.jumped_in_vehicle:
+                    soak_pool = max(0, c_target.jumped_in_vehicle.body + c_target.jumped_in_vehicle.armor + modified_ap)
+                else:
+                    soak_pool = max(0, c_target.get_attribute("BOD", 3) + c_target.total_armor + modified_ap)
+
+                soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+                final_damage = max(0, modified_damage - soak_hits)
+
+                result_text += f"\n- {c_target.name} soaks {soak_hits} hits, taking {final_damage} {weapon.damage_type} damage."
+
+                result_text += c_target.take_damage(final_damage, weapon.damage_type)
+
+        elif net_hits > 0:
+            base_dmg = weapon.damage
+            modified_damage = base_dmg + net_hits
+            modified_ap = weapon.ap
+
+            # Soak Roll: Body + Armor + AP
+            # Evade bonus
+            evade_mod = 0
+            for rule in target.special_rules:
+                if rule.startswith("Evade"):
+                    try:
+                        evade_mod += int(rule.split("(+")[1].split(")")[0])
+                    except:
+                        pass
+
+            if target.jumped_in_vehicle:
+                soak_pool = max(
+                    0,
+                    target.jumped_in_vehicle.body
+                    + target.jumped_in_vehicle.armor
+                    + modified_ap
+                    + evade_mod,
+                )
+            else:
+                soak_pool = max(
+                    0,
+                    target.get_attribute("BOD", 3)
+                    + target.armor
+                    + modified_ap,
+                )
+
+            soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+
+            final_damage = max(0, modified_damage - soak_hits)
+            result_text = f"Attack succeeds! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} {weapon.damage_type} damage."
+
+            result_text += target.take_damage(final_damage, weapon.damage_type)
+
+            # Check Mutual Tether Feedback Loop
+            if target.tethers.get(active.name, 0) > 0 and active.tethers.get(target.name, 0) > 0:
+                feedback_damage = final_damage // 2
+                if feedback_damage > 0:
+                    active.stun_damage += feedback_damage
+                    result_text += f" Mutual Tethers trigger a Feedback Loop! {active.name} takes {feedback_damage} unresisted Stun feedback."
+                    if active.stun_damage >= active.stun_track:
+                        active.is_alive = False
+                        result_text += f" {active.name} is incapacitated by the feedback!"
+
+            if (
+                target.physical_damage >= target.physical_track
+                or target.stun_damage >= target.stun_track
+            ):
+                target.is_alive = False
+                result_text += f" {target.name} is incapacitated!"
+        else:
+            result_text = f"Attack misses! {target.name} dodges the attack."
+
+    # Narration
+    if edge_spent:
+        action_text += " [Spent Edge to re-roll misses!]"
+
+    if "N.I.C.A." in active.special_rules:
+        if locals().get("attack_hits_glitched") or locals().get(
+            "drain_hits_glitched"
+        ):
+            effect = apply_nica_glitch(active)
+            action_text += f" [N.I.C.A. Glitch! Rogue 'ware sparks! {effect}]"
+
+    if "N.I.C.A." in target.special_rules:
+        if (
+            locals().get("def_hits_glitched")
+            or locals().get("soak_hits_glitched")
+            or locals().get("bio_hits_glitched")
+        ):
+            effect = apply_nica_glitch(target)
+            result_text += (
+                f" [N.I.C.A. Glitch! Target's rogue 'ware sparks! {effect}]"
+            )
+
+    if (
+        target.physical_damage >= target.physical_track
+        or target.stun_damage >= target.stun_track
+    ):
+        target.is_alive = False
+        result_text += f" {target.name} is incapacitated!"
+    if (
+        active.physical_damage >= active.physical_track
+        or active.stun_damage >= active.stun_track
+    ):
+        active.is_alive = False
+        action_text += f" {active.name} is incapacitated!"
+
+    if is_explosive:
+        state.log(f"--- AoE Mechanics ---\n{result_text}\n---------------------")
+    return action_text, result_text, edge_spent
+
 def main():
     parser = argparse.ArgumentParser(
         description="Autonomous Combat Simulator for Shadowrun 7E"
@@ -1150,868 +2107,8 @@ def main():
 
             state.log(f"[{active.name} Tactical Decision]: {action_decision.strip()}")
 
-            action_lower = action_decision.lower()
-            action_text = ""
-            result_text = ""
-            edge_spent = False
-            attack_hits_glitched = False
-            def_hits_glitched = False
-            soak_hits_glitched = False
-            drain_hits_glitched = False
-            bio_hits_glitched = False
+            action_text, result_text, edge_spent = process_action(active, target, action_decision, state, llm, app)
 
-            is_spell = "cast" in action_lower or any(
-                s.name.lower() in action_lower for s in active.spells
-            )
-            is_data_spike = "data spike" in action_lower
-            is_tether = "establish tether" in action_lower or ("tether" in action_lower and "erase" not in action_lower)
-            is_erase_tether = "erase tether" in action_lower
-            is_social = any(
-                kw in action_lower
-                for kw in [
-                    "social",
-                    "negotiate",
-                    "negotiation",
-                    "intimidate",
-                    "intimidation",
-                    "con ",
-                    "influence",
-                ]
-            )
-            is_comm = "encrypted pulse" in action_lower or "dead drop" in action_lower
-            is_sprint = "sprint" in action_lower
-            is_cover = "take cover" in action_lower
-            is_yield = "yield" in action_lower
-            is_pass = "pass turn" in action_lower or "pass" == action_lower.strip()
-            is_explosive = False
-
-
-            is_summon = "summon" in action_lower or "conjure" in action_lower
-
-            if is_pass:
-
-                action_text = f"{active.name} passes their turn."
-                result_text = "No action taken."
-            elif is_yield:
-                active.has_yielded = True
-                action_text = f"{active.name} yields and surrenders!"
-                result_text = f"{active.name} drops their weapons and stops fighting."
-
-            elif is_summon:
-                # Find spirit name and force in action or pick random
-                spirit_force = 5
-                try:
-                    import re
-                    match = re.search(r'force\s*(\d+)', action_lower)
-                    if match:
-                        spirit_force = int(match.group(1))
-                except:
-                    pass
-
-                conjuring_pool = active.skills.get("Conjuring", 0) + active.get_attribute("MAG", 3)
-                conjuring_hits, conjuring_glitched, edge_spent = RulesEngine.roll_attack_with_edge(conjuring_pool, active)
-
-                spirit_hits, spirit_glitched = RulesEngine.roll_dice(spirit_force)
-
-                net_hits = conjuring_hits - spirit_hits
-
-                # Drain
-                drain_value = spirit_hits * 2
-                drain_resist_pool = active.get_attribute("WIL", 3) + active.get_attribute("LOG", 3)
-                drain_resist_hits, drain_glitched = RulesEngine.roll_dice(drain_resist_pool)
-                drain_damage = max(0, drain_value - drain_resist_hits)
-                drain_type = "P" if spirit_force > active.get_attribute("MAG", 3) else "S"
-
-                action_text = f"{active.name} attempts to summon a Force {spirit_force} spirit (Conjuring Pool: {conjuring_pool})."
-                if net_hits > 0:
-                    result_text = f"{active.name} successfully summons a spirit with {net_hits} services. "
-                    import glob
-
-                    templates = glob.glob("npc_templates/*spirit*.chum5")
-                    if templates:
-                        spirit_path = random.choice(templates)
-                        try:
-                            spirit = load_combatant(spirit_path)
-                            spirit.name = f"{active.name}'s {spirit.name} (Force {spirit_force})"
-                            spirit.team = active.team
-
-                            # Adjust stats based on force loosely
-                            spirit.attributes['BOD'] = spirit_force
-                            spirit.attributes['AGI'] = spirit_force + 1
-                            spirit.attributes['REA'] = spirit_force
-                            spirit.attributes['STR'] = spirit_force
-                            spirit.attributes['WIL'] = spirit_force
-                            spirit.attributes['LOG'] = spirit_force
-                            spirit.attributes['INT'] = spirit_force
-                            spirit.attributes['CHA'] = spirit_force
-
-                            state.combatants.append(spirit)
-                            result_text += f"The {spirit.name} materializes and joins the fight! "
-                        except:
-                            pass
-                else:
-                    result_text = f"{active.name} fails to summon the spirit. "
-
-                if drain_damage > 0:
-                    status = active.take_damage(drain_damage, drain_type)
-                    result_text += f"{active.name} takes {drain_damage}{drain_type} Summoning Drain. {status}"
-                else:
-                    result_text += f"{active.name} resists all Summoning Drain."
-
-            elif is_comm:
-                # Secure communication
-                sneak_pool = active.skills.get("Sneaking", 0) + active.get_attribute("AGI", 3)
-                sneak_hits, sneak_glitched, edge_spent = RulesEngine.roll_attack_with_edge(sneak_pool, active)
-                attack_hits_glitched = sneak_glitched
-
-                # Opposed by highest perception among enemies
-                highest_perc_hits = 0
-                for enemy in state.combatants:
-                    if enemy.team != active.team and enemy.is_alive and not enemy.has_yielded:
-                        perc_pool = enemy.skills.get("Perception", 0) + enemy.get_attribute("INT", 3)
-                        perc_hits, _ = RulesEngine.roll_dice(perc_pool)
-                        if perc_hits > highest_perc_hits:
-                            highest_perc_hits = perc_hits
-
-                action_text = f"{active.name} attempts to use a secure communication protocol (Encrypted Pulse/Dead Drop)."
-                if sneak_hits >= highest_perc_hits:
-                    result_text = "Transmission successful and undetected! +1 Team Advantage."
-                    allies = [a for a in state.combatants if a.team == active.team and a.is_alive and not a.has_yielded and a != active]
-                    if allies:
-                        ally = random.choice(allies)
-                        ally.edge += 1
-                        result_text += f" {ally.name} gains +1 Edge."
-                else:
-                    result_text = "Transmission intercepted! The enemy gains an advantage."
-                    enemies = [e for e in state.combatants if e.team != active.team and e.is_alive and not e.has_yielded]
-                    if enemies:
-                        enemy = random.choice(enemies)
-                        enemy.edge += 1
-                        result_text += f" {enemy.name} gains +1 Edge."
-            elif is_sprint:
-                action_text = f"{active.name} uses a Complex Action to Sprint!"
-                result_text = f"{active.name} sprints to a new position, covering 16m."
-            elif is_cover:
-                action_text = f"{active.name} dives for cover!"
-                result_text = (
-                    f"{active.name} secures Medium cover, granting a +2 defense bonus."
-                )
-                if active.zone:
-                    active.zone.cover = "Medium"
-            elif is_social:
-                # Find the highest social skill
-                social_skills = {
-                    k: v
-                    for k, v in active.skills.items()
-                    if k
-                    in ["Con", "Negotiation", "Intimidation", "Leadership", "Etiquette"]
-                }
-                skill_name = (
-                    max(social_skills, key=social_skills.get)
-                    if social_skills
-                    else "Con"
-                )
-                skill_rating = active.skills.get(skill_name, 0)
-                cha = active.get_attribute("CHA", 3)
-
-                attack_pool = cha + skill_rating + active.street_cred - active.notoriety
-                attack_hits, attack_hits_glitched, edge_spent = (
-                    RulesEngine.roll_attack_with_edge(attack_pool, active)
-                )
-
-                target_wil = target.get_attribute("WIL", 3)
-                # Resisting attribute logic
-                if skill_name == "Intimidation":
-                    target_resist = target.get_attribute("STR", 3)
-                elif skill_name in ["Negotiation", "Leadership"]:
-                    target_resist = target.get_attribute("LOG", 3)
-                else:
-                    target_resist = target.get_attribute("CHA", 3)
-
-                def_pool = target_wil + target_resist
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
-
-                action_text = f"attempts to {skill_name} {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-                if attack_hits >= def_hits:
-                    net_hits = attack_hits - def_hits
-                    influence_gain = 1 + net_hits
-                    current_influence = active.influence.get(target.name, 0)
-                    active.influence[target.name] = current_influence + influence_gain
-                    result_text = f"Social attack succeeds! {active.name} gains {influence_gain} Influence over {target.name}. (Total: {active.influence[target.name]}/{target_wil} needed to yield)."
-
-                    if active.influence[target.name] >= target_wil:
-                        target.has_yielded = True
-                        result_text += f" {target.name}'s resolve breaks! They agree to the terms, yield, or surrender!"
-                else:
-                    net_hits = def_hits - attack_hits
-                    resolve_gain = 1 + net_hits
-                    current_resolve = target.resolve.get(active.name, 0)
-                    target.resolve[active.name] = current_resolve + resolve_gain
-                    active_wil = active.get_attribute("WIL", 3)
-                    result_text = f"Social attack fails! {target.name} gains {resolve_gain} Resolve against {active.name}. (Total: {target.resolve[active.name]}/{active_wil} needed to become intractable)."
-
-            elif is_spell and active.spells:
-                spell = next(
-                    (s for s in active.spells if s.name.lower() in action_lower),
-                    active.spells[0],
-                )
-                mag = active.get_attribute("MAG", 1)
-                spell_skill = active.skills.get("Spellcasting", 5)
-
-                attack_pool = mag + spell_skill
-                attack_hits, attack_hits_glitched, edge_spent = (
-                    RulesEngine.roll_attack_with_edge(attack_pool, active)
-                )
-
-                # Defense
-                if spell.type == "M":
-                    def_pool = target.get_attribute("ESS", 6) + target.get_attribute(
-                        "WIL", 3
-                    )
-                else:
-                    def_pool = target.get_attribute("REA", 3) + target.get_attribute(
-                        "INT", 3
-                    )
-
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
-                net_hits = attack_hits - def_hits
-
-                action_text = f"casts {spell.name} at {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-                if net_hits > 0:
-                    base_damage = mag  # Assume Force = MAG
-                    modified_damage = base_damage + net_hits
-
-                    if spell.type == "M":
-                        soak_pool = 0  # Mana spells ignore armor
-                    else:
-                        soak_pool = max(
-                            0, target.get_attribute("BOD", 3) + target.total_armor - mag
-                        )
-
-                    soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
-                    final_damage = max(0, modified_damage - soak_hits)
-
-                    result_text = f"Spell hits! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} P damage."
-                    result_text += target.take_damage(final_damage, 'P')
-                else:
-                    result_text = f"Spell misses or is resisted by {target.name}."
-
-                # Drain
-                drain_value = max(2, mag - 2)  # Assume F-2
-                drain_resist_pool = active.get_attribute(
-                    "WIL", 3
-                ) + active.get_attribute("LOG", 3)
-                # Shielding Metamagic
-                for rule in active.special_rules:
-                    if rule.lower().startswith("shielding"):
-                        m = re.search(r"shielding (\d+)", rule, re.IGNORECASE)
-                        drain_resist_pool += int(m.group(1)) if m else 1
-                        break
-
-                drain_hits, drain_hits_glitched = RulesEngine.roll_dice(
-                    drain_resist_pool
-                )
-                drain_taken = max(0, drain_value - drain_hits)
-
-                # Check for physical drain due to Matrix noise in merged world
-                drain_type = "Stun"
-                if self.state.environment.modifiers.get("background_count", 0) > 2 or drain_value > mag:
-                    drain_type = "Physical"
-
-                result_text += f" {active.name} rolls {drain_resist_pool} to resist drain, taking {drain_taken} {drain_type} damage."
-
-                if drain_type == "Physical":
-                    active.take_damage(drain_taken, "P")
-                else:
-                    active.take_damage(drain_taken, "S")
-
-                if (
-                    target.physical_damage >= target.physical_track
-                    or target.stun_damage >= target.stun_track
-                ):
-                    target.is_alive = False
-                    result_text += f" {target.name} is incapacitated!"
-                if (
-                    active.physical_damage >= active.physical_track
-                    or active.stun_damage >= active.stun_track
-                ):
-                    active.is_alive = False
-                    result_text += f" {active.name} is incapacitated from Drain!"
-
-            elif is_data_spike:
-                if "Null-Suit" in target.special_rules:
-                    action_text = f"attempts a Matrix action on {target.name}"
-                    result_text = f"Action fails: {target.name} is wearing a Null-Suit and is immune to Matrix targeting."
-                    narration = llm.narrate_action(active, action_text, result_text, state=state)
-                    state.log(narration)
-                    continue
-                log = active.get_attribute("LOG", 3)
-                cyber_skill = active.skills.get("Cybercombat", 5)
-                attack_pool = log + cyber_skill
-                attack_hits, attack_hits_glitched, edge_spent = (
-                    RulesEngine.roll_attack_with_edge(attack_pool, active)
-                )
-
-                def_pool = target.get_attribute("INT", 3) + target.matrix.firewall
-                if target.null_bags > 0:
-                    def_pool += target.null_bags
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
-                net_hits = attack_hits - def_hits
-
-                action_text = f"launches a Data Spike at {target.name}'s persona ({attack_hits} hits vs {def_hits} defense hits)"
-
-                if net_hits > 0:
-                    tethers = active.tethers.get(target.name, 0)
-                    modified_damage = active.matrix.attack + net_hits + (tethers * 2)
-
-                    soak_pool = target.matrix.data_processing + target.matrix.firewall
-                    soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
-                    final_damage = max(0, modified_damage - soak_hits)
-
-                    result_text = f"Data Spike connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Stun (Biofeedback) damage."
-                    target.stun_damage += final_damage
-
-                    # Check Mutual Tether Feedback Loop
-                    if target.tethers.get(active.name, 0) > 0 and active.tethers.get(target.name, 0) > 0:
-                        feedback_damage = final_damage // 2
-                        if feedback_damage > 0:
-                            active.stun_damage += feedback_damage
-                            result_text += f" Mutual Tethers trigger a Feedback Loop! {active.name} takes {feedback_damage} unresisted Stun feedback."
-                            if active.stun_damage >= active.stun_track:
-                                active.is_alive = False
-                                result_text += f" {active.name} is incapacitated by the feedback!"
-
-                    if (
-                        target.physical_damage >= target.physical_track
-                        or target.stun_damage >= target.stun_track
-                    ):
-                        target.is_alive = False
-                        result_text += f" {target.name} is incapacitated!"
-                else:
-                    result_text = (
-                        f"Data Spike is deflected by {target.name}'s firewall."
-                    )
-
-            elif "sprint" in action_lower or "move" in action_lower:
-                action_text = f"sprints and repositions"
-                result_text = f"{active.name} moves 16m (Complex Action), shifting Range Bands or securing better cover."
-                if active.zone and active.zone.cover == "None":
-                    result_text += (
-                        " They scramble towards whatever light cover they can find."
-                    )
-                elif getattr(target, "zone", None) and target.zone != active.zone:
-                    result_text += (
-                        f" They close the distance towards {target.name}'s zone."
-                    )
-
-            elif "ram" in action_lower:
-                attack_pool = active.get_attribute("REA", 3) + active.skills.get(
-                    "Piloting", 4
-                )
-                if active.jumped_in_vehicle:
-                    attack_pool += (
-                        active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
-                    )
-
-                    # Target threshold reduced by Control Rig rating
-                    threshold_reduction = getattr(active, 'control_rig', 0)
-                else:
-                    threshold_reduction = 0
-
-                attack_hits, attack_hits_glitched, edge_spent = (
-                    RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
-                )
-
-                def_pool = target.get_attribute("REA", 3) + target.skills.get(
-                    "Piloting", 4
-                )
-
-                # Evade bonus
-                evade_mod = 0
-                for rule in target.special_rules:
-                    if rule.startswith("Evade"):
-                        try:
-                            evade_mod += int(rule.split("(+")[1].split(")")[0])
-                        except:
-                            pass
-
-                def_pool += evade_mod
-
-                if target.jumped_in_vehicle:
-                    def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(max(1, def_pool))
-
-                # Apply Threshold reduction logic here.
-                # Threshold effectively subtracts from def_hits to calculate net_hits
-                net_hits = attack_hits - max(0, def_hits - threshold_reduction)
-
-                action_text = f"attempts to RAM {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-                if net_hits > 0:
-                    active_veh = active.jumped_in_vehicle
-                    target_veh = target.jumped_in_vehicle
-
-                    if active_veh and target_veh:
-                        base_ram_dmg = active_veh.body + active_veh.speed
-                        active_resist_pool = (active_veh.body + active_veh.armor) * 2 if (active_veh.body + active_veh.armor) > (target_veh.body + target_veh.armor) else (active_veh.body + active_veh.armor)
-                        target_resist_pool = (target_veh.body + target_veh.armor) * 2 if (target_veh.body + target_veh.armor) > (active_veh.body + active_veh.armor) else (target_veh.body + target_veh.armor)
-
-                        active_resist_hits, _ = RulesEngine.roll_dice(active_resist_pool)
-                        target_resist_hits, _ = RulesEngine.roll_dice(target_resist_pool)
-
-                        active_dmg_taken = max(0, base_ram_dmg - active_resist_hits)
-                        target_dmg_taken = max(0, base_ram_dmg - target_resist_hits)
-
-                        if (active_veh.body + active_veh.armor) > (target_veh.body + target_veh.armor):
-                            active_dmg_taken = active_dmg_taken // 2
-                        elif (target_veh.body + target_veh.armor) > (active_veh.body + active_veh.armor):
-                            target_dmg_taken = target_dmg_taken // 2
-
-                        if active.jumped_in_vehicle:
-                            # Route physical damage to vehicle, triggering possession logic
-                            active.jumped_in_vehicle.physical_damage += active_dmg_taken
-                            active_bio = active_dmg_taken // 2
-                            active_bio_resist = active.get_attribute("WIL", 3) + active.get_attribute("BOD", 3)
-                            active_bio_hits, _ = RulesEngine.roll_dice(active_bio_resist)
-                            active_net_bio = max(0, active_bio - active_bio_hits)
-                            active.stun_damage += active_net_bio
-
-                            res1 = f" {active.name}'s vehicle takes {active_dmg_taken} damage! {active.name} resists biofeedback with {active_bio_resist} dice, taking {active_net_bio} Stun biofeedback!"
-                            if active.jumped_in_vehicle.physical_damage >= active.jumped_in_vehicle.physical_track:
-                                active.jumped_in_vehicle.is_destroyed = True
-                                active.stun_damage += 6
-                                active.jumped_in_vehicle = None
-                                res1 += f" The vehicle is DESTROYED! {active.name} takes 6 Stun dumpshock damage!"
-                        else:
-                            res1 = active.take_damage(active_dmg_taken, 'P')
-
-                        if target.jumped_in_vehicle:
-                            target.jumped_in_vehicle.physical_damage += target_dmg_taken
-                            target_bio = target_dmg_taken // 2
-                            target_bio_resist = target.get_attribute("WIL", 3) + target.get_attribute("BOD", 3)
-                            target_bio_hits, _ = RulesEngine.roll_dice(target_bio_resist)
-                            target_net_bio = max(0, target_bio - target_bio_hits)
-                            target.stun_damage += target_net_bio
-
-                            res2 = f" {target.name}'s vehicle takes {target_dmg_taken} damage! {target.name} resists biofeedback with {target_bio_resist} dice, taking {target_net_bio} Stun biofeedback!"
-                            if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
-                                target.jumped_in_vehicle.is_destroyed = True
-                                target.stun_damage += 6
-                                target.jumped_in_vehicle = None
-                                res2 += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
-                        else:
-                            res2 = target.take_damage(target_dmg_taken, 'P')
-
-                        result_text = f"Ram successful! Both vehicles crash.{res1}{res2}"
-                    else:
-                        base_ram_dmg = active.get_attribute("BOD", 3)
-                        if active.jumped_in_vehicle:
-                            base_ram_dmg = active.jumped_in_vehicle.body + active.jumped_in_vehicle.speed
-                        result_text = f"Ram successful! "
-
-                        if target.jumped_in_vehicle:
-                            target.jumped_in_vehicle.physical_damage += base_ram_dmg
-                            target_bio = base_ram_dmg // 2
-                            target_bio_resist = target.get_attribute("WIL", 3) + target.get_attribute("BOD", 3)
-                            target_bio_hits, _ = RulesEngine.roll_dice(target_bio_resist)
-                            target_net_bio = max(0, target_bio - target_bio_hits)
-                            target.stun_damage += target_net_bio
-
-                            result_text += f"{target.name}'s vehicle takes {base_ram_dmg} damage! {target.name} resists biofeedback with {target_bio_resist} dice, taking {target_net_bio} Stun biofeedback!"
-                            if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
-                                target.jumped_in_vehicle.is_destroyed = True
-                                target.stun_damage += 6
-                                target.jumped_in_vehicle = None
-                                result_text += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
-                        else:
-                            result_text += target.take_damage(base_ram_dmg, 'P')
-                else:
-                    result_text = f"Ram maneuver fails! {target.name} swerves out of the way."
-
-            elif "cut off" in action_lower:
-                attack_pool = active.get_attribute("REA", 3) + active.skills.get(
-                    "Piloting", 4
-                )
-                if active.jumped_in_vehicle:
-                    attack_pool += (
-                        active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
-                    )
-                    threshold_reduction = getattr(active, 'control_rig', 0)
-                else:
-                    threshold_reduction = 0
-
-                attack_hits, attack_hits_glitched, edge_spent = (
-                    RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
-                )
-
-                def_pool = target.get_attribute("REA", 3) + target.skills.get(
-                    "Piloting", 4
-                )
-
-                # Evade bonus
-                evade_mod = 0
-                for rule in target.special_rules:
-                    if rule.startswith("Evade"):
-                        try:
-                            evade_mod += int(rule.split("(+")[1].split(")")[0])
-                        except:
-                            pass
-
-                def_pool += evade_mod
-
-                if target.jumped_in_vehicle:
-                    def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(max(1, def_pool))
-
-                net_hits = attack_hits - max(0, def_hits - threshold_reduction)
-                action_text = f"attempts to CUT OFF {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-                if net_hits > 0:
-                    result_text = f"Cut Off successful! {target.name} is forced to make a Crash Test."
-                else:
-                    result_text = f"Cut Off fails! {target.name} avoids the block."
-
-            elif "evade" in action_lower:
-                action_text = f"attempts to Evade"
-                if active.jumped_in_vehicle:
-                    evade_bonus = active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
-                    active.special_rules.append(f"Evade (+{evade_bonus})")
-                    result_text = f"Evade successful! {active.name} gains +{evade_bonus} to defense pool this round."
-                else:
-                    evade_bonus = active.get_attribute("REA", 3) // 2
-                    active.special_rules.append(f"Evade (+{evade_bonus})")
-                    result_text = f"Evade successful! {active.name} focuses on dodging, gaining +{evade_bonus} defense."
-
-            elif (
-                "chase" in action_lower
-                or "pilot" in action_lower
-                or "drive" in action_lower
-                or "catch up" in action_lower
-                or "break away" in action_lower
-            ):
-                attack_pool = active.get_attribute("REA", 3) + active.skills.get(
-                    "Piloting", 4
-                )
-                if active.jumped_in_vehicle:
-                    attack_pool += (
-                        active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
-                    )
-                    threshold_reduction = getattr(active, 'control_rig', 0)
-                else:
-                    threshold_reduction = 0
-
-                attack_hits, attack_hits_glitched, edge_spent = (
-                    RulesEngine.roll_attack_with_edge(max(1, attack_pool), active)
-                )
-
-                def_pool = target.get_attribute("REA", 3) + target.skills.get(
-                    "Piloting", 4
-                )
-
-                # Evade bonus
-                evade_mod = 0
-                for rule in target.special_rules:
-                    if rule.startswith("Evade"):
-                        try:
-                            evade_mod += int(rule.split("(+")[1].split(")")[0])
-                        except:
-                            pass
-
-                def_pool += evade_mod
-
-                if target.jumped_in_vehicle:
-                    def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(max(1, def_pool))
-
-                net_hits = attack_hits - max(0, def_hits - threshold_reduction)
-                action_text = f"attempts a chase maneuver against {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-                if net_hits > 0:
-                    result_text = f"Chase maneuver successful! {active.name} gains the upper hand and shifts the Range Band."
-                else:
-                    result_text = f"Chase maneuver fails! {target.name} outmaneuvers {active.name}."
-
-            elif is_erase_tether:
-                log = active.get_attribute("LOG", 3)
-                computer_skill = active.skills.get("Computer", 4)
-                attack_pool = log + computer_skill
-                attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
-
-                def_pool = target.get_attribute("LOG", 3) + target.skills.get("Hacking", 5)
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
-                net_hits = attack_hits - def_hits
-
-                action_text = f"attempts to erase Tethers held by {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-                if net_hits > 0:
-                    current_tethers = active.tethers.get(target.name, 0)
-                    if current_tethers > 0:
-                        removed = 2 if net_hits >= 3 else 1
-                        active.tethers[target.name] = max(0, current_tethers - removed)
-                        result_text = f"Successfully erased {removed} Tether(s)! {target.name} now holds {active.tethers[target.name]} Tether(s) on {active.name}."
-                    else:
-                        result_text = f"{target.name} holds no Tethers on {active.name} to erase."
-                else:
-                    result_text = f"Failed to erase Tether. {target.name}'s connection remains secure."
-
-            elif is_tether:
-                if "Null-Suit" in target.special_rules:
-                    action_text = f"attempts a Matrix action on {target.name}"
-                    result_text = f"Action fails: {target.name} is wearing a Null-Suit and is immune to Matrix targeting."
-                    narration = llm.narrate_action(active, action_text, result_text, state=state)
-                    state.log(narration)
-                    continue
-                log = active.get_attribute("LOG", 3)
-                hack_skill = active.skills.get("Hacking", 5)
-                attack_pool = log + hack_skill
-                attack_hits, attack_hits_glitched, edge_spent = (
-                    RulesEngine.roll_attack_with_edge(attack_pool, active)
-                )
-
-                def_pool = target.get_attribute("WIL", 3) + target.matrix.firewall
-                if target.null_bags > 0:
-                    def_pool += target.null_bags
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
-                net_hits = attack_hits - def_hits
-
-                action_text = f"attempts to establish a Tether on {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-                if net_hits > 0:
-                    current_tethers = active.tethers.get(target.name, 0)
-                    active.tethers[target.name] = current_tethers + 1
-                    result_text = f"Tether established! {active.name} now has {active.tethers[target.name]} Tether(s) on {target.name}."
-                else:
-                    result_text = f"Tether attempt blocked by {target.name}'s firewall."
-
-            else:
-                # Weapon Attack
-                chosen_weapon_name = ""
-                available_weapons = (
-                    active.jumped_in_vehicle.weapons
-                    if active.jumped_in_vehicle
-                    else active.weapons
-                )
-                for w in available_weapons:
-                    if w.name.lower() in action_lower:
-                        chosen_weapon_name = w.name
-                        break
-
-                if chosen_weapon_name:
-                    weapon = next(
-                        (w for w in available_weapons if w.name == chosen_weapon_name),
-                        available_weapons[0],
-                    )
-                else:
-                    weapon = (
-                        available_weapons[0]
-                        if available_weapons
-                        else Weapon("Unarmed Strike", 4, "S", 0)
-                    )
-
-                # Scenario Modifiers
-                lighting_mod = state.environment.modifiers.get("lighting", 0)
-
-                # Attack Roll: Agility + Skill
-                if active.jumped_in_vehicle:
-                    # Gunnery + Agility + Control Rig
-                    attack_pool = (
-                        active.get_attribute("AGI", 3)
-                        + active.skills.get("Gunnery", 5)
-                        + getattr(active, 'control_rig', 0)
-                        + lighting_mod
-                    )
-                    if active.jumped_in_vehicle.swarm_count > 1:
-                        attack_pool += active.jumped_in_vehicle.swarm_count - 1
-                else:
-                    attack_pool = active.get_attribute("AGI", 3) + 5 + lighting_mod
-
-                wild_dice_count = 0
-                bg_count = state.environment.modifiers.get("background_count", 0)
-                if bg_count > 0:
-                    wild_dice_count += bg_count
-
-                if "Sam" in active.name or "Ascended AI" in active.name:
-                    wild_dice_count = attack_pool  # Overkill Protocol
-
-                attack_hits, attack_hits_glitched, edge_spent = (
-                    RulesEngine.roll_attack_with_edge(max(1, attack_pool), active, wild_dice_count=wild_dice_count)
-                )
-
-                # Defense Roll: Reaction + Intuition + Cover
-                if target.jumped_in_vehicle:
-                    def_pool = (
-                        target.get_attribute("REA", 3)
-                        + target.get_attribute("INT", 3)
-                        + target.jumped_in_vehicle.handling
-                    )
-                else:
-                    def_pool = target.get_attribute("REA", 3) + target.get_attribute(
-                        "INT", 3
-                    )
-
-                # Apply Cover
-                if target.zone:
-                    if target.zone.cover.lower() == "light":
-                        def_pool += 1
-                    elif target.zone.cover.lower() == "medium":
-                        def_pool += 2
-                    elif target.zone.cover.lower() == "heavy":
-                        def_pool += 4
-
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
-
-                net_hits = attack_hits - def_hits
-                action_text = f"attacks {target.name} with {weapon.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-                is_explosive = (
-                    "grenade" in weapon.name.lower()
-                    or "missile" in weapon.name.lower()
-                    or "rocket" in weapon.name.lower()
-                )
-
-                if is_explosive:
-                    # Grenades can deviate, but for sim we hit the target zone
-                    net_hits = max(0, net_hits)
-                    base_dmg = weapon.damage
-
-                    is_chunky = target.zone and (
-                        target.zone.cover.lower() == "heavy"
-                        or "enclosed" in target.zone.description.lower()
-                        or "enclosed" in target.zone.name.lower()
-                    )
-
-                    if is_chunky:
-                        base_dmg *= 2
-                        action_text += " [CHUNKY SALSA EFFECT!]"
-
-                    modified_damage = base_dmg + net_hits
-                    modified_ap = weapon.ap
-
-                    # Gather targets in the AoE blast radius (same zone, or just the target if no zone)
-                    aoe_targets = []
-
-                    if target.zone:
-                        state.environment.recent_blasts.append(target.zone.name)
-
-                    for c in state.combatants:
-                        if c.is_alive and not c.has_yielded:
-                            if target.zone and c.zone == target.zone:
-                                aoe_targets.append(c)
-                            elif not target.zone and c.name == target.name:
-                                aoe_targets.append(c)
-
-                    result_text = f"Explosive detonates! Hitting {len(aoe_targets)} target(s) in zone."
-
-                    for c_target in aoe_targets:
-                        # Dropoff can be abstracted or just full damage for everyone in the zone
-                        if c_target.jumped_in_vehicle:
-                            soak_pool = max(0, c_target.jumped_in_vehicle.body + c_target.jumped_in_vehicle.armor + modified_ap)
-                        else:
-                            soak_pool = max(0, c_target.get_attribute("BOD", 3) + c_target.total_armor + modified_ap)
-
-                        soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
-                        final_damage = max(0, modified_damage - soak_hits)
-
-                        result_text += f"\n- {c_target.name} soaks {soak_hits} hits, taking {final_damage} {weapon.damage_type} damage."
-
-                        result_text += c_target.take_damage(final_damage, weapon.damage_type)
-
-                elif net_hits > 0:
-                    base_dmg = weapon.damage
-                    modified_damage = base_dmg + net_hits
-                    modified_ap = weapon.ap
-
-                    # Soak Roll: Body + Armor + AP
-                    # Evade bonus
-                    evade_mod = 0
-                    for rule in target.special_rules:
-                        if rule.startswith("Evade"):
-                            try:
-                                evade_mod += int(rule.split("(+")[1].split(")")[0])
-                            except:
-                                pass
-
-                    if target.jumped_in_vehicle:
-                        soak_pool = max(
-                            0,
-                            target.jumped_in_vehicle.body
-                            + target.jumped_in_vehicle.armor
-                            + modified_ap
-                            + evade_mod,
-                        )
-                    else:
-                        soak_pool = max(
-                            0,
-                            target.get_attribute("BOD", 3)
-                            + target.armor
-                            + modified_ap,
-                        )
-
-                    soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
-
-                    final_damage = max(0, modified_damage - soak_hits)
-                    result_text = f"Attack succeeds! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} {weapon.damage_type} damage."
-
-                    result_text += target.take_damage(final_damage, weapon.damage_type)
-
-                    # Check Mutual Tether Feedback Loop
-                    if target.tethers.get(active.name, 0) > 0 and active.tethers.get(target.name, 0) > 0:
-                        feedback_damage = final_damage // 2
-                        if feedback_damage > 0:
-                            active.stun_damage += feedback_damage
-                            result_text += f" Mutual Tethers trigger a Feedback Loop! {active.name} takes {feedback_damage} unresisted Stun feedback."
-                            if active.stun_damage >= active.stun_track:
-                                active.is_alive = False
-                                result_text += f" {active.name} is incapacitated by the feedback!"
-
-                    if (
-                        target.physical_damage >= target.physical_track
-                        or target.stun_damage >= target.stun_track
-                    ):
-                        target.is_alive = False
-                        result_text += f" {target.name} is incapacitated!"
-                else:
-                    result_text = f"Attack misses! {target.name} dodges the attack."
-
-            # Narration
-            if edge_spent:
-                action_text += " [Spent Edge to re-roll misses!]"
-
-            if "N.I.C.A." in active.special_rules:
-                if locals().get("attack_hits_glitched") or locals().get(
-                    "drain_hits_glitched"
-                ):
-                    effect = apply_nica_glitch(active)
-                    action_text += f" [N.I.C.A. Glitch! Rogue 'ware sparks! {effect}]"
-
-            if "N.I.C.A." in target.special_rules:
-                if (
-                    locals().get("def_hits_glitched")
-                    or locals().get("soak_hits_glitched")
-                    or locals().get("bio_hits_glitched")
-                ):
-                    effect = apply_nica_glitch(target)
-                    result_text += (
-                        f" [N.I.C.A. Glitch! Target's rogue 'ware sparks! {effect}]"
-                    )
-
-            if (
-                target.physical_damage >= target.physical_track
-                or target.stun_damage >= target.stun_track
-            ):
-                target.is_alive = False
-                result_text += f" {target.name} is incapacitated!"
-            if (
-                active.physical_damage >= active.physical_track
-                or active.stun_damage >= active.stun_track
-            ):
-                active.is_alive = False
-                action_text += f" {active.name} is incapacitated!"
-
-            if is_explosive:
-                state.log(f"--- AoE Mechanics ---\n{result_text}\n---------------------")
             narration = llm.narrate_action(active, action_text, result_text, state=state)
             state.log(narration)
 

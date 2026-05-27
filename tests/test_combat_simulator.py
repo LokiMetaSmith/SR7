@@ -213,3 +213,102 @@ def test_possession_overrides_and_inhabitation():
     assert c.physical_damage == 7
     assert sprite.is_inhabitation
     assert "The Merger!" in result_text
+
+
+
+
+
+
+def test_spirit_vs_sprite_compiling():
+    from scripts.combat_simulator import Combatant, MatrixAttributes, RulesEngine, GameEnvironment, SimulationState, process_action
+    import scripts.combat_simulator as sim
+    from unittest.mock import patch
+    import os
+
+    mage = Combatant(
+        name="Mage",
+        attributes={"MAG": 6, "WIL": 5, "LOG": 4},
+        skills={"Conjuring": 6},
+        matrix=MatrixAttributes(),
+        team=1,
+        is_alive=True,
+        has_yielded=False
+    )
+    techno = Combatant(
+        name="Technomancer",
+        attributes={"RES": 6, "WIL": 5, "LOG": 4},
+        skills={"Compiling": 6},
+        matrix=MatrixAttributes(),
+        team=2,
+        is_alive=True,
+        has_yielded=False
+    )
+
+    original_roll_attack = RulesEngine.roll_attack_with_edge
+    original_roll_dice = RulesEngine.roll_dice
+
+    def mock_roll_attack(pool, c, wild_dice_count=0):
+        return (6, False, False)
+
+    def mock_roll_dice(pool, wild_dice_count=0):
+        if pool == 5:
+            return (2, False)
+        if pool >= 8:
+            return (4, False)
+        return (0, False)
+
+    RulesEngine.roll_attack_with_edge = mock_roll_attack
+    RulesEngine.roll_dice = mock_roll_dice
+
+    original_load = sim.load_combatant
+    def mock_load(path):
+        if "mage" in path:
+            return mage
+        elif "techno" in path:
+            return techno
+        return original_load(path)
+
+    sim.load_combatant = mock_load
+
+    if not os.path.exists("npc_templates"):
+        os.makedirs("npc_templates")
+
+    with open("npc_templates/dummy_spirit.chum5", "w") as f:
+        f.write('<characters><character><name>Mock Spirit</name><metatype>Spirit</metatype></character></characters>')
+    with open("npc_templates/dummy_sprite.chum5", "w") as f:
+        f.write('<characters><character><name>Mock Sprite</name><metatype>Sprite</metatype></character></characters>')
+
+    env = GameEnvironment("Arena", {})
+    state = SimulationState(environment=env)
+    state.combatants = [mage, techno]
+
+    class DummyLLM:
+        def ask_action(self, combatant, state):
+            pass
+        def narrate_action(self, combatant, action, result, state=None):
+            return "Narrative"
+    llm = DummyLLM()
+
+    try:
+        # Run Compile
+        active = techno
+        target = mage
+        action_decision = "compile a level 5 sprite"
+
+        process_action(active, target, action_decision, state, llm)
+
+        assert any("Sprite" in c.name for c in state.combatants)
+
+        # Run Summon
+        active = mage
+        target = techno
+        action_decision = "summon a force 5 spirit"
+
+        process_action(active, target, action_decision, state, llm)
+
+        assert any("Spirit" in c.name for c in state.combatants)
+
+    finally:
+        RulesEngine.roll_attack_with_edge = original_roll_attack
+        RulesEngine.roll_dice = original_roll_dice
+        sim.load_combatant = original_load
