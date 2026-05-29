@@ -96,7 +96,7 @@ At a corner table sat Ennis. A rumpled middle-aged man with a cane and an unruly
 
 Ennis pushed a shiny black cylinder across the table. It had a heavy screw top and a wax seal stamped with a barcode.
 
-Ennis rasped that CFD was approaching and that not all factions within the Matrix were prepared. He explained their need for a secure base of operations, tasking the team with stealing a nuclear reactor, shipping it to the Antarctic, and combining it with the cylinder to melt down into the ice.
+"CFD is coming," Ennis rasped, his eyes remaining fixed on the glowing screen of his commlink. "The Matrix is divided. Some refuse to see what's happening. We need a sanctuary. That cylinder... it holds the key to making one."
 
 
 
@@ -108,7 +108,7 @@ Ignatius stepped out of the shadows. He was a Hermetic mage of exacting standard
 
 Ignatius raised a hand, his fingers tracing complex geometric patterns in the damp air. The astral plane here was bruised. The lingering signature of the Spirit of Man, Ennis, was heavy, a chaotic hum of digital intent woven into the physical mana. And beneath it, the cold, sharp structure of an AI—Sammy.
 
-Ignatius murmured about their convergence as he adjusted his glasses, then opened a secure channel to inform Celedyr that the Spirit and Machine had met and were accelerating the paradigm shift, noting he was actively tracking their resonance.
+"They are converging," Ignatius murmured, adjusting his wire-rimmed glasses before bringing a secure commlink to his ear. "My Lord, the pieces are in motion. The Spirit and the Machine have met. I am establishing tracking protocols now. They will not slip away."
 
 He tapped the ground with his cane, the silver tip sparking faintly against the concrete, his analytical mind dissecting the threat potential. Celedyr wanted the variables controlled. Ignatius intended to eliminate them entirely.
 
