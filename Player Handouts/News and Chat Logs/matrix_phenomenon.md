@@ -18,12 +18,12 @@ It wasn't just visual! I tried to grab a shipping manifest, and the file literal
 She's not crazy. I've seen it too. Wuxing is using experimental bio-decks and living data storage deep inside the Zone. The data is saturated with nanites. You can't just copy/paste anymore. You have to capture the data alive, and if you don't shove it into a Null-Bag immediately, it broadcasts a distress signal that alerts every piece of Black IC in the sector.
 
 **[Reply: Glitch_Bitch]**
-What the hell are they doing in there? I had to sever the tether manually and almost got brain-burn.
+What the hell are they doing in there? I had to sever the tether manually to avoid getting a permanent brain-burn.
 
 **[Reply: Deep_Dive]**
-They're merging meat and matrix, omae. They're using bio-engineered brains or captive Crystalline Spirits as living processors, and that silver dust you saw is their Immune System. If you fail a sleaze action in there, the physical walls will start sweating nanites to short out your hardware. Stay away from the White Tower unless you have a death wish.
+They're merging meat and matrix, omae. They're using bio-engineered brains or captive Crystalline Spirits as living processors, and that silver dust you saw is the system's active immunity response. If you fail a sleaze action in there, the physical walls will start sweating nanites to short out your hardware. Stay away from the White Tower unless you have a death wish.
 
 **[Reply: Null_Sector_Proxy]**
-The Matrix Ley Lines are converging and the Hollows are walking. The data is breathing as the boundaries dissolve.
+The Matrix Ley Lines are converging, the Hollows are walking, and the data is breathing. The boundaries are dissolving.
 
 **[User Glitch_Bitch has disconnected]**
