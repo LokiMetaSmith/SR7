@@ -69,6 +69,8 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Draft 'Stopgap' GM Advice:** Add a note to the `Hollow_Resonance_Worldbuilding.md` advising GMs to run the campaign using standard Shadowrun 5E rules until the 7E homebrew is actually finished, using the homebrew concepts strictly for narrative flavor.
 *   [x] **Sync GM Notes with Core Rules:** Extracted missing weapons (`Shiawase Arms Hearth Protector`, `Combat Knife`, `Throwing Knives`, `Monofilament Knife`, `Monofilament Whip`) from `GM Notes/GM_Campaign_Guide.md` and added them to the main weapon tables in `Fan made Shadowrun 7th Edition rules.md` and `Fan made Shadowrun 7th Edition rules.tex`. Corrected weapon stats inside the GM Notes to match the balanced rules format.
 - [x] **Implement Squad Combat:** Updated the autonomous combat simulator to support multi-character squad combat.
+*   [x] **Fix LLM Smells:** Addressed and removed LLM smells from narrative files as identified by the linter.
+*   [x] **Narrative Focus:** Emphasize corporate nation-states, soft power, and real estate dominance in worldbuilding notes and handouts.
 
 ---
 
