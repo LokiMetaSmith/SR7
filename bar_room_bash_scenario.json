@@ -1,0 +1,58 @@
+{
+  "name": "Bar Room Bash",
+  "description": "A meet gone wrong in a crowded dive bar. Tables are flipped, bottles are flying, and the local gangers are looking for a fight.",
+  "scenario_rules": "Bar Brawl: Lots of improvised weapons and collateral damage. Movement is restricted by broken furniture and panicked patrons.",
+  "modifiers": {
+    "lighting": -1,
+    "footing": -2,
+    "background_count": 1
+  },
+  "map": {
+    "layout_ascii": [
+      " B B B B . . S S S ",
+      " . . . . . . S S S ",
+      " T T . T T . . . . ",
+      " . . . . . . D D D ",
+      " T T . T T . D D D "
+    ],
+    "legend": {
+      "B": "Bar Counter",
+      "S": "Stage",
+      "T": "Tables (Flipped)",
+      "D": "Dance Floor",
+      ".": "Walkway"
+    },
+    "zones": [
+      {
+        "name": "Walkway",
+        "type": "Standard",
+        "cover": "None",
+        "description": "Sticky floors covered in spilled drinks and broken glass."
+      },
+      {
+        "name": "Bar Counter",
+        "type": "Defensive",
+        "cover": "Medium",
+        "description": "A sturdy wooden bar, good for taking cover and grabbing bottles."
+      },
+      {
+        "name": "Stage",
+        "type": "High Ground",
+        "cover": "Light",
+        "description": "Elevated platform where the band was playing."
+      },
+      {
+        "name": "Tables (Flipped)",
+        "type": "Defensive",
+        "cover": "Light",
+        "description": "Overturned tables providing hasty, flimsy cover."
+      },
+      {
+        "name": "Dance Floor",
+        "type": "Hazard",
+        "cover": "None",
+        "description": "Wide open space, extremely dangerous to be caught in."
+      }
+    ]
+  }
+}

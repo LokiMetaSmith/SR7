@@ -1,0 +1,51 @@
+{
+  "name": "Office Complex Extraction",
+  "description": "The runners must extract a key corporate asset from a high-security office complex. Cubicles provide light cover, while the executive office at the back is heavily guarded.",
+  "scenario_rules": "Office Heist: Triggering alarms will decrease available extraction time. Try to take out guards silently or bypass them. Watch out for corporate security drones.",
+  "modifiers": {
+    "lighting": -1,
+    "footing": 0,
+    "background_count": 0
+  },
+  "map": {
+    "layout_ascii": [
+      " E E E . . C C C C ",
+      " E E E . . C C C C ",
+      " . . . . . . . . . ",
+      " S S . . . C C C C ",
+      " S S . . . C C C C "
+    ],
+    "legend": {
+      "E": "Executive Office",
+      "C": "Cubicle Maze",
+      "S": "Security Desk",
+      ".": "Hallway"
+    },
+    "zones": [
+      {
+        "name": "Hallway",
+        "type": "Start Zone",
+        "cover": "None",
+        "description": "Open hallway, very exposed."
+      },
+      {
+        "name": "Cubicle Maze",
+        "type": "Standard",
+        "cover": "Light",
+        "description": "Rows of cubicles providing minimal cover but obstructing line of sight."
+      },
+      {
+        "name": "Security Desk",
+        "type": "Checkpoint",
+        "cover": "Medium",
+        "description": "A reinforced desk monitoring the entrance."
+      },
+      {
+        "name": "Executive Office",
+        "type": "Target Zone",
+        "cover": "Heavy",
+        "description": "The target's location, featuring reinforced walls and heavy desks."
+      }
+    ]
+  }
+}
