@@ -14,7 +14,7 @@ Yeah, I heard. The guy is a slimeball. But here's the crazy part: I saw Jimmy "T
 Jimmy's dead. He took a narrow-burst from a Knight Errant drone three days ago. I was there. He was D.O.A.
 
 **[User_ID: WireTap]**
-That's what I thought. But I swear on my deck, I saw him walking out of the New Beginnings clinic. Only... it wasn't really him. He looked empty. Like a meat puppet. He didn't recognize me, didn't blink when a stray dog snapped at him. Just kept walking.
+That's what I thought. But I swear on my deck, I saw him walking out of the New Beginnings clinic. Only... it wasn't really him. He looked empty. Like a meat puppet. He didn't recognize me, and he didn't even blink when a stray dog snapped at his ankles as he walked away.
 
 **[User_ID: Neon_Samurai]**
 They call them "Hollows." Word on the street is they're using some stolen corporate tech mixed with bad mojo from the Containment Zone. It brings the body back, but the soul... or whatever you want to call it... it doesn't always make the trip intact. They lose their recent memories. Some of them lose a lot more.
