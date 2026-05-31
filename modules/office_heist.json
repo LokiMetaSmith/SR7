@@ -1,0 +1,11 @@
+{
+    "name": "Corporate Office Extraction",
+    "description": "Extract a VIP from a corporate office.",
+    "stages": [
+        {
+            "name": "The Extraction",
+            "scenario_file": "office_heist_scenario.json",
+            "team2": ["npc_templates/wuxing_null_sec_strike_team.chum5"]
+        }
+    ]
+}

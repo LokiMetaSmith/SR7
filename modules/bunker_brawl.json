@@ -1,0 +1,11 @@
+{
+    "name": "Bunker Brawl",
+    "description": "Fight your way out of an ambush in a reinforced bunker.",
+    "stages": [
+        {
+            "name": "The Brawl",
+            "scenario_file": "bunker_brawl_scenario.json",
+            "team2": ["npc_templates/Sargent_Igneous.chum5"]
+        }
+    ]
+}

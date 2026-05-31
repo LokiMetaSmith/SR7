@@ -1,0 +1,44 @@
+{
+  "name": "Bunker Brawl",
+  "description": "The team has been cornered in a subterranean bunker. It's a close-quarters slugfest with heavy concrete pillars and narrow firing lanes.",
+  "scenario_rules": "Bunker Brawl: Confined spaces double the explosive damage due to the Chunky Salsa effect. High cover bonuses apply behind pillars.",
+  "modifiers": {
+    "lighting": -2,
+    "footing": -1,
+    "background_count": 2
+  },
+  "map": {
+    "layout_ascii": [
+      " P P . . . . P P ",
+      " . . . . . . . . ",
+      " . . C C C C . . ",
+      " . . . . . . . . ",
+      " P P . . . . P P "
+    ],
+    "legend": {
+      "P": "Concrete Pillar",
+      "C": "Command Console",
+      ".": "Bunker Floor"
+    },
+    "zones": [
+      {
+        "name": "Bunker Floor",
+        "type": "Standard",
+        "cover": "None",
+        "description": "Exposed concrete floor."
+      },
+      {
+        "name": "Concrete Pillar",
+        "type": "Defensive",
+        "cover": "Heavy",
+        "description": "Thick reinforced pillars offering excellent protection."
+      },
+      {
+        "name": "Command Console",
+        "type": "Objective",
+        "cover": "Medium",
+        "description": "A central tactical console, providing some cover and access to bunker systems."
+      }
+    ]
+  }
+}
