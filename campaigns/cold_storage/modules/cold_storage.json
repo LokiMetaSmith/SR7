@@ -4,17 +4,17 @@
     "stages": [
         {
             "name": "Schrödinger's In Neon Green",
-            "scenario_file": "arcade_scenario.json",
+            "scenario_file": "campaigns/cold_storage/scenarios/arcade_scenario.json",
             "team2": ["npc_templates/glitched_ic.chum5"]
         },
         {
             "name": "Securing the Reactor",
-            "scenario_file": "sub_reactor_scenario.json",
+            "scenario_file": "campaigns/cold_storage/scenarios/sub_reactor_scenario.json",
             "team2": ["npc_templates/wuxing_null_sec_strike_team.chum5"]
         },
         {
             "name": "The Wall",
-            "scenario_file": "antarctica_scenario.json",
+            "scenario_file": "campaigns/cold_storage/scenarios/antarctica_scenario.json",
             "team2": ["npc_templates/antarctica_titan.chum5"]
         }
     ]

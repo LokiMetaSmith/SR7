@@ -38,7 +38,7 @@ python scripts/combat_simulator.py --team1 npc_templates/Cryptolock.chum5 --team
 python scripts/combat_simulator.py --team1 "GM Notes/GM_Campaign_Guide.md:Sargent Igneous" --team2 npc_templates/feral_fuchsia_dragon_abomination.chum5
 
 # Load a specific scenario for the LLM to use (e.g., Tar Creek Ambush)
-python scripts/combat_simulator.py --team1 npc_templates/Kyber.chum5 --team2 npc_templates/wuxing_null_sec_strike_team.chum5 --scenario tar_creek_ambush.json
+python scripts/combat_simulator.py --team1 npc_templates/Kyber.chum5 --team2 npc_templates/wuxing_null_sec_strike_team.chum5 --scenario campaigns/default/scenarios/tar_creek_ambush.json
 
 # Test mechanical output without calling an LLM (uses generic default actions)
 python scripts/combat_simulator.py --team1 npc_templates/Cryptolock.chum5 --team2 npc_templates/god_antibody.chum5 --dry-run

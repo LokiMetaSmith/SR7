@@ -4,7 +4,7 @@
     "stages": [
         {
             "name": "The Bash",
-            "scenario_file": "bar_room_bash_scenario.json",
+            "scenario_file": "campaigns/default/scenarios/bar_room_bash_scenario.json",
             "team2": ["npc_templates/zkazena_ghoul.chum5"]
         }
     ]

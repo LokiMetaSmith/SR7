@@ -1,0 +1,45 @@
+{
+  "name": "Schrödinger's In Neon Green",
+  "description": "A dream-state matrix environment resembling an empty neon-lit arcade. Shifting walls of glowing green code and retro cabinets provide erratic cover. A bright white door with an exit sign stiletto hangs impossibly in the distance.",
+  "is_chase_combat": false,
+  "modifiers": {
+    "background_count": 0,
+    "lighting": 0
+  },
+  "map": {
+    "layout_ascii": [
+      " . . . A . . . ",
+      " . C . . . C . ",
+      " . . . E . . . ",
+      " . C . . . C . ",
+      " . . . P . . . "
+    ],
+    "legend": {
+      "P": "Player Start (Open)",
+      "C": "Arcade Cabinet (Medium Cover)",
+      "E": "Exit Door (Objective)",
+      "A": "Anomaly Source (Heavy Cover)",
+      ".": "Neon Floor (Open Ground)"
+    },
+    "zones": [
+      {
+        "name": "The Floor",
+        "type": "Start Zone",
+        "cover": "None",
+        "description": "The open neon grid where the players materialize."
+      },
+      {
+        "name": "Cabinet Clusters",
+        "type": "Cover",
+        "cover": "Medium",
+        "description": "Rows of retro arcade cabinets offering cover."
+      },
+      {
+        "name": "The Exit Door",
+        "type": "Objective",
+        "cover": "Light",
+        "description": "The surreal white door."
+      }
+    ]
+  }
+}

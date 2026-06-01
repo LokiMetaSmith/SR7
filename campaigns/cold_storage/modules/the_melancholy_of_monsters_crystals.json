@@ -4,7 +4,7 @@
     "stages": [
         {
             "name": "The Crystal Chorus",
-            "scenario_file": "spirit_crystal_dilemma.json",
+            "scenario_file": "campaigns/cold_storage/scenarios/spirit_crystal_dilemma.json",
             "team2": ["npc_templates/dummy_spirit.chum5"]
         }
     ]

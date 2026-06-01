@@ -5,14 +5,14 @@
       "name": "The Hit",
       "x": 100,
       "y": 100,
-      "module": "modules/hollow_resonance_part1.json",
+      "module": "campaigns/necessity/modules/hollow_resonance_part1.json",
       "radius": 15
     },
     {
       "name": "Waking Sleepers",
       "x": 400,
       "y": 200,
-      "module": "modules/the_melancholy_of_monsters_ghouls.json",
+      "module": "campaigns/necessity/modules/the_melancholy_of_monsters_ghouls.json",
       "radius": 15
     }
   ]

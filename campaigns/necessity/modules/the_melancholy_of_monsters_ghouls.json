@@ -4,7 +4,7 @@
     "stages": [
         {
             "name": "The Waking Sleepers' Toil",
-            "scenario_file": "ghoul_labor_camp.json",
+            "scenario_file": "campaigns/necessity/scenarios/ghoul_labor_camp.json",
             "team2": ["npc_templates/zkazena_ghoul.chum5"]
         }
     ]

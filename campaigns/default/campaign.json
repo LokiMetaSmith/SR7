@@ -5,35 +5,35 @@
       "name": "The Hit",
       "x": 100,
       "y": 100,
-      "module": "modules/hollow_resonance_part1.json",
+      "module": "campaigns/default/modules/hollow_resonance_part1.json",
       "radius": 15
     },
     {
       "name": "Cold Storage",
       "x": 300,
       "y": 200,
-      "module": "modules/cold_storage.json",
+      "module": "campaigns/default/modules/cold_storage.json",
       "radius": 15
     },
     {
       "name": "Office Heist",
       "x": 500,
       "y": 150,
-      "module": "modules/office_heist.json",
+      "module": "campaigns/default/modules/office_heist.json",
       "radius": 15
     },
     {
       "name": "Bunker Brawl",
       "x": 200,
       "y": 400,
-      "module": "modules/bunker_brawl.json",
+      "module": "campaigns/default/modules/bunker_brawl.json",
       "radius": 15
     },
     {
       "name": "Bar Room Bash",
       "x": 400,
       "y": 300,
-      "module": "modules/bar_room_bash.json",
+      "module": "campaigns/default/modules/bar_room_bash.json",
       "radius": 15
     }
   ]

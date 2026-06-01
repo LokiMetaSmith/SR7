@@ -4,7 +4,7 @@
     "stages": [
         {
             "name": "The Brawl",
-            "scenario_file": "bunker_brawl_scenario.json",
+            "scenario_file": "campaigns/default/scenarios/bunker_brawl_scenario.json",
             "team2": ["npc_templates/Sargent_Igneous.chum5"]
         }
     ]

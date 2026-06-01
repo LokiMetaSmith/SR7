@@ -4,12 +4,12 @@
     "stages": [
         {
             "name": "The Setup",
-            "scenario_file": "social_scenario.json",
+            "scenario_file": "campaigns/necessity/scenarios/social_scenario.json",
             "team2": ["npc_templates/Fixer_Contact.md:Jax"]
         },
         {
             "name": "The Strike",
-            "scenario_file": "polymarket_scenario.json",
+            "scenario_file": "campaigns/necessity/scenarios/polymarket_scenario.json",
             "team2": ["npc_templates/wuxing_null_sec_strike_team.chum5"]
         }
     ]

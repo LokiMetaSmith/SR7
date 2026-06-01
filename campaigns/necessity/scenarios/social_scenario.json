@@ -1,0 +1,13 @@
+{
+    "description": "A dimly lit back-alley noodle shop in the Redmond Barrens. The rain is pouring outside. Shadow is meeting their Fixer, Jax, to purchase highly illegal, restricted tech. They are attempting to use the 'Hopepunk' social approach to secure a better deal and avoid corporate tracing.",
+    "is_chase_combat": false,
+    "map": {
+        "zones": [
+            {
+                "name": "Noodle Shop Booth",
+                "cover": "Medium",
+                "description": "A cramped booth with a dirty table. It provides some visual cover from the street."
+            }
+        ]
+    }
+}
