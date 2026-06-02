@@ -5,7 +5,7 @@ from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap
 
 
 class App:
-    def __init__(self, width: int = 1000, height: int = 700, campaign_file: str = "campaign.json"):
+    def __init__(self, width: int = 1000, height: int = 700, campaign_file: str = "campaigns/default/campaign.json"):
         if not pygame.get_init():
             pygame.init()
         self.width = width
@@ -14,7 +14,8 @@ class App:
         pygame.display.set_caption("Shadowrun 7E - Interactive Cards")
         self.clock = pygame.time.Clock()
         self.running = True
-        self.in_overworld = True
+        self.in_campaign_select = True
+        self.in_overworld = False
 
         self.pending_action = None
         self.pending_chat = None
@@ -39,10 +40,18 @@ class App:
         self.state = None
         self.map_grid = None
 
+        self.overworld_map = None
+
+        self.running = True
+        self.scroll_x = 0
+        self.scroll_y = 0
+
+
+    def load_campaign(self, campaign_file: str):
+        import json
+        import os
         campaign_nodes = []
         try:
-            import json
-            import os
             campaign_path = os.path.join(os.path.dirname(__file__), "..", campaign_file)
             if os.path.exists(campaign_path):
                 with open(campaign_path, "r") as f:
@@ -54,11 +63,8 @@ class App:
             print(f"Error loading {campaign_file}: {e}")
 
         self.overworld_map = OverworldMap(pygame.Rect(50, 100, 600, 400), on_node_click=self.load_module, nodes=campaign_nodes)
-
-        self.running = True
-        self.scroll_x = 0
-        self.scroll_y = 0
-
+        self.in_campaign_select = False
+        self.in_overworld = True
 
     def load_module(self, module_path: str):
         print(f"Loading module: {module_path}")
@@ -142,7 +148,7 @@ class App:
 
     def handle_events(self):
         # Ensure rects are up-to-date before clicks
-        if not self.in_overworld:
+        if not self.in_campaign_select and not self.in_overworld:
             start_y = 100 + self.scroll_y
             if self.map_grid:
                 start_y += self.map_grid.rect.height + 20
@@ -194,8 +200,23 @@ class App:
 
 
             # Pass events to components
-            if self.in_overworld:
-                self.overworld_map.handle_event(event)
+            if self.in_campaign_select:
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    mx, my = event.pos
+                    # Campaign select buttons
+                    # 1: Default
+                    # 2: Cold Storage
+                    # 3: Necessity
+                    if 100 <= mx <= 400:
+                        if 150 <= my <= 200:
+                            self.load_campaign("campaigns/default/campaign.json")
+                        elif 220 <= my <= 270:
+                            self.load_campaign("campaigns/cold_storage/campaign.json")
+                        elif 290 <= my <= 340:
+                            self.load_campaign("campaigns/necessity/campaign.json")
+            elif self.in_overworld:
+                if self.overworld_map:
+                    self.overworld_map.handle_event(event)
             else:
                 self.chat_window.handle_event(event)
                 for card in self.player_cards:
@@ -237,8 +258,29 @@ class App:
         title_surf = font.render("SHADOWRUN 7E TACTICAL SIMULATOR", True, (0, 255, 204))
         self.screen.blit(title_surf, (50, 20))
 
-        if self.in_overworld:
-            self.overworld_map.draw(self.screen)
+        if self.in_campaign_select:
+            # Draw Campaign Select Screen
+            title_surf = font.render("SELECT CAMPAIGN", True, (0, 255, 204))
+            self.screen.blit(title_surf, (100, 100))
+
+            # Button 1: Default
+            pygame.draw.rect(self.screen, (40, 45, 55), (100, 150, 300, 50), border_radius=4)
+            def_text = font.render("Default Demo Campaign", True, (230, 230, 235))
+            self.screen.blit(def_text, (120, 165))
+
+            # Button 2: Cold Storage
+            pygame.draw.rect(self.screen, (40, 45, 55), (100, 220, 300, 50), border_radius=4)
+            cs_text = font.render("Cold Storage Campaign", True, (230, 230, 235))
+            self.screen.blit(cs_text, (120, 235))
+
+            # Button 3: Necessity
+            pygame.draw.rect(self.screen, (40, 45, 55), (100, 290, 300, 50), border_radius=4)
+            nec_text = font.render("Necessity Knows No Law", True, (230, 230, 235))
+            self.screen.blit(nec_text, (120, 305))
+
+        elif self.in_overworld:
+            if self.overworld_map:
+                self.overworld_map.draw(self.screen)
         else:
             if self.state:
                 turn_text = f"Turn: {self.state.turn}"

@@ -1,0 +1,38 @@
+{
+  "name": "Corporate Polymarket Assassination",
+  "description": "Corporations have gone full 'Polymarket' and are taking bets on literally everything. The runners have been hired to hit a specific corporate target during a live-streamed event, not just to kill them, but to ensure they die in a very specific way or at a very specific time to manipulate the prediction markets, allowing their Mr. Johnson to reap massive payouts. The area is heavily monitored by broadcast drones and corporate security.",
+  "scenario_rules": "This is the Corporate Polymarket Assassination event! Corporations are betting on exactly how, when, and where the target dies. As a runner, try to make your attacks flashy, narratively specific, or brutal to manipulate the prediction markets and secure the Johnson's payout. Emphasize how actions affect the live Polymarket betting odds (e.g. 'Shares in the target surviving another round plummet', 'The chat feed goes wild', etc).",
+  "modifiers": {
+    "lighting": 0,
+    "footing": 0,
+    "background_count": 0
+  },
+  "map": {
+    "layout_ascii": [
+      " . . B B B . . ",
+      " . . B B B . . ",
+      " C . . . . . C ",
+      " C . . . . . C ",
+      " . . . . . . . "
+    ],
+    "legend": {
+      "B": "Broadcast Stage (Target Location)",
+      "C": "Camera Drone (Heavy Surveillance)",
+      ".": "Event Floor"
+    },
+    "zones": [
+      {
+        "name": "Event Floor",
+        "type": "Start Zone",
+        "cover": "None",
+        "description": "Wide open event space. Exposed to all cameras."
+      },
+      {
+        "name": "Broadcast Stage",
+        "type": "High Ground",
+        "cover": "Medium",
+        "description": "Elevated stage where the target is currently speaking. Offers some cover behind podiums and equipment."
+      }
+    ]
+  }
+}
