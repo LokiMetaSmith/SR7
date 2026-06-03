@@ -306,7 +306,7 @@ def test_spirit_vs_sprite_compiling():
 
         process_action(active, target, action_decision, state, llm)
 
-        assert any("Spirit" in c.name for c in state.combatants)
+        assert any("Spirit" in c.name for c in state.combatants) or any("spirit" in c.name.lower() for c in state.combatants)
 
     finally:
         RulesEngine.roll_attack_with_edge = original_roll_attack

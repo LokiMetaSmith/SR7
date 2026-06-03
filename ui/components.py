@@ -696,3 +696,69 @@ class MapGrid:
             text_surf = self.font.render(desc_str, True, (180, 180, 180))
             surface.blit(text_surf, (legend_x + 20, legend_y))
             legend_y += 18
+
+class TradeScreen:
+    def __init__(self, rect: pygame.Rect, on_close=None, on_trade=None):
+        self.rect = pygame.Rect(rect)
+        self.on_close = on_close
+        self.on_trade = on_trade
+        self.font_title = pygame.font.SysFont("monospace", 24, bold=True)
+        self.font_body = pygame.font.SysFont("monospace", 16)
+
+        self.close_rect = pygame.Rect(self.rect.right - 40, self.rect.y + 10, 30, 30)
+        self.trade_rect = pygame.Rect(self.rect.centerx - 75, self.rect.bottom - 60, 150, 40)
+
+        self.buyer_name = "Player"
+        self.item_name = "Ares Predator"
+        self.item_value = 350
+        self.fixer_difficulty = 1
+
+        self.trade_result = None
+
+    def handle_event(self, event: pygame.event.Event):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if event.button == 1:
+                if self.close_rect.collidepoint(event.pos):
+                    if self.on_close:
+                        self.on_close()
+                elif self.trade_rect.collidepoint(event.pos):
+                    if self.on_trade:
+                        self.trade_result = self.on_trade(self.item_name, self.item_value, self.fixer_difficulty)
+
+    def draw(self, surface: pygame.Surface):
+        pygame.draw.rect(surface, COLORS.get("panel_bg", (30, 30, 30)), self.rect, border_radius=8)
+        pygame.draw.rect(surface, COLORS.get("border", (100, 100, 100)), self.rect, 2, border_radius=8)
+
+        # Title
+        title_surf = self.font_title.render("BLACK MARKET TRADE", True, (0, 255, 204))
+        surface.blit(title_surf, (self.rect.x + 20, self.rect.y + 20))
+
+        # Close button
+        pygame.draw.rect(surface, COLORS.get("health_crit", (200, 50, 50)), self.close_rect, border_radius=4)
+        x_surf = self.font_title.render("X", True, (255, 255, 255))
+        surface.blit(x_surf, (self.close_rect.x + 8, self.close_rect.y + 2))
+
+        # Content
+        y_offset = self.rect.y + 80
+
+        buyer_surf = self.font_body.render(f"Buyer: {self.buyer_name}", True, COLORS.get("text", (200, 200, 200)))
+        surface.blit(buyer_surf, (self.rect.x + 40, y_offset))
+        y_offset += 30
+
+        item_surf = self.font_body.render(f"Item: {self.item_name} (Base: {self.item_value}¥)", True, COLORS.get("text", (200, 200, 200)))
+        surface.blit(item_surf, (self.rect.x + 40, y_offset))
+        y_offset += 30
+
+        diff_surf = self.font_body.render(f"Fixer Difficulty: {self.fixer_difficulty}", True, COLORS.get("text", (200, 200, 200)))
+        surface.blit(diff_surf, (self.rect.x + 40, y_offset))
+        y_offset += 50
+
+        if self.trade_result:
+            res_surf = self.font_body.render(f"Result: {self.trade_result}", True, (255, 215, 0))
+            surface.blit(res_surf, (self.rect.x + 40, y_offset))
+
+        # Trade Button
+        pygame.draw.rect(surface, COLORS.get("button_bg", (50, 60, 70)), self.trade_rect, border_radius=4)
+        pygame.draw.rect(surface, (0, 200, 150), self.trade_rect, 2, border_radius=4)
+        trade_text = self.font_body.render("HAGGLE", True, (255, 255, 255))
+        surface.blit(trade_text, (self.trade_rect.x + 45, self.trade_rect.y + 10))

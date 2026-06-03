@@ -1,7 +1,8 @@
 import pygame
 import sys
 from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
-from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap
+from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap, TradeScreen
+from scripts.combat_simulator import simulate_trade
 
 
 class App:
@@ -16,6 +17,8 @@ class App:
         self.running = True
         self.in_campaign_select = True
         self.in_overworld = False
+        self.in_trade_screen = False
+        self.trade_screen = TradeScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=self.close_trade, on_trade=self.execute_trade)
 
         self.pending_action = None
         self.pending_chat = None
@@ -28,7 +31,7 @@ class App:
         gm_combatant.team = 1
 
 
-        self.player_cards = []
+        self.player_cards = [PlayerCard(player_combatant)]
         self.gm_cards = []
 
 
@@ -65,10 +68,44 @@ class App:
         self.overworld_map = OverworldMap(pygame.Rect(50, 100, 600, 400), on_node_click=self.load_module, nodes=campaign_nodes)
         self.in_campaign_select = False
         self.in_overworld = True
+        self.in_trade_screen = False
+        self.trade_screen = TradeScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=self.close_trade, on_trade=self.execute_trade)
 
     def load_module(self, module_path: str):
         print(f"Loading module: {module_path}")
         self.in_overworld = False
+        self.in_trade_screen = False
+        self.trade_screen = TradeScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=self.close_trade, on_trade=self.execute_trade)
+
+
+    def close_trade(self):
+        self.in_trade_screen = False
+
+    def execute_trade(self, item_name, base_value, difficulty):
+        if self.player_cards:
+            buyer = self.player_cards[0].combatant
+            import io
+            import sys
+            # Capture print output from simulate_trade
+            old_stdout = sys.stdout
+            new_stdout = io.StringIO()
+            sys.stdout = new_stdout
+            try:
+                simulate_trade(buyer, item_name, base_value, difficulty)
+                output = new_stdout.getvalue()
+
+                # Parse final price from output
+                import re
+                match = re.search(r"Final Price: (\d+)¥", output)
+                if match:
+                    return match.group(1) + "¥"
+                elif "REFUSED" in output:
+                    return "Refused"
+                else:
+                    return "Completed"
+            finally:
+                sys.stdout = old_stdout
+        return "No Buyer"
 
     def set_pending_action(self, action: str):
         self.pending_action = action
@@ -200,6 +237,10 @@ class App:
 
 
             # Pass events to components
+
+            if self.in_trade_screen:
+                self.trade_screen.handle_event(event)
+                continue
             if self.in_campaign_select:
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     mx, my = event.pos
@@ -207,6 +248,8 @@ class App:
                     # 1: Default
                     # 2: Cold Storage
                     # 3: Necessity
+
+
                     if 100 <= mx <= 400:
                         if 150 <= my <= 200:
                             self.load_campaign("campaigns/default/campaign.json")
@@ -214,7 +257,13 @@ class App:
                             self.load_campaign("campaigns/cold_storage/campaign.json")
                         elif 290 <= my <= 340:
                             self.load_campaign("campaigns/necessity/campaign.json")
+
             elif self.in_overworld:
+                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                    mx, my = event.pos
+                    if self.width - 220 <= mx <= self.width - 20 and 20 <= my <= 70:
+                        self.in_trade_screen = True
+                        return
                 if self.overworld_map:
                     self.overworld_map.handle_event(event)
             else:
@@ -278,9 +327,15 @@ class App:
             nec_text = font.render("Necessity Knows No Law", True, (230, 230, 235))
             self.screen.blit(nec_text, (120, 305))
 
+
+
         elif self.in_overworld:
             if self.overworld_map:
                 self.overworld_map.draw(self.screen)
+            pygame.draw.rect(self.screen, (40, 45, 55), (self.width - 220, 20, 200, 50), border_radius=4)
+            pygame.draw.rect(self.screen, (0, 255, 204), (self.width - 220, 20, 200, 50), 2, border_radius=4)
+            trade_text = font.render("Open Market", True, (230, 230, 235))
+            self.screen.blit(trade_text, (self.width - 180, 35))
         else:
             if self.state:
                 turn_text = f"Turn: {self.state.turn}"
@@ -306,5 +361,9 @@ class App:
                 x_offset += 370
 
             self.chat_window.draw(self.screen)
+
+
+        if self.in_trade_screen:
+            self.trade_screen.draw(self.screen)
 
         pygame.display.flip()

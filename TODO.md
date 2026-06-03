@@ -142,3 +142,15 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Final Showdown in Antarctica:** Add 'The Ice Cold Equation' chapter for the final battle with Ignatius.
 
 *   [x] **Pre-Rolled Templates:** Created pre-rolled player templates for the core narrative team (Logi, Red, Chow, Loaf) to allow players to jump into the narrative campaigns.
+
+---
+
+## Priority 9: Missing Critical Features
+
+**Goal:** Implement remaining core features identified as missing from the codebase.
+
+*   [ ] **Matrix Host Architecure Simulation:** The custom Matrix rules document host architecture & IC, but `combat_simulator.py` lacks robust handling for deep host runs and tiered security (e.g., Patrol IC vs. Tar-Pit IC mechanics).
+*   [ ] **Full Astral Combat Implementation:** The rules specify dual-natured entities and astral tracking, but the simulator primarily focuses on Matrix and physical combat. Needs proper Astral Initiative and astral-specific damage types.
+*   [ ] **Save/Load Campaign State in UI:** While `combat_simulator.py` writes state to `campaign_state/`, the Pygame UI lacks a dedicated interface to view, load, or revert to these previous checkpoint states during a module run.
+*   [x] **Economy & Trade UI Screen:** The trade simulator (`--trade-simulator`) is currently headless/CLI-only. A dedicated shop or haggling interface needs to be added to the Pygame Overworld or Campaign menu.
+*   [ ] **PDF Generation CI/CD Integration:** The LaTeX rulebook generation via `generate_pdf.sh` currently runs locally. It needs to be hooked up to a GitHub Action (or similar CI) to automatically build and release the PDF when `Fan made Shadowrun 7th Edition rules.md` is updated.
