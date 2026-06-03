@@ -1,0 +1,50 @@
+name: Generate and Release PDF
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Fan made Shadowrun 7th Edition rules.md'
+      - 'scripts/generate_pdf.sh'
+      - 'scripts/template.tex'
+      - 'scripts/multicols.lua'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
+
+      - name: Generate PDF
+        run: |
+          chmod +x scripts/generate_pdf.sh
+          ./scripts/generate_pdf.sh
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rulebook-pdf
+          path: 'Fan made Shadowrun 7th Edition rules.pdf'
+          retention-days: 7
+
+      - name: Create or Update Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: 'Fan made Shadowrun 7th Edition rules.pdf'
+          name: Latest Rulebook PDF
+          tag_name: latest
+          body: "Automatically generated PDF of the latest rules from the main branch."
+          make_latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
