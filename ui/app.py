@@ -1,7 +1,7 @@
 import pygame
 import sys
 from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
-from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap, TradeScreen
+from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap, TradeScreen, SaveLoadScreen
 from scripts.combat_simulator import simulate_trade
 
 
@@ -19,6 +19,10 @@ class App:
         self.in_overworld = False
         self.in_trade_screen = False
         self.trade_screen = TradeScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=self.close_trade, on_trade=self.execute_trade)
+
+        self.in_save_load_screen = False
+        self.save_load_screen = SaveLoadScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400))
+
 
         self.pending_action = None
         self.pending_chat = None
@@ -71,11 +75,19 @@ class App:
         self.in_trade_screen = False
         self.trade_screen = TradeScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=self.close_trade, on_trade=self.execute_trade)
 
+        self.in_save_load_screen = False
+        self.save_load_screen = SaveLoadScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400))
+
+
     def load_module(self, module_path: str):
         print(f"Loading module: {module_path}")
         self.in_overworld = False
         self.in_trade_screen = False
         self.trade_screen = TradeScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=self.close_trade, on_trade=self.execute_trade)
+
+        self.in_save_load_screen = False
+        self.save_load_screen = SaveLoadScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400))
+
 
 
     def close_trade(self):
@@ -238,6 +250,10 @@ class App:
 
             # Pass events to components
 
+            if self.in_save_load_screen:
+                self.save_load_screen.handle_event(event, self)
+                continue
+
             if self.in_trade_screen:
                 self.trade_screen.handle_event(event)
                 continue
@@ -264,9 +280,19 @@ class App:
                     if self.width - 220 <= mx <= self.width - 20 and 20 <= my <= 70:
                         self.in_trade_screen = True
                         return
+                    if self.width - 440 <= mx <= self.width - 240 and 20 <= my <= 70:
+                        self.in_save_load_screen = True
+                        self.save_load_screen.refresh_states()
+                        return
                 if self.overworld_map:
                     self.overworld_map.handle_event(event)
             else:
+                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                    mx, my = event.pos
+                    if 250 <= mx <= 410 and 40 <= my <= 75:
+                        self.in_save_load_screen = True
+                        self.save_load_screen.refresh_states()
+                        return
                 self.chat_window.handle_event(event)
                 for card in self.player_cards:
                     card.handle_event(event)
@@ -336,11 +362,23 @@ class App:
             pygame.draw.rect(self.screen, (0, 255, 204), (self.width - 220, 20, 200, 50), 2, border_radius=4)
             trade_text = font.render("Open Market", True, (230, 230, 235))
             self.screen.blit(trade_text, (self.width - 180, 35))
+
+            pygame.draw.rect(self.screen, (40, 45, 55), (self.width - 440, 20, 200, 50), border_radius=4)
+            pygame.draw.rect(self.screen, (0, 255, 204), (self.width - 440, 20, 200, 50), 2, border_radius=4)
+            sm_text = font.render("State Manager", True, (230, 230, 235))
+            self.screen.blit(sm_text, (self.width - 410, 35))
         else:
             if self.state:
                 turn_text = f"Turn: {self.state.turn}"
                 turn_surf = font.render(turn_text, True, (220, 220, 220))
                 self.screen.blit(turn_surf, (50, 50))
+
+            # Tactical state manager button
+            pygame.draw.rect(self.screen, (40, 45, 55), (250, 40, 160, 35), border_radius=4)
+            pygame.draw.rect(self.screen, (0, 255, 204), (250, 40, 160, 35), 2, border_radius=4)
+            font_sm = pygame.font.SysFont("monospace", 14, bold=True)
+            sm_text = font_sm.render("STATE MANAGER", True, (230, 230, 235))
+            self.screen.blit(sm_text, (270, 50))
 
             start_y = 100 + self.scroll_y
 
@@ -365,5 +403,8 @@ class App:
 
         if self.in_trade_screen:
             self.trade_screen.draw(self.screen)
+
+        if self.in_save_load_screen:
+            self.save_load_screen.draw(self.screen)
 
         pygame.display.flip()
