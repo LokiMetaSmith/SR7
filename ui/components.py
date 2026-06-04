@@ -762,3 +762,75 @@ class TradeScreen:
         pygame.draw.rect(surface, (0, 200, 150), self.trade_rect, 2, border_radius=4)
         trade_text = self.font_body.render("HAGGLE", True, (255, 255, 255))
         surface.blit(trade_text, (self.trade_rect.x + 45, self.trade_rect.y + 10))
+
+
+
+import os
+import json
+
+class SaveLoadScreen:
+    def __init__(self, rect: pygame.Rect):
+        self.rect = pygame.Rect(rect)
+        self.font_title = pygame.font.SysFont("monospace", 24, bold=True)
+        self.font_body = pygame.font.SysFont("monospace", 14)
+        self.close_rect = pygame.Rect(self.rect.right - 40, self.rect.y + 10, 30, 30)
+        self.load_rect = pygame.Rect(self.rect.centerx - 75, self.rect.bottom - 60, 150, 40)
+        self.state_data = []
+        self.refresh_states()
+
+    def refresh_states(self):
+        self.state_data = []
+        if os.path.exists("campaign_state"):
+            for f in os.listdir("campaign_state"):
+                if f.endswith(".json"):
+                    with open(os.path.join("campaign_state", f), "r") as fp:
+                        try:
+                            self.state_data.append(json.load(fp))
+                        except Exception:
+                            pass
+
+    def handle_event(self, event: pygame.event.Event, app_instance):
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+            if self.close_rect.collidepoint(event.pos):
+                app_instance.in_save_load_screen = False
+            elif self.load_rect.collidepoint(event.pos):
+                self.apply_states(app_instance)
+                app_instance.in_save_load_screen = False
+
+    def apply_states(self, app_instance):
+        if not app_instance.state: return
+        for state_dict in self.state_data:
+            name = state_dict.get("name")
+            for c in app_instance.state.combatants:
+                if c.name == name:
+                    c.physical_damage = state_dict.get("physical_damage", c.physical_damage)
+                    c.stun_damage = state_dict.get("stun_damage", c.stun_damage)
+                    c.edge = state_dict.get("edge", c.edge)
+                    c.is_alive = state_dict.get("is_alive", c.is_alive)
+
+    def draw(self, surface: pygame.Surface):
+        pygame.draw.rect(surface, COLORS.get("panel_bg", (30, 30, 30)), self.rect, border_radius=8)
+        pygame.draw.rect(surface, COLORS.get("border", (100, 100, 100)), self.rect, 2, border_radius=8)
+
+        # Title
+        title_surf = self.font_title.render("CAMPAIGN STATE MANAGER", True, (0, 255, 204))
+        surface.blit(title_surf, (self.rect.x + 20, self.rect.y + 20))
+
+        # Close button
+        pygame.draw.rect(surface, COLORS.get("health_crit", (200, 50, 50)), self.close_rect, border_radius=4)
+        x_surf = self.font_title.render("X", True, (255, 255, 255))
+        surface.blit(x_surf, (self.close_rect.x + 8, self.close_rect.y + 2))
+
+        y_offset = self.rect.y + 70
+        for data in self.state_data:
+            status = "Alive" if data.get('is_alive') else "Dead"
+            text = f"{data.get('name')}: Phys {data.get('physical_damage')} | Stun {data.get('stun_damage')} | Edge {data.get('edge')} | {status}"
+            txt_surf = self.font_body.render(text, True, COLORS.get("text", (200, 200, 200)))
+            surface.blit(txt_surf, (self.rect.x + 20, y_offset))
+            y_offset += 25
+
+        # Load Button
+        pygame.draw.rect(surface, COLORS.get("button_bg", (50, 60, 70)), self.load_rect, border_radius=4)
+        pygame.draw.rect(surface, (0, 200, 150), self.load_rect, 2, border_radius=4)
+        load_text = self.font_body.render("REVERT STATE", True, (255, 255, 255))
+        surface.blit(load_text, (self.load_rect.x + 25, self.load_rect.y + 10))
