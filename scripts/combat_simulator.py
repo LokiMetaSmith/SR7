@@ -129,6 +129,10 @@ class Combatant:
     contacts: List[Contact] = field(default_factory=list)
     possessed_by: Optional[PossessingEntity] = None
     portrait: Optional[str] = None
+    is_host: bool = False
+    host_rating: int = 0
+    is_locked_by_tarpit: bool = False
+    current_host: Optional[str] = None
 
     def get_attribute(self, attr: str, default: int = 3) -> int:
         base = self.attributes.get(attr, default)
@@ -948,6 +952,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
         s.name.lower() in action_lower for s in active.spells
     )
     is_data_spike = "data spike" in action_lower
+    is_enter_host = "enter host" in action_lower
+    is_exit_host = "exit host" in action_lower
+    is_tar_pit_attack = "tar-pit" in action_lower
+    is_patrol_scan = "patrol scan" in action_lower
+    is_data_ic_response = "data ic" in action_lower
     is_tether = "establish tether" in action_lower or ("tether" in action_lower and "erase" not in action_lower)
     is_erase_tether = "erase tether" in action_lower
     is_social = any(
@@ -1183,6 +1192,83 @@ def process_action(active, target, action_decision, state, llm, app=None):
         )
         if active.zone:
             active.zone.cover = "Medium"
+
+    elif is_enter_host:
+        if getattr(target, "is_host", False) and active.tethers.get(target.name, 0) > 0:
+            active.current_host = target.name
+            action_text = f"{active.name} attempts to enter the Host: {target.name}."
+            result_text = f"{active.name} successfully enters the Host {target.name}."
+        else:
+            action_text = f"{active.name} attempts to enter a Host."
+            result_text = f"Failed to enter Host. Requires a target Host and an established Tether."
+
+    elif is_exit_host:
+        if getattr(active, "is_locked_by_tarpit", False):
+            action_text = f"{active.name} attempts to exit the Host."
+            result_text = f"Failed to exit! {active.name}'s connection is locked by Tar-Pit IC."
+        else:
+            active.current_host = None
+            action_text = f"{active.name} attempts to exit their current Host."
+            result_text = f"{active.name} successfully jacks out and exits the Host."
+
+    elif is_tar_pit_attack:
+        attack_pool = active.skills.get("Cybercombat", 5) + active.get_attribute("LOG", 3)
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        def_pool = getattr(target.matrix, "firewall", 3) + target.get_attribute("INT", 3)
+        if target.null_bags > 0:
+            def_pool += target.null_bags
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+
+        net_hits = attack_hits - def_hits
+        action_text = f"The Tar-Pit IC attacks {target.name} ({attack_hits} hits vs {def_hits} defense hits)."
+
+        if net_hits > 0:
+            target.is_locked_by_tarpit = True
+            result_text = f"Tar-Pit IC strikes! It deals no damage but locks all of {target.name}'s Tethers. {target.name} cannot voluntarily Jack Out or Erase Tethers."
+        else:
+            result_text = f"Tar-Pit IC misses or is resisted by {target.name}."
+
+    elif is_patrol_scan:
+        attack_pool = active.host_rating * 2 if getattr(active, "host_rating", 0) > 0 else active.get_attribute("LOG", 3) + active.skills.get("Computer", 5)
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "sleaze", 3)
+        if target.null_bags > 0:
+            def_pool += target.null_bags
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+        net_hits = attack_hits - def_hits
+
+        action_text = f"Patrol IC scans for intruders ({attack_hits} hits vs {def_hits} defense hits)."
+
+        if net_hits > 0:
+            active.tethers[target.name] = active.tethers.get(target.name, 0) + 1
+            result_text = f"Patrol IC spots {target.name}! It alerts the Hive and places 1 Tether on {target.name}."
+        else:
+            result_text = f"Patrol IC fails to spot {target.name}."
+
+    elif is_data_ic_response:
+        log = active.get_attribute("LOG", 3)
+        cyber_skill = active.skills.get("Cybercombat", 5)
+        attack_pool = log + cyber_skill
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "firewall", 3)
+        if target.null_bags > 0:
+            def_pool += target.null_bags
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+        net_hits = attack_hits - def_hits
+
+        action_text = f"Data IC deploys an EMP burst/scrambler at {target.name} ({attack_hits} hits vs {def_hits} defense hits)."
+
+        if net_hits > 0:
+            soak_pool = getattr(target.matrix, "data_processing", 3) + getattr(target.matrix, "firewall", 3)
+            soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+            final_damage = max(0, 4 - soak_hits)
+            result_text = f"Data IC connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Stun damage."
+            target.stun_damage += final_damage
+        else:
+            result_text = f"Data IC attack is deflected by {target.name}'s firewall."
     elif is_social:
         # Find the highest social skill
         social_skills = {
@@ -1672,6 +1758,10 @@ def process_action(active, target, action_decision, state, llm, app=None):
             result_text = f"Astral Attack missed! {target.name} successfully defended."
 
     elif is_erase_tether:
+        if getattr(active, "is_locked_by_tarpit", False):
+            action_text = f"{active.name} attempts to erase Tethers held by {target.name}."
+            result_text = f"Failed! {active.name}'s connection is locked by Tar-Pit IC."
+            return action_text, result_text, edge_spent
         log = active.get_attribute("LOG", 3)
         computer_skill = active.skills.get("Computer", 4)
         attack_pool = log + computer_skill
