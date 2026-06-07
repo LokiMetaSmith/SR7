@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>N-Factorial Gestalt</name>
+    <metatype>Technomancer-Spirit-Sprite</metatype>
+    <attributes>
+      <attribute><name>BOD</name><value>4</value></attribute>
+      <attribute><name>AGI</name><value>4</value></attribute>
+      <attribute><name>REA</name><value>4</value></attribute>
+      <attribute><name>STR</name><value>3</value></attribute>
+      <attribute><name>CHA</name><value>5</value></attribute>
+      <attribute><name>INT</name><value>6</value></attribute>
+      <attribute><name>LOG</name><value>7</value></attribute>
+      <attribute><name>WIL</name><value>7</value></attribute>
+      <attribute><name>EDG</name><value>5</value></attribute>
+      <attribute><name>MAG</name><value>6</value></attribute>
+      <attribute><name>RES</name><value>6</value></attribute>
+    </attributes>
+    <skills>
+      <skill><name>Computer</name><value>6</value></skill>
+      <skill><name>Hacking</name><value>6</value></skill>
+      <skill><name>Cybercombat</name><value>6</value></skill>
+      <skill><name>Electronic Warfare</name><value>6</value></skill>
+      <skill><name>Spellcasting</name><value>6</value></skill>
+      <skill><name>Summoning</name><value>6</value></skill>
+    </skills>
+    <spells>
+      <spell><name>Manabolt</name></spell>
+      <spell><name>Stunball</name></spell>
+    </spells>
+    <qualities>
+      <quality>
+        <name>Technomancer</name>
+      </quality>
+      <quality>
+        <name>Dual Natured</name>
+      </quality>
+      <quality>
+        <name>CFD</name>
+      </quality>
+    </qualities>
+  </character>
+</characters>
