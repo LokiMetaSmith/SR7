@@ -80,6 +80,7 @@ class PossessingEntity:
     stun_damage: int = 0
     physical_damage: int = 0
     is_remote: bool = False
+    possessed_by: Optional['PossessingEntity'] = None
 
 @dataclass
 class Zone:
@@ -146,10 +147,13 @@ class Combatant:
                 base += 1
                 break
 
-        if self.possessed_by and attr in ["BOD", "AGI", "REA", "STR"]:
-            base += self.possessed_by.physical_modifiers.get(attr, 0)
-        if self.possessed_by and attr in ["LOG", "INT", "WIL", "CHA"]:
-            return self.possessed_by.mental_attributes.get(attr, base)
+        current_possessor = self.possessed_by
+        while current_possessor:
+            if attr in ["BOD", "AGI", "REA", "STR"]:
+                base += current_possessor.physical_modifiers.get(attr, 0)
+            if attr in ["LOG", "INT", "WIL", "CHA"]:
+                base = current_possessor.mental_attributes.get(attr, base)
+            current_possessor = current_possessor.possessed_by
         return base
 
     def take_damage(self, amount: int, damage_type: str) -> str:
@@ -191,30 +195,35 @@ class Combatant:
                 result_text += " Their Null-bag is punctured and their AR signature lights up!"
 
             # Possession Inhabitation Trigger & Biofeedback
-            if self.possessed_by:
-                if amount > self.get_attribute("WIL", 3) and not self.possessed_by.is_inhabitation:
-                    self.possessed_by.is_inhabitation = True
-                    result_text += f" [The Merger! {self.name} took massive physical trauma, and the possessing entity {self.possessed_by.name} has permanently taken over!]"
+            current_possessor = self.possessed_by
+            while current_possessor:
+                if amount > self.get_attribute("WIL", 3) and not current_possessor.is_inhabitation:
+                    current_possessor.is_inhabitation = True
+                    result_text += f" [The Merger! {self.name} took massive physical trauma, and the possessing entity {current_possessor.name} has permanently taken over!]"
 
                 # Damage Sharing / Destabilization
                 biofeedback = amount // 2
                 if biofeedback > 0:
-                    self.possessed_by.stun_damage += biofeedback
-                    result_text += f" [{self.possessed_by.name} shares the trauma, taking {biofeedback} Stun biofeedback!]"
+                    current_possessor.stun_damage += biofeedback
+                    result_text += f" [{current_possessor.name} shares the trauma, taking {biofeedback} Stun biofeedback!]"
 
                 # Dumpshock / Banishment if destroyed
                 if self.physical_damage >= self.physical_track:
                     dumpshock = 6
-                    self.possessed_by.stun_damage += dumpshock
-                    result_text += f" [Host body destroyed! {self.possessed_by.name} suffers {dumpshock} Stun dumpshock/destabilization!]"
+                    current_possessor.stun_damage += dumpshock
+                    result_text += f" [Host body destroyed! {current_possessor.name} suffers {dumpshock} Stun dumpshock/destabilization!]"
+
+                current_possessor = current_possessor.possessed_by
 
         else:
             self.stun_damage += amount
-            if self.possessed_by:
+            current_possessor = self.possessed_by
+            while current_possessor:
                 biofeedback = amount // 2
                 if biofeedback > 0:
-                    self.possessed_by.stun_damage += biofeedback
-                    result_text += f" [{self.possessed_by.name} shares the trauma, taking {biofeedback} Stun biofeedback!]"
+                    current_possessor.stun_damage += biofeedback
+                    result_text += f" [{current_possessor.name} shares the trauma, taking {biofeedback} Stun biofeedback!]"
+                current_possessor = current_possessor.possessed_by
         return result_text
 
     def roll_initiative(self) -> int:
@@ -628,6 +637,11 @@ def parse_chummer(file_path: str) -> Combatant:
         c.is_dual_natured = True
     elif char.find(".//qualities/quality[name='Dual Natured']") is not None:
         c.is_dual_natured = True
+
+    # Check for Possession/CFD to assign a dummy possessing entity so it can be chained
+    qualities_text = " ".join([q.text for q in char.findall(".//qualities/quality/name") if q.text])
+    if "Possessed" in qualities_text or "CFD" in qualities_text:
+        c.possessed_by = PossessingEntity(name="Possessing Entity")
 
     return c
 

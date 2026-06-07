@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>N-Factorial Possessed Rigger</name>
+    <metatype>Human</metatype>
+    <attributes>
+      <attribute><name>BOD</name><value>3</value></attribute>
+      <attribute><name>AGI</name><value>3</value></attribute>
+      <attribute><name>REA</name><value>4</value></attribute>
+      <attribute><name>STR</name><value>3</value></attribute>
+      <attribute><name>CHA</name><value>3</value></attribute>
+      <attribute><name>INT</name><value>5</value></attribute>
+      <attribute><name>LOG</name><value>5</value></attribute>
+      <attribute><name>WIL</name><value>5</value></attribute>
+      <attribute><name>EDG</name><value>4</value></attribute>
+    </attributes>
+    <skills>
+      <skill><name>Gunnery</name><value>6</value></skill>
+      <skill><name>Pilot Ground Craft</name><value>5</value></skill>
+    </skills>
+    <cyberwares>
+      <cyberware>
+        <name>Control Rig</name>
+        <rating>2</rating>
+      </cyberware>
+    </cyberwares>
+    <vehicles>
+      <vehicle>
+        <name>Ares Duelist (Rigged)</name>
+        <armor>6</armor>
+        <body>4</body>
+        <handling>4</handling>
+        <speed>4</speed>
+        <accel>2</accel>
+        <sensor>3</sensor>
+        <weapons>
+          <weapon>
+            <name>Ares Alpha</name>
+            <damage>11P</damage>
+            <ap>-2</ap>
+          </weapon>
+        </weapons>
+      </vehicle>
+    </vehicles>
+    <qualities>
+      <quality>
+        <name>Possessed</name>
+      </quality>
+      <quality>
+        <name>CFD</name>
+      </quality>
+    </qualities>
+  </character>
+</characters>
