@@ -15,5 +15,8 @@ Based on common AI-generated text patterns, AIs must actively avoid the followin
 4. **"It's not just X, it's Y" formula:** Avoid this escalating structure (e.g., "solutions that do not merely satisfy the constraint but satisfy the aesthetic instincts").
 5. **Excessive em-dashes:** Use em-dashes sparingly. Do not use them as a crutch for sentence structure.
 6. **"Delve", "tapestry", "testament", etc.:** Avoid classic LLM buzzwords.
+7. **Lexical Repetition:** Avoid using the same descriptors, metaphors, or specific phrasing repeatedly across scenes or chapters. Rotate vocabulary dynamically.
+8. **Monotonous Tension (Tension Matrix):** Characters in a relationship must not re-litigate the same single point of conflict in every shared scene. Rotate different 'seams' of tension (e.g., ambition, faith, silence, trust) across scenes to create multi-dimensional relationships.
+9. **Repetitive Chapter/Scene Openings & Endings:** Do not start multiple scenes/chapters with time-skips or generic transitions (e.g., "The next morning," "Later that day"). Rotate opening techniques (sensory immersion, action, dialogue cold open, etc.) and ending techniques (image, question, emotional beat, action mid-motion).
 
 Prioritize natural, varied, and grounded writing over overly dramatic or formulaic structures.

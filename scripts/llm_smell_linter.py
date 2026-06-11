@@ -9,7 +9,8 @@ SMELLS = {
     "consecutive_short_sentences": re.compile(r"([A-Z][^.!?]{10,40}[.!?])\s+([A-Z][^.!?]{10,40}[.!?])\s+([A-Z][^.!?]{10,40}[.!?])"),
     "excessive_em_dashes": re.compile(r"(?:---|—|–)"),
     "punchline_endings": re.compile(r"[.!?]\s+([A-Z][^.!?]{10,50}[.!?])\s*\n"),
-    "llm_buzzwords": re.compile(r"\b(delve|tapestry|testament|navigate|realm|landscape|intricate|nuanced|multifaceted)\b", re.IGNORECASE)
+    "llm_buzzwords": re.compile(r"\b(delve|tapestry|testament|navigate|realm|landscape|intricate|nuanced|multifaceted)\b", re.IGNORECASE),
+    "repetitive_openings": re.compile(r"^(?:The next morning|Later that day|Suddenly|In the end|Afterwards|A few hours later|The following day)[,\s]", re.IGNORECASE)
 }
 
 def check_file(filepath):
@@ -39,6 +40,21 @@ def check_file(filepath):
     for p in paragraphs:
         if SMELLS["consecutive_short_sentences"].search(p):
             results.append((line_offset, "consecutive_short_sentences", p[:100] + "...", "Found 3+ consecutive short sentences"))
+
+        opening_match = SMELLS["repetitive_openings"].search(p.strip())
+        if opening_match:
+            results.append((line_offset, "repetitive_openings", p[:50] + "...", f"Found repetitive/generic opening: '{opening_match.group(0).strip()}'"))
+
+        # Lexical variety check (detect simple repetitive phrasing in the same paragraph)
+        # We look for repeated adjective+noun or similar 3-4 word phrases
+        words = re.findall(r'\b[a-zA-Z]{4,}\b', p.lower())
+        if len(words) > 10:
+            ngrams = [' '.join(words[i:i+3]) for i in range(len(words)-2)]
+            seen = set()
+            for ngram in ngrams:
+                if ngram in seen:
+                    results.append((line_offset, "lexical_repetition", ngram, f"Found repeated 3-word phrase within paragraph: '{ngram}'"))
+                seen.add(ngram)
 
         sentences = re.split(r'[.!?]+', p.strip())
         sentences = [s.strip() for s in sentences if s.strip()]
