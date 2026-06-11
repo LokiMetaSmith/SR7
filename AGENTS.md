@@ -19,4 +19,10 @@ Based on common AI-generated text patterns, AIs must actively avoid the followin
 8. **Monotonous Tension (Tension Matrix):** Characters in a relationship must not re-litigate the same single point of conflict in every shared scene. Rotate different 'seams' of tension (e.g., ambition, faith, silence, trust) across scenes to create multi-dimensional relationships.
 9. **Repetitive Chapter/Scene Openings & Endings:** Do not start multiple scenes/chapters with time-skips or generic transitions (e.g., "The next morning," "Later that day"). Rotate opening techniques (sensory immersion, action, dialogue cold open, etc.) and ending techniques (image, question, emotional beat, action mid-motion).
 
+### Continuity Tracking
+To avoid continuity slip-ups (e.g., a character changing eye color mid-book, or a dropped plot thread), use the `scripts/continuity_tracker.py` script.
+* **Record Facts:** When establishing a new, permanent fact about a character, location, or plot thread in generated text, call `python scripts/continuity_tracker.py add "<Entity>" "<Category>" "<Fact>" --source "<Source>"`.
+* **Verify Facts:** Before generating a new scene, query existing facts to ensure consistency by running `python scripts/continuity_tracker.py list --entity "<Entity>"`.
+* Examples of categories: "Appearance", "Background", "Plot Thread", "Relationship".
+
 Prioritize natural, varied, and grounded writing over overly dramatic or formulaic structures.
