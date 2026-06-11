@@ -262,6 +262,8 @@ def test_spirit_vs_sprite_compiling():
 
     original_load = sim.load_combatant
     def mock_load(path):
+        if "dummy_spirit" in path or "dummy_sprite" in path:
+            return original_load(path)
         if "mage" in path:
             return mage
         elif "techno" in path:
