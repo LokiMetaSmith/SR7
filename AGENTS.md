@@ -21,8 +21,8 @@ Based on common AI-generated text patterns, AIs must actively avoid the followin
 
 ### Continuity Tracking
 To avoid continuity slip-ups (e.g., a character changing eye color mid-book, or a dropped plot thread), use the `scripts/continuity_tracker.py` script.
-* **Record Facts:** When establishing a new, permanent fact about a character, location, or plot thread in generated text, call `python scripts/continuity_tracker.py add "<Entity>" "<Category>" "<Fact>" --source "<Source>"`.
-* **Verify Facts:** Before generating a new scene, query existing facts to ensure consistency by running `python scripts/continuity_tracker.py list --entity "<Entity>"`.
+* **Record Facts:** When establishing a new, permanent fact about a character, location, or plot thread in generated text, call `python scripts/continuity_tracker.py --story "<story_name>" add "<Entity>" "<Category>" "<Fact>" --source "<Source>"`.
+* **Verify Facts:** Before generating a new scene, query existing facts to ensure consistency by running `python scripts/continuity_tracker.py --story "<story_name>" list --entity "<Entity>"`.
 * Examples of categories: "Appearance", "Background", "Plot Thread", "Relationship".
 
 Prioritize natural, varied, and grounded writing over overly dramatic or formulaic structures.

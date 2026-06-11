@@ -3,14 +3,20 @@ import json
 import os
 from datetime import datetime
 
-DB_FILE = os.path.join(os.path.dirname(__file__), "..", "continuity.jsonl")
+def get_db_file(story_name):
+    # Ensure it's saved in the specific campaign folder
+    base_dir = os.path.join(os.path.dirname(__file__), "..", "campaigns", story_name)
+    os.makedirs(base_dir, exist_ok=True)
+    return os.path.join(base_dir, "continuity.jsonl")
 
-def init_db():
-    if not os.path.exists(DB_FILE):
-        with open(DB_FILE, 'w', encoding='utf-8') as f:
+def init_db(story_name):
+    db_file = get_db_file(story_name)
+    if not os.path.exists(db_file):
+        with open(db_file, 'w', encoding='utf-8') as f:
             pass
 
-def add_fact(entity, category, fact, source="manual"):
+def add_fact(story_name, entity, category, fact, source="manual"):
+    db_file = get_db_file(story_name)
     record = {
         "timestamp": datetime.now().isoformat(),
         "entity": entity,
@@ -18,14 +24,15 @@ def add_fact(entity, category, fact, source="manual"):
         "fact": fact,
         "source": source
     }
-    with open(DB_FILE, 'a', encoding='utf-8') as f:
+    with open(db_file, 'a', encoding='utf-8') as f:
         f.write(json.dumps(record) + '\n')
-    print(f"Added fact for '{entity}' in category '{category}': {fact}")
+    print(f"Added fact for '{entity}' in story '{story_name}' (Category '{category}'): {fact}")
 
-def remove_fact(entity, fact_substring):
+def remove_fact(story_name, entity, fact_substring):
+    db_file = get_db_file(story_name)
     records = []
     removed = 0
-    with open(DB_FILE, 'r', encoding='utf-8') as f:
+    with open(db_file, 'r', encoding='utf-8') as f:
         for line in f:
             if not line.strip(): continue
             record = json.loads(line)
@@ -35,16 +42,22 @@ def remove_fact(entity, fact_substring):
             records.append(line)
 
     if removed > 0:
-        with open(DB_FILE, 'w', encoding='utf-8') as f:
+        with open(db_file, 'w', encoding='utf-8') as f:
             for r in records:
                 f.write(r)
-        print(f"Removed {removed} fact(s) for '{entity}' matching '{fact_substring}'.")
+        print(f"Removed {removed} fact(s) for '{entity}' in story '{story_name}' matching '{fact_substring}'.")
     else:
-        print(f"No facts found for '{entity}' matching '{fact_substring}'.")
+        print(f"No facts found for '{entity}' in story '{story_name}' matching '{fact_substring}'.")
 
-def list_facts(entity=None, category=None):
+def list_facts(story_name, entity=None, category=None):
+    db_file = get_db_file(story_name)
     count = 0
-    with open(DB_FILE, 'r', encoding='utf-8') as f:
+
+    if not os.path.exists(db_file):
+        print(f"No facts found for story '{story_name}'.")
+        return
+
+    with open(db_file, 'r', encoding='utf-8') as f:
         for line in f:
             if not line.strip(): continue
             record = json.loads(line)
@@ -60,6 +73,7 @@ def list_facts(entity=None, category=None):
 
 def main():
     parser = argparse.ArgumentParser(description="Continuity Tracker for Narrative Generation")
+    parser.add_argument("--story", required=True, help="The name of the story/campaign (e.g., 'cold_storage')")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     # Add command
@@ -80,14 +94,14 @@ def main():
     parser_list.add_argument("--category", help="Filter by category")
 
     args = parser.parse_args()
-    init_db()
+    init_db(args.story)
 
     if args.command == "add":
-        add_fact(args.entity, args.category, args.fact, args.source)
+        add_fact(args.story, args.entity, args.category, args.fact, args.source)
     elif args.command == "remove":
-        remove_fact(args.entity, args.fact_substring)
+        remove_fact(args.story, args.entity, args.fact_substring)
     elif args.command == "list":
-        list_facts(args.entity, args.category)
+        list_facts(args.story, args.entity, args.category)
 
 if __name__ == "__main__":
     main()
