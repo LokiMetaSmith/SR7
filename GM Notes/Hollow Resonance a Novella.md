@@ -191,10 +191,10 @@ The noodles – surprisingly palatable, suspiciously protein-rich – settled he
 They moved carefully, Kyber’s combat boots crunching softly on rubble and shattered glass. The Negotiator persona kept Kyber’s posture non-threatening, observant. Logi flowed beside them, a shadow that seemed to absorb light, their presence a subtle pressure against the local reality. Kyber scanned the rooftops and shattered windows, senses augmented by tech and training, alert for threats. They felt eyes on them, the constant scrutiny of the desperate and the damned, but also something more focused. Once, a flicker of movement on a high fire escape – too quick, too deliberate for a random scavenger. Someone was paralleling them. Or shadowing.
 Grima’s sector was marginally less devastated than its surroundings, suggesting a tighter community or simply less worth looting. They cut their lights, melding into the deep shadows opposite the structure Jensen had indicated – a leaning three-story hab-block reinforced with scavenged girders. Logi raised a hand, palm glowing faintly as they extended their senses.
 “Subject Asa is present. Outdoors. Low metabolic rate, minimal bio-signs apart from basic functions. Almost… quiescent,” Logi reported, their voice tight with digital concentration. “Grima is nearby. Elevated heart rate, stress hormones spiking.”
-Kyber raised passive optical enhancers. Through the gloom, they saw the scene Logi described. A figure sat on the broken steps of the building’s entrance – Asa. She looked exactly like the grainy file photo Kyber had reviewed: worn synth-leather jacket, dark hair pulled back, a smudge of grease or grime on one cheek. She was staring intently at a small, multifaceted piece of junk metal in her hands, turning it over and over. Utterly absorbed. Except… her eyes weren’t tracking the object. They were fixed slightly above it, unfocused. Her movements were fluid but lacked intent, like a well-programmed puppet.
+Kyber raised passive optical enhancers. Through the gloom, they saw the scene Logi described. A figure sat on the broken steps of the building’s entrance – Asa. She looked exactly like the grainy file photo Kyber had reviewed: worn synth-leather jacket, dark hair pulled back, a smudge of grease or grime on one cheek. She was staring intently at a small, multi-layered piece of junk metal in her hands, turning it over and over. Utterly absorbed. Except… her eyes weren’t tracking the object. They were fixed slightly above it, unfocused. Her movements were fluid but lacked intent, like a well-programmed puppet.
 Grima stood a few paces away, twisting a rag in her hands, her face a mask of anguish and confusion. She kept opening her mouth as if to speak to Asa, then closing it again, shoulders slumped.
 “Observe the energy field,” Logi murmured, projecting a faint overlay onto Kyber’s optical feed. A sickly, unstable aura pulsed around Asa, flickering at the edges like bad code. It seemed to… resonate with Grima’s own bio-signature, feeding back in a loop that amplified the wrongness. “It’s like a resonance cascade, anchored to Grima’s grief, but self-sustaining around Asa. And the nanite density here…”
-Suddenly, Asa looked up, her gaze sweeping across the street, directly towards their hiding spot. There was no recognition in her eyes, no curiosity. It was the blank, assessing stare of a security camera. Kyber froze, the Negotiator urging calm while the Observer flagged the unnatural reaction speed. Logi’s static field intensified almost imperceptibly.
+Asa looked up, her gaze sweeping across the street, directly towards their hiding spot. There was no recognition in her eyes, no curiosity. It was the blank, assessing stare of a security camera. Kyber froze, the Negotiator urging calm while the Observer flagged the unnatural reaction speed. Logi’s static field intensified almost imperceptibly.
 From a nearby alley, a low growl echoed. A dog? Here? It sounded deep, guttural, full of warning. Asa’s head snapped towards the sound, her expression unchanged. The growling intensified, then abruptly stopped, followed by a soft whine. Kyber scanned the alleyway but saw nothing. The shadow that had been pacing them earlier seemed to have vanished as well. Coincidence?
 Kyber reviewed the input. Asa wasn’t possessed, wasn’t undead in the conventional sense. She was… an echo. A construct, maybe, animated by ambient energy, local nanites, and anchored by the living’s desperate longing. A hollow shell filled with imitation life. The CFD personalities within Kyber felt a strange, discordant sympathy – the feeling of being a collection of echoes themselves, but real ones, integrated. This was a mockery of that.
 "This requires closer analysis," Kyber decided. "The interaction, the energy signature… we need to understand the mechanism."
@@ -222,7 +222,7 @@ Cryptolock snorted, a harsh, grating sound. "Nothing's 'natural' here, suit. Esp
 Cryptolock’s eyes narrowed. He knew Kyber was right, damn it. He hated that he was right. This slick outsider, probing the wound he’d come here to try and understand himself.
 Grima made a choked sound. "It was… Francky," she whispered, shrinking back as both Kyber and Cryptolock focused on her. "He… he said he could help. A New Beginnings policy. For Asa. He said… she wouldn't be gone forever." Her voice broke. "I signed it. I didn't care what it cost."
 Francky. The salesman. The source, or at least the facilitator. Kyber and Cryptolock exchanged a look – a flicker of shared understanding amidst the hostility.
-Suddenly, Asa, who had been unnervingly still during the entire exchange, tilted her head. She reached out a hand, not towards Grima, not towards any of them, but towards a patch of crumbling wall where iridescent mold grew in fractal patterns.
+Asa, who had been unnervingly still during the entire exchange, tilted her head. She reached out a hand, not towards Grima, not towards any of them, but towards a patch of crumbling wall where iridescent mold grew in fractal patterns.
 "Pretty," she murmured, her voice still flat, but her fingers tracing the glowing mold with that same smooth, mechanical precision. "It grows. Changes everything. Makes something new."
 The words, cribbed perhaps from some overheard conversation, or perhaps something deeper, more alien, resonated strangely in the tense silence. The unnaturalness of the gesture, the blank pronouncement – it cut through the standoff. Kyber, Logi, and Cryptolock found themselves momentarily united, observers of the same profound and disturbing wrongness.
 Kyber broke the silence first, addressing Cryptolock directly, lowering their voice slightly. "Maybe we do have a common interest. Francky. New Beginnings. Whatever is doing this." A gesture towards Asa. "It's a threat. To her," a nod at Grima, "and likely to everyone else here."
@@ -252,7 +252,7 @@ Cryptolock considered this, his gaze sharp. Jensen played all sides but had a st
 "Crystal," Kyber replied, meeting his gaze.
 Without another word, Cryptolock turned and melted back into the shadows he’d emerged from, his footsteps quickly becoming indistinguishable from the city's background noise.
 Kyber watched him go, then turned back to Logi. "Let's analyze that signature."
-"Already processing," Logi confirmed. Their attention, however, drifted momentarily back towards Asa. She was still crouched by the wall, her fingers idly stroking the glowing, iridescent mold. Completely oblivious to the conversation, the planning, the danger. A hollow echo in the heart of the decay, a living testament to the wrongness they were now hunting.
+"Already processing," Logi confirmed. Their attention, however, drifted momentarily back towards Asa. She was still crouched by the wall, her fingers idly stroking the glowing, iridescent mold. Completely oblivious to the conversation, the planning, the danger. A hollow echo in the heart of the decay, a living proof to the wrongness they were now hunting.
 
 ## Chapter 6: Patterns in the Noise
 The rented Citymaster, parked deep within the skeletal embrace of a multi-story parking garage collapse, offered the best semblance of security Zkazena could provide. Its hardened shell deflected the worst of the ambient nanite smog, and its internal systems, scrubbed and shielded by Logi before they even entered the sprawl, provided a relatively clean workspace. Relative being the operative word.
@@ -264,14 +264,14 @@ The map coalesced. Francky’s movements over the past weeks formed a complex we
 Kyber frowned. "Wuxing? Is Francky connected to them?"
 "Unclear. The overlap could be coincidental geographic proximity. Or…" Logi paused, the data streams on Kyber's display flickering erratically for a moment. "Or the code structures themselves are… unusual. Non-standard architecture. Some segments exhibit near-sentient behaviour during deep scans. Recursive loops that learn."
 Kyber felt a prickle of unease separate from the ambient Zkazena dread. Self-modifying code wasn't unheard of, but near-sentient? That echoed troubling reports from other hotspots, whispers of emergent AIs, digital spirits, things that blurred the line between code and life.
-As Logi continued their analysis, Kyber experienced a flicker, a momentary doubling of their vision. The hard lines of the Citymaster's interior seemed to shimmer, overlaid for a split second with a lattice of intricate, glowing geometry that felt profoundly alien. It vanished as quickly as it appeared, leaving Kyber blinking, unsure if it was eye strain, a glitch in their AR, or something else. The Observer noted it calmly, filing it under ‘unexplained sensory phenomena’. The Negotiator felt a jolt of primal fear, quickly suppressed.
+As Logi continued their analysis, Kyber experienced a flicker, a momentary doubling of their vision. The hard lines of the Citymaster's interior seemed to shimmer, overlaid for a split second with a lattice of complex, glowing geometry that felt profoundly alien. It vanished as quickly as it appeared, leaving Kyber blinking, unsure if it was eye strain, a glitch in their AR, or something else. The Observer noted it calmly, filing it under ‘unexplained sensory phenomena’. The Negotiator felt a jolt of primal fear, quickly suppressed.
 "Further correlation," Logi continued, seemingly unaware of Kyber's momentary disorientation. "Searching for mentions of 'New Beginnings' policies reveals linguistic overlaps with marketing materials for a new, restricted BTL series. 'Waking Dreams'. Promises lucid, controllable dream states. User reports mention… identity bleeding, persona fixation."
 Personafix. Another piece of the puzzle, dark and jagged, hinting at the manipulation of identity, mirroring the Hollows in a twisted way. Was Francky just selling resurrection, or was something larger at play, involving Wuxing secrets, rogue code, and dangerous BTL tech?
 "So, Francky's trail leads to St. Jude's, potentially intersecting with Wuxing data shadows and code anomalies," Kyber summarized, pushing the flicker of unease aside. "It's our best lead."
 "Concurrence. St. Jude's presents the highest probability for locating the subject or actionable intelligence regarding his operation."
 "Okay." Kyber activated a secure comm channel, drafting a heavily encrypted message. Cryptolock. Nanite trace confirms multiple recent visits: St. Jude's ruins. High probability target. Proceeding with caution. Kyber. They routed it through a series of cut-outs Logi had established, the final step being a dead drop accessible via Jensen at The Last Shaft. Whether Cryptolock got it, or trusted it, remained to be seen.
 "Let's move," Kyber said, checking the load on their own sidearm and slipping into tactical gear. "St. Jude's. Quiet approach. Observe first."
-Logi disconnected from the local network, the static around them subsiding slightly. They gave a single, sharp nod. The Citymaster’s engine hummed to life, ready to navigate the ruins towards the crumbling church, towards Francky, and towards whatever deeper strangeness lay waiting in the heart of Zkazena's decay.
+Logi disconnected from the local network, the static around them subsiding slightly. They gave a single, sharp nod. The Citymaster’s engine hummed to life, ready to traverse the ruins towards the crumbling church, towards Francky, and towards whatever deeper strangeness lay waiting in the heart of Zkazena's decay.
 
 ## Chapter 7: Whispers and Ruined Altars
 Leaving the heavy silence around Grima’s place felt like surfacing from contaminated water. Cryptolock moved fast, melting into the familiar warren of collapsed structures and toxic alleys. The encounter with the outsiders – Kyber and the static-wraith Logi – left a bitter taste, sharper than the usual Zkazena funk. Suits playing detective in his backyard. He didn’t trust them, not one bit. But the look in Grima’s eyes, the blank horror of Asa stroking that glowing mold… that was real. And the name Francky, dropped like poison into the conversation, confirmed the whispers Cryptolock had already been chasing.
@@ -308,7 +308,7 @@ Kyber killed the Citymaster's engine, letting the sudden silence press in. They�
 
 They moved towards the church ruins, keeping low, using the skeletal remains of surrounding buildings for cover. St. Jude’s loomed ahead, a gothic nightmare etched against the perpetually bruised sky. Much of the roof had collapsed, exposing shattered rafters like broken ribs. What remained of the stained-glass windows were jagged holes weeping dust. The air grew thick with the scent Cryptolock had noted – cloying sweetness overlaying rot, like flowers blooming on a corpse.
 
-They slipped through a gap where heavy oak doors once stood, entering the cavernous nave. Dust motes danced in the weak shafts of light piercing the gloom. Shattered pews lay like fallen soldiers. Graffiti covered the peeling walls – gang tags, crude obscenities, but also stranger symbols Kyber didn’t immediately recognize, intricate geometries that seemed to writhe at the edge of vision. The place felt fundamentally violated, a holy space repurposed for something profane.
+They slipped through a gap where heavy oak doors once stood, entering the cavernous nave. Dust motes danced in the weak shafts of light piercing the gloom. Shattered pews lay like fallen soldiers. Graffiti covered the peeling walls – gang tags, crude obscenities, but also stranger symbols Kyber didn’t immediately recognize, complex geometries that seemed to writhe at the edge of vision. The place felt fundamentally violated, a holy space repurposed for something profane.
 
 “Concentration increasing towards the chancel,” Logi murmured, gesturing towards the raised area where the altar once stood.
 
@@ -370,7 +370,7 @@ Francky's smile finally faltered, replaced by a flicker of genuine annoyance. "P
 
 "Your 'gardening' ends now," Cryptolock growled, taking a step forward.
 
-Francky sighed dramatically. "Always the violence with you short-lived creatures. I detest conflict. It disrupts the delicate work." He raised a hand, palm outward. The air around him seemed to thicken, buckling visibly. The sweet, rotten smell intensified, becoming nauseating. The intricate symbols chalked on the floor began to glow faintly.
+Francky sighed dramatically. "Always the violence with you short-lived creatures. I detest conflict. It disrupts the delicate work." He raised a hand, palm outward. The air around him seemed to thicken, buckling visibly. The sweet, rotten smell intensified, becoming nauseating. The complex symbols chalked on the floor began to glow faintly.
 
 "But," Francky continued, his voice losing its salesman smoothness, taking on a flatter, colder, more alien tone, "interfering pests must occasionally be... weeded out."
 
@@ -458,7 +458,7 @@ The swirling entity above the box convulsed violently. Its vaguely humanoid form
 
 "NO\!" Francky screamed, raw fury and something akin to panic replacing his earlier arrogance. He lunged towards Logi, ignoring Cryptolock for the moment, his hand morphing, elongating, shimmering with dark energy – no longer bothering with subtle manipulations. "You insignificant glitch\! Get *off* my property\!"
 
-Logi stood anchored to the box, bathed in the raging energy, their form flickering rapidly between their usual nondescript shape and a being seemingly composed of pure data and light. Their head was thrown back, static discharging wildly from their entire body. Kyber’s tight-beam connection sputtered, feeding them fragmented, overwhelming bursts of raw data: glimpses of intricate energy matrices far beyond standard technomancy, whispers of non-human protocols, the chilling sensation of an intelligence dwelling *within* the Resonator, ancient and vast, and the horrifying implication that the "Potential" entity was meant to be a *vessel*.
+Logi stood anchored to the box, bathed in the raging energy, their form flickering rapidly between their usual nondescript shape and a being seemingly composed of pure data and light. Their head was thrown back, static discharging wildly from their entire body. Kyber’s tight-beam connection sputtered, feeding them fragmented, overwhelming bursts of raw data: glimpses of complex energy matrices far beyond standard technomancy, whispers of non-human protocols, the chilling sensation of an intelligence dwelling *within* the Resonator, ancient and vast, and the horrifying implication that the "Potential" entity was meant to be a *vessel*.
 
 *Overload… cascade failure imminent… alien architecture… consuming…* Logi’s strained thoughts bled through the static.
 
@@ -526,7 +526,7 @@ But where Logi should have been, there wasn’t nothingness. The shimmering part
 
 At the heart of the swirling vortex of light and particles, something solidified. With a final, soft *chime* that seemed to resonate directly in Kyber’s bones, the vortex collapsed, leaving behind a single object resting on the scorched stone.
 
-It was roughly the size of a human heart, a crystalline structure of interlocking facets that seemed both perfectly geometric and organically grown. It glowed faintly from within, intricate patterns of light – like trapped data streams or neural pathways – shifting and pulsing beneath its smooth, translucent surface. It radiated a faint warmth and the unmistakable, familiar signature of Logi’s core nanite cluster, compressed, transformed, but undeniably *them*.
+It was roughly the size of a human heart, a crystalline structure of interlocking facets that seemed both perfectly geometric and organically grown. It glowed faintly from within, complex patterns of light – like trapped data streams or neural pathways – shifting and pulsing beneath its smooth, translucent surface. It radiated a faint warmth and the unmistakable, familiar signature of Logi’s core nanite cluster, compressed, transformed, but undeniably *them*.
 
 *Logi…* Kyber breathed, reaching out hesitantly. Their briefing on Logi’s unique nanite integration mentioned theoretical contingency states, extreme self-preservation protocols, but nothing like *this*. A crystalise state? Triggered by the feedback loop and the Resonator's alien energies?
 
@@ -597,7 +597,7 @@ The disused subway maintenance hub became their sanctuary, a pocket of echoing s
 
 First, Kyber focused on the crystalise. They connected portable diagnostic scanners, running every non-invasive analysis protocol they had. The results remained maddeningly opaque. Logi's core signature was the bedrock, unmistakable, but overlaid with fluctuating energy patterns and data structures that didn't match any known technomantic or biological state. It was processing *something* internally at an incredible rate, restructuring, integrating ambient energy. *Like a chrysalis,* Kyber thought, clinging to the hope of Logi’s reformation. They attempted various interface protocols – encrypted tight-beam, direct data-link simulation, even pulsed magnetic resonance keyed to Logi’s last known operational frequency. Nothing. The crystalise remained warm, pulsing softly, its internal light shifting, utterly unresponsive. A fortress of condensed potential, locking Kyber out. Frustration warred with a deep, protective anxiety.
 
-Next, the Boy. Kyber performed a more thorough medical scan. His vitals remained stable, the deep unconsciousness unwavering. The implants were intricate, networked directly into his brain stem and autonomic systems, clearly designed for regulation and perhaps external control or interface. Wuxing tech, but heavily modified, almost artisanal in its integration – Francky’s work, or commissioned by him? No serial numbers, no identifiers. His simple clothes were clean but unmarked. His pockets yielded only lint and a smooth, grey pebble worn featureless by countless turns in a hand. A blank slate, physically at least. Waking him forcefully felt too risky, given the neural strain and unknown cybernetics. They would have to wait.
+Next, the Boy. Kyber performed a more thorough medical scan. His vitals remained stable, the deep unconsciousness unwavering. The implants were complex, networked directly into his brain stem and autonomic systems, clearly designed for regulation and perhaps external control or interface. Wuxing tech, but heavily modified, almost artisanal in its integration – Francky’s work, or commissioned by him? No serial numbers, no identifiers. His simple clothes were clean but unmarked. His pockets yielded only lint and a smooth, grey pebble worn featureless by countless turns in a hand. A blank slate, physically at least. Waking him forcefully felt too risky, given the neural strain and unknown cybernetics. They would have to wait.
 
 Cryptolock watched Kyber’s meticulous work from a distance, leaning against a rusted support pillar, cleaning his repurposed pipe wrench with a dirty rag. He’d found some packaged protein bars and bottled water in one of the Citymaster's emergency kits, sharing them without comment.
 
@@ -741,7 +741,7 @@ Leónization. Wuxing's fountain of youth, their most guarded corporate secret. F
 
 Kyber glanced at the sleeping boy, then at the crystalise. Its gentle pulse seemed steady, reassuring. Kyber ran another passive scan, correlating its energy output with Spark's neural activity. There was a subtle, undeniable synchronization, a resonance between the crystal's pulsing light and the boy's own faint bio-signature, especially the non-standard implants. *Logi's analyzing the connection,* Kyber interpreted, *mapping the interface between Spark and whatever Francky intended.* It felt like progress, however slow.
 
-As Kyber focused intently on the shifting data patterns, the air in the hub seemed to waver for a second. The sharp lines of the console blurred, overlaid again with that fleeting vision of intricate, impossible geometry. This time it lasted longer, accompanied by a faint, discordant chime that echoed only in Kyber’s skull. They blinked hard, shaking their head, the vision receding. Residual effects from the Resonator blast? Or something else? The feeling of being watched, not by physical eyes, but by something ambient, informational, prickled at the edge of their awareness.
+As Kyber focused intently on the shifting data patterns, the air in the hub seemed to waver for a second. The sharp lines of the console blurred, overlaid again with that fleeting vision of complex, impossible geometry. This time it lasted longer, accompanied by a faint, discordant chime that echoed only in Kyber’s skull. They blinked hard, shaking their head, the vision receding. Residual effects from the Resonator blast? Or something else? The feeling of being watched, not by physical eyes, but by something ambient, informational, prickled at the edge of their awareness.
 
 A harsh buzz from Cryptolock’s burner comm startled them both. He listened intently, his expression growing grimmer.
 
@@ -871,7 +871,7 @@ They moved forward, the air growing thicker and the air temperature slightly coo
 
 Nothing. They were still undetected.
 
-Suddenly, a loud creaking echoed from down the tunnel. They froze, exchanging a look. Then, a panel on the ceiling fell loose, scraping its way to the ground. Kyber turned to Cryptolock, who shrugged, mouth set in a thin line. It wasn't a trap, not yet. Just an old building.
+A loud creaking echoed from down the tunnel. They froze, exchanging a look. Then, a panel on the ceiling fell loose, scraping its way to the ground. Kyber turned to Cryptolock, who shrugged, mouth set in a thin line. It wasn't a trap, not yet. Just an old building.
 
 As they continued, the generator's hum grew even louder. They rounded a corner, and it came into view – a bulky, old-fashioned diesel generator chugging away in a small room lined with exposed pipes and gauges.
 
@@ -1075,7 +1075,7 @@ But layered over that were other readings. Pockets of intense, unstable magical 
 
 One drone, creeping near a shattered ground-floor window of the west wing annex, relayed a disturbing image: inside, sophisticated Wuxing diagnostic equipment sat bolted to the floor, humming faintly, but the walls were covered in the same iridescent, fractal mold they'd seen at St. Jude's, glowing more intensely here. And skittering across the floor, attracted by the equipment's energy field, were things that looked like fist-sized insects made of cracked glass and wire, twitching spasmodically.
 
-"Okay," Kyber murmured, pulling back the drone feed. "Francky's definitely been here, or someone using his methods. The tech signature matches his research profile. But the place is compromised. Zone critters, energy fluctuations... it's not just fortified, it's actively hostile territory."
+"Okay," Kyber murmured, pulling back the drone feed. "Francky's definitely been here, or someone using his methods. The tech signature matches his research profile. But the place is compromised. Zone critters, energy fluctuations... it's fortified and actively hostile territory."
 
 Cryptolock nodded grimly. "Zone bleed's bad here. Those glass spiders? Saw 'em strip a ghoul down to bone in under a minute once. Nasty." He scanned the building again. "Getting *in* for recon looks bad enough. Getting *out* if things go loud..."
 
@@ -1101,7 +1101,7 @@ Cryptolock studied the overlay, then scanned the physical ruins. "Yeah, I see th
 
 Cryptolock gave a curt nod. "Okay. Let's dance with the Zone bleed."
 
-They moved out from their initial observation post, Cryptolock taking point, guiding Kyber through the treacherous landscape of twisted metal and crumbling ferrocrete. He moved with an uncanny grace, spotting unstable footing and potential hiding spots for Zone predators that Kyber's tech might have missed. The air felt staticy, charged, and the Logi-crystalise pulsed with a steady, heightened rhythm against Kyber’s chest.
+They moved out from their initial observation post, Cryptolock taking point, guiding Kyber through the treacherous terrain of twisted metal and crumbling ferrocrete. He moved with an uncanny grace, spotting unstable footing and potential hiding spots for Zone predators that Kyber's tech might have missed. The air felt staticy, charged, and the Logi-crystalise pulsed with a steady, heightened rhythm against Kyber’s chest.
 
 They were halfway across the rubble field, nearing the shadow of the hospital's west wing, when the sound reached them – the unmistakable *thump-thump-thump* of heavy rotors, growing rapidly closer.
 
@@ -1488,9 +1488,9 @@ Cryptolock pointed wordlessly towards niches carved into the alien stonework –
 
 The tunnel widened abruptly, ending not in another passage, but opening into sheer, breathtaking immensity. They stood on a ledge overlooking a cavern so vast Kyber’s lights couldn't find the ceiling or the far walls. The silence here was absolute, unnerving. The air was cold, pure, and thrummed with the raw power of the ley line, which flowed like a visible river of faint light through the center of the cavern below.
 
-Giant, naturally formed crystals, some taller than buildings, jutted from the cavern floor, pulsing with internal light in sympathy with the ley line. Strange, phosphorescent flora clung to the walls in intricate patterns. The architecture wasn't just glimpsed anymore; it surrounded them – cyclopean structures of the same dark, seamless stone rose from the cavern floor, their purpose and builders utterly alien. This was undoubtedly Citadel territory, a place existing outside human history.
+Giant, naturally formed crystals, some taller than buildings, jutted from the cavern floor, pulsing with internal light in sympathy with the ley line. Strange, phosphorescent flora clung to the walls in complex patterns. The architecture wasn't just glimpsed anymore; it surrounded them – cyclopean structures of the same dark, seamless stone rose from the cavern floor, their purpose and builders utterly alien. This was undoubtedly Citadel territory, a place existing outside human history.
 
-Kyber and Cryptolock stood frozen on the ledge, dwarfed by the scale and the palpable, ancient power of the place. The Logi-crystalise burned brightly against Kyber's chest, a small, warm star against the immense, cold darkness. They had followed the ley line, escaped Wuxing's immediate pursuit, but had stumbled into a realm far older, stranger, and potentially infinitely more dangerous than anything they had anticipated. Tomb, or passage? Kyber wasn't sure, but turning back now felt impossible.
+Kyber and Cryptolock stood frozen on the ledge, dwarfed by the scale and the palpable, ancient power of the place. The Logi-crystalise burned brightly against Kyber's chest, a small, warm star against the immense, cold darkness. They had followed the ley line, escaped Wuxing's immediate pursuit, but had stumbled into a domain far older, stranger, and potentially infinitely more dangerous than anything they had anticipated. Tomb, or passage? Kyber wasn't sure, but turning back now felt impossible.
 
 ## Chapter 39: River of Light
 
@@ -1560,7 +1560,7 @@ Taking a deep breath, Kyber stepped across the threshold, the Logi-crystalise a 
 
 The tunnel mouth swallowed them whole, plunging them back into a darkness that felt mundane, almost comforting, after the overwhelming scale and alien energies of the Citadel cavern. The smooth, cold black stone of the passage continued for perhaps a hundred meters, the floor coated in fine, undisturbed dust. The intense thrumming of the ley line faded behind them, and the Logi-crystalise's brilliant glow softened, returning to the steady, gentle pulse it had maintained before.
 
-Kyber checked their AR display. The intricate schematic map Logi had provided flickered, dissolved into static, then vanished. "Map's gone," Kyber reported, a pang of disappointment hitting them. "We must be out of range of whatever energy source Logi was using to generate it." They switched focus back to their own scanner suite, the familiar readouts feeling limited, almost primitive, after the crystalise's effortless guidance.
+Kyber checked their AR display. The complex schematic map Logi had provided flickered, dissolved into static, then vanished. "Map's gone," Kyber reported, a pang of disappointment hitting them. "We must be out of range of whatever energy source Logi was using to generate it." They switched focus back to their own scanner suite, the familiar readouts feeling limited, almost primitive, after the crystalise's effortless guidance.
 
 The Citadel stonework began to show seams, then transitioned abruptly back into rough-hewn rock reinforced with crumbling, rust-wept metal arches. They were back in the Old Mine network. Water dripped, echoes returned, and the air regained the familiar Zkazena scents of damp earth, minerals, and decay.
 
@@ -1778,7 +1778,7 @@ But Spark wasn't listening. Driven by an instinct deeper than conscious thought,
 
 Light exploded. Not a violent detonation like the Resonator, but an implosion of pure, golden-white energy centered on the crystalise and Spark. It surged outwards, filling the Citymaster with blinding light, then collapsed inwards with impossible speed, drawing *into* Spark. Kyber and Cryptolock threw up their arms, momentarily blinded. The crystalise vanished from the cot.
 
-When the light subsided, Spark was sitting fully upright. He looked the same, yet utterly different. His eyes glowed faintly with the same golden light that had resided within the crystalise. Intricate, luminous patterns, like living circuits, pulsed faintly beneath his skin, concentrated around the areas where Kyber knew his implants lay. The energy signature radiating from him was immense, overwhelming Kyber's sensors – a seamless fusion of the boy's biology, his implants, Logi's imprinted signature, and the ancient, potent energy of the Wisp.
+When the light subsided, Spark was sitting fully upright. He looked the same, yet utterly different. His eyes glowed faintly with the same golden light that had resided within the crystalise. complex, luminous patterns, like living circuits, pulsed faintly beneath his skin, concentrated around the areas where Kyber knew his implants lay. The energy signature radiating from him was immense, overwhelming Kyber's sensors – a seamless fusion of the boy's biology, his implants, Logi's imprinted signature, and the ancient, potent energy of the Wisp.
 
 He blinked, looking down at his own hands, watching the light fade slightly, becoming less overt but still present. Then he looked up, directly at Kyber. His expression was unnervingly calm, anciently wise yet touched with a childlike confusion.
 
@@ -1934,7 +1934,7 @@ But amidst the chaos, glimpses of understanding began to emerge. Francky wasn't 
 
 This was no simple bioweapon. There was something grander, more terrifying at play, something that seemed to stretch beyond the boundaries of Kyber's understanding. The more Kyber probed, the more questions arose. Control over the Zone? A weapon *against* it? Or... something else entirely?
 
-Suddenly, a flicker on the datapad display snapped Kyber's full attention. A new file path resolved, highlighted in corrupted red data, a structure Kyber hadn't seen before. Tracing its origin, they found a sub-sub-directory within one of Franckey's most heavily encrypted project folders, a directory marked simply WISP\_MATRIX\_CONTAINMENT.
+A flicker on the datapad display snapped Kyber's full attention. A new file path resolved, highlighted in corrupted red data, a structure Kyber hadn't seen before. Tracing its origin, they found a sub-sub-directory within one of Franckey's most heavily encrypted project folders, a directory marked simply WISP\_MATRIX\_CONTAINMENT.
 
 Kyber’s breath caught. This wasn't about Logi specifically; Francky wouldn't know that name. This was about the *result* of the feedback loop at St. Jude's – the crystalise itself, which Francky clearly recognized as containing the Wisp's core essence in a new, stable (or potentially stable) matrix. He must have detected its unique signature after the explosion and realized the 'Heart' hadn't been destroyed, but *transformed*.
 
@@ -2474,7 +2474,7 @@ They found a temporary, relatively dry alcove a few miles past the Chat Pile Kin
 
 Kyber sat near the entrance, maintaining a silent watch, while Logi v2.1 ran a localized diagnostic on their fragmented data streams.
 
-Suddenly, a high-priority, heavily encrypted incoming message flashed on Kyber's commlink. The sender ID was spoofed, bouncing through a dozen proxy servers before resolving into a single, stylized icon: a silver kestrel in flight.
+A high-priority, heavily encrypted incoming message flashed on Kyber's commlink. The sender ID was spoofed, bouncing through a dozen proxy servers before resolving into a single, stylized icon: a silver kestrel in flight.
 
 The high-risk solo mission to Relay 7-Gamma had paid off. Kestrel, the ghost broker, was finally reaching out.
 
@@ -2849,7 +2849,7 @@ It wasn't an apology, and it wasn't empathy. It was an updated algorithm. But fo
 
 ## Chapter 76: Descent into Lazarus
 
-The air grew steadily colder and tasted of copper and ancient, undisturbed dust as they descended. Kyber led the way, relying on the stolen Wuxing schematics and Logi v2.1’s active sensor sweeps to navigate the treacherous, unmapped vertical shafts beneath the Ashworth ruins. They had abandoned the relative safety of the subway hub just minutes before the Wuxing strike team breached the upper levels, the distant, muffled thumps of breaching charges echoing down the shafts behind them.
+The air grew steadily colder and tasted of copper and ancient, undisturbed dust as they descended. Kyber led the way, relying on the stolen Wuxing schematics and Logi v2.1’s active sensor sweeps to traverse the treacherous, unmapped vertical shafts beneath the Ashworth ruins. They had abandoned the relative safety of the subway hub just minutes before the Wuxing strike team breached the upper levels, the distant, muffled thumps of breaching charges echoing down the shafts behind them.
 
 Cryptolock brought up the rear, his ghoul senses straining in the subterranean darkness, while Spark+ floated—literally hovered an inch off the ground—between them. The Architect remained silent, his silver eyes glowing faintly in the gloom, a beacon of alien power that Kyber desperately hoped wasn’t broadcasting their position.
 
@@ -3133,13 +3133,13 @@ They began the long ascent, walking up the spiraling crystal path. They left the
 
 They clambered through the final, wide opening of the crystal spiral, stepping out onto the surface of what used to be Crispyopolis.
 
-The sky over Zkazena was no longer a uniform, oppressive grey. It was a bruised, magnificent tapestry, swirling with vibrant, impossible colors—deep purples, sickly greens, and streaks of blinding silver. The static in the air was gone, replaced by a strange, resonant hum that seemed to emanate from the earth itself.
+The sky over Zkazena was no longer a uniform, oppressive grey. It was a bruised, magnificent network, swirling with vibrant, impossible colors—deep purples, sickly greens, and streaks of blinding silver. The static in the air was gone, replaced by a strange, resonant hum that seemed to emanate from the earth itself.
 
 The city had been entirely remade.
 
 The brutal, geometric architecture of the Wuxing corporate blocks had been twisted and softened. Buildings leaned at impossible angles, their facades covered in a strange, iridescent moss that glowed faintly in the dim light. The deep, jagged fissures that scarred the streets had been filled with a smooth, crystalline substance that pulsed with latent magical energy.
 
-"What did he do?" Cryptolock breathed, staring at the alien landscape. "This isn't Zkazena."
+"What did he do?" Cryptolock breathed, staring at the alien terrain. "This isn't Zkazena."
 
 "It is," Logi v2.1 corrected, running a rapid environmental scan. "The physical coordinates match. The Architect's resonance, combined with Oracle's structural logic and the sheer kinetic force of the Thor Shot, has integrated the chaotic energy of the Zone into the physical structure of the city."
 
@@ -3155,7 +3155,7 @@ Cryptolock hauled Sinalma up, a grim smile on his face. Nearby, Francky let out 
 
 "Where is he?" Kyber asked, turning back to Logi and looking toward the massive crystalline tree. They could feel a presence there. Vast, ancient, and deeply familiar.
 
-"He's everywhere," Logi v2.1 said softly. "His power is diffused now, embedded into the city's roots and the local Matrix mesh. He isn't a singular entity anymore; he is the operating system of the garden. A sleeping gardener, keeping the city's atmosphere from collapsing."
+"He's everywhere," Logi v2.1 said softly. "His power is diffused now, embedded into the city's roots and the local Matrix mesh. He isn't a singular entity anymore; he functions as the operating system for the garden. A sleeping gardener, keeping the city's atmosphere from collapsing."
 
 Kyber let out a long, ragged breath, the adrenaline finally beginning to recede. "Just like that time we overloaded the bio-reactors at Azrael's Clinic to fry his local grid," Kyber began, a genuine, exhausted smile touching their face as they looked at Logi v2.1. "You remember? We thought we'd blown the whole block to slag, but you'd managed to channel it just right. 'Precision application of chaotic force,' you called..."
 
@@ -3191,7 +3191,7 @@ Cryptolock leaned over the edge, staring down at the transformed streets. "It's 
 
 The new structures weren't random. They echoed the geometry of the old city, but elevated, perfected. The deep, toxic fissures that once leaked sulfur were now glowing rivers of liquid mana, flowing in the exact same patterns as the old subterranean aquifers.
 
-Suddenly, a loud, chitinous shriek echoed from the lower levels.
+A loud, chitinous shriek echoed from the lower levels.
 
 Nada'ira, the new human captain of the Fuchsia Dragons, climbed up the crystal ramp leading to their platform. Her customized armor was clean of gore, but her face was tight with a new kind of tension. Behind her lumbered two of the Super Heavies, their massive forms now adorned with trailing vines of glowing moss that seemed to grow directly from their black armor.
 
@@ -3364,7 +3364,7 @@ Cryptolock forced open a heavy, rusted access door, the screech of metal echoing
 
 "I am attempting to interface with the remaining mesh networks," Logi v2.1 said, their eyes glowing as they reached out into the data streams.
 
-Suddenly, a harsh, metallic laugh echoed through the facility.
+A harsh, metallic laugh echoed through the facility.
 
 "Well, look what the weird new cat dragged in," a voice rasped from the shadows above.
 
@@ -3424,7 +3424,7 @@ Before they could gather their gear, Spark+ spoke. His voice, usually a soft cho
 
 "The metal locusts are hungry," the Architect said, his silver eyes flashing. "But the garden has thorns."
 
-Suddenly, the thick concrete walls of the facility groaned. The iridescent moss, which had previously avoided the brutalist structure, began to rapidly grow over the blast doors, sealing them shut with thick, glowing vines.
+The thick concrete walls of the facility groaned. The iridescent moss, which had previously avoided the brutalist structure, began to rapidly grow over the blast doors, sealing them shut with thick, glowing vines.
 
 The Architect wasn't just reshaping the city; he was actively defending it. And they were trapped inside the fortress he was building.
 
@@ -3591,7 +3591,7 @@ Logi v2.1 moved with inhuman speed, their nanite-enhanced form a blur. They reac
 
 The drone shuddered, its null-field flickering as Logi's code battled its internal defenses.
 
-Suddenly, a Wuxing Null-Mage recognized the threat. The operative turned, leveling a specialized staff that crackled with disruptive energy directly at the Save State.
+A Wuxing Null-Mage recognized the threat. The operative turned, leveling a specialized staff that crackled with disruptive energy directly at the Save State.
 
 "Logi, incoming!" Kyber warned, raising their weapon.
 
@@ -3635,7 +3635,7 @@ Kyber cursed. "They want him to fight back. The more he uses his power, the more
 
 As Logi and Cryptolock moved to disable the Wuxing harvesting equipment, Kyber pushed toward the center of the cavern, navigating the chaotic crossfire. They needed to reach Spark+, to try and break through the Wisp's rage and reach the human consciousness underneath.
 
-Suddenly, a massive explosion rocked the far side of the cavern. A new breach had opened, much larger than the first, and a heavy Wuxing combat mech dropped into the fray. It was a massive, bipedal unit, bristling with weaponry and thick, spell-resistant armor.
+A massive explosion rocked the far side of the cavern. A new breach had opened, much larger than the first, and a heavy Wuxing combat mech dropped into the fray. It was a massive, bipedal unit, bristling with weaponry and thick, spell-resistant armor.
 
 The mech didn't target the mercenaries; it turned its massive, heavy rotary cannons directly toward Captain Lazlow, who was holding the line near the primary barricade.
 
@@ -3975,7 +3975,7 @@ They entered the main cavern. The Lazlow-Entity was waiting near the primary bar
 
 *The metal men are broken,* the entity's voice echoed in their minds. *The hive breathes.*
 
-Kyber didn't respond to the creature, steering their team toward their secluded side-cavern. They needed to rest, to recharge, and to figure out how to navigate the terrifying new normal they had helped create.
+Kyber didn't respond to the creature, steering their team toward their secluded side-cavern. They needed to rest, to recharge, and to figure out how to traverse the terrifying new normal they had helped create.
 
 As they entered their makeshift sanctuary, Kyber immediately noticed a change. The polished obsidian floor and the bioluminescent beds were still there, but Spark+ was no longer floating in quiet contemplation.
 
@@ -4127,7 +4127,7 @@ If they severed Spark+ from the ley line node, the entire 'New Garden' would col
 
 "We stop them here," Kyber ordered, breaking into a run. "Signal Cryptolock and Nada'ira. We intercept at the mid-level concourse."
 
-The mid-level concourse was a vast, open area that had once been a luxury shopping tier, now a twisted landscape of shattered boutiques covered in iridescent moss. Kyber and Logi took up positions overlooking the central plaza, Cryptolock arriving moments later, panting lightly.
+The mid-level concourse was a vast, open area that had once been a luxury shopping tier, now a twisted terrain of shattered boutiques covered in iridescent moss. Kyber and Logi took up positions overlooking the central plaza, Cryptolock arriving moments later, panting lightly.
 
 "Got the message," the ghoul rocker growled, checking his heavy pistol. "Where are the suits?"
 
@@ -4163,7 +4163,7 @@ Kyber brought their arms up, but the impact lifted them off their feet, throwing
 
 Through the ringing in their ears, Kyber saw the two carriers resume their advance, the heavy, lead-lined case swinging between them.
 
-Suddenly, a massive, scythed limb smashed through the floor beneath the Wuxing formation. The Lazlow-Entity, answering Nada'ira's call, had burrowed up from the lower levels. The insect horror erupted into the plaza, a chaotic mass of chitin and neon pink veins.
+A massive, scythed limb smashed through the floor beneath the Wuxing formation. The Lazlow-Entity, answering Nada'ira's call, had burrowed up from the lower levels. The insect horror erupted into the plaza, a chaotic mass of chitin and neon pink veins.
 
 It grabbed one of the Wuxing escorts, its mandibles snapping the operative in half with a sickening crunch.
 
@@ -4261,7 +4261,7 @@ Zkazena was unrecognizable. The oppressive grey sky had parted, revealing a bril
 
 And in the center of it all, where the ruined White Tower had stood, rose a massive, magnificent tree made of pure, interwoven crystal and silver light. Its branches reached high into the new sky, a beacon of stabilized, perfectly balanced magic.
 
-Far below, in the distance, the earth hadn't just opened; it had convulsed. The ancient Necropolis, previously buried and trapped by the old ley line anomaly, had violently upheaved. Huge tracts of ferrocrete streets were split wide open, and the massive, gothic stone spires of the ancient vampire city had punched through the asphalt like jagged teeth, their lower crypts now bathed in the gentle light of the new forest. It was a brutal, physical rebirth of something ancient and terrible, now integrated into the blooming landscape.
+Far below, in the distance, the earth hadn't just opened; it had convulsed. The ancient Necropolis, previously buried and trapped by the old ley line anomaly, had violently upheaved. Huge tracts of ferrocrete streets were split wide open, and the massive, gothic stone spires of the ancient vampire city had punched through the asphalt like jagged teeth, their lower crypts now bathed in the gentle light of the new forest. It was a brutal, physical rebirth of something ancient and terrible, now integrated into the blooming terrain.
 
 "He did it," Kyber breathed, the 'Observer' persona overwhelmed by the sheer scale of the miracle. "He healed it. All of it."
 
