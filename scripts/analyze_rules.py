@@ -60,38 +60,78 @@ def analyze_qualities(tokens):
         print(f"  {tag}: {count}")
 
 def extract_tables(tokens):
+    print("\n=== Extracting Tables ===")
     tables = []
     in_table = False
-    in_th_td = False
-    headers = []
-    current_table_rows = []
+    in_thead = False
+    in_tbody = False
+    in_tr = False
+    in_th = False
+    in_td = False
+
+    current_headers = []
+    current_rows = []
     current_row = []
-    cell_content = []
+    current_cell = ""
 
     for token in tokens:
         if token.type == "table_open":
             in_table = True
-            current_table_rows = []
-            headers = []
+            current_headers = []
+            current_rows = []
+        elif token.type == "thead_open":
+            in_thead = True
+        elif token.type == "tbody_open":
+            in_tbody = True
+        elif token.type == "tr_open":
+            in_tr = True
+            current_row = []
+        elif token.type == "th_open":
+            in_th = True
+            current_cell = ""
+        elif token.type == "td_open":
+            in_td = True
+            current_cell = ""
+        elif token.type == "inline" and (in_th or in_td):
+            current_cell += token.content
+        elif token.type == "th_close":
+            in_th = False
+            current_headers.append(current_cell.strip())
+        elif token.type == "td_close":
+            in_td = False
+            current_row.append(current_cell.strip())
+        elif token.type == "tr_close":
+            in_tr = False
+            if in_tbody and current_row:
+                current_rows.append(current_row)
         elif token.type == "table_close":
             in_table = False
-            tables.append((headers, current_table_rows))
-        elif in_table and token.type == "tr_open":
-            current_row = []
-        elif in_table and token.type in ["th_open", "td_open"]:
-            in_th_td = True
-            cell_content = []
-        elif in_table and in_th_td and token.type == "inline":
-            cell_content.append(token.content)
-        elif in_table and token.type in ["th_close", "td_close"]:
-            in_th_td = False
-            current_row.append("".join(cell_content))
-        elif in_table and token.type == "tr_close":
-            if not headers:
-                headers = [h.replace("**", "").strip() for h in current_row]
-            else:
-                current_table_rows.append(current_row)
+
+            # Enforce Master Templates
+            # Weapons Table
+            if "Weapon Name" in current_headers or "DV" in current_headers:
+                expected_weapons_headers = ["Weapon Name", "ACC", "DV", "AP", "MODE", "RC", "AMMO", "AVAIL", "COST"]
+                if current_headers != expected_weapons_headers:
+                    print(f"WARNING: Weapon table headers do not match Master Template!")
+                    print(f"Expected: {expected_weapons_headers}")
+                    print(f"Got:      {current_headers}")
+            # Augmentations Table
+            elif "Augmentation" in current_headers:
+                expected_aug_headers = ["Augmentation", "Type", "Essence", "Cost (¥)", "Effect"]
+                if current_headers != expected_aug_headers:
+                    print(f"WARNING: Augmentations table headers do not match Master Template!")
+            # Armor Table
+            elif "Item" in current_headers and "Rating / Stats" in current_headers:
+                expected_armor_headers = ["Item", "Type", "Rating / Stats", "Capacity", "Cost (¥)", "Description"]
+                if current_headers != expected_armor_headers:
+                    print(f"WARNING: Armor table headers do not match Master Template!")
+
+            if current_headers and current_rows:
+                tables.append((current_headers, current_rows))
+
+    print(f"Extracted {len(tables)} tables.")
     return tables
+
 
 def analyze_weapons(tables):
     print("\n=== Weapons Analysis ===")
