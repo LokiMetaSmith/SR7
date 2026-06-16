@@ -15,7 +15,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
         *   [x] Cyberdecks/Commlinks
         *   [x] Host architecture & IC
         *   [x] Matrix actions (how do "Tethers" work in combat?)
-    *   [x] *Follow-up required (Rigging/Vehicles):* Need design docs for:
+    *   [x] COMPLETED: (Rigging/Vehicles) Need design docs for:
         *   [x] Drone stats
         *   [x] Vehicle modifications
         *   [x] Chase combat
