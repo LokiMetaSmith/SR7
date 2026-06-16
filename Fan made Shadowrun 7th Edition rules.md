@@ -3273,6 +3273,12 @@ In the Merged World, vehicles are no longer purely mechanical constructs; the pe
 | Toyota Gopher | Pickup Truck | 5 | 4 | 2 | 14 | 8 | 1 | 2 | 4 | 25,000 |
 | Ares Roadmaster | Armored Transport | 3 | 3 | 1 | 18 | 18 | 2 | 3 | 8R | 52,000 |
 | GMC Banshee | T-Bird / LAV | 5 | 8 | 4 | 16 | 18 | 3 | 5 | 16F | 250,000 |
+| Evo Waterstrider | Speed Boat | 4 | 5 | 2 | 10 | 4 | 2 | 2 | 4 | 28,000 |
+| Proteus Manta | Submarine | 3 | 3 | 1 | 16 | 12 | 2 | 4 | 12R | 180,000 |
+| Cessna 172 | Small Airplane | 4 | 6 | 3 | 12 | 2 | 2 | 2 | 6 | 45,000 |
+| Federated Boeing Commuter | Large Airplane | 2 | 8 | 2 | 24 | 4 | 3 | 4 | 12 | 450,000 |
+| Ares Dragon | Helicopter | 4 | 7 | 3 | 16 | 12 | 3 | 4 | 14R | 320,000 |
+| Shiawase Hover-Quad | Quad Copter Bike | 5 | 4 | 3 | 4 | 2 | 2 | 2 | 6 | 12,000 |
 
 #### 2. Jumped-In Mechanics & Chase Combat
 
