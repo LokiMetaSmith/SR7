@@ -3055,8 +3055,11 @@ New Spells cost 5 Karma to learn. Magicians learn spells from formula patterns o
 | Combat | Powerbolt | Physical | LOS | Instant | Force - 1 | Direct physical damage to target's body. Resisted by BOD + Armor. |
 | Combat | Nanite Ball (Fireball) | Physical | LOS | Instant | Force | Ignites ambient grey goo. Resisted by BOD + Armor. AP = Force. |
 | Combat | Static Whip | Physical | LOS | Sustained | Force | A crackling lash of electrified mana that targets digital and physical entities. Deals Stun damage and applies -2 to Matrix actions. |
+| Combat | Stunball | Mana | Area | Instant | Force | Area of effect stun damage. Resisted by ESS + WIL. |
 | Health | Heal | Mana | Touch | Permanent | Force - 4 | Heals Physical boxes equal to hits. Force must equal or exceed damage. |
 | Health | Purge Code | Mana | Touch | Permanent | Force - 2 | Flushes malignant biofeedback or temporary nanite-induced sickness (N.I.C.A.) from the target's system. |
+| Health | Increase Attribute | Mana | Touch | Sustained | Force - 2 | Increases a targeted physical attribute by net hits, up to the Force of the spell. |
+| Health | Decrease Attribute | Mana | Touch | Sustained | Force | Decreases a physical attribute by net hits. Target resists with Attribute + WIL. |
 | Illusion | Improved Invisibility | Physical | LOS | Sustained | Force - 1 | Bends light and fools nanite-sensors. Resisted by INT + Logic. |
 | Illusion | Trid Phantasm | Physical | LOS | Sustained | Force | Creates multi-sensory illusions that affect machines and living beings. |
 | Illusion | Digital Mirage | Physical | LOS(A) | Sustained | Force | Creates false AR tags, spoofing digital overlays over physical targets. Resisted by INT + LOG. |
@@ -3101,6 +3104,11 @@ Adept powers are fueled by the adept's Magic Rating and Power Points (PP). Adept
 | Living Crystal Nodes | Adept | 0.5 PP | The Adept naturally grows small sub-dermal "Gateway Crystals". Allows physical unarmed attacks to strike purely digital entities in AR overlay with half DV. |
 | EMP Strike | Adept | 1.0 PP | Melee attacks can channel mana to violently scramble digital signals. Target suffers Matrix noise penalties equal to hits for 1 Turn. |
 | Ghost in the Machine | Adept | 1.0 PP | Allows an Adept with Astral Perception to vaguely "assense" the emotional imprint of heavily encrypted files or active commlinks through solid walls. |
+| Kinesics | Adept | 0.25 PP / Lvl | +1 Die to Social tests and defending against Social tests. |
+| Light Body | Adept | 0.25 PP / Lvl | +1 Die to Gymnastics tests and reduce falling damage by 1 per level. |
+| Nimble Fingers | Adept | 0.25 PP / Lvl | +1 Die to Palming, Locksmith, and intricate mechanical tests. |
+| Nerve Strike | Adept | 1.0 PP | Unarmed attack that deals no physical damage but reduces target's AGI or REA by net hits. |
+| Penetrating Strike | Adept | 0.25 PP / Lvl | Melee attacks gain -1 AP per level. |
 | Concealment | Spirit | N/A | Conceals target from sight and sensors. |
 | Animal Control | Spirit | N/A | Controls animal behavior. |
 | Guard | Spirit | N/A | Protects target from accidents and environmental hazards. |
@@ -3121,6 +3129,9 @@ Adept powers are fueled by the adept's Magic Rating and Power Points (PP). Adept
 | Infusion | Metamagic | Initiation | Temporarily boost physical attributes beyond their natural limit using Power Points. |
 | Digital Apotheosis | Metamagic | Initiation | A specialized ritual utilizing a Gateway Crystal. Allows an Initiate to cast a spell with the target being a persona entirely inside a Matrix Host, provided they have a sympathetic material link. |
 | Resonance Tuning | Metamagic | Initiation | Allows a mage to intentionally suppress their magical aura and emit a localized "White Noise" AR signal, treating their aura as a low-level device to fool Matrix scanners. |
+| Extended Masking | Metamagic | Initiation | Masking extends to equal number of bonded foci or spells as your Initiate Grade. |
+| Fixation | Metamagic | Initiation | Reduces background count penalties by your Initiate Grade when centering. |
+| Flexible Signature | Metamagic | Initiation | Allows altering your astral signature to match someone else's or erasing it quickly. |
 
 **Initiation & Submersion:**
 Initiation and Submersion for characters costs 10 + (Initiation Grade x 5) Karma and 10 + (Submersion Level x 5) Karma respectively. A character may choose to undergo an ordeal to reduce this cost by 10% to 20%.
@@ -3144,6 +3155,8 @@ Rituals rely heavily on sympathetic links and the local Background Count. The pr
 *   **Matrix Ward:** Cast onto a physical space containing a Gateway Crystal. Instead of blocking spirits, this ward blocks digital signals and AR overlays, functioning as an impenetrable, magical Faraday Cage with a Rating equal to the ritual's net hits.
 *   **Digital Curse:** Targets an individual using a Digital Link. The ritual infuses the target's commlink or cyberware with a localized, malevolent spirit that actively disrupts their electronics, permanently adding the "Gremlins" quality to them until dispelled.
 *   **Aura Spoof:** The lodge uses the target's biological sample to imprint their aura onto a massive, dormant digital file. Any assensing attempts on the target within 10 km are drawn to the physical server hosting the file instead of the person.
+*   **Homunculus:** Creates a temporary, mindless physical servant from local materials (garbage, scrap) bound to the caster's will. Its physical attributes are equal to the ritual's Force.
+*   **Watchers:** Creates minor, specialized spirits bound to the physical location of the lodge to observe and report specific intrusions or trigger conditions.
 
 ### II. MATRIX: The Nanite Grid
 Cold sim is dead. AR is limited. All real hacking is DNI Hot-Sim, putting your brain and soul on the line.

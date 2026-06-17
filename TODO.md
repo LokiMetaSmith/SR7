@@ -9,7 +9,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Standardize Document Formatting:** Go through `Fan made Shadowrun 7th Edition rules.md` and convert all tables (currently a mix of tabs and spaces) into standard Markdown pipe (`|`) syntax.
     *   [x] COMPLETED: Establish a master template for Weapon and Quality tables so that parsing tools know exactly what to look for.
 *   [x] **Draft Missing Core Sections:** Write the rules text for the fundamentally missing pillars of the game:
-    *   [x] *Follow-up required (Magic):* Need design docs for Spell lists, Adept powers, Drain calculations, Rituals, and Metamagic.
+    *   [x] *Follow-up required (Magic):* Need design docs for Spell lists, Adept powers, Drain calculations, Rituals, and Metamagic. (COMPLETED: Expanded Spell lists and added missing Magic design docs.)
     *   [x] *Follow-up required (Matrix):* Need design docs for Matrix elements:
         *   [x] Programs
         *   [x] Cyberdecks/Commlinks
