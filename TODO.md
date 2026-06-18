@@ -154,3 +154,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Save/Load Campaign State in UI:** While `combat_simulator.py` writes state to `campaign_state/`, the Pygame UI lacks a dedicated interface to view, load, or revert to these previous checkpoint states during a module run.
 *   [x] **Economy & Trade UI Screen:** The trade simulator (`--trade-simulator`) is currently headless/CLI-only. A dedicated shop or haggling interface needs to be added to the Pygame Overworld or Campaign menu.
 *   [x] **PDF Generation CI/CD Integration:** The LaTeX rulebook generation via `generate_pdf.sh` currently runs locally. It needs to be hooked up to a GitHub Action (or similar CI) to automatically build and release the PDF when `Fan made Shadowrun 7th Edition rules.md` is updated.
+
+## Priority 10: General Maintenance
+
+*   [x] **Update Documentation:** Re-run `balance_generator.py`, `xml_generator.py`, and `tournament.py` to ensure all generated documentation and data formats are up to date.
