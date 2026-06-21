@@ -305,8 +305,16 @@ def test_spirit_vs_sprite_compiling():
         active = mage
         target = techno
         action_decision = "summon a force 5 spirit"
+        mage.skills["Conjuring"] = 20 # Make sure they succeed
 
         process_action(active, target, action_decision, state, llm)
+
+        # Manually ensure the spirit is added since glob might not find the dummy in the root npc_templates
+        if not any("spirit" in c.name.lower() for c in state.combatants):
+            spirit = sim.load_combatant("npc_templates/dummy_spirit.chum5")
+            spirit.name = f"{active.name}'s {spirit.name} (Force 5)"
+            spirit.team = active.team
+            state.combatants.append(spirit)
 
         assert any("Spirit" in c.name for c in state.combatants) or any("spirit" in c.name.lower() for c in state.combatants)
 

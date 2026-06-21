@@ -1,0 +1,40 @@
+{
+  "name": "Underground Tunnels Beneath the White Tower",
+  "description": "A chaotic mix of ancient, natural rock formations and the shattered, twisted remains of the Undercity's foundation beneath the White Tower. Heavy barricades of fused plasteel and crystalline rock block the path. Feral ghouls are swarming. The players must either secure the underground tunnels to get to safety before the blast doors close, or hold the doors and risk being overrun. Choices include breaching the doors and risking others, or rescuing trapped workers.",
+  "modifiers": {
+    "lighting": -2,
+    "footing": -1,
+    "background_count": 4
+  },
+  "map": {
+    "layout_ascii": [
+      " C C C B B C C C ",
+      " C . . . . . . C ",
+      " B . . R R . . B ",
+      " C . . R R . . C ",
+      " C C C B B C C C "
+    ],
+    "legend": {
+      "C": "Crystalline Rock Formation (Heavy Cover, Immovable)",
+      "B": "Fused Plasteel Barricade (Medium Cover, Breachable)",
+      "R": "Rubble and Debris (Poor Footing, Light Cover)",
+      ".": "Tunnel Floor (Open Ground)"
+    },
+    "zones": [
+      {
+        "name": "Tunnel Entrance",
+        "type": "Start Zone",
+        "cover": "Medium",
+        "description": "The compromised entrance from the Undercity, swarming with the infected."
+      },
+      {
+        "name": "Blast Doors",
+        "type": "Objective",
+        "cover": "Heavy",
+        "description": "Massive Wuxing blast doors leading into the lower levels of the White Tower."
+      }
+    ]
+  },
+  "wave_defense": true,
+  "scenario_rules": "If the doors are held open, Feral Ghouls will continuously swarm in."
+}
