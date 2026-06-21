@@ -1,0 +1,14 @@
+{
+    "name": "Siege of the White Tower",
+    "description": "Trapped between the horde and corporate crossfire, the players must breach the White Tower. This module explores the underground tunnels beneath the tower.",
+    "stages": [
+        {
+            "name": "The Underground Tunnels",
+            "scenario_file": "campaigns/default/scenarios/white_tower_tunnels_scenario.json",
+            "team2": [
+                "npc_templates/zkazena_ghoul.chum5",
+                "npc_templates/zkazena_ghoul.chum5"
+            ]
+        }
+    ]
+}

@@ -121,6 +121,8 @@ class Combatant:
     is_alive: bool = True
     team: int = 0
     zone: Optional[Zone] = None
+    is_infected: bool = False
+    hmhvv_infection_level: int = 0
 
     control_rig: int = 0
     jumped_in_vehicle: Optional[Vehicle] = None
@@ -255,6 +257,7 @@ class GameEnvironment:
         zones: List[Zone] = None,
         is_chase_combat: bool = False,
         scenario_rules: str = "",
+        wave_defense: bool = False,
     ):
         self.name = name
         self.description = description
@@ -262,6 +265,7 @@ class GameEnvironment:
         self.zones = zones if zones else []
         self.is_chase_combat = is_chase_combat
         self.scenario_rules = scenario_rules
+        self.wave_defense = wave_defense
         self.recent_blasts = []
 
 
@@ -845,6 +849,7 @@ def parse_scenario(file_path: str) -> GameEnvironment:
                         )
                     )
             is_chase = data.get("is_chase_combat", False)
+            wave_def = data.get("wave_defense", False)
             return GameEnvironment(
                 description=data.get("description", "A dark alleyway."),
                 modifiers=data.get("modifiers", {}),
@@ -852,6 +857,7 @@ def parse_scenario(file_path: str) -> GameEnvironment:
                 zones=zones,
                 is_chase_combat=is_chase,
                 scenario_rules=data.get("scenario_rules", ""),
+                wave_defense=wave_def,
             )
     elif file_path.endswith(".md"):
         with open(file_path, "r") as f:
@@ -2304,6 +2310,34 @@ def main():
 
             narration = llm.narrate_action(active, action_text, result_text, state=state)
             state.log(narration)
+
+        # End of Turn Logic
+
+        # HMHVV Infection Processing
+        for c in state.combatants:
+            if c.is_infected and c.is_alive:
+                if c.hmhvv_infection_level > 0:
+                    state.log(f"[{c.name}'s HMHVV Infection worsens. Their body struggles to reject the nanite-laced virus, applying a -1 penalty to actions!]")
+                    # Debuff action pools, simulating struggle
+                    c.initiative_score -= 1
+                if c.hmhvv_infection_level > 2:
+                    c.take_damage(1, "P")
+                    state.log(f"[{c.name} takes 1 Physical Damage due to advanced HMHVV Infection spreading!]")
+
+        # Wave Defense Spawning
+        active_ghouls = sum(1 for c in state.combatants if c.team == 2 and c.is_alive and "Ghoul" in c.name)
+        if getattr(state.environment, "wave_defense", False) and state.turn % 2 == 0 and active_ghouls < 6:
+            try:
+                new_ghoul = load_combatant("npc_templates/zkazena_ghoul.chum5")
+                new_ghoul.team = 2
+                new_ghoul.name = f"Swarming Ghoul (Wave {state.turn // 2})"
+                new_ghoul.roll_initiative()
+                if state.environment.zones:
+                    new_ghoul.zone = state.environment.zones[-1]
+                state.combatants.append(new_ghoul)
+                state.log(f"\n[WAVE DEFENSE: A new {new_ghoul.name} breaches the barricades and joins the horde!]")
+            except Exception as e:
+                state.log(f"[WAVE DEFENSE ERROR: Failed to load ghoul: {e}]")
 
         state.turn += 1
 

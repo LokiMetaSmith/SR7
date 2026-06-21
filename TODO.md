@@ -158,3 +158,13 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 ## Priority 10: General Maintenance
 
 *   [x] **Update Documentation:** Re-run `balance_generator.py`, `xml_generator.py`, and `tournament.py` to ensure all generated documentation and data formats are up to date.
+
+## Priority 11: The Siege of the White Tower (Narrative Module)
+
+**Goal:** Implement the "Underground Tunnels" mission during the Siege of the White Tower.
+
+*   [x] **Create "Underground Tunnels" Scenario:** Add a two-part mission scenario where the players must either secure the underground tunnels to enter the tower before the doors close, or close the doors before feral ghouls breach the entrance.
+    *   [x] *Player Choice:* Give players the option to breach/force the doors open (putting others at risk).
+    *   [x] *Player Choice:* If inside, give players the option to rescue trapped workers/sec team or let them fend for themselves.
+    *   [x] *Consequence Mechanics:* Implement a wave-defense attrition mechanic if the doors are breached by the ghouls, forcing players and security to hold back the horde in the basement levels.
+    *   [x] *Infection Mechanics:* Determine how HMHVV ghoul infection interacts with the nanite/Merged World setting and implement rules for players getting trapped and exposed.
