@@ -157,7 +157,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 ## Priority 10: General Maintenance
 
-*   [x] **Update Documentation:** Re-run `balance_generator.py`, `xml_generator.py`, and `tournament.py` to ensure all generated documentation and data formats are up to date.
+*   [x] **Update Documentation:** Re-run `balance_generator.py`, `xml_generator.py`, and `tournament.py` to ensure all generated documentation and data formats are up to date. (Re-ran after Priority 11)
 
 ## Priority 11: The Siege of the White Tower (Narrative Module)
 
