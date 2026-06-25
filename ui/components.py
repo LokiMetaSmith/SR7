@@ -591,6 +591,7 @@ class MapGrid:
         self.font = pygame.font.SysFont("monospace", 14)
 
         self.blast_zones = [] # Store zones to highlight for AoE explosions
+        self.active_zone_name = None # Used for LOS calculation
 
         self.colors = {
             ".": (40, 40, 40), # Default ground
@@ -671,6 +672,13 @@ class MapGrid:
                     char_surf = self.font.render(char, True, (255, 255, 255))
                     char_rect = char_surf.get_rect(center=cell_rect.center)
                     surface.blit(char_surf, char_rect)
+
+                # Dim if it's high cover to indicate LOS block
+                # (Simple visual representation: heavy cover objects themselves are dark)
+                if char in self.legend and "heavy cover" in self.legend[char].lower():
+                    s = pygame.Surface((self.cell_size, self.cell_size), pygame.SRCALPHA)
+                    s.fill((0, 0, 0, 100)) # Darken high cover
+                    surface.blit(s, cell_rect.topleft)
 
         # Draw the legend to the right of the grid
         legend_x = grid_x + self.grid_width + 20

@@ -258,6 +258,8 @@ class GameEnvironment:
         is_chase_combat: bool = False,
         scenario_rules: str = "",
         wave_defense: bool = False,
+        layout_ascii: List[str] = None,
+        legend: Dict[str, str] = None,
     ):
         self.name = name
         self.description = description
@@ -267,9 +269,79 @@ class GameEnvironment:
         self.scenario_rules = scenario_rules
         self.wave_defense = wave_defense
         self.recent_blasts = []
+        self.layout_ascii = layout_ascii if layout_ascii else []
+        self.legend = legend if legend else {}
 
 
 class RulesEngine:
+    @staticmethod
+    def _get_zone_center(layout_ascii: List[str], legend: Dict[str, str], zone_name: str) -> Optional[tuple[int, int]]:
+        """Finds the geometric center of a zone based on the layout and legend."""
+        char_to_find = None
+        for k, v in legend.items():
+            if zone_name.lower() in v.lower():
+                char_to_find = k
+                break
+
+        if not char_to_find:
+            return None
+
+        points = []
+        for y, row in enumerate(layout_ascii):
+            for x, char in enumerate(row):
+                if char == char_to_find:
+                    points.append((x, y))
+
+        if not points:
+            return None
+
+        sum_x = sum(p[0] for p in points)
+        sum_y = sum(p[1] for p in points)
+        return (sum_x // len(points), sum_y // len(points))
+
+    @staticmethod
+    def calculate_los_cover(state: "SimulationState", active: Combatant, target: Combatant) -> int:
+        """Calculates dynamic cover bonus using Bresenham's line algorithm on the map grid."""
+        if not state.environment.layout_ascii or not active.zone or not target.zone:
+            # Fallback to simple zone cover
+            return 0
+
+        if active.zone == target.zone:
+            return 0 # No cover inside the same zone generally
+
+        start = RulesEngine._get_zone_center(state.environment.layout_ascii, state.environment.legend, active.zone.name)
+        end = RulesEngine._get_zone_center(state.environment.layout_ascii, state.environment.legend, target.zone.name)
+
+        if not start or not end:
+             return 0
+
+        x0, y0 = start
+        x1, y1 = end
+        dx = abs(x1 - x0)
+        dy = -abs(y1 - y0)
+        sx = 1 if x0 < x1 else -1
+        sy = 1 if y0 < y1 else -1
+        err = dx + dy
+
+        cover_bonus = 0
+
+        while True:
+            if (x0, y0) != start and (x0, y0) != end:
+                # Check cell for cover
+                if 0 <= y0 < len(state.environment.layout_ascii) and 0 <= x0 < len(state.environment.layout_ascii[y0]):
+                    char = state.environment.layout_ascii[y0][x0]
+                    desc = state.environment.legend.get(char, "").lower()
+                    if "heavy cover" in desc: cover_bonus = max(cover_bonus, 4)
+                    elif "medium cover" in desc: cover_bonus = max(cover_bonus, 2)
+                    elif "light cover" in desc: cover_bonus = max(cover_bonus, 1)
+            if x0 == x1 and y0 == y1:
+                break
+            e2 = 2 * err
+            if e2 >= dy: err += dy; x0 += sx
+            if e2 <= dx: err += dx; y0 += sy
+
+        return cover_bonus
+
     @staticmethod
     def resolve_erase_tether(active, target) -> str:
         log = active.get_attribute("LOG", 3)
@@ -850,6 +922,8 @@ def parse_scenario(file_path: str) -> GameEnvironment:
                     )
             is_chase = data.get("is_chase_combat", False)
             wave_def = data.get("wave_defense", False)
+            layout_ascii = data.get("map", {}).get("layout_ascii", [])
+            legend = data.get("map", {}).get("legend", {})
             return GameEnvironment(
                 description=data.get("description", "A dark alleyway."),
                 modifiers=data.get("modifiers", {}),
@@ -858,6 +932,8 @@ def parse_scenario(file_path: str) -> GameEnvironment:
                 is_chase_combat=is_chase,
                 scenario_rules=data.get("scenario_rules", ""),
                 wave_defense=wave_def,
+                layout_ascii=layout_ascii,
+                legend=legend,
             )
     elif file_path.endswith(".md"):
         with open(file_path, "r") as f:
@@ -1900,13 +1976,25 @@ def process_action(active, target, action_decision, state, llm, app=None):
             )
 
         # Apply Cover
-        if target.zone:
-            if target.zone.cover.lower() == "light":
-                def_pool += 1
-            elif target.zone.cover.lower() == "medium":
-                def_pool += 2
-            elif target.zone.cover.lower() == "heavy":
-                def_pool += 4
+        # Determine LOS and Cover Modifiers based on map layout if available
+        cover_bonus = 0
+        if state.environment.layout_ascii:
+            cover_bonus = RulesEngine.calculate_los_cover(state, active, target)
+            # Add base zone cover if target is in a zone, don't stack excessively though, just take highest
+            zone_cover = 0
+            if target.zone:
+                if target.zone.cover.lower() == "light": zone_cover = 1
+                elif target.zone.cover.lower() == "medium": zone_cover = 2
+                elif target.zone.cover.lower() == "heavy": zone_cover = 4
+            cover_bonus = max(cover_bonus, zone_cover)
+        else:
+            # Fallback to simple zone cover
+            if target.zone:
+                if target.zone.cover.lower() == "light": cover_bonus = 1
+                elif target.zone.cover.lower() == "medium": cover_bonus = 2
+                elif target.zone.cover.lower() == "heavy": cover_bonus = 4
+
+        def_pool += cover_bonus
 
         def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
 
