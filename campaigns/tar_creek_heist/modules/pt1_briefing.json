@@ -1,0 +1,10 @@
+{
+  "name": "The Tar Creek Heist - Part 1: Briefing",
+  "stages": [
+    {
+      "name": "Johnson Meeting",
+      "scenario_file": "campaigns/tar_creek_heist/scenarios/bar.json",
+      "team2": []
+    }
+  ]
+}

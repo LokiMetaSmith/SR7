@@ -1,0 +1,10 @@
+{
+  "name": "Random Ambush",
+  "stages": [
+    {
+      "name": "Ambush",
+      "scenario_file": "campaigns/default/scenarios/ambush.json",
+      "team2": ["npc_templates/Ganger.chum5"]
+    }
+  ]
+}

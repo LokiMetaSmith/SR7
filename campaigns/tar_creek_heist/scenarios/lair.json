@@ -1,0 +1,25 @@
+{
+  "name": "Nosferatu Lair",
+  "zone": {
+    "name": "Abandoned Sewer Cistern",
+    "background_count": 2,
+    "noise": 1,
+    "description": "A damp, dark cistern beneath Tar Creek. The air smells of copper and rot. A stone altar sits in the center holding the Talisman."
+  },
+  "layout_ascii": [
+    "#############",
+    "#...........#",
+    "#.#########.#",
+    "#.#.......#.#",
+    "#.#.ALTAR.#.#",
+    "#.#.......#.#",
+    "#.#########.#",
+    "#...........#",
+    "######.######"
+  ],
+  "legend": {
+    "#": "Wall",
+    ".": "Open Space",
+    "ALTAR": "Objective"
+  }
+}

@@ -788,14 +788,22 @@ class SaveLoadScreen:
 
     def refresh_states(self):
         self.state_data = []
+        self.global_state = {"economy_multiplier": 1.0}
         if os.path.exists("campaign_state"):
             for f in os.listdir("campaign_state"):
                 if f.endswith(".json"):
-                    with open(os.path.join("campaign_state", f), "r") as fp:
-                        try:
-                            self.state_data.append(json.load(fp))
-                        except Exception:
-                            pass
+                    if f == "global_campaign_state.json":
+                        with open(os.path.join("campaign_state", f), "r") as fp:
+                            try:
+                                self.global_state = json.load(fp)
+                            except Exception:
+                                pass
+                    else:
+                        with open(os.path.join("campaign_state", f), "r") as fp:
+                            try:
+                                self.state_data.append(json.load(fp))
+                            except Exception:
+                                pass
 
     def handle_event(self, event: pygame.event.Event, app_instance):
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
@@ -806,6 +814,8 @@ class SaveLoadScreen:
                 app_instance.in_save_load_screen = False
 
     def apply_states(self, app_instance):
+        if app_instance:
+            app_instance.global_campaign_state = self.global_state
         if not app_instance.state: return
         for state_dict in self.state_data:
             name = state_dict.get("name")
@@ -815,6 +825,16 @@ class SaveLoadScreen:
                     c.stun_damage = state_dict.get("stun_damage", c.stun_damage)
                     c.edge = state_dict.get("edge", c.edge)
                     c.is_alive = state_dict.get("is_alive", c.is_alive)
+                    c.digital_nuyen = state_dict.get("digital_nuyen", c.digital_nuyen)
+                    c.clean_nuyen = state_dict.get("clean_nuyen", c.clean_nuyen)
+                    c.hot_nuyen = state_dict.get("hot_nuyen", c.hot_nuyen)
+                    c.faction_standings = state_dict.get("faction_standings", c.faction_standings)
+
+                    from scripts.combat_simulator import Contact, Weapon
+                    if "contacts" in state_dict:
+                        c.contacts = [Contact(name=c_dict["name"], connection=c_dict["connection"], loyalty=c_dict["loyalty"]) for c_dict in state_dict["contacts"]]
+                    if "weapons" in state_dict:
+                        c.weapons = [Weapon(name=w["name"], damage=w["damage"], damage_type=w["damage_type"], ap=w["ap"], ammo=w["ammo"], mode=w["mode"]) for w in state_dict["weapons"]]
 
     def draw(self, surface: pygame.Surface):
         pygame.draw.rect(surface, COLORS.get("panel_bg", (30, 30, 30)), self.rect, border_radius=8)

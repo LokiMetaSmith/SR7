@@ -1,0 +1,36 @@
+{
+  "name": "The Tar Creek Heist",
+  "nodes": [
+    {
+      "name": "The Briefing",
+      "x": 100,
+      "y": 100,
+      "module": "campaigns/tar_creek_heist/modules/pt1_briefing.json",
+      "radius": 15
+    },
+    {
+      "name": "Scouting the Den",
+      "x": 250,
+      "y": 150,
+      "module": "campaigns/tar_creek_heist/modules/pt2_scouting.json",
+      "radius": 15
+    },
+    {
+      "name": "The Heist",
+      "x": 400,
+      "y": 250,
+      "module": "campaigns/tar_creek_heist/modules/pt3_heist.json",
+      "radius": 20
+    }
+  ],
+  "random_nodes": [
+    {
+      "name": "Fuchsia Dragon Checkpoint",
+      "x": 300,
+      "y": 100,
+      "module": "campaigns/tar_creek_heist/modules/random_fuchsia_patrol.json",
+      "radius": 12,
+      "probability": 0.4
+    }
+  ]
+}

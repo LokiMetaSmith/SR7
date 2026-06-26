@@ -1,0 +1,16 @@
+{
+  "name": "Tar Creek Drainage Tunnels",
+  "zone": {
+    "name": "Sewer Tunnels",
+    "background_count": 1,
+    "noise": 2
+  },
+  "layout_ascii": [
+    "###.###",
+    "###.###",
+    "###.###",
+    ".......",
+    "###.###",
+    "###.###"
+  ]
+}

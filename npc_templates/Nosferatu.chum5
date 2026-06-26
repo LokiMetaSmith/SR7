@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>Valerius the Nosferatu</name>
+    <metatype>Nosferatu (Vampire Variant)</metatype>
+    <attributes>
+      <BOD>6</BOD>
+      <AGI>6</AGI>
+      <REA>5</REA>
+      <STR>6</STR>
+      <WIL>5</WIL>
+      <LOG>4</LOG>
+      <INT>5</INT>
+      <CHA>6</CHA>
+      <EDG>4</EDG>
+      <MAG>6</MAG>
+    </attributes>
+    <skills>
+      <skill><name>Unarmed Combat</name><rating>6</rating></skill>
+      <skill><name>Spellcasting</name><rating>5</rating></skill>
+      <skill><name>Intimidation</name><rating>6</rating></skill>
+      <skill><name>Perception</name><rating>5</rating></skill>
+      <skill><name>Sneaking</name><rating>5</rating></skill>
+    </skills>
+    <weapons>
+      <weapon>
+        <name>Vampiric Claws</name>
+        <damage>6</damage>
+        <ap>-2</ap>
+        <type>P</type>
+      </weapon>
+    </weapons>
+    <spells>
+      <spell>
+        <name>Enthrall</name>
+        <type>M</type>
+        <damage>F-2</damage>
+        <drain>F-4</drain>
+      </spell>
+      <spell>
+        <name>Toxic Wave</name>
+        <type>P</type>
+        <damage>F</damage>
+        <drain>F-2</drain>
+      </spell>
+    </spells>
+    <armor>6</armor>
+    <physical_track>12</physical_track>
+    <stun_track>11</stun_track>
+    <special_rules>
+      <rule>Regeneration (Heals 1 Box per turn unless Magical or Wood)</rule>
+      <rule>Essence Drain</rule>
+      <rule>Sunlight Weakness</rule>
+    </special_rules>
+  </character>
+</characters>

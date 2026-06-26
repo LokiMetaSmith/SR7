@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>Fuchsia Dragon Enforcer</name>
+    <metatype>Human</metatype>
+    <attributes>
+      <BOD>4</BOD>
+      <AGI>5</AGI>
+      <REA>5</REA>
+      <STR>4</STR>
+      <WIL>4</WIL>
+      <LOG>3</LOG>
+      <INT>4</INT>
+      <CHA>4</CHA>
+      <EDG>3</EDG>
+    </attributes>
+    <skills>
+      <skill><name>Automatics</name><rating>5</rating></skill>
+      <skill><name>Unarmed Combat</name><rating>4</rating></skill>
+      <skill><name>Intimidation</name><rating>4</rating></skill>
+      <skill><name>Athletics</name><rating>3</rating></skill>
+    </skills>
+    <weapons>
+      <weapon>
+        <name>Fuchsia-Painted SMG</name>
+        <damage>7</damage>
+        <ap>0</ap>
+        <type>P</type>
+        <ammo>30</ammo>
+        <mode>BF</mode>
+      </weapon>
+      <weapon>
+        <name>Brass Knuckles</name>
+        <damage>5</damage>
+        <ap>0</ap>
+        <type>P</type>
+      </weapon>
+    </weapons>
+    <armor>8</armor>
+    <physical_track>10</physical_track>
+    <stun_track>10</stun_track>
+    <special_rules>
+      <rule>Gang Tactics (+1 to Attack if ally is adjacent to target)</rule>
+    </special_rules>
+  </character>
+</characters>
