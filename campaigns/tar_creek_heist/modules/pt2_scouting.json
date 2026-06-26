@@ -1,0 +1,10 @@
+{
+  "name": "The Tar Creek Heist - Part 2: Scouting",
+  "stages": [
+    {
+      "name": "Outer Tunnels",
+      "scenario_file": "campaigns/tar_creek_heist/scenarios/tunnels.json",
+      "team2": ["npc_templates/Feral_Ghoul.chum5"]
+    }
+  ]
+}

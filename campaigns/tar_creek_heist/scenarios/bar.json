@@ -1,0 +1,13 @@
+{
+  "name": "Local Dive Bar",
+  "zone": {
+    "name": "The Rusty Matrix",
+    "background_count": 0,
+    "noise": 0
+  },
+  "layout_ascii": [
+    "#######",
+    "#.....#",
+    "#######"
+  ]
+}

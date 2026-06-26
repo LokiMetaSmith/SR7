@@ -47,6 +47,8 @@ class App:
         self.state = None
         self.map_grid = None
 
+        self.global_campaign_state = {"economy_multiplier": 1.0}
+
         self.overworld_map = None
 
         self.running = True
@@ -57,6 +59,7 @@ class App:
     def load_campaign(self, campaign_file: str):
         import json
         import os
+        import random
         campaign_nodes = []
         try:
             campaign_path = os.path.join(os.path.dirname(__file__), "..", campaign_file)
@@ -64,6 +67,11 @@ class App:
                 with open(campaign_path, "r") as f:
                     data = json.load(f)
                     campaign_nodes = data.get("nodes", [])
+                    random_nodes = data.get("random_nodes", [])
+                    # Append some random nodes randomly
+                    for r_node in random_nodes:
+                        if random.random() < r_node.get("probability", 0.5):
+                            campaign_nodes.append(r_node)
             else:
                 print(f"Warning: {campaign_file} not found, loading empty map.")
         except Exception as e:
@@ -80,6 +88,13 @@ class App:
 
 
     def load_module(self, module_path: str):
+        import random
+        # 20% chance to trigger random encounter if module_path is not already a random encounter
+        if "random" not in module_path.lower() and random.random() < 0.20:
+            print("RANDOM ENCOUNTER TRIGGERED!")
+            # Default fallback for an ambush
+            module_path = "campaigns/default/modules/random_ambush.json"
+
         print(f"Loading module: {module_path}")
         self.in_overworld = False
         self.in_trade_screen = False
@@ -96,6 +111,11 @@ class App:
     def execute_trade(self, item_name, base_value, difficulty):
         if self.player_cards:
             buyer = self.player_cards[0].combatant
+
+            # Apply economy multiplier
+            multiplier = self.global_campaign_state.get("economy_multiplier", 1.0)
+            adjusted_value = int(base_value * multiplier)
+
             import io
             import sys
             # Capture print output from simulate_trade
@@ -103,7 +123,7 @@ class App:
             new_stdout = io.StringIO()
             sys.stdout = new_stdout
             try:
-                simulate_trade(buyer, item_name, base_value, difficulty)
+                simulate_trade(buyer, item_name, adjusted_value, difficulty)
                 output = new_stdout.getvalue()
 
                 # Parse final price from output

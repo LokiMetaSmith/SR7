@@ -1,0 +1,14 @@
+{
+  "name": "Street Ambush",
+  "zone": {
+    "name": "Alleyway",
+    "background_count": 0,
+    "noise": 0
+  },
+  "layout_ascii": [
+    "#######",
+    "#.....#",
+    "#.....#",
+    "#######"
+  ]
+}

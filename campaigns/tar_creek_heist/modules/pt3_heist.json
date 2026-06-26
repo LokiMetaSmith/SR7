@@ -1,0 +1,22 @@
+{
+  "name": "The Tar Creek Heist - Part 3: The Talisman",
+  "stages": [
+    {
+      "name": "Lair of the Nosferatu",
+      "scenario_file": "campaigns/tar_creek_heist/scenarios/lair.json",
+      "team2": [
+        "npc_templates/Nosferatu.chum5",
+        "npc_templates/Feral_Ghoul.chum5",
+        "npc_templates/Feral_Ghoul.chum5"
+      ]
+    },
+    {
+      "name": "Fuchsia Dragon Intervention",
+      "scenario_file": "campaigns/tar_creek_heist/scenarios/lair.json",
+      "team2": [
+        "npc_templates/Fuchsia_Dragon.chum5",
+        "npc_templates/Fuchsia_Dragon.chum5"
+      ]
+    }
+  ]
+}

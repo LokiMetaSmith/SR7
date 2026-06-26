@@ -1,0 +1,10 @@
+{
+  "name": "Random Encounter - Fuchsia Dragon Patrol",
+  "stages": [
+    {
+      "name": "Patrol Checkpoint",
+      "scenario_file": "campaigns/tar_creek_heist/scenarios/tunnels.json",
+      "team2": ["npc_templates/Fuchsia_Dragon.chum5"]
+    }
+  ]
+}

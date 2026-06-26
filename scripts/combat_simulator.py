@@ -130,6 +130,7 @@ class Combatant:
     clean_nuyen: int = 0
     hot_nuyen: int = 0
     contacts: List[Contact] = field(default_factory=list)
+    faction_standings: Dict[str, int] = field(default_factory=dict)
     possessed_by: Optional[PossessingEntity] = None
     portrait: Optional[str] = None
     is_host: bool = False
@@ -894,11 +895,23 @@ def save_state(combatant: Combatant, scratchpad_dir: str):
         "stun_damage": combatant.stun_damage,
         "edge": combatant.edge,
         "is_alive": combatant.is_alive,
+        "digital_nuyen": combatant.digital_nuyen,
+        "clean_nuyen": combatant.clean_nuyen,
+        "hot_nuyen": combatant.hot_nuyen,
+        "faction_standings": combatant.faction_standings,
+        "contacts": [{"name": c.name, "loyalty": c.loyalty, "connection": c.connection} for c in combatant.contacts] if combatant.contacts else [],
+        "weapons": [{"name": w.name, "damage": w.damage, "damage_type": w.damage_type, "ap": w.ap, "ammo": w.ammo, "mode": w.mode} for w in combatant.weapons] if combatant.weapons else []
     }
     with open(filepath, "w") as f:
         json.dump(data, f, indent=4)
     print(f"Saved state for {combatant.name} to {filepath}")
 
+def save_global_campaign_state(state: dict, scratchpad_dir: str):
+    os.makedirs(scratchpad_dir, exist_ok=True)
+    filepath = os.path.join(scratchpad_dir, "global_campaign_state.json")
+    with open(filepath, "w") as f:
+        json.dump(state, f, indent=4)
+    print(f"Saved global campaign state to {filepath}")
 
 
 def simulate_trade(combatant: Combatant, item_name: str, item_value: int, fixer_difficulty: int):
@@ -2384,6 +2397,10 @@ def main():
     state.log("\nSaving scratchpad states...")
     for c in state.combatants:
         save_state(c, "campaign_state")
+
+    # If the user has a global state, or if we want to default a global state for the economy
+    # Ideally, this should update properties like the economy multiplier based on combat outcomes if they want
+    save_global_campaign_state({"economy_multiplier": 1.0}, "campaign_state")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<characters>
+  <character>
+    <name>Feral Ghoul</name>
+    <metatype>Ghoul</metatype>
+    <attributes>
+      <BOD>5</BOD>
+      <AGI>4</AGI>
+      <REA>4</REA>
+      <STR>5</STR>
+      <WIL>3</WIL>
+      <LOG>2</LOG>
+      <INT>4</INT>
+      <CHA>2</CHA>
+      <EDG>2</EDG>
+    </attributes>
+    <skills>
+      <skill><name>Unarmed Combat</name><rating>5</rating></skill>
+      <skill><name>Perception</name><rating>4</rating></skill>
+      <skill><name>Sneaking</name><rating>4</rating></skill>
+    </skills>
+    <weapons>
+      <weapon>
+        <name>Infected Claws</name>
+        <damage>5</damage>
+        <ap>-1</ap>
+        <type>P</type>
+      </weapon>
+    </weapons>
+    <armor>4</armor>
+    <physical_track>11</physical_track>
+    <stun_track>10</stun_track>
+    <special_rules>
+      <rule>HMHVV Infection (Attacks can inflict HMHVV III)</rule>
+      <rule>Blindness (Relies on Hearing/Smell)</rule>
+      <rule>Enthralled (Mindless aggression controlled by Talisman)</rule>
+    </special_rules>
+  </character>
+</characters>
