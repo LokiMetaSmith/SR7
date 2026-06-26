@@ -248,6 +248,14 @@ class Combatant:
         return self.initiative_score
 
 
+@dataclass
+class HostNode:
+    name: str
+    rating: int
+    description: str = ""
+    security_level: str = "Green"
+    connected_nodes: List[str] = field(default_factory=list)
+
 class GameEnvironment:
     def __init__(
         self,
@@ -258,6 +266,8 @@ class GameEnvironment:
         is_chase_combat: bool = False,
         scenario_rules: str = "",
         wave_defense: bool = False,
+        is_host_run: bool = False,
+        host_nodes: List[HostNode] = None,
     ):
         self.name = name
         self.description = description
@@ -267,6 +277,9 @@ class GameEnvironment:
         self.scenario_rules = scenario_rules
         self.wave_defense = wave_defense
         self.recent_blasts = []
+        self.is_host_run = is_host_run
+        self.host_nodes = host_nodes if host_nodes else []
+        self.alert_level = 0
 
 
 class RulesEngine:
@@ -848,6 +861,18 @@ def parse_scenario(file_path: str) -> GameEnvironment:
                             description=z.get("description", ""),
                         )
                     )
+            host_nodes = []
+            if "host_nodes" in data:
+                for hn in data["host_nodes"]:
+                    host_nodes.append(
+                        HostNode(
+                            name=hn.get("name", "Unknown Node"),
+                            rating=hn.get("rating", 1),
+                            description=hn.get("description", ""),
+                            security_level=hn.get("security_level", "Green"),
+                            connected_nodes=hn.get("connected_nodes", []),
+                        )
+                    )
             is_chase = data.get("is_chase_combat", False)
             wave_def = data.get("wave_defense", False)
             return GameEnvironment(
@@ -858,6 +883,7 @@ def parse_scenario(file_path: str) -> GameEnvironment:
                 is_chase_combat=is_chase,
                 scenario_rules=data.get("scenario_rules", ""),
                 wave_defense=wave_def,
+                host_nodes=host_nodes,
             )
     elif file_path.endswith(".md"):
         with open(file_path, "r") as f:
@@ -1263,9 +1289,63 @@ def process_action(active, target, action_decision, state, llm, app=None):
 
         if net_hits > 0:
             active.tethers[target.name] = active.tethers.get(target.name, 0) + 1
-            result_text = f"Patrol IC spots {target.name}! It alerts the Hive and places 1 Tether on {target.name}."
+            state.environment.alert_level += 1
+            result_text = f"Patrol IC spots {target.name}! It alerts the Hive, placing 1 Tether on {target.name} and raising the Host Alert Level to {state.environment.alert_level}!"
         else:
             result_text = f"Patrol IC fails to spot {target.name}."
+
+    elif "killer ic" in action_lower:
+        attack_pool = active.host_rating * 2 if getattr(active, "host_rating", 0) > 0 else active.get_attribute("LOG", 3) + active.skills.get("Cybercombat", 5)
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "firewall", 3)
+        if target.null_bags > 0:
+            def_pool += target.null_bags
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+        net_hits = attack_hits - def_hits
+
+        action_text = f"Killer IC strikes {target.name} ({attack_hits} hits vs {def_hits} defense hits)."
+
+        if net_hits > 0:
+            tethers = active.tethers.get(target.name, 0)
+            base_damage = active.host_rating if getattr(active, "host_rating", 0) > 0 else active.matrix.attack
+            modified_damage = base_damage + net_hits + (tethers * 2)
+
+            soak_pool = getattr(target.matrix, "data_processing", 3) + getattr(target.matrix, "firewall", 3)
+            soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+            final_damage = max(0, modified_damage - soak_hits)
+
+            result_text = f"Killer IC connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Matrix damage."
+            # Matrix damage generally routes to stun or device depending on target
+            target.stun_damage += final_damage
+        else:
+            result_text = f"Killer IC attack is deflected by {target.name}'s firewall."
+
+    elif "sparky ic" in action_lower:
+        attack_pool = active.host_rating * 2 if getattr(active, "host_rating", 0) > 0 else active.get_attribute("LOG", 3) + active.skills.get("Cybercombat", 5)
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "firewall", 3)
+        if target.null_bags > 0:
+            def_pool += target.null_bags
+        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+        net_hits = attack_hits - def_hits
+
+        action_text = f"Sparky IC unleashes a biofeedback surge at {target.name} ({attack_hits} hits vs {def_hits} defense hits)."
+
+        if net_hits > 0:
+            base_damage = active.host_rating if getattr(active, "host_rating", 0) > 0 else active.matrix.attack
+            modified_damage = base_damage + net_hits
+
+            soak_pool = getattr(target.matrix, "data_processing", 3) + getattr(target.matrix, "firewall", 3)
+            soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+            final_damage = max(0, modified_damage - soak_hits)
+
+            result_text = f"Sparky IC connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Matrix damage AND an equal amount of Stun Biofeedback!"
+            target.stun_damage += final_damage
+            target.stun_damage += final_damage # Extra biofeedback
+        else:
+            result_text = f"Sparky IC attack is deflected by {target.name}'s firewall."
 
     elif is_data_ic_response:
         log = active.get_attribute("LOG", 3)
@@ -2106,6 +2186,11 @@ def main():
         "--trade-simulator",
         help="Run the trading simulator. Format: Combatant_Path:Item_Name:Base_Value:Fixer_Difficulty (e.g., 'npc_templates/Kyber.chum5:Ares Predator:350:1')",
     )
+    parser.add_argument(
+        "--host-run",
+        action="store_true",
+        help="Run a dedicated Host Run (Matrix) simulation mode",
+    )
 
     args = parser.parse_args()
 
@@ -2136,11 +2221,30 @@ def main():
                 {
                     "description": "An abandoned Wuxing lab facility. Dim lighting, flickering neon tubes, and patches of humming grey-goo on the walls.",
                     "modifiers": {"lighting": -2},
+                    "is_host_run": args.host_run,
+                    "host_nodes": [
+                        {
+                            "name": "Public Lobby",
+                            "rating": 4,
+                            "description": "A bustling virtual plaza filled with low-res avatars.",
+                            "security_level": "Green",
+                            "connected_nodes": ["Secure Vault"]
+                        },
+                        {
+                            "name": "Secure Vault",
+                            "rating": 8,
+                            "description": "A blank white void humming with deadly potential.",
+                            "security_level": "Red",
+                            "connected_nodes": []
+                        }
+                    ]
                 },
                 f,
             )
 
     env = parse_scenario(args.scenario)
+    if args.host_run:
+        env.is_host_run = True
     state = SimulationState(environment=env)
 
     state.combatants = []
@@ -2304,6 +2408,13 @@ def main():
                 # Use LLM to decide tactical action
                 action_decision = llm.ask_action(active, state)
 
+            # Restrict actions in Host Run mode
+            if getattr(state.environment, "is_host_run", False):
+                # Only matrix actions allowed in host run mode
+                matrix_keywords = ["data spike", "tether", "tar-pit", "enter host", "exit host", "pass", "yield", "killer", "sparky", "patrol", "data ic"]
+                if not any(kw in action_decision.lower() for kw in matrix_keywords):
+                    action_decision = "data spike"  # Default to data spike if invalid action in host run
+
             state.log(f"[{active.name} Tactical Decision]: {action_decision.strip()}")
 
             action_text, result_text, edge_spent = process_action(active, target, action_decision, state, llm, app)
@@ -2338,6 +2449,31 @@ def main():
                 state.log(f"\n[WAVE DEFENSE: A new {new_ghoul.name} breaches the barricades and joins the horde!]")
             except Exception as e:
                 state.log(f"[WAVE DEFENSE ERROR: Failed to load ghoul: {e}]")
+
+        # Host Run ICE Spawning
+        if getattr(state.environment, "is_host_run", False):
+            # Spawn ICE based on alert level
+            if state.environment.alert_level > 0 and state.turn % max(1, 4 - state.environment.alert_level) == 0:
+                current_host = next((n for n in state.environment.host_nodes if any(c.current_host == n.name for c in state.combatants if c.team == 1)), None)
+                if current_host:
+                    ic_rating = current_host.rating
+                    # Determine ICE type based on alert level
+                    ic_types = ["Patrol IC", "Tar-Pit IC", "Data IC", "Killer IC", "Sparky IC"]
+                    spawn_type = ic_types[min(len(ic_types) - 1, state.environment.alert_level - 1)]
+
+                    new_ic = Combatant(
+                        name=f"{spawn_type} ({current_host.name})",
+                        attributes={'LOG': ic_rating, 'INT': ic_rating, 'WIL': ic_rating},
+                        skills={"Cybercombat": ic_rating, "Computer": ic_rating},
+                        matrix=MatrixAttributes(attack=ic_rating, sleaze=ic_rating, data_processing=ic_rating, firewall=ic_rating),
+                        team=2,
+                        is_host=False,
+                        host_rating=ic_rating
+                    )
+                    new_ic.roll_initiative()
+                    state.combatants.append(new_ic)
+                    state.log(f"\n[HOST ALERT: {current_host.name} deploys {new_ic.name}!]")
+
 
         state.turn += 1
 
