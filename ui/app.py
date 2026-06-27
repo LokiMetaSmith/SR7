@@ -1,7 +1,7 @@
 import pygame
 import sys
 from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
-from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap, TradeScreen, SaveLoadScreen
+from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap, TradeScreen, SaveLoadScreen, VehicleChaseScreen
 from scripts.combat_simulator import simulate_trade
 
 
@@ -21,7 +21,9 @@ class App:
         self.trade_screen = TradeScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=self.close_trade, on_trade=self.execute_trade)
 
         self.in_save_load_screen = False
+        self.in_chase_screen = False
         self.save_load_screen = SaveLoadScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400))
+        self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=lambda action: f"Performed {action}")
 
 
         self.pending_action = None
@@ -84,7 +86,9 @@ class App:
         self.trade_screen = TradeScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=self.close_trade, on_trade=self.execute_trade)
 
         self.in_save_load_screen = False
+        self.in_chase_screen = False
         self.save_load_screen = SaveLoadScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400))
+        self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=lambda action: f"Performed {action}")
 
 
     def load_module(self, module_path: str):
@@ -101,7 +105,9 @@ class App:
         self.trade_screen = TradeScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=self.close_trade, on_trade=self.execute_trade)
 
         self.in_save_load_screen = False
+        self.in_chase_screen = False
         self.save_load_screen = SaveLoadScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400))
+        self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=lambda action: f"Performed {action}")
 
 
 
@@ -274,6 +280,10 @@ class App:
                 self.save_load_screen.handle_event(event, self)
                 continue
 
+            if self.in_chase_screen:
+                self.chase_screen.handle_event(event)
+                continue
+
             if self.in_trade_screen:
                 self.trade_screen.handle_event(event)
                 continue
@@ -313,6 +323,10 @@ class App:
                         self.in_save_load_screen = True
                         self.save_load_screen.refresh_states()
                         return
+                    if self.state and getattr(self.state, "environment", None) and self.state.environment.is_chase_combat:
+                        if 420 <= mx <= 580 and 40 <= my <= 75:
+                            self.in_chase_screen = True
+                            return
                 self.chat_window.handle_event(event)
                 for card in self.player_cards:
                     card.handle_event(event)
@@ -400,6 +414,12 @@ class App:
             sm_text = font_sm.render("STATE MANAGER", True, (230, 230, 235))
             self.screen.blit(sm_text, (270, 50))
 
+            if self.state and getattr(self.state, "environment", None) and self.state.environment.is_chase_combat:
+                pygame.draw.rect(self.screen, (40, 45, 55), (420, 40, 160, 35), border_radius=4)
+                pygame.draw.rect(self.screen, (255, 204, 0), (420, 40, 160, 35), 2, border_radius=4)
+                chase_text = font_sm.render("CHASE MINIGAME", True, (230, 230, 235))
+                self.screen.blit(chase_text, (440, 50))
+
             start_y = 100 + self.scroll_y
 
             if self.map_grid:
@@ -426,5 +446,8 @@ class App:
 
         if self.in_save_load_screen:
             self.save_load_screen.draw(self.screen)
+
+        if self.in_chase_screen:
+            self.chase_screen.draw(self.screen)
 
         pygame.display.flip()
