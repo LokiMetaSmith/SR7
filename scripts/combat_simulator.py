@@ -271,6 +271,7 @@ class GameEnvironment:
         host_nodes: List[HostNode] = None,
         layout_ascii: List[str] = None,
         legend: Dict[str, str] = None,
+        has_stealth_phase: bool = False,
     ):
         self.name = name
         self.description = description
@@ -285,6 +286,7 @@ class GameEnvironment:
         self.alert_level = 0
         self.layout_ascii = layout_ascii if layout_ascii else []
         self.legend = legend if legend else {}
+        self.has_stealth_phase = has_stealth_phase
 
 
 class RulesEngine:
@@ -440,6 +442,7 @@ class SimulationState:
         self.combatants: List[Combatant] = []
         self.turn = 1
         self.logs = []
+        self.is_stealth_phase_active = getattr(environment, "has_stealth_phase", False)
 
     def log(self, message: str):
         self.logs.append(message)
@@ -490,7 +493,12 @@ class LLM_Agent:
         prompt += f"Social Rep: Street Cred {combatant.street_cred}, Notoriety {combatant.notoriety}\n"
 
         prompt += f"Matrix Attributes: Attack {combatant.matrix.attack}, Sleaze {combatant.matrix.sleaze}, DP {combatant.matrix.data_processing}, Firewall {combatant.matrix.firewall}\n"
-        prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Erase Tether, Data Spike, Social Influence (Negotiate/Intimidate/Con), Encrypted Pulse, Dead Drop, Sprint (move to better cover), Take Cover, Yield, or Pass Turn.\n"
+
+        if getattr(state, "is_stealth_phase_active", False):
+            prompt += "Special Rule: You are currently in a Stealth Phase. You can attempt to bypass the encounter quietly, set up traps, or hack systems before combat begins.\n"
+            prompt += "Choose an action: Bypass Encounter, Set Trap, Matrix Hack, Attack with a weapon (Warning: loud actions will break stealth), Cast a spell (Warning: loud actions will break stealth).\n"
+        else:
+            prompt += "Choose an action: Attack with a weapon, Cast a spell, Establish Tether, Erase Tether, Data Spike, Social Influence (Negotiate/Intimidate/Con), Encrypted Pulse, Dead Drop, Sprint (move to better cover), Take Cover, Yield, or Pass Turn.\n"
         # etc.
         try:
             response = self.client.chat.completions.create(
@@ -950,6 +958,7 @@ def parse_scenario(file_path: str) -> GameEnvironment:
             wave_def = data.get("wave_defense", False)
             layout_ascii = data.get("map", {}).get("layout_ascii", [])
             legend = data.get("map", {}).get("legend", {})
+            has_stealth = data.get("has_stealth_phase", False)
             return GameEnvironment(
                 description=data.get("description", "A dark alleyway."),
                 modifiers=data.get("modifiers", {}),
@@ -961,6 +970,7 @@ def parse_scenario(file_path: str) -> GameEnvironment:
                 host_nodes=host_nodes,
                 layout_ascii=layout_ascii,
                 legend=legend,
+                has_stealth_phase=has_stealth,
             )
     elif file_path.endswith(".md"):
         with open(file_path, "r") as f:
@@ -1119,11 +1129,48 @@ def process_action(active, target, action_decision, state, llm, app=None):
     is_compile = "compile" in action_lower or "sprite" in action_lower
     is_summon = "summon" in action_lower or "conjure" in action_lower
 
+    is_bypass = "bypass" in action_lower
+    is_set_trap = "set trap" in action_lower
 
     if is_pass:
 
         action_text = f"{active.name} passes their turn."
         result_text = "No action taken."
+    elif is_bypass:
+        action_text = f"{active.name} attempts to bypass the encounter quietly."
+        sneak_pool = active.skills.get("Sneaking", 0) + active.get_attribute("AGI", 3)
+        sneak_hits, _, _ = RulesEngine.roll_attack_with_edge(sneak_pool, active)
+
+        highest_perc_hits = 0
+        for enemy in state.combatants:
+            if enemy.team != active.team and enemy.is_alive and not getattr(enemy, "has_yielded", False):
+                perc_pool = enemy.skills.get("Perception", 0) + enemy.get_attribute("INT", 3)
+                perc_hits, _ = RulesEngine.roll_dice(perc_pool)
+                highest_perc_hits = max(highest_perc_hits, perc_hits)
+
+        if sneak_hits >= highest_perc_hits:
+            result_text = "Bypass successful! The team moves silently."
+            # We don't want infinite Edge farming, only grant it if they have none.
+            if active.edge == 0:
+                active.edge += 1
+                result_text += f" {active.name} gains +1 Edge."
+        else:
+            result_text = "Bypass failed! The enemy hears you."
+            if getattr(state, "is_stealth_phase_active", False):
+                state.is_stealth_phase_active = False
+                result_text += " Stealth broken!"
+
+    elif is_set_trap:
+        action_text = f"{active.name} attempts to set up a trap."
+        logic_pool = active.skills.get("Engineering", 0) + active.get_attribute("LOG", 3)
+        hits, _, _ = RulesEngine.roll_attack_with_edge(logic_pool, active)
+        if hits > 0:
+            result_text = f"Trap successfully set by {active.name}. It will trigger if enemies advance."
+            # Optionally add a scenario rule or modifier to the environment
+            state.environment.scenario_rules += f" Trap set by {active.name} is active."
+        else:
+            result_text = f"{active.name} failed to set the trap properly."
+
     elif is_yield:
         active.has_yielded = True
         action_text = f"{active.name} yields and surrenders!"
@@ -1653,6 +1700,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
             result_text = (
                 f"Data Spike is deflected by {target.name}'s firewall."
             )
+            if attack_hits_glitched and getattr(state, "is_stealth_phase_active", False):
+                state.is_stealth_phase_active = False
+                result_text += " Critical glitch! Alarm triggered, stealth broken!"
+            elif getattr(state, "is_stealth_phase_active", False):
+                result_text += " Failed hack attempts raise suspicion but stealth is maintained."
 
     elif "sprint" in action_lower or "move" in action_lower:
         action_text = f"sprints and repositions"
@@ -2241,6 +2293,22 @@ def process_action(active, target, action_decision, state, llm, app=None):
 
     if is_explosive:
         state.log(f"--- AoE Mechanics ---\n{result_text}\n---------------------")
+
+    if getattr(state, "is_stealth_phase_active", False):
+        weapon_used = locals().get("weapon")
+        is_attack = weapon_used is not None
+        is_loud_weapon = False
+        if is_attack:
+            is_melee = getattr(weapon_used, "skill_used", "") in ["Close Combat", "Unarmed Combat"] or "unarmed" in weapon_used.name.lower() or "blade" in weapon_used.name.lower() or "knife" in weapon_used.name.lower() or "sword" in weapon_used.name.lower()
+            # Simplistic check: If it's a gun and doesn't say "suppressed", it's loud.
+            is_loud_weapon = not is_melee and "suppressed" not in weapon_used.name.lower()
+
+        is_loud_spell = is_spell and "combat" in getattr(locals().get("spell"), "category", "").lower()
+
+        if is_explosive or is_loud_weapon or is_loud_spell:
+            state.is_stealth_phase_active = False
+            result_text += " LOUD ACTION DETECTED! Stealth broken!"
+
     return action_text, result_text, edge_spent
 
 def main():
@@ -2463,13 +2531,22 @@ def main():
         if app:
             app.update_state(state)
             app.tick()
-        state.log(f"\n--- Turn {state.turn} ---")
+
+        turn_header = f"\n--- Turn {state.turn} ---"
+        if getattr(state, "is_stealth_phase_active", False):
+            turn_header = f"\n--- Turn {state.turn} (Stealth Phase) ---"
+        state.log(turn_header)
 
         for active in state.combatants:
             # Clear previous blasts before next action
             state.environment.recent_blasts.clear()
 
             if not active.is_alive or getattr(active, "has_yielded", False):
+                continue
+
+            # Skip enemy actions if stealth is active
+            if getattr(state, "is_stealth_phase_active", False) and active.team != 1:
+                state.log(f"[{active.name} is on patrol, unaware of the intruders.]")
                 continue
 
             # Need to check if there are still valid targets before acting
