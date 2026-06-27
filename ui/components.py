@@ -705,6 +705,78 @@ class MapGrid:
             surface.blit(text_surf, (legend_x + 20, legend_y))
             legend_y += 18
 
+
+class VehicleChaseScreen:
+    def __init__(self, rect: pygame.Rect, on_close=None, on_action=None):
+        self.rect = pygame.Rect(rect)
+        self.on_close = on_close
+        self.on_action = on_action
+        self.font_title = pygame.font.SysFont("monospace", 24, bold=True)
+        self.font_body = pygame.font.SysFont("monospace", 16)
+
+        self.close_rect = pygame.Rect(self.rect.right - 40, self.rect.y + 10, 30, 30)
+
+        self.ram_rect = pygame.Rect(self.rect.centerx - 160, self.rect.bottom - 60, 150, 40)
+        self.evade_rect = pygame.Rect(self.rect.centerx + 10, self.rect.bottom - 60, 150, 40)
+
+        self.distance = 100
+        self.hazards = ["Debris", "Potholes"]
+
+        self.action_result = None
+
+    def handle_event(self, event: pygame.event.Event):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if event.button == 1:
+                if self.close_rect.collidepoint(event.pos):
+                    if self.on_close:
+                        self.on_close()
+                elif self.ram_rect.collidepoint(event.pos):
+                    if self.on_action:
+                        self.action_result = self.on_action("Ram")
+                elif self.evade_rect.collidepoint(event.pos):
+                    if self.on_action:
+                        self.action_result = self.on_action("Evade")
+
+    def draw(self, surface: pygame.Surface):
+        pygame.draw.rect(surface, COLORS.get("panel_bg", (30, 30, 30)), self.rect, border_radius=8)
+        pygame.draw.rect(surface, COLORS.get("border", (100, 100, 100)), self.rect, 2, border_radius=8)
+
+        # Title
+        title_surf = self.font_title.render("VEHICLE CHASE MINIGAME", True, (0, 255, 204))
+        surface.blit(title_surf, (self.rect.x + 20, self.rect.y + 20))
+
+        # Close button
+        pygame.draw.rect(surface, COLORS.get("health_crit", (200, 50, 50)), self.close_rect, border_radius=4)
+        x_surf = self.font_title.render("X", True, (255, 255, 255))
+        surface.blit(x_surf, (self.close_rect.x + 8, self.close_rect.y + 2))
+
+        # Content
+        y_offset = self.rect.y + 80
+
+        dist_surf = self.font_body.render(f"Relative Distance: {self.distance}m", True, COLORS.get("text", (200, 200, 200)))
+        surface.blit(dist_surf, (self.rect.x + 40, y_offset))
+        y_offset += 30
+
+        hazards_str = ", ".join(self.hazards) if self.hazards else "None"
+        hazards_surf = self.font_body.render(f"Hazards: {hazards_str}", True, COLORS.get("text", (200, 200, 200)))
+        surface.blit(hazards_surf, (self.rect.x + 40, y_offset))
+        y_offset += 50
+
+        if self.action_result:
+            res_surf = self.font_body.render(f"Result: {self.action_result}", True, (255, 215, 0))
+            surface.blit(res_surf, (self.rect.x + 40, y_offset))
+
+        # Action Buttons
+        pygame.draw.rect(surface, COLORS.get("button_bg", (50, 60, 70)), self.ram_rect, border_radius=4)
+        pygame.draw.rect(surface, (200, 50, 50), self.ram_rect, 2, border_radius=4)
+        ram_text = self.font_body.render("RAM", True, (255, 255, 255))
+        surface.blit(ram_text, (self.ram_rect.x + 55, self.ram_rect.y + 10))
+
+        pygame.draw.rect(surface, COLORS.get("button_bg", (50, 60, 70)), self.evade_rect, border_radius=4)
+        pygame.draw.rect(surface, (50, 200, 50), self.evade_rect, 2, border_radius=4)
+        evade_text = self.font_body.render("EVADE", True, (255, 255, 255))
+        surface.blit(evade_text, (self.evade_rect.x + 45, self.evade_rect.y + 10))
+
 class TradeScreen:
     def __init__(self, rect: pygame.Rect, on_close=None, on_trade=None):
         self.rect = pygame.Rect(rect)
