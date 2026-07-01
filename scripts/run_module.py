@@ -11,6 +11,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Run the simulator with dummy LLM agent.")
     parser.add_argument("--ui", action="store_true", help="Launch the Pygame UI for each stage.")
     parser.add_argument("--interactive", action="store_true", help="Pause for manual input.")
+    parser.add_argument("--client", action="store_true", help="Run the UI as a network client")
+    parser.add_argument("--ip", type=str, default="127.0.0.1", help="Host IP to connect to (if client)")
 
     args = parser.parse_args()
 
@@ -51,6 +53,8 @@ def main():
             cmd.append("--ui")
         if args.interactive:
             cmd.append("--interactive")
+        if args.client:
+            cmd.extend(["--client", "--ip", args.ip])
 
         print(f"Running command: {' '.join(cmd)}")
         result = subprocess.run(cmd)

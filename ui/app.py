@@ -3,10 +3,11 @@ import sys
 from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
 from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap, TradeScreen, SaveLoadScreen, VehicleChaseScreen
 from scripts.combat_simulator import simulate_trade
+from ui.network import NetworkManager
 
 
 class App:
-    def __init__(self, width: int = 1000, height: int = 700, campaign_file: str = "campaigns/default/campaign.json"):
+    def __init__(self, width: int = 1000, height: int = 700, campaign_file: str = "campaigns/default/campaign.json", is_host: bool = True, host_ip: str = "127.0.0.1"):
         if not pygame.get_init():
             pygame.init()
         self.width = width
@@ -48,15 +49,21 @@ class App:
 
         self.state = None
         self.map_grid = None
-
-        self.global_campaign_state = {"economy_multiplier": 1.0}
-
-        self.overworld_map = None
-
-        self.running = True
         self.scroll_x = 0
         self.scroll_y = 0
 
+        self.is_host = is_host
+        self.network_manager = NetworkManager(is_host=is_host, host_ip=host_ip)
+        self.network_manager.start(self.network_update_callback)
+
+        self.global_campaign_state = {"economy_multiplier": 1.0}
+        self.overworld_map = None
+
+    def network_update_callback(self, state):
+        if not self.is_host:
+            # When acting as client, receiving a full state update replaces the local state.
+            # We call update_state so that the UI can refresh cards/maps normally.
+            self.update_state(state)
 
     def load_campaign(self, campaign_file: str):
         import json
@@ -159,7 +166,12 @@ class App:
 
     def update_state(self, state):
         """Updates the internal UI cards with live data from the simulation."""
+        # Deepcopy isn't needed here as Python assigns references, but we need to ensure
+        # that client-side gets a valid state update without infinitely broadcasting.
         self.state = state
+
+        if self.is_host:
+            self.network_manager.broadcast_state(self.state)
 
         # Check for map data
         if getattr(self.state, "environment", None) and hasattr(self.state.environment, "scenario_data"):

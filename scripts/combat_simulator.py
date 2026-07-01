@@ -2360,6 +2360,12 @@ def main():
     parser.add_argument(
         "--ui", action="store_true", help="Launch the Pygame visual interface"
     )
+    parser.add_argument(
+        "--client", action="store_true", help="Run the UI as a network client"
+    )
+    parser.add_argument(
+        "--ip", type=str, default="127.0.0.1", help="Host IP to connect to (if client)"
+    )
 
 
     parser.add_argument(
@@ -2472,7 +2478,7 @@ def main():
     if args.ui:
         from ui.app import App
 
-        app = App()
+        app = App(is_host=not args.client, host_ip=args.ip)
     state.log(f"=== Beginning Shadowrun 7E Combat Simulation ===")
     state.log(f"Scenario: {env.description}")
 
