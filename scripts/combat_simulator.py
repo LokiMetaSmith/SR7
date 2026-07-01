@@ -2284,6 +2284,17 @@ def process_action(active, target, action_decision, state, llm, app=None):
     ):
         target.is_alive = False
         result_text += f" {target.name} is incapacitated!"
+
+        # Check for Gun-Fu (Flow State)
+        has_flow_state = any("flow state" in s.lower() for s in active.special_rules) or \
+                         any("flow state" in s.name.lower() for s in active.spells)
+        if has_flow_state and active.is_alive:
+            result_text += f" {active.name} triggers Gun-Fu (Flow State) and maintains momentum!"
+            # We add a tag to the state so the main loop can process the free action
+            if not hasattr(state, "bonus_actions"):
+                state.bonus_actions = []
+            state.bonus_actions.append(active)
+
     if (
         active.physical_damage >= active.physical_track
         or active.stun_damage >= active.stun_track
@@ -2599,6 +2610,43 @@ def main():
 
             narration = llm.narrate_action(active, action_text, result_text, state=state)
             state.log(narration)
+
+            # Process Gun-Fu (Flow State) Bonus Actions
+            while hasattr(state, "bonus_actions") and state.bonus_actions:
+                bonus_active = state.bonus_actions.pop(0)
+                if not bonus_active.is_alive or getattr(bonus_active, "has_yielded", False):
+                    continue
+
+                valid_targets = [
+                    c for c in state.combatants
+                    if c.team != bonus_active.team and c.is_alive and not getattr(c, "has_yielded", False)
+                ]
+                if not valid_targets:
+                    break
+
+                target = random.choice(valid_targets)
+                state.log(f"--- [FLOW STATE TRIGGERED for {bonus_active.name}] ---")
+
+                if app or args.interactive:
+                    if app:
+                        app.pending_action = None
+                        print(f"Waiting for BONUS UI action for {bonus_active.name}...")
+                        while app.pending_action is None:
+                            app.tick()
+                            if not app.running:
+                                app.pending_action = llm.ask_action(bonus_active, state)
+                                break
+                        action_decision = app.pending_action
+                    else:
+                        user_input = input(f"Enter BONUS action for {bonus_active.name} (or press Enter to let AI decide): ")
+                        action_decision = user_input if user_input.strip() else llm.ask_action(bonus_active, state)
+                else:
+                    action_decision = llm.ask_action(bonus_active, state)
+
+                state.log(f"[{bonus_active.name} Bonus Decision]: {action_decision.strip()}")
+                action_text, result_text, edge_spent = process_action(bonus_active, target, action_decision, state, llm, app)
+                narration = llm.narrate_action(bonus_active, action_text, result_text, state=state)
+                state.log(narration)
 
         # End of Turn Logic
 
