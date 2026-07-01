@@ -3838,6 +3838,7 @@ Technomancers weave "Threads" instead of casting spells.
 | Puppeteer | Device | Lvl + 1 | Forces a device to take an action as if the Technomancer was the owner. |
 | Resonance Veil | Matrix | Lvl - 1 | Creates a flawless illusion within the nanite grid (e.g., faking a clearance badge or a fire alarm). |
 | Goo-Spike | Persona | Lvl + 2 | Violently commands ambient nanites inside the target's gear to short out. Deals Matrix damage equal to Level + Net Hits. |
+| Gun-Fu (Flow State) | Self | Lvl + 1 | Connects the Technomancer's neural pathways to their smartgun's predictive targeting. If they drop an enemy's health to 0, they may immediately take a free attack action against a different target. |
 
 #### 3. Compiling Sprites (Physical Manifestation)
 Sprites are no longer just code. When compiled, they swarm ambient physical matter (dust, trash, loose electronics) to build a temporary physical body.

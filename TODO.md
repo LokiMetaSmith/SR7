@@ -178,3 +178,4 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Line of Sight & Dynamic Cover:** Introduce a system in the `MapGrid` UI and `combat_simulator.py` that calculates Line of Sight (LOS) and provides dynamic cover bonuses based on the environment (e.g., hiding behind pillars or walls).
 *   [x] **Stealth & Infiltration Phase:** Add a pre-combat "Stealth Phase" allowing players to attempt to bypass encounters, set traps, or gain a surprise round using stealth and Matrix hacking, seamlessly transitioning into standard combat if they are detected.
 *   [x] **Vehicle Chase Minigame UI:** Build a dedicated Pygame visual screen for high-speed chases, representing relative distance, hazards, and Ram/Evade actions.
+*   [x] **Add "Gun-Fu (Flow State)" Complex Form:** Implement Flow State momentum mechanic for Technomancers.
