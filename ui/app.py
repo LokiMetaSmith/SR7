@@ -59,11 +59,30 @@ class App:
         self.global_campaign_state = {"economy_multiplier": 1.0}
         self.overworld_map = None
 
-    def network_update_callback(self, state):
+    def network_update_callback(self, state, extra_data=None):
+        if self.is_host:
+            if extra_data and "action_event" in extra_data:
+                event = extra_data["action_event"]
+                if event.get("type") == "action":
+                    self.set_pending_action(event.get("action"))
+            return
+
         if not self.is_host:
             # When acting as client, receiving a full state update replaces the local state.
             # We call update_state so that the UI can refresh cards/maps normally.
-            self.update_state(state)
+            if state is not None:
+                self.update_state(state)
+
+            if extra_data:
+                if "in_trade_screen" in extra_data:
+                    self.in_trade_screen = extra_data.get("in_trade_screen", False)
+                    if self.in_trade_screen and self.trade_screen:
+                        trade_data = extra_data.get("trade_data", {})
+                        self.trade_screen.buyer_name = trade_data.get("buyer_name", "Player")
+                        self.trade_screen.item_name = trade_data.get("item_name", "Unknown")
+                        self.trade_screen.item_value = trade_data.get("item_value", 0)
+                        self.trade_screen.fixer_difficulty = trade_data.get("fixer_difficulty", 1)
+                        self.trade_screen.trade_result = trade_data.get("trade_result", None)
 
     def load_campaign(self, campaign_file: str):
         import json
@@ -153,7 +172,10 @@ class App:
         return "No Buyer"
 
     def set_pending_action(self, action: str):
-        self.pending_action = action
+        if not self.is_host:
+            self.network_manager.send_event({"type": "action", "action": action})
+        else:
+            self.pending_action = action
 
 
     def set_pending_chat(self, chat_message: str):
@@ -171,7 +193,18 @@ class App:
         self.state = state
 
         if self.is_host:
-            self.network_manager.broadcast_state(self.state)
+            extra_data = {
+                "in_trade_screen": self.in_trade_screen
+            }
+            if self.in_trade_screen and self.trade_screen:
+                extra_data["trade_data"] = {
+                    "buyer_name": self.trade_screen.buyer_name,
+                    "item_name": self.trade_screen.item_name,
+                    "item_value": self.trade_screen.item_value,
+                    "fixer_difficulty": self.trade_screen.fixer_difficulty,
+                    "trade_result": self.trade_screen.trade_result
+                }
+            self.network_manager.broadcast_state(self.state, extra_data=extra_data)
 
         # Check for map data
         if getattr(self.state, "environment", None) and hasattr(self.state.environment, "scenario_data"):
@@ -222,6 +255,23 @@ class App:
     def tick(self):
         """Processes one frame of the UI, suitable for a host event loop."""
         self.handle_events()
+
+        # Broadcast trade screen state actively if host and in trade screen
+        # to ensure real-time viewing of typed items/results
+        if self.is_host and self.in_trade_screen and self.state:
+            extra_data = {
+                "in_trade_screen": self.in_trade_screen
+            }
+            if self.trade_screen:
+                extra_data["trade_data"] = {
+                    "buyer_name": self.trade_screen.buyer_name,
+                    "item_name": self.trade_screen.item_name,
+                    "item_value": self.trade_screen.item_value,
+                    "fixer_difficulty": self.trade_screen.fixer_difficulty,
+                    "trade_result": self.trade_screen.trade_result
+                }
+            self.network_manager.broadcast_state(self.state, extra_data=extra_data)
+
         self.draw()
         self.clock.tick(60)
 

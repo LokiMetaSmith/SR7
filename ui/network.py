@@ -72,6 +72,9 @@ class NetworkManager:
                 print(f"Connection failed: {e}")
 
     def _host_loop(self):
+        # We need a way to receive events back from clients too
+        threading.Thread(target=self._host_receive_loop, daemon=True).start()
+
         while self.running:
             try:
                 self.socket.settimeout(1.0)
@@ -84,6 +87,34 @@ class NetworkManager:
                 pass
             except Exception as e:
                 pass
+
+    def _host_receive_loop(self):
+        # Extremely basic polling to receive action events from connected clients
+        buffers = {}
+        while self.running:
+            for conn in self.clients.copy():
+                try:
+                    conn.setblocking(False)
+                    data = conn.recv(1024)
+                    if not data:
+                        continue
+
+                    if conn not in buffers:
+                        buffers[conn] = b""
+                    buffers[conn] += data
+
+                    while b"<EVENT_END>" in buffers[conn]:
+                        msg, buffers[conn] = buffers[conn].split(b"<EVENT_END>", 1)
+                        event_data = json.loads(msg.decode('utf-8'))
+                        if self.app_callback:
+                            # Pass it as an action event
+                            self.app_callback(None, {"action_event": event_data})
+                except BlockingIOError:
+                    pass
+                except Exception as e:
+                    pass
+            import time
+            time.sleep(0.05)
 
     def _client_loop(self):
         buffer = b""
@@ -99,12 +130,19 @@ class NetworkManager:
                     msg, buffer = buffer.split(b"<END>", 1)
                     try:
                         decompressed = zlib.decompress(msg).decode('utf-8')
-                        state_dict = json.loads(decompressed)
+                        payload = json.loads(decompressed)
+
+                        if "state" in payload:
+                            state_dict = payload["state"]
+                            extra_data = payload.get("extra_data", {})
+                        else:
+                            state_dict = payload
+                            extra_data = {}
 
                         decoded_state = decode_state(state_dict)
 
                         if self.app_callback:
-                            self.app_callback(decoded_state)
+                            self.app_callback(decoded_state, extra_data)
                     except Exception as e:
                         print(f"Deserialization error: {e}")
 
@@ -113,12 +151,28 @@ class NetworkManager:
             except Exception as e:
                 break
 
-    def broadcast_state(self, state_obj):
+    def send_event(self, event_data: dict):
+        if self.is_host:
+            return
+
+        try:
+            serialized = json.dumps(event_data).encode('utf-8') + b"<EVENT_END>"
+            self.socket.sendall(serialized)
+        except Exception as e:
+            print(f"Failed to send event: {e}")
+
+    def broadcast_state(self, state_obj, extra_data=None):
         if not self.is_host:
             return
 
         try:
-            serialized = json.dumps(state_obj, cls=NetworkEncoder).encode('utf-8')
+            payload = {
+                "state": state_obj,
+            }
+            if extra_data:
+                payload["extra_data"] = extra_data
+
+            serialized = json.dumps(payload, cls=NetworkEncoder).encode('utf-8')
             compressed = zlib.compress(serialized) + b"<END>"
             self.latest_state_data = compressed
 
