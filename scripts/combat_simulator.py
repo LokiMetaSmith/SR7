@@ -381,13 +381,24 @@ class RulesEngine:
             return f"Failed to erase Tether. {target.name}'s connection remains secure."
 
     @staticmethod
-    def roll_dice(pool: int, wild_dice_count: int = 0) -> tuple[int, bool]:
+    def roll_dice(pool: int, wild_dice_count: int = 0, combatant=None) -> tuple[int, bool]:
         hits = 0
         ones_twos = 0
         normal_fives = 0
         wild_ones = 0
 
         actual_pool = max(1, pool)
+
+        # Centering Metamagic reduces negative modifiers in a roundabout way, but effectively acts
+        # as a bonus to the final dice pool based on Initiation grade if they are taking a magic action.
+        # We handle this in the spellcasting block mostly, but we can do a general dice pool bonus here
+        # if Centering is present in special rules.
+        if combatant and combatant.special_rules:
+            for rule in combatant.special_rules:
+                if "centering" in rule.lower():
+                    # For simplicity, grant +1 die if they have Centering
+                    actual_pool += 1
+                    break
         wild_dice = min(actual_pool, max(0, wild_dice_count))
         standard_dice = actual_pool - wild_dice
 
@@ -425,11 +436,11 @@ class RulesEngine:
         pool: int, combatant: "Combatant", wild_dice_count: int = 0
     ) -> tuple[int, bool, bool]:
         """Rolls an attack and automatically spends Edge to reroll if 0 hits are rolled."""
-        hits, glitched = RulesEngine.roll_dice(pool, wild_dice_count)
+        hits, glitched = RulesEngine.roll_dice(pool, wild_dice_count, combatant=combatant)
         edge_spent = False
         if hits == 0 and combatant.edge > 0:
             combatant.edge -= 1
-            reroll_hits, reroll_glitched = RulesEngine.roll_dice(pool, wild_dice_count)
+            reroll_hits, reroll_glitched = RulesEngine.roll_dice(pool, wild_dice_count, combatant=combatant)
             hits += reroll_hits
             glitched = reroll_glitched
             edge_spent = True
@@ -924,6 +935,12 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
 
     if re.search(r"Dual-Natured|Dual Natured", content, re.IGNORECASE):
         c.is_dual_natured = True
+
+    # Metamagics
+    metamagic_matches = re.search(r"\*\*Metamagics?:\*\*(.*?)(?=\n\n|\n\*\*|\Z)", content, re.DOTALL)
+    if metamagic_matches:
+        for mm in metamagic_matches.group(1).split(","):
+            c.special_rules.append(mm.strip())
 
     return c
 
@@ -1580,6 +1597,14 @@ def process_action(active, target, action_decision, state, llm, app=None):
             def_pool = target.get_attribute("REA", 3) + target.get_attribute(
                 "INT", 3
             )
+
+        # Shielding Metamagic adds dice to spell defense tests
+        if target.special_rules:
+            for rule in target.special_rules:
+                if "shielding" in rule.lower():
+                    m = re.search(r"shielding (\d+)", rule, re.IGNORECASE)
+                    def_pool += int(m.group(1)) if m else 1
+                    break
 
         def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
         net_hits = attack_hits - def_hits
