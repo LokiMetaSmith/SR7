@@ -24,7 +24,7 @@ class App:
         self.in_save_load_screen = False
         self.in_chase_screen = False
         self.save_load_screen = SaveLoadScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400))
-        self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=lambda action: f"Performed {action}")
+        self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=self.set_pending_action)
 
 
         self.pending_action = None
@@ -114,7 +114,7 @@ class App:
         self.in_save_load_screen = False
         self.in_chase_screen = False
         self.save_load_screen = SaveLoadScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400))
-        self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=lambda action: f"Performed {action}")
+        self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=self.set_pending_action)
 
 
     def load_module(self, module_path: str):
@@ -133,7 +133,7 @@ class App:
         self.in_save_load_screen = False
         self.in_chase_screen = False
         self.save_load_screen = SaveLoadScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400))
-        self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=lambda action: f"Performed {action}")
+        self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=self.set_pending_action)
 
 
 
