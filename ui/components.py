@@ -61,7 +61,7 @@ class BaseCard:
                     return True
         return False
 
-    def draw(self, surface: pygame.Surface, x: int, y: int):
+    def draw(self, surface: pygame.Surface, x: int, y: int, is_stealth: bool = False):
         self.rect.topleft = (x, y)
 
         # Main background
@@ -74,7 +74,7 @@ class BaseCard:
         # Draw the three panels
         self._draw_panel_1_identity(surface)
         self._draw_panel_2_status(surface)
-        self._draw_panel_3_mechanics(surface)
+        self._draw_panel_3_mechanics(surface, is_stealth=is_stealth)
 
     def _draw_panel_1_identity(self, surface: pygame.Surface):
         # Panel 1: Identity & Core Stats (Top)
@@ -333,7 +333,7 @@ class BaseCard:
             self.action_rects.append((btn_rect, action_cmd))
             y_offset += 26
 
-    def _draw_panel_3_mechanics(self, surface: pygame.Surface):
+    def _draw_panel_3_mechanics(self, surface: pygame.Surface, is_stealth: bool = False):
         self.action_rects.clear()
 
         # Panel 3: Mechanics (Bottom)
@@ -419,7 +419,16 @@ class BaseCard:
             surface.blit(actions_header, (panel_rect.x + 10, y_offset))
             y_offset += 20
 
-            for action_name, action_cmd in [("Sprint", "sprint"), ("Take Cover", "take cover"), ("Yield", "yield"), ("Pass Turn", "pass")]:
+            actions_list = []
+            if is_stealth:
+                actions_list = [("Bypass", "bypass"), ("Set Trap", "set trap")]
+                if self.combatant.matrix.attack > 0 or self.combatant.matrix.sleaze > 0:
+                    actions_list.append(("Matrix Hack", "matrix hack"))
+                actions_list.append(("Pass Turn", "pass"))
+            else:
+                actions_list = [("Sprint", "sprint"), ("Take Cover", "take cover"), ("Yield", "yield"), ("Pass Turn", "pass")]
+
+            for action_name, action_cmd in actions_list:
                 act_render = self.font_small.render(f"{action_name}", True, COLORS["text"])
                 btn_rect = pygame.Rect(panel_rect.x + 15, y_offset - 2, act_render.get_width() + 16, 24)
                 self._draw_action_button(surface, btn_rect, act_render)
