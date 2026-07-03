@@ -491,13 +491,15 @@ class App:
             # Draw cards side by side
             x_offset = 50 + self.scroll_x
             for card in self.player_cards:
-                card.draw(self.screen, x_offset, start_y)
+                is_stealth = getattr(self.state, 'is_stealth_phase_active', False) if self.state else False
+                card.draw(self.screen, x_offset, start_y, is_stealth=is_stealth)
                 x_offset += 370
 
 
             x_offset = max(x_offset, 550 + self.scroll_x)
             for card in self.gm_cards:
-                card.draw(self.screen, x_offset, start_y)
+                is_stealth = getattr(self.state, 'is_stealth_phase_active', False) if self.state else False
+                card.draw(self.screen, x_offset, start_y, is_stealth=is_stealth)
                 x_offset += 370
 
             self.chat_window.draw(self.screen)
