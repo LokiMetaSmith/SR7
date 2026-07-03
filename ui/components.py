@@ -757,6 +757,12 @@ class VehicleChaseScreen:
         surface.blit(dist_surf, (self.rect.x + 40, y_offset))
         y_offset += 30
 
+        # Visual representation of distance
+        pygame.draw.rect(surface, (100, 100, 100), (self.rect.x + 40, y_offset, 400, 10))
+        dist_px = min(400, max(0, self.distance * 2))
+        pygame.draw.rect(surface, (0, 255, 204), (self.rect.x + 40, y_offset, dist_px, 10))
+        y_offset += 30
+
         hazards_str = ", ".join(self.hazards) if self.hazards else "None"
         hazards_surf = self.font_body.render(f"Hazards: {hazards_str}", True, COLORS.get("text", (200, 200, 200)))
         surface.blit(hazards_surf, (self.rect.x + 40, y_offset))
