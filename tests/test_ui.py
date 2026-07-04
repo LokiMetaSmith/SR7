@@ -67,3 +67,23 @@ def test_card_click_expansion():
 
     assert handled
     assert card.expanded
+
+def test_vehicle_chase_screen():
+    import pygame
+    from ui.components import VehicleChaseScreen
+    pygame.init()
+
+    # Initialize the screen just to test creation
+    rect = pygame.Rect(0, 0, 500, 400)
+    screen = VehicleChaseScreen(rect)
+
+    assert screen.distance == 100, "Distance should initialize to 100"
+
+    # Check interaction bounds
+    evade_rect = screen.evade_rect
+    ram_rect = screen.ram_rect
+
+    assert evade_rect.collidepoint(evade_rect.center), "Evade rect should be interactive"
+    assert ram_rect.collidepoint(ram_rect.center), "Ram rect should be interactive"
+
+    pygame.quit()

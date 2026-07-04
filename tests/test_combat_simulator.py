@@ -322,3 +322,146 @@ def test_spirit_vs_sprite_compiling():
         RulesEngine.roll_attack_with_edge = original_roll_attack
         RulesEngine.roll_dice = original_roll_dice
         sim.load_combatant = original_load
+
+def test_line_of_sight_and_cover():
+    from scripts.combat_simulator import GameEnvironment, SimulationState, Zone, Combatant, MatrixAttributes, RulesEngine
+
+    layout = [
+        "#####",
+        "#A.B#",
+        "##O##",
+        "#C..#",
+        "#####"
+    ]
+    legend = {
+        "A": "Zone A",
+        "B": "Zone B",
+        "C": "Zone C",
+        "O": "Heavy Cover",
+        ".": "Empty"
+    }
+
+    env = GameEnvironment(name="TestEnv", description="desc", modifiers={}, layout_ascii=layout, legend=legend)
+    state = SimulationState(environment=env)
+
+    c1 = Combatant(name="C1", team=1, matrix=MatrixAttributes())
+    c2 = Combatant(name="C2", team=2, matrix=MatrixAttributes())
+
+    # Test direct LOS without cover (A to B)
+    c1.zone = Zone("Zone A", 0, "Desc")
+    c2.zone = Zone("Zone B", 0, "Desc")
+    cover = RulesEngine.calculate_los_cover(state, c1, c2)
+    assert cover == 0, f"Expected 0 cover, got {cover}"
+
+    # Test LOS with cover (A to C or B to C blocked by O)
+    c1.zone = Zone("Zone B", 0, "Desc")
+    c2.zone = Zone("Zone C", 0, "Desc")
+    cover = RulesEngine.calculate_los_cover(state, c1, c2)
+    assert cover > 0, f"Expected cover bonus (>0), got {cover}"
+
+
+def test_stealth_phase():
+    from scripts.combat_simulator import GameEnvironment, SimulationState, Combatant, MatrixAttributes, Weapon
+    from unittest.mock import MagicMock
+
+    env = GameEnvironment(
+        name="StealthEnv",
+        description="desc",
+        modifiers={},
+        has_stealth_phase=True
+    )
+    state = SimulationState(environment=env)
+    assert state.is_stealth_phase_active is True, "Stealth phase should be active on start"
+
+    c1 = Combatant(name="Stealthy", team=1, matrix=MatrixAttributes())
+    c2 = Combatant(name="Guard", team=2, matrix=MatrixAttributes())
+    setattr(c2, "total_armor", 0)
+    state.combatants = [c1, c2]
+
+    # Mock the LLM to choose a loud action
+    import scripts.combat_simulator
+
+
+    # Store original
+    original_ask_action = scripts.combat_simulator.RulesEngine.agent.ask_action if hasattr(scripts.combat_simulator.RulesEngine, "agent") else None
+    original_roll = scripts.combat_simulator.RulesEngine.roll_dice
+
+    # Mock roll to ensure hit
+    scripts.combat_simulator.RulesEngine.roll_dice = lambda pool, wild=0, combatant=None, state=None: (pool, False)
+
+    try:
+        # Mock LLM response to simulate standard attack
+        scripts.combat_simulator.RulesEngine.agent = type("MockAgent", (), {"ask_action": lambda self, c, s: '{"action": "attack", "target": "Guard", "weapon": "Combat Knife"}', "narrate_action": lambda self, *args, **kwargs: ""})()
+        c1.weapons = [Weapon("Combat Knife", 4, "P", 0)]
+
+        import json
+        scripts.combat_simulator.process_action(c1, c2, json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("action", "") + " " + json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("weapon", ""), state, scripts.combat_simulator.RulesEngine.agent)
+
+        # Still stealth phase because Combat Knife is not loud (doesn't have loud keywords)
+        assert state.is_stealth_phase_active is True
+
+        # Now mock a grenade attack
+        setattr(scripts.combat_simulator.RulesEngine.agent, "ask_action", lambda c, s: '{"action": "attack", "target": "Guard", "weapon": "Frag Grenade"}')
+        c1.weapons = [Weapon("Frag Grenade", 16, "P", -2)]
+
+        import json
+        scripts.combat_simulator.process_action(c1, c2, json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("action", "") + " " + json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("weapon", ""), state, scripts.combat_simulator.RulesEngine.agent)
+
+        # Frag Grenade should break stealth
+        assert state.is_stealth_phase_active is False
+    finally:
+        scripts.combat_simulator.RulesEngine.roll_dice = original_roll
+        if original_ask_action:
+            scripts.combat_simulator.RulesEngine.agent.ask_action = original_ask_action
+
+def test_gun_fu_flow_state():
+    from scripts.combat_simulator import GameEnvironment, SimulationState, Combatant, MatrixAttributes, Weapon
+
+    env = GameEnvironment(name="TestEnv", description="desc", modifiers={})
+    state = SimulationState(environment=env)
+
+    # Create active combatant with Gun-Fu
+    c1 = Combatant(name="John Wick", team=1, matrix=MatrixAttributes())
+    c1.special_rules = ["Gun-Fu (Flow State)"]
+    c1.weapons = [Weapon("Pistol", 100, "P", -5)] # High damage to ensure kill
+
+    # Create weak target
+    c2 = Combatant(name="Thug 1", team=2, matrix=MatrixAttributes())
+    c2.physical_track = 1
+
+    # Create second target
+    c3 = Combatant(name="Thug 2", team=2, matrix=MatrixAttributes())
+    c3.physical_track = 10
+
+    state.combatants = [c1, c2, c3]
+
+    import scripts.combat_simulator
+
+    # Store original
+    original_ask_action = scripts.combat_simulator.RulesEngine.agent.ask_action if hasattr(scripts.combat_simulator.RulesEngine, "agent") else None
+    original_roll = scripts.combat_simulator.RulesEngine.roll_dice
+
+    # Mock roll to ensure hit and damage
+    scripts.combat_simulator.RulesEngine.roll_dice = lambda pool, wild=0, combatant=None, state=None: (pool, False)
+
+    try:
+        import json
+        scripts.combat_simulator.RulesEngine.agent = type("MockAgent", (), {"ask_action": lambda self, c, s: '{"action": "attack", "target": "Thug 1", "weapon": "Pistol"}', "narrate_action": lambda self, *args, **kwargs: ""})()
+
+        # Make sure no bonus actions yet
+        assert not hasattr(state, "bonus_actions") or len(state.bonus_actions) == 0
+
+        # Process action to kill Thug 1
+        scripts.combat_simulator.process_action(c1, c2, json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("action", "") + " " + json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("weapon", ""), state, scripts.combat_simulator.RulesEngine.agent)
+
+        # Verify thug 1 is dead
+        assert not c2.is_alive
+
+        # Verify bonus action was granted to John Wick
+        assert hasattr(state, "bonus_actions")
+        assert len(state.bonus_actions) == 1
+        assert state.bonus_actions[0] == c1
+    finally:
+        scripts.combat_simulator.RulesEngine.roll_dice = original_roll
+        if original_ask_action:
+            scripts.combat_simulator.RulesEngine.agent.ask_action = original_ask_action
