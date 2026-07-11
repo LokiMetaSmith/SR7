@@ -3969,6 +3969,7 @@ Grid Overwatch Division is no longer a room of corporate deckers. It is an auton
 The Human-Metahuman Vampiric Virus (HMHVV) radically alters the physiology and psychology of its victims. In the modern Panopticon, these creatures face both the threat of grid immune responses and natural bigotry.
 
 **General Infected Rules:**
+
 *   **Essence Drain:** All HMHVV infected must consume Essence to survive. Failure to consume at least 1 Essence per month results in physical degradation, leading to death or becoming mindless ferals.
 *   **Dual Natured:** All Infected are active on both the physical and astral planes simultaneously.
 *   **Infection Transfer:** Biting, clawing, or Essence Drain transfers the HMHVV virus. Victims must resist with Body + Willpower.
