@@ -179,3 +179,9 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Stealth & Infiltration Phase:** Add a pre-combat "Stealth Phase" allowing players to attempt to bypass encounters, set traps, or gain a surprise round using stealth and Matrix hacking, seamlessly transitioning into standard combat if they are detected.
 *   [x] **Vehicle Chase Minigame UI:** Build a dedicated Pygame visual screen for high-speed chases, representing relative distance, hazards, and Ram/Evade actions.
 *   [x] **Add "Gun-Fu (Flow State)" Complex Form:** Implement Flow State momentum mechanic for Technomancers.
+
+## Priority 13: SRX eXtream Edition Expansion
+
+**Goal:** Bridge SRX with SR7's Merged World lore.
+
+*   [x] **Draft Rulebook Module:** Create `SRX_eXtream_Edition_Rules.md` and detail Wild Dice, Saturation Level, Digital Essence, Unified Possession, and G.O.D. Manifestations.
