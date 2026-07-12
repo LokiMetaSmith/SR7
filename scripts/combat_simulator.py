@@ -89,8 +89,48 @@ class Zone:
     description: str = ""
 
 
+
+class PossessionWrapper:
+    def __init__(self, host: 'Combatant', controller: 'Combatant'):
+        self.host = host
+        self.controller = controller
+
+    def get_attribute(self, attr: str, default: int = 3) -> int:
+        if attr in ["LOG", "INT", "WIL", "CHA"]:
+            return self.controller.get_attribute(attr, default)
+        return self.host.get_attribute(attr, default)
+
+    def take_damage(self, amount: int, damage_type: str) -> str:
+        # Route to host, but apply biofeedback to controller
+        result_text = self.host.take_damage(amount, damage_type)
+        if damage_type == "P":
+            biofeedback = amount // 2
+            if biofeedback > 0:
+                from scripts.combat_simulator import RulesEngine
+                bio_resist = self.controller.get_attribute("WIL", 3) + self.host.get_attribute("BOD", 3)
+                bio_hits, _ = RulesEngine.roll_dice(bio_resist)
+                net_bio = max(0, biofeedback - bio_hits)
+                self.controller.stun_damage += net_bio
+                result_text += f" [{self.controller.name} resists biofeedback with {bio_resist} dice, taking {net_bio} Stun!]"
+
+            # Ejection if host destroyed
+            if self.host.physical_damage >= self.host.physical_track:
+                dumpshock = 6
+                self.controller.stun_damage += dumpshock
+                self.controller.special_rules.append("Violent Ejection Penalty: -2 dice pool for 10 minutes")
+                result_text += f" [Host body destroyed! {self.controller.name} is violently ejected, suffering {dumpshock} unresisted Stun damage!]"
+        return result_text
+
+    def __getattr__(self, name):
+        # By default delegate everything else to the controller for decision making (skills, edge, weapons)
+        # unless it explicitly belongs to the physical host state
+        if name in ["physical_damage", "physical_track", "stun_damage", "stun_track", "armor", "zone"]:
+            return getattr(self.host, name)
+        return getattr(self.controller, name)
+
 @dataclass
 class Combatant:
+
     name: str
     attributes: Dict[str, int] = field(default_factory=dict)
     skills: Dict[str, int] = field(default_factory=dict)
@@ -287,6 +327,7 @@ class GameEnvironment:
         self.layout_ascii = layout_ascii if layout_ascii else []
         self.legend = legend if legend else {}
         self.has_stealth_phase = has_stealth_phase
+        self.is_extream_mode = getattr(self, "is_extream_mode", False)
 
 
 class RulesEngine:
@@ -363,7 +404,11 @@ class RulesEngine:
         log = active.get_attribute("LOG", 3)
         computer_skill = active.skills.get("Computer", 4)
         attack_pool = log + computer_skill
-        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         def_pool = target.get_attribute("LOG", 3) + target.skills.get("Hacking", 5)
         def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
@@ -381,11 +426,13 @@ class RulesEngine:
             return f"Failed to erase Tether. {target.name}'s connection remains secure."
 
     @staticmethod
-    def roll_dice(pool: int, wild_dice_count: int = 0, combatant=None) -> tuple[int, bool]:
+    def roll_dice(pool: int, wild_dice_count: int = 0, combatant=None, is_extream_mode: bool = False) -> tuple[int, bool]:
         hits = 0
         ones_twos = 0
         normal_fives = 0
         wild_ones = 0
+        crit_sixes = 0
+        crit_ones = 0
 
         actual_pool = max(1, pool)
 
@@ -400,47 +447,104 @@ class RulesEngine:
                     actual_pool += 1
                     break
         wild_dice = min(actual_pool, max(0, wild_dice_count))
-        standard_dice = actual_pool - wild_dice
 
-        for _ in range(standard_dice):
-            roll = random.randint(1, 6)
-            if roll == 5:
-                normal_fives += 1
-                hits += 1
-            elif roll == 6:
-                hits += 1
-            elif roll in [1, 2]:
-                ones_twos += 1
+        if is_extream_mode:
+            # Extream Mode uses SRX Crit Dice rules (2 dice are Crit Dice)
+            crit_dice = min(actual_pool, 2)
+            standard_dice = max(0, actual_pool - crit_dice - wild_dice)
+            # Ensure wild dice does not over-consume pool (crit takes precedence)
+            if wild_dice + crit_dice > actual_pool:
+                wild_dice = actual_pool - crit_dice
 
-        for _ in range(wild_dice):
-            roll = random.randint(1, 6)
-            if roll == 6:
+            for _ in range(crit_dice):
+                roll = random.randint(1, 6)
+                if roll == 5:
+                    normal_fives += 1
+                    hits += 1
+                elif roll == 6:
+                    crit_sixes += 1
+                    hits += 1
+                elif roll == 1:
+                    crit_ones += 1
+                    ones_twos += 1
+                elif roll == 2:
+                    ones_twos += 1
+
+            for _ in range(standard_dice):
+                roll = random.randint(1, 6)
+                if roll == 5:
+                    normal_fives += 1
+                    hits += 1
+                elif roll == 6:
+                    hits += 1
+                elif roll in [1, 2]:
+                    ones_twos += 1
+
+            for _ in range(wild_dice):
+                roll = random.randint(1, 6)
+                if roll == 6:
+                    hits += 3
+                elif roll == 5:
+                    hits += 1
+                elif roll == 1:
+                    wild_ones += 1
+                    ones_twos += 1
+                elif roll == 2:
+                    ones_twos += 1
+
+            # SRX Crit Dice: Double 6s = +3 hits, Double 1s = Glitch
+            if crit_sixes >= 2:
                 hits += 3
-            elif roll == 5:
-                hits += 1
-            elif roll == 1:
-                wild_ones += 1
-                ones_twos += 1
-            elif roll == 2:
-                ones_twos += 1
 
-        # Wild Dice 1s cancel all standard 5s
-        if wild_ones > 0:
-            hits -= normal_fives
+            # Wild Dice 1s cancel all standard 5s
+            if wild_ones > 0:
+                hits -= normal_fives
 
-        glitched = ones_twos >= (actual_pool / 2.0)
+            glitched = (crit_ones >= 2) or (wild_ones > 0) # G.O.D. Manifestation glitch occurs on wild one in hacking
+
+        else:
+            standard_dice = actual_pool - wild_dice
+
+            for _ in range(standard_dice):
+                roll = random.randint(1, 6)
+                if roll == 5:
+                    normal_fives += 1
+                    hits += 1
+                elif roll == 6:
+                    hits += 1
+                elif roll in [1, 2]:
+                    ones_twos += 1
+
+            for _ in range(wild_dice):
+                roll = random.randint(1, 6)
+                if roll == 6:
+                    hits += 3
+                elif roll == 5:
+                    hits += 1
+                elif roll == 1:
+                    wild_ones += 1
+                    ones_twos += 1
+                elif roll == 2:
+                    ones_twos += 1
+
+            # Wild Dice 1s cancel all standard 5s
+            if wild_ones > 0:
+                hits -= normal_fives
+
+            glitched = ones_twos >= (actual_pool / 2.0)
+
         return hits, glitched
 
     @staticmethod
     def roll_attack_with_edge(
-        pool: int, combatant: "Combatant", wild_dice_count: int = 0
+        pool: int, combatant: "Combatant", wild_dice_count: int = 0, is_extream_mode: bool = False
     ) -> tuple[int, bool, bool]:
         """Rolls an attack and automatically spends Edge to reroll if 0 hits are rolled."""
-        hits, glitched = RulesEngine.roll_dice(pool, wild_dice_count, combatant=combatant)
+        hits, glitched = RulesEngine.roll_dice(pool, wild_dice_count, combatant=combatant, is_extream_mode=is_extream_mode)
         edge_spent = False
         if hits == 0 and combatant.edge > 0:
             combatant.edge -= 1
-            reroll_hits, reroll_glitched = RulesEngine.roll_dice(pool, wild_dice_count, combatant=combatant)
+            reroll_hits, reroll_glitched = RulesEngine.roll_dice(pool, wild_dice_count, combatant=combatant, is_extream_mode=is_extream_mode)
             hits += reroll_hits
             glitched = reroll_glitched
             edge_spent = True
@@ -1214,7 +1318,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
             pass
 
         compiling_pool = active.skills.get("Compiling", 0) + active.get_attribute("RES", 3)
-        compiling_hits, compiling_glitched, edge_spent = RulesEngine.roll_attack_with_edge(compiling_pool, active)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        compiling_hits, compiling_glitched, edge_spent = RulesEngine.roll_attack_with_edge(compiling_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         sprite_hits, sprite_glitched = RulesEngine.roll_dice(sprite_level)
 
@@ -1302,7 +1410,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
             pass
 
         conjuring_pool = active.skills.get("Conjuring", 0) + active.get_attribute("MAG", 3)
-        conjuring_hits, conjuring_glitched, edge_spent = RulesEngine.roll_attack_with_edge(conjuring_pool, active)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        conjuring_hits, conjuring_glitched, edge_spent = RulesEngine.roll_attack_with_edge(conjuring_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         spirit_hits, spirit_glitched = RulesEngine.roll_dice(spirit_force)
 
@@ -1412,7 +1524,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
 
     elif is_tar_pit_attack:
         attack_pool = active.skills.get("Cybercombat", 5) + active.get_attribute("LOG", 3)
-        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         def_pool = getattr(target.matrix, "firewall", 3) + target.get_attribute("INT", 3)
         if target.null_bags > 0:
@@ -1430,7 +1546,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
 
     elif is_patrol_scan:
         attack_pool = active.host_rating * 2 if getattr(active, "host_rating", 0) > 0 else active.get_attribute("LOG", 3) + active.skills.get("Computer", 5)
-        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "sleaze", 3)
         if target.null_bags > 0:
@@ -1449,7 +1569,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
 
     elif "killer ic" in action_lower:
         attack_pool = active.host_rating * 2 if getattr(active, "host_rating", 0) > 0 else active.get_attribute("LOG", 3) + active.skills.get("Cybercombat", 5)
-        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "firewall", 3)
         if target.null_bags > 0:
@@ -1476,7 +1600,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
 
     elif "sparky ic" in action_lower:
         attack_pool = active.host_rating * 2 if getattr(active, "host_rating", 0) > 0 else active.get_attribute("LOG", 3) + active.skills.get("Cybercombat", 5)
-        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "firewall", 3)
         if target.null_bags > 0:
@@ -1504,7 +1632,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
         log = active.get_attribute("LOG", 3)
         cyber_skill = active.skills.get("Cybercombat", 5)
         attack_pool = log + cyber_skill
-        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "firewall", 3)
         if target.null_bags > 0:
@@ -1539,6 +1671,7 @@ def process_action(active, target, action_decision, state, llm, app=None):
         cha = active.get_attribute("CHA", 3)
 
         attack_pool = cha + skill_rating + active.street_cred - active.notoriety
+
         attack_hits, attack_hits_glitched, edge_spent = (
             RulesEngine.roll_attack_with_edge(attack_pool, active)
         )
@@ -1584,9 +1717,9 @@ def process_action(active, target, action_decision, state, llm, app=None):
         spell_skill = active.skills.get("Spellcasting", 5)
 
         attack_pool = mag + spell_skill
-        attack_hits, attack_hits_glitched, edge_spent = (
-            RulesEngine.roll_attack_with_edge(attack_pool, active)
-        )
+
+        wild_dice_count = state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0)) if state.environment.is_extream_mode else 0
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         # Defense
         if spell.type == "M":
@@ -1682,9 +1815,9 @@ def process_action(active, target, action_decision, state, llm, app=None):
         log = active.get_attribute("LOG", 3)
         cyber_skill = active.skills.get("Cybercombat", 5)
         attack_pool = log + cyber_skill
-        attack_hits, attack_hits_glitched, edge_spent = (
-            RulesEngine.roll_attack_with_edge(attack_pool, active)
-        )
+
+        wild_dice_count = state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0)) if state.environment.is_extream_mode else 0
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         def_pool = target.get_attribute("INT", 3) + target.matrix.firewall
         if target.null_bags > 0:
@@ -1979,7 +2112,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
             return action_text, result_text, edge_spent
 
         attack_pool = active.get_attribute("WIL", 3) + active.skills.get("Astral Combat", 5)
-        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         def_pool = target.get_attribute("INT", 3) + target.get_attribute("LOG", 3)
         def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
@@ -2031,7 +2168,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
         log = active.get_attribute("LOG", 3)
         computer_skill = active.skills.get("Computer", 4)
         attack_pool = log + computer_skill
-        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
 
         def_pool = target.get_attribute("LOG", 3) + target.skills.get("Hacking", 5)
         def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
@@ -2060,8 +2201,12 @@ def process_action(active, target, action_decision, state, llm, app=None):
         log = active.get_attribute("LOG", 3)
         hack_skill = active.skills.get("Hacking", 5)
         attack_pool = log + hack_skill
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
         attack_hits, attack_hits_glitched, edge_spent = (
-            RulesEngine.roll_attack_with_edge(attack_pool, active)
+            RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
         )
 
         def_pool = target.get_attribute("WIL", 3) + target.matrix.firewall
@@ -2402,6 +2547,11 @@ def main():
         action="store_true",
         help="Run a dedicated Host Run (Matrix) simulation mode",
     )
+    parser.add_argument(
+        "--extream",
+        action="store_true",
+        help="Enable SRX: eXtream Edition rules",
+    )
 
     args = parser.parse_args()
 
@@ -2453,7 +2603,7 @@ def main():
                 f,
             )
 
-    env = parse_scenario(args.scenario)
+    env = parse_scenario(args.scenario, is_extream_mode=args.extream)
     if args.host_run:
         env.is_host_run = True
     state = SimulationState(environment=env)
