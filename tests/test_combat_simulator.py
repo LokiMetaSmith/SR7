@@ -247,7 +247,7 @@ def test_spirit_vs_sprite_compiling():
     original_roll_attack = RulesEngine.roll_attack_with_edge
     original_roll_dice = RulesEngine.roll_dice
 
-    def mock_roll_attack(pool, c, wild_dice_count=0):
+    def mock_roll_attack(pool, c, wild_dice_count=0, **kwargs):
         return (6, False, False)
 
     def mock_roll_dice(pool, wild_dice_count=0):
@@ -387,7 +387,7 @@ def test_stealth_phase():
     original_roll = scripts.combat_simulator.RulesEngine.roll_dice
 
     # Mock roll to ensure hit
-    scripts.combat_simulator.RulesEngine.roll_dice = lambda pool, wild=0, combatant=None, state=None: (pool, False)
+    scripts.combat_simulator.RulesEngine.roll_dice = lambda pool, wild=0, combatant=None, state=None, **kwargs: (pool, False)
 
     try:
         # Mock LLM response to simulate standard attack
@@ -442,7 +442,7 @@ def test_gun_fu_flow_state():
     original_roll = scripts.combat_simulator.RulesEngine.roll_dice
 
     # Mock roll to ensure hit and damage
-    scripts.combat_simulator.RulesEngine.roll_dice = lambda pool, wild=0, combatant=None, state=None: (pool, False)
+    scripts.combat_simulator.RulesEngine.roll_dice = lambda pool, wild=0, combatant=None, state=None, **kwargs: (pool, False)
 
     try:
         import json

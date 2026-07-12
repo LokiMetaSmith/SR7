@@ -468,6 +468,9 @@ def main():
     parser.add_argument(
         "--iterations", type=int, default=1000, help="Number of simulations to run"
     )
+    parser.add_argument(
+        "--extream", action="store_true", help="Enable SRX: eXtream Edition rules"
+    )
 
     args = parser.parse_args()
 
@@ -477,7 +480,7 @@ def main():
         with open(args.scenario, "w") as f:
             json.dump({"description": "Empty Arena", "modifiers": {}}, f)
 
-    env = parse_scenario(args.scenario)
+    env = parse_scenario(args.scenario, is_extream_mode=args.extream)
 
     t1_bases = [load_combatant(p) for p in args.team1]
     t2_bases = [load_combatant(p) for p in args.team2]
