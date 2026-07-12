@@ -1,5 +1,9 @@
 # Shadowrun 7E Custom Tools & Campaigns
 
+<p align="center">
+  <img src="ui/images/logo_sr7.svg" alt="Shadowrun 7th Edition Logo" width="600"/>
+</p>
+
 This repository contains fan-made rules, tools, and campaign notes for a custom Shadowrun 7th Edition ruleset centered around the "Hollow Resonance" campaign setting in Zkazena.
 
 ## Features
@@ -13,6 +17,52 @@ This repository contains fan-made rules, tools, and campaign notes for a custom 
 * **Narrative & Novella Generation:** AI-assisted scripts to draft chapter-by-chapter novellas based on GM outlines and campaign lore.
 * **Narrative Module System:** Execute multi-stage campaign scenarios chaining multiple combat simulations together.
 * **Trade Simulator:** Haggling mechanics simulation for buying/selling gear using social dice pools.
+
+---
+
+## Active Campaigns
+
+This project includes multiple rich storytelling campaigns, each featuring distinct, high-quality, custom SVG identities:
+
+* **Hollow Resonance (Default Demo Campaign)**
+  <br/>
+  <img src="ui/images/logo_default.svg" alt="Hollow Resonance Logo" width="350"/>
+
+* **Cold Storage Campaign**
+  <br/>
+  <img src="ui/images/logo_cold_storage.svg" alt="Cold Storage Logo" width="350"/>
+
+* **Necessity Knows No Law Campaign**
+  <br/>
+  <img src="ui/images/logo_necessity.svg" alt="Necessity Knows No Law Logo" width="350"/>
+
+* **The Tar Creek Heist Campaign**
+  <br/>
+  <img src="ui/images/logo_tar_creek_heist.svg" alt="Tar Creek Heist Logo" width="350"/>
+
+---
+
+## New & Advanced Features
+
+### 1. Advanced Matrix Host Architecure Simulation (`--host-run`)
+This mode simulates complex nested host architectures within the combat simulator. Hackers must interface with HostNode structures, each with its own rating, security level, and connected systems, while evading the host's alert level and active security countermeasures (IC / ICE).
+
+### 2. Astral Combat Plane & Spirits
+The combat simulator now tracks plane states (`PHYSICAL`, `ASTRAL`, `MATRIX`) and enforces Astral Combat rules. Astral entities roll Initiative using `REA + INT + 1D6 + MAG` and target other Astral/Dual-Natured combatants using Willpower + Astral Combat, soaking with Willpower.
+
+### 3. Vehicle Chase Minigame UI
+The Pygame graphical interface features a dedicated high-speed chase visualization screen. It dynamically displays the relative distance with progress bars, hazard tracks, and lets player character cards perform active **RAM** and **EVADE** actions to escape or damage enemy vehicles.
+
+### 4. Economy & Black Market Trade UI (`TradeScreen`)
+Simulates intense haggling mechanics directly from the Overworld Map. GMs/Hosts can broadcast a live Negotiation test (Buyer's CHA + Negotiation + Street Cred vs Fixer's WIL + Negotiation + Difficulty) to compute custom nuyen pricing under a global campaign economy multiplier.
+
+### 5. Tactical State Checkpoints & Save/Load UI (`SaveLoadScreen`)
+Allows players and GMs to save real-time combatant statuses (including physical/stun damage, remaining Edge, nuyen balances, faction standings, and weapon/contact arrays) to JSON state files under the `campaign_state/` directory and restore checkpoints mid-game via an interactive State Manager screen.
+
+### 6. "Gun-Fu (Flow State)" and Stealth Phases
+Support for specialized pre-combat **Stealth and Infiltration Phases** to bypass nodes or hack ahead, plus technomancer abilities like **Flow State** (yielding bonus queued action opportunities upon downing a target).
+
+---
 
 ## Tools Included
 

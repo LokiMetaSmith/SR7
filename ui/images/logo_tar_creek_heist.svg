@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="tarGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9900" />
+      <stop offset="50%" stop-color="#ff0055" />
+      <stop offset="100%" stop-color="#330033" />
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0c0702" />
+      <stop offset="50%" stop-color="#1c1005" />
+      <stop offset="100%" stop-color="#0c0702" />
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" rx="10" fill="url(#darkBg)" stroke="url(#tarGlow)" stroke-width="2" />
+
+  <!-- Toxic Sludge ripples / Circuit lines -->
+  <g stroke="#3a200a" stroke-width="1.5" opacity="0.6">
+    <path d="M 0 80 C 150 50, 200 120, 350 90 C 500 60, 650 130, 800 100" fill="none" stroke-width="3"/>
+    <path d="M 0 120 C 100 140, 300 80, 450 110 C 600 140, 700 90, 800 130" fill="none"/>
+    <!-- Diagonal hazard lines -->
+    <line x1="700" y1="0" x2="800" y2="100" stroke="#ff9900" stroke-width="4" stroke-dasharray="10 10" />
+  </g>
+
+  <!-- Hazardous Bio/Toxic Emblem on Left -->
+  <g transform="translate(100, 100)" filter="url(#neonGlow)">
+    <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="url(#tarGlow)" stroke-width="3" />
+    <!-- Biohazard center nodes -->
+    <circle cx="0" cy="-10" r="8" fill="none" stroke="#ff0055" stroke-width="2" />
+    <circle cx="-8" cy="6" r="8" fill="none" stroke="#ff0055" stroke-width="2" />
+    <circle cx="8" cy="6" r="8" fill="none" stroke="#ff0055" stroke-width="2" />
+    <circle cx="0" cy="0" r="4" fill="#ff9900" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(180, 50)">
+    <!-- Campaign Label -->
+    <text x="0" y="20" font-family="'FuturaBT-Medium', 'Futura', sans-serif" font-size="14" font-weight="bold" fill="#ff9900" letter-spacing="4">SHADOWRUN 7E NARRATIVE CAMPAIGN</text>
+
+    <!-- Title -->
+    <text x="0" y="75" font-family="'Impact', 'Aachen-Bold', 'Arial Black', sans-serif" font-size="48" font-weight="900" fill="#ffffff" letter-spacing="2" filter="url(#neonGlow)">THE TAR CREEK HEIST</text>
+
+    <!-- Subtitle / Lore Hook -->
+    <text x="2" y="110" font-family="'FrizQuadrataStd', Georgia, serif" font-size="15" font-style="italic" fill="#ccaf90">"Nosferatu thralls, feral ghouls, and corporate dragons watch the sludge."</text>
+  </g>
+
+  <!-- Edge graphics -->
+  <line x1="10" y1="10" x2="10" y2="60" stroke="#ff9900" stroke-width="3" />
+  <line x1="10" y1="10" x2="60" y2="10" stroke="#ff9900" stroke-width="3" />
+</svg>
