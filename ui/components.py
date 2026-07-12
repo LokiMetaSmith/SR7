@@ -6,6 +6,31 @@ _IMAGE_CACHE = {}
 
 from scripts.combat_simulator import Combatant
 
+def load_authentic_font(font_filename: str, size: int, fallback_names: list, bold: bool = False) -> pygame.font.Font:
+    """
+    Attempts to load an authentic font from the local 'fonts/' directory.
+    If the file is not found or fails to load, attempts to load system fonts
+    using pygame.font.SysFont from a list of fallback names.
+    """
+    # 1. Try local file first
+    font_path = os.path.join("fonts", font_filename)
+    if os.path.exists(font_path):
+        try:
+            return pygame.font.Font(font_path, size)
+        except Exception:
+            pass # Fall back if loading file fails
+
+    # 2. Try the font by system family name if registered
+    name_no_ext = os.path.splitext(font_filename)[0].replace("-", " ")
+    for name in [name_no_ext] + fallback_names:
+        try:
+            return pygame.font.SysFont(name, size, bold=bold)
+        except Exception:
+            pass
+
+    # 3. Ultimate default
+    return pygame.font.SysFont("monospace" if "mono" in str(fallback_names).lower() else "sans", size, bold=bold)
+
 # Define some useful colors
 # Define cyberpunk/Shadowrun themed colors
 COLORS = {
@@ -35,9 +60,9 @@ class BaseCard:
         self.width = width
         self.height = height
         self.rect = pygame.Rect(0, 0, width, height)
-        self.font_title = pygame.font.SysFont("monospace", 20, bold=True)
-        self.font_body = pygame.font.SysFont("sans", 14)
-        self.font_small = pygame.font.SysFont("sans", 12)
+        self.font_title = load_authentic_font("Aachen-Bold.otf", 20, ["impact", "sans"], bold=True)
+        self.font_body = load_authentic_font("FrizQuadrataStd.otf", 14, ["times new roman", "georgia", "serif"])
+        self.font_small = load_authentic_font("FrizQuadrataStd.otf", 12, ["times new roman", "georgia", "serif"])
         self.is_gm = False
         self.expanded = False
         self.on_action = on_action
@@ -459,7 +484,7 @@ class ChatWindow:
         self.messages = []
         self.input_text = ""
         self.active = False
-        self.font = pygame.font.SysFont("monospace", 14)
+        self.font = load_authentic_font("AvantGarde-Book.ttf", 14, ["monospace", "courier"])
         self.on_submit = on_submit
         self.scroll_y = 0
 
@@ -555,7 +580,7 @@ class OverworldMap:
     def __init__(self, rect: pygame.Rect, on_node_click=None, nodes=None):
         self.rect = pygame.Rect(rect)
         self.on_node_click = on_node_click
-        self.font = pygame.font.SysFont("monospace", 14, bold=True)
+        self.font = load_authentic_font("FuturaBT-Medium.ttf", 14, ["futura", "century gothic", "sans"], bold=True)
         self.nodes = nodes if nodes is not None else []
 
     def handle_event(self, event: pygame.event.Event):
@@ -597,7 +622,7 @@ class MapGrid:
         self.legend = legend
         self.cell_size = 30
         self.margin = 10
-        self.font = pygame.font.SysFont("monospace", 14)
+        self.font = load_authentic_font("FuturaBT-Medium.ttf", 14, ["futura", "century gothic", "monospace"])
 
         self.blast_zones = [] # Store zones to highlight for AoE explosions
         self.active_zone_name = None # Used for LOS calculation
@@ -720,8 +745,8 @@ class VehicleChaseScreen:
         self.rect = pygame.Rect(rect)
         self.on_close = on_close
         self.on_action = on_action
-        self.font_title = pygame.font.SysFont("monospace", 24, bold=True)
-        self.font_body = pygame.font.SysFont("monospace", 16)
+        self.font_title = load_authentic_font("Aachen-Bold.otf", 24, ["impact", "sans"], bold=True)
+        self.font_body = load_authentic_font("FuturaBT-Medium.ttf", 16, ["futura", "century gothic", "sans"])
 
         self.close_rect = pygame.Rect(self.rect.right - 40, self.rect.y + 10, 30, 30)
 
@@ -797,8 +822,8 @@ class TradeScreen:
         self.rect = pygame.Rect(rect)
         self.on_close = on_close
         self.on_trade = on_trade
-        self.font_title = pygame.font.SysFont("monospace", 24, bold=True)
-        self.font_body = pygame.font.SysFont("monospace", 16)
+        self.font_title = load_authentic_font("Aachen-Bold.otf", 24, ["impact", "sans"], bold=True)
+        self.font_body = load_authentic_font("FuturaBT-Medium.ttf", 16, ["futura", "century gothic", "sans"])
 
         self.close_rect = pygame.Rect(self.rect.right - 40, self.rect.y + 10, 30, 30)
         self.trade_rect = pygame.Rect(self.rect.centerx - 75, self.rect.bottom - 60, 150, 40)
@@ -866,8 +891,8 @@ import json
 class SaveLoadScreen:
     def __init__(self, rect: pygame.Rect):
         self.rect = pygame.Rect(rect)
-        self.font_title = pygame.font.SysFont("monospace", 24, bold=True)
-        self.font_body = pygame.font.SysFont("monospace", 14)
+        self.font_title = load_authentic_font("Aachen-Bold.otf", 24, ["impact", "sans"], bold=True)
+        self.font_body = load_authentic_font("FuturaBT-Medium.ttf", 14, ["futura", "century gothic", "sans"])
         self.close_rect = pygame.Rect(self.rect.right - 40, self.rect.y + 10, 30, 30)
         self.load_rect = pygame.Rect(self.rect.centerx - 75, self.rect.bottom - 60, 150, 40)
         self.state_data = []

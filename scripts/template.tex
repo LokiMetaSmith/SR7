@@ -481,9 +481,35 @@ $endif$
 % Typography & Layout
 \usepackage[margin=0.75in]{geometry}
 \usepackage{multicol}
-\usepackage{helvet} % Sans-serif clean font
-\renewcommand{\familydefault}{\sfdefault}
 \usepackage{microtype}
+
+\ifPDFTeX
+  % If using pdflatex, we want a classic Serif body font (to emulate Friz Quadrata)
+  % and Helvetica/Sans-serif for headings.
+  \usepackage{charter} % Beautiful classic serif body font that resembles Friz Quadrata Std
+  \usepackage{helvet}
+  % Maintain normal serif body (Charter) rather than overriding familydefault to sfdefault
+  \newcommand{\bodyfont}{\rmfamily}
+  \newcommand{\headingfont}{\sffamily\bfseries}
+  \newcommand{\subheadingfont}{\sffamily\bfseries}
+  \newcommand{\commentfont}{\sffamily}
+  \newcommand{\commentfontbold}{\sffamily\bfseries}
+\else
+  % XeLaTeX / LuaLaTeX: We load the downloaded authentic fonts directly via fontspec
+  \usepackage{fontspec}
+  \setmainfont[
+    Path=fonts/,
+    Extension=.otf,
+    UprightFont=FrizQuadrataStd,
+    BoldFont=FrizQuadrataStd,
+    ItalicFont=FrizQuadrataStd
+  ]{FrizQuadrataStd}
+  \newcommand{\bodyfont}{\rmfamily}
+  \newfontfamily\headingfont[Path=fonts/,Extension=.otf]{Aachen-Bold}
+  \newfontfamily\subheadingfont[Path=fonts/,Extension=.ttf]{FuturaBT-Medium}
+  \newfontfamily\commentfont[Path=fonts/,Extension=.ttf]{AvantGarde-Book}
+  \newfontfamily\commentfontbold[Path=fonts/,Extension=.ttf]{AvantGarde-BoldObl}
+\fi
 
 % Structural Spacing & Formatting
 \usepackage{parskip}   % Remove paragraph indents, add vertical space
@@ -491,7 +517,7 @@ $endif$
 \setlist{nosep}        % Make all lists compact by default
 
 % Game Term Styling (No math-mode for crunch)
-\newcommand{\gameterm}[1]{\textbf{\sffamily #1}}
+\newcommand{\gameterm}[1]{\bodyfont\textbf{#1}}
 
 % Colors
 \definecolor{matrixblue}{HTML}{00CCFF} % Neon blue for HUD elements
@@ -529,19 +555,19 @@ $endif$
 % Chapter Headings (Tight Spacing)
 \usepackage{titlesec}
 \titleformat{\section}[block]
-  {\normalfont\LARGE\bfseries\color{matrixblue}\MakeUppercase}
+  {\normalfont\LARGE\headingfont\color{matrixblue}\MakeUppercase}
   {\thesection}{1em}{}
   [\vspace{0.5ex}\color{matrixblue}\titlerule\vspace{0.25ex}\color{sraccent}\titlerule]
 \titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{1ex plus .2ex}
 
 \titleformat{\subsection}[block]
-  {\normalfont\Large\bfseries\color{srdark}\MakeUppercase}
+  {\normalfont\Large\subheadingfont\color{srdark}\MakeUppercase}
   {\thesubsection}{1em}{}
   [\color{matrixblue}\titlerule]
 \titlespacing*{\subsection}{0pt}{1.2ex plus 1ex minus .2ex}{0.8ex plus .2ex}
 
 \titleformat{\subsubsection}[block]
-  {\normalfont\large\bfseries\color{srdark}\MakeUppercase}
+  {\normalfont\large\subheadingfont\color{srdark}\MakeUppercase}
   {\thesubsubsection}{1em}{}
   [\color{matrixblue}\titlerule]
 \titlespacing*{\subsubsection}{0pt}{1ex plus 1ex minus .2ex}{0.5ex plus .2ex}
@@ -562,7 +588,8 @@ $endif$
     boxrule=0.5pt,
     leftrule=4pt, % Thick accent line on the left
     arc=0mm,      % Sharp, digital corners
-    fonttitle=\bfseries\ttfamily\small,
+    fonttitle=\bfseries\commentfontbold\small,
+    fontupper=\commentfont,
     title={>> USER: #2 <<},
     attach title to upper,
     after title={\par\vspace{0.5em}\hrule\vspace{0.5em}},

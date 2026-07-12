@@ -1,7 +1,7 @@
 import pygame
 import sys
 from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, load_combatant
-from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap, TradeScreen, SaveLoadScreen, VehicleChaseScreen
+from ui.components import PlayerCard, GMCard, ChatWindow, MapGrid, OverworldMap, TradeScreen, SaveLoadScreen, VehicleChaseScreen, load_authentic_font
 from scripts.combat_simulator import simulate_trade
 from ui.network import NetworkManager
 
@@ -26,6 +26,8 @@ class App:
         self.save_load_screen = SaveLoadScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400))
         self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=self.set_pending_action)
 
+        self.font_title = load_authentic_font("Aachen-Bold.otf", 18, ["impact", "sans"], bold=True)
+        self.font_sm = load_authentic_font("FuturaBT-Medium.ttf", 14, ["futura", "century gothic", "sans"], bold=True)
 
         self.pending_action = None
         self.pending_chat = None
@@ -424,7 +426,7 @@ class App:
         for y in range(0, self.height, 40):
             pygame.draw.line(self.screen, (20, 24, 30), (0, y), (self.width, y))
 
-        font = pygame.font.SysFont("monospace", 18, bold=True)
+        font = self.font_title
         # Title text
         title_surf = font.render("SHADOWRUN 7E TACTICAL SIMULATOR", True, (0, 255, 204))
         self.screen.blit(title_surf, (50, 20))
@@ -472,7 +474,7 @@ class App:
             # Tactical state manager button
             pygame.draw.rect(self.screen, (40, 45, 55), (250, 40, 160, 35), border_radius=4)
             pygame.draw.rect(self.screen, (0, 255, 204), (250, 40, 160, 35), 2, border_radius=4)
-            font_sm = pygame.font.SysFont("monospace", 14, bold=True)
+            font_sm = self.font_sm
             sm_text = font_sm.render("STATE MANAGER", True, (230, 230, 235))
             self.screen.blit(sm_text, (270, 50))
 
