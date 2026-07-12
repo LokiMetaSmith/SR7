@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="defaultGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ffcc" />
+      <stop offset="100%" stop-color="#ff00ff" />
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0c0f" />
+      <stop offset="50%" stop-color="#15191f" />
+      <stop offset="100%" stop-color="#0a0c0f" />
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" rx="10" fill="url(#darkBg)" stroke="url(#defaultGlow)" stroke-width="2" />
+
+  <!-- Network Nodes / Connections Grid -->
+  <g stroke="#16273b" stroke-width="1.5" opacity="0.6">
+    <line x1="100" y1="50" x2="250" y2="150" />
+    <line x1="250" y1="150" x2="450" y2="100" />
+    <line x1="450" y1="100" x2="300" y2="180" />
+    <line x1="300" y1="180" x2="100" y2="50" />
+    <circle cx="100" cy="50" r="4" fill="#00ffcc" />
+    <circle cx="250" cy="150" r="4" fill="#00ffcc" />
+    <circle cx="450" cy="100" r="4" fill="#ff00ff" />
+    <circle cx="300" cy="180" r="4" fill="#ff00ff" />
+  </g>
+
+  <!-- Hexagon Target Reticle on Left -->
+  <g transform="translate(100, 100)" filter="url(#neonGlow)">
+    <polygon points="0,-35 30,-17.5 30,17.5 0,35 -30,17.5 -30,-17.5" fill="none" stroke="url(#defaultGlow)" stroke-width="3.5" />
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="5 3" />
+    <cross x="-5" y="-5" width="10" height="10" />
+    <line x1="-10" y1="0" x2="10" y2="0" stroke="#00ffcc" stroke-width="2" />
+    <line x1="0" y1="-10" x2="0" y2="10" stroke="#00ffcc" stroke-width="2" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(180, 50)">
+    <!-- Campaign Label -->
+    <text x="0" y="20" font-family="'FuturaBT-Medium', 'Futura', sans-serif" font-size="14" font-weight="bold" fill="#00ffcc" letter-spacing="4">SHADOWRUN 7E NARRATIVE CAMPAIGN</text>
+
+    <!-- Title -->
+    <text x="0" y="75" font-family="'Impact', 'Aachen-Bold', 'Arial Black', sans-serif" font-size="44" font-weight="900" fill="#ffffff" letter-spacing="1.5" filter="url(#neonGlow)">HOLLOW RESONANCE</text>
+
+    <!-- Subtitle / Lore Hook -->
+    <text x="2" y="110" font-family="'FrizQuadrataStd', Georgia, serif" font-size="15" font-style="italic" fill="#a0ccd4">"Multi-stage tactical scenarios in the Zkazena Containment Zone."</text>
+  </g>
+
+  <!-- Corner Graphic -->
+  <path d="M 780 10 L 790 10 L 790 20" fill="none" stroke="#ff00ff" stroke-width="2" />
+</svg>

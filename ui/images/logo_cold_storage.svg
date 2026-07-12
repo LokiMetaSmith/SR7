@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="coldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="100%" stop-color="#3a00ff" />
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#070c14" />
+      <stop offset="50%" stop-color="#0f1926" />
+      <stop offset="100%" stop-color="#070c14" />
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" rx="10" fill="url(#darkBg)" stroke="url(#coldGlow)" stroke-width="2" />
+
+  <!-- Frost / Circuit pattern -->
+  <g stroke="#10253d" stroke-width="1.5" opacity="0.6">
+    <path d="M 0 50 L 150 50 L 180 80 L 300 80 L 320 60 L 500 60 L 530 90 L 800 90" fill="none"/>
+    <path d="M 0 150 L 250 150 L 280 120 L 450 120 L 480 150 L 800 150" fill="none"/>
+    <line x1="150" y1="50" x2="150" y2="200" />
+    <line x1="450" y1="0" x2="450" y2="120" />
+  </g>
+
+  <!-- Ice Crystal / Server Rack Hexagon Graphic on Left -->
+  <g transform="translate(100, 100)" filter="url(#neonGlow)">
+    <polygon points="0,-45 39,-22.5 39,22.5 0,45 -39,22.5 -39,-22.5" fill="none" stroke="url(#coldGlow)" stroke-width="3" />
+    <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7" />
+    <!-- Center server lines -->
+    <line x1="-15" y1="-10" x2="15" y2="-10" stroke="#00f3ff" stroke-width="3" />
+    <line x1="-15" y1="0" x2="15" y2="0" stroke="#00f3ff" stroke-width="3" />
+    <line x1="-15" y1="10" x2="15" y2="10" stroke="#00f3ff" stroke-width="3" />
+    <!-- Blinking status dot -->
+    <circle cx="20" cy="0" r="3" fill="#ff0055" />
+  </g>
+
+  <!-- Title & Typography -->
+  <g transform="translate(200, 50)">
+    <!-- Campaign Label -->
+    <text x="0" y="20" font-family="'FuturaBT-Medium', 'Futura', sans-serif" font-size="14" font-weight="bold" fill="#00f3ff" letter-spacing="4">SHADOWRUN 7E NARRATIVE CAMPAIGN</text>
+
+    <!-- Title -->
+    <text x="0" y="75" font-family="'Impact', 'Aachen-Bold', 'Arial Black', sans-serif" font-size="48" font-weight="900" fill="#ffffff" letter-spacing="2" filter="url(#neonGlow)">COLD STORAGE</text>
+
+    <!-- Subtitle / Lore Hook -->
+    <text x="2" y="110" font-family="'FrizQuadrataStd', Georgia, serif" font-size="15" font-style="italic" fill="#a0b5cc">"Revival protocols initiated. The arcade hums with phantom neon."</text>
+  </g>
+
+  <!-- Corner Tech Accents -->
+  <path d="M 790 10 L 790 40 L 760 10 Z" fill="#00f3ff" opacity="0.8" />
+  <path d="M 10 190 L 10 160 L 40 190 Z" fill="#00f3ff" opacity="0.8" />
+</svg>

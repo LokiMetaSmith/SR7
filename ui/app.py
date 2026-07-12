@@ -29,6 +29,27 @@ class App:
         self.font_title = load_authentic_font("Aachen-Bold.otf", 18, ["impact", "sans"], bold=True)
         self.font_sm = load_authentic_font("FuturaBT-Medium.ttf", 14, ["futura", "century gothic", "sans"], bold=True)
 
+        # Load campaign & SR7 logos
+        import os
+        self.logos = {}
+        for logo_name, path in [
+            ("sr7", "ui/images/logo_sr7.svg"),
+            ("default", "ui/images/logo_default.svg"),
+            ("cold_storage", "ui/images/logo_cold_storage.svg"),
+            ("necessity", "ui/images/logo_necessity.svg"),
+            ("tar_creek_heist", "ui/images/logo_tar_creek_heist.svg"),
+        ]:
+            if os.path.exists(path):
+                try:
+                    img = pygame.image.load(path)
+                    # We will dynamically rescale logos during draw or cache scaled versions
+                    self.logos[logo_name] = img
+                except Exception as e:
+                    print(f"Error loading logo {logo_name} at {path}: {e}")
+
+        # Track the active campaign key for logo display
+        self.active_campaign_key = None
+
         self.pending_action = None
         self.pending_chat = None
 
@@ -91,6 +112,19 @@ class App:
         import os
         import random
         campaign_nodes = []
+
+        # Determine active campaign key from filename
+        if "default" in campaign_file.lower():
+            self.active_campaign_key = "default"
+        elif "cold_storage" in campaign_file.lower():
+            self.active_campaign_key = "cold_storage"
+        elif "necessity" in campaign_file.lower():
+            self.active_campaign_key = "necessity"
+        elif "tar_creek_heist" in campaign_file.lower():
+            self.active_campaign_key = "tar_creek_heist"
+        else:
+            self.active_campaign_key = "default"
+
         try:
             campaign_path = os.path.join(os.path.dirname(__file__), "..", campaign_file)
             if os.path.exists(campaign_path):
@@ -367,16 +401,26 @@ class App:
                             self.load_campaign("campaigns/cold_storage/campaign.json")
                         elif 290 <= my <= 340:
                             self.load_campaign("campaigns/necessity/campaign.json")
+                        elif 360 <= my <= 410:
+                            self.load_campaign("campaigns/tar_creek_heist/campaign.json")
 
             elif self.in_overworld:
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                     mx, my = event.pos
+                    # OPEN MARKET button is on the far right
                     if self.width - 220 <= mx <= self.width - 20 and 20 <= my <= 70:
                         self.in_trade_screen = True
                         return
+                    # STATE MANAGER button
                     if self.width - 440 <= mx <= self.width - 240 and 20 <= my <= 70:
                         self.in_save_load_screen = True
                         self.save_load_screen.refresh_states()
+                        return
+                    # CAMPAIGN SELECT back button in top right of map grid area
+                    if 50 <= mx <= 200 and self.height - 70 <= my <= self.height - 30:
+                        self.in_campaign_select = True
+                        self.in_overworld = False
+                        self.active_campaign_key = None
                         return
                 if self.overworld_map:
                     self.overworld_map.handle_event(event)
@@ -427,9 +471,15 @@ class App:
             pygame.draw.line(self.screen, (20, 24, 30), (0, y), (self.width, y))
 
         font = self.font_title
-        # Title text
-        title_surf = font.render("SHADOWRUN 7E TACTICAL SIMULATOR", True, (0, 255, 204))
-        self.screen.blit(title_surf, (50, 20))
+        # Title text or Main Logo
+        if "sr7" in self.logos:
+            logo_img = self.logos["sr7"]
+            # Smoothscale the main logo to width 240, height 60
+            scaled_logo = pygame.transform.smoothscale(logo_img, (240, 60))
+            self.screen.blit(scaled_logo, (50, 15))
+        else:
+            title_surf = font.render("SHADOWRUN 7E TACTICAL SIMULATOR", True, (0, 255, 204))
+            self.screen.blit(title_surf, (50, 20))
 
         if self.in_campaign_select:
             # Draw Campaign Select Screen
@@ -451,6 +501,11 @@ class App:
             nec_text = font.render("Necessity Knows No Law", True, (230, 230, 235))
             self.screen.blit(nec_text, (120, 305))
 
+            # Button 4: Tar Creek Heist
+            pygame.draw.rect(self.screen, (40, 45, 55), (100, 360, 300, 50), border_radius=4)
+            tar_text = font.render("The Tar Creek Heist", True, (230, 230, 235))
+            self.screen.blit(tar_text, (120, 375))
+
 
 
         elif self.in_overworld:
@@ -465,6 +520,18 @@ class App:
             pygame.draw.rect(self.screen, (0, 255, 204), (self.width - 440, 20, 200, 50), 2, border_radius=4)
             sm_text = font.render("State Manager", True, (230, 230, 235))
             self.screen.blit(sm_text, (self.width - 410, 35))
+
+            # Back to Campaign Selection Button
+            pygame.draw.rect(self.screen, (40, 45, 55), (50, self.height - 70, 150, 40), border_radius=4)
+            pygame.draw.rect(self.screen, (255, 0, 128), (50, self.height - 70, 150, 40), 1, border_radius=4)
+            back_text = self.font_sm.render("< SELECT CAMPAIGN", True, (230, 230, 235))
+            self.screen.blit(back_text, (60, self.height - 60))
+
+            # Display the active campaign logo to the right of the overworld map or bottom sidebar
+            if self.active_campaign_key in self.logos:
+                logo_img = self.logos[self.active_campaign_key]
+                scaled_logo = pygame.transform.smoothscale(logo_img, (300, 75))
+                self.screen.blit(scaled_logo, (50, 520))
         else:
             if self.state:
                 turn_text = f"Turn: {self.state.turn}"
