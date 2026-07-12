@@ -163,6 +163,7 @@ All characters build and advance using **Karma**.
   * [Balancing Baseline Formulas](#balancing-baseline-formulas)
     * [Metatype Karma Cost Formula](#metatype-karma-cost-formula)
     * [Weapon Nuyen Cost Formula](#weapon-nuyen-cost-formula)
+  * [Shadowrun Typography & Design Heritage](#shadowrun-typography--design-heritage)
 
 **Dice & Tests**
 
@@ -4210,3 +4211,19 @@ The battlefield itself is a weapon.
 *   **Background Count / Noise:** Dense AR noise or magical voids impose a flat penalty to Matrix/Magic actions (e.g., -1 to -4) and force the use of **Wild Dice** for those tests.
 *   **Superior Positioning:** Taking the "High Ground" or flanking an opponent grants a flat **+1 Initiative Die** for the duration of the encounter, reflecting the tactical advantage.
 *   **Surprise:** If a combatant successfully ambushes a target, they receive a **+2 bonus to their Base Initiative Score** for the first Combat Turn.
+
+### Shadowrun Typography & Design Heritage
+The aesthetic of Shadowrun is historically bound to its typography. For over thirty years, specific commercial typefaces have established the authentic presentation of Seattle, Neo-Tokyo, and the ruined company towns of the 6th World. Understanding these choices allows GMs and designers to preserve the visual legacy of the classic publications.
+
+#### Ernst Friz and the Body Text Legacy
+Ernst Friz designed the **Friz Quadrata** typeface in 1966. Characterized by sharp, triangular glyph terminals and high-contrast, open counters, this glyph structure served as the primary body text for the first, second, and third editions. The typeface also formed the basis of the iconic original game logo.
+
+Layout artists working on the first edition in 1989 on early Apple Macintosh systems lacked access to true italic cuts of the font. Consequently, they utilized faux slanted variations for quotes and narratives. This technical limitation resulted in straight quote marks and a staccato appearance that became a defining stylistic tradition of subsequent rulebooks.
+
+#### Supplemental and Decorative Typefaces
+As the product line expanded, designers introduced distinct display and decorative typefaces to differentiate supplement catalogs, in-universe BBS conversations, and corporate handouts:
+*   **Tribe (1997):** Designed by Margo Chase, this jagged, organic-futuristic display typeface decorated the covers, spines, and page headers of later third-edition sourcebooks, such as *New Seattle*.
+*   **Badloc (1989):** Designed by Grant Hutchinson, this high-contrast inline display font was used for chapter titles and drop capitals. Its greater-than symbol `>` served as the circled arrow icon that prefixed BBS user commentary throughout the books.
+*   **Futura and Futura Condensed:** These geometric sans fonts were used extensively for equipment catalogs (like the *Street Samurai Catalog*), map labels, and character statistics blocks.
+*   **ITC Avant Garde Gothic:** This clean sans-serif face was selected for in-universe fiction sections and user comments on the JackPoint grid, establishing a visual separation between core rules and fictional hacker commentary.
+*   **Aachen and Helvetica Compressed:** These heavy slab serif and ultra-compressed sans-serif typefaces were used on covers and in-universe product advertisements.
