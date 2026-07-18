@@ -3,8 +3,8 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import pytest
 import pygame
-from scripts.combat_simulator import Combatant, MatrixAttributes, load_combatant
-from ui.components import PlayerCard, GMCard
+from scripts.combat_simulator import Combatant, MatrixAttributes, load_combatant, SimulationState, GameEnvironment
+from ui.components import PlayerCard, GMCard, MapGrid, VehicleChaseScreen
 
 import os
 
@@ -14,6 +14,7 @@ def setup_pygame():
     os.environ["SDL_VIDEODRIVER"] = "dummy"
     # Initialize pygame for headless testing
     pygame.init()
+    pygame.font.init()
     # Need to set a video mode for some font rendering or surface creation
     pygame.display.set_mode((100, 100), pygame.HIDDEN)
     yield
@@ -72,6 +73,7 @@ def test_vehicle_chase_screen():
     import pygame
     from ui.components import VehicleChaseScreen
     pygame.init()
+    pygame.font.init()
 
     # Initialize the screen just to test creation
     rect = pygame.Rect(0, 0, 500, 400)
@@ -87,3 +89,61 @@ def test_vehicle_chase_screen():
     assert ram_rect.collidepoint(ram_rect.center), "Ram rect should be interactive"
 
     pygame.quit()
+
+def test_player_card_stealth_ui():
+    pygame.font.init()
+    c = Combatant(name="Stealthy Guy", team=1, matrix=MatrixAttributes())
+    card = PlayerCard(c)
+    surface = pygame.Surface((800, 600))
+
+    # Check regular draw (combat actions)
+    card.draw(surface, 0, 0, is_stealth=False)
+
+    # Check stealth draw
+    card.draw(surface, 0, 0, is_stealth=True)
+
+
+def test_mapgrid_los_cover_ui():
+    pygame.font.init()
+    layout_ascii = [
+        "###",
+        "#.O",
+        "###"
+    ]
+    legend = {"#": "Wall (Heavy Cover)", "O": "Pillar (Medium Cover)", ".": "Open"}
+    grid = MapGrid(layout_ascii, legend)
+
+    env = GameEnvironment(
+        name="Test",
+        description="A test environment.",
+        modifiers=[],
+        layout_ascii=layout_ascii,
+        legend=legend
+    )
+    state = SimulationState(environment=env)
+    state.turn = 1
+    state.combatants = []
+
+    surface = pygame.Surface((800, 600))
+    # It should not crash while drawing with cover
+    grid.draw(surface, 0, 0)
+
+
+def test_vehicle_chase_ui():
+    pygame.font.init()
+    rect = pygame.Rect(0, 0, 500, 400)
+    action_called = False
+    def action_callback(action):
+        nonlocal action_called
+        action_called = True
+
+    screen = VehicleChaseScreen(rect, on_close=lambda: None, on_action=action_callback)
+    surface = pygame.Surface((800, 600))
+    screen.draw(surface)
+
+    # Simulate clicking
+    click_event = pygame.event.Event(
+        pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": screen.ram_rect.center}
+    )
+    screen.handle_event(click_event)
+    assert action_called is True
