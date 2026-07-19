@@ -1049,7 +1049,7 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
     return c
 
 
-def parse_scenario(file_path: str) -> GameEnvironment:
+def parse_scenario(file_path: str, is_extream_mode: bool = False) -> GameEnvironment:
     if file_path.endswith(".json"):
         with open(file_path, "r") as f:
             data = json.load(f)
