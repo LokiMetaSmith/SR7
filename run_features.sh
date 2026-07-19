@@ -7,6 +7,44 @@ elif [ -f "venv/Scripts/activate" ]; then
     source venv/Scripts/activate
 fi
 
+select_combatants() {
+    local prompt_msg="$1"
+    echo "--- $prompt_msg ---" >&2
+
+    # Gather all .chum5 and .md files in npc_templates/ and Player Handouts/
+    local files=()
+    while IFS=  read -r -d $'\0'; do
+        files+=("$REPLY")
+    done < <(find "npc_templates" "Player Handouts" -type f \( -name "*.chum5" -o -name "*.md" \) 2>/dev/null | sort | tr '\n' '\0')
+
+    if [ ${#files[@]} -eq 0 ]; then
+        echo "No combatants found." >&2
+        echo "" >&2
+        return
+    fi
+
+    for i in "${!files[@]}"; do
+        echo "$((i+1))) ${files[$i]}" >&2
+    done
+    echo "" >&2
+    read -p "Enter numbers separated by spaces (or press Enter for default): " selections >&2
+
+    if [[ -z "${selections// /}" ]]; then
+        return
+    else
+        local selected_paths=""
+        for sel in $selections; do
+            if [[ "$sel" =~ ^[0-9]+$ ]] && [ "$sel" -ge 1 ] && [ "$sel" -le "${#files[@]}" ]; then
+                local idx=$((sel-1))
+                selected_paths="$selected_paths \"${files[$idx]}\""
+            else
+                echo "Warning: Invalid selection '$sel', ignoring." >&2
+            fi
+        done
+        echo "$selected_paths" | sed 's/^ *//;s/ *$//'
+    fi
+}
+
 while true; do
     echo "=============================================="
     echo "    Shadowrun 7E Custom Tools - Main Menu     "
@@ -26,28 +64,56 @@ while true; do
 
     case $option in
         1)
+            team1=$(select_combatants "Select combatant(s) for Team 1")
+            team1=${team1:-"npc_templates/Cryptolock.chum5"}
+            team2=$(select_combatants "Select combatant(s) for Team 2")
+            team2=${team2:-"npc_templates/god_antibody.chum5"}
             echo "Running Combat Simulator (CLI)..."
-            python scripts/combat_simulator.py --team1 npc_templates/Cryptolock.chum5 --team2 npc_templates/god_antibody.chum5 --dry-run
+            eval python scripts/combat_simulator.py --team1 $team1 --team2 $team2 --dry-run
             ;;
         2)
+            team1=$(select_combatants "Select combatant(s) for Team 1")
+            team1=${team1:-"npc_templates/Cryptolock.chum5"}
+            team2=$(select_combatants "Select combatant(s) for Team 2")
+            team2=${team2:-"npc_templates/god_antibody.chum5"}
             echo "Running Combat Simulator (Pygame UI)..."
-            python scripts/combat_simulator.py --team1 npc_templates/Cryptolock.chum5 --team2 npc_templates/god_antibody.chum5 --ui --interactive
+            eval python scripts/combat_simulator.py --team1 $team1 --team2 $team2 --ui --interactive
             ;;
         3)
+            team1=$(select_combatants "Select combatants for Team 1 (defaults to Cryptolock and Kyber)")
+            team1=${team1:-"npc_templates/Cryptolock.chum5" "npc_templates/Kyber.chum5"}
+            team2=$(select_combatants "Select combatants for Team 2 (defaults to god_antibody and wuxing_strike_team)")
+            team2=${team2:-"npc_templates/god_antibody.chum5" "npc_templates/wuxing_null_sec_strike_team.chum5"}
             echo "Running Combat Simulator (Squad Combat UI)..."
-            python scripts/combat_simulator.py --team1 npc_templates/Cryptolock.chum5 npc_templates/Kyber.chum5 --team2 npc_templates/god_antibody.chum5 npc_templates/wuxing_null_sec_strike_team.chum5 --ui --interactive
+            eval python scripts/combat_simulator.py --team1 $team1 --team2 $team2 --ui --interactive
             ;;
         4)
+            team1=$(select_combatants "Select combatants for Team 1 (defaults to Cryptolock and Kyber)")
+            team1=${team1:-"npc_templates/Cryptolock.chum5" "npc_templates/Kyber.chum5"}
             echo "Running Module Runner (Hollow Resonance Demo)..."
-            python scripts/run_module.py --module campaigns/default/modules/hollow_resonance_part1.json --team1 npc_templates/Cryptolock.chum5 npc_templates/Kyber.chum5 --ui --interactive
+            eval python scripts/run_module.py --module campaigns/default/modules/hollow_resonance_part1.json --team1 $team1 --ui --interactive
             ;;
         5)
+            buyer=$(select_combatants "Select buyer for Trade Simulator")
+            buyer=${buyer:-"npc_templates/Kyber.chum5"}
+            read -p "Enter Item Name [Ares Predator]: " item_name
+            item_name=${item_name:-Ares Predator}
+            read -p "Enter Base Value [350]: " base_val
+            base_val=${base_val:-350}
+            read -p "Enter Fixer Difficulty (1-6) [1]: " diff
+            diff=${diff:-1}
             echo "Running Trade Simulator Demo..."
-            python scripts/combat_simulator.py --trade-simulator "npc_templates/Kyber.chum5:Ares Predator:350:1"
+            # Note: The Trade Simulator strictly takes one buyer string, we'll just use the first if multiple are selected.
+            buyer_first=$(echo "$buyer" | awk -F '"' '{if (NF>1) print $2; else print $1}')
+            python scripts/combat_simulator.py --trade-simulator "${buyer_first}:$item_name:$base_val:$diff"
             ;;
         6)
+            team1=$(select_combatants "Select combatant(s) for Team 1")
+            team1=${team1:-"npc_templates/Cryptolock.chum5"}
+            team2=$(select_combatants "Select combatant(s) for Team 2")
+            team2=${team2:-"npc_templates/god_antibody.chum5"}
             echo "Running Combat Analyzer..."
-            python scripts/combat_analyzer.py --team1 npc_templates/Cryptolock.chum5 --team2 npc_templates/god_antibody.chum5 --iterations 10
+            eval python scripts/combat_analyzer.py --team1 $team1 --team2 $team2 --iterations 10
             ;;
         7)
             echo "Running NPC Tournament..."
