@@ -481,7 +481,7 @@ def main():
     output_filepath = args.output if args.output else input_filepath
 
     try:
-        with open(input_filepath, "r") as f:
+        with open(input_filepath, "r", encoding="utf-8") as f:
             text = f.read()
     except FileNotFoundError:
         print(f"Error: File '{input_filepath}' not found.")
@@ -503,7 +503,7 @@ def main():
         return
 
     try:
-        with open(output_filepath, "w") as f:
+        with open(output_filepath, "w", encoding="utf-8") as f:
             f.write(text)
         print(
             f"Balancing complete! The markdown file '{output_filepath}' has been updated."
