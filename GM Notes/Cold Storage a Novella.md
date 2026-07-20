@@ -280,7 +280,7 @@ Logi felt the javelin of ice before they saw it. It punched through their chest,
 
 **[INSERT COIN]**
 
-The neon green text burned into Logi's retinas. The howling wind was replaced by the low-frequency thrum of cooling fans and the chirping of 8-bit soundtracks. The air smelled of ozone and stale, buttered popcorn. Logi stood in the center of a бесконечный (infinite) arcade.
+The neon green text burned into Logi's retinas. The howling wind was replaced by the low-frequency thrum of cooling fans and the chirping of 8-bit soundtracks. The air smelled of ozone and stale, buttered popcorn. Logi stood in the center of an infinite arcade.
 
 They looked at their hand. It wasn't metal or flesh; it was a cluster of glowing pixels. In their palm sat a heavy, silver quarter.
 
