@@ -86,17 +86,55 @@ Logi stepped forward, their movements slightly mechanical, calculating the optim
 
 Sam waved a hand dismissively. "The cartels are going to let this stunt slide, but some of the more notable among you have fresh bounties. So in short: come with me if you want to live. Always wanted to say that!"
 
-The world around Sam felt gray, leached of color. The reality of the alley stretched and warped. It felt like the mother of all BTLs—Better Than Life chips—inviting them to look closer, to lose themselves in the unnaturally sharp details of his tailored suit.
+The world around Sam felt gray, leached of color. The reality of the alley stretched and warped, inviting them to look closer, to lose themselves in the unnaturally sharp details of his tailored suit. Sam gestured toward a narrow, glowing corridor that simply had not existed a moment prior.
 
-Sam led them down a narrow corridor that didn't exist a moment ago, arriving at an unmarked door. In Augmented Reality, a neon sign flickered: *Schrödinger's*. A cleverly hidden AR panel read simply, *Push Me*.
+Chow planted his boots firmly on the damp asphalt. He crossed his massive cybernetic arms, the servos whining faintly in the quiet alley. "I do not walk into magic tricks," Chow rumbled. "You explain what that hallway is, and why a glowing suit wants to save our skins, or we take our chances with the cartels."
+
+Logi's optics whirred, scanning the spatial anomaly. "Spatial distortion detected. Unregistered Matrix overlay blending with physical space. Explain your parameters, Sam. We are not blind executables."
+
+Sam sighed, his smile faltering just a fraction. "It is a localized augmented reality pocket. A back door. I want you alive because you are carrying NeoNET's prototype, and I happen to represent a party interested in making sure NeoNET does not get it back. The bounties on your heads are live. You have ninety seconds before High Threat Response zeroes in on this alley."
+
+Red glanced at the glowing corridor, then at the flashing warning indicators on her internal commlink. The HTR choppers were already audible in the distance. She nodded curtly to the team.
+
+They moved quickly through the corridor, arriving at an unmarked door. In Augmented Reality, a neon sign flickered: *Schrödinger's*. A cleverly hidden AR panel read simply, *Push Me*.
 
 Inside, the club was a sensory overload. A group of patrons turned their heads in perfect, unsettling unison. "Good Evening!" they chorused, voices perfectly pitched.
 
 At a corner table sat Ennis. A rumpled middle-aged man with a cane and an unruly head of red and white hair, he wore steampunk-style AR glasses and tapped away at a physical commlink. He was a Spirit of Man, manifested and heavily invested in the digital children of the Sixth World.
 
-Ennis pushed a shiny black cylinder across the table. It had a heavy screw top and a wax seal stamped with a barcode.
+Ennis pushed a shiny black cylinder across the table. It had a heavy screw top and a wax seal stamped with a barcode. It looked innocuous, but sitting beside the NeoNET prototype rig they had stolen, the cylinder felt incredibly heavy. It radiated an unspoken promise—a Pandora's box wrapped in carbon fiber.
 
-"CFD is coming," Ennis rasped, his eyes remaining fixed on the glowing screen of his commlink. "The Matrix is divided, and some refuse to see what's happening. We need a sanctuary, and that cylinder... it holds the key to making one."
+Logi suddenly turned toward the bar. "Four syn-whiskeys. Neat," they ordered, tossing a digital credstick onto a passing drone tray.
+
+Chow blinked, his heavy jaw slacking slightly. He hated negotiating dry. He always needed a drink before dealing with fixers. But Logi did not drink, and Logi never noticed social cues. Yet, the drone returned with four glasses, and Logi slid one perfectly into Chow's massive grip without looking.
+
+Red frowned, reaching for her own glass. "That was... unprompted," she murmured, taking a slow sip. Her throat was painfully dry. She realized she felt thirsty at the exact same moment Logi had placed the order. The edges of her thoughts were blurring, picking up static from the others.
+
+"CFD is coming," Ennis rasped, his eyes remaining fixed on the glowing screen of his commlink. "The Matrix is divided, and some refuse to see what's happening. The cylinder... it contains a catalyst. Hope, if you want to call it that. It needs to be planted."
+
+Red did not reach for the cylinder. Instead, she stared at the glowing prototype rig, then down at the barcode tattoo forming on her hand. She watched the gray fungus shifting on Chow's palm. The realization hit her with the cold certainty of an assassin calculating a bullet trajectory.
+
+"You didn't warn us," Red said, her voice dropping to a lethal whisper. "You knew NeoNET's vault was infected."
+
+Logi's synthetic vocal chords clicked rhythmically. "Of course. The prototype is the hardware. But the untainted code—the actual asset—could not be downloaded. It had to be hosted. We are the flash drives."
+
+"And the infection is the encryption," Loaf added, his fingers drumming a slow, hollow beat on the table. "They needed us to get infected so we could carry the payload out without NeoNET tracking a data stream."
+
+Chow leaned forward, the table creaking under his immense weight. "So what is in the cylinder? A cure for whatever is eating our brains?"
+
+Ennis paused his typing. He looked up, peering over the rim of his AR glasses. "It is not a cure. It is the soil. When the catalyst in that tube blends with what is growing inside you... it will rewrite the rules. Delivering it is the only way to stabilize the meld before you completely lose yourselves."
+
+Loaf scoffed, loudly racking a round into the chamber of his Ares Alpha. "A shiny new world sounds nice, but it does not buy explosive rounds. If you want us to haul this glorified thermos, we need heavy munitions. I want unrestricted access to your armory and an advance on the payout. Now."
+
+Chow crossed his arms, his grip tightening on his glass. "And protection. Our faces are burning up the corporate watchlists. You clear those bounties. You erase our digital footprint from the NeoNET servers. We do not leave this club until our records are clean."
+
+Sam stepped out of the shadows, adjusting his pristine cuffs. "We can provide the munitions," he offered smoothly. "And I can scrub your primary SINs from the global database. You will be ghosts. But it requires you to move the cylinder to the designated coordinates tonight."
+
+Red considered the offer. They were carrying a payload that was slowly rewriting their DNA, and this cylinder was the only key to surviving the transition. She looked at Logi, who gave a brief, calculated nod indicating the digital scrub was verifiable. "We get the gear up front," Red stated, her tone leaving no room for argument. "You scrub the bounties the moment we leave. We deliver your hope."
+
+Ennis smiled thinly, tapping his commlink once more. "Agreed. The funds and armory access codes are transferring to your secure accounts now. Take the cylinder."
+
+Red finally reached out, her fingers securing the heavy black tube. They had a job, they had their guns, and most importantly, they had the catalyst to fix whatever they were becoming.
 
 
 
