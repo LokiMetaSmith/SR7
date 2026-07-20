@@ -102,25 +102,39 @@ Inside, the club was a sensory overload. A group of patrons turned their heads i
 
 At a corner table sat Ennis. A rumpled middle-aged man with a cane and an unruly head of red and white hair, he wore steampunk-style AR glasses and tapped away at a physical commlink. He was a Spirit of Man, manifested and heavily invested in the digital children of the Sixth World.
 
-Ennis pushed a shiny black cylinder across the table. It had a heavy screw top and a wax seal stamped with a barcode.
+Ennis pushed a shiny black cylinder across the table. It had a heavy screw top and a wax seal stamped with a barcode. It looked innocuous, but sitting beside the NeoNET prototype rig they had stolen, the cylinder felt incredibly heavy. It radiated an unspoken promise—a Pandora's box wrapped in carbon fiber.
 
-"CFD is coming," Ennis rasped, his eyes remaining fixed on the glowing screen of his commlink. "The Matrix is divided, and some refuse to see what's happening. We need a sanctuary, and that cylinder holds the key to making one."
+Logi suddenly turned toward the bar. "Four syn-whiskeys. Neat," they ordered, tossing a digital credstick onto a passing drone tray.
 
-Red did not reach for the cylinder. She rested her hands flat on the sticky surface of the table, fixing Ennis with a cold, unblinking stare. "Start talking, old man. We do not run blind errands. What exactly is CFD, and what is inside this tube?"
+Chow blinked, his heavy jaw slacking slightly. He hated negotiating dry. He always needed a drink before dealing with fixers. But Logi did not drink, and Logi never noticed social cues. Yet, the drone returned with four glasses, and Logi slid one perfectly into Chow's massive grip without looking.
 
-Ennis paused his typing. He looked up, peering over the rim of his AR glasses. "Cognitive Fragmentation Disorder. It is a digital pathogen that rewrites personalities using nanites. The prototype you stole serves as a catalyst, and the cylinder contains localized schematics and raw materials to build a safe zone free from the corporate grid."
+Red frowned, reaching for her own glass. "That was... unprompted," she murmured, taking a slow sip. Her throat was painfully dry. She realized she felt thirsty at the exact same moment Logi had placed the order. The edges of her thoughts were blurring, picking up static from the others.
 
-Loaf scoffed, loudly racking a round into the chamber of his Ares Alpha. The metallic clack cut through the club's ambient noise. "A safe zone sounds nice, but it does not buy explosive rounds. If you want us to haul this glorified thermos, we need heavy munitions. I want unrestricted access to your armory and an advance on the payout. Now."
+"CFD is coming," Ennis rasped, his eyes remaining fixed on the glowing screen of his commlink. "The Matrix is divided, and some refuse to see what's happening. The cylinder... it contains a catalyst. Hope, if you want to call it that. It needs to be planted."
 
-Chow leaned forward, the table creaking under his immense weight. "And protection. Our faces are burning up the corporate watchlists. You clear those bounties. You erase our digital footprint from the NeoNET servers. We do not leave this club until our records are clean."
+Red did not reach for the cylinder. Instead, she stared at the glowing prototype rig, then down at the barcode tattoo forming on her hand. She watched the gray fungus shifting on Chow's palm. The realization hit her with the cold certainty of an assassin calculating a bullet trajectory.
+
+"You didn't warn us," Red said, her voice dropping to a lethal whisper. "You knew NeoNET's vault was infected."
+
+Logi's synthetic vocal chords clicked rhythmically. "Of course. The prototype is the hardware. But the untainted code—the actual asset—could not be downloaded. It had to be hosted. We are the flash drives."
+
+"And the infection is the encryption," Loaf added, his fingers drumming a slow, hollow beat on the table. "They needed us to get infected so we could carry the payload out without NeoNET tracking a data stream."
+
+Chow leaned forward, the table creaking under his immense weight. "So what is in the cylinder? A cure for whatever is eating our brains?"
+
+Ennis paused his typing. He looked up, peering over the rim of his AR glasses. "It is not a cure. It is the soil. When the catalyst in that tube blends with what is growing inside you... it will rewrite the rules. Delivering it is the only way to stabilize the meld before you completely lose yourselves."
+
+Loaf scoffed, loudly racking a round into the chamber of his Ares Alpha. "A shiny new world sounds nice, but it does not buy explosive rounds. If you want us to haul this glorified thermos, we need heavy munitions. I want unrestricted access to your armory and an advance on the payout. Now."
+
+Chow crossed his arms, his grip tightening on his glass. "And protection. Our faces are burning up the corporate watchlists. You clear those bounties. You erase our digital footprint from the NeoNET servers. We do not leave this club until our records are clean."
 
 Sam stepped out of the shadows, adjusting his pristine cuffs. "We can provide the munitions," he offered smoothly. "And I can scrub your primary SINs from the global database. You will be ghosts. But it requires you to move the cylinder to the designated coordinates tonight."
 
-Red considered the offer. She looked at Logi, who gave a brief, calculated nod indicating the digital scrub was verifiable. "We get the gear up front," Red stated, her tone leaving no room for argument. "You scrub the bounties the moment we leave. We deliver the cylinder. But if we sniff a double-cross, I will come back here and carve this club down to the foundation."
+Red considered the offer. They were carrying a payload that was slowly rewriting their DNA, and this cylinder was the only key to surviving the transition. She looked at Logi, who gave a brief, calculated nod indicating the digital scrub was verifiable. "We get the gear up front," Red stated, her tone leaving no room for argument. "You scrub the bounties the moment we leave. We deliver your hope."
 
 Ennis smiled thinly, tapping his commlink once more. "Agreed. The funds and armory access codes are transferring to your secure accounts now. Take the cylinder."
 
-Red finally reached out, her fingers securing the heavy black tube. They had a job, they had their guns, and most importantly, they had a reason to run.
+Red finally reached out, her fingers securing the heavy black tube. They had a job, they had their guns, and most importantly, they had the catalyst to fix whatever they were becoming.
 
 
 
