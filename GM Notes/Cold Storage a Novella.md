@@ -152,43 +152,49 @@ He tapped the ground with his cane, the silver tip sparking faintly against the 
 
 ## Chapter 3: The Botched Heist
 
-The gravel pit surrounding the toxic dump was unnervingly quiet. Logi’s optics scanned the perimeter, highlighting the jagged edges of a heavily warded fence. Logi’s internal sensors registered high levels of ozone and rotting biological matter in the immediate area. They adjusted the focal length of their left eye, the mechanical whir barely audible over the distant rumble of the city, pinpointing the faint heat signatures of latent security wards woven into the chain-link.
+The gravel pit surrounding the toxic dump was unnervingly quiet. Logi’s optics scanned the perimeter, highlighting the jagged edges of a heavily warded fence. Logi’s internal sensors registered high levels of ozone and rotting biological matter in the immediate area. They adjusted the focal length of their left eye, the mechanical whir barely audible over the distant rumble of the city, pinpointing the faint heat signatures of latent security wards woven into the chain-link. Logi adjusted their grip on the heavy, lead-lined canister containing the stolen reactor core, the metal cold against their synthetic skin.
 
 "Chest of goodies," Logi murmured, unstrapping a heavy duffel. The canvas hit the polluted dirt with a heavy thud. "Bringing everything but the kitchen sink. Standard operating procedure when the variables exceed the safety margin."
 
 Before them stood the Colombia-class nuclear submarine, resting in a massive, polluted drydock. Its warhead silos had been hollowed out, repurposed for cargo. A moon pool gaped in its belly, and a separate mini-sub was docked alongside, its yellow paint peeling and stained with caustic algae.
 
-"Defense drones," Red hissed, pointing a gloved finger. Two massive, mecha-style sentinels patrolled the deck, their heavy rotary cannons gleaming under the toxic haze. She didn't flinch. Her breathing slowed to a deliberate, measured cadence, her hand dropping smoothly to rest on the monofilament whip coiled at her hip. She assessed their patrol route, her eyes tracking the precise pivot points of their armored joints.
+"Defense drones," Red hissed, pointing a gloved finger. Two massive, mecha-style sentinels patrolled the deck, their heavy rotary cannons gleaming under the toxic haze. They weren't firing indiscriminately; they were taking precise, careful, single shots. The corporations didn't want to damage their multimillion-nuyen drydock infrastructure. Plasteel rounds sparked against the gravel, kicking up stinging clouds of toxic dust as the drones attempted to pin the team down without scratching the submarine's hull.
 
-"Distraction," Chow grunted. He leveled his heavy weapon launcher at a nearby fuelcell depot, his massive cybernetic shoulders bracing against the recoil before he even pulled the trigger. The impact was deafening. The chemical energy ignited, not in a fireball, but in a rapid, unnatural conversion. The fuel cells warped into black fuligin seed pods, erupting like a geyser. They sprayed the deck, spitting out black, tarry balls of cutter and infiltration nanites that began chewing through the mecha-drones' armor.
+She didn't flinch. Her breathing slowed to a deliberate, measured cadence, her hand dropping smoothly to rest on the monofilament whip coiled at her hip. She assessed their patrol route, her eyes tracking the precise pivot points of their armored joints.
+
+"Careful?" Chow grunted, watching a precision round ricochet inches from his boot. "I have no such objection."
+
+He leveled his heavy weapon launcher at a nearby fuelcell depot, his massive cybernetic shoulders bracing against the recoil before he even pulled the trigger. The impact was deafening. He didn't care about the drydock. The chemical energy ignited, not in a fireball, but in a rapid, unnatural conversion. The fuel cells warped into black fuligin seed pods, erupting like a geyser. They sprayed the deck, spitting out black, tarry balls of cutter and infiltration nanites that began chewing through the mecha-drones' armor and the surrounding scaffolding.
 
 Chow lowered the launcher, rolling his neck until the cervical plates popped. "Path's clear. For about twenty seconds."
 
 The ground shuddered. The gravel pit itself seemed to rise. Iggy, the igneous earth elemental, pulled himself from the rocks, a hulking golem of jagged stone and magma veins. Above him, the toxic spirit of the dump shrieked, a swirling mass of corrosive smog that smelled of burning hair and battery acid.
 
-"Move!" Logi yelled, sprinting for the sub's gangway, their metallic footfalls ringing sharply against the corrugated steel.
+"Move! We're sneaking in the aft loading hatch!" Logi yelled, clutching the canister tight to their chest and sprinting for the sub's shadowed gangway. Their metallic footfalls rang sharply against the corrugated steel as they darted past the melting mecha-drones.
 
-A straggling mercenary from the previous encounter, too slow to follow, tripped. The black nanite spray washed over him. He screamed, clutching his head as the grey goo consumed him, a brutal head-snack that left only a metallic, rigid husk. Loaf skidded to a halt, his eyes widening. He instinctively reached into his webbing, fingers wrapping around a high-explosive grenade, but Logi’s sharp synthetic voice cut through the panic. "Negative, Loaf! Blast radius will compromise the hull!" Loaf swallowed hard, unclipping the grenade and shoving it back into his pouch, forcing himself to keep moving.
+A straggling mercenary from the previous encounter, too slow to follow, tripped. The black nanite spray washed over him. He screamed, clutching his head as the grey goo consumed him, a brutal head-snack that left only a metallic, rigid husk. Loaf skidded to a halt, his eyes widening. He instinctively reached into his webbing, fingers wrapping around a high-explosive grenade, but Logi’s sharp synthetic voice cut through the panic. "Negative, Loaf! Blast radius will compromise the hull!" Loaf swallowed hard, unclipping the grenade and shoving it back into his pouch, forcing himself to keep moving into the shadows of the drydock.
 
-Logi hit the deck, executing a mathematically perfect roll to minimize their profile against the melting drones, their internal gyros whirring to maintain balance. They were met by a massive, bearded, muscle-bound physical adept. "Bluto," the man grunted, deliberately cracking his knuckles one by one, a primal display of physical dominance that Logi found highly inefficient. He clearly directed the others, snapping curt gestures that the rest of the crew instantly obeyed.
+Logi hit the deck inside the sub's aft corridor, executing a mathematically perfect roll to minimize their profile. They stood up in the dim, red emergency lighting, but their sensors pinged a microsecond too late.
 
-Behind him stood a lanky, sharp-featured woman in a lab coat. "Dr. Olive Oyl," she snapped, adjusting her glasses with a sharp, impatient movement. Her charisma was palpable, a sharp negotiator who had already secured their passage, her eyes darting between the team and the encroaching nanite swarm with cold calculation.
+An internal security drone—a sleek, multi-limbed nightmare of corporate engineering—dropped from the ceiling conduit. It didn't hesitate. A burst of high-velocity flechette rounds ripped through the narrow corridor. Logi twisted, trying to shield the reactor canister, but the rounds tore into their shoulder and side.
 
-Next to her, the ship hand and navigator, Popeye, offered a gruff nod. He was Mer folk; his webbed hands and low-light eyes hinted at a life beneath the waves, a physical adept who carried the quiet confidence of a man who had once fought a Kraken. He smelled strongly of brine and stale tobacco.
+Blood—bright, startlingly red—mixed with a spray of silver synthetic chaff and conductive gel, splattering violently across the rusted bulkhead. Logi grunted, a digitized sound of pain, as they were thrown back against the wall, but their grip on the canister never loosened. Red moved instantly, her monofilament whip slicing through the air with a high-pitched hum, cleanly severing the drone's weapon mount and optic sensors in one fluid, deadly arc before it could fire again.
 
-"Get in," Bluto barked. "Before Iggy decides he wants to play catch with the mini-sub."
+Logi slid down the wall, clutching their torn shoulder, their green optics flickering as they rerouted power to localized repair subroutines.
 
-They scrambled down the hatch into Research Sub 10. The air inside was tense, heavy with the smell of sweat and ozone. The crew of eight, two security officers, two mages, and the prisoners in the holding cells watched them warily. Loaf immediately moved to secure the aft corridor, his rifle raised, his nervous tapping against the receiver the only sound besides the humming engines. Red positioned herself near the hatch, her posture rigid, her eyes scanning the faces of the crew, analyzing threat potentials.
+Further down the corridor, they were met by a massive, bearded, muscle-bound physical adept. "Bluto," the man grunted, deliberately cracking his knuckles one by one. He clearly directed the others, snapping curt gestures that the rest of the crew instantly obeyed.
 
-As the hatch sealed, Logi noticed something wrong. The grey goo from the dock hadn't just stayed outside. It was inside the ship, a shiny black patch spreading across the bulkhead. It pulsed, not like a machine, but like a heartbeat. The ship was being eaten, and the goo was starting to think.
+Behind him stood a lanky, sharp-featured woman in a lab coat. "Dr. Olive Oyl," she snapped, adjusting her glasses with a sharp, impatient movement, her eyes darting between Logi's bleeding shoulder and the reactor canister with cold calculation.
 
-A deafening, metallic shriek filled the air as the submarine's massive engines engaged, vibrating through the polluted gravel. The team scrambled down the hatch just as the Colombia-class behemoth began to submerge, the toxic waters of the drydock rushing in to fill the void.
+Next to her, the ship hand and navigator, Popeye, offered a gruff nod. He was Mer folk; his webbed hands and low-light eyes hinted at a life beneath the waves. He smelled strongly of brine and stale tobacco.
 
-Just as the conning tower slipped beneath the oily surface, a figure stepped onto the edge of the pit. Ignatius leaned on his silver-tipped cane, his coat immaculate despite the swirling smog. He watched the water boil where the submarine had vanished, missing the team by mere seconds.
+"Get in the hold and patch that up," Bluto barked, gesturing to Logi. "Before Iggy decides he wants to play catch with the mini-sub outside."
 
-He didn't yell or curse. He simply tapped a commlink built into the head of his cane. "They have the reactor and are heading out to sea. I have established an astral trace. Mobilize the intercepts."
+They scrambled deeper into Research Sub 10. The air inside was tense, heavy with the smell of sweat, ozone, and Logi's synthetic blood. The crew of eight, two security officers, two mages, and the prisoners in the holding cells watched them warily. Loaf immediately moved to secure the aft corridor, his rifle raised, his nervous tapping against the receiver the only sound besides the humming engines. Red positioned herself near the hatch, her posture rigid, analyzing threat potentials.
 
-Sam's voice crackled over the internal comms inside the sub. "Well. It seems we have pursuers on our tail and goo in the walls. I suggest joining forces with the crew before this boat becomes a very fast, very deep coffin."
+As the hatch sealed, Logi, holding pressure against their bleeding side, noticed something wrong. The grey goo from the dock hadn't just stayed outside. It was inside the ship, a shiny black patch spreading across the bulkhead. It pulsed, not like a machine, but like a heartbeat. The ship was being eaten, and the goo was starting to think.
+
+A deafening, metallic shriek filled the air as the submarine's massive engines engaged, vibrating through the polluted gravel. The team braced themselves as the Colombia-class behemoth began to submerge, the toxic waters of the drydock rushing in to fill the void.
 
 ## Chapter 4: The Deep Dark
 
