@@ -61,6 +61,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
     *   [x] *Follow-up required:* Inject character development into the story, adhering to the show, don't tell principle with concrete actions, sensory details, and observable behaviors to convey the internal state and philosophies of Logi, Red, Chow, and Loaf.
 
 *   [x] **Create Cold Storage Novella:** Write a novella format story detailing the events of Operation Cold Storage.
+*   [x] **Export Novellas as PDF:** Ensure that the generated novellas can be exported as PDFs.
 
 *   [x] **Create Cold Storage Adventure Module:** Distill the "Cold Storage" resurrection story (the Neon-lit Arcade) into a playable JSON gameplay module.
 *   [x] **Audit NPC Stat Blocks:** Review `GM_Campaign_Guide.md` (Sister Sinalma, Captain Lazlow, Spark+, etc.).
