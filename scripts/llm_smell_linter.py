@@ -26,9 +26,8 @@ def check_file(filepath):
                 dash_count = len(regex.findall(line))
                 if dash_count > 2:
                     results.append((i + 1, smell_name, line.strip(), f"Found {dash_count} em-dashes"))
-            elif smell_name == "consecutive_short_sentences":
-                pass
-            elif smell_name == "punchline_endings":
+            elif smell_name in ("consecutive_short_sentences", "punchline_endings"):
+                # These are checked at the paragraph level below
                 pass
             else:
                 matches = regex.findall(line)
