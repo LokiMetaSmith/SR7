@@ -132,6 +132,10 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 **Goal:** Ensure the backend combat simulator mechanics function correctly and are immune to regressions.
 
+
+*   [x] **Improve and Test Novel Analysis Tools:** Created unit tests for `llm_smell_linter.py`, `continuity_tracker.py`, and `generate_novella.py`. Fixed bug with json decoding in `continuity_tracker.py`. Added auto bypass in `generate_novella.py` and improved loop checking in `llm_smell_linter.py`.
+
+
 *   [x] **Comprehensive Combat Simulator Tests:** Implement unit tests for core combat mechanics in `scripts/combat_simulator.py` (e.g., Chunky Salsa, N.I.C.A., Hopepunk Modifier, Tethers).
 *   [x] **Combat Analyzer Tests:** Create tests for the statistical analyzer to ensure math formulas and simulated outputs are accurate over iterations. (COMPLETED: Added comprehensive tests verifying math formulas and deterministic outputs)
 *   [x] **Grenades & AoE Logic:** Properly implement scatter and blast profiles for grenades/AoE attacks within the MapGrid UI and combat simulation.

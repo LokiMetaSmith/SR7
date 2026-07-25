@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import argparse
 
 # Ensure we can import from openai if it's installed in the venv
 try:
@@ -84,6 +85,12 @@ def generate_chapter(client, chapter_prompt, previous_context=""):
         return None
 
 def main():
+    parser = argparse.ArgumentParser(description="Generate a novella from an outline.")
+    parser.add_argument("--auto", action="store_true", help="Bypass the confirmation prompt.")
+
+    # We parse known args so it doesn't crash if passed unknown positional args like an outline file path
+    args, unknown = parser.parse_known_args()
+
     print(f"Initializing LLM client targeting {LLM_ENDPOINT}")
     client = OpenAI(base_url=LLM_ENDPOINT, api_key=API_KEY)
 
@@ -102,10 +109,11 @@ def main():
     previous_context = current_novella
 
     # Optional: Confirm before starting the massive generation
-    user_input = input(f"Ready to generate {len(chapters)} chapters and append to the novella. This will take time. Proceed? (y/n): ")
-    if user_input.lower() != 'y':
-        print("Aborting.")
-        return
+    if not args.auto:
+        user_input = input(f"Ready to generate {len(chapters)} chapters and append to the novella. This will take time. Proceed? (y/n): ")
+        if user_input.lower() != 'y':
+            print("Aborting.")
+            return
 
     for i, chapter_prompt in enumerate(chapters):
         print(f"\n--- Progress: {i+1}/{len(chapters)} ---")

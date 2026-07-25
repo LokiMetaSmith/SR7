@@ -35,11 +35,15 @@ def remove_fact(story_name, entity, fact_substring):
     with open(db_file, 'r', encoding='utf-8') as f:
         for line in f:
             if not line.strip(): continue
-            record = json.loads(line)
-            if record['entity'] == entity and fact_substring.lower() in record['fact'].lower():
-                removed += 1
-                continue
-            records.append(line)
+            try:
+                record = json.loads(line)
+                if record['entity'] == entity and fact_substring.lower() in record['fact'].lower():
+                    removed += 1
+                    continue
+                records.append(line)
+            except json.JSONDecodeError:
+                print(f"Warning: Could not parse JSON line: {line.strip()}")
+                records.append(line)
 
     if removed > 0:
         with open(db_file, 'w', encoding='utf-8') as f:
@@ -60,13 +64,17 @@ def list_facts(story_name, entity=None, category=None):
     with open(db_file, 'r', encoding='utf-8') as f:
         for line in f:
             if not line.strip(): continue
-            record = json.loads(line)
-            if entity and record['entity'] != entity:
-                continue
-            if category and record['category'] != category:
-                continue
-            print(f"[{record['category']}] {record['entity']}: {record['fact']} (Source: {record.get('source', 'unknown')})")
-            count += 1
+            try:
+                record = json.loads(line)
+                if entity and record['entity'] != entity:
+                    continue
+                if category and record['category'] != category:
+                    continue
+                print(f"[{record['category']}] {record['entity']}: {record['fact']} (Source: {record.get('source', 'unknown')})")
+                count += 1
+            except json.JSONDecodeError:
+                print(f"Warning: Could not parse JSON line: {line.strip()}")
+
     if count == 0:
         print("No matching facts found.")
 
