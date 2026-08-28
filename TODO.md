@@ -10,7 +10,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
     *   [x] COMPLETED: Establish a master template for Weapon and Quality tables so that parsing tools know exactly what to look for.
 *   [x] **Draft Missing Core Sections:** Write the rules text for the fundamentally missing pillars of the game:
     *   [x] *Follow-up required (Magic):* Need design docs for Spell lists, Adept powers, Drain calculations, Rituals, and Metamagic. (COMPLETED: Expanded Spell lists and added missing Magic design docs.)
-    *   [x] *Follow-up required (Matrix):* Need design docs for Matrix elements:
+    *   [x] *Follow-up required (Matrix):* Need design docs for Matrix elements: (COMPLETED)
         *   [x] Programs
         *   [x] Cyberdecks/Commlinks
         *   [x] Host architecture & IC
@@ -20,7 +20,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
         *   [x] Vehicle modifications
         *   [x] Chase combat
         *   [x] Jumped-in mechanics
-    *   [x] *Follow-up required (General Equipment):* Need lists and costs for Armor, Cyberware/Bioware, Commlinks, and Lifestyle.
+    *   [x] *Follow-up required (General Equipment):* Need lists and costs for Armor, Cyberware/Bioware, Commlinks, and Lifestyle. (COMPLETED)
     *   [x] **Implement Spirit Summoning:** Add mechanics for conjuring spirits and calculating summoning drain.
 *   [x] **Implement Adept Powers & Metamagic:** Expanded design docs for Adept Powers and Metamagic in the core rules.
 *   [x] **Define the Baseline Mechanics:** Clarify how "Wild Dice" and "Digital Essence" interact with standard gameplay loops.
