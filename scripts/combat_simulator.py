@@ -271,9 +271,9 @@ class Combatant:
 
     def roll_initiative(self) -> int:
         if self.current_plane == Plane.ASTRAL or self.is_dual_natured:
-            # Astral Initiative (REA + INT) + 1 Initiative Die per Force/MAG
-            base = self.get_attribute("REA", 3) + self.get_attribute("INT", 3)
-            dice = 1 + self.get_attribute("MAG", 0)
+            # Astral Initiative: REA + INT + 1D6 + MAG
+            base = self.get_attribute("REA", 3) + self.get_attribute("INT", 3) + self.get_attribute("MAG", 0)
+            dice = 1
         elif self.current_plane == Plane.MATRIX or self.jumped_in_vehicle:
             # Matrix Initiative (Data Processing + Intuition) + 1 Initiative Die per Rig level
             base = self.matrix.data_processing + self.get_attribute("INT", 3)

@@ -190,3 +190,12 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 **Goal:** Bridge SRX with SR7's Merged World lore.
 
 *   [x] **Draft Rulebook Module:** Create `SRX_eXtream_Edition_Rules.md` and detail Wild Dice, Saturation Level, Digital Essence, Unified Possession, and G.O.D. Manifestations.
+
+## Priority 14: Future Expansion
+
+**Goal:** Continue expanding the simulation and visual features of the engine.
+
+*   [ ] **Add SoundManager:** Add a new `SoundManager` class to `ui/components.py` to handle loading and playing background music and sound effects (e.g., gunfire, matrix hacking sounds) during the Pygame combat simulation.
+*   [x] **Test Astral Initiative:** Add unit tests to `tests/test_combat_simulator.py` to specifically verify the Astral Combat Initiative calculation (`REA + INT + 1D6 + MAG`) for Dual-Natured entities.
+*   [ ] **Expand Trade Simulator:** Expand the `--trade-simulator` feature in `scripts/combat_simulator.py` to support selling items back to a Fixer at a markdown rate, taking the item's condition into account.
+*   [ ] **Overworld Encounters:** Add a `random_encounter` chance parameter to the `campaign.json` node definitions to dynamically trigger minor combat encounters while traveling on the Pygame `OverworldMap`.
