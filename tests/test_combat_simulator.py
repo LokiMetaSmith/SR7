@@ -465,3 +465,42 @@ def test_gun_fu_flow_state():
         scripts.combat_simulator.RulesEngine.roll_dice = original_roll
         if original_ask_action:
             scripts.combat_simulator.RulesEngine.agent.ask_action = original_ask_action
+
+def test_astral_combat_initiative(monkeypatch):
+    from scripts.combat_simulator import Combatant, MatrixAttributes, RulesEngine
+
+    # Create a dual-natured combatant
+    c = Combatant(
+        name="Dual-Natured Spirit",
+        attributes={"REA": 4, "INT": 5, "MAG": 6},
+        is_dual_natured=True,
+        current_plane="ASTRAL",
+        matrix=MatrixAttributes(),
+        team=1
+    )
+
+    # Mock roll_dice for the +1D6 component of initiative
+    def mock_roll_dice(pool, wild=0, combatant=None):
+        class MockResult:
+            def __init__(self):
+                self.total = 3  # Assume the D6 rolls a 3
+        return MockResult()
+
+    monkeypatch.setattr(RulesEngine, "roll_dice", mock_roll_dice)
+
+    # Astral Initiative = REA + INT + 1D6 + MAG
+    # 4 + 5 + 3 + 6 = 18
+    # However, combat_simulator.py usually uses random.randint(1, 6) directly for initiative D6s
+    # Let's mock random.randint just in case.
+    import random
+    def mock_randint(a, b):
+        return 3
+    monkeypatch.setattr(random, "randint", mock_randint)
+
+    initiative = c.roll_initiative()
+
+    # Astral Initiative = REA + INT + 1D6 + MAG
+    # 4 (REA) + 5 (INT) + 6 (MAG) = 15
+    # 1D6 is mocked to 3
+    # 15 + 3 = 18
+    assert initiative == 18, f"Expected 18, got {initiative}"
