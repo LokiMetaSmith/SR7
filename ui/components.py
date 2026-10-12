@@ -591,7 +591,7 @@ class OverworldMap:
                 distance = ((event.pos[0] - node_x) ** 2 + (event.pos[1] - node_y) ** 2) ** 0.5
                 if distance <= node["radius"]:
                     if self.on_node_click:
-                        self.on_node_click(node["module"])
+                        self.on_node_click(node)
 
     def draw(self, surface: pygame.Surface):
         pygame.draw.rect(surface, COLORS.get("panel_bg", (30, 30, 30)), self.rect, border_radius=4)

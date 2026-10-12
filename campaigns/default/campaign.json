@@ -13,7 +13,8 @@
       "x": 300,
       "y": 200,
       "module": "campaigns/default/modules/cold_storage.json",
-      "radius": 15
+      "radius": 15,
+      "random_encounter": 0.2
     },
     {
       "name": "Office Heist",
@@ -27,7 +28,8 @@
       "x": 200,
       "y": 400,
       "module": "campaigns/default/modules/bunker_brawl.json",
-      "radius": 15
+      "radius": 15,
+      "random_encounter": 0.3
     },
     {
       "name": "Bar Room Bash",

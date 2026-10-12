@@ -13,7 +13,8 @@
       "x": 250,
       "y": 150,
       "module": "campaigns/tar_creek_heist/modules/pt2_scouting.json",
-      "radius": 15
+      "radius": 15,
+      "random_encounter": 0.25
     },
     {
       "name": "The Heist",

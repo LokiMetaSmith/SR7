@@ -13,7 +13,8 @@
       "x": 400,
       "y": 200,
       "module": "campaigns/necessity/modules/the_melancholy_of_monsters_ghouls.json",
-      "radius": 15
+      "radius": 15,
+      "random_encounter": 0.2
     }
   ]
 }
