@@ -13,7 +13,8 @@
       "x": 500,
       "y": 300,
       "module": "campaigns/cold_storage/modules/the_melancholy_of_monsters_crystals.json",
-      "radius": 15
+      "radius": 15,
+      "random_encounter": 0.2
     }
   ]
 }

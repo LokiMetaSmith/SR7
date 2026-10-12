@@ -153,10 +153,17 @@ class App:
         self.chase_screen = VehicleChaseScreen(pygame.Rect((self.width - 500) // 2, (self.height - 400) // 2, 500, 400), on_close=lambda: setattr(self, 'in_chase_screen', False), on_action=self.set_pending_action)
 
 
-    def load_module(self, module_path: str):
+    def load_module(self, module_input):
         import random
-        # 20% chance to trigger random encounter if module_path is not already a random encounter
-        if "random" not in module_path.lower() and random.random() < 0.20:
+        module_path = module_input
+        encounter_chance = 0.0
+
+        if isinstance(module_input, dict):
+            module_path = module_input.get("module")
+            encounter_chance = module_input.get("random_encounter", 0.0)
+
+        # Trigger random encounter based on probability if module_path is not already a random encounter
+        if "random" not in module_path.lower() and random.random() < encounter_chance:
             print("RANDOM ENCOUNTER TRIGGERED!")
             # Default fallback for an ambush
             module_path = "campaigns/default/modules/random_ambush.json"
