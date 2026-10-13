@@ -1147,17 +1147,27 @@ def save_global_campaign_state(state: dict, scratchpad_dir: str):
     print(f"Saved global campaign state to {filepath}")
 
 
-def simulate_trade(combatant: Combatant, item_name: str, item_value: int, fixer_difficulty: int):
+def simulate_trade(combatant: Combatant, item_name: str, item_value: int, fixer_difficulty: int, is_selling: bool = False, item_condition: str = "mint"):
     print(f"\n=== Trade Simulation ===")
-    print(f"Buyer: {combatant.name}")
-    print(f"Item: {item_name} (Base Value: {item_value}¥)")
+    role = "Seller" if is_selling else "Buyer"
+    print(f"{role}: {combatant.name}")
 
-    # Calculate Buyer Pool
-    buyer_cha = combatant.get_attribute("CHA", 3)
-    buyer_nego = combatant.skills.get("Negotiation", 0)
-    buyer_pool = buyer_cha + buyer_nego + combatant.street_cred
+    base_trade_value = item_value
+    if is_selling:
+        # Apply condition markdown
+        condition_markdown = {"mint": 0.5, "used": 0.3, "damaged": 0.1, "broken": 0.05}
+        multiplier = condition_markdown.get(item_condition.lower(), 0.3)
+        base_trade_value = int(item_value * multiplier)
+        print(f"Item: {item_name} (Original Value: {item_value}¥, Condition: {item_condition.capitalize()} -> Base Trade Value: {base_trade_value}¥)")
+    else:
+        print(f"Item: {item_name} (Base Value: {item_value}¥)")
 
-    print(f"Buyer Pool: {buyer_pool} (CHA {buyer_cha} + Negotiation {buyer_nego} + Street Cred {combatant.street_cred})")
+    # Calculate Player Pool
+    player_cha = combatant.get_attribute("CHA", 3)
+    player_nego = combatant.skills.get("Negotiation", 0)
+    player_pool = player_cha + player_nego + combatant.street_cred
+
+    print(f"{role} Pool: {player_pool} (CHA {player_cha} + Negotiation {player_nego} + Street Cred {combatant.street_cred})")
 
     # Calculate Fixer Pool
     # Default Fixer stats: WIL 3, LOG 3, Negotiation 4
@@ -1167,33 +1177,53 @@ def simulate_trade(combatant: Combatant, item_name: str, item_value: int, fixer_
 
     print(f"Fixer Pool: {fixer_pool} (WIL {fixer_wil} + Negotiation {fixer_nego} + Difficulty Mod {max(0, fixer_difficulty)})")
 
-    buyer_hits, buyer_glitch = RulesEngine.roll_dice(buyer_pool)
+    player_hits, player_glitch = RulesEngine.roll_dice(player_pool)
     fixer_hits, fixer_glitch = RulesEngine.roll_dice(fixer_pool)
 
-    print(f"Buyer rolled {buyer_hits} hits" + (" (GLITCH!)" if buyer_glitch else ""))
+    print(f"{role} rolled {player_hits} hits" + (" (GLITCH!)" if player_glitch else ""))
     print(f"Fixer rolled {fixer_hits} hits" + (" (GLITCH!)" if fixer_glitch else ""))
 
-    net_hits = buyer_hits - fixer_hits
+    net_hits = player_hits - fixer_hits
 
-    final_price = item_value
+    final_price = base_trade_value
 
-    if net_hits > 0:
-        # Buyer won, discount applied! Let's say 5% discount per net hit, max 30%
-        discount = min(30, net_hits * 5)
-        final_price = int(item_value * (1 - (discount / 100.0)))
-        print(f"\nResult: Success! {combatant.name} haggled a {discount}% discount.")
-    elif net_hits < 0:
-        # Fixer won, markup applied! Let's say 5% markup per net hit, max 50%
-        markup = min(50, abs(net_hits) * 5)
-        final_price = int(item_value * (1 + (markup / 100.0)))
-        print(f"\nResult: Failure! The fixer talked circles around {combatant.name}. {markup}% markup applied.")
-    else:
-        # Tie
-        print(f"\nResult: Tie. The price remains at market value.")
+    if not is_selling:
+        if net_hits > 0:
+            # Buyer won, discount applied! Let's say 5% discount per net hit, max 30%
+            discount = min(30, net_hits * 5)
+            final_price = int(base_trade_value * (1 - (discount / 100.0)))
+            print(f"\nResult: Success! {combatant.name} haggled a {discount}% discount.")
+        elif net_hits < 0:
+            # Fixer won, markup applied! Let's say 5% markup per net hit, max 50%
+            markup = min(50, abs(net_hits) * 5)
+            final_price = int(base_trade_value * (1 + (markup / 100.0)))
+            print(f"\nResult: Failure! The fixer talked circles around {combatant.name}. {markup}% markup applied.")
+        else:
+            # Tie
+            print(f"\nResult: Tie. The price remains at market value.")
 
-    if buyer_glitch and net_hits <= 0:
-         print(f"Critical Failure: {combatant.name} offended the fixer. The fixer refuses to sell the {item_name}!")
-         final_price = -1
+        if player_glitch and net_hits <= 0:
+             print(f"Critical Failure: {combatant.name} offended the fixer. The fixer refuses to sell the {item_name}!")
+             final_price = -1
+    else: # Selling
+        if net_hits > 0:
+            # Seller won, markup applied! 5% markup per net hit, max 30%
+            markup = min(30, net_hits * 5)
+            final_price = int(base_trade_value * (1 + (markup / 100.0)))
+            print(f"\nResult: Success! {combatant.name} haggled for a {markup}% increase.")
+        elif net_hits < 0:
+            # Fixer won, discount applied! 5% discount per net hit, max 50%
+            discount = min(50, abs(net_hits) * 5)
+            final_price = int(base_trade_value * (1 - (discount / 100.0)))
+            print(f"\nResult: Failure! The fixer lowballed {combatant.name}. {discount}% decrease applied.")
+        else:
+            # Tie
+            print(f"\nResult: Tie. The price remains at base trade value.")
+
+        if player_glitch and net_hits <= 0:
+             print(f"Critical Failure: {combatant.name} offended the fixer. The fixer refuses to buy the {item_name}!")
+             final_price = -1
+
 
     if final_price != -1:
          print(f"Final Price for {item_name}: {final_price}¥")
@@ -2557,18 +2587,25 @@ def main():
 
     if args.trade_simulator:
         parts = args.trade_simulator.split(":")
-        if len(parts) == 4:
+        if len(parts) >= 4 and len(parts) <= 6:
             combatant_path = parts[0]
             item_name = parts[1]
             try:
                 item_value = int(parts[2])
                 fixer_diff = int(parts[3])
+                is_selling = False
+                item_condition = "mint"
+                if len(parts) >= 5:
+                    is_selling = parts[4].lower() == "true"
+                if len(parts) == 6:
+                    item_condition = parts[5].lower()
+
                 combatant = load_combatant(combatant_path)
-                simulate_trade(combatant, item_name, item_value, fixer_diff)
+                simulate_trade(combatant, item_name, item_value, fixer_diff, is_selling, item_condition)
             except ValueError:
                 print("Error: Base_Value and Fixer_Difficulty must be integers.")
         else:
-            print("Error: Invalid format for --trade-simulator. Expected Combatant_Path:Item_Name:Base_Value:Fixer_Difficulty")
+            print("Error: Invalid format for --trade-simulator. Expected Combatant_Path:Item_Name:Base_Value:Fixer_Difficulty[:Is_Selling:Condition]")
         return
 
 

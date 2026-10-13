@@ -828,10 +828,23 @@ class TradeScreen:
         self.close_rect = pygame.Rect(self.rect.right - 40, self.rect.y + 10, 30, 30)
         self.trade_rect = pygame.Rect(self.rect.centerx - 75, self.rect.bottom - 60, 150, 40)
 
+        self.mode_buy_rect = pygame.Rect(self.rect.x + 40, self.rect.y + 60, 60, 30)
+        self.mode_sell_rect = pygame.Rect(self.rect.x + 110, self.rect.y + 60, 60, 30)
+
+        self.condition_rects = {
+            "mint": pygame.Rect(self.rect.x + 120, self.rect.y + 160, 50, 25),
+            "used": pygame.Rect(self.rect.x + 180, self.rect.y + 160, 50, 25),
+            "damaged": pygame.Rect(self.rect.x + 240, self.rect.y + 160, 75, 25),
+            "broken": pygame.Rect(self.rect.x + 325, self.rect.y + 160, 65, 25)
+        }
+
         self.buyer_name = "Player"
         self.item_name = "Ares Predator"
         self.item_value = 350
         self.fixer_difficulty = 1
+
+        self.is_selling = False
+        self.item_condition = "mint"
 
         self.trade_result = None
 
@@ -841,9 +854,20 @@ class TradeScreen:
                 if self.close_rect.collidepoint(event.pos):
                     if self.on_close:
                         self.on_close()
+                elif self.mode_buy_rect.collidepoint(event.pos):
+                    self.is_selling = False
+                    self.trade_result = None
+                elif self.mode_sell_rect.collidepoint(event.pos):
+                    self.is_selling = True
+                    self.trade_result = None
                 elif self.trade_rect.collidepoint(event.pos):
                     if self.on_trade:
-                        self.trade_result = self.on_trade(self.item_name, self.item_value, self.fixer_difficulty)
+                        self.trade_result = self.on_trade(self.item_name, self.item_value, self.fixer_difficulty, self.is_selling, self.item_condition)
+                elif self.is_selling:
+                    for cond, r in self.condition_rects.items():
+                        if r.collidepoint(event.pos):
+                            self.item_condition = cond
+                            self.trade_result = None
 
     def draw(self, surface: pygame.Surface):
         pygame.draw.rect(surface, COLORS.get("panel_bg", (30, 30, 30)), self.rect, border_radius=8)
@@ -858,10 +882,22 @@ class TradeScreen:
         x_surf = self.font_title.render("X", True, (255, 255, 255))
         surface.blit(x_surf, (self.close_rect.x + 8, self.close_rect.y + 2))
 
-        # Content
-        y_offset = self.rect.y + 80
+        # Mode buttons
+        buy_color = (0, 200, 150) if not self.is_selling else (100, 100, 100)
+        pygame.draw.rect(surface, buy_color, self.mode_buy_rect, border_radius=4)
+        buy_text = self.font_body.render("BUY", True, (255, 255, 255))
+        surface.blit(buy_text, (self.mode_buy_rect.x + 10, self.mode_buy_rect.y + 5))
 
-        buyer_surf = self.font_body.render(f"Buyer: {self.buyer_name}", True, COLORS.get("text", (200, 200, 200)))
+        sell_color = (200, 150, 0) if self.is_selling else (100, 100, 100)
+        pygame.draw.rect(surface, sell_color, self.mode_sell_rect, border_radius=4)
+        sell_text = self.font_body.render("SELL", True, (255, 255, 255))
+        surface.blit(sell_text, (self.mode_sell_rect.x + 10, self.mode_sell_rect.y + 5))
+
+        # Content
+        y_offset = self.rect.y + 100
+
+        role_label = "Seller" if self.is_selling else "Buyer"
+        buyer_surf = self.font_body.render(f"{role_label}: {self.buyer_name}", True, COLORS.get("text", (200, 200, 200)))
         surface.blit(buyer_surf, (self.rect.x + 40, y_offset))
         y_offset += 30
 
@@ -869,9 +905,20 @@ class TradeScreen:
         surface.blit(item_surf, (self.rect.x + 40, y_offset))
         y_offset += 30
 
+        if self.is_selling:
+            cond_label = self.font_body.render("Condition:", True, COLORS.get("text", (200, 200, 200)))
+            surface.blit(cond_label, (self.rect.x + 40, y_offset))
+            y_offset += 30
+            for cond, r in self.condition_rects.items():
+                c_color = (200, 150, 0) if self.item_condition == cond else (100, 100, 100)
+                pygame.draw.rect(surface, c_color, r, border_radius=4)
+                c_text = self.font_body.render(cond.upper(), True, (255, 255, 255))
+                surface.blit(c_text, (r.x + 5, r.y + 3))
+            y_offset += 30
+
         diff_surf = self.font_body.render(f"Fixer Difficulty: {self.fixer_difficulty}", True, COLORS.get("text", (200, 200, 200)))
         surface.blit(diff_surf, (self.rect.x + 40, y_offset))
-        y_offset += 50
+        y_offset += 40
 
         if self.trade_result:
             res_surf = self.font_body.render(f"Result: {self.trade_result}", True, (255, 215, 0))
