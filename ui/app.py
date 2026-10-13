@@ -183,9 +183,9 @@ class App:
     def close_trade(self):
         self.in_trade_screen = False
 
-    def execute_trade(self, item_name, base_value, difficulty):
+    def execute_trade(self, item_name, base_value, difficulty, is_selling=False, condition="mint"):
         if self.player_cards:
-            buyer = self.player_cards[0].combatant
+            combatant = self.player_cards[0].combatant
 
             # Apply economy multiplier
             multiplier = self.global_campaign_state.get("economy_multiplier", 1.0)
@@ -198,21 +198,21 @@ class App:
             new_stdout = io.StringIO()
             sys.stdout = new_stdout
             try:
-                simulate_trade(buyer, item_name, adjusted_value, difficulty)
+                simulate_trade(combatant, item_name, adjusted_value, difficulty, is_selling, condition)
                 output = new_stdout.getvalue()
 
                 # Parse final price from output
                 import re
-                match = re.search(r"Final Price: (\d+)¥", output)
+                match = re.search(r"Final Price for .*?: (\d+)¥", output)
                 if match:
                     return match.group(1) + "¥"
-                elif "REFUSED" in output:
+                elif "refuses" in output.lower():
                     return "Refused"
                 else:
                     return "Completed"
             finally:
                 sys.stdout = old_stdout
-        return "No Buyer"
+        return "No Combatant"
 
     def set_pending_action(self, action: str):
         if not self.is_host:
