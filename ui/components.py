@@ -1021,3 +1021,52 @@ class SaveLoadScreen:
         pygame.draw.rect(surface, (0, 200, 150), self.load_rect, 2, border_radius=4)
         load_text = self.font_body.render("REVERT STATE", True, (255, 255, 255))
         surface.blit(load_text, (self.load_rect.x + 25, self.load_rect.y + 10))
+
+class SoundManager:
+    """
+    Handles loading and playing background music and sound effects during the Pygame simulation.
+    """
+    def __init__(self):
+        self.sounds = {}
+        if not pygame.mixer.get_init():
+            try:
+                pygame.mixer.init()
+            except Exception:
+                pass
+
+    def load_sound(self, name: str, filepath: str):
+        if not pygame.mixer.get_init():
+            return
+        if name not in self.sounds:
+            if os.path.exists(filepath):
+                try:
+                    self.sounds[name] = pygame.mixer.Sound(filepath)
+                except Exception:
+                    pass
+
+    def play_sfx(self, name: str):
+        if not pygame.mixer.get_init():
+            return
+        if name in self.sounds and self.sounds[name]:
+            try:
+                self.sounds[name].play()
+            except Exception:
+                pass
+
+    def play_music(self, filepath: str, loop: int = -1):
+        if not pygame.mixer.get_init():
+            return
+        if os.path.exists(filepath):
+            try:
+                pygame.mixer.music.load(filepath)
+                pygame.mixer.music.play(loop)
+            except Exception:
+                pass
+
+    def stop_music(self):
+        if not pygame.mixer.get_init():
+            return
+        try:
+            pygame.mixer.music.stop()
+        except Exception:
+            pass
