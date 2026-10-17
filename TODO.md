@@ -199,3 +199,12 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Test Astral Initiative:** Add unit tests to `tests/test_combat_simulator.py` to specifically verify the Astral Combat Initiative calculation (`REA + INT + 1D6 + MAG`) for Dual-Natured entities.
 *   [x] **Expand Trade Simulator:** Expand the `--trade-simulator` feature in `scripts/combat_simulator.py` to support selling items back to a Fixer at a markdown rate, taking the item's condition into account.
 *   [x] **Overworld Encounters:** Add a `random_encounter` chance parameter to the `campaign.json` node definitions to dynamically trigger minor combat encounters while traveling on the Pygame `OverworldMap`.
+
+## Priority 15: Codebase Improvements
+
+**Goal:** Improve code maintainability, testing, and CI/CD pipelines.
+
+*   [ ] **Add type hints to combat_simulator.py:** Introduce strict type checking (MyPy) to improve code readability and prevent runtime bugs.
+*   [ ] **Implement CI/CD for tests:** Create a GitHub Actions workflow that runs the pytest suite on every push and pull request.
+*   [ ] **Refactor RulesEngine:** Break down the monolithic RulesEngine in combat_simulator.py into smaller, modular components (e.g., MagicRules, MatrixRules, CombatRules) to improve maintainability.
+*   [ ] **Enhance test coverage:** Add tests for edge cases in the TradeScreen haggling logic and the SaveLoadScreen state management.
