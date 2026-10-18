@@ -204,7 +204,7 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 
 **Goal:** Improve code maintainability, testing, and CI/CD pipelines.
 
-*   [ ] **Add type hints to combat_simulator.py:** Introduce strict type checking (MyPy) to improve code readability and prevent runtime bugs.
+*   [x] **Add type hints to combat_simulator.py:** Introduce strict type checking (MyPy) to improve code readability and prevent runtime bugs.
 *   [x] **Implement CI/CD for tests:** Create a GitHub Actions workflow that runs the pytest suite on every push and pull request.
 *   [ ] **Refactor RulesEngine:** Break down the monolithic RulesEngine in combat_simulator.py into smaller, modular components (e.g., MagicRules, MatrixRules, CombatRules) to improve maintainability.
 *   [x] **Enhance test coverage:** Add tests for edge cases in the TradeScreen haggling logic and the SaveLoadScreen state management.

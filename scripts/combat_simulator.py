@@ -303,14 +303,14 @@ class GameEnvironment:
         description: str,
         modifiers: Dict[str, int],
         name: str = "Unknown Scenario",
-        zones: List[Zone] = None,
+        zones: Optional[List[Zone]] = None,
         is_chase_combat: bool = False,
         scenario_rules: str = "",
         wave_defense: bool = False,
         is_host_run: bool = False,
-        host_nodes: List[HostNode] = None,
-        layout_ascii: List[str] = None,
-        legend: Dict[str, str] = None,
+        host_nodes: Optional[List[HostNode]] = None,
+        layout_ascii: Optional[List[str]] = None,
+        legend: Optional[Dict[str, str]] = None,
         has_stealth_phase: bool = False,
     ):
         self.name = name
@@ -320,7 +320,7 @@ class GameEnvironment:
         self.is_chase_combat = is_chase_combat
         self.scenario_rules = scenario_rules
         self.wave_defense = wave_defense
-        self.recent_blasts = []
+        self.recent_blasts: List[str] = []
         self.is_host_run = is_host_run
         self.host_nodes = host_nodes if host_nodes else []
         self.alert_level = 0
@@ -400,7 +400,7 @@ class RulesEngine:
         return cover_bonus
 
     @staticmethod
-    def resolve_erase_tether(active, target) -> str:
+    def resolve_erase_tether(state: "SimulationState", active: "Combatant", target: "Combatant") -> str:
         log = active.get_attribute("LOG", 3)
         computer_skill = active.skills.get("Computer", 4)
         attack_pool = log + computer_skill
@@ -556,7 +556,7 @@ class SimulationState:
         self.environment = environment
         self.combatants: List[Combatant] = []
         self.turn = 1
-        self.logs = []
+        self.logs: List[str] = []
         self.is_stealth_phase_active = getattr(environment, "has_stealth_phase", False)
 
     def log(self, message: str):
@@ -625,7 +625,7 @@ class LLM_Agent:
         except Exception as e:
             return f"Error connecting to LLM: {e}"
 
-    def narrate_action(self, combatant: Combatant, action: str, result: str, state: SimulationState = None) -> str:
+    def narrate_action(self, combatant: Combatant, action: str, result: str, state: Optional["SimulationState"] = None) -> str:
         prompt = f"Write 2-3 sentences of gritty Shadowrun combat flavor text describing {combatant.name} doing the following: {action}. The result is: {result}."
 
         if state and state.environment.scenario_rules:
@@ -648,28 +648,31 @@ def parse_chummer(file_path: str) -> Combatant:
     char = root.find("character")
     if char is None:
         raise ValueError("Invalid Chummer XML")
-    name = char.find("name").text if char.find("name") is not None else "Unknown"
+    name_elem = char.find("name")
+    name = str(name_elem.text) if name_elem is not None and name_elem.text is not None else "Unknown"
 
     portrait = None
     portrait_node = char.find("portrait")
     if portrait_node is not None and portrait_node.text:
         portrait = portrait_node.text
 
-    attributes = {}
+    attributes: Dict[str, int] = {}
     attr_node = char.find("attributes")
     if attr_node is not None:
         for attr in attr_node.findall("attribute"):
-            n = attr.find("name").text
-            v = int(float(attr.find("value").text))
-            attributes[n] = v
+            n_elem = attr.find("name")
+            v_elem = attr.find("value")
+            if n_elem is not None and n_elem.text and v_elem is not None and v_elem.text:
+                attributes[str(n_elem.text)] = int(float(str(v_elem.text)))
 
-    skills = {}
+    skills: Dict[str, int] = {}
     skill_node = char.find("skills")
     if skill_node is not None:
         for skill in skill_node.findall("skill"):
-            n = skill.find("name").text
-            v = int(skill.find("value").text)
-            skills[n] = v
+            n_elem = skill.find("name")
+            v_elem = skill.find("value")
+            if n_elem is not None and n_elem.text and v_elem is not None and v_elem.text:
+                skills[str(n_elem.text)] = int(float(str(v_elem.text)))
 
     c = Combatant(name=name, attributes=attributes, skills=skills, portrait=portrait)
 
@@ -700,13 +703,15 @@ def parse_chummer(file_path: str) -> Combatant:
     spells_node = char.find("spells")
     if spells_node is not None:
         for spell in spells_node.findall("spell"):
-            sn = spell.find("name").text
-            # Basic parsing of spell tags if present, default to generic "Mana" / "F-2" otherwise
-            st = "M"
-            sd = "F"
-            sdr = "F-2"
+            sn_elem = spell.find("name")
+            if sn_elem is not None and sn_elem.text:
+                sn = str(sn_elem.text)
+                # Basic parsing of spell tags if present, default to generic "Mana" / "F-2" otherwise
+                st = "M"
+                sd = "F"
+                sdr = "F-2"
 
-            c.spells.append(Spell(name=sn, type=st, damage_formula=sd, drain_formula=sdr))
+                c.spells.append(Spell(name=sn, type=st, damage_formula=sd, drain_formula=sdr))
 
     powers_node = char.find("powers")
     if powers_node is not None:
@@ -732,15 +737,14 @@ def parse_chummer(file_path: str) -> Combatant:
                     c.special_rules.append(pn)
 
     # Try mapping matrix stats
+    quality_texts = []
+    for q in char.findall(".//qualities/quality/name"):
+        if q is not None and q.text is not None:
+            quality_texts.append(str(q.text))
+
     if (
         "Technomancer"
-        in " ".join(
-            [
-                q.text
-                for q in char.findall(".//qualities/quality/name")
-                if q.find("name") is not None
-            ]
-        )
+        in " ".join(quality_texts)
         or "RES" in attributes
     ):
         res = attributes.get("RES", 3)
@@ -761,7 +765,8 @@ def parse_chummer(file_path: str) -> Combatant:
     cyberware_node = char.find("cyberwares")
     if cyberware_node is not None:
         for ware in cyberware_node.findall("cyberware"):
-            n = ware.find("name").text if ware.find("name") is not None else ""
+            n_elem = ware.find("name")
+            n = str(n_elem.text) if n_elem is not None and n_elem.text else ""
             if "Control Rig" in n:
                 rtg_match = re.search(r"Rating (\d+)", n, re.IGNORECASE)
                 if rtg_match:
@@ -772,17 +777,14 @@ def parse_chummer(file_path: str) -> Combatant:
     vehicles_node = char.find("vehicles")
     if vehicles_node is not None:
         for v_node in vehicles_node.findall("vehicle"):
-            vn = (
-                v_node.find("name").text if v_node.find("name") is not None else "Drone"
-            )
-            v_arm = (
-                int(v_node.find("armor").text)
-                if v_node.find("armor") is not None
-                else 4
-            )
-            v_bod = (
-                int(v_node.find("body").text) if v_node.find("body") is not None else 4
-            )
+            vn_elem = v_node.find("name")
+            vn = str(vn_elem.text) if vn_elem is not None and vn_elem.text else "Drone"
+
+            v_arm_elem = v_node.find("armor")
+            v_arm = int(str(v_arm_elem.text)) if v_arm_elem is not None and v_arm_elem.text else 4
+
+            v_bod_elem = v_node.find("body")
+            v_bod = int(str(v_bod_elem.text)) if v_bod_elem is not None and v_bod_elem.text else 4
 
             veh = Vehicle(name=vn, armor=v_arm, body=v_bod)
             veh.physical_track = 8 + (v_bod // 2)
@@ -791,16 +793,12 @@ def parse_chummer(file_path: str) -> Combatant:
             v_weaps = v_node.find("weapons")
             if v_weaps is not None:
                 for w in v_weaps.findall("weapon"):
-                    wn = (
-                        w.find("name").text
-                        if w.find("name") is not None
-                        else "Mounted Weapon"
-                    )
-                    wd = (
-                        int(w.find("damage").text.replace("P", "").replace("S", ""))
-                        if w.find("damage") is not None and w.find("damage").text
-                        else 8
-                    )
+                    wn_elem = w.find("name")
+                    wn = str(wn_elem.text) if wn_elem is not None and wn_elem.text is not None else "Mounted Weapon"
+
+                    wd_elem = w.find("damage")
+                    wd = int(str(wd_elem.text).replace("P", "").replace("S", "")) if wd_elem is not None and wd_elem.text is not None else 8
+
                     veh.weapons.append(
                         Weapon(name=wn, damage=wd, damage_type="P", ap=-1)
                     )
@@ -817,6 +815,8 @@ def parse_chummer(file_path: str) -> Combatant:
     if gear_node is not None:
         for item in gear_node.findall("item"):
             text = item.text
+            if text is None: continue
+            text = str(text)
             # Basic matching for weapons like Nanite Claws / Bite
             if (
                 "Claw" in text
@@ -859,7 +859,7 @@ def parse_chummer(file_path: str) -> Combatant:
     return c
 
 
-def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
+def parse_markdown(file_path: str, block_name: Optional[str] = None) -> Combatant:
     with open(file_path, "r") as f:
         content = f.read()
 
@@ -880,13 +880,13 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
         else "Unknown Markdown NPC"
     )
 
-    attributes = {}
+    attributes: Dict[str, int] = {}
     # Handles `**Attributes:** BOD 4 | AGI 5...` or `**BOD** 2, **AGI** 3...`
     attr_matches = re.findall(r"\*?\*?([A-Z]{3})\*?\*?\s*(\d+)", content)
     for m in attr_matches:
         attributes[m[0]] = int(m[1])
 
-    skills = {}
+    skills: Dict[str, int] = {}
     skills_line = re.search(r"\*\*Skills:\*\*(.*)", content)
     if skills_line:
         skills_text = skills_line.group(1)
@@ -947,14 +947,14 @@ def parse_markdown(file_path: str, block_name: str = None) -> Combatant:
     # Weapons: handles multiple weapons on one line, e.g. `**Weapons:** Ares Alpha (15P, -10 AP, SA/BF/FA), Combat Knife (10P, -2 AP).`
     # We will search for any weapon stat block format like: `Some Name (15P, -10 AP)`
     weapon_matches = re.findall(
-        r"([A-Za-z0-s\s\-]+?)\s*\(\s*(\d+)([PS])\s*,\s*([+-]\d+)\s*AP", content
+        r"([A-Za-z0-9\s\-]+?)\s*\(\s*(\d+)([PS])\s*,\s*([+-]\d+)\s*AP", content
     )
     for wm in weapon_matches:
         # wm[0] might contain things like "**Weapons:** Ares Alpha"
-        w_name = wm[0].replace("**Weapons:**", "").strip()
-        dmg = int(wm[1])
-        typ = wm[2]
-        ap = int(wm[3])
+        w_name = str(wm[0]).replace("**Weapons:**", "").strip()
+        dmg = int(str(wm[1]))
+        typ = str(wm[2])
+        ap = int(str(wm[3]))
         c.weapons.append(Weapon(name=w_name, damage=dmg, damage_type=typ, ap=ap))
 
     # Spells
@@ -1099,7 +1099,7 @@ def parse_scenario(file_path: str) -> GameEnvironment:
             return GameEnvironment(
                 description=content, modifiers={}, is_chase_combat=False
             )
-    return GameEnvironment("An empty arena.", {}, None, False)
+    return GameEnvironment("An empty arena.", {})
 
 
 def load_combatant(path: str) -> Combatant:
@@ -2191,784 +2191,8 @@ def process_action(active, target, action_decision, state, llm, app=None):
             result_text = f"Astral Attack missed! {target.name} successfully defended."
 
     elif is_erase_tether:
+        action_text = f"attempts to erase Tethers held by {target.name}"
         if getattr(active, "is_locked_by_tarpit", False):
-            action_text = f"{active.name} attempts to erase Tethers held by {target.name}."
             result_text = f"Failed! {active.name}'s connection is locked by Tar-Pit IC."
             return action_text, result_text, edge_spent
-        log = active.get_attribute("LOG", 3)
-        computer_skill = active.skills.get("Computer", 4)
-        attack_pool = log + computer_skill
-
-        wild_dice_count = 0
-        if state.environment.is_extream_mode:
-            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
-        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
-
-        def_pool = target.get_attribute("LOG", 3) + target.skills.get("Hacking", 5)
-        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
-        net_hits = attack_hits - def_hits
-
-        action_text = f"attempts to erase Tethers held by {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-        if net_hits > 0:
-            current_tethers = active.tethers.get(target.name, 0)
-            if current_tethers > 0:
-                removed = 2 if net_hits >= 3 else 1
-                active.tethers[target.name] = max(0, current_tethers - removed)
-                result_text = f"Successfully erased {removed} Tether(s)! {target.name} now holds {active.tethers[target.name]} Tether(s) on {active.name}."
-            else:
-                result_text = f"{target.name} holds no Tethers on {active.name} to erase."
-        else:
-            result_text = f"Failed to erase Tether. {target.name}'s connection remains secure."
-
-    elif is_tether:
-        if "Null-Suit" in target.special_rules:
-            action_text = f"attempts a Matrix action on {target.name}"
-            result_text = f"Action fails: {target.name} is wearing a Null-Suit and is immune to Matrix targeting."
-            narration = llm.narrate_action(active, action_text, result_text, state=state)
-            state.log(narration)
-            return action_text, result_text, edge_spent
-        log = active.get_attribute("LOG", 3)
-        hack_skill = active.skills.get("Hacking", 5)
-        attack_pool = log + hack_skill
-
-        wild_dice_count = 0
-        if state.environment.is_extream_mode:
-            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
-        attack_hits, attack_hits_glitched, edge_spent = (
-            RulesEngine.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
-        )
-
-        def_pool = target.get_attribute("WIL", 3) + target.matrix.firewall
-        if target.null_bags > 0:
-            def_pool += target.null_bags
-        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
-        net_hits = attack_hits - def_hits
-
-        action_text = f"attempts to establish a Tether on {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-        if net_hits > 0:
-            current_tethers = active.tethers.get(target.name, 0)
-            active.tethers[target.name] = current_tethers + 1
-            result_text = f"Tether established! {active.name} now has {active.tethers[target.name]} Tether(s) on {target.name}."
-        else:
-            result_text = f"Tether attempt blocked by {target.name}'s firewall."
-
-    else:
-        # Weapon Attack
-        chosen_weapon_name = ""
-        available_weapons = (
-            active.jumped_in_vehicle.weapons
-            if active.jumped_in_vehicle
-            else active.weapons
-        )
-        for w in available_weapons:
-            if w.name.lower() in action_lower:
-                chosen_weapon_name = w.name
-                break
-
-        if chosen_weapon_name:
-            weapon = next(
-                (w for w in available_weapons if w.name == chosen_weapon_name),
-                available_weapons[0],
-            )
-        else:
-            weapon = (
-                available_weapons[0]
-                if available_weapons
-                else Weapon("Unarmed Strike", 4, "S", 0)
-            )
-
-        # Scenario Modifiers
-        lighting_mod = state.environment.modifiers.get("lighting", 0)
-
-        # Attack Roll: Agility + Skill
-        if active.jumped_in_vehicle:
-            # Gunnery + Agility + Control Rig
-            attack_pool = (
-                active.get_attribute("AGI", 3)
-                + active.skills.get("Gunnery", 5)
-                + getattr(active, 'control_rig', 0)
-                + lighting_mod
-            )
-            if active.jumped_in_vehicle.swarm_count > 1:
-                attack_pool += active.jumped_in_vehicle.swarm_count - 1
-        else:
-            attack_pool = active.get_attribute("AGI", 3) + 5 + lighting_mod
-
-        wild_dice_count = 0
-        bg_count = state.environment.modifiers.get("background_count", 0)
-        if bg_count > 0:
-            wild_dice_count += bg_count
-
-        if "Sam" in active.name or "Ascended AI" in active.name:
-            wild_dice_count = attack_pool  # Overkill Protocol
-
-        attack_hits, attack_hits_glitched, edge_spent = (
-            RulesEngine.roll_attack_with_edge(max(1, attack_pool), active, wild_dice_count=wild_dice_count)
-        )
-
-        # Defense Roll: Reaction + Intuition + Cover
-        if target.jumped_in_vehicle:
-            def_pool = (
-                target.get_attribute("REA", 3)
-                + target.get_attribute("INT", 3)
-                + target.jumped_in_vehicle.handling
-            )
-        else:
-            def_pool = target.get_attribute("REA", 3) + target.get_attribute(
-                "INT", 3
-            )
-
-        # Apply Cover
-        # Determine LOS and Cover Modifiers based on map layout if available
-        cover_bonus = 0
-        if state.environment.layout_ascii:
-            cover_bonus = RulesEngine.calculate_los_cover(state, active, target)
-            # Add base zone cover if target is in a zone, don't stack excessively though, just take highest
-            zone_cover = 0
-            if target.zone:
-                if target.zone.cover.lower() == "light": zone_cover = 1
-                elif target.zone.cover.lower() == "medium": zone_cover = 2
-                elif target.zone.cover.lower() == "heavy": zone_cover = 4
-            cover_bonus = max(cover_bonus, zone_cover)
-        else:
-            # Fallback to simple zone cover
-            if target.zone:
-                if target.zone.cover.lower() == "light": cover_bonus = 1
-                elif target.zone.cover.lower() == "medium": cover_bonus = 2
-                elif target.zone.cover.lower() == "heavy": cover_bonus = 4
-
-        def_pool += cover_bonus
-
-        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
-
-        net_hits = attack_hits - def_hits
-        action_text = f"attacks {target.name} with {weapon.name} ({attack_hits} hits vs {def_hits} defense hits)"
-
-        is_explosive = (
-            "grenade" in weapon.name.lower()
-            or "missile" in weapon.name.lower()
-            or "rocket" in weapon.name.lower()
-        )
-
-        if is_explosive:
-            # Grenades can deviate, but for sim we hit the target zone
-            net_hits = max(0, net_hits)
-            base_dmg = weapon.damage
-
-            is_chunky = target.zone and (
-                target.zone.cover.lower() == "heavy"
-                or "enclosed" in target.zone.description.lower()
-                or "enclosed" in target.zone.name.lower()
-            )
-
-            if is_chunky:
-                base_dmg *= 2
-                action_text += " [CHUNKY SALSA EFFECT!]"
-
-            modified_damage = base_dmg + net_hits
-            modified_ap = weapon.ap
-
-            # Gather targets in the AoE blast radius (same zone, or just the target if no zone)
-            aoe_targets = []
-
-            if target.zone:
-                state.environment.recent_blasts.append(target.zone.name)
-
-            for c in state.combatants:
-                if c.is_alive and not c.has_yielded:
-                    if target.zone and c.zone == target.zone:
-                        aoe_targets.append(c)
-                    elif not target.zone and c.name == target.name:
-                        aoe_targets.append(c)
-
-            result_text = f"Explosive detonates! Hitting {len(aoe_targets)} target(s) in zone."
-
-            for c_target in aoe_targets:
-                # Dropoff can be abstracted or just full damage for everyone in the zone
-                if c_target.jumped_in_vehicle:
-                    soak_pool = max(0, c_target.jumped_in_vehicle.body + c_target.jumped_in_vehicle.armor + modified_ap)
-                else:
-                    soak_pool = max(0, c_target.get_attribute("BOD", 3) + c_target.total_armor + modified_ap)
-
-                soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
-                final_damage = max(0, modified_damage - soak_hits)
-
-                result_text += f"\n- {c_target.name} soaks {soak_hits} hits, taking {final_damage} {weapon.damage_type} damage."
-
-                result_text += c_target.take_damage(final_damage, weapon.damage_type)
-
-        elif net_hits > 0:
-            base_dmg = weapon.damage
-            modified_damage = base_dmg + net_hits
-            modified_ap = weapon.ap
-
-            # Soak Roll: Body + Armor + AP
-            # Evade bonus
-            evade_mod = 0
-            for rule in target.special_rules:
-                if rule.startswith("Evade"):
-                    try:
-                        evade_mod += int(rule.split("(+")[1].split(")")[0])
-                    except:
-                        pass
-
-            if target.jumped_in_vehicle:
-                soak_pool = max(
-                    0,
-                    target.jumped_in_vehicle.body
-                    + target.jumped_in_vehicle.armor
-                    + modified_ap
-                    + evade_mod,
-                )
-            else:
-                soak_pool = max(
-                    0,
-                    target.get_attribute("BOD", 3)
-                    + target.armor
-                    + modified_ap,
-                )
-
-            soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
-
-            final_damage = max(0, modified_damage - soak_hits)
-            result_text = f"Attack succeeds! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} {weapon.damage_type} damage."
-
-            result_text += target.take_damage(final_damage, weapon.damage_type)
-
-            # Check Mutual Tether Feedback Loop
-            if target.tethers.get(active.name, 0) > 0 and active.tethers.get(target.name, 0) > 0:
-                feedback_damage = final_damage // 2
-                if feedback_damage > 0:
-                    active.stun_damage += feedback_damage
-                    result_text += f" Mutual Tethers trigger a Feedback Loop! {active.name} takes {feedback_damage} unresisted Stun feedback."
-                    if active.stun_damage >= active.stun_track:
-                        active.is_alive = False
-                        result_text += f" {active.name} is incapacitated by the feedback!"
-
-            if (
-                target.physical_damage >= target.physical_track
-                or target.stun_damage >= target.stun_track
-            ):
-                target.is_alive = False
-                result_text += f" {target.name} is incapacitated!"
-        else:
-            result_text = f"Attack misses! {target.name} dodges the attack."
-
-    # Narration
-    if edge_spent:
-        action_text += " [Spent Edge to re-roll misses!]"
-
-    if "N.I.C.A." in active.special_rules:
-        if locals().get("attack_hits_glitched") or locals().get(
-            "drain_hits_glitched"
-        ):
-            effect = apply_nica_glitch(active)
-            action_text += f" [N.I.C.A. Glitch! Rogue 'ware sparks! {effect}]"
-
-    if "N.I.C.A." in target.special_rules:
-        if (
-            locals().get("def_hits_glitched")
-            or locals().get("soak_hits_glitched")
-            or locals().get("bio_hits_glitched")
-        ):
-            effect = apply_nica_glitch(target)
-            result_text += (
-                f" [N.I.C.A. Glitch! Target's rogue 'ware sparks! {effect}]"
-            )
-
-    if (
-        target.physical_damage >= target.physical_track
-        or target.stun_damage >= target.stun_track
-    ):
-        target.is_alive = False
-        result_text += f" {target.name} is incapacitated!"
-
-        # Check for Gun-Fu (Flow State)
-        has_flow_state = any("flow state" in s.lower() for s in active.special_rules) or \
-                         any("flow state" in s.name.lower() for s in active.spells)
-        if has_flow_state and active.is_alive:
-            result_text += f" {active.name} triggers Gun-Fu (Flow State) and maintains momentum!"
-            # We add a tag to the state so the main loop can process the free action
-            if not hasattr(state, "bonus_actions"):
-                state.bonus_actions = []
-            state.bonus_actions.append(active)
-
-    if (
-        active.physical_damage >= active.physical_track
-        or active.stun_damage >= active.stun_track
-    ):
-        active.is_alive = False
-        action_text += f" {active.name} is incapacitated!"
-
-    if is_explosive:
-        state.log(f"--- AoE Mechanics ---\n{result_text}\n---------------------")
-
-    if getattr(state, "is_stealth_phase_active", False):
-        weapon_used = locals().get("weapon")
-        is_attack = weapon_used is not None
-        is_loud_weapon = False
-        if is_attack:
-            is_melee = getattr(weapon_used, "skill_used", "") in ["Close Combat", "Unarmed Combat"] or "unarmed" in weapon_used.name.lower() or "blade" in weapon_used.name.lower() or "knife" in weapon_used.name.lower() or "sword" in weapon_used.name.lower()
-            # Simplistic check: If it's a gun and doesn't say "suppressed", it's loud.
-            is_loud_weapon = not is_melee and "suppressed" not in weapon_used.name.lower()
-
-        is_loud_spell = is_spell and "combat" in getattr(locals().get("spell"), "category", "").lower()
-
-        if is_explosive or is_loud_weapon or is_loud_spell:
-            state.is_stealth_phase_active = False
-            result_text += " LOUD ACTION DETECTED! Stealth broken!"
-
-    return action_text, result_text, edge_spent
-
-def main():
-    parser = argparse.ArgumentParser(
-        description="Autonomous Combat Simulator for Shadowrun 7E"
-    )
-    parser.add_argument(
-        "--team1",
-        nargs="+",
-        required=False,
-        help="List of paths to Chummer or Markdown files for Team 1",
-    )
-    parser.add_argument(
-        "--team2",
-        nargs="+",
-        required=False,
-        help="List of paths to Chummer or Markdown files for Team 2",
-    )
-    parser.add_argument(
-        "--scenario", help="Path to scenario JSON or Markdown", default="scenario.json"
-    )
-    parser.add_argument(
-        "--llm-url",
-        help="URL of the OpenAI-compatible endpoint",
-        default="http://localhost:8000/v1",
-    )
-    parser.add_argument(
-        "--llm-model", help="Name of the model to use", default="local-model"
-    )
-    parser.add_argument(
-        "--dry-run", action="store_true", help="Run without connecting to an actual LLM"
-    )
-    parser.add_argument(
-        "--interactive",
-        action="store_true",
-        help="Pause to allow user to input actions manually",
-    )
-    parser.add_argument(
-        "--ui", action="store_true", help="Launch the Pygame visual interface"
-    )
-    parser.add_argument(
-        "--client", action="store_true", help="Run the UI as a network client"
-    )
-    parser.add_argument(
-        "--ip", type=str, default="127.0.0.1", help="Host IP to connect to (if client)"
-    )
-
-
-    parser.add_argument(
-        "--trade-simulator",
-        help="Run the trading simulator. Format: Combatant_Path:Item_Name:Base_Value:Fixer_Difficulty (e.g., 'npc_templates/Kyber.chum5:Ares Predator:350:1')",
-    )
-    parser.add_argument(
-        "--host-run",
-        action="store_true",
-        help="Run a dedicated Host Run (Matrix) simulation mode",
-    )
-    parser.add_argument(
-        "--extream",
-        action="store_true",
-        help="Enable SRX: eXtream Edition rules",
-    )
-
-    args = parser.parse_args()
-
-    if args.trade_simulator:
-        parts = args.trade_simulator.split(":")
-        if len(parts) >= 4 and len(parts) <= 6:
-            combatant_path = parts[0]
-            item_name = parts[1]
-            try:
-                item_value = int(parts[2])
-                fixer_diff = int(parts[3])
-                is_selling = False
-                item_condition = "mint"
-                if len(parts) >= 5:
-                    is_selling = parts[4].lower() == "true"
-                if len(parts) == 6:
-                    item_condition = parts[5].lower()
-
-                combatant = load_combatant(combatant_path)
-                simulate_trade(combatant, item_name, item_value, fixer_diff, is_selling, item_condition)
-            except ValueError:
-                print("Error: Base_Value and Fixer_Difficulty must be integers.")
-        else:
-            print("Error: Invalid format for --trade-simulator. Expected Combatant_Path:Item_Name:Base_Value:Fixer_Difficulty[:Is_Selling:Condition]")
-        return
-
-
-    if not args.trade_simulator and (not args.team1 or not args.team2):
-        parser.error("the following arguments are required when not using --trade-simulator: --team1, --team2")
-
-    # Create dummy scenario if missing
-    if not os.path.exists(args.scenario):
-        with open(args.scenario, "w") as f:
-            json.dump(
-                {
-                    "description": "An abandoned Wuxing lab facility. Dim lighting, flickering neon tubes, and patches of humming grey-goo on the walls.",
-                    "modifiers": {"lighting": -2},
-                    "is_host_run": args.host_run,
-                    "host_nodes": [
-                        {
-                            "name": "Public Lobby",
-                            "rating": 4,
-                            "description": "A bustling virtual plaza filled with low-res avatars.",
-                            "security_level": "Green",
-                            "connected_nodes": ["Secure Vault"]
-                        },
-                        {
-                            "name": "Secure Vault",
-                            "rating": 8,
-                            "description": "A blank white void humming with deadly potential.",
-                            "security_level": "Red",
-                            "connected_nodes": []
-                        }
-                    ]
-                },
-                f,
-            )
-
-    env = parse_scenario(args.scenario, is_extream_mode=args.extream)
-    if args.host_run:
-        env.is_host_run = True
-    state = SimulationState(environment=env)
-
-    state.combatants = []
-    for path in args.team1:
-        c = load_combatant(path)
-        c.team = 1
-        state.combatants.append(c)
-    for path in args.team2:
-        c = load_combatant(path)
-        c.team = 2
-        state.combatants.append(c)
-
-    # Initialize dummy LLM Agent if dry-run
-    if args.dry_run:
-
-        class DummyAgent:
-            def ask_action(self, combatant, state):
-                if combatant.jumped_in_vehicle and combatant.jumped_in_vehicle.weapons:
-                    return f"attack with {combatant.jumped_in_vehicle.weapons[0].name}"
-                if combatant.spells and combatant.get_attribute("MAG", 0) > 0:
-                    return f"cast {combatant.spells[0].name}"
-                elif combatant.matrix.attack > 3:
-                    if random.random() > 0.5:
-                        return "data spike"
-                    else:
-                        return "establish tether"
-                return (
-                    "sprint to cover"
-                    if random.random() > 0.8
-                    else (
-                        f"attack with {combatant.weapons[0].name}"
-                        if combatant.weapons
-                        else "attack with Unarmed Strike"
-                    )
-                )
-
-            def narrate_action(self, combatant, action, result, state=None):
-                return f"{combatant.name} takes action, resulting in: {result}"
-
-        llm = DummyAgent()
-    else:
-        llm = LLM_Agent(endpoint_url=args.llm_url, model_name=args.llm_model)
-
-    app = None
-    if args.ui:
-        from ui.app import App
-
-        app = App(is_host=not args.client, host_ip=args.ip)
-    state.log(f"=== Beginning Shadowrun 7E Combat Simulation ===")
-    state.log(f"Scenario: {env.description}")
-
-    team1_names = [
-        f"{c.name} (in {c.jumped_in_vehicle.name})" if c.jumped_in_vehicle else c.name
-        for c in state.combatants
-        if c.team == 1
-    ]
-    team2_names = [
-        f"{c.name} (in {c.jumped_in_vehicle.name})" if c.jumped_in_vehicle else c.name
-        for c in state.combatants
-        if c.team == 2
-    ]
-    state.log(
-        f"Combatants: Team 1 ({', '.join(team1_names)}) vs Team 2 ({', '.join(team2_names)})"
-    )
-
-    # Assign zones
-    if env.zones:
-        for c in state.combatants:
-            if c.team == 1:
-                c.zone = env.zones[0]
-            else:
-                c.zone = env.zones[-1]
-
-    # Apply pre-combat economy & contact modifiers
-    for c in state.combatants:
-        if c.hot_nuyen >= 1000:
-            god_tethers = c.hot_nuyen // 1000
-            c.tethers["Grid Overwatch Division"] = god_tethers
-            state.log(f"{c.name}'s Hot Nuyen triggered {god_tethers} automatic Tether(s) from Grid Overwatch Division!")
-
-        for contact in c.contacts:
-            if contact.connection >= 4 and contact.loyalty >= 4:
-                c.edge += 1
-                state.log(f"{c.name}'s high-level contact ({contact.name}) provided intel, granting +1 Edge!")
-
-    # Roll Initiative
-    for c in state.combatants:
-        c.roll_initiative()
-        # Apply high ground / surprise initiative modifiers
-        if c.zone and (
-            "High Ground" in c.zone.name or "High Ground" in c.zone.description
-        ):
-            extra = RulesEngine.roll_dice(1)  # 1 extra die
-            c.initiative_score += extra
-    init_log = " | ".join(f"{c.name} ({c.initiative_score})" for c in state.combatants)
-    state.log(f"Initiative: {init_log}")
-
-    # Sort by initiative descending
-    state.combatants.sort(key=lambda c: c.initiative_score, reverse=True)
-
-    # Main combat loop
-    while (
-        any(
-            c.is_alive and not getattr(c, "has_yielded", False)
-            for c in state.combatants
-            if c.team == 1
-        )
-        and any(
-            c.is_alive and not getattr(c, "has_yielded", False)
-            for c in state.combatants
-            if c.team == 2
-        )
-        and state.turn < 20
-    ):
-        if app:
-            app.update_state(state)
-            app.tick()
-
-        turn_header = f"\n--- Turn {state.turn} ---"
-        if getattr(state, "is_stealth_phase_active", False):
-            turn_header = f"\n--- Turn {state.turn} (Stealth Phase) ---"
-        state.log(turn_header)
-
-        for active in state.combatants:
-            # Clear previous blasts before next action
-            state.environment.recent_blasts.clear()
-
-            if not active.is_alive or getattr(active, "has_yielded", False):
-                continue
-
-            # Skip enemy actions if stealth is active
-            if getattr(state, "is_stealth_phase_active", False) and active.team != 1:
-                state.log(f"[{active.name} is on patrol, unaware of the intruders.]")
-                continue
-
-            # Need to check if there are still valid targets before acting
-            valid_targets = [
-                c
-                for c in state.combatants
-                if c.team != active.team
-                and c.is_alive
-                and not getattr(c, "has_yielded", False)
-            ]
-            if not valid_targets:
-                break
-
-            target = random.choice(valid_targets)
-
-            if app or args.interactive:
-                if app:
-
-                    app.pending_action = None
-                    print(f"Waiting for UI action for {active.name}...")
-                    while app.pending_action is None:
-                        app.tick()
-                        # If user closes window during wait, fallback
-                        if not app.running:
-                            app.pending_action = llm.ask_action(active, state)
-                            break
-                    action_decision = app.pending_action
-                else:
-                    user_input = input(
-                        f"Enter action for {active.name} (or press Enter to let AI decide): "
-                    )
-                    if user_input.strip():
-                        action_decision = user_input
-                    else:
-                        action_decision = llm.ask_action(active, state)
-            else:
-                # Use LLM to decide tactical action
-                action_decision = llm.ask_action(active, state)
-
-            # Restrict actions in Host Run mode
-            if getattr(state.environment, "is_host_run", False):
-                # Only matrix actions allowed in host run mode
-                matrix_keywords = ["data spike", "tether", "tar-pit", "enter host", "exit host", "pass", "yield", "killer", "sparky", "patrol", "data ic"]
-                if not any(kw in action_decision.lower() for kw in matrix_keywords):
-                    action_decision = "data spike"  # Default to data spike if invalid action in host run
-
-            state.log(f"[{active.name} Tactical Decision]: {action_decision.strip()}")
-
-            action_text, result_text, edge_spent = process_action(active, target, action_decision, state, llm, app)
-
-            narration = llm.narrate_action(active, action_text, result_text, state=state)
-            state.log(narration)
-
-            # Process Gun-Fu (Flow State) Bonus Actions
-            while hasattr(state, "bonus_actions") and state.bonus_actions:
-                bonus_active = state.bonus_actions.pop(0)
-                if not bonus_active.is_alive or getattr(bonus_active, "has_yielded", False):
-                    continue
-
-                valid_targets = [
-                    c for c in state.combatants
-                    if c.team != bonus_active.team and c.is_alive and not getattr(c, "has_yielded", False)
-                ]
-                if not valid_targets:
-                    break
-
-                target = random.choice(valid_targets)
-                state.log(f"--- [FLOW STATE TRIGGERED for {bonus_active.name}] ---")
-
-                if app or args.interactive:
-                    if app:
-                        app.pending_action = None
-                        print(f"Waiting for BONUS UI action for {bonus_active.name}...")
-                        while app.pending_action is None:
-                            app.tick()
-                            if not app.running:
-                                app.pending_action = llm.ask_action(bonus_active, state)
-                                break
-                        action_decision = app.pending_action
-                    else:
-                        user_input = input(f"Enter BONUS action for {bonus_active.name} (or press Enter to let AI decide): ")
-                        action_decision = user_input if user_input.strip() else llm.ask_action(bonus_active, state)
-                else:
-                    action_decision = llm.ask_action(bonus_active, state)
-
-                state.log(f"[{bonus_active.name} Bonus Decision]: {action_decision.strip()}")
-                action_text, result_text, edge_spent = process_action(bonus_active, target, action_decision, state, llm, app)
-                narration = llm.narrate_action(bonus_active, action_text, result_text, state=state)
-                state.log(narration)
-
-        # End of Turn Logic
-
-        # HMHVV Infection Processing
-        for c in state.combatants:
-            if c.is_infected and c.is_alive:
-                if c.hmhvv_infection_level > 0:
-                    state.log(f"[{c.name}'s HMHVV Infection worsens. Their body struggles to reject the nanite-laced virus, applying a -1 penalty to actions!]")
-                    # Debuff action pools, simulating struggle
-                    c.initiative_score -= 1
-                if c.hmhvv_infection_level > 2:
-                    c.take_damage(1, "P")
-                    state.log(f"[{c.name} takes 1 Physical Damage due to advanced HMHVV Infection spreading!]")
-
-        # Wave Defense Spawning
-        active_ghouls = sum(1 for c in state.combatants if c.team == 2 and c.is_alive and "Ghoul" in c.name)
-        if getattr(state.environment, "wave_defense", False) and state.turn % 2 == 0 and active_ghouls < 6:
-            try:
-                new_ghoul = load_combatant("npc_templates/zkazena_ghoul.chum5")
-                new_ghoul.team = 2
-                new_ghoul.name = f"Swarming Ghoul (Wave {state.turn // 2})"
-                new_ghoul.roll_initiative()
-                if state.environment.zones:
-                    new_ghoul.zone = state.environment.zones[-1]
-                state.combatants.append(new_ghoul)
-                state.log(f"\n[WAVE DEFENSE: A new {new_ghoul.name} breaches the barricades and joins the horde!]")
-            except Exception as e:
-                state.log(f"[WAVE DEFENSE ERROR: Failed to load ghoul: {e}]")
-
-        # Host Run ICE Spawning
-        if getattr(state.environment, "is_host_run", False):
-            # Spawn ICE based on alert level
-            if state.environment.alert_level > 0 and state.turn % max(1, 4 - state.environment.alert_level) == 0:
-                current_host = next((n for n in state.environment.host_nodes if any(c.current_host == n.name for c in state.combatants if c.team == 1)), None)
-                if current_host:
-                    ic_rating = current_host.rating
-                    # Determine ICE type based on alert level
-                    ic_types = ["Patrol IC", "Tar-Pit IC", "Data IC", "Killer IC", "Sparky IC"]
-                    spawn_type = ic_types[min(len(ic_types) - 1, state.environment.alert_level - 1)]
-
-                    new_ic = Combatant(
-                        name=f"{spawn_type} ({current_host.name})",
-                        attributes={'LOG': ic_rating, 'INT': ic_rating, 'WIL': ic_rating},
-                        skills={"Cybercombat": ic_rating, "Computer": ic_rating},
-                        matrix=MatrixAttributes(attack=ic_rating, sleaze=ic_rating, data_processing=ic_rating, firewall=ic_rating),
-                        team=2,
-                        is_host=False,
-                        host_rating=ic_rating
-                    )
-                    new_ic.roll_initiative()
-                    state.combatants.append(new_ic)
-                    state.log(f"\n[HOST ALERT: {current_host.name} deploys {new_ic.name}!]")
-
-
-        state.turn += 1
-
-    # Summary
-    state.log("\n=== Combat Summary ===")
-
-    t1_alive = any(c.is_alive for c in state.combatants if c.team == 1)
-    t2_alive = any(c.is_alive for c in state.combatants if c.team == 2)
-    if t1_alive and not t2_alive:
-        winning_team = 1
-    elif t2_alive and not t1_alive:
-        winning_team = 2
-    else:
-        winning_team = None
-
-    if winning_team:
-        state.log(f"Winner: Team {winning_team} wins in {state.turn - 1} turns!")
-    else:
-        state.log("Mutual destruction or timeout.")
-
-    for c in state.combatants:
-        status = "Alive" if c.is_alive else "Incapacitated"
-        state.log(
-            f"Team {c.team} - {c.name}: {status} | Physical Damage: {c.physical_damage}/{c.physical_track} | Stun Damage: {c.stun_damage}/{c.stun_track}"
-        )
-
-    # Generate Loot Summary
-    if winning_team:
-        losers = [c for c in state.combatants if not c.is_alive]
-        if losers:
-            loot_table = [
-                "A handful of raw, buzzing Karma shards.",
-                "A glitchy Rating 2 commlink.",
-                "A half-empty magazine of Nanite-Buster rounds.",
-                "A shard of Living Crystal.",
-                "A scrubbed, high-capacity credstick holding 5,000¥.",
-                "A pristine piece of 'Dead Tech'.",
-            ]
-            # using global random module
-            loot_item = random.choice(loot_table)
-            state.log(f"\nLoot Acquired by Team {winning_team}: {loot_item}")
-
-    # Save State
-    state.log("\nSaving scratchpad states...")
-    for c in state.combatants:
-        save_state(c, "campaign_state")
-
-    # If the user has a global state, or if we want to default a global state for the economy
-    # Ideally, this should update properties like the economy multiplier based on combat outcomes if they want
-    save_global_campaign_state({"economy_multiplier": 1.0}, "campaign_state")
-
-
-if __name__ == "__main__":
-    main()
+        result_text = RulesEngine.resolve_erase_tether(state, active, target)
