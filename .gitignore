@@ -18,4 +18,3 @@ venv/
 *.log
 *.aux
 tournament_results.md
-.coverage
