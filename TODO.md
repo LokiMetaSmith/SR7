@@ -207,5 +207,5 @@ Based on the recent systems review, here is a prioritized to-do list for making 
 *   [x] **Add type hints to combat_simulator.py:** Introduce strict type checking (MyPy) to improve code readability and prevent runtime bugs.
 *   [x] **Implement CI/CD for tests:** Create a GitHub Actions workflow that runs the pytest suite on every push and pull request.
 *   [x] **Refactor RulesEngine:** Break down the monolithic RulesEngine in combat_simulator.py into smaller, modular components (e.g., MagicRules, MatrixRules, CombatRules) to improve maintainability.
-*   [ ] **Complete RulesEngine Refactor:** Ensure `rules_engine.py` is feature-complete with all rules in the game, extracting any remaining hardcoded logic from `combat_simulator.py` into appropriate modular classes (`CombatRules`, `MagicRules`, `MatrixRules`, etc).
+*   [x] **Complete RulesEngine Refactor:** Ensure `rules_engine.py` is feature-complete with all rules in the game, extracting any remaining hardcoded logic from `combat_simulator.py` into appropriate modular classes (`CombatRules`, `MagicRules`, `MatrixRules`, etc).
 *   [x] **Enhance test coverage:** Add tests for edge cases in the TradeScreen haggling logic and the SaveLoadScreen state management.
