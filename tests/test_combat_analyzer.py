@@ -6,6 +6,7 @@ import random
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from scripts.combat_analyzer import run_simulation
+from scripts.rules_engine import DiceRules
 from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, GameEnvironment
 
 def test_combat_analyzer_math_accuracy(monkeypatch):
@@ -21,8 +22,8 @@ def test_combat_analyzer_math_accuracy(monkeypatch):
         return (2, False) # Returns 2 hits, no glitch
 
     import scripts.combat_simulator as sim
-    monkeypatch.setattr(sim.RulesEngine, "roll_attack_with_edge", mock_roll_attack_with_edge)
-    monkeypatch.setattr(sim.RulesEngine, "roll_dice", mock_roll_dice)
+    monkeypatch.setattr(DiceRules, "roll_attack_with_edge", mock_roll_attack_with_edge)
+    monkeypatch.setattr(DiceRules, "roll_dice", mock_roll_dice)
 
     # Also mock random to prevent non-deterministic decisions from DummyAgent and Initiative
     monkeypatch.setattr(random, "random", lambda: 0.1) # Never sprint to cover or use data spike randomly

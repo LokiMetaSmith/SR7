@@ -3,7 +3,8 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from scripts.combat_simulator import Combatant, MatrixAttributes, RulesEngine, Weapon, Zone, Vehicle
+from scripts.rules_engine import DiceRules, CombatRules, MatrixRules
+from scripts.combat_simulator import Combatant, MatrixAttributes, Weapon, Zone, Vehicle
 
 def test_hopepunk_social_modifier():
     c = Combatant(
@@ -92,8 +93,8 @@ def test_erase_tether():
     """
     Test that the Erase Tether action successfully decrements an enemy's tethers.
     """
+    from scripts.rules_engine import DiceRules, CombatRules, MatrixRules
     from scripts.combat_simulator import Combatant, MatrixAttributes
-    from scripts.combat_simulator import RulesEngine
 
     active = Combatant(
         name="Hacker1",
@@ -113,16 +114,16 @@ def test_erase_tether():
     )
 
     # Force rolls to ensure success
-    original_roll = RulesEngine.roll_dice
-    original_edge = RulesEngine.roll_attack_with_edge
+    original_roll = DiceRules.roll_dice
+    original_edge = DiceRules.roll_attack_with_edge
 
     def mock_edge(pool, c):
         return (10, False, False)
     def mock_roll(pool):
         return (1, False)
 
-    RulesEngine.roll_attack_with_edge = mock_edge
-    RulesEngine.roll_dice = mock_roll
+    DiceRules.roll_attack_with_edge = mock_edge
+    DiceRules.roll_dice = mock_roll
 
     try:
 
@@ -134,10 +135,10 @@ def test_erase_tether():
         log = active.get_attribute("LOG", 3)
         computer_skill = active.skills.get("Computer", 4)
         attack_pool = log + computer_skill
-        attack_hits, attack_hits_glitched, edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+        attack_hits, attack_hits_glitched, edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active)
 
         def_pool = target.get_attribute("LOG", 3) + target.skills.get("Hacking", 5)
-        def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+        def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
         net_hits = attack_hits - def_hits
 
         if net_hits > 0:
@@ -149,8 +150,8 @@ def test_erase_tether():
         assert target.tethers["Hacker1"] == 0, "Tethers were not correctly erased on critical success"
 
     finally:
-        RulesEngine.roll_dice = original_roll
-        RulesEngine.roll_attack_with_edge = original_edge
+        DiceRules.roll_dice = original_roll
+        DiceRules.roll_attack_with_edge = original_edge
 
 def test_null_suit_matrix_immunity():
     """
@@ -220,7 +221,8 @@ def test_possession_overrides_and_inhabitation():
 
 
 def test_spirit_vs_sprite_compiling():
-    from scripts.combat_simulator import Combatant, MatrixAttributes, RulesEngine, GameEnvironment, SimulationState, process_action
+    from scripts.rules_engine import DiceRules, CombatRules, MatrixRules
+    from scripts.combat_simulator import Combatant, MatrixAttributes, GameEnvironment, SimulationState, process_action
     import scripts.combat_simulator as sim
     from unittest.mock import patch
     import os
@@ -244,8 +246,8 @@ def test_spirit_vs_sprite_compiling():
         has_yielded=False
     )
 
-    original_roll_attack = RulesEngine.roll_attack_with_edge
-    original_roll_dice = RulesEngine.roll_dice
+    original_roll_attack = DiceRules.roll_attack_with_edge
+    original_roll_dice = DiceRules.roll_dice
 
     def mock_roll_attack(pool, c, wild_dice_count=0, **kwargs):
         return (6, False, False)
@@ -257,8 +259,8 @@ def test_spirit_vs_sprite_compiling():
             return (4, False)
         return (0, False)
 
-    RulesEngine.roll_attack_with_edge = mock_roll_attack
-    RulesEngine.roll_dice = mock_roll_dice
+    DiceRules.roll_attack_with_edge = mock_roll_attack
+    DiceRules.roll_dice = mock_roll_dice
 
     original_load = sim.load_combatant
     def mock_load(path):
@@ -319,12 +321,12 @@ def test_spirit_vs_sprite_compiling():
         assert any("Spirit" in c.name for c in state.combatants) or any("spirit" in c.name.lower() for c in state.combatants)
 
     finally:
-        RulesEngine.roll_attack_with_edge = original_roll_attack
-        RulesEngine.roll_dice = original_roll_dice
+        DiceRules.roll_attack_with_edge = original_roll_attack
+        DiceRules.roll_dice = original_roll_dice
         sim.load_combatant = original_load
 
 def test_line_of_sight_and_cover():
-    from scripts.combat_simulator import GameEnvironment, SimulationState, Zone, Combatant, MatrixAttributes, RulesEngine
+    from scripts.combat_simulator import GameEnvironment, SimulationState, Zone, Combatant, MatrixAttributes
 
     layout = [
         "#####",
@@ -350,13 +352,13 @@ def test_line_of_sight_and_cover():
     # Test direct LOS without cover (A to B)
     c1.zone = Zone("Zone A", 0, "Desc")
     c2.zone = Zone("Zone B", 0, "Desc")
-    cover = RulesEngine.calculate_los_cover(state, c1, c2)
+    cover = CombatRules.calculate_los_cover(state, c1, c2)
     assert cover == 0, f"Expected 0 cover, got {cover}"
 
     # Test LOS with cover (A to C or B to C blocked by O)
     c1.zone = Zone("Zone B", 0, "Desc")
     c2.zone = Zone("Zone C", 0, "Desc")
-    cover = RulesEngine.calculate_los_cover(state, c1, c2)
+    cover = CombatRules.calculate_los_cover(state, c1, c2)
     assert cover > 0, f"Expected cover bonus (>0), got {cover}"
 
 
@@ -383,36 +385,36 @@ def test_stealth_phase():
 
 
     # Store original
-    original_ask_action = scripts.combat_simulator.RulesEngine.agent.ask_action if hasattr(scripts.combat_simulator.RulesEngine, "agent") else None
-    original_roll = scripts.combat_simulator.RulesEngine.roll_dice
+    original_ask_action = None
+    original_roll = scripts.combat_simulator.DiceRules.roll_dice
 
     # Mock roll to ensure hit
-    scripts.combat_simulator.RulesEngine.roll_dice = lambda pool, wild=0, combatant=None, state=None, **kwargs: (pool, False)
+    scripts.combat_simulator.DiceRules.roll_dice = lambda pool, wild=0, combatant=None, state=None, **kwargs: (pool, False)
 
     try:
         # Mock LLM response to simulate standard attack
-        scripts.combat_simulator.RulesEngine.agent = type("MockAgent", (), {"ask_action": lambda self, c, s: '{"action": "attack", "target": "Guard", "weapon": "Combat Knife"}', "narrate_action": lambda self, *args, **kwargs: ""})()
+        agent_mock = type("MockAgent", (), {"ask_action": lambda self, c, s: '{"action": "attack", "target": "Guard", "weapon": "Combat Knife"}', "narrate_action": lambda self, *args, **kwargs: ""})()
         c1.weapons = [Weapon("Combat Knife", 4, "P", 0)]
 
         import json
-        scripts.combat_simulator.process_action(c1, c2, json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("action", "") + " " + json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("weapon", ""), state, scripts.combat_simulator.RulesEngine.agent)
+        scripts.combat_simulator.process_action(c1, c2, json.loads(agent_mock.ask_action(c1, state)).get("action", "") + " " + json.loads(agent_mock.ask_action(c1, state)).get("weapon", ""), state, agent_mock)
 
         # Still stealth phase because Combat Knife is not loud (doesn't have loud keywords)
         assert state.is_stealth_phase_active is True
 
         # Now mock a grenade attack
-        setattr(scripts.combat_simulator.RulesEngine.agent, "ask_action", lambda c, s: '{"action": "attack", "target": "Guard", "weapon": "Frag Grenade"}')
+        setattr(agent_mock, "ask_action", lambda c, s: '{"action": "attack", "target": "Guard", "weapon": "Frag Grenade"}')
         c1.weapons = [Weapon("Frag Grenade", 16, "P", -2)]
 
         import json
-        scripts.combat_simulator.process_action(c1, c2, json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("action", "") + " " + json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("weapon", ""), state, scripts.combat_simulator.RulesEngine.agent)
+        scripts.combat_simulator.process_action(c1, c2, json.loads(agent_mock.ask_action(c1, state)).get("action", "") + " " + json.loads(agent_mock.ask_action(c1, state)).get("weapon", ""), state, agent_mock)
 
         # Frag Grenade should break stealth
         assert state.is_stealth_phase_active is False
     finally:
-        scripts.combat_simulator.RulesEngine.roll_dice = original_roll
+        scripts.combat_simulator.DiceRules.roll_dice = original_roll
         if original_ask_action:
-            scripts.combat_simulator.RulesEngine.agent.ask_action = original_ask_action
+            pass
 
 def test_gun_fu_flow_state():
     from scripts.combat_simulator import GameEnvironment, SimulationState, Combatant, MatrixAttributes, Weapon
@@ -438,21 +440,21 @@ def test_gun_fu_flow_state():
     import scripts.combat_simulator
 
     # Store original
-    original_ask_action = scripts.combat_simulator.RulesEngine.agent.ask_action if hasattr(scripts.combat_simulator.RulesEngine, "agent") else None
-    original_roll = scripts.combat_simulator.RulesEngine.roll_dice
+    original_ask_action = None
+    original_roll = scripts.combat_simulator.DiceRules.roll_dice
 
     # Mock roll to ensure hit and damage
-    scripts.combat_simulator.RulesEngine.roll_dice = lambda pool, wild=0, combatant=None, state=None, **kwargs: (pool, False)
+    scripts.combat_simulator.DiceRules.roll_dice = lambda pool, wild=0, combatant=None, state=None, **kwargs: (pool, False)
 
     try:
         import json
-        scripts.combat_simulator.RulesEngine.agent = type("MockAgent", (), {"ask_action": lambda self, c, s: '{"action": "attack", "target": "Thug 1", "weapon": "Pistol"}', "narrate_action": lambda self, *args, **kwargs: ""})()
+        agent_mock = type("MockAgent", (), {"ask_action": lambda self, c, s: '{"action": "attack", "target": "Thug 1", "weapon": "Pistol"}', "narrate_action": lambda self, *args, **kwargs: ""})()
 
         # Make sure no bonus actions yet
         assert not hasattr(state, "bonus_actions") or len(state.bonus_actions) == 0
 
         # Process action to kill Thug 1
-        scripts.combat_simulator.process_action(c1, c2, json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("action", "") + " " + json.loads(scripts.combat_simulator.RulesEngine.agent.ask_action(c1, state)).get("weapon", ""), state, scripts.combat_simulator.RulesEngine.agent)
+        scripts.combat_simulator.process_action(c1, c2, json.loads(agent_mock.ask_action(c1, state)).get("action", "") + " " + json.loads(agent_mock.ask_action(c1, state)).get("weapon", ""), state, agent_mock)
 
         # Verify thug 1 is dead
         assert not c2.is_alive
@@ -462,12 +464,13 @@ def test_gun_fu_flow_state():
         assert len(state.bonus_actions) == 1
         assert state.bonus_actions[0] == c1
     finally:
-        scripts.combat_simulator.RulesEngine.roll_dice = original_roll
+        scripts.combat_simulator.DiceRules.roll_dice = original_roll
         if original_ask_action:
-            scripts.combat_simulator.RulesEngine.agent.ask_action = original_ask_action
+            pass
 
 def test_astral_combat_initiative(monkeypatch):
-    from scripts.combat_simulator import Combatant, MatrixAttributes, RulesEngine
+    from scripts.rules_engine import DiceRules, CombatRules, MatrixRules
+    from scripts.combat_simulator import Combatant, MatrixAttributes
 
     # Create a dual-natured combatant
     c = Combatant(
@@ -486,7 +489,7 @@ def test_astral_combat_initiative(monkeypatch):
                 self.total = 3  # Assume the D6 rolls a 3
         return MockResult()
 
-    monkeypatch.setattr(RulesEngine, "roll_dice", mock_roll_dice)
+    monkeypatch.setattr(DiceRules, "roll_dice", mock_roll_dice)
 
     # Astral Initiative = REA + INT + 1D6 + MAG
     # 4 + 5 + 3 + 6 = 18
