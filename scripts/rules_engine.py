@@ -422,6 +422,19 @@ class CombatRules:
             if type(dmg_type) is not str: dmg_type = 'P'
             ap = weapon_used.ap if weapon_used else 0
 
+            is_explosive = "grenade" in weapon_name.lower() or "rocket" in weapon_name.lower() or "missile" in weapon_name.lower()
+            cover_val = getattr(target.zone, "cover", "") if target.zone else ""
+            desc_val = getattr(target.zone, "description", "") if target.zone else ""
+            name_val = getattr(target.zone, "name", "") if target.zone else ""
+
+            if is_explosive and target.zone and (
+                (cover_val and cover_val.lower() == "heavy")
+                or "enclosed" in desc_val.lower()
+                or "enclosed" in name_val.lower()
+            ):
+                base_dmg *= 2
+                result_text += " [CHUNKY SALSA EFFECT! Explosive force doubled in confined space.]"
+
             modified_damage = base_dmg + net_hits
             soak_pool = target.get_attribute("BOD", 3) + max(0, getattr(target, "total_armor", 0) + ap)
 
