@@ -12,7 +12,8 @@ pygame.font.init()
 pygame.display.set_mode((100, 100), pygame.HIDDEN)
 
 from ui.components import TradeScreen, SaveLoadScreen
-from scripts.combat_simulator import Combatant, simulate_trade, RulesEngine
+from scripts.rules_engine import DiceRules
+from scripts.combat_simulator import Combatant, simulate_trade
 
 class MockCombatant:
     def __init__(self, name="Test", physical_damage=0, stun_damage=0, edge=1, is_alive=True,
@@ -137,7 +138,7 @@ def test_simulate_trade_edge_cases(capsys, monkeypatch):
     c = Combatant(name="Tester", attributes={"CHA": 5}, skills={"Negotiation": 5}, street_cred=2)
 
     # Force tie
-    monkeypatch.setattr(RulesEngine, "roll_dice", lambda pool: (3, False))
+    monkeypatch.setattr(DiceRules, "roll_dice", lambda pool: (3, False))
     simulate_trade(c, "Gun", 100, fixer_difficulty=-2, is_selling=False)
     captured = capsys.readouterr()
     assert "Result: Tie." in captured.out
@@ -150,14 +151,14 @@ def test_simulate_trade_edge_cases(capsys, monkeypatch):
             return (0, True) # Player glitches
         return (2, False)
     mock_roll_glitch.calls = 0
-    monkeypatch.setattr(RulesEngine, "roll_dice", mock_roll_glitch)
+    monkeypatch.setattr(DiceRules, "roll_dice", mock_roll_glitch)
     simulate_trade(c, "Gun", 100, fixer_difficulty=1, is_selling=False)
     captured = capsys.readouterr()
     assert "Critical Failure: Tester offended the fixer." in captured.out
 
     # Force player glitch while selling
     mock_roll_glitch.calls = 0
-    monkeypatch.setattr(RulesEngine, "roll_dice", mock_roll_glitch)
+    monkeypatch.setattr(DiceRules, "roll_dice", mock_roll_glitch)
     simulate_trade(c, "Gun", 100, fixer_difficulty=1, is_selling=True)
     captured = capsys.readouterr()
     assert "Critical Failure: Tester offended the fixer." in captured.out

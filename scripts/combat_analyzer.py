@@ -1,3 +1,4 @@
+from scripts.rules_engine import DiceRules
 import copy
 import argparse
 import sys
@@ -15,7 +16,7 @@ from combat_simulator import (
     load_combatant,
     parse_scenario,
     SimulationState,
-    RulesEngine,
+
     Weapon,
     Combatant,
 )
@@ -145,12 +146,12 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
             if is_social:
                 cha = active.get_attribute("CHA", 3)
                 attack_pool = cha + 5
-                attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+                attack_hits, attack_hits_glitched, _edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active)
 
                 target_wil = target.get_attribute("WIL", 3)
                 target_resist = target_wil + target.get_attribute("CHA", 3)
 
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(target_resist)
+                def_hits, def_hits_glitched = DiceRules.roll_dice(target_resist)
                 net_hits = attack_hits - def_hits
 
                 if net_hits > 0:
@@ -173,7 +174,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                 spell_skill = active.skills.get("Spellcasting", 5)
 
                 attack_pool = mag + spell_skill
-                attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+                attack_hits, attack_hits_glitched, _edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active)
 
                 if spell.type == "M":
                     def_pool = target.get_attribute("ESS", 6) + target.get_attribute(
@@ -184,7 +185,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                         "INT", 3
                     )
 
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+                def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
                 net_hits = attack_hits - def_hits
 
                 if net_hits > 0:
@@ -196,7 +197,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                             0, target.get_attribute("BOD", 3) + target.armor - mag
                         )
 
-                    soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+                    soak_hits, soak_hits_glitched = DiceRules.roll_dice(soak_pool)
                     final_damage = max(0, modified_damage - soak_hits)
                     target.take_damage(final_damage, "P")
 
@@ -204,7 +205,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                 drain_resist_pool = active.get_attribute(
                     "WIL", 3
                 ) + active.get_attribute("LOG", 3)
-                drain_hits, drain_hits_glitched = RulesEngine.roll_dice(
+                drain_hits, drain_hits_glitched = DiceRules.roll_dice(
                     drain_resist_pool
                 )
                 drain_taken = max(0, drain_value - drain_hits)
@@ -225,10 +226,10 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                 log = active.get_attribute("LOG", 3)
                 cyber_skill = active.skills.get("Cybercombat", 5)
                 attack_pool = log + cyber_skill
-                attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+                attack_hits, attack_hits_glitched, _edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active)
 
                 def_pool = target.get_attribute("INT", 3) + target.matrix.firewall
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+                def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
                 net_hits = attack_hits - def_hits
 
                 if net_hits > 0:
@@ -236,7 +237,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                     modified_damage = active.matrix.attack + net_hits + (tethers * 2)
 
                     soak_pool = target.matrix.data_processing + target.matrix.firewall
-                    soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+                    soak_hits, soak_hits_glitched = DiceRules.roll_dice(soak_pool)
                     final_damage = max(0, modified_damage - soak_hits)
                     target.stun_damage += final_damage
 
@@ -253,10 +254,10 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                 log = active.get_attribute("LOG", 3)
                 hack_skill = active.skills.get("Hacking", 5)
                 attack_pool = log + hack_skill
-                attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+                attack_hits, attack_hits_glitched, _edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active)
 
                 def_pool = target.get_attribute("WIL", 3) + target.matrix.firewall
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+                def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
                 net_hits = attack_hits - def_hits
 
                 if net_hits > 0:
@@ -312,7 +313,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                         )
                     attack_pool = active.get_attribute("AGI", 3) + skill_val
 
-                attack_hits, attack_hits_glitched, _edge_spent = RulesEngine.roll_attack_with_edge(attack_pool, active)
+                attack_hits, attack_hits_glitched, _edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active)
 
                 if target.jumped_in_vehicle:
                     def_pool = (
@@ -332,7 +333,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                         def_pool += 2
                     elif target.zone.cover.lower() == "heavy":
                         def_pool += 4
-                def_hits, def_hits_glitched = RulesEngine.roll_dice(def_pool)
+                def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
 
                 net_hits = attack_hits - def_hits
 
@@ -380,7 +381,7 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                             + modified_ap,
                         )
 
-                    soak_hits, soak_hits_glitched = RulesEngine.roll_dice(soak_pool)
+                    soak_hits, soak_hits_glitched = DiceRules.roll_dice(soak_pool)
 
                     final_damage = max(0, modified_damage - soak_hits)
 
