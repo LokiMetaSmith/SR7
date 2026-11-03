@@ -312,3 +312,95 @@ def test_resolve_attack_success(monkeypatch):
 
 def action_text(narr, result):
     return narr + " " + result
+
+def test_resolve_social_attack_success(monkeypatch):
+    active = MagicMock()
+    target = MagicMock()
+    state = MagicMock()
+
+    active.name = "Face"
+    active.get_attribute.return_value = 6 # CHA
+    active.skills.get.return_value = 6 # Negotiation
+    active.street_cred = 2
+    active.notoriety = 0
+    active.influence = {}
+
+    target.name = "Guard"
+    target.get_attribute.side_effect = lambda x, default: 3 if x == "WIL" or x == "LOG" else default
+    target.resolve = {}
+
+    def mock_roll_attack_with_edge(pool, combatant, wild_dice_count=0, is_extream_mode=False):
+        if combatant == active:
+            return 5, False, False
+        return 0, False, False
+
+    def mock_roll_dice(pool, wild_dice_count=0, combatant=None, is_extream_mode=False):
+        if pool == 6: # target defense pool (WIL 3 + LOG 3)
+            return 2, False
+        return 0, False
+
+    monkeypatch.setattr(DiceRules, "roll_attack_with_edge", mock_roll_attack_with_edge)
+    monkeypatch.setattr(DiceRules, "roll_dice", mock_roll_dice)
+
+    from scripts.rules_engine import SocialRules
+    action_text, result_text, edge_spent = SocialRules.resolve_social_attack(state, active, target, "negotiate")
+
+    assert "attempts to Negotiation Guard" in action_text
+    assert "Social attack succeeds" in result_text
+    assert active.influence["Guard"] == (1 + 3) # 1 base + (5 hits - 2 hits)
+
+def test_resolve_ram_success(monkeypatch):
+    active = MagicMock()
+    active.control_rig = 0
+    target = MagicMock()
+    target.control_rig = 0
+    state = MagicMock()
+
+    active.name = "Rigger"
+    active.get_attribute.return_value = 5 # REA
+    active.skills.get.return_value = 5 # Piloting
+    veh_active = MagicMock()
+    veh_active.handling = 4
+    veh_active.body = 4
+    veh_active.speed = 3
+    veh_active.armor = 4
+    veh_active.physical_damage = 0
+    veh_active.physical_track = 10
+    active.jumped_in_vehicle = veh_active
+
+    target.name = "Ganger"
+    target.get_attribute.return_value = 3 # REA
+    target.skills.get.return_value = 3 # Piloting
+    target.special_rules = []
+    veh_target = MagicMock()
+    veh_target.handling = 3
+    veh_target.body = 3
+    veh_target.speed = 2
+    veh_target.armor = 3
+    veh_target.physical_damage = 0
+    veh_target.physical_track = 10
+    target.jumped_in_vehicle = veh_target
+
+    def mock_roll_attack_with_edge(pool, combatant, wild_dice_count=0, is_extream_mode=False):
+        if combatant == active:
+            return 4, False, False
+        return 0, False, False
+
+    def mock_roll_dice(pool, wild_dice_count=0, combatant=None, is_extream_mode=False):
+        if pool == (3 + 3 + 3): # target def pool
+            return 1, False
+        elif pool == (4 + 4) * 2: # active resist pool (larger vehicle)
+            return 3, False
+        elif pool == (3 + 3): # target resist pool (smaller vehicle)
+            return 1, False
+        return 0, False
+
+    monkeypatch.setattr(DiceRules, "roll_attack_with_edge", mock_roll_attack_with_edge)
+    monkeypatch.setattr(DiceRules, "roll_dice", mock_roll_dice)
+
+    from scripts.rules_engine import ChaseRules
+    action_text, result_text, edge_spent = ChaseRules.resolve_ram(state, active, target, "ram target")
+
+    assert "attempts to RAM Ganger" in action_text
+    assert "Ram successful" in result_text
+    assert veh_target.physical_damage > 0

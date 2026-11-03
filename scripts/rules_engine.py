@@ -459,3 +459,364 @@ class CombatRules:
             result_text += f"Attack missed! {target.name} successfully dodged or the attack failed to connect."
 
         return action_text, result_text, edge_spent
+
+class SocialRules:
+    @staticmethod
+    def resolve_social_attack(state: "SimulationState", active: "Combatant", target: "Combatant", action_lower: str) -> tuple[str, str, bool]:
+        edge_spent = False
+        cha = active.get_attribute("CHA", 3)
+        skill_name = "Con"
+        skill_rating = active.skills.get("Con", 0)
+
+        if "intimidate" in action_lower or "threaten" in action_lower:
+            skill_name = "Intimidation"
+            skill_rating = active.skills.get("Intimidation", 0)
+        elif "negotiate" in action_lower or "haggle" in action_lower:
+            skill_name = "Negotiation"
+            skill_rating = active.skills.get("Negotiation", 0)
+        elif "command" in action_lower or "lead" in action_lower:
+            skill_name = "Leadership"
+            skill_rating = active.skills.get("Leadership", 0)
+        elif "impersonate" in action_lower or "perform" in action_lower:
+            skill_name = "Performance"
+            skill_rating = active.skills.get("Performance", 0)
+
+        attack_pool = cha + skill_rating + active.street_cred - active.notoriety
+
+        attack_hits, attack_hits_glitched, edge_spent = (
+            DiceRules.roll_attack_with_edge(attack_pool, active)
+        )
+
+        target_wil = target.get_attribute("WIL", 3)
+        # Resisting attribute logic
+        if skill_name == "Intimidation":
+            target_resist = target.get_attribute("STR", 3)
+        elif skill_name in ["Negotiation", "Leadership"]:
+            target_resist = target.get_attribute("LOG", 3)
+        else:
+            target_resist = target.get_attribute("CHA", 3)
+
+        def_pool = target_wil + target_resist
+        def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
+
+        action_text = f"attempts to {skill_name} {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if attack_hits >= def_hits:
+            net_hits = attack_hits - def_hits
+            influence_gain = 1 + net_hits
+            current_influence = active.influence.get(target.name, 0)
+            active.influence[target.name] = current_influence + influence_gain
+            result_text = f"Social attack succeeds! {active.name} gains {influence_gain} Influence over {target.name}. (Total: {active.influence[target.name]}/{target_wil} needed to yield)."
+
+            if active.influence[target.name] >= target_wil:
+                target.has_yielded = True
+                result_text += f" {target.name}'s resolve breaks! They agree to the terms, yield, or surrender!"
+        else:
+            net_hits = def_hits - attack_hits
+            resolve_gain = 1 + net_hits
+            current_resolve = target.resolve.get(active.name, 0)
+            target.resolve[active.name] = current_resolve + resolve_gain
+            active_wil = active.get_attribute("WIL", 3)
+            result_text = f"Social attack fails! {target.name} gains {resolve_gain} Resolve against {active.name}. (Total: {target.resolve[active.name]}/{active_wil} needed to become intractable)."
+
+        return action_text, result_text, edge_spent
+
+class ChaseRules:
+    @staticmethod
+    def resolve_ram(state: "SimulationState", active: "Combatant", target: "Combatant", action_lower: str) -> tuple[str, str, bool]:
+        edge_spent = False
+        attack_pool = active.get_attribute("REA", 3) + active.skills.get(
+            "Piloting", 4
+        )
+        if active.jumped_in_vehicle:
+            attack_pool += (
+                active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+            )
+
+            # Target threshold reduced by Control Rig rating
+            threshold_reduction = getattr(active, 'control_rig', 0)
+        else:
+            threshold_reduction = 0
+
+        attack_hits, attack_hits_glitched, edge_spent = (
+            DiceRules.roll_attack_with_edge(max(1, attack_pool), active)
+        )
+
+        def_pool = target.get_attribute("REA", 3) + target.skills.get(
+            "Piloting", 4
+        )
+
+        # Evade bonus
+        evade_mod = 0
+        for rule in target.special_rules:
+            if rule.startswith("Evade"):
+                try:
+                    evade_mod += int(rule.split("(+")[1].split(")")[0])
+                except:
+                    pass
+
+        def_pool += evade_mod
+
+        if target.jumped_in_vehicle:
+            def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
+        def_hits, def_hits_glitched = DiceRules.roll_dice(max(1, def_pool))
+
+        # Apply Threshold reduction logic here.
+        # Threshold effectively subtracts from def_hits to calculate net_hits
+        net_hits = attack_hits - max(0, def_hits - threshold_reduction)
+
+        action_text = f"attempts to RAM {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            active_veh = active.jumped_in_vehicle
+            target_veh = target.jumped_in_vehicle
+
+            if active_veh and target_veh:
+                base_ram_dmg = active_veh.body + active_veh.speed
+                active_resist_pool = (active_veh.body + active_veh.armor) * 2 if (active_veh.body + active_veh.armor) > (target_veh.body + target_veh.armor) else (active_veh.body + active_veh.armor)
+                target_resist_pool = (target_veh.body + target_veh.armor) * 2 if (target_veh.body + target_veh.armor) > (active_veh.body + active_veh.armor) else (target_veh.body + target_veh.armor)
+
+                active_resist_hits, _ = DiceRules.roll_dice(active_resist_pool)
+                target_resist_hits, _ = DiceRules.roll_dice(target_resist_pool)
+
+                active_dmg_taken = max(0, base_ram_dmg - active_resist_hits)
+                target_dmg_taken = max(0, base_ram_dmg - target_resist_hits)
+
+                if (active_veh.body + active_veh.armor) > (target_veh.body + target_veh.armor):
+                    active_dmg_taken = active_dmg_taken // 2
+                elif (target_veh.body + target_veh.armor) > (active_veh.body + active_veh.armor):
+                    target_dmg_taken = target_dmg_taken // 2
+
+                if active.jumped_in_vehicle:
+                    # Route physical damage to vehicle, triggering possession logic
+                    active.jumped_in_vehicle.physical_damage += active_dmg_taken
+                    active_bio = active_dmg_taken // 2
+                    active_bio_resist = active.get_attribute("WIL", 3) + active.get_attribute("BOD", 3)
+                    active_bio_hits, _ = DiceRules.roll_dice(active_bio_resist)
+                    active_net_bio = max(0, active_bio - active_bio_hits)
+                    active.stun_damage += active_net_bio
+
+                    res1 = f" {active.name}'s vehicle takes {active_dmg_taken} damage! {active.name} resists biofeedback with {active_bio_resist} dice, taking {active_net_bio} Stun biofeedback!"
+                    if active.jumped_in_vehicle.physical_damage >= active.jumped_in_vehicle.physical_track:
+                        active.jumped_in_vehicle.is_destroyed = True
+                        active.stun_damage += 6
+                        active.jumped_in_vehicle = None
+                        res1 += f" The vehicle is DESTROYED! {active.name} takes 6 Stun dumpshock damage!"
+                else:
+                    res1 = active.take_damage(active_dmg_taken, 'P')
+
+                if target.jumped_in_vehicle:
+                    target.jumped_in_vehicle.physical_damage += target_dmg_taken
+                    target_bio = target_dmg_taken // 2
+                    target_bio_resist = target.get_attribute("WIL", 3) + target.get_attribute("BOD", 3)
+                    target_bio_hits, _ = DiceRules.roll_dice(target_bio_resist)
+                    target_net_bio = max(0, target_bio - target_bio_hits)
+                    target.stun_damage += target_net_bio
+
+                    res2 = f" {target.name}'s vehicle takes {target_dmg_taken} damage! {target.name} resists biofeedback with {target_bio_resist} dice, taking {target_net_bio} Stun biofeedback!"
+                    if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
+                        target.jumped_in_vehicle.is_destroyed = True
+                        target.stun_damage += 6
+                        target.jumped_in_vehicle = None
+                        res2 += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
+                else:
+                    res2 = target.take_damage(target_dmg_taken, 'P')
+
+                result_text = f"Ram successful! Both vehicles crash.{res1}{res2}"
+            else:
+                base_ram_dmg = active.get_attribute("BOD", 3)
+                if active.jumped_in_vehicle:
+                    base_ram_dmg = active.jumped_in_vehicle.body + active.jumped_in_vehicle.speed
+                result_text = f"Ram successful! "
+
+                if target.jumped_in_vehicle:
+                    target.jumped_in_vehicle.physical_damage += base_ram_dmg
+                    target_bio = base_ram_dmg // 2
+                    target_bio_resist = target.get_attribute("WIL", 3) + target.get_attribute("BOD", 3)
+                    target_bio_hits, _ = DiceRules.roll_dice(target_bio_resist)
+                    target_net_bio = max(0, target_bio - target_bio_hits)
+                    target.stun_damage += target_net_bio
+
+                    result_text += f"{target.name}'s vehicle takes {base_ram_dmg} damage! {target.name} resists biofeedback with {target_bio_resist} dice, taking {target_net_bio} Stun biofeedback!"
+                    if target.jumped_in_vehicle.physical_damage >= target.jumped_in_vehicle.physical_track:
+                        target.jumped_in_vehicle.is_destroyed = True
+                        target.stun_damage += 6
+                        target.jumped_in_vehicle = None
+                        result_text += f" The vehicle is DESTROYED! {target.name} takes 6 Stun dumpshock damage!"
+                else:
+                    result_text += target.take_damage(base_ram_dmg, 'P')
+        else:
+            result_text = f"Ram maneuver fails! {target.name} swerves out of the way."
+
+        return action_text, result_text, edge_spent
+
+    @staticmethod
+    def resolve_cut_off(state: "SimulationState", active: "Combatant", target: "Combatant", action_lower: str) -> tuple[str, str, bool]:
+        edge_spent = False
+        attack_pool = active.get_attribute("REA", 3) + active.skills.get(
+            "Piloting", 4
+        )
+        if active.jumped_in_vehicle:
+            attack_pool += (
+                active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+            )
+            threshold_reduction = getattr(active, 'control_rig', 0)
+        else:
+            threshold_reduction = 0
+
+        attack_hits, attack_hits_glitched, edge_spent = (
+            DiceRules.roll_attack_with_edge(max(1, attack_pool), active)
+        )
+
+        def_pool = target.get_attribute("REA", 3) + target.skills.get(
+            "Piloting", 4
+        )
+
+        # Evade bonus
+        evade_mod = 0
+        for rule in target.special_rules:
+            if rule.startswith("Evade"):
+                try:
+                    evade_mod += int(rule.split("(+")[1].split(")")[0])
+                except:
+                    pass
+
+        def_pool += evade_mod
+
+        if target.jumped_in_vehicle:
+            def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
+        def_hits, def_hits_glitched = DiceRules.roll_dice(max(1, def_pool))
+
+        net_hits = attack_hits - max(0, def_hits - threshold_reduction)
+        action_text = f"attempts to CUT OFF {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            result_text = f"Cut Off successful! {target.name} is forced to make a Crash Test."
+        else:
+            result_text = f"Cut Off fails! {target.name} avoids the block."
+
+        return action_text, result_text, edge_spent
+
+    @staticmethod
+    def resolve_evade(state: "SimulationState", active: "Combatant", target: "Combatant", action_lower: str) -> tuple[str, str, bool]:
+        edge_spent = False
+        action_text = f"attempts to Evade"
+        if active.jumped_in_vehicle:
+            evade_bonus = active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+            active.special_rules.append(f"Evade (+{evade_bonus})")
+            result_text = f"Evade successful! {active.name} gains +{evade_bonus} to defense pool this round."
+        else:
+            evade_bonus = active.get_attribute("REA", 3) // 2
+            active.special_rules.append(f"Evade (+{evade_bonus})")
+            result_text = f"Evade successful! {active.name} focuses on dodging, gaining +{evade_bonus} defense."
+
+        return action_text, result_text, edge_spent
+
+    @staticmethod
+    def resolve_chase_maneuver(state: "SimulationState", active: "Combatant", target: "Combatant", action_lower: str) -> tuple[str, str, bool]:
+        edge_spent = False
+        attack_pool = active.get_attribute("REA", 3) + active.skills.get(
+            "Piloting", 4
+        )
+        if active.jumped_in_vehicle:
+            attack_pool += (
+                active.jumped_in_vehicle.handling + getattr(active, 'control_rig', 0)
+            )
+            threshold_reduction = getattr(active, 'control_rig', 0)
+        else:
+            threshold_reduction = 0
+
+        attack_hits, attack_hits_glitched, edge_spent = (
+            DiceRules.roll_attack_with_edge(max(1, attack_pool), active)
+        )
+
+        def_pool = target.get_attribute("REA", 3) + target.skills.get(
+            "Piloting", 4
+        )
+
+        # Evade bonus
+        evade_mod = 0
+        for rule in target.special_rules:
+            if rule.startswith("Evade"):
+                try:
+                    evade_mod += int(rule.split("(+")[1].split(")")[0])
+                except:
+                    pass
+
+        def_pool += evade_mod
+
+        if target.jumped_in_vehicle:
+            def_pool += target.jumped_in_vehicle.handling + getattr(target, 'control_rig', 0)
+        def_hits, def_hits_glitched = DiceRules.roll_dice(max(1, def_pool))
+
+        net_hits = attack_hits - max(0, def_hits - threshold_reduction)
+        action_text = f"attempts a chase maneuver against {target.name} ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            result_text = f"Chase maneuver successful! {active.name} gains the upper hand and shifts the Range Band."
+        else:
+            result_text = f"Chase maneuver fails! {target.name} outmaneuvers {active.name}."
+
+        return action_text, result_text, edge_spent
+
+class AstralRules:
+    @staticmethod
+    def resolve_astral_combat(state: "SimulationState", active: "Combatant", target: "Combatant", action_lower: str) -> tuple[str, str, bool]:
+        edge_spent = False
+        from scripts.combat_simulator import Plane
+
+        if target.current_plane != Plane.ASTRAL and not target.is_dual_natured:
+            action_text = f"attempts astral combat on {target.name}"
+            result_text = f"Action fails: {target.name} is not present on the astral plane."
+            return action_text, result_text, edge_spent
+
+        attack_pool = active.get_attribute("WIL", 3) + active.skills.get("Astral Combat", 5)
+
+        wild_dice_count = 0
+        if state.environment.is_extream_mode:
+            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
+        attack_hits, attack_hits_glitched, edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
+
+        def_pool = target.get_attribute("INT", 3) + target.get_attribute("LOG", 3)
+        def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
+        net_hits = attack_hits - def_hits
+
+        action_text = f"engages {target.name} in astral combat ({attack_hits} hits vs {def_hits} defense hits)"
+
+        if net_hits > 0:
+            base_dmg = active.get_attribute("CHA", 3) // 2
+            damage_type = "S"
+
+            # Use weapon focus or physical damage if dual natured
+            if active.is_dual_natured or "focus" in action_lower:
+                damage_type = "P"
+                if "focus" in action_lower and active.weapons:
+                    base_dmg = active.weapons[0].damage # simplification
+
+            modified_damage = base_dmg + net_hits
+
+            soak_pool = target.get_attribute("WIL", 3)
+            # Add mystic armor if any
+            for rule in target.special_rules:
+                if rule.startswith("Mystic Armor"):
+                    try:
+                        soak_pool += int(rule.split("[Rating ")[1].split("]")[0])
+                    except:
+                        pass
+
+            soak_hits, soak_hits_glitched = DiceRules.roll_dice(soak_pool)
+            final_damage = max(0, modified_damage - soak_hits)
+
+            result_text = f"Astral Attack succeeds! Net hits: {net_hits}. {target.name} rolls {soak_pool} soak dice, getting {soak_hits} hits. {target.name} takes {final_damage} {damage_type} damage."
+            result_text += target.take_damage(final_damage, damage_type)
+
+            if (
+                target.physical_damage >= target.physical_track
+                or target.stun_damage >= target.stun_track
+            ):
+                target.is_alive = False
+                result_text += f" {target.name} is incapacitated!"
+        else:
+            result_text = f"Astral Attack missed! {target.name} successfully defended."
+
+        return action_text, result_text, edge_spent
