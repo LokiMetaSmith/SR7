@@ -404,3 +404,80 @@ def test_resolve_ram_success(monkeypatch):
     assert "attempts to RAM Ganger" in action_text
     assert "Ram successful" in result_text
     assert veh_target.physical_damage > 0
+
+def test_resolve_compile_success(monkeypatch):
+    from scripts.rules_engine import MatrixRules, DiceRules
+    from unittest.mock import MagicMock
+    active = MagicMock()
+    state = MagicMock()
+    state.environment.is_extream_mode = False
+
+    active.name = "Technomancer"
+    active.skills.get.return_value = 6
+    active.get_attribute.return_value = 6
+
+    def mock_roll_attack(pool, combatant, wild_dice_count=0, is_extream_mode=False):
+        return 6, False, False
+
+    def mock_roll_dice(pool):
+        return 2, False
+
+    monkeypatch.setattr(DiceRules, "roll_attack_with_edge", mock_roll_attack)
+    monkeypatch.setattr(DiceRules, "roll_dice", mock_roll_dice)
+
+    action, result, edge = MatrixRules.resolve_compile(state, active, "compile level 5 sprite")
+    assert "successfully compiles" in result
+
+def test_resolve_summon_success(monkeypatch):
+    from scripts.rules_engine import MagicRules, DiceRules
+    from unittest.mock import MagicMock
+    active = MagicMock()
+    state = MagicMock()
+    state.environment.is_extream_mode = False
+
+    active.name = "Mage"
+    active.skills.get.return_value = 6
+    active.get_attribute.return_value = 6
+
+    def mock_roll_attack(pool, combatant, wild_dice_count=0, is_extream_mode=False):
+        return 6, False, False
+
+    def mock_roll_dice(pool):
+        return 2, False
+
+    monkeypatch.setattr(DiceRules, "roll_attack_with_edge", mock_roll_attack)
+    monkeypatch.setattr(DiceRules, "roll_dice", mock_roll_dice)
+
+    action, result, edge = MagicRules.resolve_summon(state, active, "summon force 5 fire spirit")
+    assert "successfully summons" in result
+
+def test_resolve_ic_attack_success(monkeypatch):
+    from scripts.rules_engine import MatrixRules, DiceRules
+    from unittest.mock import MagicMock
+    active = MagicMock()
+    target = MagicMock()
+    state = MagicMock()
+    state.environment.is_extream_mode = False
+
+    active.name = "Patrol IC"
+    active.skills.get.return_value = 6
+    active.get_attribute.return_value = 6
+    active.host_rating = 0
+    target.name = "Hacker"
+    target.get_attribute.return_value = 3
+    target.matrix.sleaze = 3
+    active.tethers = {}
+    target.null_bags = 0
+    state.environment.alert_level = 0
+
+    def mock_roll_attack(pool, combatant, wild_dice_count=0, is_extream_mode=False):
+        return 5, False, False
+
+    def mock_roll_dice(pool):
+        return 2, False
+
+    monkeypatch.setattr(DiceRules, "roll_attack_with_edge", mock_roll_attack)
+    monkeypatch.setattr(DiceRules, "roll_dice", mock_roll_dice)
+
+    action, result, edge = MatrixRules.resolve_ic_attack(state, active, target, "patrol scan")
+    assert "spots Hacker" in result
