@@ -1125,161 +1125,11 @@ def process_action(active, target, action_decision, state, llm, app=None):
         result_text = f"{active.name} has returned to the physical plane."
 
     elif is_compile:
-        sprite_level = 5
-        try:
-            import re
-            match = re.search(r'level\s*(\d+)', action_lower)
-            if match:
-                sprite_level = int(match.group(1))
-        except:
-            pass
-
-        compiling_pool = active.skills.get("Compiling", 0) + active.get_attribute("RES", 3)
-
-        wild_dice_count = 0
-        if state.environment.is_extream_mode:
-            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
-        compiling_hits, compiling_glitched, edge_spent = DiceRules.roll_attack_with_edge(compiling_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
-
-        sprite_hits, sprite_glitched = DiceRules.roll_dice(sprite_level)
-
-        net_hits = compiling_hits - sprite_hits
-
-        # Fading
-        fading_value = sprite_hits * 2
-        fading_resist_pool = active.get_attribute("WIL", 3) + active.get_attribute("RES", 3)
-        fading_resist_hits, fading_glitched = DiceRules.roll_dice(fading_resist_pool)
-        fading_damage = max(0, fading_value - fading_resist_hits)
-        fading_type = "P" if fading_value > active.get_attribute("RES", 3) else "S"
-
-        action_text = f"{active.name} attempts to compile a Level {sprite_level} sprite (Compiling Pool: {compiling_pool})."
-        if net_hits > 0:
-            result_text = f"{active.name} successfully compiles a sprite with {net_hits} tasks. "
-            import glob
-
-            sprite_path = None
-            templates = glob.glob("npc_templates/*sprite*.chum5")
-            if templates:
-                import random
-                sprite_path = random.choice(templates)
-
-            if sprite_path:
-                try:
-                    sprite = load_combatant(sprite_path)
-                    sprite.name = f"{active.name}'s {sprite.name} (Level {sprite_level})"
-                    sprite.team = active.team
-
-                    # Adjust stats based on level loosely
-                    sprite.attributes['BOD'] = sprite_level
-                    sprite.attributes['AGI'] = sprite_level + 1
-                    sprite.attributes['REA'] = sprite_level
-                    sprite.attributes['STR'] = sprite_level
-                    sprite.attributes['WIL'] = sprite_level
-                    sprite.attributes['LOG'] = sprite_level
-                    sprite.attributes['INT'] = sprite_level
-                    sprite.attributes['CHA'] = sprite_level
-                    if hasattr(sprite, 'special_rules'):
-                        sprite.special_rules.append(f"Armor {sprite_level}")
-
-                    state.combatants.append(sprite)
-                    result_text += f"The {sprite.name} compiles and manifests! "
-                except Exception as e:
-                    pass
-            else:
-                from scripts.combat_simulator import Combatant, MatrixAttributes
-                sprite = Combatant(
-                    name=f"{active.name}'s Compiled Sprite (Level {sprite_level})",
-                    attributes={
-                        'BOD': sprite_level,
-                        'AGI': sprite_level + 1,
-                        'REA': sprite_level,
-                        'STR': sprite_level,
-                        'WIL': sprite_level,
-                        'LOG': sprite_level,
-                        'INT': sprite_level,
-                        'CHA': sprite_level,
-                    },
-                    skills={"Cybercombat": sprite_level, "Hacking": sprite_level},
-                    matrix=MatrixAttributes(),
-                    team=active.team
-                )
-                state.combatants.append(sprite)
-                result_text += f"The {sprite.name} compiles and manifests! "
-
-        else:
-            result_text = f"{active.name} fails to compile the sprite. "
-
-        if fading_damage > 0:
-            status = active.take_damage(fading_damage, fading_type)
-            result_text += f"{active.name} takes {fading_damage}{fading_type} Fading. {status}"
-        else:
-            result_text += f"{active.name} resists all Fading."
-
+        from scripts.rules_engine import MatrixRules
+        action_text, result_text, edge_spent = MatrixRules.resolve_compile(state, active, action_lower)
     elif is_summon:
-        # Find spirit name and force in action or pick random
-        spirit_force = 5
-        try:
-            import re
-            match = re.search(r'force\s*(\d+)', action_lower)
-            if match:
-                spirit_force = int(match.group(1))
-        except:
-            pass
-
-        conjuring_pool = active.skills.get("Conjuring", 0) + active.get_attribute("MAG", 3)
-
-        wild_dice_count = 0
-        if state.environment.is_extream_mode:
-            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
-        conjuring_hits, conjuring_glitched, edge_spent = DiceRules.roll_attack_with_edge(conjuring_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
-
-        spirit_hits, spirit_glitched = DiceRules.roll_dice(spirit_force)
-
-        net_hits = conjuring_hits - spirit_hits
-
-        # Drain
-        drain_value = spirit_hits * 2
-        drain_resist_pool = active.get_attribute("WIL", 3) + active.get_attribute("LOG", 3)
-        drain_resist_hits, drain_glitched = DiceRules.roll_dice(drain_resist_pool)
-        drain_damage = max(0, drain_value - drain_resist_hits)
-        drain_type = "P" if spirit_force > active.get_attribute("MAG", 3) else "S"
-
-        action_text = f"{active.name} attempts to summon a Force {spirit_force} spirit (Conjuring Pool: {conjuring_pool})."
-        if net_hits > 0:
-            result_text = f"{active.name} successfully summons a spirit with {net_hits} services. "
-            import glob
-
-            templates = glob.glob("npc_templates/*spirit*.chum5")
-            if templates:
-                spirit_path = random.choice(templates)
-                try:
-                    spirit = load_combatant(spirit_path)
-                    spirit.name = f"{active.name}'s {spirit.name} (Force {spirit_force})"
-                    spirit.team = active.team
-
-                    # Adjust stats based on force loosely
-                    spirit.attributes['BOD'] = spirit_force
-                    spirit.attributes['AGI'] = spirit_force + 1
-                    spirit.attributes['REA'] = spirit_force
-                    spirit.attributes['STR'] = spirit_force
-                    spirit.attributes['WIL'] = spirit_force
-                    spirit.attributes['LOG'] = spirit_force
-                    spirit.attributes['INT'] = spirit_force
-                    spirit.attributes['CHA'] = spirit_force
-
-                    state.combatants.append(spirit)
-                    result_text += f"The {spirit.name} materializes and joins the fight! "
-                except:
-                    pass
-        else:
-            result_text = f"{active.name} fails to summon the spirit. "
-
-        if drain_damage > 0:
-            status = active.take_damage(drain_damage, drain_type)
-            result_text += f"{active.name} takes {drain_damage}{drain_type} Summoning Drain. {status}"
-        else:
-            result_text += f"{active.name} resists all Summoning Drain."
-
+        from scripts.rules_engine import MagicRules
+        action_text, result_text, edge_spent = MagicRules.resolve_summon(state, active, action_lower)
     elif is_comm:
         # Secure communication
         sneak_pool = active.skills.get("Sneaking", 0) + active.get_attribute("AGI", 3)
@@ -1340,137 +1190,20 @@ def process_action(active, target, action_decision, state, llm, app=None):
             result_text = f"{active.name} successfully jacks out and exits the Host."
 
     elif is_tar_pit_attack:
-        attack_pool = active.skills.get("Cybercombat", 5) + active.get_attribute("LOG", 3)
-
-        wild_dice_count = 0
-        if state.environment.is_extream_mode:
-            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
-        attack_hits, attack_hits_glitched, edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
-
-        def_pool = getattr(target.matrix, "firewall", 3) + target.get_attribute("INT", 3)
-        if target.null_bags > 0:
-            def_pool += target.null_bags
-        def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
-
-        net_hits = attack_hits - def_hits
-        action_text = f"The Tar-Pit IC attacks {target.name} ({attack_hits} hits vs {def_hits} defense hits)."
-
-        if net_hits > 0:
-            target.is_locked_by_tarpit = True
-            result_text = f"Tar-Pit IC strikes! It deals no damage but locks all of {target.name}'s Tethers. {target.name} cannot voluntarily Jack Out or Erase Tethers."
-        else:
-            result_text = f"Tar-Pit IC misses or is resisted by {target.name}."
-
+        from scripts.rules_engine import MatrixRules
+        action_text, result_text, edge_spent = MatrixRules.resolve_ic_attack(state, active, target, action_lower)
     elif is_patrol_scan:
-        attack_pool = active.host_rating * 2 if getattr(active, "host_rating", 0) > 0 else active.get_attribute("LOG", 3) + active.skills.get("Computer", 5)
-
-        wild_dice_count = 0
-        if state.environment.is_extream_mode:
-            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
-        attack_hits, attack_hits_glitched, edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
-
-        def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "sleaze", 3)
-        if target.null_bags > 0:
-            def_pool += target.null_bags
-        def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
-        net_hits = attack_hits - def_hits
-
-        action_text = f"Patrol IC scans for intruders ({attack_hits} hits vs {def_hits} defense hits)."
-
-        if net_hits > 0:
-            active.tethers[target.name] = active.tethers.get(target.name, 0) + 1
-            state.environment.alert_level += 1
-            result_text = f"Patrol IC spots {target.name}! It alerts the Hive, placing 1 Tether on {target.name} and raising the Host Alert Level to {state.environment.alert_level}!"
-        else:
-            result_text = f"Patrol IC fails to spot {target.name}."
-
+        from scripts.rules_engine import MatrixRules
+        action_text, result_text, edge_spent = MatrixRules.resolve_ic_attack(state, active, target, action_lower)
     elif "killer ic" in action_lower:
-        attack_pool = active.host_rating * 2 if getattr(active, "host_rating", 0) > 0 else active.get_attribute("LOG", 3) + active.skills.get("Cybercombat", 5)
-
-        wild_dice_count = 0
-        if state.environment.is_extream_mode:
-            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
-        attack_hits, attack_hits_glitched, edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
-
-        def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "firewall", 3)
-        if target.null_bags > 0:
-            def_pool += target.null_bags
-        def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
-        net_hits = attack_hits - def_hits
-
-        action_text = f"Killer IC strikes {target.name} ({attack_hits} hits vs {def_hits} defense hits)."
-
-        if net_hits > 0:
-            tethers = active.tethers.get(target.name, 0)
-            base_damage = active.host_rating if getattr(active, "host_rating", 0) > 0 else active.matrix.attack
-            modified_damage = base_damage + net_hits + (tethers * 2)
-
-            soak_pool = getattr(target.matrix, "data_processing", 3) + getattr(target.matrix, "firewall", 3)
-            soak_hits, soak_hits_glitched = DiceRules.roll_dice(soak_pool)
-            final_damage = max(0, modified_damage - soak_hits)
-
-            result_text = f"Killer IC connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Matrix damage."
-            # Matrix damage generally routes to stun or device depending on target
-            target.stun_damage += final_damage
-        else:
-            result_text = f"Killer IC attack is deflected by {target.name}'s firewall."
-
+        from scripts.rules_engine import MatrixRules
+        action_text, result_text, edge_spent = MatrixRules.resolve_ic_attack(state, active, target, action_lower)
     elif "sparky ic" in action_lower:
-        attack_pool = active.host_rating * 2 if getattr(active, "host_rating", 0) > 0 else active.get_attribute("LOG", 3) + active.skills.get("Cybercombat", 5)
-
-        wild_dice_count = 0
-        if state.environment.is_extream_mode:
-            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
-        attack_hits, attack_hits_glitched, edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
-
-        def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "firewall", 3)
-        if target.null_bags > 0:
-            def_pool += target.null_bags
-        def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
-        net_hits = attack_hits - def_hits
-
-        action_text = f"Sparky IC unleashes a biofeedback surge at {target.name} ({attack_hits} hits vs {def_hits} defense hits)."
-
-        if net_hits > 0:
-            base_damage = active.host_rating if getattr(active, "host_rating", 0) > 0 else active.matrix.attack
-            modified_damage = base_damage + net_hits
-
-            soak_pool = getattr(target.matrix, "data_processing", 3) + getattr(target.matrix, "firewall", 3)
-            soak_hits, soak_hits_glitched = DiceRules.roll_dice(soak_pool)
-            final_damage = max(0, modified_damage - soak_hits)
-
-            result_text = f"Sparky IC connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Matrix damage AND an equal amount of Stun Biofeedback!"
-            target.stun_damage += final_damage
-            target.stun_damage += final_damage # Extra biofeedback
-        else:
-            result_text = f"Sparky IC attack is deflected by {target.name}'s firewall."
-
+        from scripts.rules_engine import MatrixRules
+        action_text, result_text, edge_spent = MatrixRules.resolve_ic_attack(state, active, target, action_lower)
     elif is_data_ic_response:
-        log = active.get_attribute("LOG", 3)
-        cyber_skill = active.skills.get("Cybercombat", 5)
-        attack_pool = log + cyber_skill
-
-        wild_dice_count = 0
-        if state.environment.is_extream_mode:
-            wild_dice_count = min(6, max(1, state.environment.modifiers.get("saturation_level", state.environment.modifiers.get("background_count", 0))))
-        attack_hits, attack_hits_glitched, edge_spent = DiceRules.roll_attack_with_edge(attack_pool, active, wild_dice_count=wild_dice_count, is_extream_mode=state.environment.is_extream_mode)
-
-        def_pool = target.get_attribute("INT", 3) + getattr(target.matrix, "firewall", 3)
-        if target.null_bags > 0:
-            def_pool += target.null_bags
-        def_hits, def_hits_glitched = DiceRules.roll_dice(def_pool)
-        net_hits = attack_hits - def_hits
-
-        action_text = f"Data IC deploys an EMP burst/scrambler at {target.name} ({attack_hits} hits vs {def_hits} defense hits)."
-
-        if net_hits > 0:
-            soak_pool = getattr(target.matrix, "data_processing", 3) + getattr(target.matrix, "firewall", 3)
-            soak_hits, soak_hits_glitched = DiceRules.roll_dice(soak_pool)
-            final_damage = max(0, 4 - soak_hits)
-            result_text = f"Data IC connects! {target.name} rolls {soak_pool} soak dice, taking {final_damage} Stun damage."
-            target.stun_damage += final_damage
-        else:
-            result_text = f"Data IC attack is deflected by {target.name}'s firewall."
+        from scripts.rules_engine import MatrixRules
+        action_text, result_text, edge_spent = MatrixRules.resolve_ic_attack(state, active, target, action_lower)
     elif is_social:
         from scripts.rules_engine import SocialRules
         action_text, result_text, edge_spent = SocialRules.resolve_social_attack(state, active, target, action_lower)
