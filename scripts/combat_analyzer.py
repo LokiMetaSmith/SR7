@@ -79,7 +79,8 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
                 c.edge += 1
 
     for c in state.combatants:
-        c.initiative_score = c.roll_initiative()
+        from scripts.rules_engine import CombatRules
+        c.initiative_score = CombatRules.roll_initiative(c)
         # Apply high ground / surprise initiative modifiers
         if c.zone and (
             "High Ground" in c.zone.name or "High Ground" in c.zone.description
@@ -412,7 +413,8 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
             ):
                 active.is_alive = False
 
-        state.turn += 1
+        from scripts.combat_utils import process_turn_end
+        process_turn_end(state)
 
     t1_alive = any(
         c.is_alive and not getattr(c, "has_yielded", False)

@@ -271,24 +271,6 @@ class Combatant:
                 current_possessor = current_possessor.possessed_by
         return result_text
 
-    def roll_initiative(self) -> int:
-        if self.current_plane == Plane.ASTRAL or self.is_dual_natured:
-            # Astral Initiative: REA + INT + 1D6 + MAG
-            base = self.get_attribute("REA", 3) + self.get_attribute("INT", 3) + self.get_attribute("MAG", 0)
-            dice = 1
-        elif self.current_plane == Plane.MATRIX or self.jumped_in_vehicle:
-            # Matrix Initiative (Data Processing + Intuition) + 1 Initiative Die per Rig level
-            base = self.matrix.data_processing + self.get_attribute("INT", 3)
-            dice = 1 + getattr(self, 'control_rig', 0)
-        else:
-            base = self.get_attribute("REA", 3) + self.get_attribute("INT", 3)
-            dice = 1
-            if "Wired Reflexes" in " ".join(self.special_rules):
-                dice += 1
-
-        roll = sum(random.randint(1, 6) for _ in range(dice))
-        self.initiative_score = base + roll
-        return self.initiative_score
 
 
 @dataclass

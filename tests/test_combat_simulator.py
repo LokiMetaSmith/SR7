@@ -500,7 +500,7 @@ def test_astral_combat_initiative(monkeypatch):
         return 3
     monkeypatch.setattr(random, "randint", mock_randint)
 
-    initiative = c.roll_initiative()
+    initiative = CombatRules.roll_initiative(c)
 
     # Astral Initiative = REA + INT + 1D6 + MAG
     # 4 (REA) + 5 (INT) + 6 (MAG) = 15

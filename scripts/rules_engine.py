@@ -13,7 +13,10 @@ class DiceRules:
         crit_sixes = 0
         crit_ones = 0
 
-        actual_pool = max(1, pool)
+        actual_pool = pool
+        if combatant and getattr(combatant, 'hmhvv_infection_level', 0) and type(getattr(combatant, 'hmhvv_infection_level', 0)) == int and getattr(combatant, 'hmhvv_infection_level', 0) > 0:
+            actual_pool -= 1
+        actual_pool = max(1, actual_pool)
 
         # Centering Metamagic reduces negative modifiers in a roundabout way, but effectively acts
         # as a bonus to the final dice pool based on Initiation grade if they are taking a magic action.
@@ -550,6 +553,31 @@ class MagicRules:
 
 
 class CombatRules:
+
+    @staticmethod
+    def roll_initiative(combatant) -> int:
+        import random
+        from scripts.combat_simulator import Plane
+        if combatant.current_plane == Plane.ASTRAL or combatant.is_dual_natured:
+            base = combatant.get_attribute("REA", 3) + combatant.get_attribute("INT", 3) + combatant.get_attribute("MAG", 0)
+            dice = 1
+        elif combatant.current_plane == Plane.MATRIX or combatant.jumped_in_vehicle:
+            base = combatant.matrix.data_processing + combatant.get_attribute("INT", 3)
+            dice = 1 + getattr(combatant, 'control_rig', 0)
+        else:
+            base = combatant.get_attribute("REA", 3) + combatant.get_attribute("INT", 3)
+            dice = 1
+            if "Wired Reflexes" in " ".join(combatant.special_rules):
+                dice += 1
+
+        roll = sum(random.randint(1, 6) for _ in range(dice))
+        combatant.initiative_score = base + roll
+
+        if getattr(combatant, "hmhvv_infection_level", 0) > 0:
+            combatant.initiative_score = max(0, combatant.initiative_score - 1)
+
+        return combatant.initiative_score
+
 
     @staticmethod
     def _get_zone_center(layout_ascii: List[str], legend: Dict[str, str], zone_name: str) -> Optional[tuple[int, int]]:

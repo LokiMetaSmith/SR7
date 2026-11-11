@@ -24,3 +24,17 @@ def apply_nica_glitch(character) -> str:
     elif "Spasms wildly" in effect:
         character.has_yielded = True
     return effect
+
+
+def process_turn_end(state) -> str:
+    """Handles end-of-turn events such as HMHVV damage and active effects."""
+    result_text = ""
+    for c in state.combatants:
+        if getattr(c, "hmhvv_infection_level", 0) > 2 and c.is_alive:
+            dmg_msg = c.take_damage(1, "P")
+            msg = f"{c.name} suffers 1 Physical Damage from severe HMHVV infection."
+            state.log(msg)
+            result_text += msg + "\n"
+
+    state.turn += 1
+    return result_text.strip()
