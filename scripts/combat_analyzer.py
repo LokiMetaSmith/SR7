@@ -412,6 +412,8 @@ def run_simulation(t1_bases: list, t2_bases: list, env) -> dict:
             ):
                 active.is_alive = False
 
+        from scripts.combat_simulator import process_wave_defense
+        process_wave_defense(state, state.turn)
         state.turn += 1
 
     t1_alive = any(

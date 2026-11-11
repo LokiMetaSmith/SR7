@@ -1069,8 +1069,20 @@ def process_action(active, target, action_decision, state, llm, app=None):
 
     is_bypass = "bypass" in action_lower
     is_set_trap = "set trap" in action_lower
+    is_close_doors = "close door" in action_lower or "blast door" in action_lower
 
-    if is_pass:
+    if is_close_doors and getattr(state.environment, 'wave_defense', False):
+        action_text = f"{active.name} attempts to close the blast doors to stop the horde."
+        logic_pool = active.skills.get("Engineering", 0) + active.get_attribute("LOG", 3)
+        hits, _, _ = DiceRules.roll_attack_with_edge(logic_pool, active)
+        if hits > 0:
+            result_text = f"Success! {active.name} overrides the controls and the blast doors slam shut, securing the area."
+            state.environment.wave_defense = False
+        else:
+            result_text = f"Failure! {active.name} couldn't bypass the lockout in time."
+        return action_text, result_text, edge_spent
+
+    elif is_pass:
 
         action_text = f"{active.name} passes their turn."
         result_text = "No action taken."
@@ -1271,3 +1283,50 @@ def process_action(active, target, action_decision, state, llm, app=None):
             result_text = f"Failed! {active.name}'s connection is locked by Tar-Pit IC."
             return action_text, result_text, edge_spent
         result_text = MatrixRules.resolve_erase_tether(state, active, target)
+
+
+def process_wave_defense(state: SimulationState, turn_number: int):
+    """
+    Processes wave defense logic. Call this at the end of a combat round.
+    Spawns feral ghouls dynamically if wave_defense is active, enforcing a hard cap.
+    """
+    if not getattr(state.environment, 'wave_defense', False):
+        return
+
+    # Count active enemies (team 2)
+    active_enemies = [c for c in state.combatants if c.team == 2 and c.is_alive and not getattr(c, "has_yielded", False)]
+
+    # Cap active enemies to 6-8 (let's say max 6 for now)
+    max_enemies = 6
+    if len(active_enemies) >= max_enemies:
+        state.log("The area is swarming with feral ghouls! No more can fit through the breach.")
+        return
+
+    # Spawn new ghouls (e.g. 1d3 every other turn)
+    import random
+
+    if turn_number % 2 == 1:
+        num_spawn = random.randint(1, 3)
+        # Prevent exceeding the cap
+        num_spawn = min(num_spawn, max_enemies - len(active_enemies))
+
+        if num_spawn > 0:
+            state.log(f"Wave Defense: {num_spawn} more feral ghoul(s) burst from the underground tunnels!")
+            for i in range(num_spawn):
+                # Basic ghoul template
+                ghoul = Combatant(
+                    name=f"Feral Ghoul #{random.randint(100, 999)}",
+                    attributes={"BOD": 5, "AGI": 4, "REA": 4, "STR": 5, "WIL": 3, "LOG": 1, "INT": 3, "CHA": 1},
+                    skills={"Unarmed Combat": 4, "Perception": 3, "Sneaking": 3}
+                )
+                ghoul.team = 2
+                ghoul.physical_track = 8 + (ghoul.attributes.get("BOD", 5) // 2)
+                ghoul.stun_track = 8 + (ghoul.attributes.get("WIL", 3) // 2)
+                ghoul.weapons.append(Weapon(name="Claws", damage=ghoul.attributes.get("STR", 5) + 1, damage_type="P", ap=-1))
+                ghoul.special_rules.append("N.I.C.A.")
+                ghoul.special_rules.append("Infection Carrier")
+
+                # Give it an initiative score immediately
+                ghoul.initiative_score = ghoul.roll_initiative()
+
+                state.combatants.append(ghoul)

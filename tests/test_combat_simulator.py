@@ -507,3 +507,50 @@ def test_astral_combat_initiative(monkeypatch):
     # 1D6 is mocked to 3
     # 15 + 3 = 18
     assert initiative == 18, f"Expected 18, got {initiative}"
+
+
+def test_wave_defense_cap():
+    from scripts.combat_simulator import SimulationState, GameEnvironment, Combatant, process_wave_defense
+    env = GameEnvironment(description="Test", modifiers={}, wave_defense=True)
+    state = SimulationState(environment=env)
+
+    # Add 6 existing enemies
+    for i in range(6):
+        c = Combatant(name=f"Enemy {i}", attributes={}, skills={})
+        c.team = 2
+        c.is_alive = True
+        state.combatants.append(c)
+
+    process_wave_defense(state, 1) # Turn 1 spawns if under cap
+
+    # Cap is 6, should not have spawned more
+    active_enemies = [c for c in state.combatants if c.team == 2]
+    assert len(active_enemies) == 6
+
+def test_close_doors_action():
+    from scripts.combat_simulator import SimulationState, GameEnvironment, Combatant, process_action
+    from unittest.mock import MagicMock
+    env = GameEnvironment(description="Test", modifiers={}, wave_defense=True)
+    state = SimulationState(environment=env)
+
+    active = Combatant(name="Player", attributes={"LOG": 10}, skills={"Engineering": 10})
+    active.team = 1
+    active.is_alive = True
+    active.edge = 0
+    state.combatants.append(active)
+
+    target = Combatant(name="Enemy", attributes={}, skills={})
+
+    llm = MagicMock()
+    app = MagicMock()
+
+    from scripts.rules_engine import DiceRules
+    original_roll = DiceRules.roll_attack_with_edge
+    DiceRules.roll_attack_with_edge = lambda pool, active, **kwargs: (10, False, False)
+
+    try:
+        action_text, result_text, edge_spent = process_action(active, target, "close blast doors", state, llm, app)
+        assert state.environment.wave_defense == False
+        assert "Success" in result_text
+    finally:
+        DiceRules.roll_attack_with_edge = original_roll
